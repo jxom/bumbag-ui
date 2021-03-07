@@ -1,5 +1,5 @@
 import Theme from '../../../components/Theme';
-import { Input, InputField } from 'bumbag-native';
+import { Input as RNInput, InputField } from 'bumbag-native';
 
 # Input
 
@@ -214,6 +214,50 @@ An input can come in different sizes - `small`, `medium`, `large`, or the defaul
 </Stack>###
 ```
 
+### Icons
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-2">
+  <Input
+    iconBefore="solid-search"
+    label="Username"
+  />
+  <Input
+    iconAfter="solid-search"
+    label="Username"
+  />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-2">
+  <Input
+    iconBefore="solid-search"
+    label="Username"
+    variant="borderless"
+  />
+  <Input
+    iconAfter="solid-search"
+    label="Username"
+    variant="borderless"
+  />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-2">
+  <Input
+    iconBefore="solid-search"
+    label="Username"
+    variant="underline"
+  />
+  <Input
+    iconAfter="solid-search"
+    label="Username"
+    variant="underline"
+  />
+</Stack>###
+```
+
 ### Addons
 
 ```jsx-live
@@ -230,3 +274,16 @@ An input can come in different sizes - `small`, `medium`, `large`, or the defaul
 ## Theming
 
 ### Input
+
+<Theme
+  component={RNInput}
+  overrides={[
+    'Input.styles.base',
+    { key: 'Input.styles.disabled', props: { disabled: true } },
+    { key: 'Input.styles.sizes.small', props: { size: 'small' } },
+    { key: 'Input.styles.sizes.default', props: { size: 'default' } },
+    { key: 'Input.styles.sizes.medium', props: { size: 'medium' } },
+    { key: 'Input.styles.sizes.large', props: { size: 'large' } },
+    { key: 'Input.LabelWrapper.styles.base', props: { label: 'Username' } },
+    { key: 'Input.Label.styles.base', props: { label: 'Username' } }
+  ]} />

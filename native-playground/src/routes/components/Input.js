@@ -126,6 +126,16 @@ export default function App() {
           </Stack>
         </Preview>
       </PreviewSection>
+      <PreviewSection title="Icons">
+        <Preview>
+          <Input iconBefore="chevron-down" label="Username" />
+          <Input iconAfter="chevron-down" label="Username" />
+          <Input iconBefore="chevron-down" label="Username" variant="borderless" />
+          <Input iconAfter="chevron-down" label="Username" variant="borderless" />
+          <Input iconBefore="chevron-down" label="Username" variant="underline" />
+          <Input iconAfter="chevron-down" label="Username" variant="underline" />
+        </Preview>
+      </PreviewSection>
     </Box>
   );
 }

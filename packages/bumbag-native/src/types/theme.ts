@@ -9,6 +9,7 @@ import { FlexProps } from '../Flex';
 import { GroupProps } from '../Group';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
+import { InputProps } from '../Input';
 import { ImageProps } from '../Image';
 import { LevelProps } from '../Level';
 import { PressableProps } from '../Pressable';
@@ -231,6 +232,37 @@ export type IconThemeConfig = {
   modes?: Variant<IconThemeConfig>;
 };
 
+export type InputThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+    disabled?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  IconWrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  LabelWrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Label?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<InputProps>;
+  variants?: Variant<InputThemeConfig>;
+  modes?: Variant<InputThemeConfig>;
+};
+
 export type ImageThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -322,6 +354,7 @@ export type ThemeConfig = {
   Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
   Icon?: IconThemeConfig;
+  Input?: InputThemeConfig;
   Image?: ImageThemeConfig;
   Level?: LevelThemeConfig;
   Pressable?: PressableThemeConfig;

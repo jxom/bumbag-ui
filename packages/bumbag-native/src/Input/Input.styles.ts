@@ -1,6 +1,7 @@
-import { TextInput } from 'react-native';
+import { Animated, Platform, TextInput } from 'react-native';
 
 import { AnimatedText } from '../Animated';
+import { Box } from '../Box';
 import { styled } from '../styled';
 import { borderRadius, fontSize, palette, space, theme } from '../utils/theme';
 
@@ -18,6 +19,7 @@ export const StyledInput = styled(TextInput)`
   ${getVariantStyles}
   ${getDisabledStyles}
   ${getSizeStyles}
+  ${getIconPaddingStyles}
 
   ${theme('native.Input', 'styles.base')};
 `;
@@ -104,34 +106,130 @@ function getSizeStyles(props) {
   `;
 }
 
+function getIconPaddingStyles(props) {
+  if (props.iconBefore || props.iconAfter) {
+    let paddingKey = props.iconBefore ? 'padding-left' : 'padding-right';
+    if (props.variant === 'bordered') {
+      return `
+        ${paddingKey}: ${space(2.25, props.styledFontSize)(props)}px;
+      `;
+    }
+    if (props.variant === 'borderless') {
+      return `
+        ${paddingKey}: ${space(1.5, props.styledFontSize)(props)}px;
+      `;
+    }
+    if (props.variant === 'underline') {
+      return `
+        ${paddingKey}: ${space(1.5, props.styledFontSize)(props)}px;
+      `;
+    }
+  }
+  return ``;
+}
+
+//////////////////////////////////////////////////////////////////
+
+export const StyledIconWrapper = styled(Box)`
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+
+  ${getIconWrapperPositionStyles}
+  ${getIconWrapperVariantStyles}
+
+  ${theme('native.Input', 'IconWrapper.styles.base')};
+`;
+
+function getIconWrapperPositionStyles(props) {
+  if (props.isAfter) {
+    return `
+      right: 0px;
+    `;
+  }
+  return ``;
+}
+
+function getIconWrapperVariantStyles(props) {
+  if (props.variant === 'bordered') {
+    return `
+      width: ${space(2.5, props.defaultFontSize)(props)}px;
+    `;
+  }
+  return ``;
+}
+
+//////////////////////////////////////////////////////////////////
+
+export const StyledAnimatedLabelWrapper = styled(Animated.View)`
+  ${getLabelWrapperVariantStyles}
+  ${getLabelWrapperMarginStyles}
+
+  ${theme('native.Input', 'LabelWrapper.styles.base')};
+`;
+
+function getLabelWrapperVariantStyles(props) {
+  if (props.variant === 'bordered') {
+    return `
+      margin: 0px ${space(0.625, props.defaultFontSize)(props)}px;
+    `;
+  }
+  return ``;
+}
+
+function getLabelWrapperMarginStyles(props) {
+  if (props.iconBefore || props.iconAfter) {
+    const key = props.iconBefore ? 'margin-left' : 'margin-right';
+    if (props.variant === 'bordered') {
+      return `
+        ${key}: ${space(2.125, props.defaultFontSize)(props)}px;
+      `;
+    }
+    if (props.variant === 'borderless' || props.variant === 'underline') {
+      return `
+        ${key}: ${space(1.5, props.defaultFontSize)(props)}px;
+      `;
+    }
+  }
+  return ``;
+}
+
 //////////////////////////////////////////////////////////////////
 
 export const StyledAnimatedLabel = styled(AnimatedText)`
   position: absolute;
 
+  ${
+    Platform.OS === 'web'
+      ? `
+        width: max-content;
+      `
+      : ''
+  }
+
   ${getAnimatedLabelVariantStyles}
 
-  ${theme('native.Input', 'AnimatedLabel.styles.base')};
+  ${theme('native.Input', 'Label.styles.base')};
 `;
 
 function getAnimatedLabelVariantStyles(props) {
   if (props.variant === 'bordered') {
     return `
       background-color: ${palette('default')(props)};
-      margin: 0px ${space(0.675, props.fontSize)(props)}px;
       padding: 0px ${space(0.25, props.fontSize)(props)}px;
 
-      ${theme('native.Input.variants.bordered', 'AnimatedLabel.styles.base')(props)};
+      ${theme('native.Input.variants.bordered', 'Label.styles.base')(props)};
     `;
   }
   if (props.variant === 'underline') {
     return `
-      ${theme('native.Input.variants.underline', 'AnimatedLabel.styles.base')(props)};
+      ${theme('native.Input.variants.underline', 'Label.styles.base')(props)};
     `;
   }
   if (props.variant === 'borderless') {
     return `
-      ${theme('native.Input.variants.borderless', 'AnimatedLabel.styles.base')(props)};
+      ${theme('native.Input.variants.borderless', 'Label.styles.base')(props)};
     `;
   }
   return '';

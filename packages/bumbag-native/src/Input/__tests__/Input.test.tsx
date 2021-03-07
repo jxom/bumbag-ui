@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { applyTheme } from 'bumbag/utils/applyTheme';
-import { renderHook } from '@testing-library/react-hooks';
 import { Input } from '../Input';
-import { Text } from '../../Text';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -11,16 +9,60 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should assign a ref via inputRef', () => {
+    const ref = React.createRef();
+    render(<Input inputRef={ref} />);
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<Input color="primary" />);
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly when disabled', () => {
+    const { container } = render(<Input disabled />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  describe('sizes', () => {
+    ['small', 'medium', 'large'].forEach((size) => {
+      it(`should render ${size} correctly`, () => {
+        const { container } = render(<Input size={size as any} />);
+        expect(container.firstChild).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('states', () => {
+    ['danger', 'success', 'warning', 'primary'].forEach((state) => {
+      it(`should render ${state} correctly`, () => {
+        const { container } = render(<Input state={state} />);
+        expect(container.firstChild).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('icons', () => {
+    ['iconAfter', 'iconBefore'].forEach((iconProp) => {
+      it(`should render ${iconProp} correctly`, () => {
+        const { container } = render(<Input {...{ [iconProp]: 'my-icon' }} />);
+        expect(container.firstChild).toMatchSnapshot();
+      });
+    });
   });
 });
 
 describe('theming', () => {
   it('Input.styles.base should render correctly', () => {
     const { container } = render(<Input />, {
-      // @ts-ignore REMOVE THIS
+      theme: { Input: { styles: { base: { backgroundColor: 'red' } } } },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Input.styles.base should render correctly', () => {
+    const { container } = render(<Input />, {
       theme: { Input: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
@@ -29,9 +71,29 @@ describe('theming', () => {
   it('Input.styles.base should render correctly', () => {
     const { container } = render(<Input />, {
       theme: {
-        // @ts-ignore REMOVE THIS
         Input: { styles: { base: (props) => ({ backgroundColor: props.color }) } },
       },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Input.IconWrapper.styles.base should render correctly', () => {
+    const { container } = render(<Input label="Username" iconBefore="my-icon" />, {
+      theme: { Input: { IconWrapper: { styles: { base: { backgroundColor: 'red' } } } } },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Input.LabelWrapper.styles.base should render correctly', () => {
+    const { container } = render(<Input label="Username" />, {
+      theme: { Input: { LabelWrapper: { styles: { base: { backgroundColor: 'red' } } } } },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Input.Label.styles.base should render correctly', () => {
+    const { container } = render(<Input label="Username" />, {
+      theme: { Input: { Label: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -42,7 +104,6 @@ describe('overrides', () => {
     const { container } = render(
       <Input
         overrides={{
-          // @ts-ignore REMOVE ME
           Input: {
             styles: { base: { backgroundColor: 'red' } },
             defaultProps: {
@@ -79,7 +140,6 @@ describe('variants', () => {
   it('styles.base should render correctly', () => {
     const { container } = render(<Input variant="test" />, {
       theme: {
-        // @ts-ignore REMOVE THIS
         Input: {
           variants: { test: { styles: { base: { backgroundColor: 'red' } } } },
         },
@@ -92,7 +152,6 @@ describe('variants', () => {
     const { container } = render(
       <Input
         overrides={{
-          // @ts-ignore REMOVE ME
           Input: {
             variants: {
               test: {
@@ -135,7 +194,6 @@ describe('modes', () => {
     const { container } = render(<Input />, {
       colorMode: 'test',
       theme: {
-        // @ts-ignore DELETE ME
         Input: {
           modes: {
             test: {
@@ -152,7 +210,6 @@ describe('modes', () => {
   it('should render correctly when colorMode set as prop', () => {
     const { container } = render(<Input colorMode="test" />, {
       theme: {
-        // @ts-ignore DELETE ME
         Input: {
           modes: {
             test: {
@@ -170,7 +227,6 @@ describe('modes', () => {
     const { container } = render(
       <Input
         overrides={{
-          // @ts-ignore REMOVE ME
           Input: {
             modes: {
               test: {
@@ -210,7 +266,6 @@ describe('modes', () => {
 describe('defaultProps', () => {
   it('should render correctly for color', () => {
     const { container } = render(<Input />, {
-      // @ts-ignore REMOVE THIS
       theme: { Input: { defaultProps: { color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();

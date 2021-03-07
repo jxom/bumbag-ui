@@ -9,7 +9,7 @@ exports[`applyTheme renders correctly 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -28,7 +28,7 @@ exports[`defaultProps should render correctly for color 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -47,7 +47,7 @@ exports[`modes renders correctly for applyTheme 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -66,7 +66,7 @@ exports[`modes renders correctly for overrides 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -85,7 +85,7 @@ exports[`modes should render correctly when colorMode is set globally 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -104,7 +104,7 @@ exports[`modes should render correctly when colorMode set as prop 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -123,7 +123,7 @@ exports[`overrides should render correctly 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -131,6 +131,86 @@ exports[`overrides should render correctly 1`] = `
     type="text"
   />
 </div>
+`;
+
+exports[`props icons should render iconAfter correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 36px 6.4px 12.8px;"
+    type="text"
+  />
+  <div
+    class="css-view-1dbjc4n"
+    style="align-items: center; height: 100%; justify-content: center; position: absolute; right: 0px; width: 40px;"
+  >
+    <svg
+      colorMode="default"
+      height="16"
+      icon="my-icon"
+      size="200"
+      style="color: rgb(177, 183, 194); display: flex;"
+      viewBox="0 0 0 0"
+      width="16"
+    />
+  </div>
+</div>
+`;
+
+exports[`props icons should render iconBefore correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 36px;"
+    type="text"
+  />
+  <div
+    class="css-view-1dbjc4n"
+    style="align-items: center; height: 100%; justify-content: center; position: absolute; width: 40px;"
+  >
+    <svg
+      colorMode="default"
+      height="16"
+      icon="my-icon"
+      size="200"
+      style="color: rgb(177, 183, 194); display: flex;"
+      viewBox="0 0 0 0"
+      width="16"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should assign a ref via inputRef 1`] = `
+<input
+  autocapitalize="sentences"
+  autocomplete="on"
+  autocorrect="on"
+  class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+  data-focusable="true"
+  dir="auto"
+  spellcheck="true"
+  style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+  type="text"
+/>
 `;
 
 exports[`props should render correctly 1`] = `
@@ -142,11 +222,32 @@ exports[`props should render correctly 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
     style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props should render correctly when disabled 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    aria-disabled="true"
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    dir="auto"
+    disabled=""
+    spellcheck="true"
+    style="background-color: rgb(242, 242, 245); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; color: rgb(84, 84, 84); font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    tabindex="-1"
     type="text"
   />
 </div>
@@ -161,13 +262,277 @@ exports[`props should render correctly with CSS props 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
     style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
     type="text"
   />
+</div>
+`;
+
+exports[`props sizes should render large correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 24px; height: 66px; padding: 9.600000000000001px 19.200000000000003px 9.600000000000001px 19.200000000000003px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props sizes should render medium correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 20px; height: 55px; padding: 8px 16px 8px 16px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props sizes should render small correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 12px; height: 33px; padding: 4.800000000000001px 9.600000000000001px 4.800000000000001px 9.600000000000001px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props states should render danger correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(218,23,23,1.00); border-right-color: rgba(218,23,23,1.00); border-bottom-color: rgba(218,23,23,1.00); border-left-color: rgba(218,23,23,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props states should render primary correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(87,79,235,1.00); border-right-color: rgba(87,79,235,1.00); border-bottom-color: rgba(87,79,235,1.00); border-left-color: rgba(87,79,235,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props states should render success correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(10,125,51,1.00); border-right-color: rgba(10,125,51,1.00); border-bottom-color: rgba(10,125,51,1.00); border-left-color: rgba(10,125,51,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props states should render warning correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(237,156,34,1.00); border-right-color: rgba(237,156,34,1.00); border-bottom-color: rgba(237,156,34,1.00); border-left-color: rgba(237,156,34,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`theming Input.IconWrapper.styles.base should render correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    placeholder=""
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 36px;"
+    type="text"
+  />
+  <div
+    class="css-view-1dbjc4n"
+    style="align-items: center; background-color: rgb(255, 0, 0); height: 100%; justify-content: center; position: absolute; width: 40px;"
+  >
+    <svg
+      colorMode="default"
+      height="16"
+      icon="my-icon"
+      size="200"
+      style="color: rgb(177, 183, 194); display: flex;"
+      viewBox="0 0 0 0"
+      width="16"
+    />
+  </div>
+  <div
+    class="css-view-1dbjc4n"
+    style="margin: 0px 10px 0px 34px; position: absolute; top: 12.8px;"
+  >
+    <div
+      class="css-view-1dbjc4n"
+      data-focusable="true"
+      style="cursor: pointer;"
+      tabindex="0"
+    >
+      <div
+        class="css-text-901oao"
+        dir="auto"
+        style="background-color: rgb(252, 252, 253); color: rgb(145, 154, 169); cursor: text; font-size: 16px; padding: 0px 4px 0px 4px; position: absolute;"
+      >
+        Username
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`theming Input.Label.styles.base should render correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    placeholder=""
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+  <div
+    class="css-view-1dbjc4n"
+    style="margin: 0px 10px 0px 10px; position: absolute; top: 12.8px;"
+  >
+    <div
+      class="css-view-1dbjc4n"
+      data-focusable="true"
+      style="cursor: pointer;"
+      tabindex="0"
+    >
+      <div
+        class="css-text-901oao"
+        dir="auto"
+        style="background-color: rgb(255, 0, 0); color: rgb(145, 154, 169); cursor: text; font-size: 16px; padding: 0px 4px 0px 4px; position: absolute;"
+      >
+        Username
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`theming Input.LabelWrapper.styles.base should render correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    placeholder=""
+    spellcheck="true"
+    style="background-color: rgb(252, 252, 253); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+  <div
+    class="css-view-1dbjc4n"
+    style="background-color: rgb(255, 0, 0); margin: 0px 10px 0px 10px; position: absolute; top: 12.8px;"
+  >
+    <div
+      class="css-view-1dbjc4n"
+      data-focusable="true"
+      style="cursor: pointer;"
+      tabindex="0"
+    >
+      <div
+        class="css-text-901oao"
+        dir="auto"
+        style="background-color: rgb(252, 252, 253); color: rgb(145, 154, 169); cursor: text; font-size: 16px; padding: 0px 4px 0px 4px; position: absolute;"
+      >
+        Username
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -180,7 +545,7 @@ exports[`theming Input.styles.base should render correctly 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -199,7 +564,26 @@ exports[`theming Input.styles.base should render correctly 2`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
+    data-focusable="true"
+    dir="auto"
+    spellcheck="true"
+    style="background-color: rgb(255, 0, 0); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-top-color: rgba(217,217,225,1.00); border-right-color: rgba(217,217,225,1.00); border-bottom-color: rgba(217,217,225,1.00); border-left-color: rgba(217,217,225,1.00); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-left-radius: 6px; border-top-right-radius: 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 16px; height: 44px; padding: 6.4px 12.8px 6.4px 12.8px;"
+    type="text"
+  />
+</div>
+`;
+
+exports[`theming Input.styles.base should render correctly 3`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="position: relative;"
+>
+  <input
+    autocapitalize="sentences"
+    autocomplete="on"
+    autocorrect="on"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -218,7 +602,7 @@ exports[`variants renders correctly for applyTheme 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -237,7 +621,7 @@ exports[`variants renders correctly for overrides 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"
@@ -256,7 +640,7 @@ exports[`variants styles.base should render correctly 1`] = `
     autocapitalize="sentences"
     autocomplete="on"
     autocorrect="on"
-    class="css-textinput-11aywtz"
+    class="css-textinput-11aywtz r-placeholderTextColor-fa7nb4"
     data-focusable="true"
     dir="auto"
     spellcheck="true"

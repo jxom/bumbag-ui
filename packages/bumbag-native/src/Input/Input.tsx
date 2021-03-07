@@ -13,22 +13,35 @@ import {
 import { Palette, Size } from 'bumbag/types';
 
 import { Box, BoxProps } from '../Box';
+import { Icon, IconProps } from '../Icon';
 import { Pressable } from '../Pressable';
 import { palette, useSpace, usePalette } from '../utils';
 import * as styles from './Input.styles';
 
 export type LocalInputProps = {
+  /** Icon to place before the input. */
+  iconAfter?: string;
+  iconAfterProps?: Partial<IconProps>;
+  /** Icon to place after the input. */
+  iconBefore?: string;
+  iconBeforeProps?: Partial<IconProps>;
+  inputRef?: React.Ref<any>;
+  /** Label of the input. */
   label?: string;
+  /** Label color of the input. Can be any color in your palette. */
   labelTextColor?: Palette;
   labelProps?: any;
   palette?: Palette;
+  /** Placeholder color of the input. Can be any color in your palette. */
   placeholderTextColor?: Palette;
+  /** State of the input. Can be any color in your palette. */
   state?: Palette;
+  /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
 };
 export type InputProps = BoxProps & RNTextInputProps & LocalInputProps;
 
-const defaultProps = { size: 'default', variant: 'bordered' };
+const defaultProps = { placeholderTextColor: 'gray300', size: 'default', variant: 'bordered' };
 
 const useProps = createHook<InputProps>(
   (props) => {
@@ -47,7 +60,7 @@ const useProps = createHook<InputProps>(
 
 export const Input = createComponent<InputProps>(
   (props) => {
-    const { label, labelProps, size } = props;
+    const { iconAfter, iconAfterProps, iconBefore, iconBeforeProps, label, labelProps, size } = props;
     const defaultFontSize = props.fontSize || styles.SIZES[size];
 
     /////////////////////////////////////////////////////////////////////
@@ -85,7 +98,7 @@ export const Input = createComponent<InputProps>(
     const htmlProps = useProps({
       ...omitCSSProps({
         ...props,
-        ref: inputRef,
+        ref: mergeRefs(inputRef, props.inputRef),
         onBlur: handleBlur,
         onFocus: handleFocus,
         onChangeText: setValue,
@@ -97,7 +110,7 @@ export const Input = createComponent<InputProps>(
     const element = createElement({
       children: props.children,
       component: styles.StyledInput,
-      htmlProps: { ...htmlProps, styledFontSize: defaultFontSize },
+      htmlProps: { ...htmlProps, iconAfter, iconBefore, styledFontSize: defaultFontSize },
     });
 
     /////////////////////////////////////////////////////////////////////
@@ -173,8 +186,26 @@ export const Input = createComponent<InputProps>(
     return (
       <Box position="relative" {...pickCSSProps(props)}>
         {element}
+        {iconBefore && (
+          // @ts-ignore
+          <styles.StyledIconWrapper isBefore defaultFontSize={defaultFontSize} variant={props.variant}>
+            <Icon color="gray200" icon={iconBefore} size={defaultFontSize} {...iconBeforeProps} />
+          </styles.StyledIconWrapper>
+        )}
+        {iconAfter && (
+          // @ts-ignore
+          <styles.StyledIconWrapper isAfter defaultFontSize={defaultFontSize} variant={props.variant}>
+            <Icon color="gray200" icon={iconAfter} size={defaultFontSize} {...iconAfterProps} />
+          </styles.StyledIconWrapper>
+        )}
         {label && !props.disabled && (
-          <Animated.View style={{ position: 'absolute', top: topAnimation }}>
+          <styles.StyledAnimatedLabelWrapper
+            iconAfter={iconAfter}
+            iconBefore={iconBefore}
+            defaultFontSize={defaultFontSize}
+            variant={props.variant}
+            style={{ position: 'absolute', top: topAnimation }}
+          >
             <Pressable onPress={handlePress}>
               <styles.StyledAnimatedLabel
                 // @ts-ignore
@@ -188,7 +219,7 @@ export const Input = createComponent<InputProps>(
                 {label}
               </styles.StyledAnimatedLabel>
             </Pressable>
-          </Animated.View>
+          </styles.StyledAnimatedLabelWrapper>
         )}
       </Box>
     );
