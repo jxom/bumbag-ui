@@ -11,8 +11,8 @@ export type LocalLevelProps = {
   orientation?: 'vertical' | 'horizontal';
   /** Sets the spacing of the level when it snaps to a vertical orientation. */
   spacing?: string;
-  /** Sets the breakpoint at which the level should become vertical. */
-  verticalBelow?: Breakpoint;
+  /** Sets the breakpoint at which the level should become vertical; null to disable vertical snapping. */
+  verticalBelow?: Breakpoint | null;
 };
 export type LevelProps = FlexProps & LocalLevelProps;
 
