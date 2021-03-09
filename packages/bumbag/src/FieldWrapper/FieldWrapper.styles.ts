@@ -1,4 +1,4 @@
-import { cssClass } from '../styled';
+import { cssClass, css } from '../styled';
 import { altitude, palette, space, theme, lineHeight, getCapsizeStyles, fontSize, fontWeight } from '../utils';
 
 export const FieldWrapper = (styleProps) => cssClass`
@@ -19,6 +19,13 @@ export const Label = (styleProps) => cssClass`
 
 export const LabelWrapper = (styleProps) => cssClass`
   margin-bottom: ${space(3)(styleProps)}rem;
+
+  ${
+    (styleProps.variant === 'borderless' || styleProps.variant === 'underline') &&
+    css`
+      margin-bottom: ${space(1)(styleProps)}rem;
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};

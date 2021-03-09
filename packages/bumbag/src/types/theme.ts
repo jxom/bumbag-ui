@@ -933,6 +933,16 @@ export type InputThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
   };
+  LabelWrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  LabelWrapperBackground?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
   Icon?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;

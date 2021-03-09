@@ -26,6 +26,7 @@ export * from './useBreakpoint';
 export * from './useBreakpointValue';
 export * from './useClassName';
 export * from './useDebounce';
+export * from './useLabelPlaceholder';
 export * from './useOptionsState';
 export * from './usePrevious';
 export * from './useStyle';

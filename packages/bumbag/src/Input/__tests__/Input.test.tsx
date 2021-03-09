@@ -63,6 +63,15 @@ describe('props', () => {
       });
     });
   });
+
+  describe('variants', () => {
+    ['bordered', 'borderless', 'underline'].forEach((variant) => {
+      it(`should render ${variant} correctly`, () => {
+        const { container } = render(<Input variant={variant} />);
+        expect(container.firstChild).toMatchSnapshot();
+      });
+    });
+  });
 });
 
 describe('overrides', () => {
