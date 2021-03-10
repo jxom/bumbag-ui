@@ -26,12 +26,12 @@ const useProps = createHook<StackProps>(
     return {
       ...boxProps,
       children: children.map((child, i) => {
+        if (!child) return null;
         let spacingKey = orientation === 'vertical' ? 'marginBottom' : 'marginRight';
         let spacing = child.props?.[spacingKey] || _spacing;
         if (i === children.length - 1) {
           spacing = undefined;
         }
-        if (!child) return null;
         return React.cloneElement(child, {
           key: i, // eslint-disable-line
           [spacingKey]: spacing,
