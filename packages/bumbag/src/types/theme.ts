@@ -1,5 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-common-types";
-import { InterpolationWithTheme } from "@emotion/css";
+import { InterpolationWithTheme } from "@emotion/core";
 
 import { ActionButtonsProps } from "../ActionButtons";
 import { AlertProps } from "../Alert";
