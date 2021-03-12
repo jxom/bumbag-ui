@@ -59,7 +59,6 @@ export function Provider(props: ProviderProps) {
   ]);
 
   ////////////////////////////////////////////////
-  console.log("top", derivedTheme);
   return (
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
