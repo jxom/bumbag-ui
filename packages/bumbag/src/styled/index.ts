@@ -8,7 +8,7 @@ export {
   sheet,
   cache,
   css as cssClass,
-} from "emotion";
+} from "@emotion/css";
 export {
   css,
   keyframes,
