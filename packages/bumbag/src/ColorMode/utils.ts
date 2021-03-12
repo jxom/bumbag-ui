@@ -14,7 +14,6 @@ export function mapCSSVariables(obj) {
 }
 
 export function getColorModesCSSVariables(theme) {
-  console.log(theme);
   if (!theme.palette) {
     return {
       "html,body": {},
