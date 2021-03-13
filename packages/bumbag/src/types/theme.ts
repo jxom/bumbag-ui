@@ -1,5 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-common-types";
-import { InterpolationWithTheme } from "@emotion/core";
+import { Interpolation } from "@emotion/serialize";
 
 import { ActionButtonsProps } from "../ActionButtons";
 import { AlertProps } from "../Alert";
@@ -156,7 +156,7 @@ import { TemplateProps } from "../_template";
 import { ParsedIcons, ParseIconsOpts } from "../utils/parseIcons";
 import { Breakpoint, Placement } from "./props";
 
-export type Stylesheet = InterpolationWithTheme<any>;
+export type Stylesheet = Interpolation<any>;
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
 export type Variant<ThemeConfig> = { [key: string]: ThemeConfig };
 
