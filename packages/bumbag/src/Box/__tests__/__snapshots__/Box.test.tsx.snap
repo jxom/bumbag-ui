@@ -1657,6 +1657,57 @@ exports[`props should render correctly with aria* props 1`] = `
 />
 `;
 
+exports[`props should render correctly with negative spacing CSS props 1`] = `
+.emotion-1 {
+  margin: -1rem !important;
+  padding-left: -0.5rem !important;
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props should render correctly with negative spacing CSS props 2`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  margin: -4rem !important;
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
 exports[`props should render correctly with overrides 1`] = `
 .emotion-0 {
   margin: unset;

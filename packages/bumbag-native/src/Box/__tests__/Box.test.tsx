@@ -50,6 +50,11 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with negative spacing CSS props', () => {
+    const { container } = render(<Box margin="-major-4" paddingLeft="-major-2" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a spacing CSS prop (marginX, paddingX)', () => {
     const { container } = render(<Box marginX="major-4" paddingX="major-2" />);
     expect(container.firstChild).toMatchSnapshot();

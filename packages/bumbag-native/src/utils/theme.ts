@@ -220,16 +220,25 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
   return (props: { theme?: ThemeConfig }) => {
     let scalar = _scalar;
     let scaleType = _scaleType;
+
     if (!scalar) return 0;
     if (typeof scalar === 'string') {
+      let isNegative = false;
+      if (scalar[0] === '-') {
+        scalar = scalar.replace('-', '');
+        isNegative = true;
+      }
+
       if (scalar.includes('minor') || scalar.includes('major')) {
         // @ts-ignore
         [scaleType, scalar] = scalar.split('-');
+
         scalar = parseFloat(scalar);
+        scalar = isNegative ? -scalar : scalar;
         if (isNaN(scalar)) return 0;
       } else {
         const value = theme('spacing', scalar)(props);
-        return value;
+        return isNegative ? -value : value;
       }
     }
     if (typeof scalar === 'number') {
