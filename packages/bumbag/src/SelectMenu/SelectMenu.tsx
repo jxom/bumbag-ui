@@ -169,6 +169,7 @@ const useProps = createHook<SelectMenuProps>(
       size,
       tagProps,
       value,
+      variant,
       ...restProps
     } = props;
 
@@ -466,6 +467,7 @@ const useProps = createHook<SelectMenuProps>(
               selectedOptions={selectedOptions}
               size={size}
               state={fieldState}
+              variant={variant}
               {...buttonProps}
             />
           )}
@@ -563,6 +565,7 @@ const useProps = createHook<SelectMenuProps>(
       renderLoading: Loading,
       renderLoadingMore: Loading,
       renderOption: MatchedLabel,
+      variant: 'bordered',
     },
     themeKey: 'SelectMenu',
   }
@@ -599,6 +602,7 @@ function SelectMenuButton(props: any) {
     renderDisclosure,
     selectedOptions,
     placeholder,
+    variant,
     ...restProps
   } = props;
 
@@ -606,7 +610,7 @@ function SelectMenuButton(props: any) {
 
   const buttonClassName = useClassName({
     style: styles.SelectMenuButton,
-    styleProps: { ...props, overrides },
+    styleProps: { ...props, overrides, variant },
     themeKey,
     themeKeySuffix: 'Button',
   });

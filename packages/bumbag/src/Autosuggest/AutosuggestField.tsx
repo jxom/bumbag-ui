@@ -70,6 +70,7 @@ const useProps = createHook<AutosuggestFieldProps>(
       onChange,
       overrides,
       validationText,
+      variant,
       ...restProps
     } = props;
 
@@ -97,6 +98,7 @@ const useProps = createHook<AutosuggestFieldProps>(
           tooltip={tooltip}
           tooltipTriggerComponent={tooltipTriggerComponent}
           validationText={validationText}
+          variant={variant}
         >
           {({ elementProps }) => (
             <ConditionalWrap
@@ -141,6 +143,7 @@ const useProps = createHook<AutosuggestFieldProps>(
                   popoverProps={popoverProps}
                   dropdownMenuInitialState={dropdownMenuInitialState}
                   overrides={overrides}
+                  variant={variant}
                   {...elementProps}
                   {...autosuggestProps}
                 />

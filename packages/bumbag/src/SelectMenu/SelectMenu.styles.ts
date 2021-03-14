@@ -28,28 +28,10 @@ export const SelectMenuPopover = (styleProps) => cssClass`
 export const SelectMenuButton = (styleProps) => cssClass`
   ${Select(styleProps)};
 
-  ${styleProps.size && wrapperSizeProperties(styleProps)};
-
   cursor: default;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
-
-  &[aria-expanded="true"] {
-    border-color: ${palette('primary')(styleProps)};
-    box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
-  }
-
-  ${
-    styleProps.state &&
-    css`
-      & {
-        border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
-      }
-    `
-  }
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
