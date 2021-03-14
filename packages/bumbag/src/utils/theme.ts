@@ -174,7 +174,7 @@ export function space(_scalar: number | string | void, _scaleType: ScaleType = '
 
       if (scalar.includes('minor') || scalar.includes('major')) {
         // @ts-ignore
-        [_scaleType, scalar] = scalar.split('-');
+        [scaleType, scalar] = scalar.split('-');
 
         scalar = parseFloat(scalar);
         scalar = isNegative ? -scalar : scalar;
