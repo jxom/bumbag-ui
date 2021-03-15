@@ -54,7 +54,7 @@ export function Provider(props: ProviderProps) {
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
         <ColorModeProvider isSSR={isSSR} mode={colorMode}>
-          <ReakitProvider unstable_prefix='bb-id'>
+          <ReakitProvider unstable_prefix="bb-id">
             <ToastProvider>
               <PageProvider collapseBelow={collapseBelow}>
                 <React.Fragment>

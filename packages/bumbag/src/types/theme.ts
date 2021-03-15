@@ -1,21 +1,16 @@
-import { IconDefinition } from "@fortawesome/fontawesome-common-types";
-import { Interpolation } from "@emotion/serialize";
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { Interpolation } from '@emotion/serialize';
 
-import { ActionButtonsProps } from "../ActionButtons";
-import { AlertProps } from "../Alert";
-import { AutosuggestProps, AutosuggestFieldProps } from "../Autosuggest";
-import { AvatarProps } from "../Avatar";
-import { BadgeProps } from "../Badge";
-import { ButtonProps } from "../Button";
-import { BlockProps } from "../Block";
-import { BlockquoteProps } from "../Blockquote";
-import { BoxProps } from "../Box";
-import {
-  BreadcrumbProps,
-  BreadcrumbLinkProps,
-  BreadcrumbSeparatorProps,
-  BreadcrumbItemProps,
-} from "../Breadcrumb";
+import { ActionButtonsProps } from '../ActionButtons';
+import { AlertProps } from '../Alert';
+import { AutosuggestProps, AutosuggestFieldProps } from '../Autosuggest';
+import { AvatarProps } from '../Avatar';
+import { BadgeProps } from '../Badge';
+import { ButtonProps } from '../Button';
+import { BlockProps } from '../Block';
+import { BlockquoteProps } from '../Blockquote';
+import { BoxProps } from '../Box';
+import { BreadcrumbProps, BreadcrumbLinkProps, BreadcrumbSeparatorProps, BreadcrumbItemProps } from '../Breadcrumb';
 import {
   CalloutProps,
   CalloutContentProps,
@@ -23,18 +18,13 @@ import {
   CalloutTitleProps,
   CalloutFooterProps,
   CalloutIconProps,
-} from "../Callout";
-import { CardProps } from "../Card";
-import { ClickableProps } from "../Clickable";
-import {
-  CheckboxProps,
-  CheckboxFieldProps,
-  CheckboxGroupProps,
-  CheckboxGroupFieldProps,
-} from "../Checkbox";
-import { CodeProps } from "../Code";
-import { ColumnsProps, ColumnProps } from "../Columns";
-import { ContainerProps } from "../Container";
+} from '../Callout';
+import { CardProps } from '../Card';
+import { ClickableProps } from '../Clickable';
+import { CheckboxProps, CheckboxFieldProps, CheckboxGroupProps, CheckboxGroupFieldProps } from '../Checkbox';
+import { CodeProps } from '../Code';
+import { ColumnsProps, ColumnProps } from '../Columns';
+import { ContainerProps } from '../Container';
 import {
   DialogProps,
   DialogContentProps,
@@ -42,9 +32,9 @@ import {
   DialogTitleProps,
   DialogFooterProps,
   DialogIconProps,
-} from "../Dialog";
-import { DisclosureProps, DisclosureContentProps } from "../Disclosure";
-import { DividerProps } from "../Divider";
+} from '../Dialog';
+import { DisclosureProps, DisclosureContentProps } from '../Disclosure';
+import { DividerProps } from '../Divider';
 import {
   DropdownMenuProps,
   DropdownMenuPopoverProps,
@@ -54,28 +44,28 @@ import {
   DropdownMenuItemProps,
   DropdownMenuOptionGroupProps,
   DropdownMenuOptionItemProps,
-} from "../DropdownMenu";
-import { FieldStackProps } from "../FieldStack";
-import { FieldWrapperProps } from "../FieldWrapper";
-import { FlexProps } from "../Flex";
-import { GridProps } from "../Grid/Grid";
-import { GridItemProps } from "../Grid/GridItem";
-import { GroupProps } from "../Group";
-import { HeadingProps } from "../Heading";
-import { IconProps } from "../Icon";
-import { ImageProps } from "../Image";
-import { InlineProps } from "../Inline";
-import { InlineBlockProps } from "../InlineBlock";
-import { InlineFlexProps } from "../InlineFlex";
-import { InputProps, InputFieldProps } from "../Input";
-import { KeyProps } from "../Key";
-import { LabelProps } from "../Label";
-import { LevelProps } from "../Level";
-import { StackProps } from "../Stack";
-import { LinkProps } from "../Link";
-import { ListProps } from "../List/List";
-import { ListItemProps } from "../List/ListItem";
-import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from "../Modal";
+} from '../DropdownMenu';
+import { FieldStackProps } from '../FieldStack';
+import { FieldWrapperProps } from '../FieldWrapper';
+import { FlexProps } from '../Flex';
+import { GridProps } from '../Grid/Grid';
+import { GridItemProps } from '../Grid/GridItem';
+import { GroupProps } from '../Group';
+import { HeadingProps } from '../Heading';
+import { IconProps } from '../Icon';
+import { ImageProps } from '../Image';
+import { InlineProps } from '../Inline';
+import { InlineBlockProps } from '../InlineBlock';
+import { InlineFlexProps } from '../InlineFlex';
+import { InputProps, InputFieldProps } from '../Input';
+import { KeyProps } from '../Key';
+import { LabelProps } from '../Label';
+import { LevelProps } from '../Level';
+import { StackProps } from '../Stack';
+import { LinkProps } from '../Link';
+import { ListProps } from '../List/List';
+import { ListItemProps } from '../List/ListItem';
+import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
 import {
   MenuProps,
   MenuDividerProps,
@@ -83,10 +73,10 @@ import {
   MenuItemProps,
   MenuOptionGroupProps,
   MenuOptionItemProps,
-} from "../Menu";
-import { NavigationProps } from "../Navigation";
-import { OptionButtonsProps, OptionButtonProps } from "../OptionButtons";
-import { OverlayProps, OverlayDisclosureProps } from "../Overlay";
+} from '../Menu';
+import { NavigationProps } from '../Navigation';
+import { OptionButtonsProps, OptionButtonProps } from '../OptionButtons';
+import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
 import {
   PageContentProps,
   PageContentWrapperProps,
@@ -95,9 +85,9 @@ import {
   PageWithSidebarMinimizeProps,
   PageWithHeaderProps,
   PageWithHeaderDisclosureProps,
-} from "../Page";
-import { PaginationProps } from "../Pagination";
-import { ParagraphProps } from "../Paragraph";
+} from '../Page';
+import { PaginationProps } from '../Pagination';
+import { ParagraphProps } from '../Paragraph';
 import {
   PopoverProps,
   PopoverArrowProps,
@@ -107,31 +97,21 @@ import {
   PopoverFooterProps,
   PopoverHeaderProps,
   PopoverTitleProps,
-} from "../Popover";
-import { PortalProps } from "../Portal";
-import { ProgressBarProps } from "../ProgressBar";
-import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from "../Radio";
-import { RatingProps, RatingItemProps } from "../Rating";
-import { RoverProps } from "../Rover";
-import { SelectProps, SelectFieldProps } from "../Select";
-import { SelectMenuProps, SelectMenuFieldProps } from "../SelectMenu";
-import { SetProps } from "../Set";
-import { SideNavProps, SideNavItemProps, SideNavLevelProps } from "../SideNav";
-import { DrawerProps, DrawerDisclosureProps } from "../Drawer";
-import { SpinnerProps } from "../Spinner";
-import {
-  SwitchProps,
-  SwitchFieldProps,
-  SwitchGroupProps,
-  SwitchGroupFieldProps,
-} from "../Switch";
-import { TabbableProps } from "../Tabbable";
-import {
-  TabsProps,
-  TabsListProps,
-  TabsTabProps,
-  TabsPanelProps,
-} from "../Tabs";
+} from '../Popover';
+import { PortalProps } from '../Portal';
+import { ProgressBarProps } from '../ProgressBar';
+import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
+import { RatingProps, RatingItemProps } from '../Rating';
+import { RoverProps } from '../Rover';
+import { SelectProps, SelectFieldProps } from '../Select';
+import { SelectMenuProps, SelectMenuFieldProps } from '../SelectMenu';
+import { SetProps } from '../Set';
+import { SideNavProps, SideNavItemProps, SideNavLevelProps } from '../SideNav';
+import { DrawerProps, DrawerDisclosureProps } from '../Drawer';
+import { SpinnerProps } from '../Spinner';
+import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
+import { TabbableProps } from '../Tabbable';
+import { TabsProps, TabsListProps, TabsTabProps, TabsPanelProps } from '../Tabs';
 import {
   TableProps,
   TableRowProps,
@@ -140,21 +120,16 @@ import {
   TableHeadProps,
   TableHeadCellProps,
   TableFootProps,
-} from "../Table";
-import { TagProps } from "../Tag";
-import { TextProps } from "../Text";
-import { TextareaProps, TextareaFieldProps } from "../Textarea";
-import { ToastProps } from "../Toast";
-import {
-  TooltipProps,
-  TooltipArrowProps,
-  TooltipContentProps,
-  TooltipReferenceProps,
-} from "../Tooltip";
-import { TopNavProps, TopNavItemProps, TopNavSectionProps } from "../TopNav";
-import { TemplateProps } from "../_template";
-import { ParsedIcons, ParseIconsOpts } from "../utils/parseIcons";
-import { Breakpoint, Placement } from "./props";
+} from '../Table';
+import { TagProps } from '../Tag';
+import { TextProps } from '../Text';
+import { TextareaProps, TextareaFieldProps } from '../Textarea';
+import { ToastProps } from '../Toast';
+import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
+import { TopNavProps, TopNavItemProps, TopNavSectionProps } from '../TopNav';
+import { TemplateProps } from '../_template';
+import { ParsedIcons, ParseIconsOpts } from '../utils/parseIcons';
+import { Breakpoint, Placement } from './props';
 
 export type Stylesheet = Interpolation<any>;
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
@@ -856,8 +831,8 @@ export type DisclosureThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<DisclosureContentProps>;
-    variants?: Variant<DisclosureThemeConfig["Content"]>;
-    modes?: Variant<DisclosureThemeConfig["Content"]>;
+    variants?: Variant<DisclosureThemeConfig['Content']>;
+    modes?: Variant<DisclosureThemeConfig['Content']>;
   };
 };
 export type HighlightedCodeThemeConfig = {
@@ -890,8 +865,8 @@ export type IconThemeConfig = {
   };
   iconSets?: Array<{
     icons: IconDefinition[];
-    prefix?: ParseIconsOpts["prefix"];
-    type: ParseIconsOpts["type"];
+    prefix?: ParseIconsOpts['prefix'];
+    type: ParseIconsOpts['type'];
   }>;
   icons?: ParsedIcons;
   iconNames?: {
@@ -1052,8 +1027,8 @@ export type ListThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ListItemProps>;
-    variants?: Variant<ListThemeConfig["Item"]>;
-    modes?: Variant<ListThemeConfig["Item"]>;
+    variants?: Variant<ListThemeConfig['Item']>;
+    modes?: Variant<ListThemeConfig['Item']>;
   };
   defaultProps?: Partial<ListProps>;
   variants?: Variant<ListThemeConfig>;
@@ -1068,40 +1043,40 @@ export type MenuThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuDividerProps>;
-    variants?: Variant<MenuThemeConfig["Divider"]>;
-    modes?: Variant<MenuThemeConfig["Divider"]>;
+    variants?: Variant<MenuThemeConfig['Divider']>;
+    modes?: Variant<MenuThemeConfig['Divider']>;
   };
   Group?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuGroupProps>;
-    variants?: Variant<MenuThemeConfig["Group"]>;
-    modes?: Variant<MenuThemeConfig["Group"]>;
+    variants?: Variant<MenuThemeConfig['Group']>;
+    modes?: Variant<MenuThemeConfig['Group']>;
   };
   Item?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuItemProps>;
-    variants?: Variant<MenuThemeConfig["Item"]>;
-    modes?: Variant<MenuThemeConfig["Item"]>;
+    variants?: Variant<MenuThemeConfig['Item']>;
+    modes?: Variant<MenuThemeConfig['Item']>;
   };
   OptionGroup?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuOptionGroupProps>;
-    variants?: Variant<MenuThemeConfig["OptionGroup"]>;
-    modes?: Variant<MenuThemeConfig["OptionGroup"]>;
+    variants?: Variant<MenuThemeConfig['OptionGroup']>;
+    modes?: Variant<MenuThemeConfig['OptionGroup']>;
   };
   OptionItem?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuOptionItemProps>;
-    variants?: Variant<MenuThemeConfig["OptionItem"]>;
-    modes?: Variant<MenuThemeConfig["OptionItem"]>;
+    variants?: Variant<MenuThemeConfig['OptionItem']>;
+    modes?: Variant<MenuThemeConfig['OptionItem']>;
   };
   defaultProps?: Partial<MenuProps>;
   variants?: Variant<MenuThemeConfig>;
@@ -1130,16 +1105,16 @@ export type ModalThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalDisclosureProps>;
-    variants?: Variant<ModalThemeConfig["Disclosure"]>;
-    modes?: Variant<ModalThemeConfig["Disclosure"]>;
+    variants?: Variant<ModalThemeConfig['Disclosure']>;
+    modes?: Variant<ModalThemeConfig['Disclosure']>;
   };
   Backdrop?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalBackdropProps>;
-    variants?: Variant<ModalThemeConfig["Backdrop"]>;
-    modes?: Variant<ModalThemeConfig["Backdrop"]>;
+    variants?: Variant<ModalThemeConfig['Backdrop']>;
+    modes?: Variant<ModalThemeConfig['Backdrop']>;
   };
 };
 export type NavigationThemeConfig = {
@@ -1162,8 +1137,8 @@ export type OptionButtonsThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<OptionButtonProps>;
-    variants?: Variant<OptionButtonsThemeConfig["Button"]>;
-    modes?: Variant<OptionButtonsThemeConfig["Button"]>;
+    variants?: Variant<OptionButtonsThemeConfig['Button']>;
+    modes?: Variant<OptionButtonsThemeConfig['Button']>;
   };
   Wrapper?: {
     styles?: {
@@ -1194,8 +1169,8 @@ export type OverlayThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalDisclosureProps>;
-    variants?: Variant<OverlayThemeConfig["Disclosure"]>;
-    modes?: Variant<OverlayThemeConfig["Disclosure"]>;
+    variants?: Variant<OverlayThemeConfig['Disclosure']>;
+    modes?: Variant<OverlayThemeConfig['Disclosure']>;
   };
 };
 export type PageContentThemeConfig = {
@@ -1210,8 +1185,8 @@ export type PageContentThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PageContentWrapperProps>;
-    variants?: Variant<PageContentThemeConfig["Wrapper"]>;
-    modes?: Variant<PageContentThemeConfig["Wrapper"]>;
+    variants?: Variant<PageContentThemeConfig['Wrapper']>;
+    modes?: Variant<PageContentThemeConfig['Wrapper']>;
   };
 };
 export type PageWithSidebarThemeConfig = {
@@ -1251,16 +1226,16 @@ export type PageWithSidebarThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PageWithSidebarDisclosureProps>;
-    variants?: Variant<PageWithSidebarThemeConfig["Disclosure"]>;
-    modes?: Variant<PageWithSidebarThemeConfig["Disclosure"]>;
+    variants?: Variant<PageWithSidebarThemeConfig['Disclosure']>;
+    modes?: Variant<PageWithSidebarThemeConfig['Disclosure']>;
   };
   Minimize?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PageWithSidebarMinimizeProps>;
-    variants?: Variant<PageWithSidebarThemeConfig["Minimize"]>;
-    modes?: Variant<PageWithSidebarThemeConfig["Minimize"]>;
+    variants?: Variant<PageWithSidebarThemeConfig['Minimize']>;
+    modes?: Variant<PageWithSidebarThemeConfig['Minimize']>;
   };
 };
 export type PageWithHeaderThemeConfig = {
@@ -1285,8 +1260,8 @@ export type PageWithHeaderThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PageWithHeaderDisclosureProps>;
-    variants?: Variant<PageWithHeaderThemeConfig["Disclosure"]>;
-    modes?: Variant<PageWithHeaderThemeConfig["Disclosure"]>;
+    variants?: Variant<PageWithHeaderThemeConfig['Disclosure']>;
+    modes?: Variant<PageWithHeaderThemeConfig['Disclosure']>;
   };
 };
 export type PaginationThemeConfig = {
@@ -1328,24 +1303,24 @@ export type PopoverThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverArrowProps>;
-    variants?: Variant<PopoverThemeConfig["Arrow"]>;
-    modes?: Variant<PopoverThemeConfig["Arrow"]>;
+    variants?: Variant<PopoverThemeConfig['Arrow']>;
+    modes?: Variant<PopoverThemeConfig['Arrow']>;
   };
   Backdrop?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverBackdropProps>;
-    variants?: Variant<PopoverThemeConfig["Backdrop"]>;
-    modes?: Variant<PopoverThemeConfig["Backdrop"]>;
+    variants?: Variant<PopoverThemeConfig['Backdrop']>;
+    modes?: Variant<PopoverThemeConfig['Backdrop']>;
   };
   Content?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverContentProps>;
-    variants?: Variant<PopoverThemeConfig["Content"]>;
-    modes?: Variant<PopoverThemeConfig["Content"]>;
+    variants?: Variant<PopoverThemeConfig['Content']>;
+    modes?: Variant<PopoverThemeConfig['Content']>;
   };
   Close?: {
     styles?: {
@@ -1357,32 +1332,32 @@ export type PopoverThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverDisclosureProps>;
-    variants?: Variant<PopoverThemeConfig["Disclosure"]>;
-    modes?: Variant<PopoverThemeConfig["Disclosure"]>;
+    variants?: Variant<PopoverThemeConfig['Disclosure']>;
+    modes?: Variant<PopoverThemeConfig['Disclosure']>;
   };
   Header?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverHeaderProps>;
-    variants?: Variant<PopoverThemeConfig["Header"]>;
-    modes?: Variant<PopoverThemeConfig["Header"]>;
+    variants?: Variant<PopoverThemeConfig['Header']>;
+    modes?: Variant<PopoverThemeConfig['Header']>;
   };
   Footer?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverFooterProps>;
-    variants?: Variant<PopoverThemeConfig["Footer"]>;
-    modes?: Variant<PopoverThemeConfig["Footer"]>;
+    variants?: Variant<PopoverThemeConfig['Footer']>;
+    modes?: Variant<PopoverThemeConfig['Footer']>;
   };
   Title?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverTitleProps>;
-    variants?: Variant<PopoverThemeConfig["Title"]>;
-    modes?: Variant<PopoverThemeConfig["Title"]>;
+    variants?: Variant<PopoverThemeConfig['Title']>;
+    modes?: Variant<PopoverThemeConfig['Title']>;
   };
   defaultProps?: Partial<PopoverProps>;
   variants?: Variant<PopoverThemeConfig>;
@@ -1441,8 +1416,8 @@ export type RatingThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<RatingItemProps>;
-    variants?: Variant<RatingThemeConfig["Item"]>;
-    modes?: Variant<RatingThemeConfig["Item"]>;
+    variants?: Variant<RatingThemeConfig['Item']>;
+    modes?: Variant<RatingThemeConfig['Item']>;
   };
   defaultProps?: Partial<RatingProps>;
   variants?: Variant<RatingThemeConfig>;
@@ -1486,8 +1461,8 @@ export type SideNavThemeConfig = {
       };
     };
     defaultProps?: Partial<SideNavLevelProps>;
-    variants?: Variant<SideNavThemeConfig["Level"]>;
-    modes?: Variant<SideNavThemeConfig["Level"]>;
+    variants?: Variant<SideNavThemeConfig['Level']>;
+    modes?: Variant<SideNavThemeConfig['Level']>;
   };
   Item?: {
     styles?: {
@@ -1497,8 +1472,8 @@ export type SideNavThemeConfig = {
       hover?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<SideNavItemProps>;
-    variants?: Variant<SideNavThemeConfig["Item"]>;
-    modes?: Variant<SideNavThemeConfig["Item"]>;
+    variants?: Variant<SideNavThemeConfig['Item']>;
+    modes?: Variant<SideNavThemeConfig['Item']>;
   };
   defaultProps?: Partial<SideNavProps>;
   variants?: Variant<SideNavThemeConfig>;
@@ -1522,48 +1497,48 @@ export type TableThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableHeadProps>;
-    variants?: Variant<TableThemeConfig["Head"]>;
-    modes?: Variant<TableThemeConfig["Head"]>;
+    variants?: Variant<TableThemeConfig['Head']>;
+    modes?: Variant<TableThemeConfig['Head']>;
   };
   HeadCell?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableHeadCellProps>;
-    variants?: Variant<TableThemeConfig["HeadCell"]>;
-    modes?: Variant<TableThemeConfig["HeadCell"]>;
+    variants?: Variant<TableThemeConfig['HeadCell']>;
+    modes?: Variant<TableThemeConfig['HeadCell']>;
   };
   Body?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableBodyProps>;
-    variants?: Variant<TableThemeConfig["Body"]>;
-    modes?: Variant<TableThemeConfig["Body"]>;
+    variants?: Variant<TableThemeConfig['Body']>;
+    modes?: Variant<TableThemeConfig['Body']>;
   };
   Cell?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableCellProps>;
-    variants?: Variant<TableThemeConfig["Cell"]>;
-    modes?: Variant<TableThemeConfig["Cell"]>;
+    variants?: Variant<TableThemeConfig['Cell']>;
+    modes?: Variant<TableThemeConfig['Cell']>;
   };
   Row?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableRowProps>;
-    variants?: Variant<TableThemeConfig["Row"]>;
-    modes?: Variant<TableThemeConfig["Row"]>;
+    variants?: Variant<TableThemeConfig['Row']>;
+    modes?: Variant<TableThemeConfig['Row']>;
   };
   Foot?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableFootProps>;
-    variants?: Variant<TableThemeConfig["Foot"]>;
-    modes?: Variant<TableThemeConfig["Foot"]>;
+    variants?: Variant<TableThemeConfig['Foot']>;
+    modes?: Variant<TableThemeConfig['Foot']>;
   };
   defaultProps?: Partial<TableProps>;
   variants?: Variant<TableThemeConfig>;
@@ -1578,8 +1553,8 @@ export type TabsThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TabsListProps>;
-    variants?: Variant<TabsThemeConfig["List"]>;
-    modes?: Variant<TabsThemeConfig["List"]>;
+    variants?: Variant<TabsThemeConfig['List']>;
+    modes?: Variant<TabsThemeConfig['List']>;
   };
   Tab?: {
     styles?: {
@@ -1589,16 +1564,16 @@ export type TabsThemeConfig = {
       hover?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TabsTabProps>;
-    variants?: Variant<TabsThemeConfig["Tab"]>;
-    modes?: Variant<TabsThemeConfig["Tab"]>;
+    variants?: Variant<TabsThemeConfig['Tab']>;
+    modes?: Variant<TabsThemeConfig['Tab']>;
   };
   Panel?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TabsPanelProps>;
-    variants?: Variant<TabsThemeConfig["Panel"]>;
-    modes?: Variant<TabsThemeConfig["Panel"]>;
+    variants?: Variant<TabsThemeConfig['Panel']>;
+    modes?: Variant<TabsThemeConfig['Panel']>;
   };
   defaultProps?: Partial<TabsProps>;
   variants?: Variant<TabsThemeConfig>;
@@ -1714,24 +1689,24 @@ export type TooltipThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TooltipArrowProps>;
-    variants?: Variant<TooltipThemeConfig["Arrow"]>;
-    modes?: Variant<TooltipThemeConfig["Arrow"]>;
+    variants?: Variant<TooltipThemeConfig['Arrow']>;
+    modes?: Variant<TooltipThemeConfig['Arrow']>;
   };
   Content?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TooltipContentProps>;
-    variants?: Variant<TooltipThemeConfig["Content"]>;
-    modes?: Variant<TooltipThemeConfig["Content"]>;
+    variants?: Variant<TooltipThemeConfig['Content']>;
+    modes?: Variant<TooltipThemeConfig['Content']>;
   };
   Reference?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TooltipReferenceProps>;
-    variants?: Variant<TooltipThemeConfig["Reference"]>;
-    modes?: Variant<TooltipThemeConfig["Reference"]>;
+    variants?: Variant<TooltipThemeConfig['Reference']>;
+    modes?: Variant<TooltipThemeConfig['Reference']>;
   };
   defaultProps?: Partial<TooltipProps>;
   variants?: Variant<TooltipThemeConfig>;
@@ -1746,8 +1721,8 @@ export type TopNavThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TopNavSectionProps>;
-    variants?: Variant<TopNavThemeConfig["Section"]>;
-    modes?: Variant<TopNavThemeConfig["Section"]>;
+    variants?: Variant<TopNavThemeConfig['Section']>;
+    modes?: Variant<TopNavThemeConfig['Section']>;
   };
   Item?: {
     styles?: {
@@ -1757,8 +1732,8 @@ export type TopNavThemeConfig = {
       hover?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TopNavItemProps>;
-    variants?: Variant<TopNavThemeConfig["Item"]>;
-    modes?: Variant<TopNavThemeConfig["Item"]>;
+    variants?: Variant<TopNavThemeConfig['Item']>;
+    modes?: Variant<TopNavThemeConfig['Item']>;
   };
   defaultProps?: Partial<TopNavProps>;
   variants?: Variant<TopNavThemeConfig>;
@@ -1899,8 +1874,8 @@ export type DrawerThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<DrawerDisclosureProps>;
-    variants?: Variant<DrawerThemeConfig["Disclosure"]>;
-    modes?: Variant<DrawerThemeConfig["Disclosure"]>;
+    variants?: Variant<DrawerThemeConfig['Disclosure']>;
+    modes?: Variant<DrawerThemeConfig['Disclosure']>;
   };
 };
 export type SpinnerThemeConfig = {

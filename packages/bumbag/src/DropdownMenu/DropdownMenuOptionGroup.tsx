@@ -13,7 +13,8 @@ export type LocalDropdownMenuOptionGroupProps = {
   type: 'checkbox' | 'radio';
   value?: Array<string> | string;
 };
-export type DropdownMenuOptionGroupProps = Omit<DropdownMenuGroupProps, 'onBlur' | 'onChange'> & LocalDropdownMenuOptionGroupProps;
+export type DropdownMenuOptionGroupProps = Omit<DropdownMenuGroupProps, 'onBlur' | 'onChange'> &
+  LocalDropdownMenuOptionGroupProps;
 
 const useProps = createHook<DropdownMenuOptionGroupProps>(
   (props, { themeKey }) => {
