@@ -16,60 +16,58 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-7 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-7 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-6 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
-}
-
-.emotion-6.emotion-6 {
-  position: fixed;
-  background-color: var(--bb-palette-background,#000000);
-  left: 0;
-  height: 100vh;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-5 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 19900409;
+}
+
+.emotion-8 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-8.emotion-8 {
+  position: fixed;
+  background-color: var(--bb-palette-background, #000000);
+  left: 0;
+  height: 100vh;
+}
+
+.emotion-9 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-9 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-9 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -86,13 +84,13 @@ exports[`defaultProps should render correctly for className 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
+      class="emotion-5 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
     >
       <div />
     </div>
     <div
-      class="emotion-6 emotion-7 emotion-1 emotion-2 test bb-Box bb-Modal bb-Drawer"
+      class="emotion-8 emotion-9 emotion-1 emotion-2 test bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -105,6 +103,10 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides Drawer.Disclosure.styles.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -120,54 +122,8 @@ exports[`overrides Drawer.Disclosure.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-8 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-8 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-8:focus {
-  outline: none;
-}
-
-.emotion-8::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-8 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-7 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
-}
-
-.emotion-7.emotion-7 {
-  position: fixed;
-  background-color: var(--bb-palette-background,#000000);
-  left: 0;
-  height: 100vh;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-6 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -176,8 +132,48 @@ exports[`overrides Drawer.Disclosure.styles.base should render correctly 1`] = `
   z-index: 19900409;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-9 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-9.emotion-9 {
+  position: fixed;
+  background-color: var(--bb-palette-background, #000000);
+  left: 0;
+  height: 100vh;
+}
+
+.emotion-10 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-10 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-10:focus {
+  outline: none;
+}
+
+.emotion-10::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-10 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -194,13 +190,13 @@ exports[`overrides Drawer.Disclosure.styles.base should render correctly 1`] = `
     class="emotion-2 emotion-3 bb-Box"
   >
     <div
-      class="emotion-4 emotion-2 emotion-3 bb-Box bb-ModalBackdrop"
+      class="emotion-6 emotion-2 emotion-3 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
     >
       <div />
     </div>
     <div
-      class="emotion-7 emotion-8 emotion-2 emotion-3 bb-Box bb-Modal bb-Drawer"
+      class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -228,43 +224,8 @@ exports[`overrides Drawer.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-7 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-7 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-5 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -273,19 +234,52 @@ exports[`overrides Drawer.styles.base should render correctly 1`] = `
   z-index: 19900409;
 }
 
-.emotion-6 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
+.emotion-8 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   position: fixed;
-  background-color: var(--bb-palette-background,#000000);
+  background-color: var(--bb-palette-background, #000000);
   left: 0;
   height: 100vh;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-9 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-9 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-9 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -302,13 +296,13 @@ exports[`overrides Drawer.styles.base should render correctly 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
+      class="emotion-5 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
     >
       <div />
     </div>
     <div
-      class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
+      class="emotion-8 emotion-9 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -336,60 +330,58 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-7 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-7 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-6 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
-}
-
-.emotion-6.emotion-6 {
-  position: fixed;
-  background-color: var(--bb-palette-background,#000000);
-  left: 0;
-  height: 100vh;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-5 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 19900409;
+}
+
+.emotion-8 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-8.emotion-8 {
+  position: fixed;
+  background-color: var(--bb-palette-background, #000000);
+  left: 0;
+  height: 100vh;
+}
+
+.emotion-9 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-9 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-9 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -406,13 +398,13 @@ exports[`props should render correctly 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
+      class="emotion-5 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
     >
       <div />
     </div>
     <div
-      class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
+      class="emotion-8 emotion-9 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -440,60 +432,58 @@ exports[`props should render correctly for an invisible overlay 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-7 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-7 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-6 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
-}
-
-.emotion-6.emotion-6 {
-  position: fixed;
-  background-color: var(--bb-palette-background,#000000);
-  left: 0;
-  height: 100vh;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-5 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 19900409;
+}
+
+.emotion-8 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-8.emotion-8 {
+  position: fixed;
+  background-color: var(--bb-palette-background, #000000);
+  left: 0;
+  height: 100vh;
+}
+
+.emotion-9 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-9 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-9 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -510,7 +500,7 @@ exports[`props should render correctly for an invisible overlay 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
+      class="emotion-5 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
       hidden=""
       style="display: none;"
@@ -518,7 +508,7 @@ exports[`props should render correctly for an invisible overlay 1`] = `
       <div />
     </div>
     <div
-      class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
+      class="emotion-8 emotion-9 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       hidden=""
       id="test"
@@ -548,43 +538,8 @@ exports[`props should render correctly for full screen 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-7 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-7 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-5 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -593,16 +548,49 @@ exports[`props should render correctly for full screen 1`] = `
   z-index: 19900409;
 }
 
-.emotion-6 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
+.emotion-8 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   position: fixed;
-  background-color: var(--bb-palette-background,#000000);
+  background-color: var(--bb-palette-background, #000000);
   left: 0;
   height: 100vh;
   width: 100%;
+}
+
+.emotion-9 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-9 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-9 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -619,13 +607,13 @@ exports[`props should render correctly for full screen 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
+      class="emotion-5 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
     >
       <div />
     </div>
     <div
-      class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
+      class="emotion-8 emotion-9 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -653,54 +641,8 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-7 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-7 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-6 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
-}
-
-.emotion-6.emotion-6 {
-  position: fixed;
-  background-color: var(--bb-palette-background,#000000);
-  left: 0;
-  height: 100vh;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-5 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -709,8 +651,52 @@ exports[`props should render correctly with CSS props 1`] = `
   z-index: 19900409;
 }
 
+.emotion-8 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-8.emotion-8 {
+  position: fixed;
+  background-color: var(--bb-palette-background, #000000);
+  left: 0;
+  height: 100vh;
+}
+
 .emotion-9 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-9 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-9 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.emotion-11 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div>
@@ -727,7 +713,7 @@ exports[`props should render correctly with CSS props 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
+      class="emotion-5 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
       hidden=""
       style="display: none;"
@@ -735,7 +721,7 @@ exports[`props should render correctly with CSS props 1`] = `
       <div />
     </div>
     <div
-      class="emotion-6 emotion-7 emotion-1 emotion-9 bb-Box bb-Modal bb-Drawer"
+      class="emotion-8 emotion-9 emotion-1 emotion-11 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       hidden=""
       id="test"
@@ -765,50 +751,48 @@ exports[`props should render correctly without backdrop 1`] = `
   outline: none;
 }
 
-.emotion-4 {
+.emotion-5 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-5.emotion-5 {
+  position: fixed;
+  background-color: var(--bb-palette-background, #000000);
+  left: 0;
+  height: 100vh;
+}
+
+.emotion-6 {
   position: fixed;
   z-index: 19900410;
   min-width: 320px;
   top: 50%;
   left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
 }
 
-@media screen and (max-width:320px) {
-  .emotion-4 {
+@media screen and (max-width: 320px) {
+  .emotion-6 {
     min-width: unset;
     width: 100%;
   }
 }
 
-.emotion-4:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-4::-webkit-scrollbar {
+.emotion-6::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
 
-.emotion-4 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
+.emotion-6 {
   scrollbar-width: none;
   -ms-overflow-style: none;
-}
-
-.emotion-3 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
-}
-
-.emotion-3.emotion-3 {
-  position: fixed;
-  background-color: var(--bb-palette-background,#000000);
-  left: 0;
-  height: 100vh;
 }
 
 <div>
@@ -825,7 +809,7 @@ exports[`props should render correctly without backdrop 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
+      class="emotion-5 emotion-6 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       hidden=""
       id="test"
@@ -840,6 +824,10 @@ exports[`props should render correctly without backdrop 1`] = `
 `;
 
 exports[`theming Drawer.Disclosure.styles.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -855,54 +843,8 @@ exports[`theming Drawer.Disclosure.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-8 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-8 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-8:focus {
-  outline: none;
-}
-
-.emotion-8::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-8 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-7 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
-}
-
-.emotion-7.emotion-7 {
-  position: fixed;
-  background-color: var(--bb-palette-background,#000000);
-  left: 0;
-  height: 100vh;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-6 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -911,8 +853,48 @@ exports[`theming Drawer.Disclosure.styles.base should render correctly 1`] = `
   z-index: 19900409;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-9 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-9.emotion-9 {
+  position: fixed;
+  background-color: var(--bb-palette-background, #000000);
+  left: 0;
+  height: 100vh;
+}
+
+.emotion-10 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-10 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-10:focus {
+  outline: none;
+}
+
+.emotion-10::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-10 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -929,13 +911,13 @@ exports[`theming Drawer.Disclosure.styles.base should render correctly 1`] = `
     class="emotion-2 emotion-3 bb-Box"
   >
     <div
-      class="emotion-4 emotion-2 emotion-3 bb-Box bb-ModalBackdrop"
+      class="emotion-6 emotion-2 emotion-3 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
     >
       <div />
     </div>
     <div
-      class="emotion-7 emotion-8 emotion-2 emotion-3 bb-Box bb-Modal bb-Drawer"
+      class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -963,43 +945,8 @@ exports[`theming Drawer.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  position: fixed;
-  z-index: 19900410;
-  min-width: 320px;
-  top: 50%;
-  left: 1.25em;
-  -webkit-transform: translate3d(0px,-50%,0px);
-  -ms-transform: translate3d(0px,-50%,0px);
-  transform: translate3d(0px,-50%,0px);
-}
-
-@media screen and (max-width:320px) {
-  .emotion-7 {
-    min-width: unset;
-    width: 100%;
-  }
-}
-
-.emotion-7:focus {
-  outline: none;
-}
-
-.emotion-7::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.emotion-7 {
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0.5);
+.emotion-5 {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -1008,19 +955,52 @@ exports[`theming Drawer.styles.base should render correctly 1`] = `
   z-index: 19900409;
 }
 
-.emotion-6 {
-  box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
+.emotion-8 {
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15),0px 0px 6px 3px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   position: fixed;
-  background-color: var(--bb-palette-background,#000000);
+  background-color: var(--bb-palette-background, #000000);
   left: 0;
   height: 100vh;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-9 {
+  position: fixed;
+  z-index: 19900410;
+  min-width: 320px;
+  top: 50%;
+  left: 1.25em;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+  -moz-transform: translate3d(0px, -50%, 0px);
+  -ms-transform: translate3d(0px, -50%, 0px);
+  transform: translate3d(0px, -50%, 0px);
+}
+
+@media screen and (max-width: 320px) {
+  .emotion-9 {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.emotion-9 {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 <div>
@@ -1037,13 +1017,13 @@ exports[`theming Drawer.styles.base should render correctly 1`] = `
     class="emotion-1 emotion-2 bb-Box"
   >
     <div
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
+      class="emotion-5 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
       data-dialog-ref="test"
     >
       <div />
     </div>
     <div
-      class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
+      class="emotion-8 emotion-9 emotion-1 emotion-2 bb-Box bb-Modal bb-Drawer"
       data-dialog="true"
       id="test"
       role="dialog"

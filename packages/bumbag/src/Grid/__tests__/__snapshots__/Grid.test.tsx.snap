@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
+.emotion-0 {
+  display: grid;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -14,10 +18,6 @@ exports[`composition as should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid;
 }
 
 <p
@@ -34,6 +34,10 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  display: grid;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -47,10 +51,6 @@ exports[`composition render props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid;
 }
 
 <div
@@ -61,6 +61,11 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  display: grid;
+  grid-auto-flow: row;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -74,11 +79,6 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid;
-  grid-auto-flow: row;
 }
 
 <div
@@ -89,6 +89,10 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  display: grid;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -104,10 +108,6 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  display: grid;
-}
-
 <div
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-Grid"
 >
@@ -116,6 +116,12 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 3vw;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -132,13 +138,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2 {
-  gap: 3vw !important;
-}
-
-.emotion-0 {
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 3vw;
+  gap: 3vw!important;
 }
 
 <div
@@ -149,6 +149,14 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Grid.base should render correctly 1`] = `
+.emotion-0 {
+  display: grid;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -162,14 +170,6 @@ exports[`theming Grid.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div

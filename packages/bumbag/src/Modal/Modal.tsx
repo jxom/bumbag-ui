@@ -1,14 +1,26 @@
-import * as React from 'react';
-import { Box as ReakitBox, DialogProps as ReakitDialogProps, useDialog as useReakitDialog } from 'reakit';
-import _merge from 'lodash/merge';
+import * as React from "react";
+import {
+  Box as ReakitBox,
+  DialogProps as ReakitDialogProps,
+  useDialog as useReakitDialog,
+} from "reakit";
+import _merge from "lodash/merge";
 
-import { AnimateProps, Placement } from '../types';
-import { useClassName, createComponent, createElement, createHook, merge, omitCSSProps, pickCSSProps } from '../utils';
-import { Box, BoxProps } from '../Box';
+import { AnimateProps, Placement } from "../types";
+import {
+  useClassName,
+  createComponent,
+  createElement,
+  createHook,
+  merge,
+  omitCSSProps,
+  pickCSSProps,
+} from "../utils";
+import { Box, BoxProps } from "../Box";
 
-import { ModalBackdrop } from './ModalBackdrop';
-import { ModalContext } from './ModalState';
-import * as styles from './Modal.styles';
+import { ModalBackdrop } from "./ModalBackdrop";
+import { ModalContext } from "./ModalState";
+import * as styles from "./Modal.styles";
 
 export type LocalModalProps = {
   /** Hides the backdrop. */
@@ -48,7 +60,7 @@ const useProps = createHook<Partial<ModalProps>>(
         hide,
         hideOnEsc,
         hideOnClickOutside,
-        modal: process.env.NODE_ENV === 'test' ? false : modal,
+        modal: process.env.NODE_ENV === "test" ? false : modal,
         preventBodyScroll,
         visible,
         animating,
@@ -108,22 +120,27 @@ const useProps = createHook<Partial<ModalProps>>(
   },
   {
     defaultProps: {
-      placement: 'center',
+      placement: "center",
     },
-    themeKey: 'Modal',
+    themeKey: "Modal",
   }
 );
 
 export const Modal = createComponent<Partial<ModalProps>>(
   (props) => {
     const modalProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: modalProps });
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: modalProps,
+    });
   },
   {
     attach: {
       useProps,
-      displayName: 'Modal',
+      displayName: "Modal",
     },
-    themeKey: 'Modal',
+    themeKey: "Modal",
   }
 );

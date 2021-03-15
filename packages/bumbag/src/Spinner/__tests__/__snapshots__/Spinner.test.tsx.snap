@@ -2,12 +2,63 @@
 
 exports[`composition hook should return with Spinner props 1`] = `
 Object {
-  "children": <svg
-    className="css-8tjoym bb-Spinnervector"
+  "children": @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0 {
+  width: 1em;
+  height: 1em;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-animation: animation-0 0.6s infinite linear;
+  animation: animation-0 0.6s infinite linear;
+}
+
+<svg
+    className="emotion-0 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
-    <circle
-      className="css-1gbbnli bb-SpinnerloaderCircle"
+    .emotion-0 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 200px;
+  stroke: #000000;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+<circle
+      className="emotion-0 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -23,12 +74,14 @@ exports[`composition render props should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -37,22 +90,25 @@ exports[`composition render props should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -63,42 +119,42 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -113,12 +169,14 @@ exports[`composition use should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -127,22 +185,25 @@ exports[`composition use should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -153,42 +214,42 @@ exports[`composition use should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <p
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -203,12 +264,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -217,12 +280,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -231,22 +296,25 @@ exports[`defaultProps should render correctly for className 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -257,42 +325,42 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 test bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -307,12 +375,14 @@ exports[`defaultProps should render correctly for duration 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -321,12 +391,14 @@ exports[`defaultProps should render correctly for duration 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -335,12 +407,14 @@ exports[`defaultProps should render correctly for duration 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -349,22 +423,25 @@ exports[`defaultProps should render correctly for duration 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -375,42 +452,42 @@ exports[`defaultProps should render correctly for duration 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-0 {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 2s infinite linear;
   animation: animation-0 2s infinite linear;
 }
 
+.emotion-4 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 200px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -425,12 +502,14 @@ exports[`overrides Spinner.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -439,22 +518,29 @@ exports[`overrides Spinner.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -465,46 +551,42 @@ exports[`overrides Spinner.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-2 {
-  line-height: 1;
-  font-size: 20px;
-}
-
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -519,12 +601,14 @@ exports[`overrides Spinner.loaderCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -533,12 +617,14 @@ exports[`overrides Spinner.loaderCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -547,22 +633,25 @@ exports[`overrides Spinner.loaderCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -573,46 +662,46 @@ exports[`overrides Spinner.loaderCircle.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-4 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -627,12 +716,14 @@ exports[`overrides Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -641,12 +732,14 @@ exports[`overrides Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -655,22 +748,25 @@ exports[`overrides Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -681,42 +777,42 @@ exports[`overrides Spinner.trackCircle.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -731,12 +827,14 @@ exports[`overrides Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -745,12 +843,14 @@ exports[`overrides Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -759,22 +859,25 @@ exports[`overrides Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -785,46 +888,46 @@ exports[`overrides Spinner.vector.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-0 {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-1 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 200px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -839,22 +942,25 @@ exports[`props should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -865,42 +971,42 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -915,22 +1021,25 @@ exports[`props should render correctly for color 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -941,42 +1050,42 @@ exports[`props should render correctly for color 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -991,12 +1100,14 @@ exports[`props should render correctly for duration 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1005,22 +1116,25 @@ exports[`props should render correctly for duration 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1031,42 +1145,42 @@ exports[`props should render correctly for duration 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-0 {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 1s infinite linear;
   animation: animation-0 1s infinite linear;
 }
 
+.emotion-4 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 200px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1081,12 +1195,14 @@ exports[`props should render correctly for hasTrack 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1095,22 +1211,25 @@ exports[`props should render correctly for hasTrack 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-5 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-4 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1121,46 +1240,46 @@ exports[`props should render correctly for hasTrack 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-4:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  line-height: 1;
-  font-size: 20px;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
-  stroke: var(--bb-palette-primary100,#000000);
+.emotion-4 {
+  stroke: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-1 {
+.emotion-5 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-3 emotion-4 emotion-5 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-2 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnertrackCircle"
+      class="emotion-4 bb-SpinnertrackCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1168,7 +1287,7 @@ exports[`props should render correctly for hasTrack 1`] = `
       stroke-width="4"
     />
     <circle
-      class="emotion-1 bb-SpinnerloaderCircle"
+      class="emotion-5 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1183,12 +1302,14 @@ exports[`props should render correctly for perimeter 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1197,22 +1318,25 @@ exports[`props should render correctly for perimeter 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1223,42 +1347,42 @@ exports[`props should render correctly for perimeter 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 237.5;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1273,12 +1397,14 @@ exports[`props should render correctly for size default 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1287,22 +1413,25 @@ exports[`props should render correctly for size default 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1313,42 +1442,42 @@ exports[`props should render correctly for size default 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1363,12 +1492,14 @@ exports[`props should render correctly for size large 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1377,22 +1508,29 @@ exports[`props should render correctly for size large 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-0 svg {
+  font-size: 36px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1403,46 +1541,42 @@ exports[`props should render correctly for size large 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-2 {
-  line-height: 1;
-  font-size: 20px;
-}
-
-.emotion-2 svg {
-  font-size: 36px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1457,12 +1591,14 @@ exports[`props should render correctly for size medium 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1471,22 +1607,29 @@ exports[`props should render correctly for size medium 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-0 svg {
+  font-size: 28px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1497,46 +1640,42 @@ exports[`props should render correctly for size medium 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-2 {
-  line-height: 1;
-  font-size: 20px;
-}
-
-.emotion-2 svg {
-  font-size: 28px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1551,12 +1690,14 @@ exports[`props should render correctly for size small 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1565,22 +1706,30 @@ exports[`props should render correctly for size small 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-0 svg {
+  font-size: 14px;
+  border-width: 2px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1591,47 +1740,42 @@ exports[`props should render correctly for size small 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-2 {
-  line-height: 1;
-  font-size: 20px;
-}
-
-.emotion-2 svg {
-  font-size: 14px;
-  border-width: 2px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1643,11 +1787,12 @@ exports[`props should render correctly for size small 1`] = `
 `;
 
 exports[`props should render correctly for value 1`] = `
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1658,41 +1803,41 @@ exports[`props should render correctly for value 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 126;
   stroke-dashoffset: 94.5px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
   value="25"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1707,12 +1852,14 @@ exports[`theming Spinner.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1721,12 +1868,14 @@ exports[`theming Spinner.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1735,22 +1884,29 @@ exports[`theming Spinner.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1761,46 +1917,42 @@ exports[`theming Spinner.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-2 {
-  line-height: 1;
-  font-size: 20px;
-}
-
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1815,12 +1967,14 @@ exports[`theming Spinner.loaderCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1829,12 +1983,14 @@ exports[`theming Spinner.loaderCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1843,22 +1999,25 @@ exports[`theming Spinner.loaderCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1869,46 +2028,46 @@ exports[`theming Spinner.loaderCircle.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-4 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -1923,12 +2082,14 @@ exports[`theming Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1937,12 +2098,14 @@ exports[`theming Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1951,22 +2114,25 @@ exports[`theming Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1977,42 +2143,42 @@ exports[`theming Spinner.trackCircle.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
+.emotion-4 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -2027,12 +2193,14 @@ exports[`theming Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -2041,12 +2209,14 @@ exports[`theming Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -2055,22 +2225,25 @@ exports[`theming Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  line-height: 1;
+  font-size: 20px;
 }
 
-.emotion-3 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2081,46 +2254,46 @@ exports[`theming Spinner.vector.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  line-height: 1;
-  font-size: 20px;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-0 {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primary,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.emotion-1 {
+.emotion-3 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-1 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 200px;
+  stroke: var(--bb-palette-primary, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-2 emotion-3 emotion-4 bb-Box bb-Spinner"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Spinner"
 >
   <svg
-    class="emotion-1 bb-Spinnervector"
+    class="emotion-3 bb-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      class="emotion-0 bb-SpinnerloaderCircle"
+      class="emotion-4 bb-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"

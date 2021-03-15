@@ -1,6 +1,6 @@
-const { ...baseConfig } = require("../../jest.config");
+const { ...baseConfig } = require('../../jest.config');
 
 module.exports = {
   ...baseConfig,
-  snapshotSerializers: ["@emotion/jest"],
+  snapshotSerializers: ['@emotion/jest/serializer'],
 };
