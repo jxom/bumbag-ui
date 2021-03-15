@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Provider as ReakitProvider } from 'reakit';
-import { ThemeProvider as EmotionProvider } from '@emotion/react';
 
+import { ThemeProvider as EmotionProvider } from '../styled';
 import buildTheme from '../theme';
 import { LayoutBreakpoint, ThemeConfig } from '../types';
 import { ToastProvider } from '../Toast';
