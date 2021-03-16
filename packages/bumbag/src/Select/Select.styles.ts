@@ -103,6 +103,12 @@ function getVariantStyles(styleProps) {
         padding: 0.4em 2em 0.4em 0.8em;
       }
 
+      ${styleProps.disabled &&
+      css`
+        border-radius: ${borderRadius('default')(styleProps)};
+        padding: 0.4em 0.8em 0.4em 0.8em;
+      `}
+
       ${styleProps.state &&
       css`
         & {
@@ -141,6 +147,11 @@ function getVariantStyles(styleProps) {
       &[disabled] {
         padding: 0.4em 2em 0.4em 0.8em;
       }
+
+      ${styleProps.disabled &&
+      css`
+        padding: 0.4em 0.8em 0.4em 0.8em;
+      `}
 
       ${styleProps.state &&
       css`

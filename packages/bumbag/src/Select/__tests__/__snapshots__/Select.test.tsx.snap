@@ -21,9 +21,13 @@ Object {
       Overcast
     </option>
   </React.Fragment>,
-  "className": "css-1p60bua css-63it0p css-jwhr8m bb-Box bb-Select",
+  "className": "css-eqh6jo css-63it0p css-jwhr8m bb-Box bb-Select",
   "disabled": undefined,
+  "id": "id-test",
+  "onBlur": [Function],
   "onChange": [Function],
+  "onFocus": [Function],
+  "ref": [Function],
   "wrapElement": [Function],
 }
 `;
@@ -57,6 +61,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -64,15 +70,21 @@ exports[`defaultProps should render correctly for className 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-gray300, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -89,8 +101,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -117,6 +128,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-5 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value=""
@@ -179,6 +191,8 @@ exports[`overrides Select.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -186,15 +200,21 @@ exports[`overrides Select.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-gray300, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -211,8 +231,7 @@ exports[`overrides Select.base should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-3 {
@@ -243,6 +262,7 @@ exports[`overrides Select.base should render correctly 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value=""
@@ -286,15 +306,22 @@ exports[`props should assign a ref 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-0.emotion-0:focus,
+.emotion-0[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-0[disabled],
@@ -311,8 +338,7 @@ exports[`props should assign a ref 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-1 {
@@ -333,6 +359,7 @@ exports[`props should assign a ref 1`] = `
 <select
   aria-invalid="false"
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
+  id="id-test"
 >
   <option
     value="sunny"
@@ -358,15 +385,22 @@ exports[`props should assign a ref via selectRef 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-0.emotion-0:focus,
+.emotion-0[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-0[disabled],
@@ -383,8 +417,7 @@ exports[`props should assign a ref via selectRef 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-1 {
@@ -405,6 +438,7 @@ exports[`props should assign a ref via selectRef 1`] = `
 <select
   aria-invalid="false"
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
+  id="id-test"
 >
   <option
     value="sunny"
@@ -449,6 +483,8 @@ exports[`props should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -456,15 +492,22 @@ exports[`props should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -481,8 +524,7 @@ exports[`props should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -509,6 +551,7 @@ exports[`props should render correctly 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -566,6 +609,8 @@ exports[`props should render correctly for danger state 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -573,15 +618,27 @@ exports[`props should render correctly for danger state 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3 {
+  border-color: var(--bb-palette-danger, #000000);
+  box-shadow: var(--bb-palette-dangerTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -598,13 +655,7 @@ exports[`props should render correctly for danger state 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
-}
-
-.emotion-3 {
-  border-color: var(--bb-palette-danger, #000000);
-  box-shadow: var(--bb-palette-dangerTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -631,6 +682,7 @@ exports[`props should render correctly for danger state 1`] = `
   <select
     aria-invalid="true"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -688,6 +740,8 @@ exports[`props should render correctly for large size 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
   font-size: 1.5rem;
 }
 
@@ -696,15 +750,22 @@ exports[`props should render correctly for large size 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -721,8 +782,7 @@ exports[`props should render correctly for large size 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -749,6 +809,7 @@ exports[`props should render correctly for large size 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -806,6 +867,8 @@ exports[`props should render correctly for medium size 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
   font-size: 1.25rem;
 }
 
@@ -814,15 +877,22 @@ exports[`props should render correctly for medium size 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -839,8 +909,7 @@ exports[`props should render correctly for medium size 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -867,6 +936,7 @@ exports[`props should render correctly for medium size 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -924,6 +994,8 @@ exports[`props should render correctly for small size 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
   font-size: 0.875rem;
 }
 
@@ -932,15 +1004,22 @@ exports[`props should render correctly for small size 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -957,8 +1036,7 @@ exports[`props should render correctly for small size 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -985,6 +1063,7 @@ exports[`props should render correctly for small size 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -1042,6 +1121,8 @@ exports[`props should render correctly for success state 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1049,15 +1130,27 @@ exports[`props should render correctly for success state 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3 {
+  border-color: var(--bb-palette-success, #000000);
+  box-shadow: var(--bb-palette-successTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1074,13 +1167,7 @@ exports[`props should render correctly for success state 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
-}
-
-.emotion-3 {
-  border-color: var(--bb-palette-success, #000000);
-  box-shadow: var(--bb-palette-successTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1107,6 +1194,7 @@ exports[`props should render correctly for success state 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -1164,6 +1252,8 @@ exports[`props should render correctly for warning state 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1171,15 +1261,27 @@ exports[`props should render correctly for warning state 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3 {
+  border-color: var(--bb-palette-warning, #000000);
+  box-shadow: var(--bb-palette-warningTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1196,13 +1298,7 @@ exports[`props should render correctly for warning state 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
-}
-
-.emotion-3 {
-  border-color: var(--bb-palette-warning, #000000);
-  box-shadow: var(--bb-palette-warningTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1229,6 +1325,7 @@ exports[`props should render correctly for warning state 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -1290,6 +1387,8 @@ exports[`props should render correctly with CSS props 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1297,15 +1396,22 @@ exports[`props should render correctly with CSS props 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1322,8 +1428,7 @@ exports[`props should render correctly with CSS props 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1350,6 +1455,7 @@ exports[`props should render correctly with CSS props 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-5 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -1407,6 +1513,8 @@ exports[`props should render correctly with a default value 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1414,15 +1522,22 @@ exports[`props should render correctly with a default value 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1439,8 +1554,7 @@ exports[`props should render correctly with a default value 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1467,6 +1581,7 @@ exports[`props should render correctly with a default value 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       selected=""
@@ -1525,6 +1640,8 @@ exports[`props should render correctly with disabled 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1532,15 +1649,22 @@ exports[`props should render correctly with disabled 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1557,8 +1681,7 @@ exports[`props should render correctly with disabled 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1586,6 +1709,7 @@ exports[`props should render correctly with disabled 1`] = `
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
     disabled=""
+    id="id-test"
   >
     <option
       disabled=""
@@ -1662,6 +1786,8 @@ exports[`props should render correctly with isLoading 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1669,15 +1795,22 @@ exports[`props should render correctly with isLoading 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1694,8 +1827,7 @@ exports[`props should render correctly with isLoading 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1750,6 +1882,7 @@ exports[`props should render correctly with isLoading 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -1812,6 +1945,8 @@ exports[`props should render correctly with isRequired 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1819,15 +1954,22 @@ exports[`props should render correctly with isRequired 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1844,8 +1986,7 @@ exports[`props should render correctly with isRequired 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1873,6 +2014,7 @@ exports[`props should render correctly with isRequired 1`] = `
     aria-invalid="false"
     aria-required="true"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value="sunny"
@@ -1930,6 +2072,8 @@ exports[`props should render correctly with name 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -1937,15 +2081,22 @@ exports[`props should render correctly with name 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -1962,8 +2113,7 @@ exports[`props should render correctly with name 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -1990,6 +2140,7 @@ exports[`props should render correctly with name 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
     name="test"
   >
     <option
@@ -2048,6 +2199,8 @@ exports[`props should render placeholder correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -2055,15 +2208,21 @@ exports[`props should render placeholder correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-gray300, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -2080,8 +2239,7 @@ exports[`props should render placeholder correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-6 {
@@ -2108,6 +2266,7 @@ exports[`props should render placeholder correctly 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value=""
@@ -2170,6 +2329,8 @@ exports[`theming Select.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-3 {
@@ -2177,15 +2338,21 @@ exports[`theming Select.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-gray300, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+}
+
+.emotion-3.emotion-3:focus,
+.emotion-3[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-3[disabled],
@@ -2202,8 +2369,7 @@ exports[`theming Select.base should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-3 {
@@ -2234,6 +2400,7 @@ exports[`theming Select.base should render correctly 1`] = `
   <select
     aria-invalid="false"
     class="emotion-3 emotion-0 emotion-1 bb-Box bb-Select"
+    id="id-test"
   >
     <option
       value=""

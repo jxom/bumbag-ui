@@ -25,19 +25,34 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -50,39 +65,44 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,7 +118,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -119,19 +139,19 @@ exports[`defaultProps should render correctly for className 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -140,7 +160,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -148,21 +168,21 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -180,43 +200,47 @@ exports[`defaultProps should render correctly for className 1`] = `
   class="emotion-0 emotion-1 emotion-2 test bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="test"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-4 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-4 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-4 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-4 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="test"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-4 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-4 bb-Box bb-Set"
+        class="emotion-1 emotion-4 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-4 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-4 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-4 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-4 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -253,19 +277,34 @@ exports[`overrides styles.base should render correctly 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -278,39 +317,44 @@ exports[`overrides styles.base should render correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,7 +370,7 @@ exports[`overrides styles.base should render correctly 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -347,19 +391,19 @@ exports[`overrides styles.base should render correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -368,7 +412,7 @@ exports[`overrides styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -376,21 +420,21 @@ exports[`overrides styles.base should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -408,43 +452,47 @@ exports[`overrides styles.base should render correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="test"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="test"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-2 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-2 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-2 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -477,19 +525,34 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -502,39 +565,44 @@ exports[`props should render correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -550,7 +618,7 @@ exports[`props should render correctly 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -571,19 +639,19 @@ exports[`props should render correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -592,7 +660,7 @@ exports[`props should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -600,21 +668,21 @@ exports[`props should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -632,43 +700,47 @@ exports[`props should render correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="test"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="test"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-2 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-2 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-2 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -705,19 +777,34 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -730,39 +817,44 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -778,7 +870,7 @@ exports[`props should render correctly with CSS props 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -799,19 +891,19 @@ exports[`props should render correctly with CSS props 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -820,7 +912,7 @@ exports[`props should render correctly with CSS props 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -828,21 +920,21 @@ exports[`props should render correctly with CSS props 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -860,43 +952,47 @@ exports[`props should render correctly with CSS props 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="test"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-4 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-4 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-4 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-4 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="test"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-4 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-4 bb-Box bb-Set"
+        class="emotion-1 emotion-4 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-4 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-4 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-4 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-4 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -929,20 +1025,35 @@ exports[`sizes should render large correctly 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  font-size: 1.5rem;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -955,39 +1066,44 @@ exports[`sizes should render large correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1003,7 +1119,7 @@ exports[`sizes should render large correctly 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1024,19 +1140,19 @@ exports[`sizes should render large correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -1045,7 +1161,7 @@ exports[`sizes should render large correctly 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -1053,21 +1169,21 @@ exports[`sizes should render large correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -1085,43 +1201,47 @@ exports[`sizes should render large correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="bb-id-5"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="bb-id-5"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-2 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-2 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-2 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="bb-id-5"
@@ -1154,20 +1274,35 @@ exports[`sizes should render medium correctly 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  font-size: 1.25rem;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1180,39 +1315,44 @@ exports[`sizes should render medium correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1228,7 +1368,7 @@ exports[`sizes should render medium correctly 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1249,19 +1389,19 @@ exports[`sizes should render medium correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -1270,7 +1410,7 @@ exports[`sizes should render medium correctly 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -1278,21 +1418,21 @@ exports[`sizes should render medium correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -1310,43 +1450,47 @@ exports[`sizes should render medium correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="bb-id-5"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="bb-id-5"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-2 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-2 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-2 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="bb-id-5"
@@ -1379,20 +1523,35 @@ exports[`sizes should render small correctly 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  font-size: 0.875rem;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1405,39 +1564,44 @@ exports[`sizes should render small correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1453,7 +1617,7 @@ exports[`sizes should render small correctly 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1474,19 +1638,19 @@ exports[`sizes should render small correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -1495,7 +1659,7 @@ exports[`sizes should render small correctly 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -1503,21 +1667,21 @@ exports[`sizes should render small correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -1535,43 +1699,47 @@ exports[`sizes should render small correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="bb-id-5"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="bb-id-5"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-2 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-2 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-2 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="bb-id-5"
@@ -1608,19 +1776,34 @@ exports[`theming styles.base should render correctly 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1633,39 +1816,44 @@ exports[`theming styles.base should render correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8.emotion-8:focus,
+.emotion-8[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1681,7 +1869,7 @@ exports[`theming styles.base should render correctly 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1702,19 +1890,19 @@ exports[`theming styles.base should render correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -1723,7 +1911,7 @@ exports[`theming styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -1731,21 +1919,21 @@ exports[`theming styles.base should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -1763,43 +1951,47 @@ exports[`theming styles.base should render correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="test"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="test"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-2 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-2 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-2 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1836,19 +2028,29 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 100%;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-undefined, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  position: unset;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1861,39 +2063,38 @@ exports[`variants styles.base should render correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 }
 
-.emotion-5[disabled],
-.emotion-5[aria-disabled="true"] {
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-5[disabled]+.bb-Icon {
+.emotion-8[disabled]+.bb-Icon {
   color: var(--bb-palette-gray400, #000000);
   fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-5:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
-.emotion-5[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+.emotion-8[aria-expanded="true"] {
+  position: unset;
 }
 
-.emotion-8 {
+.emotion-11 {
+  color: var(--bb-palette-gray300, #000000);
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-11 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1909,7 +2110,7 @@ exports[`variants styles.base should render correctly 1`] = `
   min-width: 4rem;
 }
 
-.emotion-12 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1930,19 +2131,19 @@ exports[`variants styles.base should render correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-12.emotion-12.emotion-12>* {
+.emotion-15.emotion-15.emotion-15>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
@@ -1951,7 +2152,7 @@ exports[`variants styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-20 {
+.emotion-23 {
   background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
@@ -1959,21 +2160,21 @@ exports[`variants styles.base should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-20[hidden] {
+.emotion-23[hidden] {
   display: inherit!important;
   visibility: hidden!important;
 }
 
-.emotion-20:focus {
+.emotion-23:focus {
   outline: none;
   box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-22 {
+.emotion-25 {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
+.emotion-26.emotion-26.emotion-26 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
@@ -1991,43 +2192,47 @@ exports[`variants styles.base should render correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
-    aria-controls="test"
-    aria-expanded="false"
-    aria-haspopup="listbox"
-    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
-    loop=""
-    role="button"
-    tabindex="0"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButtonWrapper bb-Box"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
-    >
-      Search for a fruit...
-    </div>
-    <div
-      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
+      aria-controls="test"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButton bb-Box"
+      loop=""
+      role="button"
+      tabindex="0"
     >
       <div
-        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonText bb-Box"
       >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
-          role="img"
-          viewBox="0 0 448 512"
+        Search for a fruit...
+      </div>
+      <div
+        class="emotion-1 emotion-2 emotion-14 bb-SelectMenuButtonIconsWrapper bb-Box"
+      >
+        <div
+          class="emotion-15 emotion-1 emotion-2 bb-Box bb-Set"
         >
-          <path
-            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="emotion-18 emotion-1 emotion-2 emotion-21 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-22 emotion-23 emotion-1 emotion-25 emotion-26 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
