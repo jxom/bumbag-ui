@@ -1,16 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -21,69 +12,78 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-1 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-4 emotion-5 test bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 test bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-5 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`overrides Textarea.Wrapper.base should render correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -94,53 +94,11 @@ exports[`overrides Textarea.Wrapper.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -149,32 +107,65 @@ exports[`overrides Textarea.Wrapper.base should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-2 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text, #000000);
+  width: 100%;
+  padding: 0.4em 0.8em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`overrides Textarea.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -185,69 +176,93 @@ exports[`overrides Textarea.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`overrides Textarea.placeholder.base should render correctly 1`] = `
-.emotion-5 {
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -256,79 +271,118 @@ exports[`overrides Textarea.placeholder.base should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-webkit-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-webkit-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::-moz-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props should assign a ref 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text, #000000);
+  width: 100%;
+  padding: 0.4em 0.8em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -342,48 +396,6 @@ exports[`props should assign a ref 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
 }
 
 <textarea
@@ -394,6 +406,48 @@ exports[`props should assign a ref 1`] = `
 `;
 
 exports[`props should assign a ref via textareaRef 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text, #000000);
+  width: 100%;
+  padding: 0.4em 0.8em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -407,48 +461,6 @@ exports[`props should assign a ref via textareaRef 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
 }
 
 <textarea
@@ -459,16 +471,7 @@ exports[`props should assign a ref via textareaRef 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -479,74 +482,74 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props should render correctly when disabled 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -557,58 +560,67 @@ exports[`props should render correctly when disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     disabled=""
     type="text"
   />
@@ -616,7 +628,26 @@ exports[`props should render correctly when disabled 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-5 {
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -625,80 +656,61 @@ exports[`props should render correctly with CSS props 1`] = `
   width: 100%;
 }
 
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-4 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-5 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props sizes should render large correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -709,53 +721,11 @@ exports[`props sizes should render large correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -765,19 +735,61 @@ exports[`props sizes should render large correctly 1`] = `
   font-size: 1.5rem;
 }
 
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text, #000000);
+  width: 100%;
+  padding: 0.4em 0.8em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props sizes should render medium correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -788,53 +800,11 @@ exports[`props sizes should render medium correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -844,19 +814,61 @@ exports[`props sizes should render medium correctly 1`] = `
   font-size: 1.25rem;
 }
 
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text, #000000);
+  width: 100%;
+  padding: 0.4em 0.8em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props sizes should render small correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -867,53 +879,11 @@ exports[`props sizes should render small correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -923,28 +893,61 @@ exports[`props sizes should render small correctly 1`] = `
   font-size: 0.875rem;
 }
 
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text, #000000);
+  width: 100%;
+  padding: 0.4em 0.8em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render danger correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -955,79 +958,79 @@ exports[`props states should render danger correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  border-color: var(--bb-palette-danger,#000000);
-  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3 {
+  border-color: var(--bb-palette-danger, #000000);
+  box-shadow: var(--bb-palette-dangerTint, #000000) 0px 0px 0px 3px!important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="true"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render primary correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1038,79 +1041,79 @@ exports[`props states should render primary correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3 {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render success correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1121,79 +1124,79 @@ exports[`props states should render success correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  border-color: var(--bb-palette-success,#000000);
-  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3 {
+  border-color: var(--bb-palette-success, #000000);
+  box-shadow: var(--bb-palette-successTint, #000000) 0px 0px 0px 3px!important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render warning correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1204,70 +1207,79 @@ exports[`props states should render warning correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  border-color: var(--bb-palette-warning,#000000);
-  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3 {
+  border-color: var(--bb-palette-warning, #000000);
+  box-shadow: var(--bb-palette-warningTint, #000000) 0px 0px 0px 3px!important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`theming Textarea.Wrapper.base should render correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1278,53 +1290,11 @@ exports[`theming Textarea.Wrapper.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1333,32 +1303,65 @@ exports[`theming Textarea.Wrapper.base should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-2 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text, #000000);
+  width: 100%;
+  padding: 0.4em 0.8em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`theming Textarea.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1369,78 +1372,78 @@ exports[`theming Textarea.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>
 `;
 
 exports[`theming Textarea.placeholder.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1451,62 +1454,83 @@ exports[`theming Textarea.placeholder.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   width: 100%;
   padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-webkit-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-webkit-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::-moz-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-TextareaWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-TextareaWrapper bb-Box"
 >
   <textarea
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Textarea"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Textarea"
     type="text"
   />
 </div>

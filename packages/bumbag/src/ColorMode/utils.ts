@@ -14,6 +14,11 @@ export function mapCSSVariables(obj) {
 }
 
 export function getColorModesCSSVariables(theme) {
+  if (!theme.palette) {
+    return {
+      'html,body': {},
+    };
+  }
   let cssVariables = mapCSSVariables(omit(theme.palette, 'modes'));
   cssVariables = Object.entries(theme.palette.modes || {}).reduce((cssVariables, [modeKey, value]) => {
     return {

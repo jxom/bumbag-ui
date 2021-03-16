@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-0 {
+.emotion-1 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,41 +27,29 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-34 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-2 {
+.emotion-7 {
   position: absolute;
-  background-color: var(--bb-palette-info,#000000);
+  background-color: var(--bb-palette-info, #000000);
   bottom: 0;
   height: 100%;
   width: 4px;
 }
 
-.emotion-32 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -55,40 +58,45 @@ exports[`defaultProps should render correctly for className 1`] = `
   margin-left: 4px;
 }
 
-.emotion-17 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+.emotion-14 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 
-.emotion-8 {
+.emotion-17 {
   line-height: 0.9;
   margin-right: 1rem;
 }
 
-.emotion-5 {
-  color: var(--bb-palette-info,#000000) !important;
-  font-size: 1rem !important;
-}
-
-.emotion-3 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-22 {
+.emotion-20 {
+  color: var(--bb-palette-info, #000000)!important;
+  font-size: 1rem!important;
+}
+
+.emotion-30.emotion-30 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-31 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -97,8 +105,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -109,58 +117,49 @@ exports[`defaultProps should render correctly for className 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-22[disabled],
-.emotion-22[aria-disabled="true"] {
+.emotion-31[disabled],
+.emotion-31[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-22:focus {
+.emotion-31:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-22:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-31:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-22:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-31:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-22 {
+.emotion-31 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-22:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-31:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-22:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-31:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-21.emotion-21 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-20 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-18 {
+.emotion-35 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -168,29 +167,29 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-37 {
-  color: var(--bb-palette-primary,#000000) !important;
+  font-size: 1.25rem!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 test bb-Box bb-Flex bb-Alert bb-Toast"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 test bb-Box bb-Flex bb-Alert bb-Toast"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-6 emotion-7 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-AlertWrapper bb-Box bb-Flex"
+    class="emotion-2 emotion-3 emotion-6 emotion-11 bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-14 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 bb-AlertIconWrapper bb-Box"
+        class="emotion-3 emotion-6 emotion-17 bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
+          class="emotion-18 emotion-3 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -202,10 +201,10 @@ exports[`defaultProps should render correctly for className 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 bb-AlertContent bb-Box"
+        class="emotion-3 emotion-6 emotion-23 bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 bb-AlertDescription bb-Box"
+          class="emotion-3 emotion-6 emotion-0 bb-AlertDescription bb-Box"
           id="id-test"
         >
           hello world
@@ -213,15 +212,15 @@ exports[`defaultProps should render correctly for className 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-6 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
+        class="emotion-30 emotion-31 emotion-3 emotion-6 emotion-34 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
+          class="emotion-35 emotion-3 emotion-37 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -244,6 +243,25 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 exports[`overrides Toast.base should render correctly 1`] = `
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -254,41 +272,25 @@ exports[`overrides Toast.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-34 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-2 {
+.emotion-7 {
   position: absolute;
-  background-color: var(--bb-palette-info,#000000);
+  background-color: var(--bb-palette-info, #000000);
   bottom: 0;
   height: 100%;
   width: 4px;
 }
 
-.emotion-32 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -297,40 +299,45 @@ exports[`overrides Toast.base should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-17 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+.emotion-14 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 
-.emotion-8 {
+.emotion-17 {
   line-height: 0.9;
   margin-right: 1rem;
 }
 
-.emotion-5 {
-  color: var(--bb-palette-info,#000000) !important;
-  font-size: 1rem !important;
-}
-
-.emotion-3 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-22 {
+.emotion-20 {
+  color: var(--bb-palette-info, #000000)!important;
+  font-size: 1rem!important;
+}
+
+.emotion-30.emotion-30 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-31 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -339,8 +346,8 @@ exports[`overrides Toast.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -351,88 +358,79 @@ exports[`overrides Toast.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-22[disabled],
-.emotion-22[aria-disabled="true"] {
+.emotion-31[disabled],
+.emotion-31[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-22:focus {
+.emotion-31:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-22:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-31:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-22:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-31:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-22 {
+.emotion-31 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-22:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-31:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-22:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-31:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-21.emotion-21 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-20 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-18 {
+.emotion-35 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-33 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-37 {
+  font-size: 1.25rem!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Alert bb-Toast"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 bb-Box bb-Flex bb-Alert bb-Toast"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-4 emotion-7 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-AlertWrapper bb-Box bb-Flex"
+    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-14 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 bb-AlertIconWrapper bb-Box"
+        class="emotion-3 emotion-4 emotion-17 bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
+          class="emotion-18 emotion-3 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -444,10 +442,10 @@ exports[`overrides Toast.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 bb-AlertContent bb-Box"
+        class="emotion-3 emotion-4 emotion-23 bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 bb-AlertDescription bb-Box"
+          class="emotion-3 emotion-4 emotion-26 bb-AlertDescription bb-Box"
           id="id-test"
         >
           hello world
@@ -455,15 +453,15 @@ exports[`overrides Toast.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-4 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
+        class="emotion-30 emotion-31 emotion-3 emotion-4 emotion-34 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
+          class="emotion-35 emotion-3 emotion-37 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -485,7 +483,22 @@ exports[`overrides Toast.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -496,41 +509,25 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-34 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-2 {
+.emotion-7 {
   position: absolute;
-  background-color: var(--bb-palette-info,#000000);
+  background-color: var(--bb-palette-info, #000000);
   bottom: 0;
   height: 100%;
   width: 4px;
 }
 
-.emotion-32 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -539,40 +536,45 @@ exports[`props should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-17 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+.emotion-14 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 
-.emotion-8 {
+.emotion-17 {
   line-height: 0.9;
   margin-right: 1rem;
 }
 
-.emotion-5 {
-  color: var(--bb-palette-info,#000000) !important;
-  font-size: 1rem !important;
-}
-
-.emotion-3 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-22 {
+.emotion-20 {
+  color: var(--bb-palette-info, #000000)!important;
+  font-size: 1rem!important;
+}
+
+.emotion-30.emotion-30 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-31 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -581,8 +583,8 @@ exports[`props should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -593,84 +595,79 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-22[disabled],
-.emotion-22[aria-disabled="true"] {
+.emotion-31[disabled],
+.emotion-31[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-22:focus {
+.emotion-31:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-22:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-31:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-22:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-31:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-22 {
+.emotion-31 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-22:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-31:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-22:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-31:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-21.emotion-21 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-20 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-18 {
+.emotion-35 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
+.emotion-37 {
+  font-size: 1.25rem!important;
+}
+
 <div
   aria-describedby="id-test"
-  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Alert bb-Toast"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 bb-Box bb-Flex bb-Alert bb-Toast"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-4 emotion-7 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-AlertWrapper bb-Box bb-Flex"
+    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-14 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 bb-AlertIconWrapper bb-Box"
+        class="emotion-3 emotion-4 emotion-17 bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
+          class="emotion-18 emotion-3 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -682,10 +679,10 @@ exports[`props should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 bb-AlertContent bb-Box"
+        class="emotion-3 emotion-4 emotion-23 bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 bb-AlertDescription bb-Box"
+          class="emotion-3 emotion-4 emotion-0 bb-AlertDescription bb-Box"
           id="id-test"
         >
           Hello world
@@ -693,15 +690,15 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-4 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
+        class="emotion-30 emotion-31 emotion-3 emotion-4 emotion-34 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
+          class="emotion-35 emotion-3 emotion-37 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -723,7 +720,22 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-0 {
+.emotion-1 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -734,41 +746,29 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-34 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-2 {
+.emotion-7 {
   position: absolute;
-  background-color: var(--bb-palette-info,#000000);
+  background-color: var(--bb-palette-info, #000000);
   bottom: 0;
   height: 100%;
   width: 4px;
 }
 
-.emotion-32 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -777,40 +777,45 @@ exports[`props should render correctly with CSS props 1`] = `
   margin-left: 4px;
 }
 
-.emotion-17 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+.emotion-14 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 
-.emotion-8 {
+.emotion-17 {
   line-height: 0.9;
   margin-right: 1rem;
 }
 
-.emotion-5 {
-  color: var(--bb-palette-info,#000000) !important;
-  font-size: 1rem !important;
-}
-
-.emotion-3 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-22 {
+.emotion-20 {
+  color: var(--bb-palette-info, #000000)!important;
+  font-size: 1rem!important;
+}
+
+.emotion-30.emotion-30 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-31 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -819,8 +824,8 @@ exports[`props should render correctly with CSS props 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -831,58 +836,49 @@ exports[`props should render correctly with CSS props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-22[disabled],
-.emotion-22[aria-disabled="true"] {
+.emotion-31[disabled],
+.emotion-31[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-22:focus {
+.emotion-31:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-22:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-31:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-22:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-31:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-22 {
+.emotion-31 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-22:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-31:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-22:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-31:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-21.emotion-21 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-20 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-18 {
+.emotion-35 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -890,29 +886,29 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-37 {
-  color: var(--bb-palette-primary,#000000) !important;
+  font-size: 1.25rem!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 bb-Box bb-Flex bb-Alert bb-Toast"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 bb-Box bb-Flex bb-Alert bb-Toast"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-6 emotion-7 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-AlertWrapper bb-Box bb-Flex"
+    class="emotion-2 emotion-3 emotion-6 emotion-11 bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-14 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 bb-AlertIconWrapper bb-Box"
+        class="emotion-3 emotion-6 emotion-17 bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
+          class="emotion-18 emotion-3 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -924,10 +920,10 @@ exports[`props should render correctly with CSS props 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 bb-AlertContent bb-Box"
+        class="emotion-3 emotion-6 emotion-23 bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 bb-AlertDescription bb-Box"
+          class="emotion-3 emotion-6 emotion-0 bb-AlertDescription bb-Box"
           id="id-test"
         >
           Hello world
@@ -935,15 +931,15 @@ exports[`props should render correctly with CSS props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-6 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
+        class="emotion-30 emotion-31 emotion-3 emotion-6 emotion-34 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
+          class="emotion-35 emotion-3 emotion-37 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -975,7 +971,22 @@ exports[`props should render correctly with a countdown 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-1 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -986,33 +997,37 @@ exports[`props should render correctly with a countdown 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-7 {
+  position: absolute;
+  background-color: var(--bb-palette-info, #000000);
+  bottom: 0;
+  height: 100%;
+  width: 4px;
+  -webkit-animation: animation-0 5000ms linear forwards;
+  animation: animation-0 5000ms linear forwards;
 }
 
-.emotion-37 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-10 {
+  position: absolute;
+  background-color: var(--bb-palette-info, #000000);
+  bottom: 0;
+  height: 100%;
+  width: 4px;
+  opacity: 0.3;
+  left: 0;
 }
 
-.emotion-35 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1021,40 +1036,45 @@ exports[`props should render correctly with a countdown 1`] = `
   margin-left: 4px;
 }
 
-.emotion-20 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+.emotion-17 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 
-.emotion-11 {
+.emotion-20 {
   line-height: 0.9;
   margin-right: 1rem;
 }
 
-.emotion-8 {
-  color: var(--bb-palette-info,#000000) !important;
-  font-size: 1rem !important;
-}
-
-.emotion-6 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-21 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-25 {
+.emotion-23 {
+  color: var(--bb-palette-info, #000000)!important;
+  font-size: 1rem!important;
+}
+
+.emotion-33.emotion-33 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-34 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1063,8 +1083,8 @@ exports[`props should render correctly with a countdown 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1075,107 +1095,82 @@ exports[`props should render correctly with a countdown 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-25[disabled],
-.emotion-25[aria-disabled="true"] {
+.emotion-34[disabled],
+.emotion-34[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-25:focus {
+.emotion-34:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-25:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-34:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-25:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-34:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-25 {
+.emotion-34 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-25:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-34:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-25:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-34:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-24.emotion-24 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-23 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-21 {
+.emotion-38 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-2 {
-  position: absolute;
-  background-color: var(--bb-palette-info,#000000);
-  bottom: 0;
-  height: 100%;
-  width: 4px;
-  -webkit-animation: animation-0 5000ms linear forwards;
-  animation: animation-0 5000ms linear forwards;
-}
-
-.emotion-5 {
-  position: absolute;
-  background-color: var(--bb-palette-info,#000000);
-  bottom: 0;
-  height: 100%;
-  width: 4px;
-  opacity: 0.3;
-  left: 0;
+.emotion-40 {
+  font-size: 1.25rem!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-14 emotion-37 emotion-18 emotion-0 emotion-1 bb-Box bb-Flex bb-Alert bb-Toast"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 bb-Box bb-Flex bb-Alert bb-Toast"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-4 emotion-7 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-4 emotion-10 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-18 emotion-0 emotion-1 emotion-35 bb-AlertWrapper bb-Box bb-Flex"
+    class="emotion-2 emotion-3 emotion-4 emotion-14 bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-18 emotion-0 emotion-20 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-17 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-11 bb-AlertIconWrapper bb-Box"
+        class="emotion-3 emotion-4 emotion-20 bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-6 emotion-0 emotion-8 bb-Box bb-Icon"
+          class="emotion-21 emotion-3 emotion-23 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -1187,10 +1182,10 @@ exports[`props should render correctly with a countdown 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-17 bb-AlertContent bb-Box"
+        class="emotion-3 emotion-4 emotion-26 bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-14 bb-AlertDescription bb-Box"
+          class="emotion-3 emotion-4 emotion-0 bb-AlertDescription bb-Box"
           id="id-test"
         >
           Hello world
@@ -1198,15 +1193,15 @@ exports[`props should render correctly with a countdown 1`] = `
       </div>
     </div>
     <div
-      class="emotion-18 emotion-0 emotion-1 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-4 bb-Box bb-Flex"
     >
       <button
-        class="emotion-24 emotion-25 emotion-0 emotion-1 emotion-28 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
+        class="emotion-33 emotion-34 emotion-3 emotion-4 emotion-37 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="emotion-21 emotion-0 emotion-23 bb-Box bb-Icon"
+          class="emotion-38 emotion-3 emotion-40 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -1229,6 +1224,25 @@ exports[`props should render correctly with a countdown 1`] = `
 
 exports[`theming Toast.base should render correctly 1`] = `
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1239,41 +1253,25 @@ exports[`theming Toast.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-34 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-2 {
+.emotion-7 {
   position: absolute;
-  background-color: var(--bb-palette-info,#000000);
+  background-color: var(--bb-palette-info, #000000);
   bottom: 0;
   height: 100%;
   width: 4px;
 }
 
-.emotion-32 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1282,40 +1280,45 @@ exports[`theming Toast.base should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-17 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+.emotion-14 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 
-.emotion-8 {
+.emotion-17 {
   line-height: 0.9;
   margin-right: 1rem;
 }
 
-.emotion-5 {
-  color: var(--bb-palette-info,#000000) !important;
-  font-size: 1rem !important;
-}
-
-.emotion-3 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-22 {
+.emotion-20 {
+  color: var(--bb-palette-info, #000000)!important;
+  font-size: 1rem!important;
+}
+
+.emotion-30.emotion-30 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-31 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1324,8 +1327,8 @@ exports[`theming Toast.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1336,88 +1339,79 @@ exports[`theming Toast.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-22[disabled],
-.emotion-22[aria-disabled="true"] {
+.emotion-31[disabled],
+.emotion-31[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-22:focus {
+.emotion-31:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-22:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-31:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-22:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-31:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-22 {
+.emotion-31 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-22:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-31:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-22:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-31:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-21.emotion-21 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-20 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-18 {
+.emotion-35 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-33 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-37 {
+  font-size: 1.25rem!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Alert bb-Toast"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 bb-Box bb-Flex bb-Alert bb-Toast"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-4 emotion-7 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-AlertWrapper bb-Box bb-Flex"
+    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-14 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 bb-AlertIconWrapper bb-Box"
+        class="emotion-3 emotion-4 emotion-17 bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
+          class="emotion-18 emotion-3 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -1429,10 +1423,10 @@ exports[`theming Toast.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 bb-AlertContent bb-Box"
+        class="emotion-3 emotion-4 emotion-23 bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 bb-AlertDescription bb-Box"
+          class="emotion-3 emotion-4 emotion-26 bb-AlertDescription bb-Box"
           id="id-test"
         >
           hello world
@@ -1440,15 +1434,15 @@ exports[`theming Toast.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-4 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
+        class="emotion-30 emotion-31 emotion-3 emotion-4 emotion-34 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
+          class="emotion-35 emotion-3 emotion-37 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -1471,6 +1465,24 @@ exports[`theming Toast.base should render correctly 1`] = `
 
 exports[`variants styles.base should render correctly 1`] = `
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1481,33 +1493,25 @@ exports[`variants styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
+.emotion-7 {
   position: absolute;
-  background-color: var(--bb-palette-info,#000000);
+  background-color: var(--bb-palette-info, #000000);
   bottom: 0;
   height: 100%;
   width: 4px;
 }
 
-.emotion-32 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1516,40 +1520,45 @@ exports[`variants styles.base should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-17 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+.emotion-14 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 
-.emotion-8 {
+.emotion-17 {
   line-height: 0.9;
   margin-right: 1rem;
 }
 
-.emotion-5 {
-  color: var(--bb-palette-info,#000000) !important;
-  font-size: 1rem !important;
-}
-
-.emotion-3 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-22 {
+.emotion-20 {
+  color: var(--bb-palette-info, #000000)!important;
+  font-size: 1rem!important;
+}
+
+.emotion-30.emotion-30 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-31 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1558,8 +1567,8 @@ exports[`variants styles.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1570,95 +1579,79 @@ exports[`variants styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-22[disabled],
-.emotion-22[aria-disabled="true"] {
+.emotion-31[disabled],
+.emotion-31[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-22:focus {
+.emotion-31:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-22:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-31:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-22:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-31:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-22 {
+.emotion-31 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-22:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-31:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-22:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-31:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-21.emotion-21 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-20 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-18 {
+.emotion-35 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-34 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-33 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-37 {
+  font-size: 1.25rem!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Alert bb-Toast"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 bb-Box bb-Flex bb-Alert bb-Toast"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-AlertAccent bb-Box"
+    class="emotion-3 emotion-4 emotion-7 bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-AlertWrapper bb-Box bb-Flex"
+    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-14 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 bb-AlertIconWrapper bb-Box"
+        class="emotion-3 emotion-4 emotion-17 bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
+          class="emotion-18 emotion-3 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -1670,10 +1663,10 @@ exports[`variants styles.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 bb-AlertContent bb-Box"
+        class="emotion-3 emotion-4 emotion-23 bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 bb-AlertDescription bb-Box"
+          class="emotion-3 emotion-4 emotion-26 bb-AlertDescription bb-Box"
           id="id-test"
         >
           hello world
@@ -1681,15 +1674,15 @@ exports[`variants styles.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
+      class="emotion-2 emotion-3 emotion-4 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
+        class="emotion-30 emotion-31 emotion-3 emotion-4 emotion-34 bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
+          class="emotion-35 emotion-3 emotion-37 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >

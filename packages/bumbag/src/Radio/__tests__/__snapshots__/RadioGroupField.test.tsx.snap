@@ -16,27 +16,23 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -44,25 +40,29 @@ exports[`composition as should render correctly 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,11 +76,11 @@ exports[`composition as should render correctly 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,10 +91,56 @@ exports[`composition as should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -104,103 +150,58 @@ exports[`composition as should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
 <div
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -210,20 +211,20 @@ exports[`composition as should render correctly 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -298,27 +299,27 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -326,25 +327,29 @@ exports[`defaultProps should render correctly for className 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -358,11 +363,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -373,10 +378,56 @@ exports[`defaultProps should render correctly for className 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -386,107 +437,58 @@ exports[`defaultProps should render correctly for className 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-46 {
-  color: var(--bb-palette-primary,#000000) !important;
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-46 test bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-5 bb-Box bb-FieldWrapper"
   >
     <div
-      class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
+      class="emotion-1 emotion-5 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-5 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-5 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-5 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-5 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-5 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-5 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -496,20 +498,20 @@ exports[`defaultProps should render correctly for className 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-5 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-5 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-5 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -523,6 +525,10 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides RadioGroupField.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -538,27 +544,23 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -566,25 +568,29 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -598,11 +604,11 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -613,10 +619,56 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -626,107 +678,58 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-44 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <fieldset
-  class="emotion-44 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-3 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -736,20 +739,20 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -778,27 +781,23 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -806,25 +805,29 @@ exports[`props should render correctly 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -838,11 +841,11 @@ exports[`props should render correctly 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -853,10 +856,56 @@ exports[`props should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -866,103 +915,58 @@ exports[`props should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -972,20 +976,20 @@ exports[`props should render correctly 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1014,27 +1018,23 @@ exports[`props should render correctly for default value 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -1042,25 +1042,29 @@ exports[`props should render correctly for default value 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1074,11 +1078,11 @@ exports[`props should render correctly for default value 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1089,10 +1093,56 @@ exports[`props should render correctly for default value 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1102,103 +1152,58 @@ exports[`props should render correctly for default value 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1208,20 +1213,20 @@ exports[`props should render correctly for default value 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1250,27 +1255,23 @@ exports[`props should render correctly for disabled field 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -1278,25 +1279,29 @@ exports[`props should render correctly for disabled field 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1310,11 +1315,11 @@ exports[`props should render correctly for disabled field 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1325,10 +1330,56 @@ exports[`props should render correctly for disabled field 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1338,93 +1389,48 @@ exports[`props should render correctly for disabled field 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             disabled=""
             id="id-test"
             name="weather"
@@ -1432,10 +1438,10 @@ exports[`props should render correctly for disabled field 1`] = `
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1445,20 +1451,20 @@ exports[`props should render correctly for disabled field 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1487,27 +1493,23 @@ exports[`props should render correctly for disabled fields 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -1515,25 +1517,29 @@ exports[`props should render correctly for disabled fields 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1547,11 +1553,11 @@ exports[`props should render correctly for disabled fields 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1562,10 +1568,56 @@ exports[`props should render correctly for disabled fields 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1575,93 +1627,48 @@ exports[`props should render correctly for disabled fields 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             disabled=""
             id="id-test"
             name="weather"
@@ -1669,10 +1676,10 @@ exports[`props should render correctly for disabled fields 1`] = `
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1682,10 +1689,10 @@ exports[`props should render correctly for disabled fields 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             disabled=""
             id="id-test"
             name="weather"
@@ -1693,10 +1700,10 @@ exports[`props should render correctly for disabled fields 1`] = `
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1725,27 +1732,23 @@ exports[`props should render correctly for horizontal fields 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -1753,25 +1756,55 @@ exports[`props should render correctly for horizontal fields 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-19.emotion-19 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-18.emotion-18.emotion-18>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1782,10 +1815,56 @@ exports[`props should render correctly for horizontal fields 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1795,128 +1874,58 @@ exports[`props should render correctly for horizontal fields 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-35.emotion-35.emotion-35 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1926,20 +1935,20 @@ exports[`props should render correctly for horizontal fields 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -1968,27 +1977,23 @@ exports[`props should render correctly for state danger 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -1996,25 +2001,29 @@ exports[`props should render correctly for state danger 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2028,11 +2037,11 @@ exports[`props should render correctly for state danger 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2043,10 +2052,64 @@ exports[`props should render correctly for state danger 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26+.bb-RadioIcon {
+  border-color: var(--bb-palette-danger, #000000);
+}
+
+.emotion-26:not(:checked)+.bb-RadioIcon {
+  box-shadow: var(--bb-palette-dangerTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2056,111 +2119,58 @@ exports[`props should render correctly for state danger 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-18.emotion-18 {
+.emotion-32 {
+  margin-left: 0.5rem!important;
+}
+
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11 + .bb-RadioIcon {
-  border-color: var(--bb-palette-danger,#000000);
-}
-
-.emotion-11:not(:checked) + .bb-RadioIcon {
-  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="true"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2170,20 +2180,20 @@ exports[`props should render correctly for state danger 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="true"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2212,27 +2222,23 @@ exports[`props should render correctly for state success 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -2240,25 +2246,29 @@ exports[`props should render correctly for state success 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2272,11 +2282,11 @@ exports[`props should render correctly for state success 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2287,10 +2297,64 @@ exports[`props should render correctly for state success 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26+.bb-RadioIcon {
+  border-color: var(--bb-palette-success, #000000);
+}
+
+.emotion-26:not(:checked)+.bb-RadioIcon {
+  box-shadow: var(--bb-palette-successTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2300,111 +2364,58 @@ exports[`props should render correctly for state success 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-18.emotion-18 {
+.emotion-32 {
+  margin-left: 0.5rem!important;
+}
+
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11 + .bb-RadioIcon {
-  border-color: var(--bb-palette-success,#000000);
-}
-
-.emotion-11:not(:checked) + .bb-RadioIcon {
-  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2414,20 +2425,20 @@ exports[`props should render correctly for state success 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2456,27 +2467,23 @@ exports[`props should render correctly for state warning 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -2484,25 +2491,29 @@ exports[`props should render correctly for state warning 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2516,11 +2527,11 @@ exports[`props should render correctly for state warning 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2531,10 +2542,64 @@ exports[`props should render correctly for state warning 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26+.bb-RadioIcon {
+  border-color: var(--bb-palette-warning, #000000);
+}
+
+.emotion-26:not(:checked)+.bb-RadioIcon {
+  box-shadow: var(--bb-palette-warningTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2544,111 +2609,58 @@ exports[`props should render correctly for state warning 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-18.emotion-18 {
+.emotion-32 {
+  margin-left: 0.5rem!important;
+}
+
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11 + .bb-RadioIcon {
-  border-color: var(--bb-palette-warning,#000000);
-}
-
-.emotion-11:not(:checked) + .bb-RadioIcon {
-  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2658,20 +2670,20 @@ exports[`props should render correctly for state warning 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2700,27 +2712,23 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -2728,25 +2736,29 @@ exports[`props should render correctly with CSS props 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2760,11 +2772,11 @@ exports[`props should render correctly with CSS props 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2775,10 +2787,56 @@ exports[`props should render correctly with CSS props 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2788,103 +2846,58 @@ exports[`props should render correctly with CSS props 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
 <fieldset
-  class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2894,20 +2907,20 @@ exports[`props should render correctly with CSS props 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -2921,6 +2934,10 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming RadioGroupField.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2936,27 +2953,23 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3.emotion-3.emotion-3 {
-  margin-bottom: 0px;
-}
-
 .emotion-8 {
   margin-bottom: 0.75rem;
 }
 
-.emotion-5 {
-  -webkit-align-items: center !important;
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  line-height: 1 !important;
+.emotion-10 {
+  -webkit-align-items: center!important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  line-height: 1!important;
 }
 
-.emotion-0 {
+.emotion-11 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -2964,25 +2977,29 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-0::before {
+.emotion-11::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-0::after {
+.emotion-11::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-11:not(:last-child) {
   margin-bottom: 6.671875px;
 }
 
-.emotion-35 {
+.emotion-14.emotion-14.emotion-14 {
+  margin-bottom: 0px;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2996,11 +3013,11 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
   align-items: flex-start;
 }
 
-.emotion-35.emotion-35.emotion-35 > *:not(:last-child) {
+.emotion-18.emotion-18.emotion-18>*:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-19.emotion-19 {
+.emotion-21.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3011,10 +3028,56 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-14 {
+.emotion-26 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-26:focus {
+  outline: none;
+}
+
+.emotion-26[disabled]+.bb-RadioIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-26:focus+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-26:not([disabled]):checked+.bb-RadioIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-26:checked+.bb-RadioIcon::before {
+  background: var(--bb-palette-primary, #000000);
+  border-radius: 50%;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+}
+
+.emotion-26[disabled]:checked+.bb-RadioIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+  background: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-29 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -3024,107 +3087,58 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-11 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
+.emotion-32 {
+  margin-left: 0.5rem!important;
 }
 
-.emotion-11:focus {
-  outline: none;
-}
-
-.emotion-11[disabled] + .bb-RadioIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-11:focus + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-11:not([disabled]):checked + .bb-RadioIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-11:checked + .bb-RadioIcon::before {
-  background: var(--bb-palette-primary,#000000);
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
-}
-
-.emotion-11[disabled]:checked + .bb-RadioIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-  background: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-18.emotion-18 {
+.emotion-33.emotion-33 {
   font-weight: 400;
 }
 
-.emotion-17 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-44 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <fieldset
-  class="emotion-44 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-RadioGroupField"
 >
   <div
-    class="emotion-38 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
       class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 bb-Box"
+        class="emotion-1 emotion-10 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
+          class="emotion-11 emotion-1 emotion-2 emotion-14 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Test label
         </legend>
       </div>
     </div>
     <div
-      class="emotion-38 emotion-1 emotion-2 bb-Box bb-RadioGroup"
+      class="emotion-3 emotion-1 emotion-2 bb-Box bb-RadioGroup"
       id="id-test"
       role="radiogroup"
     >
       <div
-        class="emotion-35 emotion-1 emotion-2 bb-Box bb-Set"
+        class="emotion-18 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="world"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >
@@ -3134,20 +3148,20 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
         <label
           aria-describedby="id-test"
           aria-invalid="false"
-          class="emotion-19 emotion-1 emotion-2 bb-Box bb-Radio"
+          class="emotion-21 emotion-1 emotion-2 bb-Box bb-Radio"
         >
           <input
-            class="emotion-1 emotion-2 emotion-11 bb-RadioHiddenInput bb-Box"
+            class="emotion-1 emotion-2 emotion-26 bb-RadioHiddenInput bb-Box"
             id="id-test"
             name="weather"
             type="radio"
             value="me"
           />
           <div
-            class="emotion-1 emotion-2 emotion-14 bb-RadioIcon bb-Box"
+            class="emotion-1 emotion-2 emotion-29 bb-RadioIcon bb-Box"
           />
           <span
-            class="emotion-0 emotion-1 emotion-17 emotion-18 bb-RadioLabel bb-Box bb-Label"
+            class="emotion-11 emotion-1 emotion-32 emotion-33 bb-RadioLabel bb-Box bb-Label"
             for="id-test"
             id="id-test"
           >

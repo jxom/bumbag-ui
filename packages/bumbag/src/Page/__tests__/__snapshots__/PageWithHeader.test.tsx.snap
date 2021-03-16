@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  position: relative;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebarExpandedWrapper {
+  top: 60px;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebar {
+  height: calc(100vh - 60px);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -16,40 +29,27 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  min-height: 100vh;
-  position: relative;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-7 .bb-PageWithSidebarSidebarExpandedWrapper {
-  top: 60px;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebar {
-  height: calc(100vh - 60px);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-6 {
+  background-color: var(--bb-palette-background, #000000);
   min-height: 60px;
   height: 60px;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   z-index: 999;
 }
 
-.emotion-3 > * {
+.emotion-6>* {
   height: 100%;
 }
 
-.emotion-9 {
-  color: var(--bb-palette-primary,#000000) !important;
-}
-
 <div
-  class="emotion-7 emotion-1 emotion-9 test bb-Box bb-PageWithHeader"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-PageWithHeader"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
     id="test"
   >
     <div>
@@ -57,7 +57,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     </div>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-6 bb-PageWithHeaderContent bb-Box"
+    class="emotion-1 emotion-5 emotion-9 bb-PageWithHeaderContent bb-Box"
   >
     hello world
   </div>
@@ -65,6 +65,23 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides styles.base should render correctly 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  position: relative;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebarExpandedWrapper {
+  top: 60px;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebar {
+  height: calc(100vh - 60px);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -80,40 +97,23 @@ exports[`overrides styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-6 {
+  background-color: var(--bb-palette-background, #000000);
   min-height: 60px;
   height: 60px;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   z-index: 999;
 }
 
-.emotion-3 > * {
+.emotion-6>* {
   height: 100%;
 }
 
-.emotion-7 {
-  min-height: 100vh;
-  position: relative;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebarExpandedWrapper {
-  top: 60px;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebar {
-  height: calc(100vh - 60px);
-}
-
-.emotion-7 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-7 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
     id="test"
   >
     <div>
@@ -121,7 +121,7 @@ exports[`overrides styles.base should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-6 bb-PageWithHeaderContent bb-Box"
+    class="emotion-1 emotion-2 emotion-9 bb-PageWithHeaderContent bb-Box"
   >
     hello world
   </div>
@@ -129,6 +129,19 @@ exports[`overrides styles.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  position: relative;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebarExpandedWrapper {
+  top: 60px;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebar {
+  height: calc(100vh - 60px);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -144,36 +157,23 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  min-height: 100vh;
-  position: relative;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebarExpandedWrapper {
-  top: 60px;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebar {
-  height: calc(100vh - 60px);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-6 {
+  background-color: var(--bb-palette-background, #000000);
   min-height: 60px;
   height: 60px;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   z-index: 999;
 }
 
-.emotion-3 > * {
+.emotion-6>* {
   height: 100%;
 }
 
 <div
-  class="emotion-7 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
     id="test"
   >
     <div>
@@ -181,7 +181,7 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-6 bb-PageWithHeaderContent bb-Box"
+    class="emotion-1 emotion-2 emotion-9 bb-PageWithHeaderContent bb-Box"
   >
     Hello world
   </div>
@@ -189,6 +189,19 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  position: relative;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebarExpandedWrapper {
+  top: 60px;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebar {
+  height: calc(100vh - 60px);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -204,40 +217,27 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  min-height: 100vh;
-  position: relative;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-7 .bb-PageWithSidebarSidebarExpandedWrapper {
-  top: 60px;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebar {
-  height: calc(100vh - 60px);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-6 {
+  background-color: var(--bb-palette-background, #000000);
   min-height: 60px;
   height: 60px;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   z-index: 999;
 }
 
-.emotion-3 > * {
+.emotion-6>* {
   height: 100%;
 }
 
-.emotion-9 {
-  color: var(--bb-palette-primary,#000000) !important;
-}
-
 <div
-  class="emotion-7 emotion-1 emotion-9 bb-Box bb-PageWithHeader"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
     id="test"
   >
     <div>
@@ -245,7 +245,7 @@ exports[`props should render correctly with CSS props 1`] = `
     </div>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-6 bb-PageWithHeaderContent bb-Box"
+    class="emotion-1 emotion-5 emotion-9 bb-PageWithHeaderContent bb-Box"
   >
     Hello world
   </div>
@@ -253,6 +253,23 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming styles.base should render correctly 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  position: relative;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebarExpandedWrapper {
+  top: 60px;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebar {
+  height: calc(100vh - 60px);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -268,40 +285,23 @@ exports[`theming styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-6 {
+  background-color: var(--bb-palette-background, #000000);
   min-height: 60px;
   height: 60px;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   z-index: 999;
 }
 
-.emotion-3 > * {
+.emotion-6>* {
   height: 100%;
 }
 
-.emotion-7 {
-  min-height: 100vh;
-  position: relative;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebarExpandedWrapper {
-  top: 60px;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebar {
-  height: calc(100vh - 60px);
-}
-
-.emotion-7 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-7 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
     id="test"
   >
     <div>
@@ -309,7 +309,7 @@ exports[`theming styles.base should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-6 bb-PageWithHeaderContent bb-Box"
+    class="emotion-1 emotion-2 emotion-9 bb-PageWithHeaderContent bb-Box"
   >
     hello world
   </div>
@@ -317,6 +317,23 @@ exports[`theming styles.base should render correctly 1`] = `
 `;
 
 exports[`variants styles.base should render correctly 1`] = `
+.emotion-0 {
+  min-height: 100vh;
+  position: relative;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebarExpandedWrapper {
+  top: 60px;
+}
+
+.emotion-0 .bb-PageWithSidebarSidebar {
+  height: calc(100vh - 60px);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -332,40 +349,23 @@ exports[`variants styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-6 {
+  background-color: var(--bb-palette-background, #000000);
   min-height: 60px;
   height: 60px;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   z-index: 999;
 }
 
-.emotion-3 > * {
+.emotion-6>* {
   height: 100%;
 }
 
-.emotion-7 {
-  min-height: 100vh;
-  position: relative;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebarExpandedWrapper {
-  top: 60px;
-}
-
-.emotion-7 .bb-PageWithSidebarSidebar {
-  height: calc(100vh - 60px);
-}
-
-.emotion-7 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-7 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageWithHeader"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-PageWithHeaderHeader bb-Box bb-DisclosureContent"
     id="test"
   >
     <div>
@@ -373,7 +373,7 @@ exports[`variants styles.base should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-6 bb-PageWithHeaderContent bb-Box"
+    class="emotion-1 emotion-2 emotion-9 bb-PageWithHeaderContent bb-Box"
   >
     hello world
   </div>
