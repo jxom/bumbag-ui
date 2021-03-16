@@ -5,12 +5,22 @@ import InputMask from 'react-input-mask';
 import ConditionalWrap from 'conditional-wrap';
 
 import { Size } from '../types';
-import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
+import {
+  useClassName,
+  createComponent,
+  createElement,
+  createHook,
+  pickCSSProps,
+  omitCSSProps,
+  mergeRefs,
+  useLabelPlaceholder,
+} from '../utils';
 import { Box, BoxProps } from '../Box';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Group } from '../Group';
 import { Icon, IconProps } from '../Icon';
 import { Spinner } from '../Spinner';
+import { Text } from '../Text';
 
 import * as styles from './Input.styles';
 
@@ -26,6 +36,7 @@ export type LocalInputProps = {
   disabled?: boolean;
   inputProps?: Partial<InputProps>;
   inputRef?: React.Ref<any>;
+  label?: string;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
   /** Makes the input required and sets aria-invalid to true */
@@ -45,6 +56,7 @@ export type LocalInputProps = {
   minLength?: number;
   /** This prop indicates whether the user can enter more than one value. This attribute only applies when the type attribute is set to email or file. */
   multiple?: boolean;
+  palette?: string;
   /** Regex pattern to apply to the input */
   pattern?: string;
   /** Hint text to display */
@@ -72,7 +84,15 @@ export type InputProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & Loc
 
 const useProps = createHook<InputProps>(
   (props, { themeKey }) => {
+    const ref = React.useRef();
+
     const { before, after, inputProps, inputRef, isLoading, isRequired, state, ...restProps } = props;
+    const label = props?.label || inputProps?.label;
+
+    const { isFocused, inputProps: labelPlaceholderInputProps } = useLabelPlaceholder({
+      enabled: Boolean(label),
+      ...props,
+    });
 
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
@@ -81,19 +101,45 @@ const useProps = createHook<InputProps>(
       themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className,
     });
+    const labelWrapperClassName = useClassName({
+      style: styles.LabelWrapper,
+      styleProps: { ...props, isFocused },
+      themeKey,
+      themeKeySuffix: 'LabelWrapper',
+    });
+    const labelWrapperBackgroundClassName = useClassName({
+      style: styles.LabelWrapperBackground,
+      styleProps: { ...props, isFocused },
+      themeKey,
+      themeKeySuffix: 'LabelWrapperBackground',
+    });
     const spinnerClassName = useClassName({
       style: styles.InputSpinner,
       styleProps: props,
       themeKey,
       themeKeySuffix: 'Spinner',
     });
+
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       ...inputProps,
+      ...labelPlaceholderInputProps,
       className: undefined,
-      elementRef: inputRef || props.elementRef,
+      elementRef: mergeRefs(ref, inputRef, props.elementRef),
       wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
+          {label && (
+            <>
+              <Box className={labelWrapperBackgroundClassName}>
+                <Text opacity="0">{label}</Text>
+              </Box>
+              {/*
+                // @ts-ignore */}
+              <Box className={labelWrapperClassName} onClick={() => ref?.current?.focus()}>
+                <Text>{label}</Text>
+              </Box>
+            </>
+          )}
           {before && (
             <Box display="inline-flex" position="absolute" zIndex="3" height="100%">
               {before}
@@ -119,7 +165,7 @@ const useProps = createHook<InputProps>(
 
     return { ...boxProps, className, 'aria-invalid': state === 'danger', 'aria-required': isRequired };
   },
-  { defaultProps: { type: 'text' }, themeKey: 'Input' }
+  { defaultProps: { variant: 'bordered', type: 'text' }, themeKey: 'Input' }
 );
 
 export const Input = createComponent<InputProps>(
@@ -207,6 +253,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       minLength,
       multiple,
       pattern,
+      palette,
       placeholder,
       readOnly,
       spellCheck,
@@ -221,6 +268,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       onFocus,
       overrides,
       validationText,
+      variant,
       ...restProps
     } = props;
 
@@ -253,6 +301,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
           state={state}
           tooltip={tooltip}
           tooltipTriggerComponent={tooltipTriggerComponent}
+          variant={variant}
           validationText={validationText}
         >
           {({ elementProps }) => (
@@ -286,6 +335,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
                   minLength={minLength}
                   multiple={multiple}
                   pattern={pattern}
+                  palette={palette}
                   placeholder={placeholder}
                   readOnly={readOnly}
                   spellCheck={spellCheck}
@@ -293,6 +343,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
                   state={state}
                   type={type}
                   value={value}
+                  variant={variant}
                   onBlur={onBlur}
                   onChange={onChange}
                   onFocus={onFocus}

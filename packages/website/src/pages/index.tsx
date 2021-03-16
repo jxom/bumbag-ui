@@ -269,6 +269,9 @@ const linkProps = Link.useProps({
             Worn in production by
           </Heading>
           <Set spacing="major-6" verticalBelow="tablet" alignItems="center" justifyContent="center">
+            <Link href="https://coinjar.com">
+              <UsedByImage colorMode={colorMode} src="/coinjar.png" height="60px" />
+            </Link>
             <Link href="https://medipass.com.au">
               <UsedByImage
                 colorMode={colorMode}

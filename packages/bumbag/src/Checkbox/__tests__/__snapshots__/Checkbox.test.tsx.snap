@@ -1,22 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,105 +12,6 @@ exports[`composition as should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 0.2em;
-  height: 1em;
-  position: relative;
-  min-width: 1em;
-  width: 1em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-<div
-  aria-describedby="id-test"
-  aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
->
-  <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
-    id="id-test"
-    type="checkbox"
-  />
-  <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
-  />
-</div>
-`;
-
-exports[`composition hook should return with Checkbox props 1`] = `
-Object {
-  "aria-describedby": "id-test",
-  "aria-invalid": false,
-  "aria-required": undefined,
-  "children": <React.Fragment>
-    <Box
-      className="css-hzw9l4 bb-CheckboxHiddenInput"
-      id="id-test"
-      type="checkbox"
-      use="input"
-    />
-    <Box
-      className="css-ajsfpq bb-CheckboxIcon"
-    />
-  </React.Fragment>,
-  "className": "css-i5mf5v css-63it0p css-1074357 bb-Box bb-Checkbox",
-}
-`;
-
-exports[`composition render props should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -141,6 +27,171 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+<div
+  aria-describedby="id-test"
+  aria-invalid="false"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
+>
+  <input
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
+    id="id-test"
+    type="checkbox"
+  />
+  <div
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
+  />
+</div>
+`;
+
+exports[`composition hook should return with Checkbox props 1`] = `
+Object {
+  "aria-describedby": "id-test",
+  "aria-invalid": false,
+  "aria-required": undefined,
+  "children": <React.Fragment>
+    .emotion-0 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0[disabled]+.bb-CheckboxIcon {
+  background-color: #000000;
+  box-shadow: unset;
+}
+
+.emotion-0:focus+.bb-CheckboxIcon {
+  border-color: #000000;
+  box-shadow: #000000 0px 0px 0px 3px!important;
+}
+
+.emotion-0:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: #000000;
+}
+
+.emotion-0:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-0:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid #000000;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-0[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: #000000;
+}
+
+<Box
+      className="emotion-0 bb-CheckboxHiddenInput"
+      id="id-test"
+      type="checkbox"
+      use="input"
+    />
+    .emotion-0 {
+  -webkit-appearance: none;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+<Box
+      className="emotion-0 bb-CheckboxIcon"
+    />
+  </React.Fragment>,
+  "className": "css-i5mf5v css-63it0p css-1074357 bb-Box bb-Checkbox",
+}
+`;
+
+exports[`composition render props should render correctly 1`] = `
 .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -150,6 +201,21 @@ exports[`composition render props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <div
@@ -162,22 +228,7 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,10 +239,80 @@ exports[`defaultProps should render correctly for className 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -201,92 +322,24 @@ exports[`defaultProps should render correctly for className 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-8 {
-  color: var(--bb-palette-primary,#000000) !important;
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-8 test bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-4 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Checkbox.HiddenInput.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -297,10 +350,80 @@ exports[`overrides Checkbox.HiddenInput.base should render correctly 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -310,92 +433,24 @@ exports[`overrides Checkbox.HiddenInput.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -406,7 +461,22 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -414,25 +484,26 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -440,25 +511,26 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-5 {
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -468,43 +540,28 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Checkbox.Label.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -515,10 +572,76 @@ exports[`overrides Checkbox.Label.base should render correctly 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -528,150 +651,24 @@ exports[`overrides Checkbox.Label.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Checkbox.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-5 {
-  -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 0.2em;
-  height: 1em;
-  position: relative;
-  min-width: 1em;
-  width: 1em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -682,22 +679,101 @@ exports[`overrides Checkbox.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
@@ -730,21 +806,22 @@ exports[`props should assign a ref via checkboxRef 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-2[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-2:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-2:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
+.emotion-2:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -752,19 +829,20 @@ exports[`props should assign a ref via checkboxRef 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
+.emotion-2:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
+.emotion-2[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
 }
 
 <input
@@ -775,22 +853,7 @@ exports[`props should assign a ref via checkboxRef 1`] = `
 `;
 
 exports[`props should assign a ref via ref 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -801,10 +864,76 @@ exports[`props should assign a ref via ref 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -814,88 +943,24 @@ exports[`props should assign a ref via ref 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -906,10 +971,76 @@ exports[`props should render correctly 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -919,88 +1050,24 @@ exports[`props should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly for danger state 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1011,20 +1078,22 @@ exports[`props should render correctly for danger state 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 0.2em;
-  height: 1em;
-  position: relative;
-  min-width: 1em;
-  width: 1em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1032,33 +1101,34 @@ exports[`props should render correctly for danger state 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-danger,#000000);
+.emotion-5+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-danger, #000000);
 }
 
-.emotion-2:not(:checked) + .bb-CheckboxIcon {
-  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5:not(:checked)+.bb-CheckboxIcon {
+  box-shadow: var(--bb-palette-dangerTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1066,54 +1136,53 @@ exports[`props should render correctly for danger state 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="true"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly for success state 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1124,10 +1193,84 @@ exports[`props should render correctly for success state 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-success, #000000);
+}
+
+.emotion-5:not(:checked)+.bb-CheckboxIcon {
+  box-shadow: var(--bb-palette-successTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1137,96 +1280,24 @@ exports[`props should render correctly for success state 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2 + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-success,#000000);
-}
-
-.emotion-2:not(:checked) + .bb-CheckboxIcon {
-  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly for warning state 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1237,10 +1308,84 @@ exports[`props should render correctly for warning state 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-warning, #000000);
+}
+
+.emotion-5:not(:checked)+.bb-CheckboxIcon {
+  box-shadow: var(--bb-palette-warningTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1250,96 +1395,24 @@ exports[`props should render correctly for warning state 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2 + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-warning,#000000);
-}
-
-.emotion-2:not(:checked) + .bb-CheckboxIcon {
-  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1350,10 +1423,80 @@ exports[`props should render correctly with CSS props 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  background-color: var(--bb-palette-primary, #000000)!important;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1363,92 +1506,24 @@ exports[`props should render correctly with CSS props 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-8 {
-  background-color: var(--bb-palette-primary,#000000) !important;
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-8 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-4 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with checked 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1459,10 +1534,76 @@ exports[`props should render correctly with checked 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1472,89 +1613,25 @@ exports[`props should render correctly with checked 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
     checked=""
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with defaultChecked 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1565,10 +1642,76 @@ exports[`props should render correctly with defaultChecked 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1578,89 +1721,25 @@ exports[`props should render correctly with defaultChecked 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
     checked=""
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with disabled 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1671,20 +1750,22 @@ exports[`props should render correctly with disabled 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 0.2em;
-  height: 1em;
-  position: relative;
-  min-width: 1em;
-  width: 1em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1692,25 +1773,26 @@ exports[`props should render correctly with disabled 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1718,55 +1800,54 @@ exports[`props should render correctly with disabled 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     disabled=""
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with indeterminate 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1777,20 +1858,22 @@ exports[`props should render correctly with indeterminate 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 0.2em;
-  height: 1em;
-  position: relative;
-  min-width: 1em;
-  width: 1em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1798,25 +1881,26 @@ exports[`props should render correctly with indeterminate 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1824,51 +1908,49 @@ exports[`props should render correctly with indeterminate 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  background-color: var(--bb-palette-primary, #000000);
   height: 0.125em;
   width: 0.625em;
   top: calc(50% - 0.0625em);
   left: calc(50% - 0.3125em);
 }
 
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with isRequired 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1879,20 +1961,22 @@ exports[`props should render correctly with isRequired 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 0.2em;
-  height: 1em;
-  position: relative;
-  min-width: 1em;
-  width: 1em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1900,25 +1984,26 @@ exports[`props should render correctly with isRequired 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1926,55 +2011,54 @@ exports[`props should render correctly with isRequired 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
   aria-required="true"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with label 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-10.emotion-10 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1985,10 +2069,76 @@ exports[`props should render correctly with label 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1998,64 +2148,7 @@ exports[`props should render correctly with label 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-9.emotion-9 {
-  font-weight: 400;
-}
-
-.emotion-8 {
-  margin-left: 0.5rem !important;
-}
-
-.emotion-6 {
+.emotion-9 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -2063,39 +2156,47 @@ exports[`props should render correctly with label 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-6::before {
+.emotion-9::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-6::after {
+.emotion-9::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-6:not(:last-child) {
+.emotion-9:not(:last-child) {
   margin-bottom: 6.671875px;
+}
+
+.emotion-11 {
+  margin-left: 0.5rem!important;
+}
+
+.emotion-12.emotion-12 {
+  font-weight: 400;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-10 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
   <span
-    class="emotion-6 emotion-0 emotion-8 emotion-9 bb-CheckboxLabel bb-Box bb-Label"
+    class="emotion-9 emotion-1 emotion-11 emotion-12 bb-CheckboxLabel bb-Box bb-Label"
     for="id-test"
     id="id-test"
   >
@@ -2105,22 +2206,7 @@ exports[`props should render correctly with label 1`] = `
 `;
 
 exports[`props should render correctly with name 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2131,10 +2217,76 @@ exports[`props should render correctly with name 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2144,89 +2296,25 @@ exports[`props should render correctly with name 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     name="checkboxRocks"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with value 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2237,10 +2325,76 @@ exports[`props should render correctly with value 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2250,89 +2404,25 @@ exports[`props should render correctly with value 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
     value="checkboxValue"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Checkbox.HiddenInput.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2343,10 +2433,80 @@ exports[`theming Checkbox.HiddenInput.base should render correctly 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2356,92 +2516,24 @@ exports[`theming Checkbox.HiddenInput.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Checkbox.Icon.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2452,7 +2544,22 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -2460,25 +2567,26 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2486,25 +2594,26 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-5 {
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2514,43 +2623,28 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Checkbox.Label.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2561,10 +2655,76 @@ exports[`theming Checkbox.Label.base should render correctly 1`] = `
   align-items: center;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
   -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2574,150 +2734,24 @@ exports[`theming Checkbox.Label.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Checkbox.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-5 {
-  -webkit-appearance: none;
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 0.2em;
-  height: 1em;
-  position: relative;
-  min-width: 1em;
-  width: 1em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2[disabled] + .bb-CheckboxIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2:focus + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
-  border-color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  background-clip: padding-box;
-  content: '';
-  left: calc(50% - 0.1875em);
-  top: calc(50% - 0.375em);
-  position: absolute;
-}
-
-.emotion-2:checked + .bb-CheckboxIcon::before {
-  border: 0.1rem solid var(--bb-palette-primary,#000000);
-  border-left-width: 0;
-  border-top-width: 0;
-  height: 0.625em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.375em;
-}
-
-.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
-  border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2728,22 +2762,101 @@ exports[`theming Checkbox.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5[disabled]+.bb-CheckboxIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5:focus+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-CheckboxIcon {
+  border-color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-5:checked+.bb-CheckboxIcon::before {
+  border: 0.1rem solid var(--bb-palette-primary, #000000);
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-5[disabled]:checked+.bb-CheckboxIcon::before {
+  border-color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Checkbox"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Checkbox"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-CheckboxHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-CheckboxIcon bb-Box"
   />
 </label>
 `;

@@ -1,6 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -14,31 +39,6 @@ exports[`composition as should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <p
@@ -50,11 +50,36 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Container props 1`] = `
 Object {
-  "className": "css-xakwjy css-63it0p css-1074357 bb-Box bb-Container",
+  "className": "css-xakwjy css-63it0p css-jwhr8m bb-Box bb-Container",
 }
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -68,31 +93,6 @@ exports[`composition render props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -103,6 +103,17 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for breakpoint 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emotion-0 {
+  max-width: 1024px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -116,17 +127,6 @@ exports[`defaultProps should render correctly for breakpoint 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.emotion-0 {
-  max-width: 1024px;
 }
 
 <div
@@ -137,6 +137,31 @@ exports[`defaultProps should render correctly for breakpoint 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -150,31 +175,6 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -185,6 +185,19 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`defaultProps should render correctly for isFluid 1`] = `
+.emotion-0 {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -198,19 +211,6 @@ exports[`defaultProps should render correctly for isFluid 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 <div
@@ -221,6 +221,38 @@ exports[`defaultProps should render correctly for isFluid 1`] = `
 `;
 
 exports[`defaultProps should render correctly for isLayout 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -234,38 +266,6 @@ exports[`defaultProps should render correctly for isLayout 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -276,6 +276,35 @@ exports[`defaultProps should render correctly for isLayout 1`] = `
 `;
 
 exports[`overrides Container.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -289,35 +318,6 @@ exports[`overrides Container.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
@@ -328,6 +328,23 @@ exports[`overrides Container.base should render correctly 1`] = `
 `;
 
 exports[`overrides Container.fluid should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -341,23 +358,6 @@ exports[`overrides Container.fluid should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 <div
@@ -368,6 +368,19 @@ exports[`overrides Container.fluid should render correctly 1`] = `
 `;
 
 exports[`overrides Container.fluidMargin should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -381,19 +394,6 @@ exports[`overrides Container.fluidMargin should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 <div
@@ -404,6 +404,42 @@ exports[`overrides Container.fluidMargin should render correctly 1`] = `
 `;
 
 exports[`overrides Container.layout should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -417,42 +453,6 @@ exports[`overrides Container.layout should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -463,6 +463,38 @@ exports[`overrides Container.layout should render correctly 1`] = `
 `;
 
 exports[`overrides Container.tabletMargin should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -476,38 +508,6 @@ exports[`overrides Container.tabletMargin should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -518,6 +518,31 @@ exports[`overrides Container.tabletMargin should render correctly 1`] = `
 `;
 
 exports[`props alignment renders correctly for a center aligned container 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -531,31 +556,6 @@ exports[`props alignment renders correctly for a center aligned container 1`] = 
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -566,6 +566,30 @@ exports[`props alignment renders correctly for a center aligned container 1`] = 
 `;
 
 exports[`props alignment renders correctly for a left aligned container 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -579,30 +603,6 @@ exports[`props alignment renders correctly for a left aligned container 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -613,6 +613,30 @@ exports[`props alignment renders correctly for a left aligned container 1`] = `
 `;
 
 exports[`props alignment renders correctly for a right aligned container 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -626,30 +650,6 @@ exports[`props alignment renders correctly for a right aligned container 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -660,21 +660,6 @@ exports[`props alignment renders correctly for a right aligned container 1`] = `
 `;
 
 exports[`props fixed width renders correctly when breakpoint is desktop 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .emotion-0 {
   width: 100%;
   max-width: 1440px;
@@ -686,14 +671,6 @@ exports[`props fixed width renders correctly when breakpoint is desktop 1`] = `
   max-width: 1024px;
 }
 
-<div
-  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
->
-  test
-</div>
-`;
-
-exports[`props fixed width renders correctly when breakpoint is fullHD 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -709,6 +686,14 @@ exports[`props fixed width renders correctly when breakpoint is fullHD 1`] = `
   outline: none;
 }
 
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
+>
+  test
+</div>
+`;
+
+exports[`props fixed width renders correctly when breakpoint is fullHD 1`] = `
 .emotion-0 {
   width: 100%;
   max-width: 1440px;
@@ -720,14 +705,6 @@ exports[`props fixed width renders correctly when breakpoint is fullHD 1`] = `
   max-width: 1440px;
 }
 
-<div
-  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
->
-  test
-</div>
-`;
-
-exports[`props fixed width renders correctly when breakpoint is mobile 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -743,6 +720,14 @@ exports[`props fixed width renders correctly when breakpoint is mobile 1`] = `
   outline: none;
 }
 
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
+>
+  test
+</div>
+`;
+
+exports[`props fixed width renders correctly when breakpoint is mobile 1`] = `
 .emotion-0 {
   width: 100%;
   max-width: 1440px;
@@ -754,14 +739,6 @@ exports[`props fixed width renders correctly when breakpoint is mobile 1`] = `
   max-width: 480px;
 }
 
-<div
-  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
->
-  test
-</div>
-`;
-
-exports[`props fixed width renders correctly when breakpoint is tablet 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -777,6 +754,14 @@ exports[`props fixed width renders correctly when breakpoint is tablet 1`] = `
   outline: none;
 }
 
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
+>
+  test
+</div>
+`;
+
+exports[`props fixed width renders correctly when breakpoint is tablet 1`] = `
 .emotion-0 {
   width: 100%;
   max-width: 1440px;
@@ -788,14 +773,6 @@ exports[`props fixed width renders correctly when breakpoint is tablet 1`] = `
   max-width: 768px;
 }
 
-<div
-  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
->
-  test
-</div>
-`;
-
-exports[`props fixed width renders correctly when breakpoint is widescreen 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -811,6 +788,14 @@ exports[`props fixed width renders correctly when breakpoint is widescreen 1`] =
   outline: none;
 }
 
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
+>
+  test
+</div>
+`;
+
+exports[`props fixed width renders correctly when breakpoint is widescreen 1`] = `
 .emotion-0 {
   width: 100%;
   max-width: 1440px;
@@ -822,14 +807,6 @@ exports[`props fixed width renders correctly when breakpoint is widescreen 1`] =
   max-width: 1200px;
 }
 
-<div
-  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
->
-  test
-</div>
-`;
-
-exports[`props fluid renders correctly for a fluid container 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -845,17 +822,40 @@ exports[`props fluid renders correctly for a fluid container 1`] = `
   outline: none;
 }
 
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
+>
+  test
+</div>
+`;
+
+exports[`props fluid renders correctly for a fluid container 1`] = `
 .emotion-0 {
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .emotion-0 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <div
@@ -866,6 +866,38 @@ exports[`props fluid renders correctly for a fluid container 1`] = `
 `;
 
 exports[`props layout renders correctly for a layout container 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -879,38 +911,6 @@ exports[`props layout renders correctly for a layout container 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -921,6 +921,31 @@ exports[`props layout renders correctly for a layout container 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -934,31 +959,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -969,6 +969,31 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -984,33 +1009,8 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
 .emotion-2 {
-  color: var(--bb-palette-primary,#000000) !important;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
@@ -1021,6 +1021,35 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Container.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1034,35 +1063,6 @@ exports[`theming Container.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
@@ -1073,6 +1073,23 @@ exports[`theming Container.base should render correctly 1`] = `
 `;
 
 exports[`theming Container.fluid should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1086,23 +1103,6 @@ exports[`theming Container.fluid should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 <div
@@ -1113,6 +1113,19 @@ exports[`theming Container.fluid should render correctly 1`] = `
 `;
 
 exports[`theming Container.fluidMargin should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1126,19 +1139,6 @@ exports[`theming Container.fluidMargin should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 <div
@@ -1149,6 +1149,42 @@ exports[`theming Container.fluidMargin should render correctly 1`] = `
 `;
 
 exports[`theming Container.layout should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1162,42 +1198,6 @@ exports[`theming Container.layout should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div
@@ -1208,6 +1208,38 @@ exports[`theming Container.layout should render correctly 1`] = `
 `;
 
 exports[`theming Container.tabletMargin should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .emotion-0 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1221,38 +1253,6 @@ exports[`theming Container.tabletMargin should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
 }
 
 <div

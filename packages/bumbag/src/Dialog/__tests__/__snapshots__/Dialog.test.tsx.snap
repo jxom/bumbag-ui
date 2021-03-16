@@ -2,6 +2,14 @@
 
 exports[`composition as should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,43 +20,35 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
+.emotion-8 {
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       Hello world
     </div>
@@ -82,6 +82,14 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -97,14 +105,6 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
 <div
   aria-describedby="id-test"
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
@@ -115,6 +115,14 @@ exports[`composition render props should render correctly 1`] = `
 
 exports[`defaultProps should render correctly for className 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -125,47 +133,39 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 .emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
-}
-
 .emotion-8 {
-  color: var(--bb-palette-primary,#000000) !important;
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-8 test bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
@@ -175,6 +175,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 exports[`overrides Dialog.Close.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -185,43 +193,35 @@ exports[`overrides Dialog.Close.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
+.emotion-8 {
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
@@ -231,6 +231,14 @@ exports[`overrides Dialog.Close.base should render correctly 1`] = `
 
 exports[`overrides Dialog.Content.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -241,47 +249,39 @@ exports[`overrides Dialog.Content.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
 .emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-1 {
-  width: 100% !important;
-}
-
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
@@ -291,6 +291,14 @@ exports[`overrides Dialog.Content.base should render correctly 1`] = `
 
 exports[`overrides Dialog.Footer.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -301,62 +309,54 @@ exports[`overrides Dialog.Footer.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
+.emotion-8 {
+  width: 100%!important;
 }
 
-.emotion-1 {
-  width: 100% !important;
-}
-
-.emotion-6 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-white600,#000000);
+  background-color: var(--bb-palette-white600, #000000);
   padding: 1.25rem 1.5rem;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-9 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-10 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
   </div>
   <div
-    class="emotion-6 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogFooter"
+    class="emotion-9 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogFooter"
   >
     This is a footer
   </div>
@@ -364,7 +364,15 @@ exports[`overrides Dialog.Footer.base should render correctly 1`] = `
 `;
 
 exports[`overrides Dialog.Header.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -375,49 +383,54 @@ exports[`overrides Dialog.Header.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-13 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-10 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-9 {
-  padding: 1.5rem;
-}
-
 .emotion-8 {
-  width: 100% !important;
+  width: 100%!important;
 }
 
-abbr.emotion-1 {
+.emotion-9 {
+  margin-bottom: 1rem;
+}
+
+.emotion-9 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -425,75 +438,61 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-13,
+u.emotion-13 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.emotion-4 {
-  margin-bottom: 1rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-13 emotion-2 emotion-3 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-2 emotion-8 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 bb-Box bb-DialogHeader"
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           This is a title
@@ -507,319 +506,13 @@ samp.emotion-1 {
 
 exports[`overrides Dialog.IconWrapper.base should render correctly 1`] = `
 .emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6 {
   border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
+  background-color: var(--bb-palette-background, #000000);
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
-}
-
-<div
-  aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
->
-  <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
-    id="id-test"
-  >
-    <div
-      class="emotion-0 emotion-1 bb-Box"
-    >
-      hello world
-    </div>
-  </div>
-</div>
-`;
-
-exports[`overrides Dialog.Title.base should render correctly 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-13 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  padding: 1.5rem;
-}
-
-.emotion-8 {
-  width: 100% !important;
-}
-
-.emotion-4 {
-  margin-bottom: 1rem;
-}
-
-abbr.emotion-1 {
-  border-bottom: 1px dotted;
-  cursor: help;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-code.emotion-1 {
-  font-family: monospace;
-}
-
-i.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1 {
-  background: #454d5d;
-  border-radius: 0.1rem;
-  color: #fff;
-  fill: #fff;
-  padding: 0.1rem 0.2rem;
-}
-
-mark.emotion-1 {
-  background: #ffe9b3;
-  border-radius: 0.1rem;
-  padding: 0.1rem 0.2rem;
-}
-
-strong.emotion-1 {
-  font-weight: bold;
-}
-
-sub.emotion-1,
-sup.emotion-1 {
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
-  text-decoration-skip: ink edges;
-}
-
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
-  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
-}
-
-.emotion-1 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-<div
-  aria-describedby="id-test"
-  aria-labelledby="id-test"
-  class="emotion-13 emotion-2 emotion-3 bb-Box bb-Dialog"
->
-  <div
-    class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
-    id="id-test"
-  >
-    <div
-      class="emotion-2 emotion-8 bb-Box"
-    >
-      <div
-        class="emotion-4 emotion-2 emotion-3 bb-Box bb-DialogHeader"
-      >
-        <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
-          id="id-test"
-        >
-          This is a title
-        </span>
-      </div>
-      hello world
-    </div>
-  </div>
-</div>
-`;
-
-exports[`overrides Dialog.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
-}
-
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-<div
-  aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
->
-  <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
-    id="id-test"
-  >
-    <div
-      class="emotion-0 emotion-1 bb-Box"
-    >
-      hello world
-    </div>
-  </div>
-</div>
-`;
-
-exports[`props should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
-}
-
-<div
-  aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
->
-  <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
-    id="id-test"
-  >
-    <div
-      class="emotion-0 emotion-1 bb-Box"
-    >
-      Hello world
-    </div>
-  </div>
-</div>
-`;
-
-exports[`props should render correctly for standalone 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -835,45 +528,106 @@ exports[`props should render correctly for standalone 1`] = `
   outline: none;
 }
 
-.emotion-29 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-22 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-21 {
+.emotion-8 {
+  width: 100%!important;
+}
+
+<div
+  aria-describedby="id-test"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
+>
+  <div
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
+    id="id-test"
+  >
+    <div
+      class="emotion-1 emotion-8 bb-Box"
+    >
+      hello world
+    </div>
+  </div>
+</div>
+`;
+
+exports[`overrides Dialog.Title.base should render correctly 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
   padding: 1.5rem;
 }
 
-.emotion-7 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  width: 100%!important;
+}
+
+.emotion-9 {
   margin-bottom: 1rem;
 }
 
-abbr.emotion-4 {
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.emotion-12 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-4 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-4 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-4 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -881,57 +635,284 @@ kbd.emotion-4 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-4 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-4 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-4,
-sup.emotion-4 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-4,
-u.emotion-4 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-13,
+u.emotion-13 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-4,
-cite.emotion-4,
-var.emotion-4,
-em.emotion-4 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-4,
-pre.emotion-4,
-samp.emotion-4 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-4 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
 }
 
+<div
+  aria-describedby="id-test"
+  aria-labelledby="id-test"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
+>
+  <div
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
+    id="id-test"
+  >
+    <div
+      class="emotion-1 emotion-8 bb-Box"
+    >
+      <div
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
+      >
+        <span
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
+          id="id-test"
+        >
+          This is a title
+        </span>
+      </div>
+      hello world
+    </div>
+  </div>
+</div>
+`;
+
+exports[`overrides Dialog.base should render correctly 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  width: 100%!important;
+}
+
+<div
+  aria-describedby="id-test"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
+>
+  <div
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
+    id="id-test"
+  >
+    <div
+      class="emotion-1 emotion-8 bb-Box"
+    >
+      hello world
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  width: 100%!important;
+}
+
+<div
+  aria-describedby="id-test"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
+>
+  <div
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
+    id="id-test"
+  >
+    <div
+      class="emotion-1 emotion-8 bb-Box"
+    >
+      Hello world
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for standalone 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  width: 600px!important;
+}
+
+.emotion-3 {
+  margin-bottom: 1rem;
+}
+
+.emotion-6 {
   font-size: 1.25em;
   font-weight: 600;
 }
 
-.emotion-25 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-white600,#000000);
-  padding: 1.25rem 1.5rem;
+abbr.emotion-7 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-7 {
+  font-family: monospace;
+}
+
+i.emotion-7 {
+  font-style: italic;
+}
+
+kbd.emotion-7 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-7 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-7 {
+  font-weight: bold;
+}
+
+sub.emotion-7,
+sup.emotion-7 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-7,
+u.emotion-7 {
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-7,
+cite.emotion-7,
+var.emotion-7,
+em.emotion-7 {
+  font-style: italic;
+}
+
+kbd.emotion-7,
+pre.emotion-7,
+samp.emotion-7 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-7 .bb-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-10 {
@@ -946,46 +927,62 @@ samp.emotion-4 {
   font-size: 1.25em;
 }
 
-.emotion-2 {
-  color: var(--bb-palette-info,#000000) !important;
-}
-
-.emotion-0 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-21 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-31 {
-  width: 600px !important;
+.emotion-23 {
+  color: var(--bb-palette-info, #000000)!important;
+}
+
+.emotion-24 {
+  padding: 1.5rem;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-white600, #000000);
+  padding: 1.25rem 1.5rem;
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-29 emotion-1 emotion-31 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+    class="emotion-3 emotion-1 emotion-5 bb-Box bb-DialogHeader"
   >
     <span
-      class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+      class="emotion-6 emotion-7 emotion-1 emotion-5 bb-Box bb-Text bb-DialogTitle"
       id="id-test"
     >
       <span
-        class="emotion-10 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogIconWrapper"
+        class="emotion-10 emotion-7 emotion-1 emotion-5 bb-Box bb-Text bb-DialogIconWrapper"
       >
         <div
-          class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+          class="emotion-3 emotion-1 emotion-5 bb-Box bb-DialogHeader"
         >
           <span
-            class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+            class="emotion-6 emotion-7 emotion-1 emotion-5 bb-Box bb-Text bb-DialogTitle"
             id="id-test"
           >
             <svg
               aria-hidden="true"
-              class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+              class="emotion-21 emotion-1 emotion-23 bb-Box bb-Icon"
               role="img"
               viewBox="0 0 512 512"
             >
@@ -1002,13 +999,13 @@ samp.emotion-4 {
     </span>
   </div>
   <div
-    class="emotion-21 emotion-22 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-24 emotion-25 emotion-1 emotion-5 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
   </div>
   <div
-    class="emotion-25 emotion-22 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogFooter"
+    class="emotion-28 emotion-25 emotion-1 emotion-5 bb-Box bb-Flex bb-DialogFooter"
   >
     This is a footer
   </div>
@@ -1017,6 +1014,14 @@ samp.emotion-4 {
 
 exports[`props should render correctly with CSS props 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1027,47 +1032,39 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 .emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
-}
-
 .emotion-8 {
-  color: var(--bb-palette-primary,#000000) !important;
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-8 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       Hello world
     </div>
@@ -1076,7 +1073,15 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`props should render correctly with a close button 1`] = `
-.emotion-2 {
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1087,53 +1092,50 @@ exports[`props should render correctly with a close button 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-20 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-16 {
-  padding: 1.5rem;
+.emotion-8 {
+  width: 100%!important;
 }
 
-.emotion-15 {
-  width: 100% !important;
-}
-
-.emotion-11 {
+.emotion-9 {
   margin-bottom: 1rem;
 }
 
-abbr.emotion-1 {
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1141,60 +1143,59 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-13,
+u.emotion-13 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
+.emotion-16.emotion-16 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
-.emotion-8 {
+.emotion-17 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1203,8 +1204,8 @@ samp.emotion-1 {
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1215,92 +1216,87 @@ samp.emotion-1 {
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-8[disabled],
-.emotion-8[aria-disabled="true"] {
+.emotion-17[disabled],
+.emotion-17[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-8:focus {
+.emotion-17:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-8:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-17:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-8:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-17:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-8 {
+.emotion-17 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-8:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-17:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-8:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-17:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-7.emotion-7 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-6 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-4 {
+.emotion-20 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
+.emotion-22 {
+  font-size: 1.25rem!important;
+}
+
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-20 emotion-2 emotion-3 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-16 emotion-17 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-2 emotion-15 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       <div
-        class="emotion-11 emotion-2 emotion-3 bb-Box bb-DialogHeader"
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           Hello world
         </span>
         <button
-          class="emotion-7 emotion-8 emotion-2 emotion-3 test bb-Box bb-Button bb-ButtonClose"
+          class="emotion-16 emotion-17 emotion-1 emotion-2 test bb-Box bb-Button bb-ButtonClose"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="emotion-4 emotion-2 emotion-6 bb-Box bb-Icon"
+            class="emotion-20 emotion-1 emotion-22 bb-Box bb-Icon"
             role="img"
             viewBox="0 0 320 512"
           >
@@ -1324,602 +1320,14 @@ samp.emotion-1 {
 `;
 
 exports[`props should render correctly with a footer 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-17 {
+.emotion-0 {
   border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
+  background-color: var(--bb-palette-background, #000000);
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  padding: 1.5rem;
-}
-
-.emotion-8 {
-  width: 100% !important;
-}
-
-.emotion-4 {
-  margin-bottom: 1rem;
-}
-
-abbr.emotion-1 {
-  border-bottom: 1px dotted;
-  cursor: help;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-code.emotion-1 {
-  font-family: monospace;
-}
-
-i.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1 {
-  background: #454d5d;
-  border-radius: 0.1rem;
-  color: #fff;
-  fill: #fff;
-  padding: 0.1rem 0.2rem;
-}
-
-mark.emotion-1 {
-  background: #ffe9b3;
-  border-radius: 0.1rem;
-  padding: 0.1rem 0.2rem;
-}
-
-strong.emotion-1 {
-  font-weight: bold;
-}
-
-sub.emotion-1,
-sup.emotion-1 {
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
-  text-decoration-skip: ink edges;
-}
-
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
-  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
-}
-
-.emotion-1 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.emotion-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-white600,#000000);
-  padding: 1.25rem 1.5rem;
-}
-
-<div
-  aria-describedby="id-test"
-  aria-labelledby="id-test"
-  class="emotion-17 emotion-2 emotion-3 bb-Box bb-Dialog"
->
-  <div
-    class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
-    id="id-test"
-  >
-    <div
-      class="emotion-2 emotion-8 bb-Box"
-    >
-      <div
-        class="emotion-4 emotion-2 emotion-3 bb-Box bb-DialogHeader"
-      >
-        <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
-          id="id-test"
-        >
-          Hello world
-        </span>
-      </div>
-      Hello world
-    </div>
-  </div>
-  <div
-    class="emotion-13 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogFooter"
-  >
-    This is a footer
-  </div>
-</div>
-`;
-
-exports[`props should render correctly with a title 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-13 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  padding: 1.5rem;
-}
-
-.emotion-8 {
-  width: 100% !important;
-}
-
-.emotion-4 {
-  margin-bottom: 1rem;
-}
-
-abbr.emotion-1 {
-  border-bottom: 1px dotted;
-  cursor: help;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-code.emotion-1 {
-  font-family: monospace;
-}
-
-i.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1 {
-  background: #454d5d;
-  border-radius: 0.1rem;
-  color: #fff;
-  fill: #fff;
-  padding: 0.1rem 0.2rem;
-}
-
-mark.emotion-1 {
-  background: #ffe9b3;
-  border-radius: 0.1rem;
-  padding: 0.1rem 0.2rem;
-}
-
-strong.emotion-1 {
-  font-weight: bold;
-}
-
-sub.emotion-1,
-sup.emotion-1 {
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
-  text-decoration-skip: ink edges;
-}
-
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
-  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
-}
-
-.emotion-1 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-<div
-  aria-describedby="id-test"
-  aria-labelledby="id-test"
-  class="emotion-13 emotion-2 emotion-3 bb-Box bb-Dialog"
->
-  <div
-    class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
-    id="id-test"
-  >
-    <div
-      class="emotion-2 emotion-8 bb-Box"
-    >
-      <div
-        class="emotion-4 emotion-2 emotion-3 bb-Box bb-DialogHeader"
-      >
-        <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
-          id="id-test"
-        >
-          This is a dialog
-        </span>
-      </div>
-      Hello world
-    </div>
-  </div>
-</div>
-`;
-
-exports[`props should render correctly with action buttons 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-27 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  padding: 1.5rem;
-}
-
-.emotion-8 {
-  width: 100% !important;
-}
-
-.emotion-4 {
-  margin-bottom: 1rem;
-}
-
-abbr.emotion-1 {
-  border-bottom: 1px dotted;
-  cursor: help;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-code.emotion-1 {
-  font-family: monospace;
-}
-
-i.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1 {
-  background: #454d5d;
-  border-radius: 0.1rem;
-  color: #fff;
-  fill: #fff;
-  padding: 0.1rem 0.2rem;
-}
-
-mark.emotion-1 {
-  background: #ffe9b3;
-  border-radius: 0.1rem;
-  padding: 0.1rem 0.2rem;
-}
-
-strong.emotion-1 {
-  font-weight: bold;
-}
-
-sub.emotion-1,
-sup.emotion-1 {
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
-  text-decoration-skip: ink edges;
-}
-
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
-  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
-}
-
-.emotion-1 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.emotion-23 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-white600,#000000);
-  padding: 1.25rem 1.5rem;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-20.emotion-20.emotion-20 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-13[disabled],
-.emotion-13[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-13:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
-  border-color: transparent;
-}
-
-.emotion-13:hover {
-  background-color: var(--bb-palette-white600,#000000);
-}
-
-.emotion-13:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-16 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-danger,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-dangerInverted,#000000);
-  fill: var(--bb-palette-dangerInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-}
-
-.emotion-16[disabled],
-.emotion-16[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-16:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-danger,#000000) 0px 0px 0px 1px, var(--bb-palette-danger200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-16:hover {
-  background-color: var(--bb-palette-danger600,#000000);
-}
-
-.emotion-16:hover:active {
-  background-color: var(--bb-palette-danger700,#000000);
-}
-
-<div
-  aria-describedby="id-test"
-  aria-labelledby="id-test"
-  class="emotion-27 emotion-2 emotion-3 bb-Box bb-Dialog"
->
-  <div
-    class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
-    id="id-test"
-  >
-    <div
-      class="emotion-2 emotion-8 bb-Box"
-    >
-      <div
-        class="emotion-4 emotion-2 emotion-3 bb-Box bb-DialogHeader"
-      >
-        <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
-          id="id-test"
-        >
-          Hello world
-        </span>
-      </div>
-      Hello world
-    </div>
-  </div>
-  <div
-    class="emotion-23 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogFooter"
-  >
-    <div
-      class="emotion-19 emotion-20 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
-    >
-      <button
-        class="emotion-13 emotion-2 emotion-3 bb-Box bb-Button"
-        type="button"
-      >
-        Cancel
-      </button>
-      <button
-        class="emotion-16 emotion-2 emotion-3 bb-Box bb-Button"
-        type="submit"
-      >
-        Submit
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`props type should render correctly with type danger 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1935,49 +1343,46 @@ exports[`props type should render correctly with type danger 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-24 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-23 {
-  padding: 1.5rem;
+.emotion-8 {
+  width: 100%!important;
 }
 
-.emotion-22 {
-  width: 100% !important;
-}
-
-.emotion-7 {
+.emotion-9 {
   margin-bottom: 1rem;
 }
 
-abbr.emotion-4 {
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-4 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-4 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-4 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1985,95 +1390,683 @@ kbd.emotion-4 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-4 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-4 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-4,
-sup.emotion-4 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-4,
-u.emotion-4 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-13,
+u.emotion-13 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-4,
-cite.emotion-4,
-var.emotion-4,
-em.emotion-4 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-4,
-pre.emotion-4,
-samp.emotion-4 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-4 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-3 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.emotion-10 {
-  margin-right: 1rem;
-}
-
-.emotion-10 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-10 .bb-CalloutContent .bb-Icon {
-  font-size: 1.25em;
-}
-
-.emotion-2 {
-  color: var(--bb-palette-danger,#000000) !important;
-}
-
-.emotion-0 {
-  fill: var(--bb-palette-danger,#000000);
-  position: relative;
-  height: 1em;
-  width: 1em;
+.emotion-16 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-white600, #000000);
+  padding: 1.25rem 1.5rem;
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-27 emotion-1 emotion-6 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-23 emotion-24 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
+    id="id-test"
+  >
+    <div
+      class="emotion-1 emotion-8 bb-Box"
+    >
+      <div
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
+      >
+        <span
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
+          id="id-test"
+        >
+          Hello world
+        </span>
+      </div>
+      Hello world
+    </div>
+  </div>
+  <div
+    class="emotion-16 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogFooter"
+  >
+    This is a footer
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with a title 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  width: 100%!important;
+}
+
+.emotion-9 {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+abbr.emotion-13 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-13 {
+  font-family: monospace;
+}
+
+i.emotion-13 {
+  font-style: italic;
+}
+
+kbd.emotion-13 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-13 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-13 {
+  font-weight: bold;
+}
+
+sub.emotion-13,
+sup.emotion-13 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-13,
+u.emotion-13 {
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
+  font-style: italic;
+}
+
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-13 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+<div
+  aria-describedby="id-test"
+  aria-labelledby="id-test"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
+>
+  <div
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
+    id="id-test"
+  >
+    <div
+      class="emotion-1 emotion-8 bb-Box"
+    >
+      <div
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
+      >
+        <span
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
+          id="id-test"
+        >
+          This is a dialog
+        </span>
+      </div>
+      Hello world
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with action buttons 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  width: 100%!important;
+}
+
+.emotion-9 {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+abbr.emotion-13 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-13 {
+  font-family: monospace;
+}
+
+i.emotion-13 {
+  font-style: italic;
+}
+
+kbd.emotion-13 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-13 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-13 {
+  font-weight: bold;
+}
+
+sub.emotion-13,
+sup.emotion-13 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-13,
+u.emotion-13 {
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
+  font-style: italic;
+}
+
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-13 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-16 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-white600, #000000);
+  padding: 1.25rem 1.5rem;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-21.emotion-21.emotion-21>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-24 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-default, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+}
+
+.emotion-24[disabled],
+.emotion-24[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-24:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-24:hover {
+  background-color: var(--bb-palette-white600, #000000);
+}
+
+.emotion-24:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
+}
+
+.emotion-27 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-danger, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-dangerInverted, #000000);
+  fill: var(--bb-palette-dangerInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+}
+
+.emotion-27[disabled],
+.emotion-27[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-27:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-danger, #000000) 0px 0px 0px 1px,var(--bb-palette-danger200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-27:hover {
+  background-color: var(--bb-palette-danger600, #000000);
+}
+
+.emotion-27:hover:active {
+  background-color: var(--bb-palette-danger700, #000000);
+}
+
+<div
+  aria-describedby="id-test"
+  aria-labelledby="id-test"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
+>
+  <div
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
+    id="id-test"
+  >
+    <div
+      class="emotion-1 emotion-8 bb-Box"
+    >
+      <div
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
+      >
+        <span
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
+          id="id-test"
+        >
+          Hello world
+        </span>
+      </div>
+      Hello world
+    </div>
+  </div>
+  <div
+    class="emotion-16 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogFooter"
+  >
+    <div
+      class="emotion-20 emotion-21 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+    >
+      <button
+        class="emotion-24 emotion-1 emotion-2 bb-Box bb-Button"
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        class="emotion-27 emotion-1 emotion-2 bb-Box bb-Button"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props type should render correctly with type danger 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  margin-right: 1rem;
+}
+
+.emotion-7 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-7 .bb-CalloutContent .bb-Icon {
+  font-size: 1.25em;
+}
+
+abbr.emotion-8 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-8 {
+  font-family: monospace;
+}
+
+i.emotion-8 {
+  font-style: italic;
+}
+
+kbd.emotion-8 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-8 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-8 {
+  font-weight: bold;
+}
+
+sub.emotion-8,
+sup.emotion-8 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-8,
+u.emotion-8 {
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
+  font-style: italic;
+}
+
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-8 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-11 {
+  margin-bottom: 1rem;
+}
+
+.emotion-14 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.emotion-18 {
+  fill: var(--bb-palette-danger, #000000);
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.emotion-20 {
+  color: var(--bb-palette-danger, #000000)!important;
+}
+
+.emotion-22 {
+  width: 100%!important;
+}
+
+<div
+  aria-describedby="id-test"
+  aria-labelledby="id-test"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
+>
+  <div
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <span
-      class="emotion-10 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogIconWrapper"
+      class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogIconWrapper"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           <svg
             aria-hidden="true"
-            class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+            class="emotion-18 emotion-1 emotion-20 bb-Box bb-Icon"
             role="img"
             viewBox="0 0 512 512"
           >
@@ -2090,10 +2083,10 @@ samp.emotion-4 {
       class="emotion-1 emotion-22 bb-Box"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           This is a dialog
@@ -2106,6 +2099,14 @@ samp.emotion-4 {
 `;
 
 exports[`props type should render correctly with type info 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2121,49 +2122,45 @@ exports[`props type should render correctly with type info 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-24 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-23 {
-  padding: 1.5rem;
-}
-
-.emotion-22 {
-  width: 100% !important;
-}
-
 .emotion-7 {
-  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
-abbr.emotion-4 {
+.emotion-7 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-7 .bb-CalloutContent .bb-Icon {
+  font-size: 1.25em;
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-4 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-4 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-4 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2171,95 +2168,90 @@ kbd.emotion-4 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-4 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-4 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-4,
-sup.emotion-4 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-4,
-u.emotion-4 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-4,
-cite.emotion-4,
-var.emotion-4,
-em.emotion-4 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-4,
-pre.emotion-4,
-samp.emotion-4 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-4 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-3 {
+.emotion-11 {
+  margin-bottom: 1rem;
+}
+
+.emotion-14 {
   font-size: 1.25em;
   font-weight: 600;
 }
 
-.emotion-10 {
-  margin-right: 1rem;
-}
-
-.emotion-10 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-10 .bb-CalloutContent .bb-Icon {
-  font-size: 1.25em;
-}
-
-.emotion-2 {
-  color: var(--bb-palette-info,#000000) !important;
-}
-
-.emotion-0 {
-  fill: var(--bb-palette-info,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-info, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
+.emotion-20 {
+  color: var(--bb-palette-info, #000000)!important;
+}
+
+.emotion-22 {
+  width: 100%!important;
+}
+
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-27 emotion-1 emotion-6 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-23 emotion-24 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <span
-      class="emotion-10 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogIconWrapper"
+      class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogIconWrapper"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           <svg
             aria-hidden="true"
-            class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+            class="emotion-18 emotion-1 emotion-20 bb-Box bb-Icon"
             role="img"
             viewBox="0 0 512 512"
           >
@@ -2276,10 +2268,10 @@ samp.emotion-4 {
       class="emotion-1 emotion-22 bb-Box"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           This is a dialog
@@ -2292,6 +2284,14 @@ samp.emotion-4 {
 `;
 
 exports[`props type should render correctly with type success 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2307,49 +2307,45 @@ exports[`props type should render correctly with type success 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-24 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-23 {
-  padding: 1.5rem;
-}
-
-.emotion-22 {
-  width: 100% !important;
-}
-
 .emotion-7 {
-  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
-abbr.emotion-4 {
+.emotion-7 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-7 .bb-CalloutContent .bb-Icon {
+  font-size: 1.25em;
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-4 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-4 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-4 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2357,95 +2353,90 @@ kbd.emotion-4 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-4 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-4 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-4,
-sup.emotion-4 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-4,
-u.emotion-4 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-4,
-cite.emotion-4,
-var.emotion-4,
-em.emotion-4 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-4,
-pre.emotion-4,
-samp.emotion-4 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-4 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-3 {
+.emotion-11 {
+  margin-bottom: 1rem;
+}
+
+.emotion-14 {
   font-size: 1.25em;
   font-weight: 600;
 }
 
-.emotion-10 {
-  margin-right: 1rem;
-}
-
-.emotion-10 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-10 .bb-CalloutContent .bb-Icon {
-  font-size: 1.25em;
-}
-
-.emotion-2 {
-  color: var(--bb-palette-success,#000000) !important;
-}
-
-.emotion-0 {
-  fill: var(--bb-palette-success,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-success, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
+.emotion-20 {
+  color: var(--bb-palette-success, #000000)!important;
+}
+
+.emotion-22 {
+  width: 100%!important;
+}
+
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-27 emotion-1 emotion-6 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-23 emotion-24 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <span
-      class="emotion-10 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogIconWrapper"
+      class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogIconWrapper"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           <svg
             aria-hidden="true"
-            class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+            class="emotion-18 emotion-1 emotion-20 bb-Box bb-Icon"
             role="img"
             viewBox="0 0 512 512"
           >
@@ -2462,10 +2453,10 @@ samp.emotion-4 {
       class="emotion-1 emotion-22 bb-Box"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           This is a dialog
@@ -2478,6 +2469,14 @@ samp.emotion-4 {
 `;
 
 exports[`props type should render correctly with type warning 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2493,49 +2492,45 @@ exports[`props type should render correctly with type warning 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-24 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-23 {
-  padding: 1.5rem;
-}
-
-.emotion-22 {
-  width: 100% !important;
-}
-
 .emotion-7 {
-  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
-abbr.emotion-4 {
+.emotion-7 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-7 .bb-CalloutContent .bb-Icon {
+  font-size: 1.25em;
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-4 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-4 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-4 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2543,95 +2538,90 @@ kbd.emotion-4 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-4 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-4 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-4,
-sup.emotion-4 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-4,
-u.emotion-4 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-4,
-cite.emotion-4,
-var.emotion-4,
-em.emotion-4 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-4,
-pre.emotion-4,
-samp.emotion-4 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-4 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-3 {
+.emotion-11 {
+  margin-bottom: 1rem;
+}
+
+.emotion-14 {
   font-size: 1.25em;
   font-weight: 600;
 }
 
-.emotion-10 {
-  margin-right: 1rem;
-}
-
-.emotion-10 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-10 .bb-CalloutContent .bb-Icon {
-  font-size: 1.25em;
-}
-
-.emotion-2 {
-  color: var(--bb-palette-warning,#000000) !important;
-}
-
-.emotion-0 {
-  fill: var(--bb-palette-warning,#000000);
+.emotion-18 {
+  fill: var(--bb-palette-warning, #000000);
   position: relative;
   height: 1em;
   width: 1em;
 }
 
+.emotion-20 {
+  color: var(--bb-palette-warning, #000000)!important;
+}
+
+.emotion-22 {
+  width: 100%!important;
+}
+
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-27 emotion-1 emotion-6 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-23 emotion-24 emotion-1 emotion-6 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <span
-      class="emotion-10 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogIconWrapper"
+      class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogIconWrapper"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           <svg
             aria-hidden="true"
-            class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+            class="emotion-18 emotion-1 emotion-20 bb-Box bb-Icon"
             role="img"
             viewBox="0 0 576 512"
           >
@@ -2648,10 +2638,10 @@ samp.emotion-4 {
       class="emotion-1 emotion-22 bb-Box"
     >
       <div
-        class="emotion-7 emotion-1 emotion-6 bb-Box bb-DialogHeader"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-14 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           This is a dialog
@@ -2665,6 +2655,14 @@ samp.emotion-4 {
 
 exports[`theming Dialog.Close.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2675,43 +2673,35 @@ exports[`theming Dialog.Close.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
+.emotion-8 {
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
@@ -2721,6 +2711,14 @@ exports[`theming Dialog.Close.base should render correctly 1`] = `
 
 exports[`theming Dialog.Content.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2731,47 +2729,39 @@ exports[`theming Dialog.Content.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
 .emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-1 {
-  width: 100% !important;
-}
-
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
@@ -2781,6 +2771,14 @@ exports[`theming Dialog.Content.base should render correctly 1`] = `
 
 exports[`theming Dialog.Footer.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2791,62 +2789,54 @@ exports[`theming Dialog.Footer.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
+.emotion-8 {
+  width: 100%!important;
 }
 
-.emotion-1 {
-  width: 100% !important;
-}
-
-.emotion-6 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-white600,#000000);
+  background-color: var(--bb-palette-white600, #000000);
   padding: 1.25rem 1.5rem;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-9 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-10 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
   </div>
   <div
-    class="emotion-6 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogFooter"
+    class="emotion-9 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogFooter"
   >
     This is a footer
   </div>
@@ -2854,7 +2844,15 @@ exports[`theming Dialog.Footer.base should render correctly 1`] = `
 `;
 
 exports[`theming Dialog.Header.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2865,49 +2863,54 @@ exports[`theming Dialog.Header.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-13 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-10 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-9 {
-  padding: 1.5rem;
-}
-
 .emotion-8 {
-  width: 100% !important;
+  width: 100%!important;
 }
 
-abbr.emotion-1 {
+.emotion-9 {
+  margin-bottom: 1rem;
+}
+
+.emotion-9 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2915,75 +2918,61 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-13,
+u.emotion-13 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.emotion-4 {
-  margin-bottom: 1rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-13 emotion-2 emotion-3 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-2 emotion-8 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 bb-Box bb-DialogHeader"
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           This is a title
@@ -2997,6 +2986,14 @@ samp.emotion-1 {
 
 exports[`theming Dialog.IconWrapper.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3007,43 +3004,35 @@ exports[`theming Dialog.IconWrapper.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
+.emotion-8 {
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>
@@ -3052,7 +3041,15 @@ exports[`theming Dialog.IconWrapper.base should render correctly 1`] = `
 `;
 
 exports[`theming Dialog.Title.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3063,53 +3060,54 @@ exports[`theming Dialog.Title.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-13 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-3 {
+  padding: 1.5rem;
 }
 
-.emotion-10 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-9 {
-  padding: 1.5rem;
-}
-
 .emotion-8 {
-  width: 100% !important;
+  width: 100%!important;
 }
 
-.emotion-4 {
+.emotion-9 {
   margin-bottom: 1rem;
 }
 
-abbr.emotion-1 {
+.emotion-12 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.emotion-12 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3117,71 +3115,61 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-13,
+u.emotion-13 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-13 emotion-2 emotion-3 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-9 emotion-10 emotion-2 emotion-3 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-2 emotion-8 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 bb-Box bb-DialogHeader"
+        class="emotion-9 emotion-1 emotion-2 bb-Box bb-DialogHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-DialogTitle"
+          class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Text bb-DialogTitle"
           id="id-test"
         >
           This is a title
@@ -3195,6 +3183,18 @@ samp.emotion-1 {
 
 exports[`theming Dialog.base should render correctly 1`] = `
 .emotion-0 {
+  border-radius: 6px;
+  background-color: var(--bb-palette-background, #000000);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3205,47 +3205,35 @@ exports[`theming Dialog.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2 {
-  padding: 1.5rem;
-}
-
-.emotion-1 {
-  width: 100% !important;
-}
-
-.emotion-6 {
-  border-radius: 6px;
-  background-color: var(--bb-palette-background,#000000);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  width: 100%!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-6 emotion-0 emotion-5 bb-Box bb-Dialog"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Dialog"
 >
   <div
-    class="emotion-2 emotion-3 emotion-0 emotion-5 bb-Box bb-Flex bb-DialogContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-DialogContent"
     id="id-test"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-8 bb-Box"
     >
       hello world
     </div>

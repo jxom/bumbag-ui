@@ -2,6 +2,32 @@
 
 exports[`composition as should render correctly 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,45 +38,20 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -59,8 +60,8 @@ exports[`composition as should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -71,42 +72,42 @@ exports[`composition as should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -115,8 +116,8 @@ exports[`composition as should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -129,39 +130,39 @@ exports[`composition as should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -189,6 +190,32 @@ Object {
 
 exports[`composition render props should render correctly 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -199,45 +226,20 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -246,8 +248,8 @@ exports[`composition render props should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -258,42 +260,42 @@ exports[`composition render props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -302,8 +304,8 @@ exports[`composition render props should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -316,39 +318,39 @@ exports[`composition render props should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -358,6 +360,32 @@ exports[`composition render props should render correctly 1`] = `
 
 exports[`defaultProps should render correctly 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -368,45 +396,20 @@ exports[`defaultProps should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -415,8 +418,8 @@ exports[`defaultProps should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -427,42 +430,42 @@ exports[`defaultProps should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -471,8 +474,8 @@ exports[`defaultProps should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -485,39 +488,39 @@ exports[`defaultProps should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 test bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -527,6 +530,32 @@ exports[`defaultProps should render correctly 1`] = `
 
 exports[`defaultProps should render correctly with addon buttons 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -537,45 +566,20 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-10.emotion-10.emotion-10 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -584,8 +588,8 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -596,42 +600,42 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-6 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -640,8 +644,8 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -654,45 +658,45 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-6[disabled],
-.emotion-6[aria-disabled="true"] {
+.emotion-10[disabled],
+.emotion-10[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-6:focus {
+.emotion-10:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-6:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-10:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-6:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-10:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-9 emotion-10 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Addon
   </button>
   <button
-    class="emotion-6 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-10 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -704,18 +708,46 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -726,214 +758,136 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-4:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  background-color: var(--bb-palette-default, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-23.emotion-23.emotion-23 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
-.emotion-12 {
+.emotion-4 {
+  cursor: not-allowed;
+  position: relative;
+}
+
+.emotion-4:focus {
+  box-shadow: unset!important;
+  outline: unset!important;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
   position: absolute;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
-.emotion-12 + .bb-Text {
+.emotion-10+.bb-Text {
   opacity: 0;
 }
 
-.emotion-8.emotion-8 {
-  font-size: 1.25em;
-}
-
-.emotion-19 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-}
-
-.emotion-19[disabled],
-.emotion-19[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-19:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-19:hover {
-  background-color: var(--bb-palette-primary600,#000000);
-}
-
-.emotion-19:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
-}
-
-.emotion-16 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-16[disabled],
-.emotion-16[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-16 {
-  cursor: not-allowed;
-  position: relative;
-}
-
-.emotion-16:focus {
-  box-shadow: unset !important;
-  outline: unset !important;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  color: var(--bb-palette-gray100,#000000) !important;
-}
-
-.emotion-6 {
+.emotion-14 {
   line-height: 1;
   font-size: 20px;
 }
 
-.emotion-2 {
+.emotion-15 {
+  color: var(--bb-palette-gray100, #000000)!important;
+}
+
+.emotion-16.emotion-16 {
+  font-size: 1.25em;
+}
+
+.emotion-17 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
-  stroke: var(--bb-palette-default300,#000000);
+.emotion-18 {
+  stroke: var(--bb-palette-default300, #000000);
 }
 
-.emotion-1 {
+.emotion-19 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-gray100,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-gray100, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-abbr.emotion-13 {
+abbr.emotion-20 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-13 {
+code.emotion-20 {
   font-family: monospace;
 }
 
-i.emotion-13 {
+i.emotion-20 {
   font-style: italic;
 }
 
-kbd.emotion-13 {
+kbd.emotion-20 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -941,67 +895,120 @@ kbd.emotion-13 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-13 {
+mark.emotion-20 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-13 {
+strong.emotion-20 {
   font-weight: bold;
 }
 
-sub.emotion-13,
-sup.emotion-13 {
+sub.emotion-20,
+sup.emotion-20 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-13,
-u.emotion-13 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-20,
+u.emotion-20 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-13,
-cite.emotion-13,
-var.emotion-13,
-em.emotion-13 {
+i.emotion-20,
+cite.emotion-20,
+var.emotion-20,
+em.emotion-20 {
   font-style: italic;
 }
 
-kbd.emotion-13,
-pre.emotion-13,
-samp.emotion-13 {
+kbd.emotion-20,
+pre.emotion-20,
+samp.emotion-20 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-13 .bb-Icon {
+.emotion-20 .bb-Icon {
   vertical-align: -0.125em;
 }
 
+.emotion-23 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-primary, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+}
+
+.emotion-23[disabled],
+.emotion-23[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-23:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-23:hover {
+  background-color: var(--bb-palette-primary600, #000000);
+}
+
+.emotion-23:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
+}
+
 <div
-  class="emotion-22 emotion-23 emotion-4 emotion-5 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
     aria-disabled="true"
-    class="emotion-16 emotion-4 emotion-5 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <div
-      class="emotion-3 emotion-4 emotion-5 emotion-12 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+      class="emotion-7 emotion-2 emotion-3 emotion-10 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 emotion-8 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+        class="emotion-7 emotion-2 emotion-3 emotion-14 emotion-15 emotion-16 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-2 bb-Spinnervector"
+          class="emotion-17 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-0 bb-SpinnertrackCircle"
+            class="emotion-18 bb-SpinnertrackCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -1009,7 +1016,7 @@ samp.emotion-13 {
             stroke-width="4"
           />
           <circle
-            class="emotion-1 bb-SpinnerloaderCircle"
+            class="emotion-19 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -1020,13 +1027,13 @@ samp.emotion-13 {
       </div>
     </div>
     <span
-      class="emotion-13 emotion-4 emotion-5 bb-Box bb-Text"
+      class="emotion-20 emotion-2 emotion-3 bb-Box bb-Text"
     >
       Cancel
     </span>
   </button>
   <button
-    class="emotion-19 emotion-4 emotion-5 bb-Box bb-Button"
+    class="emotion-23 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1036,6 +1043,32 @@ samp.emotion-13 {
 
 exports[`defaultProps should render correctly with cancel text 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1046,45 +1079,20 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1093,8 +1101,8 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1105,42 +1113,42 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1149,8 +1157,8 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1163,39 +1171,39 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Close
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1204,7 +1212,37 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
 `;
 
 exports[`overrides ActionButtons.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1215,45 +1253,20 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1262,8 +1275,8 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1274,42 +1287,42 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1318,8 +1331,8 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1332,43 +1345,39 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
-}
-
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1378,6 +1387,32 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
 
 exports[`props should render correctly 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1388,45 +1423,20 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1435,8 +1445,8 @@ exports[`props should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1447,42 +1457,42 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1491,8 +1501,8 @@ exports[`props should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1505,39 +1515,39 @@ exports[`props should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1547,6 +1557,32 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render correctly with CSS props 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1557,45 +1593,25 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-3 {
+  position: absolute!important;
+  top: 0!important;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1604,8 +1620,8 @@ exports[`props should render correctly with CSS props 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1616,42 +1632,42 @@ exports[`props should render correctly with CSS props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1660,8 +1676,8 @@ exports[`props should render correctly with CSS props 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1674,44 +1690,39 @@ exports[`props should render correctly with CSS props 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
-}
-
-.emotion-9 {
-  position: absolute !important;
-  top: 0 !important;
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-9 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-6 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1721,6 +1732,32 @@ exports[`props should render correctly with CSS props 1`] = `
 
 exports[`props should render correctly with addon buttons 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1731,45 +1768,20 @@ exports[`props should render correctly with addon buttons 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-10.emotion-10.emotion-10 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1778,8 +1790,8 @@ exports[`props should render correctly with addon buttons 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1790,42 +1802,42 @@ exports[`props should render correctly with addon buttons 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-6 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1834,8 +1846,8 @@ exports[`props should render correctly with addon buttons 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1848,45 +1860,45 @@ exports[`props should render correctly with addon buttons 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-6[disabled],
-.emotion-6[aria-disabled="true"] {
+.emotion-10[disabled],
+.emotion-10[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-6:focus {
+.emotion-10:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-6:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-10:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-6:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-10:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-9 emotion-10 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Addon
   </button>
   <button
-    class="emotion-6 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-10 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1898,18 +1910,46 @@ exports[`props should render correctly with cancel props 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-4 {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1920,214 +1960,136 @@ exports[`props should render correctly with cancel props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-4:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  background-color: var(--bb-palette-default, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-23.emotion-23.emotion-23 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
-.emotion-12 {
+.emotion-4 {
+  cursor: not-allowed;
+  position: relative;
+}
+
+.emotion-4:focus {
+  box-shadow: unset!important;
+  outline: unset!important;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
   position: absolute;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
-.emotion-12 + .bb-Text {
+.emotion-10+.bb-Text {
   opacity: 0;
 }
 
-.emotion-8.emotion-8 {
-  font-size: 1.25em;
-}
-
-.emotion-19 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-}
-
-.emotion-19[disabled],
-.emotion-19[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-19:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-19:hover {
-  background-color: var(--bb-palette-primary600,#000000);
-}
-
-.emotion-19:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
-}
-
-.emotion-16 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-16[disabled],
-.emotion-16[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-16 {
-  cursor: not-allowed;
-  position: relative;
-}
-
-.emotion-16:focus {
-  box-shadow: unset !important;
-  outline: unset !important;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  color: var(--bb-palette-gray100,#000000) !important;
-}
-
-.emotion-6 {
+.emotion-14 {
   line-height: 1;
   font-size: 20px;
 }
 
-.emotion-2 {
+.emotion-15 {
+  color: var(--bb-palette-gray100, #000000)!important;
+}
+
+.emotion-16.emotion-16 {
+  font-size: 1.25em;
+}
+
+.emotion-17 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-0 {
-  stroke: var(--bb-palette-default300,#000000);
+.emotion-18 {
+  stroke: var(--bb-palette-default300, #000000);
 }
 
-.emotion-1 {
+.emotion-19 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-gray100,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-gray100, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-abbr.emotion-13 {
+abbr.emotion-20 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-13 {
+code.emotion-20 {
   font-family: monospace;
 }
 
-i.emotion-13 {
+i.emotion-20 {
   font-style: italic;
 }
 
-kbd.emotion-13 {
+kbd.emotion-20 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2135,67 +2097,120 @@ kbd.emotion-13 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-13 {
+mark.emotion-20 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-13 {
+strong.emotion-20 {
   font-weight: bold;
 }
 
-sub.emotion-13,
-sup.emotion-13 {
+sub.emotion-20,
+sup.emotion-20 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-13,
-u.emotion-13 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-20,
+u.emotion-20 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-13,
-cite.emotion-13,
-var.emotion-13,
-em.emotion-13 {
+i.emotion-20,
+cite.emotion-20,
+var.emotion-20,
+em.emotion-20 {
   font-style: italic;
 }
 
-kbd.emotion-13,
-pre.emotion-13,
-samp.emotion-13 {
+kbd.emotion-20,
+pre.emotion-20,
+samp.emotion-20 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-13 .bb-Icon {
+.emotion-20 .bb-Icon {
   vertical-align: -0.125em;
 }
 
+.emotion-23 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-primary, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+}
+
+.emotion-23[disabled],
+.emotion-23[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-23:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-23:hover {
+  background-color: var(--bb-palette-primary600, #000000);
+}
+
+.emotion-23:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
+}
+
 <div
-  class="emotion-22 emotion-23 emotion-4 emotion-5 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
     aria-disabled="true"
-    class="emotion-16 emotion-4 emotion-5 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <div
-      class="emotion-3 emotion-4 emotion-5 emotion-12 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+      class="emotion-7 emotion-2 emotion-3 emotion-10 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 emotion-8 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+        class="emotion-7 emotion-2 emotion-3 emotion-14 emotion-15 emotion-16 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-2 bb-Spinnervector"
+          class="emotion-17 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-0 bb-SpinnertrackCircle"
+            class="emotion-18 bb-SpinnertrackCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -2203,7 +2218,7 @@ samp.emotion-13 {
             stroke-width="4"
           />
           <circle
-            class="emotion-1 bb-SpinnerloaderCircle"
+            class="emotion-19 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -2214,13 +2229,13 @@ samp.emotion-13 {
       </div>
     </div>
     <span
-      class="emotion-13 emotion-4 emotion-5 bb-Box bb-Text"
+      class="emotion-20 emotion-2 emotion-3 bb-Box bb-Text"
     >
       Cancel
     </span>
   </button>
   <button
-    class="emotion-19 emotion-4 emotion-5 bb-Box bb-Button"
+    class="emotion-23 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -2230,6 +2245,32 @@ samp.emotion-13 {
 
 exports[`props should render correctly with cancel text 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2240,45 +2281,20 @@ exports[`props should render correctly with cancel text 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2287,8 +2303,8 @@ exports[`props should render correctly with cancel text 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2299,42 +2315,42 @@ exports[`props should render correctly with cancel text 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2343,8 +2359,8 @@ exports[`props should render correctly with cancel text 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2357,39 +2373,39 @@ exports[`props should render correctly with cancel text 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Close
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -2401,18 +2417,46 @@ exports[`props should render correctly with isLoading 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2423,45 +2467,20 @@ exports[`props should render correctly with isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-23.emotion-23.emotion-23 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2470,8 +2489,8 @@ exports[`props should render correctly with isLoading 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2482,90 +2501,157 @@ exports[`props should render correctly with isLoading 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-15 {
-  position: absolute;
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: var(--bb-palette-primary, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-15 + .bb-Text {
-  opacity: 0;
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
-.emotion-11.emotion-11 {
-  font-size: 1.25em;
+.emotion-7 {
+  cursor: not-allowed;
+  position: relative;
 }
 
-.emotion-6 {
+.emotion-7:focus {
+  box-shadow: unset!important;
+  outline: unset!important;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-9 {
+.emotion-13 {
+  position: absolute;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13+.bb-Text {
+  opacity: 0;
+}
+
+.emotion-17 {
   line-height: 1;
   font-size: 20px;
 }
 
-.emotion-5 {
+.emotion-18 {
+  color: var(--bb-palette-primaryInverted, #000000)!important;
+}
+
+.emotion-19.emotion-19 {
+  font-size: 1.25em;
+}
+
+.emotion-20 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-abbr.emotion-16 {
+.emotion-21 {
+  stroke: var(--bb-palette-primary300, #000000);
+}
+
+.emotion-22 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 200px;
+  stroke: var(--bb-palette-primaryInverted, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+abbr.emotion-23 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-16 {
+code.emotion-23 {
   font-family: monospace;
 }
 
-i.emotion-16 {
+i.emotion-23 {
   font-style: italic;
 }
 
-kbd.emotion-16 {
+kbd.emotion-23 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2573,136 +2659,69 @@ kbd.emotion-16 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-16 {
+mark.emotion-23 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-16 {
+strong.emotion-23 {
   font-weight: bold;
 }
 
-sub.emotion-16,
-sup.emotion-16 {
+sub.emotion-23,
+sup.emotion-23 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-16,
-u.emotion-16 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-23,
+u.emotion-23 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-16,
-cite.emotion-16,
-var.emotion-16,
-em.emotion-16 {
+i.emotion-23,
+cite.emotion-23,
+var.emotion-23,
+em.emotion-23 {
   font-style: italic;
 }
 
-kbd.emotion-16,
-pre.emotion-16,
-samp.emotion-16 {
+kbd.emotion-23,
+pre.emotion-23,
+samp.emotion-23 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-16 .bb-Icon {
+.emotion-23 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-19 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-}
-
-.emotion-19[disabled],
-.emotion-19[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-19 {
-  cursor: not-allowed;
-  position: relative;
-}
-
-.emotion-19:focus {
-  box-shadow: unset !important;
-  outline: unset !important;
-}
-
-.emotion-10 {
-  color: var(--bb-palette-primaryInverted,#000000) !important;
-}
-
-.emotion-3 {
-  stroke: var(--bb-palette-primary300,#000000);
-}
-
-.emotion-4 {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primaryInverted,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
 <div
-  class="emotion-22 emotion-23 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-19 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     <div
-      class="emotion-6 emotion-1 emotion-2 emotion-15 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+      class="emotion-10 emotion-2 emotion-3 emotion-13 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-6 emotion-1 emotion-2 emotion-9 emotion-10 emotion-11 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+        class="emotion-10 emotion-2 emotion-3 emotion-17 emotion-18 emotion-19 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-5 bb-Spinnervector"
+          class="emotion-20 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-3 bb-SpinnertrackCircle"
+            class="emotion-21 bb-SpinnertrackCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -2710,7 +2729,7 @@ samp.emotion-16 {
             stroke-width="4"
           />
           <circle
-            class="emotion-4 bb-SpinnerloaderCircle"
+            class="emotion-22 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -2721,7 +2740,7 @@ samp.emotion-16 {
       </div>
     </div>
     <span
-      class="emotion-16 emotion-1 emotion-2 bb-Box bb-Text"
+      class="emotion-23 emotion-2 emotion-3 bb-Box bb-Text"
     >
       Submit
     </span>
@@ -2731,6 +2750,32 @@ samp.emotion-16 {
 
 exports[`props should render correctly with onClickCancel 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2741,45 +2786,20 @@ exports[`props should render correctly with onClickCancel 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2788,8 +2808,8 @@ exports[`props should render correctly with onClickCancel 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2800,42 +2820,42 @@ exports[`props should render correctly with onClickCancel 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2844,8 +2864,8 @@ exports[`props should render correctly with onClickCancel 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2858,39 +2878,39 @@ exports[`props should render correctly with onClickCancel 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -2900,6 +2920,32 @@ exports[`props should render correctly with onClickCancel 1`] = `
 
 exports[`props should render correctly with onClickSubmit 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2910,45 +2956,20 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2957,8 +2978,8 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2969,42 +2990,42 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3013,8 +3034,8 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3027,39 +3048,39 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -3069,6 +3090,32 @@ exports[`props should render correctly with onClickSubmit 1`] = `
 
 exports[`props should render correctly with palette 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3079,45 +3126,20 @@ exports[`props should render correctly with palette 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3126,8 +3148,8 @@ exports[`props should render correctly with palette 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3138,42 +3160,42 @@ exports[`props should render correctly with palette 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-secondary,#000000);
+  background-color: var(--bb-palette-secondary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-secondaryInverted,#000000);
-  fill: var(--bb-palette-secondaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-secondaryInverted, #000000);
+  fill: var(--bb-palette-secondaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3182,8 +3204,8 @@ exports[`props should render correctly with palette 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3196,39 +3218,39 @@ exports[`props should render correctly with palette 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-secondary,#000000) 0px 0px 0px 1px, var(--bb-palette-secondary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-secondary, #000000) 0px 0px 0px 1px,var(--bb-palette-secondary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-secondary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-secondary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-secondary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-secondary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -3240,18 +3262,46 @@ exports[`props should render correctly with submitProps 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3262,45 +3312,20 @@ exports[`props should render correctly with submitProps 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-23.emotion-23.emotion-23 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3309,8 +3334,8 @@ exports[`props should render correctly with submitProps 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3321,90 +3346,157 @@ exports[`props should render correctly with submitProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-15 {
-  position: absolute;
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: var(--bb-palette-primary, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-15 + .bb-Text {
-  opacity: 0;
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
-.emotion-11.emotion-11 {
-  font-size: 1.25em;
+.emotion-7 {
+  cursor: not-allowed;
+  position: relative;
 }
 
-.emotion-6 {
+.emotion-7:focus {
+  box-shadow: unset!important;
+  outline: unset!important;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-9 {
+.emotion-13 {
+  position: absolute;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13+.bb-Text {
+  opacity: 0;
+}
+
+.emotion-17 {
   line-height: 1;
   font-size: 20px;
 }
 
-.emotion-5 {
+.emotion-18 {
+  color: var(--bb-palette-primaryInverted, #000000)!important;
+}
+
+.emotion-19.emotion-19 {
+  font-size: 1.25em;
+}
+
+.emotion-20 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-abbr.emotion-16 {
+.emotion-21 {
+  stroke: var(--bb-palette-primary300, #000000);
+}
+
+.emotion-22 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 200px;
+  stroke: var(--bb-palette-primaryInverted, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+abbr.emotion-23 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-16 {
+code.emotion-23 {
   font-family: monospace;
 }
 
-i.emotion-16 {
+i.emotion-23 {
   font-style: italic;
 }
 
-kbd.emotion-16 {
+kbd.emotion-23 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3412,139 +3504,72 @@ kbd.emotion-16 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-16 {
+mark.emotion-23 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-16 {
+strong.emotion-23 {
   font-weight: bold;
 }
 
-sub.emotion-16,
-sup.emotion-16 {
+sub.emotion-23,
+sup.emotion-23 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-16,
-u.emotion-16 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-23,
+u.emotion-23 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-16,
-cite.emotion-16,
-var.emotion-16,
-em.emotion-16 {
+i.emotion-23,
+cite.emotion-23,
+var.emotion-23,
+em.emotion-23 {
   font-style: italic;
 }
 
-kbd.emotion-16,
-pre.emotion-16,
-samp.emotion-16 {
+kbd.emotion-23,
+pre.emotion-23,
+samp.emotion-23 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-16 .bb-Icon {
+.emotion-23 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-19 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-}
-
-.emotion-19[disabled],
-.emotion-19[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-19 {
-  cursor: not-allowed;
-  position: relative;
-}
-
-.emotion-19:focus {
-  box-shadow: unset !important;
-  outline: unset !important;
-}
-
-.emotion-10 {
-  color: var(--bb-palette-primaryInverted,#000000) !important;
-}
-
-.emotion-3 {
-  stroke: var(--bb-palette-primary300,#000000);
-}
-
-.emotion-4 {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-primaryInverted,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
 <div
-  class="emotion-22 emotion-23 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="true"
-    class="emotion-19 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="submit"
   >
     <div
-      class="emotion-6 emotion-1 emotion-2 emotion-15 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+      class="emotion-10 emotion-2 emotion-3 emotion-13 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-6 emotion-1 emotion-2 emotion-9 emotion-10 emotion-11 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+        class="emotion-10 emotion-2 emotion-3 emotion-17 emotion-18 emotion-19 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-5 bb-Spinnervector"
+          class="emotion-20 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-3 bb-SpinnertrackCircle"
+            class="emotion-21 bb-SpinnertrackCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -3552,7 +3577,7 @@ samp.emotion-16 {
             stroke-width="4"
           />
           <circle
-            class="emotion-4 bb-SpinnerloaderCircle"
+            class="emotion-22 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -3563,7 +3588,7 @@ samp.emotion-16 {
       </div>
     </div>
     <span
-      class="emotion-16 emotion-1 emotion-2 bb-Box bb-Text"
+      class="emotion-23 emotion-2 emotion-3 bb-Box bb-Text"
     >
       Submit
     </span>
@@ -3573,6 +3598,32 @@ samp.emotion-16 {
 
 exports[`props should render correctly with submitText 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3583,45 +3634,20 @@ exports[`props should render correctly with submitText 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3630,8 +3656,8 @@ exports[`props should render correctly with submitText 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3642,42 +3668,42 @@ exports[`props should render correctly with submitText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3686,8 +3712,8 @@ exports[`props should render correctly with submitText 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3700,39 +3726,39 @@ exports[`props should render correctly with submitText 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Save
@@ -3742,6 +3768,32 @@ exports[`props should render correctly with submitText 1`] = `
 
 exports[`props should render correctly with type 1`] = `
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3752,45 +3804,20 @@ exports[`props should render correctly with type 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3799,8 +3826,8 @@ exports[`props should render correctly with type 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3811,42 +3838,42 @@ exports[`props should render correctly with type 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3855,8 +3882,8 @@ exports[`props should render correctly with type 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3869,39 +3896,39 @@ exports[`props should render correctly with type 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Submit
@@ -3910,7 +3937,37 @@ exports[`props should render correctly with type 1`] = `
 `;
 
 exports[`theming ActionButtons.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-1.emotion-1.emotion-1>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3921,45 +3978,20 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-7.emotion-7.emotion-7 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3968,8 +4000,8 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3980,42 +4012,42 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4024,8 +4056,8 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -4038,43 +4070,39 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
+.emotion-7[disabled],
+.emotion-7[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-7:hover {
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
-}
-
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-7:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Set bb-ActionButtons"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-3 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-7 emotion-2 emotion-3 bb-Box bb-Button"
     type="submit"
   >
     Submit

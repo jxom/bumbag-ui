@@ -10,7 +10,7 @@ import { isFunction } from './isFunction';
 import { get } from './get';
 import { getCSSFromStyleObject } from './getCSSFromStyleObject';
 
-type ScaleType = 'minor' | 'major';
+type ScaleType = 'major' | 'minor';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {

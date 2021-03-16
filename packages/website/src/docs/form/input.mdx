@@ -13,8 +13,28 @@ import { Input, InputField } from 'bumbag'
 
 ## Usage
 
-```jsx-live
-<Input placeholder="Enter your name here..." />
+```live
+###tab=Default,type=jsx-live
+<Input placeholder="Enter your name here..." />###
+
+###tab=Borderless,type=jsx-live
+<Input placeholder="Enter your name here..." variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Input placeholder="Enter your name here..." variant="underline" />###
+```
+
+### Labels
+
+```live
+###tab=Default,type=jsx-live
+<Input label="Username" />###
+
+###tab=Borderless,type=jsx-live
+<Input label="Username" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Input label="Username" variant="underline" />###
 ```
 
 ### Fields
@@ -23,69 +43,193 @@ You can also use the `<InputField>` component, which internally has a [FieldWrap
 
 It accepts a combination of [Input props](/form/input/#props) and [FieldWrapper props](/form/field-wrapper/#props).
 
-```jsx-live
-<InputField label="Username" placeholder="Enter your name here..." />
+```live
+###tab=Default,type=jsx-live
+<InputField label="Username" placeholder="Enter your name here..." />###
+
+###tab=Borderless,type=jsx-live
+<InputField label="Username" placeholder="Enter your name here..." variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<InputField label="Username" placeholder="Enter your name here..." variant="underline" />###
 ```
 
 ### Default values
 
 For uncontrolled inputs, set a default value using the `defaultValue` prop.
 
-```jsx-live
-<Input defaultValue="Bumbags rock!" />
+```live
+###tab=Default,type=jsx-live
+<Input defaultValue="Bumbags rock!" />###
+
+###tab=Borderless,type=jsx-live
+<Input defaultValue="Bumbags rock!" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Input defaultValue="Bumbags rock!" variant="underline" />###
 ```
 
 ### Disabled
 
 Make the input disabled with the `disabled` prop.
 
-```jsx-live
-<Input disabled defaultValue="Disabled field" />
+```live
+###tab=Default,type=jsx-live
+<Input disabled defaultValue="Disabled field" />###
+
+###tab=Borderless,type=jsx-live
+<Input disabled defaultValue="Disabled field" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Input disabled defaultValue="Disabled field" variant="underline" />###
 ```
 
 ### Loading
 
 Show a loading indicator with the `isLoading` prop.
 
-```jsx-live
-<Input isLoading />
+```live
+###tab=Default,type=jsx-live
+<Input isLoading />###
+
+###tab=Borderless,type=jsx-live
+<Input isLoading variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Input isLoading variant="underline" />###
 ```
 
 ### Types
 
 Just like normal `<input>` elements, you can specify a `type`.
 
-```jsx-live
-<Input type="number" />
-<Input type="tel" />
-<Input type="date" />
-<Input type="email" />
-<Input type="password" />
-<Input type="search" />
-<Input type="time" />
-<Input type="url" />
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Input type="number" />
+  <Input type="tel" />
+  <Input type="date" />
+  <Input type="email" />
+  <Input type="password" />
+  <Input type="search" />
+  <Input type="time" />
+  <Input type="url" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Input type="number" variant="borderless" />
+  <Input type="tel" variant="borderless" />
+  <Input type="date" variant="borderless" />
+  <Input type="email" variant="borderless" />
+  <Input type="password" variant="borderless" />
+  <Input type="search" variant="borderless" />
+  <Input type="time" variant="borderless" />
+  <Input type="url" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Input type="number" variant="underline" />
+  <Input type="tel" variant="underline" />
+  <Input type="date" variant="underline" />
+  <Input type="email" variant="underline" />
+  <Input type="password" variant="underline" />
+  <Input type="search" variant="underline" />
+  <Input type="time" variant="underline" />
+  <Input type="url" variant="underline" />
+</Stack>###
 ```
 
 ### Sizes
 
 An input can come in different sizes - `small`, `medium`, `large`, or the default.
 
-```jsx-live
-<Input size="small" />
-<Input />
-<Input size="medium" />
-<Input size="large" />
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Input size="small" />
+  <Input />
+  <Input size="medium" />
+  <Input size="large" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Input size="small" variant="borderless" />
+  <Input variant="borderless" />
+  <Input size="medium" variant="borderless" />
+  <Input size="large" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Input size="small" variant="underline" />
+  <Input variant="underline" />
+  <Input size="medium" variant="underline" />
+  <Input size="large" variant="underline" />
+</Stack>###
 ```
 
 ### States
 
 An input can use different states (as per palette) such as `danger`, `success` and `warning`.
 
-```jsx-live
-<Input state="danger" />
-<Input state="success" />
-<Input state="warning" />
-<Input state="primary" />
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Input state="danger" />
+  <Input state="success" />
+  <Input state="warning" />
+  <Input state="primary" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Input state="danger" variant="borderless" />
+  <Input state="success" variant="borderless" />
+  <Input state="warning" variant="borderless" />
+  <Input state="primary" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Input state="danger" variant="underline" />
+  <Input state="success" variant="underline" />
+  <Input state="warning" variant="underline" />
+  <Input state="primary" variant="underline" />
+</Stack>###
+```
+
+### Colors
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Input palette="primary" placeholder="Enter your name..." />
+  <Input palette="secondary" placeholder="Enter your name..." />
+  <Input palette="danger" placeholder="Enter your name..." />
+  <Input palette="success" placeholder="Enter your name..." />
+  <Input palette="warning" placeholder="Enter your name..." />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Input palette="primary" placeholder="Enter your name..." variant="borderless" />
+  <Input palette="secondary" placeholder="Enter your name..." variant="borderless" />
+  <Input palette="danger" placeholder="Enter your name..." variant="borderless" />
+  <Input palette="success" placeholder="Enter your name..." variant="borderless" />
+  <Input palette="warning" placeholder="Enter your name..." variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Input palette="primary" placeholder="Enter your name..." variant="underline" />
+  <Input palette="secondary" placeholder="Enter your name..." variant="underline" />
+  <Input palette="danger" placeholder="Enter your name..." variant="underline" />
+  <Input palette="success" placeholder="Enter your name..." variant="underline" />
+  <Input palette="warning" placeholder="Enter your name..." variant="underline" />
+</Stack>###
 ```
 
 ### Addons
@@ -103,15 +247,46 @@ You can use the [Group component](/components/group) to add on stuff to your `<I
 
 **Note:** To use input icons, you will need to follow the [instructions to set up icons with Bumbag](/components/icon).
 
-```jsx-live
-<Input
-  before={<Input.Icon icon="solid-search" />}
-  placeholder="Jake Moxey"
-/>
-<Input
-  after={<Input.Icon icon="solid-search" />}
-  placeholder="Jake Moxey"
-/>
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Input
+    before={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+  />
+  <Input
+    after={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+  />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Input
+    before={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+    variant="borderless"
+  />
+  <Input
+    after={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+    variant="borderless"
+  />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Input
+    before={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+    variant="underline"
+  />
+  <Input
+    after={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+    variant="underline"
+  />
+</Stack>###
 ```
 
 #### Addons
@@ -630,8 +805,6 @@ Function to invoke when input is focused
 </details>
 
 
-<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>FieldWrapper</code></strong> props</Box>
-
 **<Code fontSize="150" marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -739,8 +912,6 @@ Sets the bottom validation text of the field wrapper.
 
 </details>
 
-
-<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
 
 **<Code fontSize="150" marginRight="major-1">use</Code>**
 

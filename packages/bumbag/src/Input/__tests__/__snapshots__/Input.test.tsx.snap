@@ -1,15 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -20,63 +12,74 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-4 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-4 emotion-5 test bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 test bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-5 bb-Box bb-Input"
     type="text"
   />
 </div>
@@ -86,18 +89,35 @@ exports[`defaultProps should render correctly for isLoading 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-11 {
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -105,7 +125,66 @@ exports[`defaultProps should render correctly for isLoading 1`] = `
   position: relative;
 }
 
-.emotion-8.emotion-8 {
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3 {
+  padding-right: 2.3em;
+}
+
+.emotion-6 {
+  line-height: 1;
+  font-size: 20px;
+}
+
+.emotion-8 {
+  color: var(--bb-palette-text, #000000)!important;
+}
+
+.emotion-9.emotion-9 {
   font-size: inherit;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -123,112 +202,42 @@ exports[`defaultProps should render correctly for isLoading 1`] = `
   z-index: 2;
 }
 
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0 {
-  padding-right: 2.3em;
-}
-
-.emotion-7 {
-  color: var(--bb-palette-text,#000000) !important;
-}
-
-.emotion-5 {
-  line-height: 1;
-  font-size: 20px;
-}
-
-.emotion-4 {
+.emotion-10 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-3 {
+.emotion-11 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-text,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-text, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-11 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
   <div
-    class="emotion-5 emotion-1 emotion-7 emotion-8 bb-InputSpinner bb-Box bb-Spinner"
+    class="emotion-6 emotion-0 emotion-8 emotion-9 bb-InputSpinner bb-Box bb-Spinner"
   >
     <svg
-      class="emotion-4 bb-Spinnervector"
+      class="emotion-10 bb-Spinnervector"
       viewBox="22 22 44 44"
     >
       <circle
-        class="emotion-3 bb-SpinnerloaderCircle"
+        class="emotion-11 bb-SpinnerloaderCircle"
         cx="44"
         cy="44"
         fill="none"
@@ -241,15 +250,7 @@ exports[`defaultProps should render correctly for isLoading 1`] = `
 `;
 
 exports[`overrides Input.Spinner.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -260,66 +261,77 @@ exports[`overrides Input.Spinner.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`overrides Input.Wrapper.base should render correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -330,54 +342,11 @@ exports[`overrides Input.Wrapper.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -385,31 +354,69 @@ exports[`overrides Input.Wrapper.base should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-2 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`overrides Input.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -420,70 +427,96 @@ exports[`overrides Input.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`overrides Input.placeholder.base should render correctly 1`] = `
-.emotion-5 {
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -491,80 +524,126 @@ exports[`overrides Input.placeholder.base should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
-  padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-webkit-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-webkit-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::-moz-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props should assign a ref 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-0:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-0[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -578,49 +657,6 @@ exports[`props should assign a ref 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
 }
 
 <input
@@ -631,6 +667,52 @@ exports[`props should assign a ref 1`] = `
 `;
 
 exports[`props should assign a ref via inputRef 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-0:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-0[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-0::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -644,49 +726,6 @@ exports[`props should assign a ref via inputRef 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
 }
 
 <input
@@ -697,15 +736,7 @@ exports[`props should assign a ref via inputRef 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -716,74 +747,77 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props should render correctly when disabled 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -794,59 +828,70 @@ exports[`props should render correctly when disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     disabled=""
     type="text"
   />
@@ -857,18 +902,35 @@ exports[`props should render correctly when loading 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-11 {
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -876,7 +938,66 @@ exports[`props should render correctly when loading 1`] = `
   position: relative;
 }
 
-.emotion-8.emotion-8 {
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3 {
+  padding-right: 2.3em;
+}
+
+.emotion-6 {
+  line-height: 1;
+  font-size: 20px;
+}
+
+.emotion-8 {
+  color: var(--bb-palette-text, #000000)!important;
+}
+
+.emotion-9.emotion-9 {
   font-size: inherit;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -894,112 +1015,42 @@ exports[`props should render correctly when loading 1`] = `
   z-index: 2;
 }
 
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0 {
-  padding-right: 2.3em;
-}
-
-.emotion-7 {
-  color: var(--bb-palette-text,#000000) !important;
-}
-
-.emotion-5 {
-  line-height: 1;
-  font-size: 20px;
-}
-
-.emotion-4 {
+.emotion-10 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-animation: animation-0 0.6s infinite linear;
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-3 {
+.emotion-11 {
   stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-text,#000000);
-  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  stroke: var(--bb-palette-text, #000000);
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-11 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
   <div
-    class="emotion-5 emotion-1 emotion-7 emotion-8 bb-InputSpinner bb-Box bb-Spinner"
+    class="emotion-6 emotion-0 emotion-8 emotion-9 bb-InputSpinner bb-Box bb-Spinner"
   >
     <svg
-      class="emotion-4 bb-Spinnervector"
+      class="emotion-10 bb-Spinnervector"
       viewBox="22 22 44 44"
     >
       <circle
-        class="emotion-3 bb-SpinnerloaderCircle"
+        class="emotion-11 bb-SpinnerloaderCircle"
         cx="44"
         cy="44"
         fill="none"
@@ -1012,7 +1063,26 @@ exports[`props should render correctly when loading 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-5 {
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1020,81 +1090,65 @@ exports[`props should render correctly with CSS props 1`] = `
   position: relative;
 }
 
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
+.emotion-3 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
-  padding: 0.4em 0.8em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-4 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-5 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props sizes should render large correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1105,54 +1159,11 @@ exports[`props sizes should render large correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1161,19 +1172,65 @@ exports[`props sizes should render large correctly 1`] = `
   font-size: 1.5rem;
 }
 
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props sizes should render medium correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1184,54 +1241,11 @@ exports[`props sizes should render medium correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1240,19 +1254,65 @@ exports[`props sizes should render medium correctly 1`] = `
   font-size: 1.25rem;
 }
 
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props sizes should render small correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1263,54 +1323,11 @@ exports[`props sizes should render small correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1319,27 +1336,65 @@ exports[`props sizes should render small correctly 1`] = `
   font-size: 0.875rem;
 }
 
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render danger correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1350,79 +1405,82 @@ exports[`props states should render danger correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3 {
+  border-color: var(--bb-palette-danger, #000000);
+  box-shadow: var(--bb-palette-dangerTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0 {
-  border-color: var(--bb-palette-danger,#000000);
-  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="true"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render primary correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1433,79 +1491,82 @@ exports[`props states should render primary correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3 {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0 {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render success correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1516,79 +1577,82 @@ exports[`props states should render success correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3 {
+  border-color: var(--bb-palette-success, #000000);
+  box-shadow: var(--bb-palette-successTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0 {
-  border-color: var(--bb-palette-success,#000000);
-  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props states should render warning correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1599,79 +1663,82 @@ exports[`props states should render warning correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3 {
+  border-color: var(--bb-palette-warning, #000000);
+  box-shadow: var(--bb-palette-warningTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0 {
-  border-color: var(--bb-palette-warning,#000000);
-  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`props types should render date correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1682,74 +1749,77 @@ exports[`props types should render date correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="date"
   />
 </div>
 `;
 
 exports[`props types should render email correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1760,74 +1830,77 @@ exports[`props types should render email correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="email"
   />
 </div>
 `;
 
 exports[`props types should render number correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1838,74 +1911,77 @@ exports[`props types should render number correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="number"
   />
 </div>
 `;
 
 exports[`props types should render password correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1916,74 +1992,77 @@ exports[`props types should render password correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="password"
   />
 </div>
 `;
 
 exports[`props types should render search correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1994,74 +2073,77 @@ exports[`props types should render search correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="search"
   />
 </div>
 `;
 
 exports[`props types should render tel correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2072,74 +2154,77 @@ exports[`props types should render tel correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="tel"
   />
 </div>
 `;
 
 exports[`props types should render time correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2150,74 +2235,77 @@ exports[`props types should render time correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="time"
   />
 </div>
 `;
 
 exports[`props types should render url correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2228,74 +2316,77 @@ exports[`props types should render url correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="url"
   />
 </div>
 `;
 
-exports[`theming Input.Spinner.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+exports[`props variants should render bordered correctly 1`] = `
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2306,66 +2397,329 @@ exports[`theming Input.Spinner.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props variants should render borderless correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid transparent;
+}
+
+.emotion-3:focus {
+  border-bottom-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 2px 0px!important;
+}
+
+.emotion-3[disabled] {
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
+    type="text"
+  />
+</div>
+`;
+
+exports[`props variants should render underline correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
+}
+
+.emotion-3:focus {
+  border-bottom-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 2px 0px!important;
+}
+
+.emotion-3[disabled] {
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
+    type="text"
+  />
+</div>
+`;
+
+exports[`theming Input.Spinner.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`theming Input.Wrapper.base should render correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2376,54 +2730,11 @@ exports[`theming Input.Wrapper.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
-  cursor: not-allowed;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2431,31 +2742,69 @@ exports[`theming Input.Wrapper.base should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-2 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+  color: var(--bb-palette-text100, #000000);
+  cursor: not-allowed;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
+}
+
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`theming Input.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2466,78 +2815,81 @@ exports[`theming Input.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>
 `;
 
 exports[`theming Input.placeholder.base should render correctly 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2548,63 +2900,86 @@ exports[`theming Input.placeholder.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
-  -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  width: 100%;
-  padding: 0.4em 0.8em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-3 {
+  -webkit-appearance: none;
+  background: var(--bb-palette-white, #ffffff);
+  color: var(--bb-palette-text, #000000);
+  height: 2.75em;
+  width: 100%;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+.emotion-3:focus {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-3[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-3::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-webkit-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3::-webkit-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::-moz-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3:-ms-input-placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-3::placeholder {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-5 bb-InputWrapper bb-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-InputWrapper bb-Box"
 >
   <input
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+    class="emotion-3 emotion-0 emotion-1 bb-Box bb-Input"
     type="text"
   />
 </div>

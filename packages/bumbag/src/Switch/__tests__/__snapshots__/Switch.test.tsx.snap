@@ -1,22 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,115 +12,6 @@ exports[`composition as should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
-  content: '';
-  border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  height: 1em;
-  width: 1em;
-  top: 0.2em;
-  left: 0.2em;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-  position: absolute;
-}
-
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
-}
-
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-}
-
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
-}
-
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
-  left: 1.25em;
-}
-
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
-}
-
-<div
-  aria-describedby="id-test"
-  aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
->
-  <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
-    id="id-test"
-    type="checkbox"
-  />
-  <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
-  />
-</div>
-`;
-
-exports[`composition hook should return with Switch props 1`] = `
-Object {
-  "aria-describedby": "id-test",
-  "aria-invalid": false,
-  "aria-required": undefined,
-  "children": <React.Fragment>
-    <Box
-      className="css-1g1ngb0 bb-SwitchHiddenInput"
-      id="id-test"
-      type="checkbox"
-      use="input"
-    />
-    <Box
-      className="css-c00kuf bb-SwitchIcon"
-    />
-  </React.Fragment>,
-  "className": "css-i5mf5v css-63it0p css-1074357 bb-Box bb-Switch",
-}
-`;
-
-exports[`composition render props should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -151,6 +27,187 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
+  content: '';
+  border-radius: 100%;
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
+}
+
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
+  left: 1.25em;
+}
+
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+<div
+  aria-describedby="id-test"
+  aria-invalid="false"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
+>
+  <input
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
+    id="id-test"
+    type="checkbox"
+  />
+  <div
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
+  />
+</div>
+`;
+
+exports[`composition hook should return with Switch props 1`] = `
+Object {
+  "aria-describedby": "id-test",
+  "aria-invalid": false,
+  "aria-required": undefined,
+  "children": <React.Fragment>
+    .emotion-0 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0+.bb-SwitchIcon::before {
+  background: #000000;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #000000;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-0[disabled]+.bb-SwitchIcon {
+  background-color: #000000;
+  box-shadow: unset;
+}
+
+.emotion-0[disabled]+.bb-SwitchIcon::before {
+  background: #000000;
+}
+
+.emotion-0:focus+.bb-SwitchIcon {
+  border-color: #000000;
+  box-shadow: #000000 0px 0px 0px 3px!important;
+}
+
+.emotion-0:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: #000000;
+  background-color: #000000;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.emotion-0:checked+.bb-SwitchIcon {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.emotion-0:checked+.bb-SwitchIcon::before {
+  border-color: #000000;
+  left: 1.25em;
+}
+
+.emotion-0[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: #000000;
+}
+
+<Box
+      className="emotion-0 bb-SwitchHiddenInput"
+      id="id-test"
+      type="checkbox"
+      use="input"
+    />
+    .emotion-0 {
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+<Box
+      className="emotion-0 bb-SwitchIcon"
+    />
+  </React.Fragment>,
+  "className": "css-i5mf5v css-63it0p css-1074357 bb-Box bb-Switch",
+}
+`;
+
+exports[`composition render props should render correctly 1`] = `
 .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,6 +217,21 @@ exports[`composition render props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <div
@@ -172,22 +244,7 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,18 +255,26 @@ exports[`defaultProps should render correctly for className 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -217,15 +282,15 @@ exports[`defaultProps should render correctly for className 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -235,78 +300,70 @@ exports[`defaultProps should render correctly for className 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
 .emotion-8 {
-  color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-8 test bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-4 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Switch.HiddenInput.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -317,18 +374,22 @@ exports[`overrides Switch.HiddenInput.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -336,15 +397,15 @@ exports[`overrides Switch.HiddenInput.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -354,78 +415,74 @@ exports[`overrides Switch.HiddenInput.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Switch.Icon.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,7 +493,22 @@ exports[`overrides Switch.Icon.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -444,15 +516,15 @@ exports[`overrides Switch.Icon.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -462,44 +534,44 @@ exports[`overrides Switch.Icon.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -508,43 +580,28 @@ exports[`overrides Switch.Icon.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Switch.Label.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -555,18 +612,22 @@ exports[`overrides Switch.Label.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -574,15 +635,15 @@ exports[`overrides Switch.Label.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -592,146 +653,70 @@ exports[`overrides Switch.Label.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`overrides Switch.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
-  content: '';
-  border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  height: 1em;
-  width: 1em;
-  top: 0.2em;
-  left: 0.2em;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-  position: absolute;
-}
-
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
-}
-
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-}
-
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
-}
-
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
-  left: 1.25em;
-}
-
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -742,43 +727,115 @@ exports[`overrides Switch.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
+  content: '';
+  border-radius: 100%;
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
+}
+
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
+  left: 1.25em;
+}
+
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should assign a ref 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -789,18 +846,22 @@ exports[`props should assign a ref 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -808,15 +869,15 @@ exports[`props should assign a ref 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -826,53 +887,64 @@ exports[`props should assign a ref 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -905,11 +977,11 @@ exports[`props should assign a ref via switchRef 1`] = `
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-2+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -919,39 +991,39 @@ exports[`props should assign a ref via switchRef 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-2[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-2[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-2:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-2:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-2:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-2:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-2[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
 <input
@@ -962,22 +1034,7 @@ exports[`props should assign a ref via switchRef 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -988,18 +1045,22 @@ exports[`props should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1007,15 +1068,15 @@ exports[`props should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1025,74 +1086,70 @@ exports[`props should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly for danger state 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1103,18 +1160,22 @@ exports[`props should render correctly for danger state 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1122,19 +1183,19 @@ exports[`props should render correctly for danger state 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon {
-  border-color: var(--bb-palette-danger,#000000);
+.emotion-5+.bb-SwitchIcon {
+  border-color: var(--bb-palette-danger, #000000);
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1144,78 +1205,74 @@ exports[`props should render correctly for danger state 1`] = `
   position: absolute;
 }
 
-.emotion-2:not(:checked) + .bb-SwitchIcon {
-  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5:not(:checked)+.bb-SwitchIcon {
+  box-shadow: var(--bb-palette-dangerTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="true"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly for success state 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1226,18 +1283,22 @@ exports[`props should render correctly for success state 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1245,19 +1306,19 @@ exports[`props should render correctly for success state 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon {
-  border-color: var(--bb-palette-success,#000000);
+.emotion-5+.bb-SwitchIcon {
+  border-color: var(--bb-palette-success, #000000);
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1267,78 +1328,74 @@ exports[`props should render correctly for success state 1`] = `
   position: absolute;
 }
 
-.emotion-2:not(:checked) + .bb-SwitchIcon {
-  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5:not(:checked)+.bb-SwitchIcon {
+  box-shadow: var(--bb-palette-successTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly for warning state 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1349,18 +1406,22 @@ exports[`props should render correctly for warning state 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1368,19 +1429,19 @@ exports[`props should render correctly for warning state 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon {
-  border-color: var(--bb-palette-warning,#000000);
+.emotion-5+.bb-SwitchIcon {
+  border-color: var(--bb-palette-warning, #000000);
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1390,78 +1451,74 @@ exports[`props should render correctly for warning state 1`] = `
   position: absolute;
 }
 
-.emotion-2:not(:checked) + .bb-SwitchIcon {
-  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5:not(:checked)+.bb-SwitchIcon {
+  box-shadow: var(--bb-palette-warningTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1472,18 +1529,26 @@ exports[`props should render correctly with CSS props 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .emotion-2 {
+  background-color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1491,15 +1556,15 @@ exports[`props should render correctly with CSS props 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1509,78 +1574,70 @@ exports[`props should render correctly with CSS props 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
 .emotion-8 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-8 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-4 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with checked 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1591,18 +1648,22 @@ exports[`props should render correctly with checked 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1610,15 +1671,15 @@ exports[`props should render correctly with checked 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1628,75 +1689,71 @@ exports[`props should render correctly with checked 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
     checked=""
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with defaultChecked 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1707,18 +1764,22 @@ exports[`props should render correctly with defaultChecked 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1726,15 +1787,15 @@ exports[`props should render correctly with defaultChecked 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1744,75 +1805,71 @@ exports[`props should render correctly with defaultChecked 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
     checked=""
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with disabled 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1823,18 +1880,22 @@ exports[`props should render correctly with disabled 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1842,15 +1903,15 @@ exports[`props should render correctly with disabled 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1860,75 +1921,71 @@ exports[`props should render correctly with disabled 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     disabled=""
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with isRequired 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1939,18 +1996,22 @@ exports[`props should render correctly with isRequired 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1958,15 +2019,15 @@ exports[`props should render correctly with isRequired 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1976,75 +2037,71 @@ exports[`props should render correctly with isRequired 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
   aria-required="true"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with label 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-10.emotion-10 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2055,18 +2112,22 @@ exports[`props should render correctly with label 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -2074,15 +2135,15 @@ exports[`props should render correctly with label 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2092,50 +2153,53 @@ exports[`props should render correctly with label 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
-}
-
-.emotion-9.emotion-9 {
-  font-weight: 400;
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
 .emotion-8 {
-  margin-left: 0.5rem !important;
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-6 {
+.emotion-9 {
   display: block;
   font-weight: 600;
   font-size: 16px;
@@ -2143,39 +2207,47 @@ exports[`props should render correctly with label 1`] = `
   padding: 0.05px 0;
 }
 
-.emotion-6::before {
+.emotion-9::before {
   content: '';
   margin-top: -0.2312em;
   display: block;
   height: 0;
 }
 
-.emotion-6::after {
+.emotion-9::after {
   content: '';
   margin-bottom: -0.1921em;
   display: block;
   height: 0;
 }
 
-.emotion-6:not(:last-child) {
+.emotion-9:not(:last-child) {
   margin-bottom: 6.671875px;
+}
+
+.emotion-11 {
+  margin-left: 0.5rem!important;
+}
+
+.emotion-12.emotion-12 {
+  font-weight: 400;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-10 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
   <span
-    class="emotion-6 emotion-0 emotion-8 emotion-9 bb-SwitchLabel bb-Box bb-Label"
+    class="emotion-9 emotion-1 emotion-11 emotion-12 bb-SwitchLabel bb-Box bb-Label"
     for="id-test"
     id="id-test"
   >
@@ -2185,22 +2257,7 @@ exports[`props should render correctly with label 1`] = `
 `;
 
 exports[`props should render correctly with name 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2211,18 +2268,22 @@ exports[`props should render correctly with name 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -2230,15 +2291,15 @@ exports[`props should render correctly with name 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2248,75 +2309,71 @@ exports[`props should render correctly with name 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     name="checkboxRocks"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`props should render correctly with value 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2327,18 +2384,22 @@ exports[`props should render correctly with value 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -2346,15 +2407,15 @@ exports[`props should render correctly with value 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2364,75 +2425,71 @@ exports[`props should render correctly with value 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
     value="checkboxValue"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Switch.HiddenInput.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2443,18 +2500,22 @@ exports[`theming Switch.HiddenInput.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -2462,15 +2523,15 @@ exports[`theming Switch.HiddenInput.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2480,78 +2541,74 @@ exports[`theming Switch.HiddenInput.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Switch.Icon.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2562,7 +2619,22 @@ exports[`theming Switch.Icon.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -2570,15 +2642,15 @@ exports[`theming Switch.Icon.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2588,44 +2660,44 @@ exports[`theming Switch.Icon.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -2634,43 +2706,28 @@ exports[`theming Switch.Icon.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Switch.Label.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2681,18 +2738,22 @@ exports[`theming Switch.Label.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -2700,15 +2761,15 @@ exports[`theming Switch.Label.base should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2718,146 +2779,70 @@ exports[`theming Switch.Label.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
 }
 
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
 }
 
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
 
 exports[`theming Switch.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-5 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  border-radius: 1em;
-  height: 1.5em;
-  position: relative;
-  width: 2.5em;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-2 {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-}
-
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-2 + .bb-SwitchIcon::before {
-  background: var(--bb-palette-default,#000000);
-  content: '';
-  border-radius: 100%;
-  border: 1px solid var(--bb-palette-gray100,#000000);
-  height: 1em;
-  width: 1em;
-  top: 0.2em;
-  left: 0.2em;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-  position: absolute;
-}
-
-.emotion-2[disabled] + .bb-SwitchIcon {
-  background-color: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-2[disabled] + .bb-SwitchIcon::before {
-  background: var(--bb-palette-white700,#000000);
-}
-
-.emotion-2:focus + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-}
-
-.emotion-2:checked + .bb-SwitchIcon {
-  background-color: var(--bb-palette-primary100,#000000);
-  border-color: var(--bb-palette-primary100,#000000);
-}
-
-.emotion-2:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary,#000000);
-  left: 1.25em;
-}
-
-.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
-  border-color: var(--bb-palette-primary100,#000000);
-}
-
-.emotion-6.emotion-6 {
+.emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2868,22 +2853,109 @@ exports[`theming Switch.base should render correctly 1`] = `
   align-items: center;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5+.bb-SwitchIcon::before {
+  background: var(--bb-palette-default, #000000);
+  content: '';
+  border-radius: 100%;
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-5[disabled]+.bb-SwitchIcon {
+  background-color: var(--bb-palette-white700, #000000);
+  box-shadow: unset;
+}
+
+.emotion-5[disabled]+.bb-SwitchIcon::before {
+  background: var(--bb-palette-white700, #000000);
+}
+
+.emotion-5:focus+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primary100, #000000) 0px 0px 0px 3px!important;
+}
+
+.emotion-5:not([disabled]):checked+.bb-SwitchIcon {
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.emotion-5:checked+.bb-SwitchIcon {
+  background-color: var(--bb-palette-primary100, #000000);
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-5:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary, #000000);
+  left: 1.25em;
+}
+
+.emotion-5[disabled]:checked+.bb-SwitchIcon::before {
+  border-color: var(--bb-palette-primary100, #000000);
+}
+
+.emotion-8 {
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-gray100, #000000);
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
 <label
   aria-describedby="id-test"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SwitchHiddenInput bb-Box"
     id="id-test"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
+    class="emotion-1 emotion-2 emotion-8 bb-SwitchIcon bb-Box"
   />
 </label>
 `;

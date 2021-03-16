@@ -1,5 +1,6 @@
+import { style } from '../Box/Box.styles';
 import { css, cssClass } from '../styled';
-import { borderRadius, fontSize, palette, theme } from '../utils';
+import { borderRadius, fontSize, palette, space, theme } from '../utils';
 
 export const InputWrapper = (styleProps) => cssClass`
   align-items: center;
@@ -14,14 +15,13 @@ export const InputWrapper = (styleProps) => cssClass`
 
 export const Input = (styleProps) => cssClass`
   -webkit-appearance: none;
-  background: ${palette('default')(styleProps)};
-  border: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
-  border-radius: ${borderRadius('default')(styleProps)};
+  background: ${palette('white', { dark: 'black100' })(styleProps)};
   color: ${palette('text')(styleProps)};
   height: 2.75em;
   width: 100%;
-  padding: 0.4em 0.8em;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
+
+  ${getVariantStyles(styleProps)}
 
   &[disabled] {
     background-color: ${palette('white700', { dark: 'black200' })(styleProps)};
@@ -37,8 +37,6 @@ export const Input = (styleProps) => cssClass`
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${palette('primary')(styleProps)};
-    box-shadow: ${palette('primaryTint', { dark: 'primaryShade' })(styleProps)} 0px 0px 0px 3px !important;
 
     & {
       ${theme(styleProps.themeKey, `styles.focus`)(styleProps)};
@@ -46,22 +44,11 @@ export const Input = (styleProps) => cssClass`
   }
 
   &::placeholder {
-    color: ${palette('gray300')(styleProps)};
+    color: ${palette(styleProps.palette || 'gray300')(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `styles.placeholder`)(styleProps)};
     }
-  }
-
-  ${
-    styleProps.state &&
-    css`
-      & {
-        border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 0px 0px
-          3px !important;
-      }
-    `
   }
 
   ${
@@ -86,6 +73,101 @@ export const Input = (styleProps) => cssClass`
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
+
+function getVariantStyles(styleProps) {
+  if (styleProps.variant === 'bordered') {
+    return css`
+      border: 1px solid
+        ${palette(styleProps.palette || 'white900', { dark: styleProps.palette || 'gray700' })(styleProps)};
+      border-radius: ${borderRadius('default')(styleProps)};
+      padding: 0.4em 0.8em;
+
+      &:focus {
+        border-color: ${palette(styleProps.palette || 'primary')(styleProps)};
+        box-shadow: ${palette(`${styleProps.palette || 'primary'}Tint`, {
+            dark: `${styleProps.palette || 'primary'}Shade`,
+          })(styleProps)}
+          0px 0px 0px 3px !important;
+
+        & {
+          ${theme(styleProps.themeKey, `variants.bordered.styles.focus`)(styleProps)};
+        }
+      }
+
+      ${styleProps.state &&
+      css`
+        & {
+          border-color: ${palette(`${styleProps.state}`)(styleProps)};
+          box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 0px
+            0px 3px !important;
+        }
+      `}
+
+      & {
+        ${theme(styleProps.themeKey, `variants.bordered.styles.base`)(styleProps)};
+      }
+    `;
+  }
+  if (styleProps.variant === 'borderless') {
+    return css`
+      border-top-left-radius: ${borderRadius('default')(styleProps)};
+      border-top-right-radius: ${borderRadius('default')(styleProps)};
+      border-bottom: 1px solid transparent;
+
+      &:focus {
+        border-bottom-color: ${palette(styleProps.palette || 'primary')(styleProps)};
+        box-shadow: ${palette(`${styleProps.palette || 'primary'}Tint`, { dark: `${styleProps.palette}Shade` })(
+            styleProps
+          )}
+          0px 2px 0px !important;
+      }
+
+      &[disabled] {
+        border-radius: ${borderRadius('default')(styleProps)};
+        padding: 0.4em 0.8em;
+      }
+
+      ${styleProps.state &&
+      css`
+        & {
+          border-color: ${palette(`${styleProps.state}`)(styleProps)};
+          box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 2px
+            0px !important;
+        }
+      `}
+    `;
+  }
+  if (styleProps.variant === 'underline') {
+    return css`
+      border-top-left-radius: ${borderRadius('default')(styleProps)};
+      border-top-right-radius: ${borderRadius('default')(styleProps)};
+      border-bottom: 1px solid
+        ${palette(styleProps.palette || 'white900', { dark: styleProps.palette || 'gray700' })(styleProps)};
+
+      &:focus {
+        border-bottom-color: ${palette(styleProps.palette || 'primary')(styleProps)};
+        box-shadow: ${palette(`${styleProps.palette || 'primary'}Tint`, { dark: `${styleProps.palette}Shade` })(
+            styleProps
+          )}
+          0px 2px 0px !important;
+      }
+
+      &[disabled] {
+        padding: 0.4em 0.8em;
+      }
+
+      ${styleProps.state &&
+      css`
+        & {
+          border-color: ${palette(`${styleProps.state}`)(styleProps)};
+          box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 2px
+            0px !important;
+        }
+      `}
+    `;
+  }
+  return css``;
+}
 
 export const InputIcon = (styleProps) => cssClass`
   && {
@@ -160,4 +242,117 @@ export function wrapperSizeProperties(styleProps) {
     `,
   };
   return properties[styleProps.size];
+}
+
+/////////////////////////////////////////////////////////////////////
+
+export const LabelWrapper = (styleProps) => cssClass`
+  align-items: center;
+  color: ${palette(styleProps.palette || 'gray300')(styleProps)};
+  display: flex;
+  position: absolute;
+  height: 100%;
+  transition: transform 100ms;
+  transform-origin: top left;
+  transform: translateY(0px) scale(1);
+
+  ${getLabelWrapperVariantStyles(styleProps)}
+
+  ${
+    styleProps.isFocused &&
+    css`
+      transform: translateY(-1.1em) scale(0.75);
+    `
+  }
+
+  ${
+    (styleProps.after || styleProps.isLoading) &&
+    css`
+      & {
+        margin-right: 2.3em;
+      }
+    `
+  };
+
+  ${
+    styleProps.before &&
+    css`
+      & {
+        margin-left: 2.3em;
+      }
+    `
+  };
+
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;
+
+function getLabelWrapperVariantStyles(styleProps) {
+  if (styleProps.variant === 'bordered') {
+    return css`
+      margin-left: 0.8em;
+
+      & {
+        ${theme(styleProps.themeKey, `variants.bordered.styles.base`)(styleProps)};
+      }
+    `;
+  }
+  return css``;
+}
+
+/////////////////////////////////////////////////////////////////////
+
+export const LabelWrapperBackground = (styleProps) => cssClass`
+  padding: 0 0.25em;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 100ms;
+  transform: translateY(-1em) scale(0.75);
+  transform-origin: top left;
+
+  ${getLabelWrapperBackgroundVariantStyles(styleProps)}
+
+  ${
+    styleProps.isFocused &&
+    css`
+      opacity: 1;
+    `
+  }
+
+  ${
+    (styleProps.after || styleProps.isLoading) &&
+    css`
+      & {
+        margin-right: 2.1em;
+      }
+    `
+  };
+
+  ${
+    styleProps.before &&
+    css`
+      & {
+        margin-left: 2.1em;
+      }
+    `
+  };
+
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;
+
+function getLabelWrapperBackgroundVariantStyles(styleProps) {
+  if (styleProps.variant === 'bordered') {
+    return css`
+      background-color: ${palette('white', { dark: 'black100' })(styleProps)};
+      margin-left: 0.6em;
+
+      & {
+        ${theme(styleProps.themeKey, `variants.bordered.styles.base`)(styleProps)};
+      }
+    `;
+  }
+  return css``;
 }

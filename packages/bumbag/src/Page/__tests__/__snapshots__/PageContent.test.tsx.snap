@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-2 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,48 +12,48 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-3 {
+  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .emotion-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.emotion-4 {
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .emotion-1 {
+@media (max-width: 768px) {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   max-width: 768px;
 }
 
-.emotion-0 {
-  padding: 2rem 1rem;
-}
-
-@media screen and (max-width:767px) {
-  .emotion-0 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-6 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-4 emotion-2 emotion-6 bb-Box bb-PageContentWrapper"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageContentWrapper"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-Container bb-PageContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-6 test bb-Box bb-Container bb-PageContent"
   >
     hello world
   </div>
@@ -61,7 +61,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides styles.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -72,48 +72,48 @@ exports[`overrides styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-3 {
+  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .emotion-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .emotion-1 {
+@media (max-width: 768px) {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   max-width: 768px;
 }
 
-.emotion-0 {
-  padding: 2rem 1rem;
-}
-
-@media screen and (max-width:767px) {
-  .emotion-0 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-2 emotion-3 bb-Box bb-PageContentWrapper"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageContentWrapper"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Container bb-PageContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Container bb-PageContent"
   >
     hello world
   </div>
@@ -121,7 +121,7 @@ exports[`overrides styles.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-2 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -132,44 +132,44 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-3 {
+  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .emotion-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.emotion-4 {
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .emotion-1 {
+@media (max-width: 768px) {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   max-width: 768px;
 }
 
-.emotion-0 {
-  padding: 2rem 1rem;
-}
-
-@media screen and (max-width:767px) {
-  .emotion-0 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
 <div
-  class="emotion-4 emotion-2 emotion-3 bb-Box bb-PageContentWrapper"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageContentWrapper"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Container bb-PageContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Container bb-PageContent"
   >
     Hello world
   </div>
@@ -177,7 +177,7 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-2 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -188,48 +188,48 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-3 {
+  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .emotion-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.emotion-4 {
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .emotion-1 {
+@media (max-width: 768px) {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   max-width: 768px;
 }
 
-.emotion-0 {
-  padding: 2rem 1rem;
-}
-
-@media screen and (max-width:767px) {
-  .emotion-0 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-6 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-4 emotion-2 emotion-6 bb-Box bb-PageContentWrapper"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageContentWrapper"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Container bb-PageContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-6 bb-Box bb-Container bb-PageContent"
   >
     Hello world
   </div>
@@ -237,7 +237,7 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming styles.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -248,48 +248,48 @@ exports[`theming styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-3 {
+  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .emotion-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .emotion-1 {
+@media (max-width: 768px) {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   max-width: 768px;
 }
 
-.emotion-0 {
-  padding: 2rem 1rem;
-}
-
-@media screen and (max-width:767px) {
-  .emotion-0 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-2 emotion-3 bb-Box bb-PageContentWrapper"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageContentWrapper"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Container bb-PageContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Container bb-PageContent"
   >
     hello world
   </div>
@@ -297,7 +297,7 @@ exports[`theming styles.base should render correctly 1`] = `
 `;
 
 exports[`variants styles.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -308,48 +308,48 @@ exports[`variants styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-1 {
+.emotion-3 {
+  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .emotion-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .emotion-1 {
+@media (max-width: 768px) {
+  .emotion-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   max-width: 768px;
 }
 
-.emotion-0 {
-  padding: 2rem 1rem;
-}
-
-@media screen and (max-width:767px) {
-  .emotion-0 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-2 emotion-3 bb-Box bb-PageContentWrapper"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-PageContentWrapper"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Container bb-PageContent"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Container bb-PageContent"
   >
     hello world
   </div>

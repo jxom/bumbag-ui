@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-grid-item;
+  display: -ms-grid-itembox;
+  display: grid-item;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -14,10 +21,6 @@ exports[`composition as should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid-item;
 }
 
 <p
@@ -34,6 +37,13 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-grid-item;
+  display: -ms-grid-itembox;
+  display: grid-item;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -47,10 +57,6 @@ exports[`composition render props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid-item;
 }
 
 <div
@@ -61,6 +67,14 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-grid-item;
+  display: -ms-grid-itembox;
+  display: grid-item;
+  grid-area: test;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -74,11 +88,6 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid-item;
-  grid-area: test;
 }
 
 <div
@@ -89,6 +98,13 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-grid-item;
+  display: -ms-grid-itembox;
+  display: grid-item;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -102,10 +118,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid-item;
 }
 
 <div
@@ -116,6 +128,14 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-grid-item;
+  display: -ms-grid-itembox;
+  display: grid-item;
+  grid-area: a;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -129,11 +149,6 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid-item;
-  grid-area: a;
 }
 
 <div
@@ -144,6 +159,17 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming GridItem.base should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-grid-item;
+  display: -ms-grid-itembox;
+  display: grid-item;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -157,14 +183,6 @@ exports[`theming GridItem.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: grid-item;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div

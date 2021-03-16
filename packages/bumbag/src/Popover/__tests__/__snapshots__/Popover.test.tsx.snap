@@ -87,21 +87,21 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 .emotion-2 {
-  background-color: var(--bb-palette-background,#000000);
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
 .emotion-2[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
+  display: inherit!important;
+  visibility: hidden!important;
 }
 
 .emotion-2:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -126,6 +126,11 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`composition use should render correctly 1`] = `
+.emotion-0 {
+  border-left: 4px solid #cccccc;
+  padding: 1.5rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -141,31 +146,26 @@ exports[`composition use should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-3 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-6[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
+.emotion-3[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
 }
 
-.emotion-6:focus {
+.emotion-3:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-0 {
+.emotion-4 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  border-left: 4px solid #cccccc;
-  padding: 1.5rem;
 }
 
 <body
@@ -175,7 +175,7 @@ exports[`composition use should render correctly 1`] = `
     <blockquote
       aria-describedby="id-test"
       aria-label="test"
-      class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Blockquote bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Blockquote bb-Popover"
       data-dialog="true"
       hidden=""
       id="test"
@@ -184,7 +184,7 @@ exports[`composition use should render correctly 1`] = `
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-4 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -195,6 +195,24 @@ exports[`composition use should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -211,24 +229,6 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -238,14 +238,14 @@ exports[`defaultProps should render correctly for className 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 test bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -256,6 +256,24 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`defaultProps should render correctly for hasArrow 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -271,43 +289,25 @@ exports[`defaultProps should render correctly for hasArrow 1`] = `
   outline: none;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-6[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-6:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
 .emotion-3 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-0 {
   display: grid;
   overflow: hidden;
 }
 
-.emotion-0 > svg {
+.emotion-3>svg {
   background-color: transparent;
 }
 
-.emotion-0 > svg .stroke {
-  fill: var(--bb-palette-white800,#000000);
+.emotion-3>svg .stroke {
+  fill: var(--bb-palette-white800, #000000);
 }
 
-.emotion-0 > svg .fill {
-  fill: var(--bb-palette-background,#000000);
+.emotion-3>svg .fill {
+  fill: var(--bb-palette-background, #000000);
+}
+
+.emotion-6 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -316,14 +316,14 @@ exports[`defaultProps should render correctly for hasArrow 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-6 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverArrow"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverArrow"
         style="font-size: 30px; width: 1em; height: 1em; pointer-events: none; bottom: 100%;"
       >
         <svg
@@ -341,7 +341,7 @@ exports[`defaultProps should render correctly for hasArrow 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-6 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -352,6 +352,24 @@ exports[`defaultProps should render correctly for hasArrow 1`] = `
 `;
 
 exports[`overrides Popover.Arrow.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -367,47 +385,29 @@ exports[`overrides Popover.Arrow.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-6[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-6:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
 .emotion-3 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-0 {
   display: grid;
   overflow: hidden;
 }
 
-.emotion-0 > svg {
+.emotion-3>svg {
   background-color: transparent;
 }
 
-.emotion-0 > svg .stroke {
-  fill: var(--bb-palette-white800,#000000);
+.emotion-3>svg .stroke {
+  fill: var(--bb-palette-white800, #000000);
 }
 
-.emotion-0 > svg .fill {
-  fill: var(--bb-palette-background,#000000);
+.emotion-3>svg .fill {
+  fill: var(--bb-palette-background, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-6 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -416,14 +416,14 @@ exports[`overrides Popover.Arrow.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-6 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverArrow"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverArrow"
         style="font-size: 30px; width: 1em; height: 1em; pointer-events: none; bottom: 100%;"
       >
         <svg
@@ -441,7 +441,7 @@ exports[`overrides Popover.Arrow.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-6 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -452,7 +452,25 @@ exports[`overrides Popover.Arrow.base should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.Close.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -463,68 +481,49 @@ exports[`overrides Popover.Close.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-19 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-19[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-19:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-16 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-abbr.emotion-1 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  font-weight: 600;
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -532,63 +531,59 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  font-weight: 600;
+.emotion-11.emotion-11 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
-.emotion-11 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-8 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -597,8 +592,8 @@ samp.emotion-1 {
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -609,68 +604,71 @@ samp.emotion-1 {
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-8[disabled],
-.emotion-8[aria-disabled="true"] {
+.emotion-12[disabled],
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-8 {
+.emotion-12 {
   font-size: 0.75em;
   min-height: 2rem;
   padding: 0 0.75rem;
 }
 
-.emotion-8:focus {
+.emotion-12:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-8:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-12:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-8:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-12:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-8 {
+.emotion-12 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-8:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-12:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-8:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-12:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-7.emotion-7 {
-  min-height: unset;
-  padding: 0.5em;
+.emotion-15 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-.emotion-6 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-4 {
+.emotion-16 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
+}
+
+.emotion-18 {
+  font-size: 1.25rem!important;
+}
+
+.emotion-19 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -680,28 +678,28 @@ samp.emotion-1 {
     <div
       aria-describedby="id-test"
       aria-labelledby="id-test"
-      class="emotion-19 emotion-2 emotion-3 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-12 emotion-13 emotion-2 emotion-3 bb-Box bb-Flex bb-PopoverHeader"
+        class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-PopoverTitle"
+          class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-PopoverTitle"
           id="id-test"
         >
           This is a title
         </span>
         <button
-          class="emotion-7 emotion-8 emotion-2 emotion-3 emotion-11 bb-PopoverClose bb-Box bb-Button bb-ButtonClose"
+          class="emotion-11 emotion-12 emotion-1 emotion-2 emotion-15 bb-PopoverClose bb-Box bb-Button bb-ButtonClose"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="emotion-4 emotion-2 emotion-6 bb-Box bb-Icon"
+            class="emotion-16 emotion-1 emotion-18 bb-Box bb-Icon"
             role="img"
             viewBox="0 0 320 512"
           >
@@ -719,7 +717,7 @@ samp.emotion-1 {
         </button>
       </div>
       <div
-        class="emotion-16 emotion-2 emotion-3 bb-Box bb-PopoverContent"
+        class="emotion-19 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -730,6 +728,24 @@ samp.emotion-1 {
 `;
 
 exports[`overrides Popover.Content.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -746,29 +762,11 @@ exports[`overrides Popover.Content.base should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <body
@@ -777,14 +775,14 @@ exports[`overrides Popover.Content.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -795,6 +793,24 @@ exports[`overrides Popover.Content.base should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.Footer.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -810,50 +826,31 @@ exports[`overrides Popover.Footer.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-9 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-9[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-9:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-top: 1px solid var(--bb-palette-white800,#000000);
+  border-top: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <body
@@ -862,20 +859,20 @@ exports[`overrides Popover.Footer.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-9 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
       </div>
       <div
-        class="emotion-5 emotion-6 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
+        class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 bb-Box"
@@ -889,7 +886,25 @@ exports[`overrides Popover.Footer.base should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.Header.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -900,55 +915,53 @@ exports[`overrides Popover.Header.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-11[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-11:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-8 {
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-5 {
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-abbr.emotion-1 {
+.emotion-7 {
+  font-weight: 600;
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -956,64 +969,46 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  font-weight: 600;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+.emotion-11 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <body
@@ -1023,24 +1018,24 @@ samp.emotion-1 {
     <div
       aria-describedby="id-test"
       aria-labelledby="id-test"
-      class="emotion-11 emotion-2 emotion-3 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-4 emotion-5 emotion-2 emotion-3 bb-Box bb-Flex bb-PopoverHeader"
+        class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-PopoverTitle"
+          class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-PopoverTitle"
           id="id-test"
         >
           This is a title
         </span>
       </div>
       <div
-        class="emotion-8 emotion-2 emotion-3 bb-Box bb-PopoverContent"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1051,7 +1046,25 @@ samp.emotion-1 {
 `;
 
 exports[`overrides Popover.Title.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1062,68 +1075,53 @@ exports[`overrides Popover.Title.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-11[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-11:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-8 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-abbr.emotion-1 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  font-weight: 600;
+}
+
+.emotion-7 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1131,51 +1129,46 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  font-weight: 600;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-11 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -1185,24 +1178,24 @@ samp.emotion-1 {
     <div
       aria-describedby="id-test"
       aria-labelledby="id-test"
-      class="emotion-11 emotion-2 emotion-3 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-4 emotion-5 emotion-2 emotion-3 bb-Box bb-Flex bb-PopoverHeader"
+        class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-PopoverTitle"
+          class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-PopoverTitle"
           id="id-test"
         >
           This is a title
         </span>
       </div>
       <div
-        class="emotion-8 emotion-2 emotion-3 bb-Box bb-PopoverContent"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1213,6 +1206,28 @@ samp.emotion-1 {
 `;
 
 exports[`overrides Popover.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1228,30 +1243,8 @@ exports[`overrides Popover.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <body
@@ -1260,14 +1253,14 @@ exports[`overrides Popover.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1278,6 +1271,28 @@ exports[`overrides Popover.base should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.bottom should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1293,30 +1308,8 @@ exports[`overrides Popover.placements.bottom should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -1325,14 +1318,14 @@ exports[`overrides Popover.placements.bottom should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1343,6 +1336,24 @@ exports[`overrides Popover.placements.bottom should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.bottom-end should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1359,24 +1370,6 @@ exports[`overrides Popover.placements.bottom-end should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -1386,14 +1379,14 @@ exports[`overrides Popover.placements.bottom-end should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1404,6 +1397,24 @@ exports[`overrides Popover.placements.bottom-end should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.bottom-start should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1420,24 +1431,6 @@ exports[`overrides Popover.placements.bottom-start should render correctly 1`] =
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -1447,14 +1440,14 @@ exports[`overrides Popover.placements.bottom-start should render correctly 1`] =
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1465,6 +1458,24 @@ exports[`overrides Popover.placements.bottom-start should render correctly 1`] =
 `;
 
 exports[`overrides Popover.placements.center should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1480,26 +1491,8 @@ exports[`overrides Popover.placements.center should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  padding: 0.5rem 0.75rem;
-}
-
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -1508,14 +1501,14 @@ exports[`overrides Popover.placements.center should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1526,6 +1519,28 @@ exports[`overrides Popover.placements.center should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.left should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1541,30 +1556,8 @@ exports[`overrides Popover.placements.left should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -1573,14 +1566,14 @@ exports[`overrides Popover.placements.left should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1591,6 +1584,28 @@ exports[`overrides Popover.placements.left should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.right should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1606,30 +1621,8 @@ exports[`overrides Popover.placements.right should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -1638,14 +1631,14 @@ exports[`overrides Popover.placements.right should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1656,6 +1649,28 @@ exports[`overrides Popover.placements.right should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.top should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1671,30 +1686,8 @@ exports[`overrides Popover.placements.top should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -1703,14 +1696,14 @@ exports[`overrides Popover.placements.top should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1721,6 +1714,24 @@ exports[`overrides Popover.placements.top should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.top-end should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1737,24 +1748,6 @@ exports[`overrides Popover.placements.top-end should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -1764,14 +1757,14 @@ exports[`overrides Popover.placements.top-end should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1782,6 +1775,24 @@ exports[`overrides Popover.placements.top-end should render correctly 1`] = `
 `;
 
 exports[`overrides Popover.placements.top-start should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1798,24 +1809,6 @@ exports[`overrides Popover.placements.top-start should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -1825,14 +1818,14 @@ exports[`overrides Popover.placements.top-start should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1843,6 +1836,24 @@ exports[`overrides Popover.placements.top-start should render correctly 1`] = `
 `;
 
 exports[`props placement should render placement correcty for bottom 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1859,24 +1870,6 @@ exports[`props placement should render placement correcty for bottom 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -1886,14 +1879,14 @@ exports[`props placement should render placement correcty for bottom 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1904,6 +1897,24 @@ exports[`props placement should render placement correcty for bottom 1`] = `
 `;
 
 exports[`props placement should render placement correcty for bottom-end 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1920,24 +1931,6 @@ exports[`props placement should render placement correcty for bottom-end 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -1947,14 +1940,14 @@ exports[`props placement should render placement correcty for bottom-end 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -1965,6 +1958,24 @@ exports[`props placement should render placement correcty for bottom-end 1`] = `
 `;
 
 exports[`props placement should render placement correcty for bottom-start 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1981,24 +1992,6 @@ exports[`props placement should render placement correcty for bottom-start 1`] =
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -2008,14 +2001,14 @@ exports[`props placement should render placement correcty for bottom-start 1`] =
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2026,6 +2019,24 @@ exports[`props placement should render placement correcty for bottom-start 1`] =
 `;
 
 exports[`props placement should render placement correcty for center 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2041,26 +2052,8 @@ exports[`props placement should render placement correcty for center 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  padding: 0.5rem 0.75rem;
-}
-
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -2069,14 +2062,14 @@ exports[`props placement should render placement correcty for center 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2087,6 +2080,24 @@ exports[`props placement should render placement correcty for center 1`] = `
 `;
 
 exports[`props placement should render placement correcty for left 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2103,24 +2114,6 @@ exports[`props placement should render placement correcty for left 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -2130,14 +2123,14 @@ exports[`props placement should render placement correcty for left 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2148,6 +2141,24 @@ exports[`props placement should render placement correcty for left 1`] = `
 `;
 
 exports[`props placement should render placement correcty for right 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2164,24 +2175,6 @@ exports[`props placement should render placement correcty for right 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -2191,14 +2184,14 @@ exports[`props placement should render placement correcty for right 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2209,6 +2202,24 @@ exports[`props placement should render placement correcty for right 1`] = `
 `;
 
 exports[`props placement should render placement correcty for top 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2225,24 +2236,6 @@ exports[`props placement should render placement correcty for top 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -2252,14 +2245,14 @@ exports[`props placement should render placement correcty for top 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2270,6 +2263,24 @@ exports[`props placement should render placement correcty for top 1`] = `
 `;
 
 exports[`props placement should render placement correcty for top-end 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2286,24 +2297,6 @@ exports[`props placement should render placement correcty for top-end 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -2313,14 +2306,14 @@ exports[`props placement should render placement correcty for top-end 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2331,6 +2324,24 @@ exports[`props placement should render placement correcty for top-end 1`] = `
 `;
 
 exports[`props placement should render placement correcty for top-start 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2347,24 +2358,6 @@ exports[`props placement should render placement correcty for top-start 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -2374,14 +2367,14 @@ exports[`props placement should render placement correcty for top-start 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2392,6 +2385,24 @@ exports[`props placement should render placement correcty for top-start 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2408,24 +2419,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -2435,14 +2428,14 @@ exports[`props should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -2453,6 +2446,24 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with a footer 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2468,46 +2479,27 @@ exports[`props should render correctly with a footer 1`] = `
   outline: none;
 }
 
-.emotion-9 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-9[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-9:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-top: 1px solid var(--bb-palette-white800,#000000);
+  border-top: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <body
@@ -2516,20 +2508,20 @@ exports[`props should render correctly with a footer 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-9 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
       </div>
       <div
-        class="emotion-5 emotion-6 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
+        class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 bb-Box"
@@ -2543,164 +2535,24 @@ exports[`props should render correctly with a footer 1`] = `
 `;
 
 exports[`props should render correctly with a title 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-11 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-11[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
 }
 
-.emotion-11:focus {
+.emotion-0:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-8 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
-  padding: 0.5rem 0.75rem;
-}
-
-abbr.emotion-1 {
-  border-bottom: 1px dotted;
-  cursor: help;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-code.emotion-1 {
-  font-family: monospace;
-}
-
-i.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1 {
-  background: #454d5d;
-  border-radius: 0.1rem;
-  color: #fff;
-  fill: #fff;
-  padding: 0.1rem 0.2rem;
-}
-
-mark.emotion-1 {
-  background: #ffe9b3;
-  border-radius: 0.1rem;
-  padding: 0.1rem 0.2rem;
-}
-
-strong.emotion-1 {
-  font-weight: bold;
-}
-
-sub.emotion-1,
-sup.emotion-1 {
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
-  text-decoration-skip: ink edges;
-}
-
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
-  font-style: italic;
-}
-
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
-  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
-}
-
-.emotion-1 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  font-weight: 600;
-}
-
-<body
-  class="bb-mode-default"
->
-  <div>
-    <div
-      aria-describedby="id-test"
-      aria-labelledby="id-test"
-      class="emotion-11 emotion-2 emotion-3 bb-Box bb-Popover"
-      data-dialog="true"
-      id="test"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div
-        class="emotion-4 emotion-5 emotion-2 emotion-3 bb-Box bb-Flex bb-PopoverHeader"
-      >
-        <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-PopoverTitle"
-          id="id-test"
-        >
-          This is a title
-        </span>
-      </div>
-      <div
-        class="emotion-8 emotion-2 emotion-3 bb-Box bb-PopoverContent"
-        id="id-test"
-      >
-        Hello world
-      </div>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`props should render correctly with action buttons 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2716,197 +2568,92 @@ exports[`props should render correctly with action buttons 1`] = `
   outline: none;
 }
 
-.emotion-19 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-19[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-19:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-top: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
 }
 
-.emotion-10 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
 }
 
-.emotion-10.emotion-10.emotion-10 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.emotion-7 {
   font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
+}
+
+abbr.emotion-8 {
+  border-bottom: 1px dotted;
+  cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
-.emotion-3[disabled],
-.emotion-3[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
+code.emotion-8 {
+  font-family: monospace;
 }
 
-.emotion-3 {
-  font-size: 0.75em;
-  min-height: 2rem;
-  padding: 0 0.75rem;
+i.emotion-8 {
+  font-style: italic;
 }
 
-.emotion-3:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
-  border-color: transparent;
+kbd.emotion-8 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
 }
 
-.emotion-3:hover {
-  background-color: var(--bb-palette-white600,#000000);
+mark.emotion-8 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
 }
 
-.emotion-3:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+strong.emotion-8 {
+  font-weight: bold;
 }
 
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+sub.emotion-8,
+sup.emotion-8 {
+  font-size: 0.8em;
+  vertical-align: baseline;
 }
 
-.emotion-6[disabled],
-.emotion-6[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
+ins.emotion-8,
+u.emotion-8 {
+  text-decoration-skip: ink edges;
 }
 
-.emotion-6 {
-  font-size: 0.75em;
-  min-height: 2rem;
-  padding: 0 0.75rem;
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
+  font-style: italic;
 }
 
-.emotion-6:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-6:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+.emotion-8 .bb-Icon {
+  vertical-align: -0.125em;
 }
 
-.emotion-6:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+.emotion-11 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -2915,35 +2662,278 @@ exports[`props should render correctly with action buttons 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-19 emotion-1 emotion-2 bb-Box bb-Popover"
+      aria-labelledby="id-test"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverHeader"
+      >
+        <span
+          class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-PopoverTitle"
+          id="id-test"
+        >
+          This is a title
+        </span>
+      </div>
+      <div
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        id="id-test"
+      >
+        Hello world
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`props should render correctly with action buttons 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 0.5rem 0.75rem;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-top: 1px solid var(--bb-palette-white800, #000000);
+  padding: 0.5rem 0.75rem;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-13.emotion-13.emotion-13>* {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-16 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-default, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+}
+
+.emotion-16[disabled],
+.emotion-16[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-16 {
+  font-size: 0.75em;
+  min-height: 2rem;
+  padding: 0 0.75rem;
+}
+
+.emotion-16:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-16:hover {
+  background-color: var(--bb-palette-white600, #000000);
+}
+
+.emotion-16:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
+}
+
+.emotion-19 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-primary, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+}
+
+.emotion-19[disabled],
+.emotion-19[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-19 {
+  font-size: 0.75em;
+  min-height: 2rem;
+  padding: 0 0.75rem;
+}
+
+.emotion-19:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-19:hover {
+  background-color: var(--bb-palette-primary600, #000000);
+}
+
+.emotion-19:hover:active {
+  background-color: var(--bb-palette-primary700, #000000);
+}
+
+<body
+  class="bb-mode-default"
+>
+  <div>
+    <div
+      aria-describedby="id-test"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
+      data-dialog="true"
+      id="test"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
       </div>
       <div
-        class="emotion-15 emotion-16 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
+        class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 bb-Box"
         >
           <div
-            class="emotion-9 emotion-10 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
+            class="emotion-12 emotion-13 emotion-1 emotion-2 bb-Box bb-Set bb-ActionButtons"
           >
             <button
-              class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
+              class="emotion-16 emotion-1 emotion-2 bb-Box bb-Button"
               type="button"
             >
               Cancel
             </button>
             <button
-              class="emotion-6 emotion-1 emotion-2 bb-Box bb-Button"
+              class="emotion-19 emotion-1 emotion-2 bb-Box bb-Button"
               type="submit"
             >
               Submit
@@ -2957,6 +2947,24 @@ exports[`props should render correctly with action buttons 1`] = `
 `;
 
 exports[`theming Popover.Arrow.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2972,47 +2980,29 @@ exports[`theming Popover.Arrow.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-6 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-6[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-6:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
 .emotion-3 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-0 {
   display: grid;
   overflow: hidden;
 }
 
-.emotion-0 > svg {
+.emotion-3>svg {
   background-color: transparent;
 }
 
-.emotion-0 > svg .stroke {
-  fill: var(--bb-palette-white800,#000000);
+.emotion-3>svg .stroke {
+  fill: var(--bb-palette-white800, #000000);
 }
 
-.emotion-0 > svg .fill {
-  fill: var(--bb-palette-background,#000000);
+.emotion-3>svg .fill {
+  fill: var(--bb-palette-background, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-6 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -3021,14 +3011,14 @@ exports[`theming Popover.Arrow.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-6 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverArrow"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverArrow"
         style="font-size: 30px; width: 1em; height: 1em; pointer-events: none; bottom: 100%;"
       >
         <svg
@@ -3046,7 +3036,7 @@ exports[`theming Popover.Arrow.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-6 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -3057,7 +3047,25 @@ exports[`theming Popover.Arrow.base should render correctly 1`] = `
 `;
 
 exports[`theming Popover.Close.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3068,68 +3076,49 @@ exports[`theming Popover.Close.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-19 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-19[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-19:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-16 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-abbr.emotion-1 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  font-weight: 600;
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3137,63 +3126,59 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  font-weight: 600;
+.emotion-11.emotion-11 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
-.emotion-11 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-8 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3202,8 +3187,8 @@ samp.emotion-1 {
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -3214,68 +3199,71 @@ samp.emotion-1 {
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-8[disabled],
-.emotion-8[aria-disabled="true"] {
+.emotion-12[disabled],
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-8 {
+.emotion-12 {
   font-size: 0.75em;
   min-height: 2rem;
   padding: 0 0.75rem;
 }
 
-.emotion-8:focus {
+.emotion-12:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-8:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-12:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-8:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-12:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
-.emotion-8 {
+.emotion-12 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
-.emotion-8:hover {
-  background-color: rgba(0,0,0,0.05);
+.emotion-12:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.emotion-8:hover:active {
-  background-color: rgba(0,0,0,0.1);
+.emotion-12:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.emotion-7.emotion-7 {
-  min-height: unset;
-  padding: 0.5em;
+.emotion-15 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-.emotion-6 {
-  font-size: 1.25rem !important;
-}
-
-.emotion-4 {
+.emotion-16 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
+}
+
+.emotion-18 {
+  font-size: 1.25rem!important;
+}
+
+.emotion-19 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -3285,28 +3273,28 @@ samp.emotion-1 {
     <div
       aria-describedby="id-test"
       aria-labelledby="id-test"
-      class="emotion-19 emotion-2 emotion-3 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-12 emotion-13 emotion-2 emotion-3 bb-Box bb-Flex bb-PopoverHeader"
+        class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-PopoverTitle"
+          class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-PopoverTitle"
           id="id-test"
         >
           This is a title
         </span>
         <button
-          class="emotion-7 emotion-8 emotion-2 emotion-3 emotion-11 bb-PopoverClose bb-Box bb-Button bb-ButtonClose"
+          class="emotion-11 emotion-12 emotion-1 emotion-2 emotion-15 bb-PopoverClose bb-Box bb-Button bb-ButtonClose"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="emotion-4 emotion-2 emotion-6 bb-Box bb-Icon"
+            class="emotion-16 emotion-1 emotion-18 bb-Box bb-Icon"
             role="img"
             viewBox="0 0 320 512"
           >
@@ -3324,7 +3312,7 @@ samp.emotion-1 {
         </button>
       </div>
       <div
-        class="emotion-16 emotion-2 emotion-3 bb-Box bb-PopoverContent"
+        class="emotion-19 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -3335,6 +3323,24 @@ samp.emotion-1 {
 `;
 
 exports[`theming Popover.Content.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3351,29 +3357,11 @@ exports[`theming Popover.Content.base should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <body
@@ -3382,14 +3370,14 @@ exports[`theming Popover.Content.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -3400,6 +3388,24 @@ exports[`theming Popover.Content.base should render correctly 1`] = `
 `;
 
 exports[`theming Popover.Footer.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3415,50 +3421,31 @@ exports[`theming Popover.Footer.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-9 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-9[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-9:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-top: 1px solid var(--bb-palette-white800,#000000);
+  border-top: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <body
@@ -3467,20 +3454,20 @@ exports[`theming Popover.Footer.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-9 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
       </div>
       <div
-        class="emotion-5 emotion-6 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
+        class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 bb-Box"
@@ -3494,7 +3481,25 @@ exports[`theming Popover.Footer.base should render correctly 1`] = `
 `;
 
 exports[`theming Popover.Header.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3505,55 +3510,53 @@ exports[`theming Popover.Header.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-11[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-11:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-8 {
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-5 {
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-abbr.emotion-1 {
+.emotion-7 {
+  font-weight: 600;
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3561,64 +3564,46 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  font-weight: 600;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+.emotion-11 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <body
@@ -3628,24 +3613,24 @@ samp.emotion-1 {
     <div
       aria-describedby="id-test"
       aria-labelledby="id-test"
-      class="emotion-11 emotion-2 emotion-3 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-4 emotion-5 emotion-2 emotion-3 bb-Box bb-Flex bb-PopoverHeader"
+        class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-PopoverTitle"
+          class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-PopoverTitle"
           id="id-test"
         >
           This is a title
         </span>
       </div>
       <div
-        class="emotion-8 emotion-2 emotion-3 bb-Box bb-PopoverContent"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -3656,7 +3641,25 @@ samp.emotion-1 {
 `;
 
 exports[`theming Popover.Title.base should render correctly 1`] = `
-.emotion-2 {
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3667,68 +3670,53 @@ exports[`theming Popover.Title.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-11[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-11:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-8 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: 1px solid var(--bb-palette-white800,#000000);
+  border-bottom: 1px solid var(--bb-palette-white800, #000000);
   padding: 0.5rem 0.75rem;
 }
 
-abbr.emotion-1 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  font-weight: 600;
+}
+
+.emotion-7 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+abbr.emotion-8 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-1 {
+code.emotion-8 {
   font-family: monospace;
 }
 
-i.emotion-1 {
+i.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1 {
+kbd.emotion-8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3736,51 +3724,46 @@ kbd.emotion-1 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-1 {
+mark.emotion-8 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-1 {
+strong.emotion-8 {
   font-weight: bold;
 }
 
-sub.emotion-1,
-sup.emotion-1 {
+sub.emotion-8,
+sup.emotion-8 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-1,
-u.emotion-1 {
-  -webkit-text-decoration-skip: ink edges;
+ins.emotion-8,
+u.emotion-8 {
   text-decoration-skip: ink edges;
 }
 
-i.emotion-1,
-cite.emotion-1,
-var.emotion-1,
-em.emotion-1 {
+i.emotion-8,
+cite.emotion-8,
+var.emotion-8,
+em.emotion-8 {
   font-style: italic;
 }
 
-kbd.emotion-1,
-pre.emotion-1,
-samp.emotion-1 {
+kbd.emotion-8,
+pre.emotion-8,
+samp.emotion-8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-1 .bb-Icon {
+.emotion-8 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  font-weight: 600;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-11 {
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -3790,24 +3773,24 @@ samp.emotion-1 {
     <div
       aria-describedby="id-test"
       aria-labelledby="id-test"
-      class="emotion-11 emotion-2 emotion-3 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-4 emotion-5 emotion-2 emotion-3 bb-Box bb-Flex bb-PopoverHeader"
+        class="emotion-3 emotion-4 emotion-1 emotion-2 bb-Box bb-Flex bb-PopoverHeader"
       >
         <span
-          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Text bb-PopoverTitle"
+          class="emotion-7 emotion-8 emotion-1 emotion-2 bb-Box bb-Text bb-PopoverTitle"
           id="id-test"
         >
           This is a title
         </span>
       </div>
       <div
-        class="emotion-8 emotion-2 emotion-3 bb-Box bb-PopoverContent"
+        class="emotion-11 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -3818,6 +3801,28 @@ samp.emotion-1 {
 `;
 
 exports[`theming Popover.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3833,30 +3838,8 @@ exports[`theming Popover.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <body
@@ -3865,14 +3848,14 @@ exports[`theming Popover.base should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -3883,6 +3866,28 @@ exports[`theming Popover.base should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.bottom should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3898,30 +3903,8 @@ exports[`theming Popover.placements.bottom should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -3930,14 +3913,14 @@ exports[`theming Popover.placements.bottom should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -3948,6 +3931,24 @@ exports[`theming Popover.placements.bottom should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.bottom-end should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3964,24 +3965,6 @@ exports[`theming Popover.placements.bottom-end should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -3991,14 +3974,14 @@ exports[`theming Popover.placements.bottom-end should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4009,6 +3992,24 @@ exports[`theming Popover.placements.bottom-end should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.bottom-start should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4025,24 +4026,6 @@ exports[`theming Popover.placements.bottom-start should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -4052,14 +4035,14 @@ exports[`theming Popover.placements.bottom-start should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4070,6 +4053,24 @@ exports[`theming Popover.placements.bottom-start should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.center should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4085,26 +4086,8 @@ exports[`theming Popover.placements.center should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  padding: 0.5rem 0.75rem;
-}
-
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  padding: 0.5rem 0.75rem;
 }
 
 <body
@@ -4113,14 +4096,14 @@ exports[`theming Popover.placements.center should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4131,6 +4114,28 @@ exports[`theming Popover.placements.center should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.left should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4146,30 +4151,8 @@ exports[`theming Popover.placements.left should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -4178,14 +4161,14 @@ exports[`theming Popover.placements.left should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4196,6 +4179,28 @@ exports[`theming Popover.placements.left should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.right should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4211,30 +4216,8 @@ exports[`theming Popover.placements.right should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -4243,14 +4226,14 @@ exports[`theming Popover.placements.right should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4261,6 +4244,28 @@ exports[`theming Popover.placements.right should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.top should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4276,30 +4281,8 @@ exports[`theming Popover.placements.top should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 <body
@@ -4308,14 +4291,14 @@ exports[`theming Popover.placements.top should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4326,6 +4309,24 @@ exports[`theming Popover.placements.top should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.top-end should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4342,24 +4343,6 @@ exports[`theming Popover.placements.top-end should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -4369,14 +4352,14 @@ exports[`theming Popover.placements.top-end should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4387,6 +4370,24 @@ exports[`theming Popover.placements.top-end should render correctly 1`] = `
 `;
 
 exports[`theming Popover.placements.top-start should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4403,24 +4404,6 @@ exports[`theming Popover.placements.top-start should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-0 {
   padding: 0.5rem 0.75rem;
 }
 
@@ -4430,14 +4413,14 @@ exports[`theming Popover.placements.top-start should render correctly 1`] = `
   <div>
     <div
       aria-describedby="id-test"
-      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
       tabindex="-1"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         Hello world
@@ -4476,6 +4459,24 @@ Object {
   "unstable_originalPlacement": "bottom",
   "unstable_popoverRef": Object {
     "current": .emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
+}
+
+.emotion-0[hidden] {
+  display: inherit!important;
+  visibility: hidden!important;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -4486,36 +4487,18 @@ Object {
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-5 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-5[hidden] {
-  display: inherit !important;
-  visibility: hidden !important;
-}
-
-.emotion-5:focus {
-  outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
-}
-
-.emotion-2 {
+.emotion-3 {
   padding: 0.5rem 0.75rem;
 }
 
 <div
       aria-describedby="id-test"
       aria-label="test"
-      class="emotion-5 emotion-0 emotion-1 bb-Box bb-Popover"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Popover"
       data-dialog="true"
       hidden=""
       id="bb-id-4"
@@ -4524,11 +4507,11 @@ Object {
       tabindex="-1"
     >
       <div
-        class="emotion-2 emotion-0 emotion-1 bb-Box bb-PopoverContent"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-PopoverContent"
         id="id-test"
       >
         <div
-          class="emotion-0 emotion-1 bb-Box"
+          class="emotion-1 emotion-2 bb-Box"
         >
           hello world
         </div>

@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { darken, getHiddenScrollbarStyles, palette, space, theme } from '../utils';
+import { darken, fontSize, getHiddenScrollbarStyles, palette, space, theme } from '../utils';
 import { Select } from '../Select/Select.styles';
 
 export const SelectMenu = (styleProps) => cssClass`
@@ -27,6 +27,8 @@ export const SelectMenuPopover = (styleProps) => cssClass`
 
 export const SelectMenuButton = (styleProps) => cssClass`
   ${Select(styleProps)};
+
+  ${styleProps.size && wrapperSizeProperties(styleProps)};
 
   cursor: default;
   display: flex;
@@ -185,3 +187,35 @@ export const SelectMenuField = (styleProps) => cssClass`
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
+
+export function wrapperSizeProperties(styleProps) {
+  const properties = {
+    small: css`
+      font-size: ${fontSize('150')(styleProps)}rem;
+
+      & {
+        ${theme(styleProps.themeKey, `styles.sizes.small`)(styleProps)};
+      }
+    `,
+    default: css`
+      & {
+        ${theme(styleProps.themeKey, `styles.sizes.default`)(styleProps)};
+      }
+    `,
+    medium: css`
+      font-size: ${fontSize('300')(styleProps)}rem;
+
+      & {
+        ${theme(styleProps.themeKey, `styles.sizes.medium`)(styleProps)};
+      }
+    `,
+    large: css`
+      font-size: ${fontSize('400')(styleProps)}rem;
+
+      & {
+        ${theme(styleProps.themeKey, `styles.sizes.large`)(styleProps)};
+      }
+    `,
+  };
+  return properties[styleProps.size];
+}

@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { renderStylesToString } from 'emotion-server';
+import { renderStylesToString } from '@emotion/server';
 import { InitializeColorMode } from 'bumbag';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
@@ -17,5 +17,5 @@ export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
 };
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([<InitializeColorMode key="bumbag-no-flash" />]);
+  setPreBodyComponents([<InitializeColorMode key='bumbag-no-flash' />]);
 };

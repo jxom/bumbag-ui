@@ -1,11 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -16,80 +72,24 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -98,8 +98,8 @@ exports[`composition as should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -110,44 +110,44 @@ exports[`composition as should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -162,11 +162,67 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -177,80 +233,24 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -259,8 +259,8 @@ exports[`composition render props should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -271,44 +271,44 @@ exports[`composition render props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -316,11 +316,67 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -331,80 +387,24 @@ exports[`defaultProps should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -413,8 +413,8 @@ exports[`defaultProps should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -425,44 +425,44 @@ exports[`defaultProps should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 test bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -470,11 +470,68 @@ exports[`defaultProps should render correctly 1`] = `
 `;
 
 exports[`overrides Group.Item.base should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -485,27 +542,24 @@ exports[`overrides Group.Item.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -514,8 +568,8 @@ exports[`overrides Group.Item.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -526,98 +580,44 @@ exports[`overrides Group.Item.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -625,11 +625,68 @@ exports[`overrides Group.Item.base should render correctly 1`] = `
 `;
 
 exports[`overrides Group.Item.first should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -640,27 +697,24 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -669,8 +723,8 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -681,98 +735,44 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -780,11 +780,68 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
 `;
 
 exports[`overrides Group.Item.last should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -795,27 +852,24 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -824,8 +878,8 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -836,98 +890,44 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -935,11 +935,68 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
 `;
 
 exports[`overrides Group.Item.middle should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -950,27 +1007,24 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -979,8 +1033,8 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -991,98 +1045,44 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -1090,11 +1090,71 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
 `;
 
 exports[`overrides Group.base should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1105,27 +1165,24 @@ exports[`overrides Group.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1134,8 +1191,8 @@ exports[`overrides Group.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1146,101 +1203,44 @@ exports[`overrides Group.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -1248,11 +1248,67 @@ exports[`overrides Group.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1263,80 +1319,24 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1345,8 +1345,8 @@ exports[`props should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1357,44 +1357,44 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -1402,7 +1402,67 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1413,80 +1473,26 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
+  position: absolute!important;
+  top: 0!important;
 }
 
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1495,8 +1501,8 @@ exports[`props should render correctly with CSS props 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1507,50 +1513,44 @@ exports[`props should render correctly with CSS props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-8 {
-  border-radius: 6px !important;
-  position: absolute !important;
-  top: 0 !important;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -1558,11 +1558,68 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Group.Item.base should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1573,27 +1630,24 @@ exports[`theming Group.Item.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1602,8 +1656,8 @@ exports[`theming Group.Item.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1614,98 +1668,44 @@ exports[`theming Group.Item.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -1713,11 +1713,68 @@ exports[`theming Group.Item.base should render correctly 1`] = `
 `;
 
 exports[`theming Group.Item.first should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1728,27 +1785,24 @@ exports[`theming Group.Item.first should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1757,8 +1811,8 @@ exports[`theming Group.Item.first should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1769,98 +1823,44 @@ exports[`theming Group.Item.first should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -1868,11 +1868,68 @@ exports[`theming Group.Item.first should render correctly 1`] = `
 `;
 
 exports[`theming Group.Item.last should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1883,27 +1940,24 @@ exports[`theming Group.Item.last should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1912,8 +1966,8 @@ exports[`theming Group.Item.last should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -1924,98 +1978,44 @@ exports[`theming Group.Item.last should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -2023,11 +2023,68 @@ exports[`theming Group.Item.last should render correctly 1`] = `
 `;
 
 exports[`theming Group.Item.middle should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2038,27 +2095,24 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2067,8 +2121,8 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2079,98 +2133,44 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>
@@ -2178,11 +2178,71 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
 `;
 
 exports[`theming Group.base should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
+.emotion-0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0.emotion-0>* {
+  border-radius: 0px;
+}
+
+.emotion-0 input,
+.emotion-0 select {
+  border-radius: 0px;
+}
+
+.emotion-0 input:focus,
+.emotion-0 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-0>*:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:first-child input,
+.emotion-0>*:first-child select {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.emotion-0>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:last-child input,
+.emotion-0>*:last-child select {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.emotion-0>*:not(:first-child):not(:last-child),
+.emotion-0>*:not(:first-child):not(:last-child)>input,
+.emotion-0>*:not(:first-child):not(:last-child)>select {
+  border-radius: 0;
+}
+
+.emotion-0>*:not(:first-child) {
+  border-left-width: 0;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2193,27 +2253,24 @@ exports[`theming Group.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 {
+  border-radius: 6px!important;
 }
 
-.emotion-0 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2222,8 +2279,8 @@ exports[`theming Group.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2234,101 +2291,44 @@ exports[`theming Group.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
+.emotion-4:hover {
+  background-color: var(--bb-palette-white600, #000000);
 }
 
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5.emotion-5 > * {
-  border-radius: 0px;
-}
-
-.emotion-5 input,
-.emotion-5 select {
-  border-radius: 0px;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.emotion-5 > *:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-.emotion-5 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-4:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 <div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 bb-Box bb-Flex bb-Group"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Group"
   role="group"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
+    class="emotion-4 emotion-2 emotion-6 bb-Box bb-Button"
     type="button"
   >
     Hello
   </button>
   <div
-    class="emotion-1 emotion-2 bb-Box"
+    class="emotion-2 emotion-6 bb-Box"
   >
     World
   </div>

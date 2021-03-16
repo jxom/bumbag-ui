@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -14,19 +27,6 @@ exports[`composition as should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-0 .emotion-0 {
-  margin-left: 1rem;
-}
-
-.emotion-0 li:not(:last-child) {
-  margin-bottom: 0.25rem;
 }
 
 <div
@@ -43,6 +43,19 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -56,19 +69,6 @@ exports[`composition render props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-0 .emotion-0 {
-  margin-left: 1rem;
-}
-
-.emotion-0 li:not(:last-child) {
-  margin-bottom: 0.25rem;
 }
 
 <div
@@ -79,151 +79,6 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for List.Item 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-0 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-<ul
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
->
-  <li
-    class="emotion-0 emotion-1 emotion-2 test bb-Box bb-ListItem"
-  >
-    Item One
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 test bb-Box bb-ListItem"
-  >
-    Item Two
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 test bb-Box bb-ListItem"
-  >
-    Item Three
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 test bb-Box bb-ListItem"
-  >
-    Item Four
-  </li>
-</ul>
-`;
-
-exports[`defaultProps should render correctly for isOrdered 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-12 {
-  list-style-type: decimal;
-}
-
-.emotion-12 .emotion-12 {
-  list-style-type: lower-alpha;
-}
-
-.emotion-12 .emotion-12 .emotion-12 {
-  list-style-type: lower-roman;
-}
-
-<ol
-  class="emotion-12 emotion-1 emotion-2 test bb-Box bb-List"
->
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item One
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item Two
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item Three
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item Four
-  </li>
-</ol>
-`;
-
-exports[`overrides List.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .emotion-0 {
   list-style: unset;
   list-style-type: none;
@@ -235,6 +90,151 @@ exports[`overrides List.base should render correctly 1`] = `
 
 .emotion-0 li:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+<ul
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
+>
+  <li
+    class="emotion-3 emotion-1 emotion-2 test bb-Box bb-ListItem"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 test bb-Box bb-ListItem"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 test bb-Box bb-ListItem"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 test bb-Box bb-ListItem"
+  >
+    Item Four
+  </li>
+</ul>
+`;
+
+exports[`defaultProps should render correctly for isOrdered 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0 {
+  list-style-type: decimal;
+}
+
+.emotion-0 .emotion-0 {
+  list-style-type: lower-alpha;
+}
+
+.emotion-0 .emotion-0 .emotion-0 {
+  list-style-type: lower-roman;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+<ol
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-List"
+>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item Four
+  </li>
+</ol>
+`;
+
+exports[`overrides List.base should render correctly 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <ul
@@ -245,80 +245,6 @@ exports[`overrides List.base should render correctly 1`] = `
 `;
 
 exports[`props should render a basic list 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-0 .bb-Icon {
-  vertical-align: -0.125em;
-}
-
-<ul
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
->
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item One
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item Two
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item Three
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
-  >
-    Item Four
-  </li>
-</ul>
-`;
-
-exports[`props should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .emotion-0 {
   list-style: unset;
   list-style-type: none;
@@ -332,6 +258,80 @@ exports[`props should render correctly 1`] = `
   margin-bottom: 0.25rem;
 }
 
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+<ul
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
+>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
+  >
+    Item Four
+  </li>
+</ul>
+`;
+
+exports[`props should render correctly 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 <ul
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
 >
@@ -340,6 +340,28 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly as a horizontal list 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0.emotion-0.emotion-0 li {
+  display: inline-block;
+  margin-bottom: unset;
+}
+
+.emotion-0.emotion-0.emotion-0 li:not(:last-child) {
+  margin-right: 1rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -355,52 +377,30 @@ exports[`props should render correctly as a horizontal list 1`] = `
   outline: none;
 }
 
-.emotion-0 .bb-Icon {
+.emotion-3 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-12.emotion-12.emotion-12 li {
-  display: inline-block;
-  margin-bottom: unset;
-}
-
-.emotion-12.emotion-12.emotion-12 li:not(:last-child) {
-  margin-right: 1rem;
-}
-
 <ul
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
 >
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item One
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Two
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Three
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Four
   </li>
@@ -408,6 +408,31 @@ exports[`props should render correctly as a horizontal list 1`] = `
 `;
 
 exports[`props should render correctly as an ordered list 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0 {
+  list-style-type: decimal;
+}
+
+.emotion-0 .emotion-0 {
+  list-style-type: lower-alpha;
+}
+
+.emotion-0 .emotion-0 .emotion-0 {
+  list-style-type: lower-roman;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -423,55 +448,30 @@ exports[`props should render correctly as an ordered list 1`] = `
   outline: none;
 }
 
-.emotion-0 .bb-Icon {
+.emotion-3 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-12 {
-  list-style-type: decimal;
-}
-
-.emotion-12 .emotion-12 {
-  list-style-type: lower-alpha;
-}
-
-.emotion-12 .emotion-12 .emotion-12 {
-  list-style-type: lower-roman;
-}
-
 <ol
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
 >
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item One
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Two
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Three
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Four
   </li>
@@ -479,6 +479,19 @@ exports[`props should render correctly as an ordered list 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -494,79 +507,66 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-6 {
-  list-style: unset;
-  list-style-type: none;
+.emotion-2 {
+  list-style-position: inside!important;
+  list-style-type: disc!important;
 }
 
-.emotion-6 .emotion-6 {
-  margin-left: 1rem;
-}
-
-.emotion-6 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-8 {
-  list-style-position: inside !important;
-  list-style-type: disc !important;
-}
-
-.emotion-0 .bb-Icon {
+.emotion-3 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-26 {
-  list-style-position: inside !important;
-  list-style-type: circle !important;
+.emotion-11 {
+  list-style-position: inside!important;
+  list-style-type: circle!important;
 }
 
-.emotion-14 {
-  list-style-type: georgian !important;
+.emotion-17 {
+  list-style-type: georgian!important;
 }
 
-.emotion-23 {
-  list-style-type: circle !important;
+.emotion-20 {
+  list-style-type: circle!important;
 }
 
 <div>
   <ul
-    class="emotion-6 emotion-1 emotion-8 bb-Box bb-List"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
   >
     <li
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+      class="emotion-3 emotion-1 emotion-5 bb-Box bb-ListItem"
     >
       Item 1
     </li>
     <li
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+      class="emotion-3 emotion-1 emotion-5 bb-Box bb-ListItem"
     >
       Item 2
     </li>
   </ul>
   <ul
-    class="emotion-6 emotion-1 emotion-26 bb-Box bb-List"
+    class="emotion-0 emotion-1 emotion-11 bb-Box bb-List"
   >
     <li
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+      class="emotion-3 emotion-1 emotion-5 bb-Box bb-ListItem"
     >
       Item 1
     </li>
     <li
-      class="emotion-0 emotion-1 emotion-14 bb-Box bb-ListItem"
+      class="emotion-3 emotion-1 emotion-17 bb-Box bb-ListItem"
     >
       Item 2
     </li>
     <ul
-      class="emotion-6 emotion-1 emotion-23 bb-Box bb-List"
+      class="emotion-0 emotion-1 emotion-20 bb-Box bb-List"
     >
       <li
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+        class="emotion-3 emotion-1 emotion-5 bb-Box bb-ListItem"
       >
         Item 1
       </li>
       <li
-        class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+        class="emotion-3 emotion-1 emotion-5 bb-Box bb-ListItem"
       >
         Item 2
       </li>
@@ -576,6 +576,19 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming List.Item.base should render correctly 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -591,47 +604,34 @@ exports[`theming List.Item.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-0 .bb-Icon {
+.emotion-3 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <ul
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
 >
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item One
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Two
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Three
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Four
   </li>
@@ -639,6 +639,23 @@ exports[`theming List.Item.base should render correctly 1`] = `
 `;
 
 exports[`theming List.base should render correctly 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -654,47 +671,30 @@ exports[`theming List.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 .bb-Icon {
+.emotion-3 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <ul
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
 >
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item One
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Two
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Three
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Four
   </li>
@@ -702,6 +702,35 @@ exports[`theming List.base should render correctly 1`] = `
 `;
 
 exports[`theming List.ordered should render correctly 1`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0 {
+  list-style-type: decimal;
+}
+
+.emotion-0 .emotion-0 {
+  list-style-type: lower-alpha;
+}
+
+.emotion-0 .emotion-0 .emotion-0 {
+  list-style-type: lower-roman;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -717,59 +746,30 @@ exports[`theming List.ordered should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 .bb-Icon {
+.emotion-3 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-12 {
-  list-style-type: decimal;
-}
-
-.emotion-12 .emotion-12 {
-  list-style-type: lower-alpha;
-}
-
-.emotion-12 .emotion-12 .emotion-12 {
-  list-style-type: lower-roman;
-}
-
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <ol
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
 >
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item One
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Two
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Three
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Four
   </li>
@@ -777,6 +777,32 @@ exports[`theming List.ordered should render correctly 1`] = `
 `;
 
 exports[`theming List.ordered should render correctly 2`] = `
+.emotion-0 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-0 .emotion-0 {
+  margin-left: 1rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0.emotion-0.emotion-0 li {
+  display: inline-block;
+  margin-bottom: unset;
+}
+
+.emotion-0.emotion-0.emotion-0 li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -792,56 +818,30 @@ exports[`theming List.ordered should render correctly 2`] = `
   outline: none;
 }
 
-.emotion-0 .bb-Icon {
+.emotion-3 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 li:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-12.emotion-12.emotion-12 li {
-  display: inline-block;
-  margin-bottom: unset;
-}
-
-.emotion-12.emotion-12.emotion-12 li:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <ul
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-List"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-List"
 >
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item One
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Two
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Three
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2 bb-Box bb-ListItem"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-ListItem"
   >
     Item Four
   </li>

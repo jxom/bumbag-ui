@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -16,22 +18,20 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
@@ -62,8 +62,10 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
-.emotion-2 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
 .emotion-1 {
@@ -81,10 +83,8 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
@@ -96,11 +96,13 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -111,22 +113,20 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 test bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -135,11 +135,13 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`defaultProps should render correctly for title 1`] = `
-.emotion-12 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -150,14 +152,19 @@ exports[`defaultProps should render correctly for title 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -168,18 +175,10 @@ exports[`defaultProps should render correctly for title 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
+.emotion-9 {
   font-weight: 600;
   font-size: 1.25em;
 }
@@ -187,20 +186,20 @@ exports[`defaultProps should render correctly for title 1`] = `
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-10 emotion-0 emotion-12 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-3 emotion-0 emotion-1 emotion-6 bb-CardHeader bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-CardHeader bb-Box bb-Flex"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-CardTitle bb-Box"
+      class="emotion-1 emotion-5 emotion-9 bb-CardTitle bb-Box"
       id="id-test"
     >
       This is a title
     </div>
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-9 bb-CardContent bb-Box"
+    class="emotion-1 emotion-5 emotion-12 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -210,6 +209,12 @@ exports[`defaultProps should render correctly for title 1`] = `
 
 exports[`defaultProps should render correctly for variant 1`] = `
 .emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -220,22 +225,16 @@ exports[`defaultProps should render correctly for variant 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -244,11 +243,13 @@ exports[`defaultProps should render correctly for variant 1`] = `
 `;
 
 exports[`overrides Card.Content.styles.base should render correctly 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -259,26 +260,24 @@ exports[`overrides Card.Content.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -287,11 +286,13 @@ exports[`overrides Card.Content.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Card.Footer.styles.base should render correctly 1`] = `
-.emotion-10 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -302,39 +303,37 @@ exports[`overrides Card.Footer.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin-top: 1.5rem;
 }
 
-.emotion-7 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-8 emotion-0 emotion-10 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-7 bb-CardFooter bb-Box"
+    class="emotion-1 emotion-4 emotion-8 bb-CardFooter bb-Box"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-4 bb-Box"
     >
       This is a footer
     </div>
@@ -343,11 +342,13 @@ exports[`overrides Card.Footer.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Card.Header.styles.base should render correctly 1`] = `
-.emotion-12 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -358,14 +359,12 @@ exports[`overrides Card.Header.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 .emotion-3 {
@@ -373,11 +372,6 @@ exports[`overrides Card.Header.styles.base should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-2 {
-  font-weight: 600;
-  font-size: 1.25em;
 }
 
 .emotion-6 {
@@ -388,31 +382,35 @@ exports[`overrides Card.Header.styles.base should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-9 {
+  font-weight: 600;
+  font-size: 1.25em;
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-10 emotion-0 emotion-12 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-3 emotion-0 emotion-1 emotion-6 bb-CardHeader bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-CardHeader bb-Box bb-Flex"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-CardTitle bb-Box"
+      class="emotion-1 emotion-5 emotion-9 bb-CardTitle bb-Box"
       id="id-test"
     >
       This is a title
     </div>
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-9 bb-CardContent bb-Box"
+    class="emotion-1 emotion-5 emotion-12 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -421,11 +419,13 @@ exports[`overrides Card.Header.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Card.Title.styles.base should render correctly 1`] = `
-.emotion-12 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -436,14 +436,19 @@ exports[`overrides Card.Title.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -454,43 +459,35 @@ exports[`overrides Card.Title.styles.base should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
+.emotion-9 {
   font-weight: 600;
   font-size: 1.25em;
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-9 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-10 emotion-0 emotion-12 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-3 emotion-0 emotion-1 emotion-6 bb-CardHeader bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-CardHeader bb-Box bb-Flex"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-CardTitle bb-Box"
+      class="emotion-1 emotion-5 emotion-9 bb-CardTitle bb-Box"
       id="id-test"
     >
       This is a title
     </div>
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-9 bb-CardContent bb-Box"
+    class="emotion-1 emotion-5 emotion-12 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -499,11 +496,17 @@ exports[`overrides Card.Title.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Card.styles.base should render correctly 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -514,26 +517,20 @@ exports[`overrides Card.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -542,11 +539,13 @@ exports[`overrides Card.styles.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -557,22 +556,20 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
@@ -581,11 +578,13 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly for a footer 1`] = `
-.emotion-10 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -596,35 +595,33 @@ exports[`props should render correctly for a footer 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin-top: 1.5rem;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-8 emotion-0 emotion-10 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-7 bb-CardFooter bb-Box"
+    class="emotion-1 emotion-4 emotion-8 bb-CardFooter bb-Box"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-4 bb-Box"
     >
       This is a footer
     </div>
@@ -633,11 +630,13 @@ exports[`props should render correctly for a footer 1`] = `
 `;
 
 exports[`props should render correctly for a title 1`] = `
-.emotion-12 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -648,14 +647,19 @@ exports[`props should render correctly for a title 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -666,18 +670,10 @@ exports[`props should render correctly for a title 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
+.emotion-9 {
   font-weight: 600;
   font-size: 1.25em;
 }
@@ -685,20 +681,20 @@ exports[`props should render correctly for a title 1`] = `
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-10 emotion-0 emotion-12 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-3 emotion-0 emotion-1 emotion-6 bb-CardHeader bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-CardHeader bb-Box bb-Flex"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-CardTitle bb-Box"
+      class="emotion-1 emotion-5 emotion-9 bb-CardTitle bb-Box"
       id="id-test"
     >
       This is a title
     </div>
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-9 bb-CardContent bb-Box"
+    class="emotion-1 emotion-5 emotion-12 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
@@ -707,11 +703,13 @@ exports[`props should render correctly for a title 1`] = `
 `;
 
 exports[`props should render correctly for headerAddon 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -722,22 +720,20 @@ exports[`props should render correctly for headerAddon 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
@@ -746,11 +742,13 @@ exports[`props should render correctly for headerAddon 1`] = `
 `;
 
 exports[`props should render correctly for standalone 1`] = `
-.emotion-15 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -761,14 +759,19 @@ exports[`props should render correctly for standalone 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-13 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -779,48 +782,40 @@ exports[`props should render correctly for standalone 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
+.emotion-9 {
   font-weight: 600;
   font-size: 1.25em;
 }
 
-.emotion-12 {
+.emotion-15 {
   margin-top: 1.5rem;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-13 emotion-0 emotion-15 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-3 emotion-0 emotion-1 emotion-6 bb-CardHeader bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-CardHeader bb-Box bb-Flex"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-CardTitle bb-Box"
+      class="emotion-1 emotion-5 emotion-9 bb-CardTitle bb-Box"
       id="id-test"
     >
       This is a title
     </div>
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-9 bb-CardContent bb-Box"
+    class="emotion-1 emotion-5 emotion-12 bb-CardContent bb-Box"
     id="id-test"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-12 bb-CardFooter bb-Box"
+    class="emotion-1 emotion-5 emotion-15 bb-CardFooter bb-Box"
   >
     This is a footer
   </div>
@@ -829,6 +824,12 @@ exports[`props should render correctly for standalone 1`] = `
 
 exports[`props should render correctly for variant border 1`] = `
 .emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -839,22 +840,16 @@ exports[`props should render correctly for variant border 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
@@ -864,6 +859,12 @@ exports[`props should render correctly for variant border 1`] = `
 
 exports[`props should render correctly for variant shadow 1`] = `
 .emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -874,22 +875,16 @@ exports[`props should render correctly for variant shadow 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
@@ -899,6 +894,12 @@ exports[`props should render correctly for variant shadow 1`] = `
 
 exports[`props should render correctly with CSS props 1`] = `
 .emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -909,27 +910,24 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     Hello world
@@ -938,11 +936,13 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Card.Content.styles.base should render correctly 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -953,26 +953,24 @@ exports[`theming Card.Content.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -981,11 +979,13 @@ exports[`theming Card.Content.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Card.Footer.styles.base should render correctly 1`] = `
-.emotion-10 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -996,39 +996,37 @@ exports[`theming Card.Footer.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin-top: 1.5rem;
 }
 
-.emotion-7 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-8 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-8 emotion-0 emotion-10 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-7 bb-CardFooter bb-Box"
+    class="emotion-1 emotion-4 emotion-8 bb-CardFooter bb-Box"
   >
     <div
-      class="emotion-0 emotion-1 bb-Box"
+      class="emotion-1 emotion-4 bb-Box"
     >
       This is a footer
     </div>
@@ -1037,11 +1035,13 @@ exports[`theming Card.Footer.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Card.Header.styles.base should render correctly 1`] = `
-.emotion-12 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1052,14 +1052,12 @@ exports[`theming Card.Header.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 .emotion-3 {
@@ -1067,11 +1065,6 @@ exports[`theming Card.Header.styles.base should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-2 {
-  font-weight: 600;
-  font-size: 1.25em;
 }
 
 .emotion-6 {
@@ -1082,31 +1075,35 @@ exports[`theming Card.Header.styles.base should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .emotion-6 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-9 {
+  font-weight: 600;
+  font-size: 1.25em;
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-10 emotion-0 emotion-12 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-3 emotion-0 emotion-1 emotion-6 bb-CardHeader bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-CardHeader bb-Box bb-Flex"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-CardTitle bb-Box"
+      class="emotion-1 emotion-5 emotion-9 bb-CardTitle bb-Box"
       id="id-test"
     >
       This is a title
     </div>
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-9 bb-CardContent bb-Box"
+    class="emotion-1 emotion-5 emotion-12 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -1115,11 +1112,13 @@ exports[`theming Card.Header.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Card.Title.styles.base should render correctly 1`] = `
-.emotion-12 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1130,14 +1129,19 @@ exports[`theming Card.Title.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-10 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -1148,43 +1152,35 @@ exports[`theming Card.Title.styles.base should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
+.emotion-9 {
   font-weight: 600;
   font-size: 1.25em;
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-9 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-describedby="id-test"
   aria-labelledby="id-test"
-  class="emotion-10 emotion-0 emotion-12 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-3 emotion-0 emotion-1 emotion-6 bb-CardHeader bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-CardHeader bb-Box bb-Flex"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-CardTitle bb-Box"
+      class="emotion-1 emotion-5 emotion-9 bb-CardTitle bb-Box"
       id="id-test"
     >
       This is a title
     </div>
   </div>
   <div
-    class="emotion-0 emotion-1 emotion-9 bb-CardContent bb-Box"
+    class="emotion-1 emotion-5 emotion-12 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world
@@ -1193,11 +1189,17 @@ exports[`theming Card.Title.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Card.styles.base should render correctly 1`] = `
-.emotion-5 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+.emotion-0 {
+  background-color: var(--bb-palette-background, #000000);
+  border-radius: 6px;
+  padding: 1.5rem;
 }
 
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1208,26 +1210,20 @@ exports[`theming Card.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-background,#000000);
-  border-radius: 6px;
-  padding: 1.5rem;
-}
-
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-2 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
   aria-describedby="id-test"
-  class="emotion-3 emotion-0 emotion-5 bb-Box bb-Card"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Card"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 bb-CardContent bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-CardContent bb-Box"
     id="id-test"
   >
     hello world

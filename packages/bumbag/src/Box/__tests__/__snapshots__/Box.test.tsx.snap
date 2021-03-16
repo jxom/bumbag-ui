@@ -53,6 +53,62 @@ exports[`composition use should render correctly 1`] = `
 `;
 
 exports[`composition use should render correctly for a Button component with props 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-default, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: var(--bb-palette-white600, #000000);
+}
+
+.emotion-0:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -73,11 +129,11 @@ exports[`composition use should render correctly for a Button component with pro
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-primaryInverted,#000000);
-  fill: var(--bb-palette-primaryInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-primaryInverted, #000000);
+  fill: var(--bb-palette-primaryInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -86,8 +142,8 @@ exports[`composition use should render correctly for a Button component with pro
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -111,89 +167,33 @@ exports[`composition use should render correctly for a Button component with pro
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: var(--bb-palette-primary600,#000000);
+  background-color: var(--bb-palette-primary600, #000000);
 }
 
 .emotion-3:hover:active {
-  background-color: var(--bb-palette-primary700,#000000);
+  background-color: var(--bb-palette-primary700, #000000);
 }
 
 .emotion-3 {
-  background-color: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-primary,#000000);
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-primary, #000000);
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
   box-shadow: unset;
 }
 
 .emotion-3:hover {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primaryTint,#000000);
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
 .emotion-3:hover:active {
-  border-color: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary100,#000000);
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
-  border-color: transparent;
-}
-
-.emotion-0:hover {
-  background-color: var(--bb-palette-white600,#000000);
-}
-
-.emotion-0:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+  border-color: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary100, #000000);
 }
 
 <button
@@ -244,8 +244,11 @@ exports[`modes correctly assigns a ref for applyTheme 1`] = `
 }
 
 .emotion-1 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-  padding: 1rem !important;
+  padding: 1rem!important;
+}
+
+.emotion-1 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
@@ -270,9 +273,12 @@ exports[`modes renders correctly for applyTheme 1`] = `
 }
 
 .emotion-1 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-  color: var(--bb-palette-red,#ff0000) !important;
-  padding: 1rem !important;
+  color: var(--bb-palette-red, #ff0000)!important;
+  padding: 1rem!important;
+}
+
+.emotion-1 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
@@ -297,9 +303,12 @@ exports[`modes renders correctly for applyTheme 2`] = `
 }
 
 .emotion-1 {
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
-  color: var(--bb-palette-red,#ff0000) !important;
-  padding: 1rem !important;
+  color: var(--bb-palette-red, #ff0000)!important;
+  padding: 1rem!important;
+}
+
+.emotion-1 {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15),0px 0px 2px 1px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
@@ -370,11 +379,11 @@ exports[`modes should render correctly when colorMode set as prop 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 .emotion-1 {
-  color: var(--bb-palette-primaryTint,#000000) !important;
+  color: var(--bb-palette-primaryTint, #000000)!important;
 }
 
 <div
@@ -401,11 +410,11 @@ exports[`modes should render correctly when colorMode set as prop 2`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 .emotion-1 {
-  color: var(--bb-palette-primaryTint,#000000) !important;
+  color: var(--bb-palette-primaryTint, #000000)!important;
 }
 
 <div
@@ -476,7 +485,7 @@ exports[`props should render correctly for a borderRadius of 0 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 0px !important;
+  border-radius: 0px!important;
 }
 
 <div
@@ -501,7 +510,7 @@ exports[`props should render correctly for a borderRadius of 1 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 2px !important;
+  border-radius: 2px!important;
 }
 
 <div
@@ -526,7 +535,7 @@ exports[`props should render correctly for a borderRadius of 2 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 4px !important;
+  border-radius: 4px!important;
 }
 
 <div
@@ -551,7 +560,7 @@ exports[`props should render correctly for a borderRadius of 3 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 6px !important;
+  border-radius: 6px!important;
 }
 
 <div
@@ -576,7 +585,7 @@ exports[`props should render correctly for a borderRadius of 4 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 8px !important;
+  border-radius: 8px!important;
 }
 
 <div
@@ -601,7 +610,7 @@ exports[`props should render correctly for a borderRadius of 5 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 16px !important;
+  border-radius: 16px!important;
 }
 
 <div
@@ -626,7 +635,7 @@ exports[`props should render correctly for a borderRadius of 6 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 32px !important;
+  border-radius: 32px!important;
 }
 
 <div
@@ -651,7 +660,7 @@ exports[`props should render correctly for a borderRadius of default 1`] = `
 }
 
 .emotion-1 {
-  border-radius: 6px !important;
+  border-radius: 6px!important;
 }
 
 <div
@@ -676,7 +685,7 @@ exports[`props should render correctly for a custom border 1`] = `
 }
 
 .emotion-1 {
-  border: 1px solid var(--bb-palette-white800,#000000) !important;
+  border: 1px solid var(--bb-palette-white800, #000000)!important;
 }
 
 <div
@@ -814,8 +823,8 @@ exports[`props should render correctly for an alignY of bottom 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
 
@@ -849,8 +858,8 @@ exports[`props should render correctly for an alignY of center 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -884,8 +893,8 @@ exports[`props should render correctly for an alignY of top 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
 
@@ -911,7 +920,7 @@ exports[`props should render correctly for an altitude 1`] = `
 }
 
 .emotion-1 {
-  box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.15),0px 0px 12px 6px rgba(0,0,0,0.02);
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.15),0px 0px 12px 6px rgba(0, 0, 0, 0.02)!important;
 }
 
 <div
@@ -936,8 +945,8 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-1 {
-  background-color: var(--bb-palette-red,#ff0000) !important;
-  color: var(--bb-palette-white,#ffffff) !important;
+  background-color: var(--bb-palette-red, #ff0000)!important;
+  color: var(--bb-palette-white, #ffffff)!important;
 }
 
 <div
@@ -962,8 +971,8 @@ exports[`props should render correctly with CSS props 2`] = `
 }
 
 .emotion-1 {
-  background-color: rgb(255,0,0) !important;
-  color: rgba(0,255,0,0.1) !important;
+  background-color: rgb(255, 0, 0)!important;
+  color: rgba(0, 255, 0, 0.1)!important;
 }
 
 <div
@@ -988,7 +997,7 @@ exports[`props should render correctly with CSS props with active 1`] = `
 }
 
 .emotion-1:active {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
@@ -1013,18 +1022,18 @@ exports[`props should render correctly with CSS props with breakpoints 1`] = `
 }
 
 .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
-@media screen and (min-width:0px) and (max-width:479px) {
+@media screen and (min-width: 0px) and (max-width: 479px) {
   .emotion-1 {
-    background-color: var(--bb-palette-secondary,#000000) !important;
+    background-color: var(--bb-palette-secondary, #000000)!important;
   }
 }
 
-@media screen and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .emotion-1 {
-    background-color: var(--bb-palette-red,#ff0000) !important;
+    background-color: var(--bb-palette-red, #ff0000)!important;
   }
 }
 
@@ -1050,12 +1059,12 @@ exports[`props should render correctly with CSS props with breakpoints 2`] = `
 }
 
 .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .emotion-1 {
-    background-color: var(--bb-palette-secondary,#000000) !important;
+    background-color: var(--bb-palette-secondary, #000000)!important;
   }
 }
 
@@ -1081,12 +1090,12 @@ exports[`props should render correctly with CSS props with breakpoints 3`] = `
 }
 
 .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .emotion-1 {
-    background-color: var(--bb-palette-secondary,#000000) !important;
+    background-color: var(--bb-palette-secondary, #000000)!important;
   }
 }
 
@@ -1112,7 +1121,7 @@ exports[`props should render correctly with CSS props with disabled 1`] = `
 }
 
 .emotion-1:disabled {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <button
@@ -1138,7 +1147,7 @@ exports[`props should render correctly with CSS props with focus 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
@@ -1162,16 +1171,16 @@ exports[`props should render correctly with CSS props with group active 1`] = `
   outline: none;
 }
 
-[role=group]:active .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+[role=group]:active .emotion-3 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-0 emotion-3 bb-Box"
+  class="emotion-0 emotion-1 bb-Box"
   role="group"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-0 emotion-3 bb-Box"
   />
 </div>
 `;
@@ -1192,17 +1201,17 @@ exports[`props should render correctly with CSS props with group disabled 1`] = 
   outline: none;
 }
 
-[role=group]:disabled .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+[role=group]:disabled .emotion-3 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <button
-  class="emotion-0 emotion-3 bb-Box"
+  class="emotion-0 emotion-1 bb-Box"
   disabled=""
   role="group"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-0 emotion-3 bb-Box"
   />
 </button>
 `;
@@ -1223,16 +1232,16 @@ exports[`props should render correctly with CSS props with group focus 1`] = `
   outline: none;
 }
 
-[role=group]:focus .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+[role=group]:focus .emotion-3 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-0 emotion-3 bb-Box"
+  class="emotion-0 emotion-1 bb-Box"
   role="group"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-0 emotion-3 bb-Box"
   />
 </div>
 `;
@@ -1253,16 +1262,16 @@ exports[`props should render correctly with CSS props with group hover 1`] = `
   outline: none;
 }
 
-[role=group]:hover .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+[role=group]:hover .emotion-3 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-0 emotion-3 bb-Box"
+  class="emotion-0 emotion-1 bb-Box"
   role="group"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-0 emotion-3 bb-Box"
   />
 </div>
 `;
@@ -1283,16 +1292,16 @@ exports[`props should render correctly with CSS props with group hover 2`] = `
   outline: none;
 }
 
-[role=group]:hover .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+[role=group]:hover .emotion-3 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-0 emotion-3 bb-Box"
+  class="emotion-0 emotion-1 bb-Box"
   role="group"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-0 emotion-3 bb-Box"
   />
 </div>
 `;
@@ -1313,16 +1322,16 @@ exports[`props should render correctly with CSS props with group visited 1`] = `
   outline: none;
 }
 
-[role=group]:visited .emotion-1 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+[role=group]:visited .emotion-3 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-0 emotion-3 bb-Box"
+  class="emotion-0 emotion-1 bb-Box"
   role="group"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-0 emotion-3 bb-Box"
   />
 </div>
 `;
@@ -1344,7 +1353,7 @@ exports[`props should render correctly with CSS props with hover 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
@@ -1369,7 +1378,7 @@ exports[`props should render correctly with CSS props with hoveractive 1`] = `
 }
 
 .emotion-1:hover:active {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
@@ -1394,7 +1403,7 @@ exports[`props should render correctly with CSS props with visited 1`] = `
 }
 
 .emotion-1:visited {
-  background-color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
@@ -1419,8 +1428,8 @@ exports[`props should render correctly with a color CSS prop 1`] = `
 }
 
 .emotion-1 {
-  background-color: var(--bb-palette-white900,#000000) !important;
-  color: var(--bb-palette-primary,#000000) !important;
+  background-color: var(--bb-palette-white900, #000000)!important;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
@@ -1445,7 +1454,7 @@ exports[`props should render correctly with a font CSS prop 1`] = `
 }
 
 .emotion-1 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif !important;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif!important;
 }
 
 <div
@@ -1470,7 +1479,7 @@ exports[`props should render correctly with a font size CSS prop 1`] = `
 }
 
 .emotion-1 {
-  font-size: 1.5rem !important;
+  font-size: 1.5rem!important;
 }
 
 <div
@@ -1495,7 +1504,7 @@ exports[`props should render correctly with a font weight CSS prop 1`] = `
 }
 
 .emotion-1 {
-  font-weight: 600 !important;
+  font-weight: 600!important;
 }
 
 <div
@@ -1520,7 +1529,7 @@ exports[`props should render correctly with a fontFamily CSS prop 1`] = `
 }
 
 .emotion-1 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif !important;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif!important;
 }
 
 <div
@@ -1545,10 +1554,10 @@ exports[`props should render correctly with a spacing CSS prop (marginX, padding
 }
 
 .emotion-1 {
-  margin-left: 2rem !important;
-  margin-right: 2rem !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
+  margin-left: 2rem!important;
+  margin-right: 2rem!important;
+  padding-left: 1rem!important;
+  padding-right: 1rem!important;
 }
 
 <div
@@ -1573,10 +1582,10 @@ exports[`props should render correctly with a spacing CSS prop (marginY, padding
 }
 
 .emotion-1 {
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  margin-top: 2rem!important;
+  margin-bottom: 2rem!important;
+  padding-top: 1rem!important;
+  padding-bottom: 1rem!important;
 }
 
 <div
@@ -1601,8 +1610,8 @@ exports[`props should render correctly with a spacing CSS prop 1`] = `
 }
 
 .emotion-1 {
-  margin: 2rem !important;
-  padding-left: 1rem !important;
+  margin: 2rem!important;
+  padding-left: 1rem!important;
 }
 
 <div
@@ -1627,7 +1636,7 @@ exports[`props should render correctly with a spacing CSS prop 2`] = `
 }
 
 .emotion-1 {
-  margin: 4rem !important;
+  margin: 4rem!important;
 }
 
 <div
@@ -1674,8 +1683,8 @@ exports[`props should render correctly with negative spacing CSS props 1`] = `
 }
 
 .emotion-1 {
-  margin: -2rem !important;
-  padding-left: -1rem !important;
+  margin: -2rem!important;
+  padding-left: -1rem!important;
 }
 
 <div
@@ -1700,7 +1709,7 @@ exports[`props should render correctly with negative spacing CSS props 2`] = `
 }
 
 .emotion-1 {
-  margin: -4rem !important;
+  margin: -4rem!important;
 }
 
 <div
@@ -1725,7 +1734,7 @@ exports[`props should render correctly with overrides 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
@@ -1750,7 +1759,7 @@ exports[`theming Box.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
@@ -1777,8 +1786,8 @@ exports[`theming Box.base should render correctly 2`] = `
 }
 
 .emotion-0 {
-  background-color: rgb(255,0,0);
-  color: rgba(0,255,0,0.1);
+  background-color: rgb(255, 0, 0);
+  color: rgba(0, 255, 0, 0.1);
 }
 
 <div
@@ -1789,10 +1798,6 @@ exports[`theming Box.base should render correctly 2`] = `
 `;
 
 exports[`theming Box.base should render correctly 3`] = `
-.emotion-1 {
-  color: var(--bb-palette-green,#008000) !important;
-}
-
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1809,7 +1814,11 @@ exports[`theming Box.base should render correctly 3`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-green,#008000);
+  background-color: var(--bb-palette-green, #008000);
+}
+
+.emotion-1 {
+  color: var(--bb-palette-green, #008000)!important;
 }
 
 <div
@@ -1836,7 +1845,7 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div

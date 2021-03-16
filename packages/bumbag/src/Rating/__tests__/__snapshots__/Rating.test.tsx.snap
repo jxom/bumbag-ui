@@ -142,7 +142,21 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -153,103 +167,91 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 {
-  color: var(--bb-palette-gold,#ffd700);
+.emotion-4 {
+  color: var(--bb-palette-gold, #ffd700);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-3:hover:active {
+.emotion-4:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-3:not(:first-of-type) {
+.emotion-4:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-0 {
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-24:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-2 bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Rating"
   role="radiogroup"
 >
   <div
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -264,14 +266,14 @@ exports[`composition render props should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -286,14 +288,14 @@ exports[`composition render props should render correctly 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -308,14 +310,14 @@ exports[`composition render props should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -330,14 +332,14 @@ exports[`composition render props should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -352,7 +354,21 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -363,103 +379,91 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 {
+  color: var(--bb-palette-primary, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: color 0.1s,-webkit-transform 0.2s;
+  transition: color 0.1s,transform 0.2s;
+  font-size: 1.5rem;
 }
 
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-4:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-.emotion-0 {
+.emotion-4:hover:active {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.emotion-4:not(:first-of-type) {
+  margin-left: 0.25rem;
+}
+
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-24:not(:first-of-type) {
-  margin-left: 0.25rem;
-}
-
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
-  transition: color 0.1s,transform 0.2s;
-  font-size: 1.5rem;
-}
-
-.emotion-3:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.emotion-3:hover:active {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.emotion-3:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-2 test bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-Flex bb-Rating"
   role="radiogroup"
 >
   <div
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -474,14 +478,14 @@ exports[`defaultProps should render correctly for className 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -496,14 +500,14 @@ exports[`defaultProps should render correctly for className 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -518,14 +522,14 @@ exports[`defaultProps should render correctly for className 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -540,14 +544,14 @@ exports[`defaultProps should render correctly for className 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -562,7 +566,21 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`defaultProps should render correctly for item 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -573,89 +591,77 @@ exports[`defaultProps should render correctly for item 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-20 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-12 {
-  color: var(--bb-palette-white900,#000000);
+.emotion-4 {
+  color: var(--bb-palette-primary, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-12:hover {
+.emotion-4:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-12:hover:active {
+.emotion-4:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-12:not(:first-of-type) {
+.emotion-4:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-0 {
-  color: var(--bb-palette-primary,#000000);
+.emotion-16 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-0:hover {
+.emotion-16:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-0:hover:active {
+.emotion-16:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-0:not(:first-of-type) {
+.emotion-16:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
 <div
-  class="emotion-20 emotion-21 emotion-1 emotion-2 test bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-Flex bb-Rating"
   role="radiogroup"
 >
   <div
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
@@ -668,7 +674,7 @@ exports[`defaultProps should render correctly for item 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
@@ -681,7 +687,7 @@ exports[`defaultProps should render correctly for item 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
@@ -694,7 +700,7 @@ exports[`defaultProps should render correctly for item 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-12 emotion-1 emotion-2 emotion-3 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-16 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
@@ -707,7 +713,7 @@ exports[`defaultProps should render correctly for item 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-12 emotion-1 emotion-2 emotion-3 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-16 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
@@ -720,7 +726,21 @@ exports[`defaultProps should render correctly for item 1`] = `
 `;
 
 exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -731,97 +751,85 @@ exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 {
+  color: var(--bb-palette-gold, #ffd700);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: color 0.1s,-webkit-transform 0.2s;
+  transition: color 0.1s,transform 0.2s;
+  font-size: 1.5rem;
 }
 
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-4:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-.emotion-0 {
+.emotion-4:hover:active {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.emotion-4:not(:first-of-type) {
+  margin-left: 0.25rem;
+}
+
+.emotion-4 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-3 {
-  color: var(--bb-palette-gold,#ffd700);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-3:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-3:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-3:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
-  transition: color 0.1s,transform 0.2s;
-  font-size: 1.5rem;
-}
-
-.emotion-24:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.emotion-24:hover:active {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.emotion-24:not(:first-of-type) {
-  margin-left: 0.25rem;
-}
-
-.emotion-24 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-25 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-2 bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Rating"
   overrides="[object Object]"
   role="radiogroup"
 >
@@ -829,14 +837,14 @@ exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -851,14 +859,14 @@ exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -873,14 +881,14 @@ exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -895,14 +903,14 @@ exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -917,14 +925,14 @@ exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -939,7 +947,25 @@ exports[`overrides Rating.Item.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Rating.styles.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -950,93 +976,77 @@ exports[`overrides Rating.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-3 {
-  color: var(--bb-palette-gold,#ffd700);
+.emotion-4 {
+  color: var(--bb-palette-gold, #ffd700);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-3:hover:active {
+.emotion-4:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-3:not(:first-of-type) {
+.emotion-4:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-0 {
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-24:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-35 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-2 bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Rating"
   overrides="[object Object]"
   role="radiogroup"
 >
@@ -1044,14 +1054,14 @@ exports[`overrides Rating.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1066,14 +1076,14 @@ exports[`overrides Rating.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1088,14 +1098,14 @@ exports[`overrides Rating.styles.base should render correctly 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1110,14 +1120,14 @@ exports[`overrides Rating.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1132,14 +1142,14 @@ exports[`overrides Rating.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1154,7 +1164,21 @@ exports[`overrides Rating.styles.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1165,103 +1189,91 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 {
-  color: var(--bb-palette-gold,#ffd700);
+.emotion-4 {
+  color: var(--bb-palette-gold, #ffd700);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-3:hover:active {
+.emotion-4:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-3:not(:first-of-type) {
+.emotion-4:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-0 {
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-24:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-2 bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Rating"
   role="radiogroup"
 >
   <div
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1276,14 +1288,14 @@ exports[`props should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1298,14 +1310,14 @@ exports[`props should render correctly 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1320,14 +1332,14 @@ exports[`props should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1342,14 +1354,14 @@ exports[`props should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1364,7 +1376,21 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1375,107 +1401,95 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .emotion-3 {
-  color: var(--bb-palette-gold,#ffd700);
+  background-color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-4 {
+  color: var(--bb-palette-gold, #ffd700);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-3:hover:active {
+.emotion-4:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-3:not(:first-of-type) {
+.emotion-4:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-0 {
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-24:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-38 {
-  background-color: var(--bb-palette-primary,#000000) !important;
-}
-
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-38 bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Rating"
   role="radiogroup"
 >
   <div
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-6 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1490,14 +1504,14 @@ exports[`props should render correctly with CSS props 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-6 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1512,14 +1526,14 @@ exports[`props should render correctly with CSS props 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-6 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1534,14 +1548,14 @@ exports[`props should render correctly with CSS props 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-6 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1556,14 +1570,14 @@ exports[`props should render correctly with CSS props 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-6 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1578,7 +1592,21 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Rating.Item.styles.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1589,111 +1617,99 @@ exports[`theming Rating.Item.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 {
+  color: var(--bb-palette-gold, #ffd700);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: color 0.1s,-webkit-transform 0.2s;
+  transition: color 0.1s,transform 0.2s;
+  font-size: 1.5rem;
 }
 
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-4:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-.emotion-0 {
+.emotion-4:hover:active {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.emotion-4:not(:first-of-type) {
+  margin-left: 0.25rem;
+}
+
+.emotion-4 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-3 {
-  color: var(--bb-palette-gold,#ffd700);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-3:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-3:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-3:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
-  transition: color 0.1s,transform 0.2s;
-  font-size: 1.5rem;
-}
-
-.emotion-24:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.emotion-24:hover:active {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.emotion-24:not(:first-of-type) {
-  margin-left: 0.25rem;
-}
-
-.emotion-24 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-25 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-2 bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Rating"
   role="radiogroup"
 >
   <div
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1708,14 +1724,14 @@ exports[`theming Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1730,14 +1746,14 @@ exports[`theming Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1752,14 +1768,14 @@ exports[`theming Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1774,14 +1790,14 @@ exports[`theming Rating.Item.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1796,7 +1812,25 @@ exports[`theming Rating.Item.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Rating.styles.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1807,107 +1841,91 @@ exports[`theming Rating.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-3 {
-  color: var(--bb-palette-gold,#ffd700);
+.emotion-4 {
+  color: var(--bb-palette-gold, #ffd700);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-3:hover:active {
+.emotion-4:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-3:not(:first-of-type) {
+.emotion-4:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-0 {
+.emotion-8 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-24 {
-  color: var(--bb-palette-white900,#000000);
+.emotion-25 {
+  color: var(--bb-palette-white900, #000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.1s,-webkit-transform 0.2s;
-  -webkit-transition: color 0.1s,transform 0.2s;
   transition: color 0.1s,transform 0.2s;
   font-size: 1.5rem;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.emotion-24:not(:first-of-type) {
+.emotion-25:not(:first-of-type) {
   margin-left: 0.25rem;
 }
 
-.emotion-35 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-35 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-35 emotion-36 emotion-1 emotion-2 bb-Box bb-Flex bb-Rating"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Flex bb-Rating"
   role="radiogroup"
 >
   <div
     aria-checked="false"
     aria-posinset="1"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1922,14 +1940,14 @@ exports[`theming Rating.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="2"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1944,14 +1962,14 @@ exports[`theming Rating.styles.base should render correctly 1`] = `
     aria-checked="true"
     aria-posinset="3"
     aria-setsize="5"
-    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-4 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1966,14 +1984,14 @@ exports[`theming Rating.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="4"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >
@@ -1988,14 +2006,14 @@ exports[`theming Rating.styles.base should render correctly 1`] = `
     aria-checked="false"
     aria-posinset="5"
     aria-setsize="5"
-    class="emotion-24 emotion-1 emotion-2 emotion-6 bb-Box bb-Rover bb-RatingItem"
+    class="emotion-25 emotion-2 emotion-3 emotion-7 bb-Box bb-Rover bb-RatingItem"
     id="test"
     role="radio"
     tabindex="0"
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+      class="emotion-8 emotion-2 emotion-3 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 576 512"
     >

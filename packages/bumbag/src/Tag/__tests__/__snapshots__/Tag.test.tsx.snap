@@ -1,6 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -16,29 +38,14 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-3 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -47,18 +54,11 @@ exports[`composition as should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -68,8 +68,17 @@ exports[`composition as should render correctly 1`] = `
 exports[`composition hook should return with Tag props 1`] = `
 Object {
   "children": <React.Fragment>
-    <Flex
-      className="css-137wwsv bb-TagContent"
+    .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
+  padding: 0 NaNem;
+}
+
+<Flex
+      className="emotion-0 bb-TagContent"
     />
   </React.Fragment>,
   "className": "css-186i6uh css-63it0p css-1074357 bb-Box bb-Tag",
@@ -77,6 +86,28 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -90,28 +121,6 @@ exports[`composition render props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 <div
@@ -122,6 +131,28 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -137,38 +168,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 .emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: inherit;
-  padding: 0 0.75em;
-}
-
-.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,14 +180,19 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-6 {
-  color: var(--bb-palette-primary,#000000) !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
+  padding: 0 0.75em;
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-6 test bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -191,6 +200,28 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides Tag.Close.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -206,29 +237,14 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-3 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -237,11 +253,9 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-7.emotion-7 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
 .emotion-8 {
@@ -249,11 +263,11 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -262,8 +276,8 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -274,7 +288,7 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
 .emotion-8[disabled],
@@ -288,54 +302,38 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-8:hover {
-  background-color: var(--bb-palette-white600,#000000);
+  background-color: var(--bb-palette-white600, #000000);
 }
 
 .emotion-8:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 .emotion-8 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
 .emotion-8:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .emotion-8:hover:active {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.emotion-7.emotion-7 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-6 {
-  font-size: 1rem !important;
-}
-
-.emotion-4 {
-  fill: inherit;
-  position: relative;
-  height: 1em;
-  width: 1em;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: var(--bb-palette-text,#000000);
-  color: var(--bb-palette-textInverted,#000000);
-  fill: var(--bb-palette-textInverted,#000000);
+  background-color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-textInverted, #000000);
+  fill: var(--bb-palette-textInverted, #000000);
   height: 1.5em;
   padding: 0 0.25em;
   margin-right: 0.25em;
@@ -351,14 +349,25 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-12 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.emotion-14 {
+  font-size: 1rem!important;
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -368,7 +377,7 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-4 emotion-1 emotion-6 bb-Box bb-Icon"
+      class="emotion-12 emotion-1 emotion-14 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -388,6 +397,28 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
 `;
 
 exports[`overrides Tag.Content.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -403,36 +434,14 @@ exports[`overrides Tag.Content.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-0 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-3 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -441,15 +450,15 @@ exports[`overrides Tag.Content.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -457,6 +466,32 @@ exports[`overrides Tag.Content.base should render correctly 1`] = `
 `;
 
 exports[`overrides Tag.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -473,6 +508,13 @@ exports[`overrides Tag.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -481,44 +523,11 @@ exports[`overrides Tag.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -526,6 +535,39 @@ exports[`overrides Tag.base should render correctly 1`] = `
 `;
 
 exports[`overrides Tag.outlined.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: 1px solid var(--bb-palette-text, #000000);
+  color: var(--bb-palette-text, #000000);
+  fill: var(--bb-palette-text, #000000);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -542,6 +584,13 @@ exports[`overrides Tag.outlined.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -550,51 +599,11 @@ exports[`overrides Tag.outlined.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  background-color: unset;
-  border: 1px solid var(--bb-palette-text,#000000);
-  color: var(--bb-palette-text,#000000);
-  fill: var(--bb-palette-text,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -602,6 +611,32 @@ exports[`overrides Tag.outlined.base should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -618,6 +653,13 @@ exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -626,44 +668,11 @@ exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -671,6 +680,34 @@ exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1.25em;
+  height: 2.5rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -687,6 +724,13 @@ exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -695,46 +739,11 @@ exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1.25em;
-  height: 2.5rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -742,6 +751,34 @@ exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1em;
+  height: 2rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -758,6 +795,13 @@ exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -766,46 +810,11 @@ exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1em;
-  height: 2rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -813,6 +822,28 @@ exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.small.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -829,6 +860,13 @@ exports[`overrides sizes Tag.sizes.small.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -837,40 +875,11 @@ exports[`overrides sizes Tag.sizes.small.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -878,6 +887,28 @@ exports[`overrides sizes Tag.sizes.small.base should render correctly 1`] = `
 `;
 
 exports[`props palette should render a danger tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-danger, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-dangerInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-dangerInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -894,6 +925,13 @@ exports[`props palette should render a danger tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -902,40 +940,11 @@ exports[`props palette should render a danger tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-danger,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-dangerInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-dangerInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -943,6 +952,28 @@ exports[`props palette should render a danger tag correctly 1`] = `
 `;
 
 exports[`props palette should render a info tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-info, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-infoInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-infoInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -959,6 +990,13 @@ exports[`props palette should render a info tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -967,40 +1005,11 @@ exports[`props palette should render a info tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-info,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-infoInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-infoInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1008,6 +1017,28 @@ exports[`props palette should render a info tag correctly 1`] = `
 `;
 
 exports[`props palette should render a primary tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-primary, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-primaryInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-primaryInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1024,6 +1055,13 @@ exports[`props palette should render a primary tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1032,40 +1070,11 @@ exports[`props palette should render a primary tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-primary,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-primaryInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-primaryInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1073,6 +1082,28 @@ exports[`props palette should render a primary tag correctly 1`] = `
 `;
 
 exports[`props palette should render a secondary tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-secondary, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-secondaryInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-secondaryInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1089,6 +1120,13 @@ exports[`props palette should render a secondary tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1097,40 +1135,11 @@ exports[`props palette should render a secondary tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-secondary,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-secondaryInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-secondaryInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1138,6 +1147,28 @@ exports[`props palette should render a secondary tag correctly 1`] = `
 `;
 
 exports[`props palette should render a success tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-success, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-successInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-successInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1154,6 +1185,13 @@ exports[`props palette should render a success tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1162,40 +1200,11 @@ exports[`props palette should render a success tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-success,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-successInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-successInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1203,6 +1212,28 @@ exports[`props palette should render a success tag correctly 1`] = `
 `;
 
 exports[`props palette should render a warning tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-warning, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-warningInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-warningInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1219,6 +1250,13 @@ exports[`props palette should render a warning tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1227,40 +1265,11 @@ exports[`props palette should render a warning tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-warning,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-warningInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-warningInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1268,6 +1277,28 @@ exports[`props palette should render a warning tag correctly 1`] = `
 `;
 
 exports[`props should render a tag with onRemove correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1283,29 +1314,14 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-3 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1314,10 +1330,87 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   padding: 0 0.75em;
 }
 
+.emotion-7.emotion-7 {
+  min-height: unset;
+  padding: 0.5em;
+}
+
+.emotion-8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-default, #000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900, #000000);
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-8:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-8:hover {
+  background-color: var(--bb-palette-white600, #000000);
+}
+
+.emotion-8:hover:active {
+  background-color: var(--bb-palette-white800, #000000);
+}
+
+.emotion-8 {
+  background-color: unset;
+  border: unset;
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
+  box-shadow: unset;
+}
+
+.emotion-8:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.emotion-8:hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .emotion-11.emotion-11.emotion-11 {
-  background-color: var(--bb-palette-text,#000000);
-  color: var(--bb-palette-textInverted,#000000);
-  fill: var(--bb-palette-textInverted,#000000);
+  background-color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-textInverted, #000000);
+  fill: var(--bb-palette-textInverted, #000000);
   height: 1.5em;
   padding: 0 0.25em;
   margin-right: 0.25em;
@@ -1332,106 +1425,22 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-8[disabled],
-.emotion-8[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-8:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
-  border-color: transparent;
-}
-
-.emotion-8:hover {
-  background-color: var(--bb-palette-white600,#000000);
-}
-
-.emotion-8:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
-}
-
-.emotion-8 {
-  background-color: unset;
-  border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  box-shadow: unset;
-}
-
-.emotion-8:hover {
-  background-color: rgba(0,0,0,0.05);
-}
-
-.emotion-8:hover:active {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.emotion-7.emotion-7 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-6 {
-  font-size: 1rem !important;
-}
-
-.emotion-4 {
+.emotion-12 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
+.emotion-14 {
+  font-size: 1rem!important;
+}
+
 <div
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1441,7 +1450,7 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-4 emotion-1 emotion-6 bb-Box bb-Icon"
+      class="emotion-12 emotion-1 emotion-14 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1461,6 +1470,28 @@ exports[`props should render a tag with onRemove correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1476,103 +1507,7 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 .emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: inherit;
-  padding: 0 0.75em;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
->
-  <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
-  >
-    Hello world
-  </div>
-</div>
-`;
-
-exports[`props should render correctly with CSS props 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: inherit;
-  padding: 0 0.75em;
-}
-
-.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1580,14 +1515,88 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-6 {
-  color: var(--bb-palette-primary,#000000) !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
+  padding: 0 0.75em;
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-6 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
+  padding: 0 0.75em;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
+>
+  <div
+    class="emotion-3 emotion-1 emotion-5 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1595,6 +1604,28 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`props size should render a default tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1610,29 +1641,14 @@ exports[`props size should render a default tag correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-3 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1641,18 +1657,11 @@ exports[`props size should render a default tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1660,6 +1669,30 @@ exports[`props size should render a default tag correctly 1`] = `
 `;
 
 exports[`props size should render a large tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1.25em;
+  height: 2.5rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1676,6 +1709,13 @@ exports[`props size should render a large tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1684,42 +1724,11 @@ exports[`props size should render a large tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1.25em;
-  height: 2.5rem;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1727,6 +1736,30 @@ exports[`props size should render a large tag correctly 1`] = `
 `;
 
 exports[`props size should render a medium tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1em;
+  height: 2rem;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1743,6 +1776,13 @@ exports[`props size should render a medium tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1751,42 +1791,11 @@ exports[`props size should render a medium tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1em;
-  height: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1794,6 +1803,28 @@ exports[`props size should render a medium tag correctly 1`] = `
 `;
 
 exports[`props size should render a small tag correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1810,6 +1841,13 @@ exports[`props size should render a small tag correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1818,40 +1856,11 @@ exports[`props size should render a small tag correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1859,6 +1868,28 @@ exports[`props size should render a small tag correctly 1`] = `
 `;
 
 exports[`props size should render correctly with overrides 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1875,6 +1906,13 @@ exports[`props size should render correctly with overrides 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1883,40 +1921,11 @@ exports[`props size should render correctly with overrides 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1924,6 +1933,32 @@ exports[`props size should render correctly with overrides 1`] = `
 `;
 
 exports[`props size should render correctly with overrides 2`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1940,6 +1975,13 @@ exports[`props size should render correctly with overrides 2`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1948,44 +1990,11 @@ exports[`props size should render correctly with overrides 2`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -1993,6 +2002,34 @@ exports[`props size should render correctly with overrides 2`] = `
 `;
 
 exports[`props size should render correctly with overrides 3`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1em;
+  height: 2rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2009,6 +2046,13 @@ exports[`props size should render correctly with overrides 3`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2017,46 +2061,11 @@ exports[`props size should render correctly with overrides 3`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1em;
-  height: 2rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -2064,6 +2073,34 @@ exports[`props size should render correctly with overrides 3`] = `
 `;
 
 exports[`props size should render correctly with overrides 4`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1.25em;
+  height: 2.5rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2080,6 +2117,13 @@ exports[`props size should render correctly with overrides 4`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2088,46 +2132,11 @@ exports[`props size should render correctly with overrides 4`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1.25em;
-  height: 2.5rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     Hello world
   </div>
@@ -2135,6 +2144,28 @@ exports[`props size should render correctly with overrides 4`] = `
 `;
 
 exports[`theming Tag.Close.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2150,29 +2181,14 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-3 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2181,11 +2197,9 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-7.emotion-7 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
 .emotion-8 {
@@ -2193,11 +2207,11 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default, #000000);
   border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2206,8 +2220,8 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   font-weight: 600;
   min-height: 2.75rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1rem;
   -webkit-text-decoration: none;
@@ -2218,7 +2232,7 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
 }
 
 .emotion-8[disabled],
@@ -2232,54 +2246,38 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200, #000000) 0px 0px 0px 1px,var(--bb-palette-gray100, #000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-8:hover {
-  background-color: var(--bb-palette-white600,#000000);
+  background-color: var(--bb-palette-white600, #000000);
 }
 
 .emotion-8:hover:active {
-  background-color: var(--bb-palette-white800,#000000);
+  background-color: var(--bb-palette-white800, #000000);
 }
 
 .emotion-8 {
   background-color: unset;
   border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
+  color: var(--bb-palette-defaultInverted, #000000);
+  fill: var(--bb-palette-defaultInverted, #000000);
   box-shadow: unset;
 }
 
 .emotion-8:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .emotion-8:hover:active {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.emotion-7.emotion-7 {
-  min-height: unset;
-  padding: 0.5em;
-}
-
-.emotion-6 {
-  font-size: 1rem !important;
-}
-
-.emotion-4 {
-  fill: inherit;
-  position: relative;
-  height: 1em;
-  width: 1em;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: var(--bb-palette-text,#000000);
-  color: var(--bb-palette-textInverted,#000000);
-  fill: var(--bb-palette-textInverted,#000000);
+  background-color: var(--bb-palette-text, #000000);
+  color: var(--bb-palette-textInverted, #000000);
+  fill: var(--bb-palette-textInverted, #000000);
   height: 1.5em;
   padding: 0 0.25em;
   margin-right: 0.25em;
@@ -2295,14 +2293,25 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-12 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.emotion-14 {
+  font-size: 1rem!important;
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -2312,7 +2321,7 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-4 emotion-1 emotion-6 bb-Box bb-Icon"
+      class="emotion-12 emotion-1 emotion-14 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2332,6 +2341,28 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
 `;
 
 exports[`theming Tag.Content.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2347,36 +2378,14 @@ exports[`theming Tag.Content.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-0 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-3 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2385,15 +2394,15 @@ exports[`theming Tag.Content.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -2401,6 +2410,32 @@ exports[`theming Tag.Content.base should render correctly 1`] = `
 `;
 
 exports[`theming Tag.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2417,6 +2452,13 @@ exports[`theming Tag.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2425,44 +2467,11 @@ exports[`theming Tag.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -2470,6 +2479,39 @@ exports[`theming Tag.base should render correctly 1`] = `
 `;
 
 exports[`theming Tag.outlined.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: 1px solid var(--bb-palette-text, #000000);
+  color: var(--bb-palette-text, #000000);
+  fill: var(--bb-palette-text, #000000);
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2486,6 +2528,13 @@ exports[`theming Tag.outlined.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2494,51 +2543,11 @@ exports[`theming Tag.outlined.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  background-color: unset;
-  border: 1px solid var(--bb-palette-text,#000000);
-  color: var(--bb-palette-text,#000000);
-  fill: var(--bb-palette-text,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -2546,6 +2555,32 @@ exports[`theming Tag.outlined.base should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2562,6 +2597,13 @@ exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2570,44 +2612,11 @@ exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -2615,6 +2624,34 @@ exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1.25em;
+  height: 2.5rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2631,6 +2668,13 @@ exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2639,46 +2683,11 @@ exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1.25em;
-  height: 2.5rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -2686,6 +2695,34 @@ exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1em;
+  height: 2rem;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2702,6 +2739,13 @@ exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2710,46 +2754,11 @@ exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1em;
-  height: 2rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>
@@ -2757,6 +2766,28 @@ exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.small.base should render correctly 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-text, #000000);
+  border-radius: 6px;
+  color: var(--bb-palette-textInverted, #000000);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: var(--bb-palette-textInverted, #000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2773,6 +2804,13 @@ exports[`theming sizes Tag.sizes.small.base should render correctly 1`] = `
 }
 
 .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2781,40 +2819,11 @@ exports[`theming sizes Tag.sizes.small.base should render correctly 1`] = `
   padding: 0 0.75em;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-text,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-textInverted,#000000);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: var(--bb-palette-textInverted,#000000);
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-TagContent bb-Box bb-Flex"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-TagContent bb-Box bb-Flex"
   >
     hello world
   </div>

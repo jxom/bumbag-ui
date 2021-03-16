@@ -107,6 +107,99 @@ function Example() {
 ###
 ```
 
+### Sizes
+
+#### Small
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      size="small"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  );
+}
+```
+
+#### Default
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  );
+}
+```
+
+#### Medium
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      size="medium"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  );
+}
+```
+
+#### Large
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      size="large"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  );
+}
+```
+
 ### Disabled
 
 ```function-live
