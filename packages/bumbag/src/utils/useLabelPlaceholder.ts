@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export function useLabelPlaceholder({ enabled = false, ...props }) {
+export function useLabelPlaceholder({ enabled = false, useValue = false, ...props }) {
   const [controlledValue, setControlledValue] = React.useState(props.defaultValue || props.value);
   const [isFocused, setIsFocused] = React.useState(enabled && Boolean(props.defaultValue || props.value));
 
@@ -28,15 +28,17 @@ export function useLabelPlaceholder({ enabled = false, ...props }) {
   );
 
   const onChange = React.useCallback(
-    (e) => {
+    (...args) => {
       // eslint-disable-next-line
-      props.onChange?.(e);
+      props.onChange?.(...args);
+
+      const e = args[0];
       if (enabled) {
-        const value = e.target.value;
+        const value = useValue ? e : e.target.value;
         setControlledValue(value);
       }
     },
-    [enabled, props.onChange]
+    [enabled, props.onChange, useValue]
   );
 
   const onFocus = React.useCallback(

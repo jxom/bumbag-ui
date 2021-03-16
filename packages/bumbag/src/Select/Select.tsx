@@ -3,12 +3,23 @@ import { Box as ReakitBox } from 'reakit';
 import ConditionalWrap from 'conditional-wrap';
 
 import { Size } from '../types';
-import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
+import {
+  useClassName,
+  createComponent,
+  createElement,
+  createHook,
+  mergeRefs,
+  pickCSSProps,
+  omitCSSProps,
+  useLabelPlaceholder,
+  useUniqueId,
+} from '../utils';
 import { Box, BoxProps } from '../Box';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Group } from '../Group';
 import { Icon } from '../Icon';
 import { Spinner } from '../Spinner';
+import { Text } from '../Text';
 
 import * as styles from './Select.styles';
 
@@ -23,6 +34,7 @@ export type LocalSelectProps = {
   isLoading?: boolean;
   /** Makes the input required and sets aria-invalid to true */
   isRequired?: boolean;
+  label?: string;
   /** Name of the input field */
   name?: string;
   options: Array<{ label: string; value: any; disabled?: boolean }>;
@@ -51,6 +63,7 @@ const useProps = createHook<SelectProps>(
       disabled,
       isLoading,
       isRequired,
+      label,
       onChange,
       options,
       placeholder: _placeholder,
@@ -60,12 +73,23 @@ const useProps = createHook<SelectProps>(
       ...restProps
     } = props;
 
+    const ref = React.useRef();
+
+    const uid = useUniqueId();
+
+    const { isFocused, inputProps: labelPlaceholderInputProps } = useLabelPlaceholder({
+      enabled: Boolean(label),
+      ...props,
+    });
+
     let placeholder = _placeholder;
     if (isLoading && options.length === 0) {
       placeholder = 'Loading...';
     }
 
-    const [isPlaceholderSelected, setIsPlaceholderSelected] = React.useState(Boolean(placeholder));
+    const [isPlaceholderSelected, setIsPlaceholderSelected] = React.useState(
+      Boolean(!props.defaultValue && !props.value && (label || placeholder))
+    );
     const handleChange = React.useCallback(
       (e) => {
         setIsPlaceholderSelected(false);
@@ -93,14 +117,44 @@ const useProps = createHook<SelectProps>(
       themeKey,
       themeKeySuffix: 'Spinner',
     });
+    const labelWrapperClassName = useClassName({
+      style: styles.LabelWrapper,
+      styleProps: { ...props, isFocused: isFocused || !isPlaceholderSelected },
+      themeKey,
+      themeKeySuffix: 'LabelWrapper',
+    });
+    const labelWrapperBackgroundClassName = useClassName({
+      style: styles.LabelWrapperBackground,
+      styleProps: { ...props, isFocused: isFocused || !isPlaceholderSelected },
+      themeKey,
+      themeKeySuffix: 'LabelWrapperBackground',
+    });
 
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
+      id: uid,
       ...selectProps,
+      ...labelPlaceholderInputProps,
       className: undefined,
-      elementRef: selectRef || props.elementRef,
+      elementRef: mergeRefs(ref, selectRef, props.elementRef),
       wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
+          {label && (
+            <>
+              <Box className={labelWrapperBackgroundClassName}>
+                <Text opacity="0">{label}</Text>
+              </Box>
+              {/*
+                // @ts-ignore */}
+              <Box className={labelWrapperClassName}>
+                {/*
+                  // @ts-ignore */}
+                <Text use="label" htmlFor={selectProps?.id || uid}>
+                  {label}
+                </Text>
+              </Box>
+            </>
+          )}
           {children}
           {isLoading ? (
             <Spinner className={spinnerClassName} color="text" />
@@ -111,9 +165,17 @@ const useProps = createHook<SelectProps>(
       ),
     });
 
+    let color = 'text';
+    if (isPlaceholderSelected) {
+      color = 'gray300';
+      if (label) {
+        color = 'transparent';
+      }
+    }
+
     const className = useClassName({
       style: styles.Select,
-      styleProps: { ...props, isPlaceholderSelected },
+      styleProps: { ...props, color, hasIcon: true, isPlaceholderSelected },
       themeKey,
       prevClassName: boxProps.className,
     });
@@ -127,11 +189,13 @@ const useProps = createHook<SelectProps>(
       onChange: handleChange,
       children: (
         <React.Fragment>
-          {placeholder && (
-            <option disabled={typeof restProps.value !== 'undefined'} value="">
-              {placeholder}
+          {(label || placeholder) && (
+            <option disabled={typeof restProps.value !== 'undefined' || !isPlaceholderSelected} value="">
+              {label || placeholder}
             </option>
           )}
+          {/*
+            // @ts-ignore */}
           {options.map((option, i) => (
             <option
               key={i} // eslint-disable-line
@@ -145,7 +209,7 @@ const useProps = createHook<SelectProps>(
       ),
     };
   },
-  { themeKey: 'Select' }
+  { defaultProps: { variant: 'bordered' }, themeKey: 'Select' }
 );
 
 export const Select = createComponent<SelectProps>(
@@ -216,6 +280,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       overrides,
       selectRef,
       validationText,
+      variant,
       ...restProps
     } = props;
 
@@ -243,6 +308,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
           tooltip={tooltip}
           tooltipTriggerComponent={tooltipTriggerComponent}
           validationText={validationText}
+          variant={variant}
         >
           {({ elementProps }) => (
             <ConditionalWrap
@@ -273,6 +339,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
                   onChange={onChange}
                   onFocus={onFocus}
                   overrides={overrides}
+                  variant={variant}
                   {...elementProps}
                 />
                 {addonAfter}

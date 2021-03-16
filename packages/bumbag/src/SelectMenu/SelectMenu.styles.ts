@@ -1,6 +1,6 @@
 import { css, cssClass } from '../styled';
 import { darken, fontSize, getHiddenScrollbarStyles, palette, space, theme } from '../utils';
-import { Select } from '../Select/Select.styles';
+import { LabelWrapper, LabelWrapperBackground, Select, SelectWrapper } from '../Select/Select.styles';
 
 export const SelectMenu = (styleProps) => cssClass`
   position: relative;
@@ -25,29 +25,29 @@ export const SelectMenuPopover = (styleProps) => cssClass`
   }
 `;
 
+export const SelectMenuButtonWrapper = (styleProps) => cssClass`
+  ${SelectWrapper(styleProps)};
+
+  width: 100%;
+`;
+
 export const SelectMenuButton = (styleProps) => cssClass`
   ${Select(styleProps)};
-
-  ${styleProps.size && wrapperSizeProperties(styleProps)};
 
   cursor: default;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4em 0.8em;
+  position: relative;
 
   &[aria-expanded="true"] {
-    border-color: ${palette('primary')(styleProps)};
-    box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
+    position: unset;
   }
 
   ${
-    styleProps.state &&
+    styleProps.isSelected &&
     css`
-      & {
-        border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
-      }
+      position: unset;
     `
   }
 
@@ -86,6 +86,7 @@ export const SelectMenuButtonIconsWrapper = (styleProps) => cssClass`
 `;
 
 export const SelectMenuButtonText = (styleProps) => cssClass`
+  color: ${palette(styleProps.color)(styleProps)};
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -186,6 +187,14 @@ export const SelectMenuField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
+`;
+
+export const SelectMenuLabelWrapper = (styleProps) => cssClass`
+  ${LabelWrapper(styleProps)};
+`;
+
+export const SelectMenuLabelWrapperBackground = (styleProps) => cssClass`
+  ${LabelWrapperBackground(styleProps)};
 `;
 
 export function wrapperSizeProperties(styleProps) {

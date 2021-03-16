@@ -54,6 +54,114 @@ function Example() {
   )
 }
 ###
+
+###tab=Borderless,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="borderless"
+    />
+  )
+}
+###
+
+###tab=Underline,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="underline"
+    />
+  )
+}
+###
+```
+
+### Labels
+
+```live
+###tab=Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      label="Select a fruit..."
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+    />
+  )
+}
+###
+
+###tab=Borderless,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      label="Select a fruit..."
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="borderless"
+    />
+  )
+}
+###
+
+###tab=Underline,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      label="Select a fruit..."
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="underline"
+    />
+  )
+}
+###
 ```
 
 ### Fields
@@ -105,104 +213,242 @@ function Example() {
   )
 }
 ###
+
+###tab=Borderless,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenuField
+      label="Select a fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="borderless"
+    />
+  )
+}
+###
+
+###tab=Underline,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenuField
+      label="Select a fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="underline"
+    />
+  )
+}
+###
 ```
 
 ### Sizes
 
-#### Small
-
-```function-live
+```live
+###tab=Default,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
   return (
-    <SelectMenu
-      size="small"
-      onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
-        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
-        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
-        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
-      ]}
-      placeholder="Select a fruit..."
-      value={value}
-    />
+    <Stack spacing="major-1">
+      <SelectMenu
+        size="small"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+      />
+      <SelectMenu
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+      />
+      <SelectMenu
+        size="medium"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+      />
+      <SelectMenu
+        size="large"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+      />
+    </Stack>
   );
 }
-```
+###
 
-#### Default
-
-```function-live
+###tab=Borderless,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
   return (
-    <SelectMenu
-      onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
-        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
-        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
-        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
-      ]}
-      placeholder="Select a fruit..."
-      value={value}
-    />
+    <Stack spacing="major-1">
+      <SelectMenu
+        size="small"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="borderless"
+      />
+      <SelectMenu
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="borderless"
+      />
+      <SelectMenu
+        size="medium"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="borderless"
+      />
+      <SelectMenu
+        size="large"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="borderless"
+      />
+    </Stack>
   );
 }
-```
+###
 
-#### Medium
-
-```function-live
+###tab=Underline,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
   return (
-    <SelectMenu
-      size="medium"
-      onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
-        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
-        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
-        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
-      ]}
-      placeholder="Select a fruit..."
-      value={value}
-    />
+    <Stack spacing="major-1">
+      <SelectMenu
+        size="small"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="underline"
+      />
+      <SelectMenu
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="underline"
+      />
+      <SelectMenu
+        size="medium"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="underline"
+      />
+      <SelectMenu
+        size="large"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="underline"
+      />
+    </Stack>
   );
 }
-```
-
-#### Large
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState();
-
-  return (
-    <SelectMenu
-      size="large"
-      onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
-        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
-        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
-        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
-      ]}
-      placeholder="Select a fruit..."
-      value={value}
-    />
-  );
-}
+###
 ```
 
 ### Disabled
 
-```function-live
+```live
+###tab=Default,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -221,6 +467,51 @@ function Example() {
     />
   )
 }
+###
+
+###tab=Borderless,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      disabled
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="borderless"
+    />
+  )
+}
+###
+
+###tab=Underline,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      disabled
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="underline"
+    />
+  )
+}
+###
 ```
 
 #### Disabled options

@@ -58,6 +58,7 @@ export type LocalAutosuggestProps = {
   state?: string;
   /** Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ key: 1, label: 'Jake', value: 'legend' }`). */
   value: Partial<Option>;
+  variant?: string;
 
   /** Sets the error text when the `loadOptions` function throws an error. */
   errorText?: string;
@@ -240,6 +241,7 @@ const useProps = createHook<AutosuggestProps>(
       restrictToOptions,
       state,
       value,
+      variant,
       ...restProps
     } = props;
 
@@ -629,6 +631,7 @@ const useProps = createHook<AutosuggestProps>(
             placeholder={placeholder}
             role="textbox"
             state={state}
+            variant={variant}
             value={inputValue}
           />
           <DropdownMenuPopover
