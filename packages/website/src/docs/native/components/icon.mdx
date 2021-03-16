@@ -170,13 +170,7 @@ Color of the icon. Can be a color from the palette, or any other color.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">icon</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | IconDefinition
-  | { viewBoxHeight: number; viewBoxWidth: number; paths?: string[]; tree?: any[]; }`}
-</Code>
+**<Code fontSize="150" marginRight="major-1">icon</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 The name of your icon or parsed icon.
 
@@ -194,7 +188,7 @@ Size of the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">&#34;font-awesome&#34; | &#34;font-awesome-standalone&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -203,6 +197,10 @@ Size of the icon.
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">children</Code>**  
 
@@ -256,10 +254,13 @@ Size of the icon.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: BreakpointsThemeConfig;
-  ... 19 more ...;
+  fonts?: any;
+  fontSizes?: any;
+  fontWeights?: any;
+  ... 18 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>

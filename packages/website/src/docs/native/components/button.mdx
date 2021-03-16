@@ -203,65 +203,23 @@ To display a set of buttons, use the [`<Set>` component](/native/layout/set).
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">iconAfter</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | IconDefinition
-  | { viewBoxHeight: number; viewBoxWidth: number; paths?: string[]; tree?: any[]; }`}
-</Code>
+**<Code fontSize="150" marginRight="major-1">iconAfter</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 Icon that appears on the right side of the button.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">iconAfterProps</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; children?: string | ... 6 more ... | ((props: BoxProps) => ReactNode);
-  ... 578 more ...;
-  useOriginalF...`}
-</Code>
+**<Code fontSize="150" marginRight="major-1">iconAfterProps</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">iconBefore</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | IconDefinition
-  | { viewBoxHeight: number; viewBoxWidth: number; paths?: string[]; tree?: any[]; }`}
-</Code>
+**<Code fontSize="150" marginRight="major-1">iconBefore</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 Icon that appears on the left side of the button.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">iconBeforeProps</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; children?: string | ... 6 more ... | ((props: BoxProps) => ReactNode);
-  ... 578 more ...;
-  useOriginalF...`}
-</Code>
+**<Code fontSize="150" marginRight="major-1">iconBeforeProps</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -277,56 +235,29 @@ Makes the button not interactable.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">palette</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"default"
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "warning"
-  | (string & {})`}
-</Code>
+**<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">size</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"default"
-  | (string & {})
-  | "small"
-  | "medium"
-  | "large"`}
-</Code>
+**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">spinnerProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`Pick<CSSProperties, "top"
-  | "right"
-  | "bottom"
-  | "left"
-  | "color"
-  | "_hover"
-  | "_hoveractive"
-  | "_focus"
-  | "_active"
-  | "_visited"
-  | "_disabled"
-  | "_groupHover"
-  | ... 501 more ...
-  | "zIndex"> & ... 4 more ... & LocalSpinnerProps`}
+{`Pick<any, string
+  | number
+  | symbol> & ViewProps & LocalBoxProps & { active?: boolean; focus?: boolean; hover?: boolean; hoveractive?: boolean; } & Pick<ActivityIndicatorProps, "animating"
+  | ... 53 more ...
+  | "accessibilityIgnoresInvertColors"> & LocalSpinnerProps`}
 </Code>
 
 Custom props for the isLoading spinner.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">&#34;submit&#34; | &#34;reset&#34; | &#34;button&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -627,6 +558,10 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
 
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -671,10 +606,13 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: BreakpointsThemeConfig;
-  ... 19 more ...;
+  fonts?: any;
+  fontSizes?: any;
+  fontWeights?: any;
+  ... 18 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>

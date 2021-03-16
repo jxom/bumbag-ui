@@ -582,6 +582,10 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
 
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -630,10 +634,13 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: BreakpointsThemeConfig;
-  ... 19 more ...;
+  fonts?: any;
+  fontSizes?: any;
+  fontWeights?: any;
+  ... 18 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>
