@@ -17,7 +17,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-2 {
-  color: var(--bb-palette-primary,#000000) !important;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <img
@@ -49,6 +49,10 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly for fit contain 1`] = `
+.emotion-0 {
+  object-fit: contain;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -62,10 +66,6 @@ exports[`props should render correctly for fit contain 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  object-fit: contain;
 }
 
 <img
@@ -76,6 +76,10 @@ exports[`props should render correctly for fit contain 1`] = `
 `;
 
 exports[`props should render correctly for fit cover 1`] = `
+.emotion-0 {
+  object-fit: cover;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -89,10 +93,6 @@ exports[`props should render correctly for fit cover 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  object-fit: cover;
 }
 
 <img
@@ -103,6 +103,10 @@ exports[`props should render correctly for fit cover 1`] = `
 `;
 
 exports[`props should render correctly for fixed image 1`] = `
+.emotion-0 {
+  max-width: unset;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -116,10 +120,6 @@ exports[`props should render correctly for fixed image 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  max-width: unset;
 }
 
 <img
@@ -146,7 +146,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000) !important;
+  background-color: var(--bb-palette-red, #ff0000)!important;
 }
 
 <img
@@ -157,6 +157,10 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Image.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -170,10 +174,6 @@ exports[`theming Image.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
@@ -183,6 +183,11 @@ exports[`theming Image.base should render correctly 1`] = `
 `;
 
 exports[`theming Image.contain should render correctly 1`] = `
+.emotion-0 {
+  object-fit: contain;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -196,11 +201,6 @@ exports[`theming Image.contain should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  object-fit: contain;
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
@@ -210,6 +210,11 @@ exports[`theming Image.contain should render correctly 1`] = `
 `;
 
 exports[`theming Image.cover should render correctly 1`] = `
+.emotion-0 {
+  object-fit: cover;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -223,11 +228,6 @@ exports[`theming Image.cover should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  object-fit: cover;
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
@@ -237,6 +237,11 @@ exports[`theming Image.cover should render correctly 1`] = `
 `;
 
 exports[`theming Image.fixed should render correctly 1`] = `
+.emotion-0 {
+  max-width: unset;
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -250,11 +255,6 @@ exports[`theming Image.fixed should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  max-width: unset;
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img

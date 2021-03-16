@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -14,13 +21,6 @@ exports[`composition as should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 <p
@@ -37,6 +37,13 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -50,13 +57,6 @@ exports[`composition render props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 <div
@@ -67,6 +67,13 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -80,13 +87,6 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 <div
@@ -97,6 +97,13 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -110,13 +117,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 <div
@@ -127,6 +127,27 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly for an alignX of center 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0.emotion-0 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -154,27 +175,6 @@ exports[`props should render correctly for an alignX of center 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0.emotion-0 {
-  -webkit-flex-direction: unset;
-  -ms-flex-direction: unset;
-  flex-direction: unset;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: unset;
-  -webkit-box-align: unset;
-  -ms-flex-align: unset;
-  align-items: unset;
 }
 
 <div
@@ -183,6 +183,27 @@ exports[`props should render correctly for an alignX of center 1`] = `
 `;
 
 exports[`props should render correctly for an alignX of left 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0.emotion-0 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -212,6 +233,12 @@ exports[`props should render correctly for an alignX of left 1`] = `
   align-items: flex-start;
 }
 
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Flex"
+/>
+`;
+
+exports[`props should render correctly for an alignX of right 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -223,22 +250,16 @@ exports[`props should render correctly for an alignX of left 1`] = `
   -webkit-flex-direction: unset;
   -ms-flex-direction: unset;
   flex-direction: unset;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
   -webkit-align-items: unset;
   -webkit-box-align: unset;
   -ms-flex-align: unset;
   align-items: unset;
 }
 
-<div
-  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Flex"
-/>
-`;
-
-exports[`props should render correctly for an alignX of right 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -268,62 +289,12 @@ exports[`props should render correctly for an alignX of right 1`] = `
   align-items: flex-end;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0.emotion-0 {
-  -webkit-flex-direction: unset;
-  -ms-flex-direction: unset;
-  flex-direction: unset;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-align-items: unset;
-  -webkit-box-align: unset;
-  -ms-flex-align: unset;
-  align-items: unset;
-}
-
 <div
   class="emotion-0 emotion-1 emotion-2 bb-Box bb-Flex"
 />
 `;
 
 exports[`props should render correctly for an alignY of bottom 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -340,9 +311,38 @@ exports[`props should render correctly for an alignY of bottom 1`] = `
   -ms-flex-align: flex-end;
   align-items: flex-end;
   -webkit-box-pack: unset;
-  -webkit-justify-content: unset;
   -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
   justify-content: unset;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 <div
@@ -351,6 +351,27 @@ exports[`props should render correctly for an alignY of bottom 1`] = `
 `;
 
 exports[`props should render correctly for an alignY of center 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0.emotion-0 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
+  justify-content: unset;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -375,11 +396,17 @@ exports[`props should render correctly for an alignY of center 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
+<div
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Flex"
+/>
+`;
+
+exports[`props should render correctly for an alignY of top 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -391,22 +418,16 @@ exports[`props should render correctly for an alignY of center 1`] = `
   -webkit-flex-direction: unset;
   -ms-flex-direction: unset;
   flex-direction: unset;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: unset;
-  -webkit-justify-content: unset;
   -ms-flex-pack: unset;
+  -webkit-justify-content: unset;
   justify-content: unset;
 }
 
-<div
-  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Flex"
-/>
-`;
-
-exports[`props should render correctly for an alignY of top 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -431,30 +452,9 @@ exports[`props should render correctly for an alignY of top 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0.emotion-0 {
-  -webkit-flex-direction: unset;
-  -ms-flex-direction: unset;
-  flex-direction: unset;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: unset;
-  -webkit-justify-content: unset;
-  -ms-flex-pack: unset;
-  justify-content: unset;
 }
 
 <div
@@ -463,6 +463,13 @@ exports[`props should render correctly for an alignY of top 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -478,16 +485,9 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .emotion-2 {
-  position: absolute !important;
-  top: 0 !important;
+  position: absolute!important;
+  top: 0!important;
 }
 
 <div
@@ -498,6 +498,17 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Flex.base should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -511,17 +522,6 @@ exports[`theming Flex.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div

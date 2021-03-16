@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -16,18 +26,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  object-fit: cover;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
-}
-
 .emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <img
@@ -37,6 +37,20 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides Avatar.base should render correctly 1`] = `
+.emotion-0 {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -50,20 +64,6 @@ exports[`overrides Avatar.base should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  object-fit: cover;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
@@ -73,6 +73,16 @@ exports[`overrides Avatar.base should render correctly 1`] = `
 `;
 
 exports[`overrides Avatar.circle.base should render correctly 1`] = `
+.emotion-0 {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -86,16 +96,6 @@ exports[`overrides Avatar.circle.base should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  object-fit: cover;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
 }
 
 <img
@@ -105,21 +105,6 @@ exports[`overrides Avatar.circle.base should render correctly 1`] = `
 `;
 
 exports[`overrides Avatar.sizes.default should render correctly 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -131,16 +116,9 @@ exports[`overrides Avatar.sizes.default should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`overrides Avatar.sizes.large should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -156,6 +134,13 @@ exports[`overrides Avatar.sizes.large should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`overrides Avatar.sizes.large should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -167,16 +152,9 @@ exports[`overrides Avatar.sizes.large should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`overrides Avatar.sizes.medium should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -192,6 +170,13 @@ exports[`overrides Avatar.sizes.medium should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`overrides Avatar.sizes.medium should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -203,16 +188,9 @@ exports[`overrides Avatar.sizes.medium should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`overrides Avatar.sizes.small should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -228,6 +206,13 @@ exports[`overrides Avatar.sizes.small should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`overrides Avatar.sizes.small should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -238,16 +223,9 @@ exports[`overrides Avatar.sizes.small should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`props should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -263,6 +241,13 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`props should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -271,6 +256,21 @@ exports[`props should render correctly 1`] = `
   width: 60px;
   height: 60px;
   font-size: 24px;
+}
+
+.emotion-2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <img
@@ -300,15 +300,15 @@ exports[`props should render correctly for initials 1`] = `
   height: 60px;
   overflow: hidden;
   object-fit: cover;
-  background-color: var(--bb-palette-primary,#000000);
-  color: var(--bb-palette-primaryInverted,#000000);
+  background-color: var(--bb-palette-primary, #000000);
+  color: var(--bb-palette-primaryInverted, #000000);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -327,6 +327,16 @@ exports[`props should render correctly for initials 1`] = `
 `;
 
 exports[`props should render correctly for size default 1`] = `
+.emotion-0 {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -340,16 +350,6 @@ exports[`props should render correctly for size default 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  object-fit: cover;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
 }
 
 <img
@@ -360,21 +360,6 @@ exports[`props should render correctly for size default 1`] = `
 `;
 
 exports[`props should render correctly for size large 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -385,14 +370,6 @@ exports[`props should render correctly for size large 1`] = `
   font-size: 48px;
 }
 
-<img
-  alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`props should render correctly for size medium 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -408,6 +385,14 @@ exports[`props should render correctly for size medium 1`] = `
   outline: none;
 }
 
+<img
+  alt="Bean"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`props should render correctly for size medium 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -418,14 +403,6 @@ exports[`props should render correctly for size medium 1`] = `
   font-size: 36px;
 }
 
-<img
-  alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`props should render correctly for size small 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -441,6 +418,14 @@ exports[`props should render correctly for size small 1`] = `
   outline: none;
 }
 
+<img
+  alt="Bean"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`props should render correctly for size small 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -448,6 +433,21 @@ exports[`props should render correctly for size small 1`] = `
   object-fit: cover;
   width: 40px;
   height: 40px;
+}
+
+.emotion-2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <img
@@ -458,21 +458,6 @@ exports[`props should render correctly for size small 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -483,18 +468,6 @@ exports[`props should render correctly with CSS props 1`] = `
   font-size: 24px;
 }
 
-.emotion-3 {
-  background-color: var(--bb-palette-red,#ff0000) !important;
-}
-
-<img
-  alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`props should render correctly with variant circle 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -510,6 +483,18 @@ exports[`props should render correctly with variant circle 1`] = `
   outline: none;
 }
 
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000)!important;
+}
+
+<img
+  alt="Bean"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`props should render correctly with variant circle 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -521,14 +506,6 @@ exports[`props should render correctly with variant circle 1`] = `
   font-size: 24px;
 }
 
-<img
-  alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`theming Avatar.base should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -544,6 +521,14 @@ exports[`theming Avatar.base should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  alt="Bean"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`theming Avatar.base should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -555,7 +540,22 @@ exports[`theming Avatar.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <img
@@ -565,6 +565,16 @@ exports[`theming Avatar.base should render correctly 1`] = `
 `;
 
 exports[`theming Avatar.circle.base should render correctly 1`] = `
+.emotion-0 {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -578,16 +588,6 @@ exports[`theming Avatar.circle.base should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  object-fit: cover;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
 }
 
 <img
@@ -597,21 +597,6 @@ exports[`theming Avatar.circle.base should render correctly 1`] = `
 `;
 
 exports[`theming Avatar.sizes.default should render correctly 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -623,16 +608,9 @@ exports[`theming Avatar.sizes.default should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`theming Avatar.sizes.large should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -648,6 +626,13 @@ exports[`theming Avatar.sizes.large should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`theming Avatar.sizes.large should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -659,16 +644,9 @@ exports[`theming Avatar.sizes.large should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`theming Avatar.sizes.medium should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -684,6 +662,13 @@ exports[`theming Avatar.sizes.medium should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`theming Avatar.sizes.medium should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -695,16 +680,9 @@ exports[`theming Avatar.sizes.medium should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`theming Avatar.sizes.small should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -720,6 +698,13 @@ exports[`theming Avatar.sizes.small should render correctly 1`] = `
   outline: none;
 }
 
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Image bb-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`theming Avatar.sizes.small should render correctly 1`] = `
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -730,7 +715,22 @@ exports[`theming Avatar.sizes.small should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2:focus:not(:focus-visible) {
+  outline: none;
 }
 
 <img

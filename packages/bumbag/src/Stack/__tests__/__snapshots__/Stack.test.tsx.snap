@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,24 +16,20 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -43,7 +43,11 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -54,24 +58,20 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -79,7 +79,11 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -90,24 +94,20 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 test bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -115,7 +115,32 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`defaultProps should render correctly for orientation 1`] = `
-.emotion-0 {
+@media screen and (min-width: 1024px) {
+  .emotion-0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .emotion-0>* {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .emotion-0>*:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -126,45 +151,20 @@ exports[`defaultProps should render correctly for orientation 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-@media screen and (min-width:1024px) {
-  .emotion-4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .emotion-4 > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .emotion-4 > *:not(:last-child) {
-    margin-right: 2rem;
-  }
-}
-
-@media screen and (max-width:1024px) {
-  .emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -172,7 +172,15 @@ exports[`defaultProps should render correctly for orientation 1`] = `
 `;
 
 exports[`overrides Stack.base should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -183,28 +191,20 @@ exports[`overrides Stack.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -212,7 +212,11 @@ exports[`overrides Stack.base should render correctly 1`] = `
 `;
 
 exports[`overrides Stack.child.base should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -223,24 +227,20 @@ exports[`overrides Stack.child.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -248,7 +248,36 @@ exports[`overrides Stack.child.base should render correctly 1`] = `
 `;
 
 exports[`overrides Stack.child.horizontal should render correctly 1`] = `
-.emotion-0 {
+@media screen and (min-width: 1024px) {
+  .emotion-0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .emotion-0>* {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .emotion-0>*:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .emotion-0>*:not(:last-child) {
+    background-color: var(--bb-palette-red, #ff0000);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -259,49 +288,20 @@ exports[`overrides Stack.child.horizontal should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-@media screen and (min-width:1024px) {
-  .emotion-4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .emotion-4 > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .emotion-4 > *:not(:last-child) {
-    margin-right: 2rem;
-  }
-
-  .emotion-4 > *:not(:last-child) {
-    background-color: var(--bb-palette-red,#ff0000);
-  }
-}
-
-@media screen and (max-width:1024px) {
-  .emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -309,7 +309,15 @@ exports[`overrides Stack.child.horizontal should render correctly 1`] = `
 `;
 
 exports[`overrides Stack.child.vertical should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -320,28 +328,20 @@ exports[`overrides Stack.child.vertical should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -349,7 +349,36 @@ exports[`overrides Stack.child.vertical should render correctly 1`] = `
 `;
 
 exports[`overrides Stack.horizontal should render correctly 1`] = `
-.emotion-0 {
+@media screen and (min-width: 1024px) {
+  .emotion-0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .emotion-0>* {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .emotion-0>*:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .emotion-0 {
+    background-color: var(--bb-palette-red, #ff0000);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -360,49 +389,20 @@ exports[`overrides Stack.horizontal should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-@media screen and (min-width:1024px) {
-  .emotion-4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .emotion-4 > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .emotion-4 > *:not(:last-child) {
-    margin-right: 2rem;
-  }
-
-  .emotion-4 {
-    background-color: var(--bb-palette-red,#ff0000);
-  }
-}
-
-@media screen and (max-width:1024px) {
-  .emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -410,7 +410,15 @@ exports[`overrides Stack.horizontal should render correctly 1`] = `
 `;
 
 exports[`overrides Stack.vertical should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -421,28 +429,20 @@ exports[`overrides Stack.vertical should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -450,7 +450,11 @@ exports[`overrides Stack.vertical should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -461,24 +465,20 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -486,7 +486,32 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly for a horizontal set 1`] = `
-.emotion-0 {
+@media screen and (min-width: 1024px) {
+  .emotion-0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .emotion-0>* {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .emotion-0>*:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -497,45 +522,20 @@ exports[`props should render correctly for a horizontal set 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-@media screen and (min-width:1024px) {
-  .emotion-4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .emotion-4 > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .emotion-4 > *:not(:last-child) {
-    margin-right: 2rem;
-  }
-}
-
-@media screen and (max-width:1024px) {
-  .emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -543,7 +543,32 @@ exports[`props should render correctly for a horizontal set 1`] = `
 `;
 
 exports[`props should render correctly for a horizontal set with breakpoint 1`] = `
-.emotion-0 {
+@media screen and (min-width: 1200px) {
+  .emotion-0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .emotion-0>* {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .emotion-0>*:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -554,45 +579,20 @@ exports[`props should render correctly for a horizontal set with breakpoint 1`] 
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-@media screen and (min-width:1200px) {
-  .emotion-4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .emotion-4 > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .emotion-4 > *:not(:last-child) {
-    margin-right: 2rem;
-  }
-}
-
-@media screen and (max-width:1200px) {
-  .emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -600,7 +600,11 @@ exports[`props should render correctly for a horizontal set with breakpoint 1`] 
 `;
 
 exports[`props should render correctly for an alignX of center 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -611,15 +615,11 @@ exports[`props should render correctly for an alignX of center 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-6 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -634,15 +634,15 @@ exports[`props should render correctly for an alignX of center 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     world
   </div>
@@ -650,7 +650,11 @@ exports[`props should render correctly for an alignX of center 1`] = `
 `;
 
 exports[`props should render correctly for an alignX of left 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -661,15 +665,11 @@ exports[`props should render correctly for an alignX of left 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-6 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -684,15 +684,15 @@ exports[`props should render correctly for an alignX of left 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     world
   </div>
@@ -700,7 +700,11 @@ exports[`props should render correctly for an alignX of left 1`] = `
 `;
 
 exports[`props should render correctly for an alignX of right 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -711,15 +715,11 @@ exports[`props should render correctly for an alignX of right 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-6 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -734,15 +734,15 @@ exports[`props should render correctly for an alignX of right 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     world
   </div>
@@ -750,7 +750,11 @@ exports[`props should render correctly for an alignX of right 1`] = `
 `;
 
 exports[`props should render correctly for an alignY of bottom 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -761,15 +765,11 @@ exports[`props should render correctly for an alignY of bottom 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-6 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -778,21 +778,21 @@ exports[`props should render correctly for an alignY of bottom 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     world
   </div>
@@ -800,7 +800,11 @@ exports[`props should render correctly for an alignY of bottom 1`] = `
 `;
 
 exports[`props should render correctly for an alignY of center 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -811,15 +815,11 @@ exports[`props should render correctly for an alignY of center 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-6 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -828,21 +828,21 @@ exports[`props should render correctly for an alignY of center 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     world
   </div>
@@ -850,7 +850,11 @@ exports[`props should render correctly for an alignY of center 1`] = `
 `;
 
 exports[`props should render correctly for an alignY of top 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -861,15 +865,11 @@ exports[`props should render correctly for an alignY of top 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-6 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -878,21 +878,21 @@ exports[`props should render correctly for an alignY of top 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     world
   </div>
@@ -900,7 +900,11 @@ exports[`props should render correctly for an alignY of top 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -911,28 +915,24 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-6 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-4 bb-Box"
   >
     world
   </div>
@@ -940,7 +940,15 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming Stack.styles.base should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -951,28 +959,20 @@ exports[`theming Stack.styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -980,7 +980,11 @@ exports[`theming Stack.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Stack.styles.child.base should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -991,24 +995,20 @@ exports[`theming Stack.styles.child.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -1016,7 +1016,11 @@ exports[`theming Stack.styles.child.base should render correctly 1`] = `
 `;
 
 exports[`theming Stack.styles.child.horizontal should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1027,24 +1031,20 @@ exports[`theming Stack.styles.child.horizontal should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -1052,7 +1052,15 @@ exports[`theming Stack.styles.child.horizontal should render correctly 1`] = `
 `;
 
 exports[`theming Stack.styles.child.vertical should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1063,28 +1071,20 @@ exports[`theming Stack.styles.child.vertical should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -1092,7 +1092,11 @@ exports[`theming Stack.styles.child.vertical should render correctly 1`] = `
 `;
 
 exports[`theming Stack.styles.horizontal should render correctly 1`] = `
-.emotion-0 {
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1103,24 +1107,20 @@ exports[`theming Stack.styles.horizontal should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
@@ -1128,7 +1128,15 @@ exports[`theming Stack.styles.horizontal should render correctly 1`] = `
 `;
 
 exports[`theming Stack.styles.vertical should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0>*:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1139,28 +1147,20 @@ exports[`theming Stack.styles.vertical should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
-  class="emotion-4 emotion-0 emotion-1 bb-Box bb-Stack"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Stack"
 >
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     hello
   </div>
   <div
-    class="emotion-0 emotion-1 bb-Box"
+    class="emotion-1 emotion-2 bb-Box"
   >
     world
   </div>
