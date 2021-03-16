@@ -40,10 +40,8 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
     <BumbagProvider platform="native" theme={newTheme} {...restProps}>
       {({ theme }) => (
         <CoreThemeProvider theme={theme}>
-          <ThemeProvider theme={theme}>
-            {process.env.NODE_ENV !== 'test' && Platform.OS === 'web' && <GlobalStyles />}
-            {children}
-          </ThemeProvider>
+          {process.env.NODE_ENV !== 'test' && Platform.OS === 'web' && <GlobalStyles />}
+          {children}
         </CoreThemeProvider>
       )}
     </BumbagProvider>
