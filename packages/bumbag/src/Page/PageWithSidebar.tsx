@@ -111,14 +111,14 @@ const useProps = createHook<PageWithSidebarProps>(
               animating={false}
             >
               <Box className={sidebarClassName} overrides={overrides}>
-                {sidebar}
+                {isCollapsed ? sidebar : null}
               </Box>
             </Drawer>
           </Box>
           <Disclosure.Content overrides={overrides} {...expandedSidebarProps} {...sidebarState.disclosure}>
             <Box className={sidebarExpandedWrapperClassName} overrides={overrides}>
               <Box className={sidebarClassName} overrides={overrides}>
-                {sidebar}
+                {!isCollapsed ? sidebar : null}
               </Box>
             </Box>
           </Disclosure.Content>
