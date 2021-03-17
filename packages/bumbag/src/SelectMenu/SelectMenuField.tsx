@@ -73,6 +73,7 @@ const useProps = createHook<SelectMenuFieldProps>(
       onChange,
       overrides,
       validationText,
+      variant,
       ...restProps
     } = props;
 
@@ -100,6 +101,7 @@ const useProps = createHook<SelectMenuFieldProps>(
           tooltip={tooltip}
           tooltipTriggerComponent={tooltipTriggerComponent}
           validationText={validationText}
+          variant={variant}
         >
           {({ elementProps }) => (
             <ConditionalWrap
@@ -148,6 +150,7 @@ const useProps = createHook<SelectMenuFieldProps>(
                   dropdownMenuInitialState={dropdownMenuInitialState}
                   state={state}
                   overrides={overrides}
+                  variant={variant}
                   {...elementProps}
                   {...selectMenuProps}
                 />

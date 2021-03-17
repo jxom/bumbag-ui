@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 import * as Loads from 'react-loads-next';
 
-import { useClassName, createComponent, createElement, createHook, useDebounce } from '../utils';
+import { useClassName, createComponent, createElement, createHook, useDebounce, useLabelPlaceholder } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import {
@@ -48,6 +48,7 @@ export type LocalSelectMenuProps = {
   isLoading?: boolean;
   /** Indicates if multiple options should be selected. */
   isMultiSelect?: boolean;
+  label?: string;
   /** Applies a limit to the number of options that appear in the list. */
   limit?: number;
   /** Supply an async function to `loadOptions` to load options from an external data source. */
@@ -150,10 +151,10 @@ const useProps = createHook<SelectMenuProps>(
       isDropdown,
       isLoading,
       isMultiSelect,
+      label,
       limit,
       loadOptions,
       loadVariables,
-      onChange,
       options: initialOptions,
       overrides,
       pagination,
@@ -169,12 +170,17 @@ const useProps = createHook<SelectMenuProps>(
       size,
       tagProps,
       value,
+      variant,
       ...restProps
     } = props;
 
     /////////////////////////////////////////////////
 
     const boxProps = Box.useProps(restProps);
+
+    //////////////////////////////////////////////////
+
+    const buttonRef = React.useRef();
 
     //////////////////////////////////////////////////
 
@@ -191,11 +197,28 @@ const useProps = createHook<SelectMenuProps>(
 
     //////////////////////////////////////////////////
 
+    const {
+      isFocused,
+      inputProps: { onBlur, onChange, onFocus },
+    } = useLabelPlaceholder({
+      enabled: Boolean(label),
+      useValue: true,
+      ...props,
+    });
+
+    //////////////////////////////////////////////////
+
     const className = useClassName({
       style: styles.SelectMenu,
       styleProps: props,
       themeKey,
       prevClassName: boxProps.className,
+    });
+    const wrapperClassName = useClassName({
+      style: styles.SelectMenuButtonWrapper,
+      styleProps: props,
+      themeKey,
+      themeKeySuffix: 'ButtonWrapper',
     });
     const dropdownMenuPopoverClassName = useClassName({
       style: styles.SelectMenuPopover,
@@ -208,6 +231,18 @@ const useProps = createHook<SelectMenuProps>(
       styleProps: props,
       themeKey,
       themeKeySuffix: 'ItemsWrapper',
+    });
+    const labelWrapperClassName = useClassName({
+      style: styles.SelectMenuLabelWrapper,
+      styleProps: { ...props, isFocused: isFocused || dropdownMenu.visible },
+      themeKey,
+      themeKeySuffix: 'LabelWrapper',
+    });
+    const labelWrapperBackgroundClassName = useClassName({
+      style: styles.SelectMenuLabelWrapperBackground,
+      styleProps: { ...props, isFocused: isFocused || dropdownMenu.visible },
+      themeKey,
+      themeKeySuffix: 'LabelWrapperBackground',
     });
 
     //////////////////////////////////////////////////
@@ -336,7 +371,8 @@ const useProps = createHook<SelectMenuProps>(
         setDefer(false);
         optionsRecord.load();
       }
-    }, [defer, optionsRecord]);
+      onFocus({});
+    }, [defer, onFocus, optionsRecord]);
 
     const handleChangeInput = React.useCallback(
       (event) => {
@@ -390,8 +426,9 @@ const useProps = createHook<SelectMenuProps>(
     React.useEffect(() => {
       if (!dropdownMenu.visible) {
         handleChangeInput({ target: { value: '' } });
+        onBlur({});
       }
-    }, [dropdownMenu.visible, handleChangeInput]);
+    }, [dropdownMenu.visible, handleChangeInput, onBlur]);
 
     React.useEffect(() => {
       if (loadOptions && optionsRecord.isResolved) {
@@ -455,19 +492,36 @@ const useProps = createHook<SelectMenuProps>(
       children: (
         <SelectMenuContext.Provider value={context}>
           {isDropdown && (
-            <SelectMenuButton
-              disabled={disabled}
-              disableClear={disableClear}
-              isLoading={isLoading}
-              onClick={handleClickButton}
-              onClear={handleClearOptions}
-              placeholder={placeholder}
-              renderDisclosure={renderDisclosure}
-              selectedOptions={selectedOptions}
-              size={size}
-              state={fieldState}
-              {...buttonProps}
-            />
+            <Box className={wrapperClassName}>
+              {label && (
+                <>
+                  <Box className={labelWrapperBackgroundClassName}>
+                    <Text opacity="0">{label}</Text>
+                  </Box>
+                  {/*
+                    // @ts-ignore */}
+                  <Box className={labelWrapperClassName} onClick={() => buttonRef.current?.focus()}>
+                    <Text>{label}</Text>
+                  </Box>
+                </>
+              )}
+              <SelectMenuButton
+                elementRef={buttonRef}
+                disabled={disabled}
+                disableClear={disableClear}
+                isLoading={isLoading}
+                onClick={handleClickButton}
+                onClear={handleClearOptions}
+                placeholder={placeholder}
+                renderDisclosure={renderDisclosure}
+                selectedOptions={selectedOptions}
+                size={size}
+                state={fieldState}
+                variant={variant}
+                value={value}
+                {...buttonProps}
+              />
+            </Box>
           )}
           <MenuWrapper
             {...dropdownMenu}
@@ -563,6 +617,7 @@ const useProps = createHook<SelectMenuProps>(
       renderLoading: Loading,
       renderLoadingMore: Loading,
       renderOption: MatchedLabel,
+      variant: 'bordered',
     },
     themeKey: 'SelectMenu',
   }
@@ -593,26 +648,33 @@ function SelectMenuButton(props: any) {
   const {
     disabled,
     disableClear,
+    elementRef,
     isLoading,
     onClick,
     onClear,
     renderDisclosure,
     selectedOptions,
     placeholder,
+    variant,
     ...restProps
   } = props;
 
   const { dropdownMenu, overrides, themeKey } = React.useContext(SelectMenuContext);
 
+  let color = 'text';
+  if (!selectedOptions || selectedOptions.length === 0) {
+    color = 'gray300';
+  }
+
   const buttonClassName = useClassName({
     style: styles.SelectMenuButton,
-    styleProps: { ...props, overrides },
+    styleProps: { ...props, overrides, disabled, variant, isSelected: selectedOptions.length > 0 },
     themeKey,
     themeKeySuffix: 'Button',
   });
   const buttonTextClassName = useClassName({
     style: styles.SelectMenuButtonText,
-    styleProps: { ...props, overrides },
+    styleProps: { ...props, color, overrides },
     themeKey,
     themeKeySuffix: 'ButtonText',
   });
@@ -632,6 +694,7 @@ function SelectMenuButton(props: any) {
   const dropdownMenuButtonProps = DropdownMenuButton.useProps({
     ...dropdownMenu,
     'aria-haspopup': 'listbox',
+    elementRef,
     disabled,
     onClick,
     overrides,
