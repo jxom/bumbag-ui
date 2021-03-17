@@ -34,11 +34,16 @@ export const SelectMenuButtonWrapper = (styleProps) => cssClass`
 export const SelectMenuButton = (styleProps) => cssClass`
   ${Select(styleProps)};
 
-  cursor: default;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  & {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  && {
+    position: relative;
+  }
 
   &[aria-expanded="true"] {
     position: unset;
@@ -47,7 +52,9 @@ export const SelectMenuButton = (styleProps) => cssClass`
   ${
     styleProps.isSelected &&
     css`
-      position: unset;
+      && {
+        position: unset;
+      }
     `
   }
 

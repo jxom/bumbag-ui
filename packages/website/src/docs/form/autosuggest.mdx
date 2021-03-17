@@ -76,6 +76,69 @@ function Example() {
 }###
 ```
 
+### Labels
+
+```live
+###tab=Default,type=function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      label="Fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+    />
+  )
+}###
+
+###tab=Borderless,type=function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      label="Fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="borderless"
+    />
+  )
+}###
+
+###tab=Underline,type=function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      label="Fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="underline"
+    />
+  )
+}###
+```
+
 ### Fields
 
 You can also use the `<AutosuggestField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.

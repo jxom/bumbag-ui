@@ -36,6 +36,7 @@ export type LocalAutosuggestProps = {
   disabled?: boolean;
   /** Indicates if the Autosuggest is loading. */
   isLoading?: boolean;
+  label?: string;
   /** Applies a limit to the number of options that appear in the list. */
   limit?: number;
   /** Supply an async function to `loadOptions` to load options from an external data source. */
@@ -224,6 +225,7 @@ const useProps = createHook<AutosuggestProps>(
       itemProps,
       inputProps,
       isLoading: isInputLoading,
+      label,
       limit,
       loadOptions,
       loadVariables,
@@ -622,6 +624,7 @@ const useProps = createHook<AutosuggestProps>(
             disabled={disabled}
             inputProps={inputProps}
             isLoading={isInputLoading}
+            label={label}
             onBlur={handleBlurInput}
             onClick={handleClickInput}
             onChange={handleChangeInput}

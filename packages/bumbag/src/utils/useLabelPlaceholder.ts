@@ -11,6 +11,10 @@ export function useLabelPlaceholder({ enabled = false, useValue = false, ...prop
   }, [enabled, props.value]);
 
   React.useEffect(() => {
+    setControlledValue(props.value);
+  }, [props.value]);
+
+  React.useEffect(() => {
     if (enabled) {
       setIsFocused(Boolean(controlledValue));
     }
