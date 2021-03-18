@@ -203,6 +203,8 @@ const useProps = createHook<SelectMenuProps>(
     } = useLabelPlaceholder({
       enabled: Boolean(label),
       useValue: true,
+      onBlur: null,
+      onFocus: null,
       ...props,
     });
 

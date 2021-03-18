@@ -15,5 +15,5 @@ if (typeof window !== 'undefined') {
   `;
   let style = document.createElement('style');
   style.appendChild(document.createTextNode(css));
-  document.head.appendChild(style);
+  document.head.insertBefore(style, document.head.firstChild);
 }
