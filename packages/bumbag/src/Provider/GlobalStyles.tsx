@@ -34,6 +34,23 @@ export function GlobalStyles() {
           box-sizing: inherit;
         }
 
+        ${process.env.NODE_ENV === 'production' &&
+        css`
+          .bb-Box {
+            margin: unset;
+            padding: unset;
+            border: unset;
+            background: unset;
+            font: unset;
+            font-family: inherit;
+            font-size: 100%;
+            box-sizing: border-box;
+          }
+          .bb-Box:focus:not(:focus-visible) {
+            outline: none;
+          }
+        `}
+
         ${font('importUrls')(styleProps) &&
         font('importUrls')(styleProps)
           .map((url: string) => `@import url('${url}');`)
