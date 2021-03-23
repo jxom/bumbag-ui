@@ -1,5 +1,3 @@
-import './utils/reset';
-
 export * from './ActionButtons';
 export * from './Alert';
 export * from './Autosuggest';
