@@ -7,8 +7,8 @@ import { useTheme } from 'bumbag/utils/useTheme';
 import { merge } from 'bumbag/utils/merge';
 
 import { ThemeConfig } from '../types/theme';
+import { ThemeProvider as NativeThemeProvider } from '../styled';
 import theme from '../theme';
-import { ThemeProvider } from '../styled';
 
 export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeConfig }) {
   const { children, theme: themeOverrides, isStandalone, ...restProps } = props;
@@ -40,8 +40,10 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
     <BumbagProvider platform="native" theme={newTheme} {...restProps}>
       {({ theme }) => (
         <CoreThemeProvider theme={theme}>
-          {process.env.NODE_ENV !== 'test' && Platform.OS === 'web' && <GlobalStyles />}
-          {children}
+          <NativeThemeProvider theme={theme}>
+            {process.env.NODE_ENV !== 'test' && Platform.OS === 'web' && <GlobalStyles />}
+            {children}
+          </NativeThemeProvider>
         </CoreThemeProvider>
       )}
     </BumbagProvider>

@@ -16,7 +16,7 @@ export const StyledButton = styled(TouchableOpacity)`
   justify-content: center;
   flex-direction: row;
   min-height: ${(props) => `${space(5.5, 'major')(props)}px`};
-  padding: 0 ${(props) => `${space(4)(props)}px`};
+  padding: 0px ${(props) => `${space(4)(props)}px`};
   text-decoration: none;
 
   ${(props: any) =>
@@ -75,16 +75,16 @@ export const getButtonSizeProperties = (props: any) => {
   const styles = {
     small: `
       min-height: ${space(8)(props)}px;
-      padding: 0 ${space(3)(props)}px;
+      padding: 0px ${space(3)(props)}px;
     `,
     default: ``,
     medium: `
       min-height: ${space(12)(props)}px;
-      padding: 0 ${space(5)(props)}px;
+      padding: 0px ${space(5)(props)}px;
     `,
     large: `
       min-height: ${space(13)(props)}px;
-      padding: 0 ${space(6)(props)}px;
+      padding: 0px ${space(6)(props)}px;
     `,
   };
   return styles[props.size];
