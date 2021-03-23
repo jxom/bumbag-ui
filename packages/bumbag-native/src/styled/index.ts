@@ -1,2 +1,1 @@
-export { default as styled, css } from '@emotion/native';
-export { ThemeProvider } from '@emotion/react';
+export { native_styled as styled, native_css as css } from 'bumbag/styled';
