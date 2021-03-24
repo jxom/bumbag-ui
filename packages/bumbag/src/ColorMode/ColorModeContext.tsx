@@ -73,8 +73,8 @@ export function ColorModeProvider(props: Props) {
 
   return (
     <ConditionalWrap
-      condition={isSSR && !mounted}
-      wrap={(children) => <div style={{ visibility: 'hidden' }}>{children}</div>}
+      condition={isSSR}
+      wrap={(children) => <div style={!mounted ? { visibility: 'hidden' } : {}}>{children}</div>}
     >
       <ColorModeContext.Provider value={value}>{children}</ColorModeContext.Provider>
     </ConditionalWrap>
