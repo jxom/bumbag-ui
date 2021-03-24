@@ -79,6 +79,14 @@ export const Input = createComponent<InputProps>(
       [props]
     );
 
+    const handleChange = React.useCallback(
+      (e) => {
+        setValue(e);
+        props.onChangeText && props.onChangeText(e);
+      },
+      [props]
+    );
+
     const handleFocus = React.useCallback(
       (e) => {
         setIsFocused(true);
@@ -101,7 +109,7 @@ export const Input = createComponent<InputProps>(
         ref: mergeRefs(inputRef, props.inputRef),
         onBlur: handleBlur,
         onFocus: handleFocus,
-        onChangeText: setValue,
+        onChangeText: handleChange,
         placeholder: !label || props.disabled ? props.placeholder || props.label : '',
       }),
       borderLeftRadius: props.borderLeftRadius,
