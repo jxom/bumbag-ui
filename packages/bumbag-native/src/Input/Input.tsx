@@ -52,6 +52,7 @@ const useProps = createHook<InputProps>(
 
     return {
       ...boxProps,
+      accessibilityLabelledBy: props.labelId,
       placeholderTextColor: props.placeholderTextColor ? palette(props.placeholderTextColor)({ theme }) : undefined,
     };
   },

@@ -1,27 +1,58 @@
 import * as React from 'react';
 import { ViewProps as RNViewProps } from 'react-native';
-import { createComponent, createElement, createHook } from 'bumbag/utils';
+import { createComponent, createElement, createHook, useUniqueId } from 'bumbag/utils';
 
 import { Box, BoxProps } from '../Box';
-import { Stack, StackProps } from '../Stack';
+import { Text, TextProps } from '../Text';
 import * as styles from './FieldWrapper.styles';
 
-export type LocalFieldWrapperProps = {};
+export type LocalFieldWrapperProps = {
+  /** Sets the label on the field wrapper. */
+  label?: string | React.ReactElement<any>;
+};
 export type FieldWrapperProps = BoxProps & RNViewProps & LocalFieldWrapperProps;
 
 const useProps = createHook<FieldWrapperProps>(
   (props) => {
-    const { children, label } = props;
+    const {
+      children,
+      description,
+      hint,
+      isOptional,
+      label,
+      labelType,
+      isRequired,
+      state,
+      validationText,
+      ...restProps
+    } = props;
+    const boxProps = Box.useProps(restProps);
 
-    const boxProps = Box.useProps(props);
+    const uid = useUniqueId();
+
+    const elementProps = { labelId: uid, state };
 
     return {
       ...boxProps,
       children: (
-        <Stack spacing="major-1">
-          <styles.FieldWrapperLabel>{label}</styles.FieldWrapperLabel>
-          {children}
-        </Stack>
+        <React.Fragment>
+          {label && (
+            <styles.StyledFieldWrapperLabelWrapper>
+              {typeof label === 'string' ? (
+                <styles.StyledFieldWrapperLabel nativeID={uid}>{label}</styles.StyledFieldWrapperLabel>
+              ) : (
+                label
+              )}
+            </styles.StyledFieldWrapperLabelWrapper>
+          )}
+          {typeof children === 'function'
+            ? /*
+                // @ts-ignore */
+              children({ elementProps })
+            : /*
+                // @ts-ignore */
+              React.cloneElement(children as React.ReactElement<any>, elementProps)}
+        </React.Fragment>
       ),
     };
   },

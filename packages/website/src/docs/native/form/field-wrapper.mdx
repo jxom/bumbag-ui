@@ -1,6 +1,4 @@
 import Theme from '../../../components/Theme';
-import { FieldWrapper } from 'bumbag-native';
-import { Input } from 'bumbag-native';
 
 # FieldWrapper
 
@@ -11,150 +9,13 @@ It is used to render data about the field such as label, description text, hint 
 ## Import
 
 ```jsx
-import { FieldWrapper } from 'bumbag'
+import { FieldWrapper } from 'bumbag-native'
 ```
 
 ## Usage
 
 ```jsx-live
 <FieldWrapper label="Username">
-  <Input />
-</FieldWrapper>
-```
-
-### Descriptions
-
-The description text is placed underneath the label.
-
-```jsx-live
-<FieldWrapper label="Username" description="Required for your bumbag">
-  <Input />
-</FieldWrapper>
-```
-
-### Hints
-
-The hint text is placed underneath the field child.
-
-```jsx-live
-<FieldWrapper label="Username" hint="Must be awesome">
-  <Input />
-</FieldWrapper>
-```
-
-### Optional fields
-
-To indicate a field as optional, add the `isOptional` prop.
-
-```jsx-live
-<FieldWrapper label="Username" isOptional>
-  <Input />
-</FieldWrapper>
-```
-
-### Required fields
-
-```jsx-live
-<FieldWrapper label="Username" isRequired>
-  <Input />
-</FieldWrapper>
-```
-
-### States
-
-```jsx-live
-<FieldStack spacing="major-4">
-  <FieldWrapper
-    label="Username"
-    validationText="This is an invalid name"
-    state="danger"
-  >
-    <Input defaultValue="Jake" />
-  </FieldWrapper>
-  <FieldWrapper
-    label="Username"
-    validationText="Please check the box!"
-    state="primary"
-    marginTop="major-2"
-  >
-    <Input defaultValue="Jake" />
-  </FieldWrapper>
-  <FieldWrapper
-    label="Username"
-    validationText="Nice one!"
-    state="success"
-    marginTop="major-2"
-  >
-    <Input defaultValue="Jake" />
-  </FieldWrapper>
-</FieldStack>
-```
-
-### Tooltips
-
-You can show a tooltip by supplying a string or an element to the `tooltip` prop.
-
-```jsx-live
-<FieldWrapper label="Username" tooltip="Your username must be awesome.">
-  <Input />
-</FieldWrapper>
-```
-
-```jsx-live
-<FieldWrapper
-  label="Username"
-  tooltip={
-    <Text fontSize="150">Your username must be <Text fontWeight="bold">awesome.</Text></Text>
-  }
->
-  <Input />
-</FieldWrapper>
-```
-
-#### Custom tooltip trigger
-
-You can modify the tooltip trigger button by supplying an element to the `tooltipTrigger` prop.
-
-```jsx-live
-<FieldWrapper
-  label="Username"
-  tooltip="Your username must be awesome."
-  tooltipTriggerComponent={<Button size="small" minHeight="unset">Tooltip</Button>}
->
-  <Input />
-</FieldWrapper>
-```
-
-Or you can set a default trigger via `defaultProps` [in the theme](/theming)
-
-### Custom label
-
-```jsx-live
-<FieldWrapper label={<Text color="primary">Username</Text>}>
-  <Input />
-</FieldWrapper>
-```
-
-### Custom description
-
-```jsx-live
-<FieldWrapper
-  a11yId="username"
-  label="Username"
-  description={<Text color="primary">Required for your bumbag</Text>}
->
-  <Input />
-</FieldWrapper>
-```
-
-### Custom hints
-
-```jsx-live
-<FieldWrapper
-  a11yId="username"
-  label="Username"
-  hint={<Text color="primary">Must be awesome</Text>}
->
   <Input />
 </FieldWrapper>
 ```

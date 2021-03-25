@@ -124,6 +124,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -131,15 +133,22 @@ exports[`defaultProps should render correctly for className 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -156,8 +165,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -282,6 +290,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-6 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -499,6 +508,8 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -506,15 +517,22 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -531,8 +549,7 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -657,6 +674,7 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -870,6 +888,8 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -877,15 +897,22 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -902,8 +929,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -1032,6 +1058,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -1245,6 +1272,8 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-15 {
@@ -1256,15 +1285,22 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -1281,8 +1317,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -1407,6 +1442,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -1624,6 +1660,8 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -1631,15 +1669,22 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -1656,8 +1701,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -1782,6 +1826,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -1995,6 +2040,8 @@ exports[`props should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -2002,15 +2049,22 @@ exports[`props should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -2027,8 +2081,7 @@ exports[`props should render correctly 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -2153,6 +2206,7 @@ exports[`props should render correctly 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -2370,6 +2424,8 @@ exports[`props should render correctly with CSS props 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -2377,15 +2433,22 @@ exports[`props should render correctly with CSS props 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -2402,8 +2465,7 @@ exports[`props should render correctly with CSS props 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -2528,6 +2590,7 @@ exports[`props should render correctly with CSS props 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-6 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -2756,6 +2819,8 @@ exports[`props should render correctly with currentPage 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -2763,15 +2828,22 @@ exports[`props should render correctly with currentPage 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -2788,8 +2860,7 @@ exports[`props should render correctly with currentPage 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -2840,6 +2911,7 @@ exports[`props should render correctly with currentPage 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -3053,6 +3125,8 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -3060,15 +3134,22 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -3085,8 +3166,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -3213,6 +3293,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -3426,6 +3507,8 @@ exports[`props should render correctly with nextText 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -3433,15 +3516,22 @@ exports[`props should render correctly with nextText 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -3458,8 +3548,7 @@ exports[`props should render correctly with nextText 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -3584,6 +3673,7 @@ exports[`props should render correctly with nextText 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -3797,6 +3887,8 @@ exports[`props should render correctly with prepositionText 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -3804,15 +3896,22 @@ exports[`props should render correctly with prepositionText 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -3829,8 +3928,7 @@ exports[`props should render correctly with prepositionText 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -3955,6 +4053,7 @@ exports[`props should render correctly with prepositionText 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -4160,6 +4259,8 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -4167,15 +4268,22 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -4192,8 +4300,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -4318,6 +4425,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -4531,6 +4639,8 @@ exports[`props should render correctly with previousText 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -4538,15 +4648,22 @@ exports[`props should render correctly with previousText 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -4563,8 +4680,7 @@ exports[`props should render correctly with previousText 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -4689,6 +4805,7 @@ exports[`props should render correctly with previousText 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -4906,6 +5023,8 @@ exports[`props should render correctly with selectProps 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -4913,15 +5032,22 @@ exports[`props should render correctly with selectProps 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -4938,8 +5064,7 @@ exports[`props should render correctly with selectProps 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -5064,6 +5189,7 @@ exports[`props should render correctly with selectProps 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -5281,6 +5407,8 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -5288,15 +5416,22 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -5313,8 +5448,7 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -5439,6 +5573,7 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -5652,6 +5787,8 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -5659,15 +5796,22 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -5684,8 +5828,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -5814,6 +5957,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -6027,6 +6171,8 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-15 {
@@ -6038,15 +6184,22 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -6063,8 +6216,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -6189,6 +6341,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"
@@ -6406,6 +6559,8 @@ exports[`theming Pagination.base should render correctly 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--bb-palette-white, #ffffff);
+  border-radius: 6px;
 }
 
 .emotion-16 {
@@ -6413,15 +6568,22 @@ exports[`theming Pagination.base should render correctly 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
-  border: 1px solid var(--bb-palette-white900, #000000);
-  border-radius: 6px;
   color: var(--bb-palette-text, #000000);
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  position: relative;
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 0.8em;
+  position: unset;
+}
+
+.emotion-16.emotion-16:focus,
+.emotion-16[aria-expanded='true'] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
 .emotion-16[disabled],
@@ -6438,8 +6600,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
 .emotion-16:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary, #000000);
-  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
+  position: unset;
 }
 
 .emotion-22.emotion-22 {
@@ -6564,6 +6725,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
     <select
       aria-invalid="false"
       class="emotion-16 emotion-2 emotion-3 bb-Box bb-Select"
+      id="id-test"
     >
       <option
         value="0"

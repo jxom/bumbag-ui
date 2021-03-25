@@ -36,6 +36,7 @@ export type LocalAutosuggestProps = {
   disabled?: boolean;
   /** Indicates if the Autosuggest is loading. */
   isLoading?: boolean;
+  label?: string;
   /** Applies a limit to the number of options that appear in the list. */
   limit?: number;
   /** Supply an async function to `loadOptions` to load options from an external data source. */
@@ -58,6 +59,7 @@ export type LocalAutosuggestProps = {
   state?: string;
   /** Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ key: 1, label: 'Jake', value: 'legend' }`). */
   value: Partial<Option>;
+  variant?: string;
 
   /** Sets the error text when the `loadOptions` function throws an error. */
   errorText?: string;
@@ -223,6 +225,7 @@ const useProps = createHook<AutosuggestProps>(
       itemProps,
       inputProps,
       isLoading: isInputLoading,
+      label,
       limit,
       loadOptions,
       loadVariables,
@@ -240,6 +243,7 @@ const useProps = createHook<AutosuggestProps>(
       restrictToOptions,
       state,
       value,
+      variant,
       ...restProps
     } = props;
 
@@ -620,6 +624,7 @@ const useProps = createHook<AutosuggestProps>(
             disabled={disabled}
             inputProps={inputProps}
             isLoading={isInputLoading}
+            label={label}
             onBlur={handleBlurInput}
             onClick={handleClickInput}
             onChange={handleChangeInput}
@@ -629,6 +634,7 @@ const useProps = createHook<AutosuggestProps>(
             placeholder={placeholder}
             role="textbox"
             state={state}
+            variant={variant}
             value={inputValue}
           />
           <DropdownMenuPopover
