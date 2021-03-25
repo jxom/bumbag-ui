@@ -203,6 +203,8 @@ const useProps = createHook<SelectMenuProps>(
     } = useLabelPlaceholder({
       enabled: Boolean(label),
       useValue: true,
+      onBlur: null,
+      onFocus: null,
       ...props,
     });
 
@@ -372,7 +374,7 @@ const useProps = createHook<SelectMenuProps>(
         optionsRecord.load();
       }
       onFocus({});
-    }, [defer, onFocus, optionsRecord]);
+    }, [defer, optionsRecord]); // eslint-disable-line
 
     const handleChangeInput = React.useCallback(
       (event) => {
@@ -428,7 +430,7 @@ const useProps = createHook<SelectMenuProps>(
         handleChangeInput({ target: { value: '' } });
         onBlur({});
       }
-    }, [dropdownMenu.visible, handleChangeInput, onBlur]);
+    }, [dropdownMenu.visible, handleChangeInput]); // eslint-disable-line
 
     React.useEffect(() => {
       if (loadOptions && optionsRecord.isResolved) {

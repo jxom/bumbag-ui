@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ConditionalWrap from 'conditional-wrap';
 
 import { useLocalStorage } from '../utils/useLocalStorage';
 import { useTheme } from '../utils/useTheme';
@@ -70,10 +71,14 @@ export function ColorModeProvider(props: Props) {
 
   ////////////////////////////////////
 
-  if (isSSR && !mounted) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>;
-  }
-  return <ColorModeContext.Provider value={value}>{children}</ColorModeContext.Provider>;
+  return (
+    <ConditionalWrap
+      condition={isSSR}
+      wrap={(children) => <div style={!mounted ? { visibility: 'hidden' } : {}}>{children}</div>}
+    >
+      <ColorModeContext.Provider value={value}>{children}</ColorModeContext.Provider>
+    </ConditionalWrap>
+  );
 }
 
 export function useColorMode() {

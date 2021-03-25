@@ -9,6 +9,7 @@ export const Select = (styleProps) => cssClass`
   line-height: ${lineHeight('default')(styleProps)};
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
   position: relative;
+  width: 100%;
 
   ${getVariantStyles(styleProps)};
 
