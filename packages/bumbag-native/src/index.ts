@@ -3,6 +3,7 @@ import './utils/resetWindow';
 export * from './Animated';
 export * from './Box';
 export * from './Button';
+export * from './FieldWrapper';
 export * from './Flex';
 export * from './Group';
 export * from './Heading';
