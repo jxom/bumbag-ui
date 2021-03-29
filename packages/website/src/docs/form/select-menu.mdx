@@ -1108,6 +1108,10 @@ Indicates if multiple options should be selected.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">label</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">limit</Code>** <Code fontSize="100" palette="primary">number</Code> 
 
 Applies a limit to the number of options that appear in the list.
@@ -1462,7 +1466,7 @@ Addon component to the input (after). Similar to the addon components in Input.
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 810 more ...;
+  ... 811 more ...;
   dropdownMenuInitialState?: Partial<...>;
 }`}
 </Code>
@@ -1530,6 +1534,10 @@ Indicates if the select menu is loading.
 **<Code fontSize="150" marginRight="major-1">isMultiSelect</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Indicates if multiple options should be selected.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">label</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1889,21 +1897,6 @@ Sets the optional flag (and displays optional text) on the field wrapper.
 **<Code fontSize="150" marginRight="major-1">isRequired</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Sets the required flag (and a required astrix) on the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">label</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-Sets the label on the field wrapper.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

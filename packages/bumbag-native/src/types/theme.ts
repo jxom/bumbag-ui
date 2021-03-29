@@ -5,6 +5,7 @@ import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxKeyboardAvoidingProps, BoxProps, BoxSafeProps, BoxScrollProps, BoxTouchableProps } from '../Box';
 import { ButtonProps } from '../Button';
+import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
 import { GroupProps } from '../Group';
 import { HeadingProps } from '../Heading';
@@ -124,6 +125,60 @@ export type ButtonThemeConfig = {
   defaultProps?: Partial<ButtonProps>;
   variants?: Variant<ButtonThemeConfig>;
   modes?: Variant<ButtonThemeConfig>;
+};
+
+export type FieldWrapperThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Label?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  LabelWrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  DescriptionText?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  HintText?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  HintTextWrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  OptionalText?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  RequiredText?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ValidationText?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ValidationTextWrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<FieldWrapperProps>;
+  variants?: Variant<FieldWrapperThemeConfig>;
+  modes?: Variant<FieldWrapperThemeConfig>;
 };
 
 export type FlexThemeConfig = {
@@ -350,6 +405,7 @@ export type ThemeConfig = {
 
   Box?: BoxThemeConfig;
   Button?: ButtonThemeConfig;
+  FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
   Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
