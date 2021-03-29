@@ -19,6 +19,7 @@ import { palette, useSpace, usePalette } from '../utils';
 import * as styles from './Input.styles';
 
 export type LocalInputProps = {
+  accessibilityLabelledBy?: string;
   /** Icon to place before the input. */
   iconAfter?: string;
   iconAfterProps?: Partial<IconProps>;
@@ -52,7 +53,7 @@ const useProps = createHook<InputProps>(
 
     return {
       ...boxProps,
-      accessibilityLabelledBy: props.labelId,
+      accessibilityLabelledBy: props.accessibilityLabelledBy,
       placeholderTextColor: props.placeholderTextColor ? palette(props.placeholderTextColor)({ theme }) : undefined,
     };
   },

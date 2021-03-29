@@ -54,7 +54,7 @@ const useProps = createHook<FieldWrapperProps>(
 
     const uid = useUniqueId();
 
-    const elementProps = { labelId: uid, state };
+    const elementProps = { accessibilityLabelledBy: uid, state };
 
     return {
       ...boxProps,
