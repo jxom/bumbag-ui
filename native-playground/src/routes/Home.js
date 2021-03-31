@@ -12,6 +12,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/button">
         <Text>Button</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/field-wrapper">
+        <Text>FieldWrapper</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/heading">
         <Text>Heading</Text>
       </Link>

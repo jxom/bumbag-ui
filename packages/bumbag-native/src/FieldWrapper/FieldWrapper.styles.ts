@@ -9,9 +9,25 @@ export const FieldWrapper = styled(View)`
 `;
 
 export const LabelWrapper = styled(Box)`
-  margin-bottom: ${(props) => `${space(2)(props)}px`};
+  ${(props) =>
+    props.variant === 'bordered'
+      ? `
+          margin-bottom: ${space(2)(props)}px;
+        `
+      : ''}
 
   ${theme('native.FieldWrapper', 'LabelWrapper.styles.base')};
+`;
+
+export const ContentWrapper = styled(Box)`
+  ${(props) =>
+    props.variant === 'underline' || props.variant === 'borderless'
+      ? `
+          margin-top: -${space(1)(props)}px;
+        `
+      : ''}
+
+  ${theme('native.FieldWrapper', 'ContentWrapper.styles.base')};
 `;
 
 export const Label = styled(Text)`

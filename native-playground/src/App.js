@@ -6,6 +6,7 @@ import { Box, Heading, Provider } from 'bumbag-native';
 import Home from './routes/Home';
 import BoxPage from './routes/components/Box';
 import ButtonPage from './routes/components/Button';
+import FieldWrapperPage from './routes/components/FieldWrapper';
 import HeadingPage from './routes/components/Heading';
 import HidePage from './routes/components/Hide';
 import IconPage from './routes/components/Icon';
@@ -28,6 +29,7 @@ export default function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/components/box" component={BoxPage} />
               <Route exact path="/components/button" component={ButtonPage} />
+              <Route exact path="/components/field-wrapper" component={FieldWrapperPage} />
               <Route exact path="/components/heading" component={HeadingPage} />
               <Route exact path="/components/hide" component={HidePage} />
               <Route exact path="/components/icon" component={IconPage} />

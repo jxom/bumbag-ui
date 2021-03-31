@@ -48,19 +48,20 @@ const useProps = createHook<FieldWrapperProps>(
       overrides,
       state,
       validationText,
+      variant,
       ...restProps
     } = props;
     const boxProps = Box.useProps(restProps);
 
     const uid = useUniqueId();
 
-    const elementProps = { accessibilityLabelledBy: uid, state };
+    const elementProps = { accessibilityLabelledBy: uid, variant, state };
 
     return {
       ...boxProps,
       children: (
         <React.Fragment>
-          <styles.LabelWrapper overrides={overrides}>
+          <styles.LabelWrapper overrides={overrides} variant={variant}>
             <Flex alignY="center">
               {label && (
                 <>
@@ -78,13 +79,15 @@ const useProps = createHook<FieldWrapperProps>(
             </Flex>
             {description && <styles.Description overrides={overrides}>{description}</styles.Description>}
           </styles.LabelWrapper>
-          {typeof children === 'function'
-            ? /*
+          <styles.ContentWrapper overrides={overrides} variant={variant}>
+            {typeof children === 'function'
+              ? /*
                 // @ts-ignore */
-              children({ elementProps })
-            : /*
+                children({ elementProps })
+              : /*
                 // @ts-ignore */
-              React.cloneElement(children as React.ReactElement<any>, elementProps)}
+                React.cloneElement(children as React.ReactElement<any>, elementProps)}
+          </styles.ContentWrapper>
           {hint && (
             <styles.HintWrapper overrides={overrides}>
               {typeof hint === 'string' ? <styles.Hint overrides={overrides}>{hint}</styles.Hint> : hint}
@@ -101,7 +104,7 @@ const useProps = createHook<FieldWrapperProps>(
       ),
     };
   },
-  { themeKey: 'native.FieldWrapper' }
+  { defaultProps: { variant: 'bordered' }, themeKey: 'native.FieldWrapper' }
 );
 
 export const FieldWrapper = createComponent<FieldWrapperProps>(
