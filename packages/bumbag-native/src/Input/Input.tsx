@@ -14,6 +14,7 @@ import { Palette, Size } from 'bumbag/types';
 
 import { Box, BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
+import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Pressable } from '../Pressable';
 import { palette, useSpace, usePalette } from '../utils';
 import * as styles from './Input.styles';
@@ -26,6 +27,7 @@ export type LocalInputProps = {
   /** Icon to place after the input. */
   iconBefore?: string;
   iconBeforeProps?: Partial<IconProps>;
+  inputProps?: Partial<InputProps>;
   inputRef?: React.Ref<any>;
   /** Label of the input. */
   label?: string;
@@ -61,8 +63,9 @@ const useProps = createHook<InputProps>(
 );
 
 export const Input = createComponent<InputProps>(
-  (props) => {
-    const { iconAfter, iconAfterProps, iconBefore, iconBeforeProps, label, labelProps, size } = props;
+  (_props) => {
+    const props = { ..._props, ..._props.inputProps };
+    const { iconAfter, iconAfterProps, iconBefore, iconBeforeProps, inputProps, label, labelProps, size } = props;
     const defaultFontSize = props.fontSize || styles.SIZES[size];
 
     /////////////////////////////////////////////////////////////////////
@@ -241,5 +244,118 @@ export const Input = createComponent<InputProps>(
     },
     defaultProps,
     themeKey: 'native.Input',
+  }
+);
+
+////////////////////////////////////////////////////////////////
+
+export type LocalInputFieldProps = {
+  /** Additional props for the Input component */
+  inputProps?: InputProps;
+  /** If addonBefore or addonAfter exists, then the addons will render vertically. */
+  orientation?: 'vertical' | 'horizontal';
+  useInlineLabel?: boolean;
+};
+export type InputFieldProps = BoxProps & FieldWrapperProps & InputProps & LocalInputFieldProps;
+
+const useInputFieldProps = createHook<InputFieldProps>(
+  (props) => {
+    const {
+      accessibilityLabelledBy,
+      children,
+      autoFocus,
+      defaultValue,
+      description,
+      disabled,
+      hint,
+      iconAfter,
+      iconAfterProps,
+      iconBefore,
+      iconBeforeProps,
+      inputRef,
+      inputProps,
+      isOptional,
+      isRequired,
+      labelProps,
+      labelTextColor,
+      orientation,
+      label,
+      size,
+      palette,
+      placeholder,
+      placeholderTextColor,
+      state,
+      value,
+      onBlur,
+      onChangeText,
+      onFocus,
+      overrides,
+      validationText,
+      variant,
+      useInlineLabel,
+      ...restProps
+    } = props;
+
+    const boxProps = Box.useProps(restProps);
+
+    return {
+      ...boxProps,
+      children: (
+        <FieldWrapper
+          description={description}
+          hint={hint}
+          isOptional={isOptional}
+          isRequired={isRequired}
+          label={!useInlineLabel ? label : undefined}
+          overrides={overrides}
+          state={state}
+          variant={variant}
+          validationText={validationText}
+        >
+          <Input
+            accessibilityLabelledBy={accessibilityLabelledBy}
+            iconAfter={iconAfter}
+            iconAfterProps={iconAfterProps}
+            iconBefore={iconBefore}
+            iconBeforeProps={iconBeforeProps}
+            inputProps={inputProps}
+            inputRef={inputRef}
+            label={useInlineLabel ? label : undefined}
+            labelTextColor={labelTextColor}
+            labelProps={labelProps}
+            palette={palette}
+            placeholder={placeholder}
+            placeholderTextColor={placeholderTextColor}
+            state={state}
+            size={size}
+            value={value}
+            variant={variant}
+            onBlur={onBlur}
+            onChangeText={onChangeText}
+            onFocus={onFocus}
+            overrides={overrides}
+          />
+        </FieldWrapper>
+      ),
+    };
+  },
+  { defaultProps: { orientation: 'horizontal' }, themeKey: 'InputField' }
+);
+
+export const InputField = createComponent<InputFieldProps>(
+  (props) => {
+    const inputFieldProps = useInputFieldProps(props);
+    return createElement({
+      children: props.children,
+      component: styles.InputField,
+      htmlProps: inputFieldProps,
+    });
+  },
+  {
+    attach: {
+      useProps,
+      displayName: 'InputField',
+    },
+    themeKey: 'InputField',
   }
 );
