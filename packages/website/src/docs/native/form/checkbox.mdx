@@ -1,244 +1,26 @@
 import Theme from '../../../components/Theme';
-import { Input as BBInput, FieldWrapper as BBFieldWrapper } from 'bumbag-native';
 
-# FieldWrapper
+# Checkbox
 
-The `<FieldWrapper>` component is a utility belt that wraps around form elements.
-
-It is used to render data about the field such as label, description text, hint text as well as validation text & color.
+Checkboxes are used when a user needs to select one or more values from a series of options, or they can be used as a binary toggle.
 
 ## Import
 
 ```jsx
-import { FieldWrapper } from 'bumbag-native'
+import { Checkbox, CheckboxField } from 'bumbag-native'
 ```
 
 ## Usage
 
 ```jsx-live
-<FieldWrapper label="Username">
-  <Input />
-</FieldWrapper>
-```
-
-### Descriptions
-
-The description text is placed underneath the label.
-
-```jsx-live
-<FieldWrapper label="Username" description="Required for your bumbag">
-  <Input />
-</FieldWrapper>
-```
-
-### Hints
-
-The hint text is placed underneath the field child.
-
-```jsx-live
-<FieldWrapper label="Username" hint="Must be awesome">
-  <Input />
-</FieldWrapper>
-```
-
-### Optional fields
-
-To indicate a field as optional, add the `isOptional` prop.
-
-```jsx-live
-<FieldWrapper label="Username" isOptional>
-  <Input />
-</FieldWrapper>
-```
-
-### Required fields
-
-```jsx-live
-<FieldWrapper label="Username" isRequired>
-  <Input />
-</FieldWrapper>
-```
-
-### States
-
-```jsx-live
-<Stack spacing="major-2">
-  <FieldWrapper
-    label="Username"
-    validationText="This is an invalid name"
-    state="danger"
-  >
-    <Input defaultValue="Jake" />
-  </FieldWrapper>
-  <FieldWrapper
-    label="Username"
-    validationText="Please check the box!"
-    state="primary"
-  >
-    <Input defaultValue="Jake" />
-  </FieldWrapper>
-  <FieldWrapper
-    label="Username"
-    validationText="Nice one!"
-    state="success"
-  >
-    <Input defaultValue="Jake" />
-  </FieldWrapper>
-</Stack>
-```
-
-### Custom label
-
-```jsx-live
-<FieldWrapper label={<Text color="primary">Username</Text>}>
-  <Input />
-</FieldWrapper>
-```
-
-### Custom description
-
-```jsx-live
-<FieldWrapper
-  label="Username"
-  description={<Text color="primary">Required for your bumbag</Text>}
->
-  <Input />
-</FieldWrapper>
-```
-
-### Custom hints
-
-```jsx-live
-<FieldWrapper
-  label="Username"
-  hint={<Text color="primary">Must be awesome</Text>}
->
-  <Input />
-</FieldWrapper>
+<Checkbox label="Check me" />
 ```
 
 ## Props
 
-### FieldWrapper Props
+### Checkbox Props
 
 <!-- Automatically generated -->
-
-**<Code fontSize="150" marginRight="major-1">children</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | (({ elementProps }: { ...; }) => ReactNode)`}
-</Code>
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">description</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-Sets the description text of the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">hint</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-Sets the bottom hint text of the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">isOptional</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
-
-Sets the optional flag (and displays optional text) on the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">isRequired</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
-
-Sets the required flag (and a required astrix) on the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">label</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-Sets the label on the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">labelType</Code>** <Code fontSize="100" palette="primary">&#34;label&#34; | &#34;legend&#34;</Code> 
-
-Sets the label type on the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">&#34;success&#34; | &#34;danger&#34; | &#34;warning&#34;</Code> 
-
-Sets the state of the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">tooltip</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-Sets the tooltip of the field wrapper. Can be either a string, or a React component.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">tooltipTriggerComponent</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-Sets the tooltip trigger component.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">validationText</Code>** <Code fontSize="100" palette="primary">string</Code> 
-
-Sets the bottom validation text of the field wrapper.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <strong><a href="https://reactnative.dev/docs/view">React Native's <code>View</code></a></strong> props</Box>
 
@@ -689,6 +471,25 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -741,17 +542,4 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 ## Theming
 
-<Theme
-  component={BBFieldWrapper}
-  label="This is a label"
-  overrides={[
-    'FieldWrapper.styles.base',
-    { key: 'FieldWrapper.Label.styles.base' },
-    { key: 'FieldWrapper.DescriptionText.styles.base', props: { description: 'This is a description' } },
-    { key: 'FieldWrapper.HintText.styles.base', props: { hint: 'This is a description' } },
-    { key: 'FieldWrapper.OptionalText.styles.base', props: { isOptional: true } },
-    { key: 'FieldWrapper.RequiredText.styles.base', props: { isRequired: true } },
-    { key: 'FieldWrapper.ValidationText.styles.base', props: { validationText: 'This is validation text' } }
-]}>
-  <BBInput />
-</Theme>
+### Checkbox
