@@ -13,6 +13,7 @@ export const SIZES = {
 };
 
 export const StyledInput = styled(TextInput)`
+  color: ${palette('text')};
   font-size: ${(props: any) => `${fontSize(props.styledFontSize)(props)}px`};
   height: ${(props: any) => `${space(2.75, props.styledFontSize)(props)}px`};
 
@@ -216,6 +217,7 @@ export const StyledAnimatedLabel = styled(AnimatedText)`
 function getAnimatedLabelVariantStyles(props) {
   if (props.variant === 'bordered') {
     return `
+      border-radius: 4px;
       background-color: ${palette('default')(props)};
       padding: 0px ${space(0.25, props.fontSize)(props)}px;
 

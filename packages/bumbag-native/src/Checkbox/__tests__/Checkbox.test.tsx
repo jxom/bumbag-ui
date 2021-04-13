@@ -1,49 +1,19 @@
 import * as React from 'react';
 import { applyTheme } from 'bumbag/utils/applyTheme';
-import { renderHook } from '@testing-library/react-hooks';
 import { Checkbox } from '../Checkbox';
-import { Text } from '../../Text';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <Checkbox>
-        <Text>Hello world</Text>
-      </Checkbox>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly with CSS props', () => {
-    const { container } = render(
-      <Checkbox color="primary">
-        <Text>Hello world</Text>
-      </Checkbox>
-    );
+    const { container } = render(<Checkbox label="Remember me" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
-describe('composition', () => {
-  describe('hook', () => {
-    it('should return with Checkbox props', () => {
-      const { result } = renderHook(() => Checkbox.useProps());
-      expect(result.current).toMatchSnapshot();
-    });
-  });
-
-  describe('render props', () => {
-    it('should render correctly', () => {
-      const { container } = render(
-        <Checkbox>
-          {(CheckboxProps) => (
-            <Checkbox {...CheckboxProps}>
-              <Text>Hello world</Text>
-            </Checkbox>
-          )}
-        </Checkbox>
-      );
+describe('variants', () => {
+  ['default', 'ghost'].forEach((variant) => {
+    it(`should render correctly for ${variant} variant`, () => {
+      const { container } = render(<Checkbox label="Remember me" variant={variant} />);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -51,30 +21,30 @@ describe('composition', () => {
 
 describe('theming', () => {
   it('Checkbox.styles.base should render correctly', () => {
-    const { container } = render(
-      <Checkbox>
-        <Text>hello world</Text>
-      </Checkbox>,
-      {
-        // @ts-ignore REMOVE THIS
-        theme: { Checkbox: { styles: { base: { backgroundColor: 'red' } } } },
-      }
-    );
+    const { container } = render(<Checkbox label="Remember me" />, {
+      theme: { Checkbox: { styles: { base: { backgroundColor: 'red' } } } },
+    });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Checkbox.styles.base should render correctly', () => {
-    const { container } = render(
-      <Checkbox>
-        <Text>Hello world</Text>
-      </Checkbox>,
-      {
-        theme: {
-          // @ts-ignore REMOVE THIS
-          Checkbox: { styles: { base: (props) => ({ backgroundColor: props.color }) } },
-        },
-      }
-    );
+  it('Checkbox.Icon.styles.base should render correctly', () => {
+    const { container } = render(<Checkbox label="Remember me" />, {
+      theme: { Checkbox: { Icon: { styles: { base: { backgroundColor: 'red' } } } } },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Checkbox.CheckIcon.styles.base should render correctly', () => {
+    const { container } = render(<Checkbox label="Remember me" />, {
+      theme: { Checkbox: { CheckIcon: { styles: { base: { backgroundColor: 'red' } } } } },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Checkbox.Label.styles.base should render correctly', () => {
+    const { container } = render(<Checkbox label="Remember me" />, {
+      theme: { Checkbox: { Label: { styles: { base: { backgroundColor: 'red' } } } } },
+    });
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -83,8 +53,8 @@ describe('overrides', () => {
   it('should render correctly', () => {
     const { container } = render(
       <Checkbox
+        label="Remember me"
         overrides={{
-          // @ts-ignore REMOVE ME
           Checkbox: {
             styles: { base: { backgroundColor: 'red' } },
             defaultProps: {
@@ -93,9 +63,7 @@ describe('overrides', () => {
             },
           },
         }}
-      >
-        <Text>Hello world</Text>
-      </Checkbox>
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -114,26 +82,20 @@ describe('applyTheme', () => {
         padding: 'major-2',
       },
     });
-    const { container } = render(<Card variant="test" />);
+    const { container } = render(<Card label="Remember me" variant="test" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('variants', () => {
   it('styles.base should render correctly', () => {
-    const { container } = render(
-      <Checkbox variant="test">
-        <Text>Hello world</Text>
-      </Checkbox>,
-      {
-        theme: {
-          // @ts-ignore REMOVE THIS
-          Checkbox: {
-            variants: { test: { styles: { base: { backgroundColor: 'red' } } } },
-          },
+    const { container } = render(<Checkbox variant="test" />, {
+      theme: {
+        Checkbox: {
+          variants: { test: { styles: { base: { backgroundColor: 'red' } } } },
         },
-      }
-    );
+      },
+    });
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -141,7 +103,6 @@ describe('variants', () => {
     const { container } = render(
       <Checkbox
         overrides={{
-          // @ts-ignore REMOVE ME
           Checkbox: {
             variants: {
               test: {
@@ -155,9 +116,7 @@ describe('variants', () => {
           },
         }}
         variant="test"
-      >
-        <Text>Hello world</Text>
-      </Checkbox>
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -183,47 +142,35 @@ describe('variants', () => {
 
 describe('modes', () => {
   it('should render correctly when colorMode is set globally', () => {
-    const { container } = render(
-      <Checkbox>
-        <Text>Hello world</Text>
-      </Checkbox>,
-      {
-        colorMode: 'test',
-        theme: {
-          // @ts-ignore DELETE ME
-          Checkbox: {
-            modes: {
-              test: {
-                styles: { base: { backgroundColor: 'red' } },
-                defaultProps: { color: 'primaryTint' },
-              },
+    const { container } = render(<Checkbox />, {
+      colorMode: 'test',
+      theme: {
+        Checkbox: {
+          modes: {
+            test: {
+              styles: { base: { backgroundColor: 'red' } },
+              defaultProps: { color: 'primaryTint' },
             },
           },
         },
-      }
-    );
+      },
+    });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly when colorMode set as prop', () => {
-    const { container } = render(
-      <Checkbox colorMode="test">
-        <Text>Hello world</Text>
-      </Checkbox>,
-      {
-        theme: {
-          // @ts-ignore DELETE ME
-          Checkbox: {
-            modes: {
-              test: {
-                styles: { base: { backgroundColor: 'red' } },
-                defaultProps: { color: 'primaryTint' },
-              },
+    const { container } = render(<Checkbox colorMode="test" />, {
+      theme: {
+        Checkbox: {
+          modes: {
+            test: {
+              styles: { base: { backgroundColor: 'red' } },
+              defaultProps: { color: 'primaryTint' },
             },
           },
         },
-      }
-    );
+      },
+    });
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -231,7 +178,6 @@ describe('modes', () => {
     const { container } = render(
       <Checkbox
         overrides={{
-          // @ts-ignore REMOVE ME
           Checkbox: {
             modes: {
               test: {
@@ -245,9 +191,7 @@ describe('modes', () => {
           },
         }}
         colorMode="test"
-      >
-        <Text>Hello world</Text>
-      </Checkbox>
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -272,15 +216,9 @@ describe('modes', () => {
 
 describe('defaultProps', () => {
   it('should render correctly for color', () => {
-    const { container } = render(
-      <Checkbox>
-        <Text>hello world</Text>
-      </Checkbox>,
-      {
-        // @ts-ignore REMOVE THIS
-        theme: { Checkbox: { defaultProps: { color: 'primary' } } },
-      }
-    );
+    const { container } = render(<Checkbox />, {
+      theme: { Checkbox: { defaultProps: { color: 'primary' } } },
+    });
     expect(container.firstChild).toMatchSnapshot();
   });
 });

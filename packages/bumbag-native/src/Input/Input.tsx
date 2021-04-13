@@ -65,7 +65,7 @@ const useProps = createHook<InputProps>(
 export const Input = createComponent<InputProps>(
   (_props) => {
     const props = { ..._props, ..._props.inputProps };
-    const { iconAfter, iconAfterProps, iconBefore, iconBeforeProps, inputProps, label, labelProps, size } = props;
+    const { colorMode, iconAfter, iconAfterProps, iconBefore, iconBeforeProps, label, labelProps, size } = props;
     const defaultFontSize = props.fontSize || styles.SIZES[size];
 
     /////////////////////////////////////////////////////////////////////
@@ -197,22 +197,33 @@ export const Input = createComponent<InputProps>(
     /////////////////////////////////////////////////////////////////////
 
     return (
-      <Box position="relative" {...pickCSSProps(props)}>
+      <Box colorMode={colorMode} position="relative" {...pickCSSProps(props)}>
         {element}
         {iconBefore && (
           // @ts-ignore
-          <styles.StyledIconWrapper isBefore defaultFontSize={defaultFontSize} variant={props.variant}>
+          <styles.StyledIconWrapper
+            colorMode={colorMode}
+            isBefore
+            defaultFontSize={defaultFontSize}
+            variant={props.variant}
+          >
             <Icon color="gray200" icon={iconBefore} size={defaultFontSize} {...iconBeforeProps} />
           </styles.StyledIconWrapper>
         )}
         {iconAfter && (
           // @ts-ignore
-          <styles.StyledIconWrapper isAfter defaultFontSize={defaultFontSize} variant={props.variant}>
+          <styles.StyledIconWrapper
+            colorMode={colorMode}
+            isAfter
+            defaultFontSize={defaultFontSize}
+            variant={props.variant}
+          >
             <Icon color="gray200" icon={iconAfter} size={defaultFontSize} {...iconAfterProps} />
           </styles.StyledIconWrapper>
         )}
         {label && !props.disabled && (
           <styles.StyledAnimatedLabelWrapper
+            colorMode={colorMode}
             iconAfter={iconAfter}
             iconBefore={iconBefore}
             defaultFontSize={defaultFontSize}
@@ -221,6 +232,7 @@ export const Input = createComponent<InputProps>(
           >
             <Pressable onPress={handlePress}>
               <styles.StyledAnimatedLabel
+                colorMode={colorMode}
                 // @ts-ignore
                 color={color}
                 // @ts-ignore

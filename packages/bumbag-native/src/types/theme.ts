@@ -5,6 +5,7 @@ import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxKeyboardAvoidingProps, BoxProps, BoxSafeProps, BoxScrollProps, BoxTouchableProps } from '../Box';
 import { ButtonProps } from '../Button';
+import { CheckboxProps } from '../Checkbox';
 import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
 import { GroupProps } from '../Group';
@@ -125,6 +126,30 @@ export type ButtonThemeConfig = {
   defaultProps?: Partial<ButtonProps>;
   variants?: Variant<ButtonThemeConfig>;
   modes?: Variant<ButtonThemeConfig>;
+};
+
+export type CheckboxThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Icon?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  CheckIcon?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Label?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<CheckboxProps>;
+  variants?: Variant<CheckboxThemeConfig>;
+  modes?: Variant<CheckboxThemeConfig>;
 };
 
 export type FieldWrapperThemeConfig = {
@@ -405,6 +430,7 @@ export type ThemeConfig = {
 
   Box?: BoxThemeConfig;
   Button?: ButtonThemeConfig;
+  Checkbox?: CheckboxThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
   Group?: GroupThemeConfig;
