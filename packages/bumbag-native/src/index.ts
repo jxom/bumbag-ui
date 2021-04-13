@@ -16,6 +16,7 @@ export * from './Level';
 export * from './List';
 export * from './Provider';
 export * from './Pressable';
+export * from './Radio';
 export * from './Set';
 export * from './Show';
 export * from './Spinner';

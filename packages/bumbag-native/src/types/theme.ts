@@ -5,16 +5,17 @@ import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxKeyboardAvoidingProps, BoxProps, BoxSafeProps, BoxScrollProps, BoxTouchableProps } from '../Box';
 import { ButtonProps } from '../Button';
-import { CheckboxProps } from '../Checkbox';
+import { CheckboxProps, CheckboxFieldProps } from '../Checkbox';
 import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
 import { GroupProps } from '../Group';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
-import { InputProps } from '../Input';
+import { InputProps, InputFieldProps } from '../Input';
 import { ImageProps } from '../Image';
 import { LevelProps } from '../Level';
 import { PressableProps } from '../Pressable';
+import { RadioProps } from '../Radio';
 import { SpinnerProps } from '../Spinner';
 import { SetProps } from '../Set';
 import { StackProps } from '../Stack';
@@ -150,6 +151,15 @@ export type CheckboxThemeConfig = {
   defaultProps?: Partial<CheckboxProps>;
   variants?: Variant<CheckboxThemeConfig>;
   modes?: Variant<CheckboxThemeConfig>;
+};
+
+export type CheckboxFieldThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<CheckboxFieldProps>;
+  variants?: Variant<CheckboxFieldThemeConfig>;
+  modes?: Variant<CheckboxFieldThemeConfig>;
 };
 
 export type FieldWrapperThemeConfig = {
@@ -343,6 +353,15 @@ export type InputThemeConfig = {
   modes?: Variant<InputThemeConfig>;
 };
 
+export type InputFieldThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<InputFieldProps>;
+  variants?: Variant<InputFieldThemeConfig>;
+  modes?: Variant<InputFieldThemeConfig>;
+};
+
 export type ImageThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -368,6 +387,30 @@ export type PressableThemeConfig = {
   defaultProps?: Partial<PressableProps>;
   variants?: Variant<PressableThemeConfig>;
   modes?: Variant<PressableThemeConfig>;
+};
+
+export type RadioThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Icon?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  CheckIcon?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Label?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<RadioProps>;
+  variants?: Variant<RadioThemeConfig>;
+  modes?: Variant<RadioThemeConfig>;
 };
 
 export type SetThemeConfig = {
@@ -431,15 +474,18 @@ export type ThemeConfig = {
   Box?: BoxThemeConfig;
   Button?: ButtonThemeConfig;
   Checkbox?: CheckboxThemeConfig;
+  CheckboxField?: CheckboxThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
   Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
   Icon?: IconThemeConfig;
   Input?: InputThemeConfig;
+  InputField?: InputFieldThemeConfig;
   Image?: ImageThemeConfig;
   Level?: LevelThemeConfig;
   Pressable?: PressableThemeConfig;
+  Radio?: RadioThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Stack?: StackThemeConfig;

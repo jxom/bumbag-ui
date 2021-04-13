@@ -1,0 +1,127 @@
+import Theme from '../../../components/Theme';
+
+# Radio
+
+Checkboxes are used when a user needs to at most one value from a series of options.
+
+## Import
+
+```jsx
+import { Radio } from 'bumbag-native'
+```
+
+## Usage
+
+```live
+###tab=Default,type=jsx-live
+<Radio label="Check me" />###
+
+###tab=Ghost,type=jsx-live
+<Radio label="Check me" variant="ghost" />###
+```
+
+### Align
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1" width="300px">
+  <Radio align="right" label="Check me" />
+  <Radio align="left" label="Check me" />
+</Stack>###
+
+###tab=Ghost,type=jsx-live
+<Stack spacing="major-1" width="300px">
+  <Radio align="right" label="Check me" variant="ghost" />
+  <Radio align="left" label="Check me" variant="ghost" />
+</Stack>###
+```
+
+### Default checked
+
+```live
+###tab=Default,type=jsx-live
+<Radio defaultChecked label="Check me" />###
+
+###tab=Ghost,type=jsx-live
+<Radio defaultChecked label="Check me" variant="ghost" />###
+```
+
+### Disabled
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Radio disabled defaultChecked label="Check me" />
+  <Radio disabled label="Check me" />
+</Stack>###
+
+###tab=Ghost,type=jsx-live
+<Stack spacing="major-1">
+  <Radio disabled defaultChecked label="Check me" variant="ghost" />
+  <Radio disabled label="Check me" variant="ghost" />
+</Stack>###
+```
+
+### States
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1" width="300px">
+  <Radio state="danger" label="Check me" />
+  <Radio state="success" label="Check me" />
+  <Radio state="warning" label="Check me" />
+  <Radio state="primary" label="Check me" />
+</Stack>###
+
+###tab=Ghost,type=jsx-live
+<Stack spacing="major-1" width="300px">
+  <Radio state="danger" label="Check me" variant="ghost" />
+  <Radio state="success" label="Check me" variant="ghost" />
+  <Radio state="warning" label="Check me" variant="ghost" />
+  <Radio state="primary" label="Check me" variant="ghost" />
+</Stack>###
+```
+
+### Colors
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1" width="300px">
+  <Radio palette="primary" label="Check me" />
+  <Radio palette="secondary" label="Check me" />
+  <Radio palette="danger" label="Check me" />
+  <Radio palette="success" label="Check me" />
+  <Radio palette="warning" label="Check me" />
+</Stack>###
+
+###tab=Ghost,type=jsx-live
+<Stack spacing="major-1" width="300px">
+  <Radio palette="primary" label="Check me" variant="ghost" />
+  <Radio palette="secondary" label="Check me" variant="ghost" />
+  <Radio palette="danger" label="Check me" variant="ghost" />
+  <Radio palette="success" label="Check me" variant="ghost" />
+  <Radio palette="warning" label="Check me" variant="ghost" />
+</Stack>###
+```
+
+### Controlled
+
+```function-live
+function Example() {
+  const [checked, setChecked] = React.useState(false);
+
+  return (
+    <Radio
+      label="Remember me"
+      checked={checked}
+      onChange={setChecked}
+    />
+  )
+}
+```
+
+## Props
+
+### Radio Props
+
+## Theming

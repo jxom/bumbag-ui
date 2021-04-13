@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createComponent, createElement, createHook } from 'bumbag/utils';
+import { createComponent, createElement, createHook, useUniqueId } from 'bumbag/utils';
 
 import { Box, BoxProps } from '../Box';
 import { TextProps } from '../Text';
@@ -27,7 +27,7 @@ export type LocalCheckboxProps = {
   /*** Sets the color of the checkbox */
   palette?: string;
   /** Function to invoke when checkbox has changed */
-  onChange: (checked: boolean) => void;
+  onChange?: (checked: boolean) => void;
   /** State of the checkbox. Can be any color in the palette. */
   state?: string;
 };
@@ -85,6 +85,7 @@ const useProps = createHook<CheckboxProps>(
 
     const checkbox = (
       <styles.CheckboxIcon
+        // @ts-ignore
         align={align}
         colorMode={colorMode}
         checked={isChecked}
@@ -102,6 +103,7 @@ const useProps = createHook<CheckboxProps>(
             colorMode={colorMode}
             icon="check"
             variant={variant}
+            // @ts-ignore
             state={state}
             size={iconSize}
             overrides={overrides}
@@ -113,12 +115,20 @@ const useProps = createHook<CheckboxProps>(
 
     ///////////////////////////////////////////////////
 
+    const labelId = useUniqueId();
+
+    ///////////////////////////////////////////////////
+
     return {
       ...boxProps,
+      accessibilityRole: 'checkbox',
+      accessibilityLabelledBy: labelId,
+      accessibilityChecked: isChecked,
+      focusable: true,
       children: (
         <>
           {align === 'left' && checkbox}
-          <styles.CheckboxLabel colorMode={colorMode} overrides={overrides} {...labelProps}>
+          <styles.CheckboxLabel nativeID={labelId} colorMode={colorMode} overrides={overrides} {...labelProps}>
             {label}
           </styles.CheckboxLabel>
           {align === 'right' && checkbox}
