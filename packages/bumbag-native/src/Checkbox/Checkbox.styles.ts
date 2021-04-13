@@ -97,6 +97,6 @@ export const CheckboxLabel = styled(Text)`
 
 //////////////////////////////////////////////////////////////////
 
-export const CheckboxField = styled(Text)`
+export const CheckboxField = styled(Box)`
   ${theme('native.CheckboxField', 'styles.base')};
 `;

@@ -10,7 +10,7 @@ export const FieldWrapper = styled(View)`
 
 export const LabelWrapper = styled(Box)`
   ${(props) =>
-    props.variant === 'bordered'
+    props.variant === 'default' || props.variant === 'bordered'
       ? `
           margin-bottom: ${space(2)(props)}px;
         `

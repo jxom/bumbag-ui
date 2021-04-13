@@ -21,6 +21,20 @@ import { Checkbox, CheckboxField } from 'bumbag-native'
 <Checkbox label="Remember me" variant="ghost" />###
 ```
 
+### Fields
+
+You can also use the `<CheckboxField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.
+
+It accepts a combination of [Checkbox props](/native/form/checkbox/#props) and [FieldWrapper props](/native/form/field-wrapper/#props).
+
+```live
+###tab=Default,type=jsx-live
+<CheckboxField label="Check below to subscribe" checkboxLabel="Subscribe" />###
+
+###tab=Ghost,type=jsx-live
+<CheckboxField label="Check below to subscribe" checkboxLabel="Subscribe" variant="ghost" />###
+```
+
 ### Align
 
 ```live

@@ -229,7 +229,14 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       ),
     };
   },
-  { themeKey: 'CheckboxField' }
+  {
+    defaultProps: {
+      align: 'left',
+      palette: 'primary',
+      variant: 'default',
+    },
+    themeKey: 'CheckboxField',
+  }
 );
 
 export const CheckboxField = createComponent<CheckboxFieldProps>(
