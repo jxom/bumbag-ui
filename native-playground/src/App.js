@@ -6,12 +6,15 @@ import { Box, Heading, Provider } from 'bumbag-native';
 import Home from './routes/Home';
 import BoxPage from './routes/components/Box';
 import ButtonPage from './routes/components/Button';
+import CheckboxPage from './routes/components/Checkbox';
 import FieldWrapperPage from './routes/components/FieldWrapper';
 import HeadingPage from './routes/components/Heading';
 import HidePage from './routes/components/Hide';
 import IconPage from './routes/components/Icon';
 import ImagePage from './routes/components/Image';
 import InputPage from './routes/components/Input';
+import ListPage from './routes/components/List';
+import RadioPage from './routes/components/Radio';
 import SetPage from './routes/components/Set';
 import ShowPage from './routes/components/Show';
 import TextPage from './routes/components/Text';
@@ -29,12 +32,15 @@ export default function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/components/box" component={BoxPage} />
               <Route exact path="/components/button" component={ButtonPage} />
+              <Route exact path="/components/checkbox" component={CheckboxPage} />
               <Route exact path="/components/field-wrapper" component={FieldWrapperPage} />
               <Route exact path="/components/heading" component={HeadingPage} />
               <Route exact path="/components/hide" component={HidePage} />
               <Route exact path="/components/icon" component={IconPage} />
               <Route exact path="/components/image" component={ImagePage} />
               <Route exact path="/components/input" component={InputPage} />
+              <Route exact path="/components/list" component={ListPage} />
+              <Route exact path="/components/radio" component={RadioPage} />
               <Route exact path="/components/set" component={SetPage} />
               <Route exact path="/components/show" component={ShowPage} />
               <Route exact path="/components/text" component={TextPage} />

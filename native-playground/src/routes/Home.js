@@ -12,6 +12,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/button">
         <Text>Button</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/checkbox">
+        <Text>Checkbox</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/field-wrapper">
         <Text>FieldWrapper</Text>
       </Link>
@@ -29,6 +32,12 @@ export default function App() {
       </Link>
       <Link component={TouchableOpacity} to="/components/input">
         <Text>Input</Text>
+      </Link>
+      <Link component={TouchableOpacity} to="/components/list">
+        <Text>List</Text>
+      </Link>
+      <Link component={TouchableOpacity} to="/components/radio">
+        <Text>Radio</Text>
       </Link>
       <Link component={TouchableOpacity} to="/components/show">
         <Text>Show</Text>

@@ -1,5 +1,5 @@
 import { styled } from '../styled';
-import { borderRadius, palette, space, theme } from '../utils/theme';
+import { palette, space, theme } from '../utils/theme';
 import { Box } from '../Box';
 import { Pressable } from '../Pressable';
 import { Icon } from '../Icon';
@@ -25,7 +25,7 @@ export const Radio = styled(Pressable)`
 export const RadioIcon = styled(Box)`
   border-style: solid;
   border-width: 1px;
-  border-radius: 100%;
+  border-radius: ${(props) => `${space(3, 'major')(props)}px`};
   display: flex;
   align-items: center;
   justify-content: center;
