@@ -161,7 +161,7 @@ export type LocalCheckboxFieldProps = {
   /** Additional props for the Checkbox component */
   checkboxProps?: Partial<CheckboxProps>;
   /** Label for the checkbox */
-  checkboxLabel?: boolean;
+  checkboxLabel?: string;
 };
 export type CheckboxFieldProps = BoxProps & FieldWrapperProps & CheckboxProps & LocalCheckboxFieldProps;
 
@@ -171,8 +171,6 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       align,
       checkboxLabel,
       checked,
-      checkedColor,
-      checkedIconColor,
       defaultChecked,
       description,
       disabled,
@@ -185,8 +183,8 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       labelProps,
       onChange,
       overrides,
+      palette,
       state,
-      uncheckedColor,
       variant,
       validationText,
       ...restProps
@@ -211,8 +209,6 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
           <Checkbox
             align={align}
             checked={checked}
-            checkedColor={checkedColor}
-            checkedIconColor={checkedIconColor}
             defaultChecked={defaultChecked}
             disabled={disabled}
             iconProps={iconProps}
@@ -220,10 +216,10 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
             label={checkboxLabel}
             labelProps={labelProps}
             onChange={onChange}
+            palette={palette}
             state={state}
             variant={variant}
             overrides={overrides}
-            uncheckedColor={uncheckedColor}
           />
         </FieldWrapper>
       ),
