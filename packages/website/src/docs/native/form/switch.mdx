@@ -1,0 +1,94 @@
+import Theme from '../../../components/Theme';
+import { Switch as BNSwitch } from 'bumbag-native';
+
+# Switch
+
+Switches are used when a user needs to select one or more values from a series of options, or they can be used as a binary toggle.
+
+## Import
+
+```jsx
+import { Switch, SwitchField } from 'bumbag-native'
+```
+
+## Usage
+
+```jsx-live
+<Switch />
+```
+
+### Labels
+
+```jsx-live
+<Switch label="Remember me" />
+```
+
+### Fields
+
+You can also use the `<SwitchField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.
+
+It accepts a combination of [Switch props](/native/form/switch/#props) and [FieldWrapper props](/native/form/field-wrapper/#props).
+
+```jsx-live
+<SwitchField label="Check below to subscribe" switchLabel="Subscribe" />
+```
+
+### Align
+
+```jsx-live
+<Switch align="right" label="Remember me" />
+<Switch align="left" label="Remember me" />
+```
+
+### Default checked
+
+```jsx-live
+<Switch defaultChecked />
+```
+
+### Disabled
+
+```jsx-live
+<Switch disabled defaultChecked />
+<Switch disabled />
+```
+
+### States
+
+```jsx-live
+<Switch state="danger" />
+<Switch state="success" />
+<Switch state="warning" />
+<Switch state="primary" />
+```
+
+### Colors
+
+```jsx-live
+<Switch palette="primary" />
+<Switch palette="secondary" />
+<Switch palette="danger" />
+<Switch palette="success" />
+<Switch palette="warning" />
+```
+
+### Controlled
+
+```function-live
+function Example() {
+  const [checked, setChecked] = React.useState(false);
+
+  return (
+    <Switch
+      checked={checked}
+      onChange={setChecked}
+    />
+  )
+}
+```
+
+## Props
+
+### Switch Props
+
+## Theming

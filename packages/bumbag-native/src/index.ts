@@ -21,6 +21,7 @@ export * from './Set';
 export * from './Show';
 export * from './Spinner';
 export * from './Stack';
+export * from './Switch';
 export * from './Text';
 
 export * from './styled';

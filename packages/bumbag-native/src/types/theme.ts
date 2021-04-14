@@ -19,6 +19,7 @@ import { RadioProps } from '../Radio';
 import { SpinnerProps } from '../Spinner';
 import { SetProps } from '../Set';
 import { StackProps } from '../Stack';
+import { SwitchProps, SwitchFieldProps } from '../Switch';
 import { TextProps } from '../Text';
 
 export type Stylesheet = InterpolationWithTheme<any>;
@@ -448,6 +449,34 @@ export type StackThemeConfig = {
   modes?: Variant<StackThemeConfig>;
 };
 
+export type SwitchThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Toggle?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Label?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<SwitchProps>;
+  variants?: Variant<SwitchThemeConfig>;
+  modes?: Variant<SwitchThemeConfig>;
+};
+
+export type SwitchFieldThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<SwitchFieldProps>;
+  variants?: Variant<SwitchFieldThemeConfig>;
+  modes?: Variant<SwitchFieldThemeConfig>;
+};
+
 export type TextThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -489,5 +518,7 @@ export type ThemeConfig = {
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Stack?: StackThemeConfig;
+  Switch?: SwitchThemeConfig;
+  SwitchField?: SwitchFieldThemeConfig;
   Text?: TextThemeConfig;
 };
