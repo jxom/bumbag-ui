@@ -2,7 +2,9 @@ import { styled } from '../styled';
 import { borderRadius, palette, space, theme } from '../utils/theme';
 import { Box } from '../Box';
 import { Pressable } from '../Pressable';
+import { Checkbox as BBCheckbox } from './Checkbox';
 import { Icon } from '../Icon';
+import { Set } from '../Set';
 import { Text } from '../Text';
 
 export const Checkbox = styled(Pressable)`
@@ -99,4 +101,28 @@ export const CheckboxLabel = styled(Text)`
 
 export const CheckboxField = styled(Box)`
   ${theme('native.CheckboxField', 'styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const CheckboxGroup = styled(Box)`
+  ${theme('native.CheckboxGroup', 'styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const CheckboxGroupSet = styled(Set)`
+  ${theme('native.CheckboxGroup', 'Set.styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const CheckboxGroupItem = styled((BBCheckbox || {}) as any)`
+  ${theme('native.CheckboxGroup', 'Item.styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const CheckboxGroupField = styled(Box)`
+  ${theme('native.CheckboxGroupField', 'styles.base')};
 `;

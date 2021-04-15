@@ -116,6 +116,10 @@ const useProps = createHook<ButtonProps>(
   },
   {
     defaultProps: {
+      _hover: true,
+      _focus: true,
+      _active: true,
+      _hoveractive: true,
       disabled: false,
       iconAfter: undefined,
       iconBefore: undefined,

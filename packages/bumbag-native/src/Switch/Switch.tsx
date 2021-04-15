@@ -28,10 +28,11 @@ export type LocalSwitchProps = {
   /*** Sets the color of the switch */
   palette?: string;
   /** Function to invoke when switch has changed */
-  onChange?: (checked: boolean) => void;
+  onChange?: ({ checked, value }: { checked: boolean; value?: any }) => void;
   /** State of the switch. Can be any color in the palette. */
   state?: string;
   switchProps?: Partial<RNSwitchProps>;
+  value?: any;
 };
 export type SwitchProps = BoxProps & RNSwitchProps & LocalSwitchProps;
 
@@ -50,6 +51,7 @@ const useProps = createHook<SwitchProps>(
       overrides,
       switchProps,
       state,
+      value,
     } = props;
 
     ///////////////////////////////////////////////////
@@ -60,9 +62,12 @@ const useProps = createHook<SwitchProps>(
 
     const [controlledChecked, setControlledChecked] = React.useState(defaultChecked);
     const handlePress = React.useCallback(() => {
-      setControlledChecked(!controlledChecked);
-      onChange && onChange(!checked);
-    }, [checked, controlledChecked, onChange]);
+      if (typeof checked === 'undefined') {
+        setControlledChecked(!controlledChecked);
+      } else {
+        onChange && onChange({ checked: !checked, value });
+      }
+    }, [checked, controlledChecked, onChange, value]);
 
     ///////////////////////////////////////////////////
 
@@ -184,6 +189,7 @@ const useSwitchFieldProps = createHook<SwitchFieldProps>(
       state,
       variant,
       validationText,
+      value,
       ...restProps
     } = props;
 
@@ -214,6 +220,7 @@ const useSwitchFieldProps = createHook<SwitchFieldProps>(
             palette={palette}
             state={state}
             overrides={overrides}
+            value={value}
           />
         </FieldWrapper>
       ),

@@ -15,6 +15,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/checkbox">
         <Text>Checkbox</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/checkbox-group">
+        <Text>CheckboxGroup</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/field-wrapper">
         <Text>FieldWrapper</Text>
       </Link>

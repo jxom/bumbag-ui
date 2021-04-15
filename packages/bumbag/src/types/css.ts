@@ -2,11 +2,11 @@ import { BorderRadii, FontFamily, FontSize, FontWeight, LetterSpacing, LineHeigh
 import { Flexible } from './utils';
 
 export type CSSProperties = {
-  _hover?: CSSProperties;
-  _hoveractive?: CSSProperties;
-  _focus?: CSSProperties;
-  _active?: CSSProperties;
-  _visited?: CSSProperties;
+  _hover?: CSSProperties | boolean;
+  _hoveractive?: CSSProperties | boolean;
+  _focus?: CSSProperties | boolean;
+  _active?: CSSProperties | boolean;
+  _visited?: CSSProperties | boolean;
   _disabled?: CSSProperties;
   _groupHover?: CSSProperties;
   _groupActive?: CSSProperties;

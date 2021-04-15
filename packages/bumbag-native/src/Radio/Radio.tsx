@@ -27,9 +27,10 @@ export type LocalRadioProps = {
   /*** Sets the color of the radio */
   palette?: string;
   /** Function to invoke when radio has changed */
-  onChange?: (checked: boolean) => void;
+  onChange?: ({ checked, value }: { checked: boolean; value?: any }) => void;
   /** State of the radio. Can be any color in the palette. */
   state?: string;
+  value?: any;
 };
 export type RadioProps = BoxProps & LocalRadioProps;
 
@@ -50,6 +51,7 @@ const useProps = createHook<RadioProps>(
       overrides,
       state,
       variant,
+      value,
     } = props;
 
     ///////////////////////////////////////////////////
@@ -60,9 +62,12 @@ const useProps = createHook<RadioProps>(
 
     const [controlledChecked, setControlledChecked] = React.useState(defaultChecked);
     const handlePress = React.useCallback(() => {
-      setControlledChecked(!controlledChecked);
-      onChange && onChange(!checked);
-    }, [checked, controlledChecked, onChange]);
+      if (typeof checked === 'undefined') {
+        setControlledChecked(!controlledChecked);
+      } else {
+        onChange && onChange({ checked: !checked, value });
+      }
+    }, [checked, controlledChecked, onChange, value]);
 
     ///////////////////////////////////////////////////
 

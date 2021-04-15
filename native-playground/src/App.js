@@ -7,6 +7,7 @@ import Home from './routes/Home';
 import BoxPage from './routes/components/Box';
 import ButtonPage from './routes/components/Button';
 import CheckboxPage from './routes/components/Checkbox';
+import CheckboxGroupPage from './routes/components/CheckboxGroup';
 import FieldWrapperPage from './routes/components/FieldWrapper';
 import HeadingPage from './routes/components/Heading';
 import HidePage from './routes/components/Hide';
@@ -34,6 +35,7 @@ export default function App() {
               <Route exact path="/components/box" component={BoxPage} />
               <Route exact path="/components/button" component={ButtonPage} />
               <Route exact path="/components/checkbox" component={CheckboxPage} />
+              <Route exact path="/components/checkbox-group" component={CheckboxGroupPage} />
               <Route exact path="/components/field-wrapper" component={FieldWrapperPage} />
               <Route exact path="/components/heading" component={HeadingPage} />
               <Route exact path="/components/hide" component={HidePage} />

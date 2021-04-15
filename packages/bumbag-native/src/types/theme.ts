@@ -5,7 +5,7 @@ import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxKeyboardAvoidingProps, BoxProps, BoxSafeProps, BoxScrollProps, BoxTouchableProps } from '../Box';
 import { ButtonProps } from '../Button';
-import { CheckboxProps, CheckboxFieldProps } from '../Checkbox';
+import { CheckboxProps, CheckboxFieldProps, CheckboxGroupProps, CheckboxGroupFieldProps } from '../Checkbox';
 import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
 import { GroupProps } from '../Group';
@@ -215,6 +215,34 @@ export type FieldWrapperThemeConfig = {
   defaultProps?: Partial<FieldWrapperProps>;
   variants?: Variant<FieldWrapperThemeConfig>;
   modes?: Variant<FieldWrapperThemeConfig>;
+};
+
+export type CheckboxGroupThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Set?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Item?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<CheckboxGroupProps>;
+  variants?: Variant<CheckboxGroupThemeConfig>;
+  modes?: Variant<CheckboxGroupThemeConfig>;
+};
+
+export type CheckboxGroupFieldThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<CheckboxGroupFieldProps>;
+  variants?: Variant<CheckboxGroupFieldThemeConfig>;
+  modes?: Variant<CheckboxGroupFieldThemeConfig>;
 };
 
 export type FlexThemeConfig = {
@@ -504,6 +532,8 @@ export type ThemeConfig = {
   Button?: ButtonThemeConfig;
   Checkbox?: CheckboxThemeConfig;
   CheckboxField?: CheckboxThemeConfig;
+  CheckboxGroup?: CheckboxGroupThemeConfig;
+  CheckboxGroupField?: CheckboxGroupFieldThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
   Group?: GroupThemeConfig;

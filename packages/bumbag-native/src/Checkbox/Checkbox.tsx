@@ -27,9 +27,10 @@ export type LocalCheckboxProps = {
   /*** Sets the color of the checkbox */
   palette?: string;
   /** Function to invoke when checkbox has changed */
-  onChange?: (checked: boolean) => void;
+  onChange?: ({ checked, value }: { checked: boolean; value?: any }) => void;
   /** State of the checkbox. Can be any color in the palette. */
   state?: string;
+  value?: any;
 };
 export type CheckboxProps = BoxProps & LocalCheckboxProps;
 
@@ -49,6 +50,7 @@ const useProps = createHook<CheckboxProps>(
       onChange,
       overrides,
       state,
+      value,
       variant,
     } = props;
 
@@ -60,9 +62,12 @@ const useProps = createHook<CheckboxProps>(
 
     const [controlledChecked, setControlledChecked] = React.useState(defaultChecked);
     const handlePress = React.useCallback(() => {
-      setControlledChecked(!controlledChecked);
-      onChange && onChange(!checked);
-    }, [checked, controlledChecked, onChange]);
+      if (typeof checked === 'undefined') {
+        setControlledChecked(!controlledChecked);
+      } else {
+        onChange && onChange({ checked: !checked, value });
+      }
+    }, [checked, controlledChecked, onChange, value]);
 
     ///////////////////////////////////////////////////
 
@@ -197,6 +202,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       state,
       variant,
       validationText,
+      value,
       ...restProps
     } = props;
 
@@ -228,6 +234,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
             onChange={onChange}
             palette={palette}
             state={state}
+            value={value}
             variant={variant}
             overrides={overrides}
           />
@@ -256,7 +263,7 @@ export const CheckboxField = createComponent<CheckboxFieldProps>(
   },
   {
     attach: {
-      useProps,
+      useProps: useCheckboxFieldProps,
       displayName: 'CheckboxField',
     },
     themeKey: 'CheckboxField',

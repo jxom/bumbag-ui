@@ -40,10 +40,18 @@ const useProps = createHook<BoxProps>(
 
     const boxRef = React.useRef();
     props.elementRef = mergeRefs(boxRef, props.elementRef);
-    props.hover = useHover(boxRef);
-    props.active = useActive(boxRef);
-    props.focus = useFocus(boxRef);
-    props.hoveractive = props.hover && props.active;
+    if (props._hover) {
+      props.hover = useHover(boxRef);
+    }
+    if (props._active) {
+      props.active = useActive(boxRef);
+    }
+    if (props._focus) {
+      props.focus = useFocus(boxRef);
+    }
+    if (props._hoveractive) {
+      props.hoveractive = props.hover && props.active;
+    }
 
     const animationStyles = React.useMemo(
       () =>
