@@ -19,7 +19,7 @@ import { RadioProps } from '../Radio';
 import { SpinnerProps } from '../Spinner';
 import { SetProps } from '../Set';
 import { StackProps } from '../Stack';
-import { SwitchProps, SwitchFieldProps } from '../Switch';
+import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TextProps } from '../Text';
 
 export type Stylesheet = InterpolationWithTheme<any>;
@@ -505,6 +505,34 @@ export type SwitchFieldThemeConfig = {
   modes?: Variant<SwitchFieldThemeConfig>;
 };
 
+export type SwitchGroupThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Set?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Item?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<SwitchGroupProps>;
+  variants?: Variant<SwitchGroupThemeConfig>;
+  modes?: Variant<SwitchGroupThemeConfig>;
+};
+
+export type SwitchGroupFieldThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<SwitchGroupFieldProps>;
+  variants?: Variant<SwitchGroupFieldThemeConfig>;
+  modes?: Variant<SwitchGroupFieldThemeConfig>;
+};
+
 export type TextThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -549,6 +577,8 @@ export type ThemeConfig = {
   Spinner?: SpinnerThemeConfig;
   Stack?: StackThemeConfig;
   Switch?: SwitchThemeConfig;
+  SwitchGroup?: SwitchGroupThemeConfig;
   SwitchField?: SwitchFieldThemeConfig;
+  SwitchGroupField?: SwitchGroupFieldThemeConfig;
   Text?: TextThemeConfig;
 };

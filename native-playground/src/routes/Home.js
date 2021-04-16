@@ -48,6 +48,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/switch">
         <Text>Switch</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/switch-group">
+        <Text>SwitchGroup</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/set">
         <Text>Set</Text>
       </Link>

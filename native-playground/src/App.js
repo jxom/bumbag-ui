@@ -19,6 +19,7 @@ import RadioPage from './routes/components/Radio';
 import SetPage from './routes/components/Set';
 import ShowPage from './routes/components/Show';
 import SwitchPage from './routes/components/Switch';
+import SwitchGroupPage from './routes/components/SwitchGroup';
 import TextPage from './routes/components/Text';
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
               <Route exact path="/components/set" component={SetPage} />
               <Route exact path="/components/show" component={ShowPage} />
               <Route exact path="/components/switch" component={SwitchPage} />
+              <Route exact path="/components/switch-group" component={SwitchGroupPage} />
               <Route exact path="/components/text" component={TextPage} />
             </Box>
           </Box.Scroll>

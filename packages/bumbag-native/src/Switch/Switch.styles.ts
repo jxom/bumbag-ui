@@ -3,7 +3,9 @@ import { styled } from '../styled';
 import { space, theme } from '../utils/theme';
 import { Box } from '../Box';
 import { Pressable } from '../Pressable';
+import { Set } from '../Set';
 import { Text } from '../Text';
+import { Switch as BBSwitch } from './Switch';
 
 export const Switch = styled(Pressable)`
   display: flex;
@@ -45,4 +47,28 @@ export const SwitchLabel = styled(Text)`
 
 export const SwitchField = styled(Box)`
   ${theme('native.SwitchField', 'styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const SwitchGroup = styled(Box)`
+  ${theme('native.SwitchGroup', 'styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const SwitchGroupSet = styled(Set)`
+  ${theme('native.SwitchGroup', 'Set.styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const SwitchGroupItem = styled((BBSwitch || {}) as any)`
+  ${theme('native.SwitchGroup', 'Item.styles.base')};
+`;
+
+//////////////////////////////////////////////////////////////////
+
+export const SwitchGroupField = styled(Box)`
+  ${theme('native.SwitchGroupField', 'styles.base')};
 `;

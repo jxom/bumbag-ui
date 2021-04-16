@@ -1,263 +1,133 @@
 import Theme from '../../../components/Theme';
-import { CheckboxGroup as BNCheckboxGroup, CheckboxGroupField as BNCheckboxGroupField } from 'bumbag-native';
+import { SwitchGroup as BNSwitchGroup, SwitchGroupField as BNSwitchGroupField } from 'bumbag-native';
 
-# CheckboxGroup
+# SwitchGroup
 
 ## Import
 
 ```jsx
-import { CheckboxGroup, CheckboxGroupField } from 'bumbag-native'
+import { SwitchGroup, SwitchGroupField } from 'bumbag-native'
 ```
 
 ## Usage
 
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroup
+```jsx-live
+<SwitchGroup
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroup
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
 ### Fields
 
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroupField
+```jsx-live
+<SwitchGroupField
   label="Weather"
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroupField
-  label="Weather"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
 ### Alignment
 
-```live
-###tab=Default,type=jsx-live
-<Stack>
-  <CheckboxGroup
-    align="left"
-    options={[
-      { label: 'Sunny', value: 'sunny' },
-      { label: 'Windy', value: 'windy' },
-      { label: 'Overcast', value: 'overcast' }
-    ]}
-  />
-  <CheckboxGroup
-    align="right"
-    options={[
-      { label: 'Sunny', value: 'sunny' },
-      { label: 'Windy', value: 'windy' },
-      { label: 'Overcast', value: 'overcast' }
-    ]}
-  />
-</Stack>###
-
-###tab=Ghost,type=jsx-live
-<Stack>
-  <CheckboxGroup
-    align="left"
-    options={[
-      { label: 'Sunny', value: 'sunny' },
-      { label: 'Windy', value: 'windy' },
-      { label: 'Overcast', value: 'overcast' }
-    ]}
-    variant="ghost"
-  />
-  <CheckboxGroup
-    align="right"
-    options={[
-      { label: 'Sunny', value: 'sunny' },
-      { label: 'Windy', value: 'windy' },
-      { label: 'Overcast', value: 'overcast' }
-    ]}
-    variant="ghost"
-  />
-</Stack>###
+```jsx-live
+<SwitchGroup
+  align="left"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<SwitchGroup
+  align="right"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
 ```
 
 ### Horizontal group
 
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroup
+```jsx-live
+<SwitchGroup
   orientation="horizontal"
-  name="weather2"
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroup
-  orientation="horizontal"
-  name="weather2"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
 ### Spacing
 
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroup
+```jsx-live
+<SwitchGroup
   spacing="major-2"
-  name="weather2"
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroup
-  spacing="major-2"
-  name="weather2"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
 ### Disabled
 
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroup
+```jsx-live
+<SwitchGroup
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy', disabled: true },
     { label: 'Overcast', value: 'overcast' }
   ]}
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroup
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy', disabled: true },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroup
+```jsx-live
+<SwitchGroup
   disabled
-  name="weather"
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
-  variant="ghost"
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroup
-  disabled
-  name="weather"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
 ### States
 
-A CheckboxGroup can use different states (as per palette) such as `danger`, `success` and `warning`.
-
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroup
+```jsx-live
+<SwitchGroup
   state="danger"
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroup
-  state="danger"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
 ### Colors
 
-A CheckboxGroup can use different colors (as per palette) such as `secondary`, `danger`, `success` and `warning`.
-
-```live
-###tab=Default,type=jsx-live
-<CheckboxGroup
+```jsx-live
+<SwitchGroup
   palette="secondary"
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
-/>###
-
-###tab=Ghost,type=jsx-live
-<CheckboxGroup
-  palette="secondary"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-  variant="ghost"
-/>###
+/>
 ```
 
 ### Default value
@@ -265,7 +135,7 @@ A CheckboxGroup can use different colors (as per palette) such as `secondary`, `
 Specify a default checked value with the `defaultValue` prop.
 
 ```jsx-live
-<CheckboxGroup
+<SwitchGroup
   defaultValue={['overcast', 'sunny']}
   options={[
     { label: 'Sunny', value: 'sunny' },
@@ -282,7 +152,7 @@ function Example() {
   const [value, setValue] = React.useState(['overcast', 'sunny']);
 
   return (
-    <CheckboxGroup
+    <SwitchGroup
       onChange={setValue}
       value={value}
       options={[
@@ -297,60 +167,43 @@ function Example() {
 
 ## Props
 
-### CheckboxGroup Props
+### SwitchGroup Props
 
 <!-- Automatically generated -->
 
 **<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34;</Code> 
 
-Alignment of the checkbox group
+Alignment of the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">defaultValue</Code>** <Code fontSize="100" palette="primary">string[]</Code> 
 
-Default value(s) of the checkbox group
+Default value(s) of the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-Disables the checkbox group
+Disables the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">options</Code>** <Code fontSize="100" palette="primary">never[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`(Pick<CSSProperties, "top"
-  | "right"
-  | "bottom"
-  | "left"
-  | "color"
-  | "_hover"
-  | "_hoveractive"
-  | "_focus"
-  | "_active"
-  | "_visited"
-  | "_disabled"
-  | "_groupHover"
-  | ... 503 more ...
-  | "zIndex"> & ... 4 more ... & { ...; })[]`}
-</Code>
-
-Checkbox group options
+Switch group options
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
-Are the checkbox inputs layed out horizontally or vertically?
+Are the switch inputs layed out horizontally or vertically?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-Color of the checkbox group. Can be any color in the palette.
+Color of the switch group. Can be any color in the palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -360,19 +213,19 @@ Color of the checkbox group. Can be any color in the palette.
 
 **<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-State of the checkbox group. Can be any color in the palette.
+State of the switch group. Can be any color in the palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">string[]</Code> 
 
-Controlled value of the checkbox group
+Controlled value of the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(value: string[], targetValue: string) =&#62; void</Code> 
 
-Function to invoke when checkbox group has changed
+Function to invoke when switch group has changed
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -395,7 +248,7 @@ Function to invoke when checkbox group has changed
   verticalBelow?...`}
 </Code>
 
-Overrides for the CheckboxGroup `Set` component.
+Overrides for the SwitchGroup `Set` component.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -913,11 +766,11 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 </details>
             
 
-### CheckboxGroupField Props
+### SwitchGroupField Props
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">checkboxGroupProps</Code>**  
+**<Code fontSize="150" marginRight="major-1">switchGroupProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -936,62 +789,45 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
   setProps?: Par...`}
 </Code>
 
-Additional props for the Checkbox component
+Additional props for the Switch component
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>CheckboxGroup</code></strong> props</Box>
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>SwitchGroup</code></strong> props</Box>
 
 **<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34;</Code> 
 
-Alignment of the checkbox group
+Alignment of the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">defaultValue</Code>** <Code fontSize="100" palette="primary">string[]</Code> 
 
-Default value(s) of the checkbox group
+Default value(s) of the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-Disables the checkbox group
+Disables the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">options</Code>** <Code fontSize="100" palette="primary">never[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`(Pick<CSSProperties, "top"
-  | "right"
-  | "bottom"
-  | "left"
-  | "color"
-  | "_hover"
-  | "_hoveractive"
-  | "_focus"
-  | "_active"
-  | "_visited"
-  | "_disabled"
-  | "_groupHover"
-  | ... 503 more ...
-  | "zIndex"> & ... 4 more ... & { ...; })[]`}
-</Code>
-
-Checkbox group options
+Switch group options
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
-Are the checkbox inputs layed out horizontally or vertically?
+Are the switch inputs layed out horizontally or vertically?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-Color of the checkbox group. Can be any color in the palette.
+Color of the switch group. Can be any color in the palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1001,19 +837,19 @@ Color of the checkbox group. Can be any color in the palette.
 
 **<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-State of the checkbox group. Can be any color in the palette.
+State of the switch group. Can be any color in the palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">string[]</Code> 
 
-Controlled value of the checkbox group
+Controlled value of the switch group
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(value: string[], targetValue: string) =&#62; void</Code> 
 
-Function to invoke when checkbox group has changed
+Function to invoke when switch group has changed
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1036,7 +872,7 @@ Function to invoke when checkbox group has changed
   verticalBelow?...`}
 </Code>
 
-Overrides for the CheckboxGroup `Set` component.
+Overrides for the SwitchGroup `Set` component.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1662,24 +1498,24 @@ Sets the bottom validation text of the field wrapper.
 
 ## Theming
 
-### CheckboxGroup
+### SwitchGroup
 
 <Theme
-  component={BNCheckboxGroup}
+  component={BNSwitchGroup}
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
   overrides={[
-    'CheckboxGroup.styles.base',
-    'CheckboxGroup.Item.styles.base'
+    'SwitchGroup.styles.base',
+    'SwitchGroup.Item.styles.base'
   ]} />
 
-### CheckboxGroupField
+### SwitchGroupField
 
 <Theme
-  component={BNCheckboxGroupField}
+  component={BNSwitchGroupField}
   label="Weather"
   options={[
     { label: 'Sunny', value: 'sunny' },
@@ -1687,5 +1523,5 @@ Sets the bottom validation text of the field wrapper.
     { label: 'Overcast', value: 'overcast' }
   ]}
   overrides={[
-    'CheckboxGroupField.styles.base'
+    'SwitchGroupField.styles.base'
   ]} />

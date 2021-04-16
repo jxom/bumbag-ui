@@ -4,36 +4,36 @@ import { createComponent, createElement, createHook, useOptionsState } from 'bum
 
 import { Box, BoxProps } from '../Box';
 import { SetProps } from '../Set';
-import { CheckboxProps } from './Checkbox';
+import { SwitchProps } from './Switch';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
-import * as styles from './Checkbox.styles';
+import * as styles from './Switch.styles';
 
-export type LocalCheckboxGroupProps = {
-  /** Alignment of the checkbox group */
+export type LocalSwitchGroupProps = {
+  /** Alignment of the switch group */
   align?: 'left' | 'right';
-  /** Default value(s) of the checkbox group */
+  /** Default value(s) of the switch group */
   defaultValue?: Array<string>;
-  /** Disables the checkbox group */
+  /** Disables the switch group */
   disabled?: boolean;
-  /** Checkbox group options */
-  options: Array<CheckboxProps & { value: string }>;
-  /** Are the checkbox inputs layed out horizontally or vertically? */
+  /** Switch group options */
+  options: Array<SwitchProps & { value: string }>;
+  /** Are the switch inputs layed out horizontally or vertically? */
   orientation?: 'vertical' | 'horizontal';
-  /** Color of the checkbox group. Can be any color in the palette. */
+  /** Color of the switch group. Can be any color in the palette. */
   palette?: string;
   spacing?: SetProps['spacing'];
-  /** State of the checkbox group. Can be any color in the palette. */
+  /** State of the switch group. Can be any color in the palette. */
   state?: string;
-  /** Controlled value of the checkbox group */
+  /** Controlled value of the switch group */
   value?: Array<string>;
-  /** Function to invoke when checkbox group has changed */
+  /** Function to invoke when switch group has changed */
   onChange?: (value: Array<string>, targetValue: string) => void;
-  /** Overrides for the CheckboxGroup `Set` component. */
+  /** Overrides for the SwitchGroup `Set` component. */
   setProps?: Partial<SetProps>;
 };
-export type CheckboxGroupProps = BoxProps & RNViewProps & LocalCheckboxGroupProps;
+export type SwitchGroupProps = BoxProps & RNViewProps & LocalSwitchGroupProps;
 
-const useProps = createHook<CheckboxGroupProps>(
+const useProps = createHook<SwitchGroupProps>(
   (props) => {
     const {
       align,
@@ -71,7 +71,7 @@ const useProps = createHook<CheckboxGroupProps>(
     return {
       ...boxProps,
       children: (
-        <styles.CheckboxGroupSet
+        <styles.SwitchGroupSet
           colorMode={colorMode}
           orientation={orientation}
           overrides={overrides}
@@ -79,7 +79,7 @@ const useProps = createHook<CheckboxGroupProps>(
           {...setProps}
         >
           {options.map((option, i) => (
-            <styles.CheckboxGroupItem
+            <styles.SwitchGroupItem
               key={i} // eslint-disable-line
               {...option}
               {...getOptionItemProps({ value: option.value })}
@@ -94,44 +94,43 @@ const useProps = createHook<CheckboxGroupProps>(
               width={orientation === 'vertical' ? '100%' : undefined}
             />
           ))}
-        </styles.CheckboxGroupSet>
+        </styles.SwitchGroupSet>
       ),
     };
   },
-  { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'native.CheckboxGroup' }
+  { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'native.SwitchGroup' }
 );
 
-export const CheckboxGroup = createComponent<CheckboxGroupProps>(
+export const SwitchGroup = createComponent<SwitchGroupProps>(
   (props) => {
     const htmlProps = useProps(props);
     return createElement({
       children: props.children,
-      component: styles.CheckboxGroup,
+      component: styles.SwitchGroup,
       htmlProps,
     });
   },
   {
     attach: {
       useProps,
-      displayName: 'native.CheckboxGroup',
+      displayName: 'native.SwitchGroup',
     },
-    themeKey: 'native.CheckboxGroup',
+    themeKey: 'native.SwitchGroup',
   }
 );
 
 ////////////////////////////////////////////////////////////////
 
-export type LocalCheckboxGroupFieldProps = {
-  /** Additional props for the Checkbox component */
-  checkboxGroupProps?: Partial<CheckboxGroupProps>;
+export type LocalSwitchGroupFieldProps = {
+  /** Additional props for the Switch component */
+  switchGroupProps?: Partial<SwitchGroupProps>;
 };
-export type CheckboxGroupFieldProps = BoxProps & FieldWrapperProps & CheckboxGroupProps & LocalCheckboxGroupFieldProps;
+export type SwitchGroupFieldProps = BoxProps & FieldWrapperProps & SwitchGroupProps & LocalSwitchGroupFieldProps;
 
-const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
+const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
   (props) => {
     const {
       align,
-      checkboxGroupProps,
       colorMode,
       defaultValue,
       description,
@@ -148,6 +147,7 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
       spacing,
       setProps,
       state,
+      switchGroupProps,
       value,
       variant,
       validationText,
@@ -170,7 +170,7 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
           variant={variant}
           validationText={validationText}
         >
-          <CheckboxGroup
+          <SwitchGroup
             align={align}
             colorMode={colorMode}
             defaultValue={defaultValue}
@@ -185,7 +185,7 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
             value={value}
             variant={variant}
             overrides={overrides}
-            {...checkboxGroupProps}
+            {...switchGroupProps}
           />
         </FieldWrapper>
       ),
@@ -197,24 +197,24 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
       palette: 'primary',
       variant: 'default',
     },
-    themeKey: 'CheckboxGroupField',
+    themeKey: 'SwitchGroupField',
   }
 );
 
-export const CheckboxGroupField = createComponent<CheckboxGroupFieldProps>(
+export const SwitchGroupField = createComponent<SwitchGroupFieldProps>(
   (props) => {
-    const CheckboxGroupFieldProps = useCheckboxGroupFieldProps(props);
+    const SwitchGroupFieldProps = useSwitchGroupFieldProps(props);
     return createElement({
       children: props.children,
-      component: styles.CheckboxGroupField,
-      htmlProps: CheckboxGroupFieldProps,
+      component: styles.SwitchGroupField,
+      htmlProps: SwitchGroupFieldProps,
     });
   },
   {
     attach: {
-      useProps: useCheckboxGroupFieldProps,
-      displayName: 'CheckboxGroupField',
+      useProps: useSwitchGroupFieldProps,
+      displayName: 'SwitchGroupField',
     },
-    themeKey: 'CheckboxGroupField',
+    themeKey: 'SwitchGroupField',
   }
 );
