@@ -1,12 +1,12 @@
-import React from "react";
-import { Box, Button, Flex, Text, useTheme, useColorMode } from "bumbag";
+import React from 'react';
+import { Box, Button, Flex, Text, useTheme, useColorMode } from 'bumbag';
 
 const PaletteColor = ({ palette, ...props }: any) => {
   const { theme } = useTheme();
   const { colorMode } = useColorMode();
 
   const colorModePalette =
-    colorMode === "dark" && theme.palette.modes.dark[palette]
+    colorMode === 'dark' && theme.palette.modes.dark[palette]
       ? theme.palette.modes.dark[palette]
       : theme.palette[palette];
 
