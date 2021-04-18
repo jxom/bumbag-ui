@@ -99,20 +99,6 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
   transform: translateX(0px);
 
   ${
-    styleProps.sidebarPlacement === 'left' &&
-    css`
-      border-right: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
-    `
-  }
-
-  ${
-    styleProps.sidebarPlacement === 'right' &&
-    css`
-      border-left: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
-    `
-  }
-
-  ${
     styleProps.isSidebarMinimized &&
     css`
       overflow: visible;
@@ -128,6 +114,20 @@ export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   position: fixed;
   z-index: 999999;
   overflow-y: scroll;
+
+  ${
+    styleProps.sidebarPlacement === 'left' &&
+    css`
+      border-right: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
+    `
+  }
+
+  ${
+    styleProps.sidebarPlacement === 'right' &&
+    css`
+      border-left: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
+    `
+  }
 
   ${getHiddenScrollbarStyles()};
 

@@ -1,4 +1,4 @@
-import { BorderRadii, FontFamily, FontSize, FontWeight, LetterSpacing, LineHeight, Palette } from './props';
+import { Altitude, BorderRadii, FontFamily, FontSize, FontWeight, GradientDirection, LetterSpacing, LineHeight, Palette } from './props';
 import { Flexible } from './utils';
 
 export type CSSProperties = {
@@ -18,6 +18,7 @@ export type CSSProperties = {
   alignItems?: string | number | { [key: string]: string };
   alignmentBaseline?: string | number | { [key: string]: string };
   all?: string | number | { [key: string]: string };
+  altitude?: Flexible<Altitude, string> | { [key: string]: Flexible<Altitude, string> };
   animation?: string | number | { [key: string]: string };
   animationDelay?: string | number | { [key: string]: string };
   animationDirection?: string | number | { [key: string]: string };
@@ -213,6 +214,13 @@ export type CSSProperties = {
   footnotePolicy?: string | number | { [key: string]: string };
   gap?: string | number | { [key: string]: string };
   glyphOrientationVertical?: string | number | { [key: string]: string };
+  gradientDirection?: GradientDirection | { [key: string]: GradientDirection };
+  gradientFrom?: Flexible<Palette, string | { [key: string]: Flexible<Palette, string> }>;
+  gradientFromAt?: string;
+  gradientVia?: Flexible<Palette, string | { [key: string]: Flexible<Palette, string> }>;
+  gradientViaAt?: string;
+  gradientTo?: Flexible<Palette, string | { [key: string]: Flexible<Palette, string> }>;
+  gradientToAt?: string;
   grid?: string | number | { [key: string]: string };
   gridArea?: string | number | { [key: string]: string };
   gridAutoColumns?: string | number | { [key: string]: string };

@@ -1,5 +1,6 @@
 import { css, cssClass } from '../styled';
 import { theme } from '../utils/theme';
+import { getGradientStyles } from '../utils/gradient';
 
 const FLEX_HORIZONTAL_ALIGN_MAP = {
   left: 'flex-start',
@@ -19,6 +20,15 @@ export const style = (styleProps) => cssClass`
   }
 
   ${getAlignmentAttributes(styleProps)};
+  ${getGradientStyles({
+    direction: styleProps.gradientDirection,
+    from: styleProps.gradientFrom,
+    fromAt: styleProps.gradientFromAt,
+    via: styleProps.gradientVia,
+    viaAt: styleProps.gradientViaAt,
+    to: styleProps.gradientTo,
+    toAt: styleProps.gradientToAt,
+  })(styleProps)};
 `;
 
 export const Box = (styleProps) => cssClass`

@@ -1,8 +1,303 @@
 ---
+breakpoint: tablet
 title: Theming
 path: /native/theming/
 ---
 
 # Theming
 
-TODO
+## Global theming
+
+Bumbag can be extensively themed to meet your requirements. You can either **override the default Bumbag theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
+
+### Overriding the default global theme (recommended)
+
+The `<Provider>` component accepts `theme` as a prop, where you can specify overrides to the default Bumbag theme. The schema of the `theme` object can be seen [here](#theme-schema).
+
+```jsx
+import { Provider as BumbagNativeProvider } from 'bumbag-native';
+
+const theme = {
+  fonts: {
+    default: 'Comic Sans MS'
+  },
+  palette: {
+    primary: 'blue'
+  },
+  breakpoints: {
+    height: {
+      sm: 568,
+      md: 667,
+      lg: 736
+    },
+    width: {
+      sm: 375,
+      md: 414,
+      lg: 768
+    }
+  },
+  Button: {
+    defaultProps: {
+      palette: 'primary'
+    }
+  },
+  Heading: {
+    styles: {
+      base: {
+        color: 'primary'
+      }
+    }
+  }
+}
+
+const App = () => (
+  <BumbagNativeProvider theme={theme}>
+    // ... your app
+  </BumbagNativeProvider>
+);
+```
+
+### Creating your own global theme (advanced)
+
+If you decide to not use the default Bumbag theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
+
+```jsx
+import { Provider as BumbagNativeProvider, defaultTheme } from 'bumbag-native';
+
+const App = () => (
+  <BumbagNativeProvider isStandalone theme={defaultTheme()}>
+    // ... your app
+  </BumbagNativeProvider>
+);
+```
+
+## Component theming
+
+Bumbag also allows you to define themes on a component level. This can be done in three ways:
+
+- **Globally themed**: Applying the component to the global theme.
+- **Locally themed**: Creating a themed component via the `applyTheme` function.
+- **Locally themed**: Applying the component theme via the `overrides` prop on the component.
+
+Each component theme configuration always consists of 4 attributes:
+
+- `styles` - Where the main styling is defined for the component.
+- `variants` - Where the [component variants](/variants) are defined.
+- `modes` - Where the [component color modes](/color-modes) are defined.
+- `defaultProps` - The default props to apply to the component.
+
+For each docs page of the component, you will find a [**Theming** section](/components/button/#theming) where you can reference the schema of the component theme configuration.
+
+### Applying the component to the global theme
+
+
+```jsx
+import { Provider as BumbagNativeProvider } from 'bumbag-native';
+
+const theme = {
+  Button: {
+    styles: {
+      base: {
+        color: 'black',
+
+        // Here we are using "spacing" values from the theme.
+        // But you can specify a `px`, `rem` or `em` value too.
+        padding: 'major-2'
+      }
+    },
+    variants: {
+      'call-to-action': {
+        fontSize: '300',
+        padding: 'major-4'
+      }
+    },
+    modes: {
+      dark: {
+        color: 'white'
+      }
+    },
+    defaultProps: {
+      palette: 'primary'
+    }
+  }
+}
+
+const App = () => (
+  <BumbagNativeProvider theme={theme}>
+    // ... your app
+  </BumbagNativeProvider>
+);
+```
+
+### Creating a themed component
+
+You can apply the theme on a component level via the `applyTheme` utility function. This function accepts two parameters: the first being the **component**, and the second being the **component theme config**.
+
+```jsx
+import { applyTheme } from 'bumbag-native';
+```
+
+```function-live noInline
+const Card = applyTheme(Box, {
+  styles: {
+    base: {
+      // Here we are using "spacing" values from the theme.
+      // But you can specify a `px`, `rem` or `em` value too.
+      padding: 'major-2'
+    }
+  },
+  defaultProps: {
+    altitude: '100'
+  },
+  variants: {
+    dope: {
+      defaultProps: {
+        fontFamily: 'Comic Sans MS'
+      }
+    }
+  }
+})
+
+function Example() {
+  return (
+    <Card variant="dope">
+      Welcome to Bumbag!
+    </Card>
+  )
+}
+
+render(Example)
+```
+
+### Using the `overrides` prop
+
+It is possible to override the global theme on the component themselves using the `override` prop on any component.
+
+```function-live noInline
+function Example() {
+  return (
+    <Provider theme={theme}>
+      <Box
+        variant="dope"
+        overrides={{
+          Box: {
+            styles: {
+              base: {
+                // Here we are using "spacing" values from the theme.
+                // But you can specify a `px`, `rem` or `em` value too.
+                padding: 'major-2'
+              }
+            },
+            defaultProps: {
+              altitude: '100'
+            },
+            variants: {
+              dope: {
+                defaultProps: {
+                  fontFamily: 'Comic Sans MS'
+                }
+              }
+            }
+          }
+        }}
+      >
+        Welcome to Bumbag!
+      </Box>
+    </Provider>
+  )
+}
+
+render(Example)
+```
+
+## Theme schema
+
+```js
+{
+  // Core
+  altitudes: AltitudesThemeConfig;
+  borders: BordersThemeConfig;
+  borderRadii: BorderRadiiThemeConfig;
+  breakpoints: BreakpointsThemeConfig;
+  fonts: FontsThemeConfig;
+  fontSizes: FontSizesThemeConfig;
+  fontWeights: FontWeightsThemeConfig;
+  icons: IconsThemeConfig;
+  lineHeights: LineHeightsThemeConfig;
+  letterSpacings: LetterSpacingsThemeConfig;
+  spacing: SpacingThemeConfig;
+  palette: PaletteThemeConfig;
+
+  // Components
+  Box: BoxThemeConfig;
+  Button: ButtonThemeConfig;
+  Checkbox: CheckboxThemeConfig;
+  CheckboxField: CheckboxThemeConfig;
+  CheckboxGroup: CheckboxGroupThemeConfig;
+  CheckboxGroupField: CheckboxGroupFieldThemeConfig;
+  FieldWrapper: FieldWrapperThemeConfig;
+  Flex: FlexThemeConfig;
+  Group: GroupThemeConfig;
+  Heading: HeadingThemeConfig;
+  Icon: IconThemeConfig;
+  Input: InputThemeConfig;
+  InputField: InputFieldThemeConfig;
+  Image: ImageThemeConfig;
+  Level: LevelThemeConfig;
+  Pressable: PressableThemeConfig;
+  Radio: RadioThemeConfig;
+  Set: SetThemeConfig;
+  Spinner: SpinnerThemeConfig;
+  Stack: StackThemeConfig;
+  Switch: SwitchThemeConfig;
+  SwitchGroup: SwitchGroupThemeConfig;
+  SwitchField: SwitchFieldThemeConfig;
+  SwitchGroupField: SwitchGroupFieldThemeConfig;
+  Text: TextThemeConfig;
+}
+```
+
+### Reference
+
+#### Core
+
+- [AltitudesThemeConfig](/native/the-box-primitive/altitudes/#theming)
+- [BordersThemeConfig](/native/the-box-primitive/borders/#theming)
+- [BorderRadiiThemeConfig](/native/the-box-primitive/border-radius/#theming)
+- [BreakpointsThemeConfig](/native/breakpoints/#theming)
+- [FontsThemeConfig](/native/fonts/#theming)
+- [FontSizeThemeConfig](/native/fonts/#theming)
+- [FontWeightsThemeConfig](/native/fonts/#theming)
+- [IconsThemeConfig](/native/icons/#theming)
+- [LineHeightsThemeConfig](/native/fonts/#theming)
+- [LetterSpacingsThemeConfig](/native/fonts/#theming)
+- [SpacingThemeConfig](/native/spacing/#theming)
+- [PaletteThemeConfig](/native/palette/#theming)
+
+#### Components
+
+- [BoxThemeConfig](/native/the-box-primitive/box/#theming)
+- [ButtonThemeConfig](/native/components/button/#theming)
+- [CheckboxThemeConfig](/native/form/checkbox/#theming)
+- [CheckboxThemeConfig](/native/form/checkbox/#theming)
+- [CheckboxGroupThemeConfig](/native/form/checkbox-group/#theming)
+- [CheckboxGroupFieldThemeConfig](/native/form/checkbox-group/#theming)
+- [FieldWrapperThemeConfig](/native/form/field-wrapper/#theming)
+- [FlexThemeConfig](/native/the-box-primitive/flex/#theming)
+- [GroupThemeConfig](/native/layout/group/#theming)
+- [HeadingThemeConfig](/native/typography/heading/#theming)
+- [IconThemeConfig](/native/components/icon/#theming)
+- [InputThemeConfig](/native/form/input/#theming)
+- [InputFieldThemeConfig](/native/form/input/#theming)
+- [ImageThemeConfig](/native/components/image/#theming)
+- [LevelThemeConfig](/native/layout/level/#theming)
+- [PressableThemeConfig](/native/utilities/pressable/#theming)
+- [RadioThemeConfig](/native/form/radio/#theming)
+- [SetThemeConfig](/native/layout/set/#theming)
+- [SpinnerThemeConfig](/native/components/spinner/#theming)
+- [StackThemeConfig](/native/layout/stack/#theming)
+- [SwitchThemeConfig](/native/components/switch/#theming)
+- [SwitchGroupThemeConfig](/native/components/switch-group/#theming)
+- [SwitchFieldThemeConfig](/native/components/switch/#theming)
+- [SwitchGroupFieldThemeConfig](/native/components/switch-group/#theming)
+- [TextThemeConfig](/native/typography/text/#theming)

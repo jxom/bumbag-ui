@@ -8,7 +8,7 @@ import {
 import * as bumbag from 'bumbag';
 import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
 import { Markdown } from 'bumbag-addon-markdown';
-import { Box, Group, palette, space, styled } from 'bumbag';
+import { altitude, Box, Group, palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 
 const Actions = styled(bumbag.Box)`
@@ -23,6 +23,7 @@ const LiveEditor = styled(_LiveEditor)`
   padding: 1rem !important;
   height: 100%;
   flex: 3;
+  ${altitude('300')};
 
   & textarea {
     padding: 1rem !important;
@@ -42,14 +43,11 @@ const LiveError = styled(_LiveError)`
   color: ${palette('dangerInverted')};
   overflow-x: auto;
 `;
-const LivePreview = styled(_LivePreview)`
-  padding: 1.5rem !important;
-  border-left: none;
-  /* overflow: scroll !important; */
-`;
+const LivePreview = styled(_LivePreview)``;
 
 type Props = {
   className?: string;
+  children?: any;
   code: string;
   match?: RegExp;
 };
@@ -58,8 +56,12 @@ LiveCode.defaultProps = {
   mountStylesheet: false,
 };
 
+LiveCode.Editor = LiveEditor;
+LiveCode.Preview = LivePreview;
+LiveCode.Error = LiveError;
+
 export default function LiveCode(props: Props) {
-  const { code, ...restProps } = props;
+  const { code, children, ...restProps } = props;
   const { theme } = bumbag.useTheme();
   const { colorMode } = bumbag.useColorMode();
   const scope = React.useMemo(
@@ -82,16 +84,8 @@ export default function LiveCode(props: Props) {
   const codeTheme = highlightedCodeStyles.codeTheme({ theme }).dark;
 
   return (
-    <bumbag.Box marginBottom="major-4">
-      <LiveProvider code={code} scope={scope} theme={codeTheme} {...props}>
-        <Group altitude="400" borderRadius="10px" width="100%" verticalBelow="widescreen">
-          <LiveEditor colorMode={colorMode} />
-          <Box backgroundColor="white" flex="2" border="default" borderLeft="none">
-            <LivePreview colorMode={colorMode} />
-          </Box>
-        </Group>
-        <LiveError />
-      </LiveProvider>
-    </bumbag.Box>
+    <LiveProvider code={code} scope={scope} theme={codeTheme} {...props}>
+      {children}
+    </LiveProvider>
   );
 }

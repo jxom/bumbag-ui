@@ -1,10 +1,20 @@
 import { Flexible } from './utils';
 
+export type Altitude = Flexible<'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900', string>;
 export type BorderRadii = Flexible<'default' | '1' | '2' | '3' | '4' | '5' | '6' | '7', string>;
 export type ButtonType = 'button' | 'submit' | 'reset';
 export type Breakpoint = Flexible<'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile', string>;
 export type ColumnSpread = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right';
+export type GradientDirection =
+  | 'top'
+  | 'left'
+  | 'right'
+  | 'bottom'
+  | 'top left'
+  | 'top right'
+  | 'bottom left'
+  | 'bottom right';
 export type FontFamily = Flexible<'default' | 'heading' | 'mono', string>;
 export type FontSize = Flexible<'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900', string>;
 export type FontWeight = Flexible<'normal' | 'semibold' | 'bold', string>;

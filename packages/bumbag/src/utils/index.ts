@@ -11,6 +11,7 @@ export * from './fieldAdaptors';
 export * from './getMediaQueryList';
 export * from './getCapsizeStyles';
 export * from './getHiddenScrollbarStyles';
+export * from './gradient';
 export * from './htmlProps';
 export * from './isFunction';
 export * from './OutsideClickHandler';

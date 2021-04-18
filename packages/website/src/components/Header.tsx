@@ -39,7 +39,7 @@ export default function Header(props) {
 
   return (
     <TopNav selectedId={selectedId}>
-      <TopNav.Section>
+      <TopNav.Section marginRight="0px">
         <TopNav.Item href="/" fontWeight="semibold">
           {Logo}
         </TopNav.Item>
@@ -76,13 +76,15 @@ export default function Header(props) {
             <ColorModePicker />
           </TopNav.Item>
         </Hide>
-        <Hide above={collapseBelow}>
-          <TopNav.Item>
-            <Button onClick={sidebar.open} variant="ghost">
-              <Icon icon="solid-bars" />
-            </Button>
-          </TopNav.Item>
-        </Hide>
+        {type !== 'landing' && (
+          <Hide above={collapseBelow}>
+            <TopNav.Item>
+              <Button onClick={sidebar.open} variant="ghost">
+                <Icon icon="solid-bars" />
+              </Button>
+            </TopNav.Item>
+          </Hide>
+        )}
       </TopNav.Section>
     </TopNav>
   );

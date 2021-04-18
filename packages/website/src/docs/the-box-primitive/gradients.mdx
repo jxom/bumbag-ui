@@ -1,0 +1,162 @@
+# Gradients
+
+## Usage
+
+Gradients can be applied via **CSS props**, the **`styled` function** or the **`applyTheme` function**.
+
+### Using CSS props
+
+```jsx-live
+<Box
+  gradientFrom="primary"
+  gradientTo="secondary"
+  height="100px"
+  width="100%"
+/>
+<Box
+  gradientFrom="primary"
+  height="100px"
+  width="100%"
+/>
+```
+
+### Using `styled`
+
+```function-live noInline
+const GradientBox = styled(Box)`
+  ${gradient({ from: 'primary', to: 'secondary' })};
+  height: 100px;
+  width: 100%;
+`;
+
+function Example() {
+  return (
+    <GradientBox />
+  );
+}
+
+render(Example)
+```
+
+### Using `applyTheme`
+
+```function-live noInline
+const GradientBox = applyTheme(Box, {
+  defaultProps: {
+    gradientFrom: 'primary',
+    gradientTo: 'secondary',
+    width: '100%',
+    height: '100px'
+  }
+});
+
+function Example() {
+  return (
+    <GradientBox />
+  );
+}
+
+render(Example)
+```
+
+## Middle colors
+
+You can specify a middle color with the `gradientVia` prop.
+
+```jsx-live
+<Box
+  gradientFrom="primary"
+  gradientVia="red"
+  gradientTo="secondary"
+  height="100px"
+  width="100%"
+/>
+```
+
+## Text
+
+```jsx-live
+<Text
+  gradientFrom="primary"
+  gradientTo="secondary"
+  fontSize="900"
+  fontWeight="900"
+>
+  Bumbag UI
+</Text>
+```
+
+## Stops
+
+```jsx-live
+<Box
+  gradientFrom="primary"
+  gradientFromAt="0%"
+  gradientVia="red"
+  gradientViaAt="80%"
+  gradientTo="secondary"
+  gradientToAt="100%"
+  height="100px"
+  width="100%"
+/>
+```
+
+## Responsive gradients
+
+Gradients can also be responsive if you supply a breakpoint object as the CSS prop value.
+
+```jsx-live-iframe
+<Box
+  gradientDirection={{ default: 'right', mobile: 'bottom' }}
+  gradientFrom="primary"
+  gradientTo={{ default: 'secondary', mobile: 'success' }}
+  height="100px"
+  width="100%"
+/>
+```
+
+## Pseudo gradients
+
+Gradients are also supported on pseudo props (such as: `_hover`, `_hoveractive` and `_focus`).
+
+### Hover
+
+```jsx-live
+<Box
+  gradientFrom="primary"
+  gradientTo="secondary"
+  _hover={{ gradientTo: 'red' }}
+  height="100px"
+  width="100%"
+/>
+```
+
+### Hover while active
+
+```jsx-live
+<Box
+  gradientDirection="bottom"
+  gradientFrom="primary"
+  gradientTo="secondary"
+  _hover={{ gradientTo: 'secondary600' }}
+  _hoveractive={{ gradientTo: 'red' }}
+  height="100px"
+  width="100%"
+/>
+```
+
+### Focus
+
+```jsx-live
+<Clickable
+  focusable
+  gradientDirection="bottom"
+  gradientFrom="primary"
+  gradientTo="secondary"
+  _focus={{ gradientFrom: 'red' }}
+  _hover={{ gradientTo: 'secondary600' }}
+  _hoveractive={{ gradientTo: 'secondary700' }}
+  height="100px"
+  width="100%"
+/>
+```

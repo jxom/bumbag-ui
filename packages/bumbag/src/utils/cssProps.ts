@@ -13,7 +13,7 @@ export function omitCSSProps(props) {
   return omit(props, ...Object.keys(cssProps));
 }
 
-export const cssProps = {
+export const pseudoProps = {
   _hover: ':hover',
   _hoveractive: ':hover:active',
   _focus: ':focus',
@@ -25,10 +25,18 @@ export const cssProps = {
   _groupFocus: '[role=group]:focus &',
   _groupVisited: '[role=group]:visited &',
   _groupDisabled: '[role=group]:disabled &',
+};
+
+export const platformProps = {
   _web: 'web',
   _ios: 'ios',
   _android: 'android',
   _native: 'native',
+};
+
+export const cssProps = {
+  ...pseudoProps,
+  ...platformProps,
   alignContent: 'align-content',
   alignSelf: 'align-self',
   alignItems: 'align-items',

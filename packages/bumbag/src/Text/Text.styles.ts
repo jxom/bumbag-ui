@@ -1,5 +1,5 @@
-import { cssClass } from '../styled';
-import { lineHeight, getCapsizeStyles, theme } from '../utils';
+import { css, cssClass } from '../styled';
+import { lineHeight, getCapsizeStyles, theme, gradient } from '../utils';
 
 export const Text = (styleProps) => cssClass`
   abbr& {
@@ -61,6 +61,8 @@ export const Text = (styleProps) => cssClass`
   & .bb-Icon {
     vertical-align: -0.125em;
   }
+
+  ${gradient.text(styleProps)}
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};

@@ -23,7 +23,6 @@ export type LocalBoxProps = {
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   alignX?: 'left' | 'center' | 'right';
   alignY?: 'top' | 'center' | 'bottom';
-  altitude?: string;
   variant?: string;
   colorMode?: string;
   disabled?: boolean;

@@ -31,12 +31,12 @@ export const _default = () => (
 export const sizes = () => (
   <Columns>
     <Columns.Column spread={6}>
-      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      <Box backgroundColor="primary" color="white" padding="0.5rem">
         6
       </Box>
     </Columns.Column>
     <Columns.Column spread={3}>
-      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      <Box backgroundColor="primary" color="white" padding="0.5rem">
         3
       </Box>
     </Columns.Column>
@@ -46,7 +46,7 @@ export const sizes = () => (
       </Box>
     </Columns.Column>
     <Columns.Column spread={1}>
-      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      <Box backgroundColor="primary" color="white" padding="0.5rem">
         1
       </Box>
     </Columns.Column>
@@ -57,12 +57,12 @@ export const offsets = () => (
   <Box>
     <Columns>
       <Columns.Column spread={6}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           6
         </Box>
       </Columns.Column>
       <Columns.Column spread={2} spreadOffset="left">
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           2
         </Box>
       </Columns.Column>
@@ -70,12 +70,12 @@ export const offsets = () => (
 
     <Columns>
       <Columns.Column spread={2} spreadOffset="right">
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           2
         </Box>
       </Columns.Column>
       <Columns.Column spread={6}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           6
         </Box>
       </Columns.Column>
@@ -83,24 +83,24 @@ export const offsets = () => (
 
     <Columns>
       <Columns.Column spread={6}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           6
         </Box>
       </Columns.Column>
       <Columns.Column spread={2} spreadOffset="both">
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           2
         </Box>
       </Columns.Column>
     </Columns>
     <Columns>
       <Columns.Column spread={6}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           6
         </Box>
       </Columns.Column>
       <Columns.Column spread={3} spreadOffset={3}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           3
         </Box>
       </Columns.Column>
@@ -108,12 +108,12 @@ export const offsets = () => (
 
     <Columns>
       <Columns.Column spread={2}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           2
         </Box>
       </Columns.Column>
       <Columns.Column spread={6} spreadOffset={4}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           6
         </Box>
       </Columns.Column>
@@ -121,12 +121,12 @@ export const offsets = () => (
 
     <Columns>
       <Columns.Column spread={6}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           6
         </Box>
       </Columns.Column>
       <Columns.Column spread={3} spreadOffset={2}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           3
         </Box>
       </Columns.Column>
@@ -138,7 +138,7 @@ export const variableColumnSizes = () => (
   <Box>
     <Columns>
       <Columns.Column spread={10} spreadDesktop={8} spreadMobile={6}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           All: 10
           <br />
           Desktop: 8<br />
@@ -146,7 +146,7 @@ export const variableColumnSizes = () => (
         </Box>
       </Columns.Column>
       <Columns.Column spread={2} spreadDesktop={4} spreadMobile={6}>
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           All: 2<br />
           Desktop: 4<br />
           Mobile: 6
@@ -162,7 +162,7 @@ export const variableColumnSizes = () => (
         spreadTablet={4}
         spreadTabletOffset={4}
       >
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           All: 10
           <br />
           Desktop: 8<br />
@@ -172,7 +172,7 @@ export const variableColumnSizes = () => (
     </Columns>
     <Columns>
       <Columns.Column spread={10} spreadDesktop={8} spreadTablet={4} spreadOffset="both">
-        <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        <Box backgroundColor="primary" color="white" padding="0.5rem">
           All: 10
           <br />
           Desktop: 8<br />

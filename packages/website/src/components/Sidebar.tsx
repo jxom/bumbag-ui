@@ -37,9 +37,9 @@ const SideNav = applyTheme(_SideNav, {
       styles: {
         base: {
           paddingLeft: 'minor-5',
-          fontSize: '100',
+          fontSize: '150',
           fontWeight: '700',
-          color: 'gray400',
+          color: 'text',
         },
       },
     },

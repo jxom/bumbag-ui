@@ -15,6 +15,7 @@ import {
   Paragraph,
   Set,
   Stack,
+  Show,
   Text,
   css,
   styled,
@@ -23,7 +24,7 @@ import {
 import { HighlightedCode } from 'bumbag-addon-highlighted-code';
 
 import LandingLayout from '../layout/LandingLayout';
-import LiveCode from '../components/Landing/LiveCode_New';
+import LiveCode from '../components/Landing/LiveCode';
 
 const UsedByImage = styled(Image)`
   &:not(:hover) {
@@ -52,7 +53,9 @@ export default function Index() {
           <Heading letterSpacing="200" fontSize="900" fontWeight="800" textAlign="center">
             Themeable components for
             <br />
-            React & React Native
+            <Text gradientFrom="primary" gradientTo="secondary">
+              React & React Native
+            </Text>
           </Heading>
           <Paragraph
             fontSize={{ default: '400', mobile: '300' }}
@@ -117,12 +120,12 @@ export default function Index() {
       >
         <Stack>
           <Box>
-            <Heading fontSize="800" fontWeight="800" marginBottom="minor-1">
+            <Heading fontSize="800" fontWeight="800" marginBottom="major-2">
               First class utilities
             </Heading>
-            <Text color="primary" fontWeight="600" fontSize="500">
+            <Heading use="h2" color="primary" fontWeight="600" fontSize="500">
               to help you build with speed
-            </Text>
+            </Heading>
           </Box>
           <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
             All components in Bumbag are built on top of the primitive <Code color="primary">Box</Code> component that
@@ -162,10 +165,12 @@ export default function Index() {
 </Card>`}
             >
               <Group backgroundColor="primary" borderRadius="16px" width="100%">
-                <Box width="60%" overflow="hidden">
-                  <LiveCode.Editor />
-                </Box>
-                <Box display="flex" alignX="center" alignY="center" flex="1">
+                <Hide below="tablet">
+                  <Box width="60%" overflow="hidden">
+                    <LiveCode.Editor />
+                  </Box>
+                </Hide>
+                <Box display="flex" alignX="center" alignY="center" flex="1" paddingY="major-3">
                   <LiveCode.Preview />
                 </Box>
               </Group>
@@ -183,12 +188,12 @@ export default function Index() {
       >
         <Stack>
           <Box>
-            <Heading fontSize="800" fontWeight="800" marginBottom="minor-1">
+            <Heading fontSize="800" fontWeight="800" marginBottom="major-3">
               Accessible out-of-the-box
             </Heading>
-            <Text color="primary" fontWeight="600" fontSize="500">
+            <Heading use="h2" color="primary" fontWeight="600" fontSize="500">
               to assist your diverse audience
-            </Text>
+            </Heading>
           </Box>
           <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
             Powered by{' '}
@@ -199,25 +204,36 @@ export default function Index() {
             <Text fontWeight="semibold">accessible HTML attributes & keyboard interactions</Text> out of the box and
             follow the WAI-ARIA standards.
           </Text.Block>
-          <Box marginTop="major-6" altitude="400" backgroundColor="primary" borderRadius="16px" padding="major-6">
+          <Box
+            marginTop="major-6"
+            altitude="400"
+            backgroundColor="primary"
+            borderRadius="16px"
+            padding={{ default: 'major-6', 'max-tablet': 'major-3' }}
+          >
             <Set spacing="major-3" alignX="center" alignY="center">
               <HighlightedCode
                 preProps={{ borderRadius: '10px' }}
                 colorMode="dark"
                 isBlock
                 language="jsx"
-                width="500px"
+                width={{ default: '500px', 'max-tablet': '100%' }}
                 code={`<Alert title="An error occurred" type="danger">
   We were unable to save your changes.
 </Alert>`}
               />
-              <Icon icon="solid-long-arrow-right" color="white" fontSize="500" />
+              <Hide below="tablet">
+                <Icon icon="solid-long-arrow-right" color="white" fontSize="500" />
+              </Hide>
+              <Show below="tablet">
+                <Icon icon="solid-long-arrow-down" color="white" fontSize="500" />
+              </Show>
               <HighlightedCode
                 preProps={{ borderRadius: '10px' }}
                 colorMode="dark"
                 isBlock
                 language="jsx"
-                width="450px"
+                width={{ default: '450px', 'max-tablet': '100%' }}
                 code={`<div
   role="alert"
   aria-labelledby="alertTitle"
@@ -242,12 +258,12 @@ export default function Index() {
       >
         <Stack>
           <Box>
-            <Heading fontSize="800" fontWeight="800" marginBottom="minor-1">
+            <Heading fontSize="800" fontWeight="800" marginBottom="major-2">
               Theme your way
             </Heading>
-            <Text color="primary" fontWeight="600" fontSize="500">
+            <Heading use="h2" color="primary" fontWeight="600" fontSize="500">
               to suit your brand
-            </Text>
+            </Heading>
           </Box>
           <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
             <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any component
@@ -255,8 +271,13 @@ export default function Index() {
           </Text.Block>
           <Box marginTop="major-6">
             <Group altitude="400" backgroundColor="primary" borderRadius="16px">
-              <Box padding="major-6">
-                <Box backgroundColor="background" borderRadius="16px" padding="major-3" width="400px">
+              <Box padding={{ default: 'major-6', 'max-tablet': 'major-2' }}>
+                <Box
+                  backgroundColor="background"
+                  borderRadius="16px"
+                  padding="major-3"
+                  width={{ default: '400px', 'max-tablet': '100%' }}
+                >
                   <Heading fontSize="400" fontFamily="Helvetica">
                     Heading
                   </Heading>
@@ -294,13 +315,14 @@ export default function Index() {
                   </Button>
                 </Box>
               </Box>
-              <HighlightedCode
-                overflow="hidden"
-                colorMode="dark"
-                isBlock
-                language="jsx"
-                width="100%"
-                code={`const theme = {
+              <Hide below="tablet">
+                <HighlightedCode
+                  overflow="hidden"
+                  colorMode="dark"
+                  isBlock
+                  language="jsx"
+                  width="100%"
+                  code={`const theme = {
   fonts: {
     default: '"Comic Sans MS", sans-serif',
     heading: '"Helvetica", sans'
@@ -321,7 +343,8 @@ export default function Index() {
 <BumbagProvider theme={theme}>
   ...
 </BumbagProvider>`}
-              />
+                />
+              </Hide>
             </Group>
           </Box>
         </Stack>
@@ -391,7 +414,7 @@ export default function Index() {
       >
         <Columns spacing="major-6">
           <Columns.Column spread={8}>
-            <Stack>
+            <Stack spacing="major-6">
               <Heading fontSize="800" fontWeight="800">
                 Join our growing community
               </Heading>

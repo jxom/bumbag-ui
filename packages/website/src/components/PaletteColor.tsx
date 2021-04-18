@@ -1,15 +1,15 @@
 import React from 'react';
-import { Box, Button, Flex, Text, useTheme } from 'bumbag';
+import { Box, Flex, Text, useTheme } from 'bumbag';
 
 const PaletteColor = ({ palette, ...props }: any) => {
   const { theme } = useTheme();
 
   return (
-    <Box border="default" borderColor="white800">
+    <Box altitude="200" overflow="hidden" borderRadius="16px" borderColor="white800">
       <Flex flexDirection="column">
         <Box height="60px" backgroundColor={palette} width="100%" {...props} />
         <Box padding="minor-2" lineHeight="none">
-          <Text fontSize="150" marginBottom="minor-1">
+          <Text fontWeight="500" fontSize="150" marginBottom="minor-1">
             {palette}
           </Text>
           <br />

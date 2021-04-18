@@ -2,7 +2,7 @@
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "className": "css-63it0p css-1074357 bb-Box",
+  "className": "css-63it0p css-1qnz8fc bb-Box",
 }
 `;
 
@@ -413,6 +413,411 @@ exports[`modes should render correctly when colorMode set as prop 2`] = `
 >
   hello world
 </div>
+`;
+
+exports[`props gradients should render correctly for _focus 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+.emotion-1:focus {
+  gradient-to: red!important;
+}
+
+.emotion-1:focus {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-red, #ff0000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for _hover 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+.emotion-1:hover {
+  gradient-to: red!important;
+}
+
+.emotion-1:hover {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-red, #ff0000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for _hoveractive 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+.emotion-1:hover:active {
+  gradient-to: red!important;
+}
+
+.emotion-1:hover:active {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-red, #ff0000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a basic gradient 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of bottom 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to bottom,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of bottom left 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to bottom left,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of bottom right 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to bottom right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of left 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to left,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of right 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of top 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to top,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of top left 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to top left,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with direction of top right 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to top right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with gradientVia 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000),var(--bb-palette-red, #ff0000), var(--bb-palette-secondary, #000000));
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for a gradient with stops 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000) 0%,var(--bb-palette-red, #ff0000) 80%, var(--bb-palette-secondary, #000000) 100%);
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
+exports[`props gradients should render correctly for responsive gradients 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-image: linear-gradient(to right,var(--bb-palette-primary, #000000), var(--bb-palette-secondary, #000000));
+}
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+  .emotion-1 {
+    background-image: linear-gradient(to bottom,var(--bb-palette-primary, #000000), var(--bb-palette-success, #000000));
+  }
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
 `;
 
 exports[`props should assign a ref 1`] = `

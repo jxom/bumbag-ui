@@ -226,6 +226,63 @@ describe('props', () => {
       expect(container.firstChild).toMatchSnapshot();
     });
   });
+
+  describe('gradients', () => {
+    it('should render correctly for a basic gradient', () => {
+      const { container } = render(<Box gradientFrom="primary" gradientTo="secondary" />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    ['top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', 'bottom left'].forEach(
+      (direction: any) => {
+        it(`should render correctly for a gradient with direction of ${direction}`, () => {
+          const { container } = render(
+            <Box gradientDirection={direction} gradientFrom="primary" gradientTo="secondary" />
+          );
+          expect(container.firstChild).toMatchSnapshot();
+        });
+      }
+    );
+
+    it('should render correctly for a gradient with gradientVia', () => {
+      const { container } = render(<Box gradientFrom="primary" gradientVia="red" gradientTo="secondary" />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it('should render correctly for a gradient with stops', () => {
+      const { container } = render(
+        <Box
+          gradientFrom="primary"
+          gradientFromAt="0%"
+          gradientVia="red"
+          gradientViaAt="80%"
+          gradientTo="secondary"
+          gradientToAt="100%"
+        />
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it('should render correctly for responsive gradients', () => {
+      const { container } = render(
+        <Box
+          gradientDirection={{ default: 'right', mobile: 'bottom' }}
+          gradientFrom="primary"
+          gradientTo={{ default: 'secondary', mobile: 'success' }}
+        />
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    ['_hover', '_hoveractive', '_focus'].forEach((pseudoProp) => {
+      it(`should render correctly for ${pseudoProp}`, () => {
+        const { container } = render(
+          <Box gradientFrom="primary" gradientTo="secondary" {...{ [pseudoProp]: { gradientTo: 'red' } }} />
+        );
+        expect(container.firstChild).toMatchSnapshot();
+      });
+    });
+  });
 });
 
 describe('composition', () => {
