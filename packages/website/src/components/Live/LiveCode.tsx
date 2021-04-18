@@ -134,6 +134,7 @@ export default function LiveCode(props: Props) {
         {...restProps}
         boxShadow="0px 6px 24px 0px rgb(0 0 0 / 30%), 0px 0px 12px 6px rgb(0 0 0 / 2%)"
         borderRadius="16px"
+        overflow="hidden"
         overrides={{ HighlightedCode: { Pre: { styles: { base: { borderRadius: '10px' } } } } }}
         marginBottom="major-4"
         marginTop="major-4"

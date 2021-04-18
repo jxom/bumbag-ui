@@ -1,6 +1,5 @@
 import _kebabCase from 'lodash/kebabCase';
 
-import { css } from '../styled';
 import {
   altitude,
   border,
