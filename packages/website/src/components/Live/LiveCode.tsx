@@ -13,16 +13,12 @@ import LivePreview from './LivePreview';
 
 const Actions = styled(bumbag.Box)`
   background-color: ${palette('background')};
-  border: 1px solid ${palette('white800', { dark: 'gray700' })};
-  border-top: none;
   padding: ${space(2)}rem ${space(4)}rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 `;
 const CodeTabs = styled(bumbag.Box)`
   background-color: ${palette('background')};
-  border: 1px solid ${palette('white800', { dark: 'gray700' })};
-  border-bottom: none;
   padding: ${space(2)}rem ${space(4)}rem;
 `;
 const LiveEditor = styled(_LiveEditor)`
@@ -50,8 +46,6 @@ const LiveError = styled(_LiveError)`
 const _LivePreview = styled(LivePreview)`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border: 1px solid ${palette('white800', { dark: 'gray700' })} !important;
-  border-bottom: none !important;
 
   ${(props) =>
     props.isIframe
@@ -138,6 +132,8 @@ export default function LiveCode(props: Props) {
       // @ts-ignore
       <HighlightedCode
         {...restProps}
+        boxShadow="0px 6px 24px 0px rgb(0 0 0 / 30%), 0px 0px 12px 6px rgb(0 0 0 / 2%)"
+        borderRadius="16px"
         overrides={{ HighlightedCode: { Pre: { styles: { base: { borderRadius: '10px' } } } } }}
         marginBottom="major-4"
         marginTop="major-4"
@@ -158,7 +154,7 @@ export default function LiveCode(props: Props) {
   const codeTheme = highlightedCodeStyles.codeTheme({ theme }).dark;
 
   return (
-    <bumbag.Box marginBottom="major-4" marginTop="major-4">
+    <bumbag.Box altitude="400" borderRadius="16px" overflow="hidden" marginBottom="major-4" marginTop="major-4">
       <LiveProvider
         code={code}
         scope={scope}

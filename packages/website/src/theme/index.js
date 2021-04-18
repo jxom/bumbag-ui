@@ -1,4 +1,4 @@
-import { css } from 'bumbag';
+import { css, generateColorVariants } from 'bumbag';
 import { faAppleAlt } from '@fortawesome/free-solid-svg-icons/faAppleAlt';
 import { faUniversalAccess } from '@fortawesome/free-solid-svg-icons/faUniversalAccess';
 import { faFillDrip } from '@fortawesome/free-solid-svg-icons/faFillDrip';
@@ -36,7 +36,9 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt
 import { faComment } from '@fortawesome/free-solid-svg-icons/faComment';
 import { faPencilRuler } from '@fortawesome/free-solid-svg-icons/faPencilRuler';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons/faDiscord';
+import { faLongArrowRight } from './faLongArrowRight';
 
 export default {
   global: {
@@ -64,13 +66,25 @@ export default {
       `,
     },
   },
+  palette: {
+    ...generateColorVariants({
+      paletteKey: 'discord',
+      backgroundColor: 'white',
+      color: '#7289da',
+    }),
+    ...generateColorVariants({
+      paletteKey: 'twitter',
+      backgroundColor: 'white',
+      color: '#1da1f2',
+    }),
+  },
   Button: {
     variants: {
       cta: {
         defaultProps: {
-          fontWeight: '500',
-          paddingY: 'major-2',
-          paddingX: 'major-4',
+          fontWeight: '600',
+          paddingY: 'minor-5',
+          paddingX: 'minor-9',
           size: 'large',
         },
       },
@@ -103,6 +117,7 @@ export default {
           faHeart,
           faSearch,
           faGithub,
+          faTwitter,
           faClipboard,
           faChevronDown,
           faChevronRight,
@@ -127,6 +142,7 @@ export default {
           faDiscord,
           faComment,
           faPencilRuler,
+          faLongArrowRight,
         ],
         prefix: 'solid-',
         type: 'font-awesome',

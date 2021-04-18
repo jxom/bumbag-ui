@@ -6,7 +6,7 @@ import { tint, shade, generateColorVariants, generateTextVariants } from '../uti
 const defaultPalette: { [key: string]: string } = {
   background: 'white',
   black: '#0b0e13',
-  text: '#212121',
+  text: '#161e2e',
   primary: '#574feb',
   secondary: '#9e46d8',
   info: '#1e67d5',

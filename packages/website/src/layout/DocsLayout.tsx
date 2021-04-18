@@ -72,13 +72,33 @@ export default function Docs(props: Props) {
         />
       ),
       code: (props: any) => <bumbag.Code {...props} />,
-      inlineCode: (props: any) => <bumbag.Code fontSize="15px" {...props} palette="primary" />,
-      h1: (props: any) => <bumbag.Heading marginTop="major-2" marginBottom="major-6" {...props} />,
+      inlineCode: (props: any) => (
+        <bumbag.Code fontSize="15px" {...props} backgroundColor="transparent" palette="primary" />
+      ),
+      h1: (props: any) => (
+        <bumbag.Heading marginTop="major-2" marginBottom="major-6" fontWeight="800" letterSpacing="300" {...props} />
+      ),
       h2: (props: any) => (
-        <bumbag.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
+        <bumbag.Heading
+          use="h2"
+          fontSize="500"
+          marginTop="major-6"
+          marginBottom="major-4"
+          fontWeight="800"
+          letterSpacing="300"
+          {...props}
+        />
       ),
       h3: (props: any) => (
-        <bumbag.Heading fontSize="400" use="h3" marginTop="major-6" marginBottom="major-4" {...props} />
+        <bumbag.Heading
+          fontSize="400"
+          use="h3"
+          marginTop="major-6"
+          marginBottom="major-4"
+          fontWeight="700"
+          letterSpacing="300"
+          {...props}
+        />
       ),
       h4: (props: any) => (
         <bumbag.Heading fontSize="300" use="h4" marginTop="major-6" marginBottom="major-4" {...props} />
@@ -88,6 +108,9 @@ export default function Docs(props: Props) {
       p: (props: any) => (
         <bumbag.Paragraph
           {...props}
+          color="text200"
+          lineHeight="300"
+          fontSize="17px"
           overrides={{
             Paragraph: {
               styles: {

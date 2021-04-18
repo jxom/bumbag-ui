@@ -5,7 +5,7 @@ export default function Footer(props) {
   return (
     <Box textAlign="center">
       <Text fontWeight="500" fontSize="150">
-        Copyright © 2020 <Link href="https://jxom.io">Jake Moxey</Link>
+        Copyright © 2021 <Link href="https://twitter.com/jxom_">Jake Moxey</Link>
       </Text>
     </Box>
   );

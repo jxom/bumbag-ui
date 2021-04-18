@@ -4,6 +4,8 @@ import {
   Box,
   Button,
   Columns,
+  Code,
+  Group,
   Heading,
   Hide,
   Icon,
@@ -21,7 +23,7 @@ import {
 import { HighlightedCode } from 'bumbag-addon-highlighted-code';
 
 import LandingLayout from '../layout/LandingLayout';
-import LiveCode from '../components/Landing/LiveCode';
+import LiveCode from '../components/Landing/LiveCode_New';
 
 const UsedByImage = styled(Image)`
   &:not(:hover) {
@@ -42,17 +44,25 @@ export default function Index() {
   return (
     <LandingLayout>
       <PageContent
-        breakpoint="tablet"
+        breakpoint="desktop"
         paddingY={{ default: 'major-15', 'max-tablet': 'major-8' }}
         wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
       >
         <Stack display="flex" flexDirection="column" spacing="major-5" alignItems="center">
-          <Heading fontSize="600" textAlign="center">
-            Build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> React applications
-            with your Bumbag
+          <Heading letterSpacing="200" fontSize="900" fontWeight="800" textAlign="center">
+            Themeable components for
+            <br />
+            React & React Native
           </Heading>
-          <Paragraph fontSize={{ default: '400', mobile: '300' }} color="text100" textAlign="center">
-            Bumbag is a friendly React UI Kit suitable for MVPs or large-scale applications.
+          <Paragraph
+            fontSize={{ default: '400', mobile: '300' }}
+            fontWeight="400"
+            color="text100"
+            maxWidth="768px"
+            textAlign="center"
+          >
+            Bumbag is a themeable, accessible & composable component library for React & React Native allowing you to
+            create cross-platform applications with ease.
           </Paragraph>
           <Set verticalBelow="mobile" isFilled spacing="major-2" width={{ mobile: '100%' }}>
             <Button use={GatsbyLink} to="/getting-started/" variant="cta" palette="primary">
@@ -63,201 +73,6 @@ export default function Index() {
             </Button>
           </Set>
         </Stack>
-      </PageContent>
-      <PageContent
-        breakpoint="widescreen"
-        wrapperProps={{
-          backgroundColor: colorMode === 'dark' ? 'black200' : 'white600',
-          borderBottom: '1px solid',
-          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
-        }}
-        paddingY="major-6"
-      >
-        <Columns spacing="major-6">
-          <Columns.Column spread={6} display="flex" alignItems="center">
-            <Stack spacing="major-2">
-              <Icon icon="solid-universal-access" fontSize="800" color="primary" />
-              <Heading fontSize="600">
-                Accessible <Text color="primary">by default</Text>
-              </Heading>
-              <Box>
-                <Text fontSize="300" color="text200" lineHeight="default">
-                  Powered by{' '}
-                  <Link href="https://reakit.io" target="_blank" rel="noreferrer noopener">
-                    Reakit
-                  </Link>{' '}
-                  under the hood, all components come with{' '}
-                  <Text fontWeight="semibold">accessible HTML attributes & keyboard interactions</Text> out of the box
-                  and follow the WAI-ARIA standards.
-                </Text>
-              </Box>
-            </Stack>
-          </Columns.Column>
-          <Columns.Column spread={6}>
-            <Stack display="flex" flexDirection="column" alignItems="center">
-              <HighlightedCode
-                preProps={{ borderRadius: '10px' }}
-                colorMode="dark"
-                isBlock
-                language="jsx"
-                width="100%"
-                code={`<Alert title="An error occurred" type="danger">
-  We were unable to save your changes.
-</Alert>`}
-              />
-              <Icon icon="solid-arrow-down" color="primary" fontSize="500" />
-              <HighlightedCode
-                preProps={{ borderRadius: '10px' }}
-                colorMode="dark"
-                isBlock
-                language="jsx"
-                width="100%"
-                code={`<div
-  role="alert"
-  aria-labelledby="alertTitle"
-  aria-describedby="alertDescription"
->
-  <div id="alertTitle">
-    An error occurred
-  </div>
-  <div id="alertDescription">
-    We were unable to save your changes.
-  </div>
-</div>`}
-              />
-            </Stack>
-          </Columns.Column>
-        </Columns>
-      </PageContent>
-      <PageContent
-        breakpoint="widescreen"
-        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
-        paddingY="major-6"
-      >
-        <Columns spacing="major-6">
-          <Columns.Column spread={6}>
-            <HighlightedCode
-              preProps={{ borderRadius: '10px' }}
-              colorMode="dark"
-              isBlock
-              language="jsx"
-              width="100%"
-              code={`const theme = {
-  fonts: {
-    default: '"Comic Sans MS", sans-serif',
-    heading: '"Helvetica", sans'
-  },
-  palette: {
-    primary: '#574feb',
-    success: '#0a7d33',
-    danger: '#da1717',
-    warning: '#ed9c22'
-  },
-  Button: {
-    defaultProps: {
-      palette: 'primary'
-    }
-  }
-}
-
-<BumbagProvider theme={theme}>
-  ...
-</BumbagProvider>`}
-            />
-          </Columns.Column>
-          <Columns.Column spread={6} display="flex" alignItems="center">
-            <Stack spacing="major-2">
-              <Icon icon="solid-fill-drip" fontSize="800" color="primary" />
-              <Heading fontSize="600">
-                Theme <Text color="primary">your way</Text>
-              </Heading>
-              <Box>
-                <Text fontSize="300" color="text200" lineHeight="default">
-                  <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any
-                  component by altering the theme at a global or component level.
-                  <br />
-                </Text>
-              </Box>
-              <Link fontSize="250" use={GatsbyLink} to="/theming">
-                Learn more about theming
-              </Link>
-            </Stack>
-          </Columns.Column>
-        </Columns>
-      </PageContent>
-      <PageContent
-        breakpoint="widescreen"
-        wrapperProps={{
-          backgroundColor: colorMode === 'dark' ? 'black200' : 'white600',
-          borderBottom: '1px solid',
-          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
-        }}
-        paddingY="major-10"
-      >
-        <Columns spacing="major-6">
-          <Columns.Column spread={6} display="flex" alignItems="center">
-            <Stack spacing="major-2">
-              <Icon icon="solid-cubes" fontSize="800" color="primary" />
-              <Heading fontSize="600">
-                Compose <Text color="primary">for flexibility</Text>
-              </Heading>
-              <Box>
-                <Text fontSize="300" color="text200" lineHeight="default">
-                  <Text fontWeight="semibold">Flexibly build your own components</Text> such as a pricing section, a
-                  contact form, or even a call-to-action.
-                </Text>
-              </Box>
-              <Link fontSize="250" use={GatsbyLink} to="/composition">
-                Learn more about composition
-              </Link>
-            </Stack>
-          </Columns.Column>
-          <Columns.Column spread={6}>
-            <Stack>
-              <HighlightedCode
-                preProps={{ borderRadius: '10px' }}
-                colorMode="dark"
-                isBlock
-                language="jsx"
-                width="100%"
-                code={`// Compose with \`use\`
-<Button use={Link} href="/get-started">
-  Get started
-</Button>`}
-              />
-              <HighlightedCode
-                preProps={{ borderRadius: '10px' }}
-                colorMode="dark"
-                isBlock
-                language="jsx"
-                width="100%"
-                code={`// Compose with hooks
-const linkProps = Link.useProps({
-  href: '/get-started'
-});
-
-<Button {...linkProps}>
-  Get started
-</Button>`}
-              />
-              <HighlightedCode
-                preProps={{ borderRadius: '10px' }}
-                colorMode="dark"
-                isBlock
-                language="jsx"
-                width="100%"
-                code={`// Compose with render props
-<Link href="/get-started">
-  {linkProps => (
-    <Button {...linkProps}>
-      Get started
-    </Button>
-  )}
-</Link>`}
-              />
-            </Stack>
-          </Columns.Column>
-        </Columns>
       </PageContent>
       <PageContent
         breakpoint="widescreen"
@@ -292,6 +107,225 @@ const linkProps = Link.useProps({
           </Set>
         </Stack>
       </PageContent>
+      <PageContent
+        breakpoint="widescreen"
+        wrapperProps={{
+          borderBottom: '1px solid',
+          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
+        }}
+        paddingY="major-10"
+      >
+        <Stack>
+          <Box>
+            <Heading fontSize="800" fontWeight="800" marginBottom="minor-1">
+              First class utilities
+            </Heading>
+            <Text color="primary" fontWeight="600" fontSize="500">
+              to help you build with speed
+            </Text>
+          </Box>
+          <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
+            All components in Bumbag are built on top of the primitive <Code color="primary">Box</Code> component that
+            allows you to use CSS as props in your components allowing you to rapidly build web & native applications.
+          </Text.Block>
+          <Box marginTop="major-6">
+            <LiveCode
+              code={`<Card borderRadius="5" paddingY="major-4" width="300px">
+  <Stack spacing="major-2" alignX="center">
+    <Avatar
+      borderRadius="100%"
+      src="https://bit.ly/3tve2fu"
+      size="large"
+    />
+    <Stack alignX="center" spacing="major-1">
+      <Heading fontSize="500">Jake Moxey</Heading>
+      <Text
+        use="h2"
+        color="text100"
+        fontSize="150"
+        fontWeight="500"
+        textTransform="uppercase"
+      >
+        Bumbag Entrepreneur
+      </Text>
+    </Stack>
+    <Button
+      use="a"
+      href="https://twitter.com/jxom_"
+      iconBefore="solid-twitter"
+      palette="twitter"
+      variant="outlined"
+    >
+      Twitter
+    </Button>
+  </Stack>
+</Card>`}
+            >
+              <Group backgroundColor="primary" borderRadius="16px" width="100%">
+                <Box width="60%" overflow="hidden">
+                  <LiveCode.Editor />
+                </Box>
+                <Box display="flex" alignX="center" alignY="center" flex="1">
+                  <LiveCode.Preview />
+                </Box>
+              </Group>
+            </LiveCode>
+          </Box>
+        </Stack>
+      </PageContent>
+      <PageContent
+        breakpoint="widescreen"
+        wrapperProps={{
+          borderBottom: '1px solid',
+          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
+        }}
+        paddingY="major-10"
+      >
+        <Stack>
+          <Box>
+            <Heading fontSize="800" fontWeight="800" marginBottom="minor-1">
+              Accessible out-of-the-box
+            </Heading>
+            <Text color="primary" fontWeight="600" fontSize="500">
+              to assist your diverse audience
+            </Text>
+          </Box>
+          <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
+            Powered by{' '}
+            <Link href="https://reakit.io" target="_blank" rel="noreferrer noopener">
+              Reakit
+            </Link>{' '}
+            under the hood, all components come with{' '}
+            <Text fontWeight="semibold">accessible HTML attributes & keyboard interactions</Text> out of the box and
+            follow the WAI-ARIA standards.
+          </Text.Block>
+          <Box marginTop="major-6" altitude="400" backgroundColor="primary" borderRadius="16px" padding="major-6">
+            <Set spacing="major-3" alignX="center" alignY="center">
+              <HighlightedCode
+                preProps={{ borderRadius: '10px' }}
+                colorMode="dark"
+                isBlock
+                language="jsx"
+                width="500px"
+                code={`<Alert title="An error occurred" type="danger">
+  We were unable to save your changes.
+</Alert>`}
+              />
+              <Icon icon="solid-long-arrow-right" color="white" fontSize="500" />
+              <HighlightedCode
+                preProps={{ borderRadius: '10px' }}
+                colorMode="dark"
+                isBlock
+                language="jsx"
+                width="450px"
+                code={`<div
+  role="alert"
+  aria-labelledby="alertTitle"
+  aria-describedby="alertDescription"
+>
+  <div id="alertTitle">
+    An error occurred
+  </div>
+  <div id="alertDescription">
+    We were unable to save your changes.
+  </div>
+</div>`}
+              />
+            </Set>
+          </Box>
+        </Stack>
+      </PageContent>
+      <PageContent
+        breakpoint="widescreen"
+        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
+        paddingY="major-10"
+      >
+        <Stack>
+          <Box>
+            <Heading fontSize="800" fontWeight="800" marginBottom="minor-1">
+              Theme your way
+            </Heading>
+            <Text color="primary" fontWeight="600" fontSize="500">
+              to suit your brand
+            </Text>
+          </Box>
+          <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
+            <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any component
+            by altering the theme at a global or component level.
+          </Text.Block>
+          <Box marginTop="major-6">
+            <Group altitude="400" backgroundColor="primary" borderRadius="16px">
+              <Box padding="major-6">
+                <Box backgroundColor="background" borderRadius="16px" padding="major-3" width="400px">
+                  <Heading fontSize="400" fontFamily="Helvetica">
+                    Heading
+                  </Heading>
+                  <Text fontFamily="Comic Sans MS" fontSize="250">
+                    This is some text
+                  </Text>
+                  <Stack orientation="horizontal" marginTop="major-2" spacing="major-1">
+                    <Box alignX="center">
+                      <Box backgroundColor="#574feb" width="84px" height="84px" />
+                      <Text fontFamily="Comic Sans MS" fontSize="150">
+                        Primary
+                      </Text>
+                    </Box>
+                    <Box alignX="center">
+                      <Box backgroundColor="#0a7d33" width="84px" height="84px" />
+                      <Text fontFamily="Comic Sans MS" fontSize="150">
+                        Success
+                      </Text>
+                    </Box>
+                    <Box alignX="center">
+                      <Box backgroundColor="#da1717" width="84px" height="84px" />
+                      <Text fontFamily="Comic Sans MS" fontSize="150">
+                        Danger
+                      </Text>
+                    </Box>
+                    <Box alignX="center">
+                      <Box backgroundColor="#ed9c22" width="84px" height="84px" />
+                      <Text fontFamily="Comic Sans MS" fontSize="150">
+                        Warning
+                      </Text>
+                    </Box>
+                  </Stack>
+                  <Button fontFamily="Comic Sans MS" marginTop="major-3" palette="primary">
+                    Get started
+                  </Button>
+                </Box>
+              </Box>
+              <HighlightedCode
+                overflow="hidden"
+                colorMode="dark"
+                isBlock
+                language="jsx"
+                width="100%"
+                code={`const theme = {
+  fonts: {
+    default: '"Comic Sans MS", sans-serif',
+    heading: '"Helvetica", sans'
+  },
+  palette: {
+    primary: '#574feb',
+    success: '#0a7d33',
+    danger: '#da1717',
+    warning: '#ed9c22'
+  },
+  Button: {
+    defaultProps: {
+      palette: 'primary'
+    }
+  }
+}
+
+<BumbagProvider theme={theme}>
+  ...
+</BumbagProvider>`}
+              />
+            </Group>
+          </Box>
+        </Stack>
+      </PageContent>
       <Hide below="tablet">
         <PageContent
           breakpoint="fullHD"
@@ -303,10 +337,11 @@ const linkProps = Link.useProps({
           }}
         >
           <Box display="flex" flexDirection="column" alignItems="center" marginBottom="major-6">
-            <Heading color="white" fontSize="600" textAlign="center" marginBottom="minor-1">
+            <Heading color="white" fontWeight="800" fontSize="800" textAlign="center" marginBottom="major-2">
               Code with an intuitive API
-              <br />
-              <Text color="primary100">understandable by designers</Text>
+            </Heading>
+            <Heading color="primary100" fontSize="800" textAlign="center" marginBottom="minor-1">
+              understandable by designers
             </Heading>
           </Box>
           <LiveCode
@@ -336,36 +371,56 @@ const linkProps = Link.useProps({
     </Paragraph>
   </Level>
 </Group>`}
-          />
+          >
+            <Group altitude="400" borderRadius="10px" width="100%" verticalBelow="widescreen">
+              <LiveCode.Editor />
+              <Box backgroundColor="white" flex="2" border="default" borderLeft="none" padding="major-3">
+                <LiveCode.Preview />
+              </Box>
+            </Group>
+          </LiveCode>
         </PageContent>
       </Hide>
       <PageContent
-        breakpoint="tablet"
-        paddingY="major-6"
-        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
+        breakpoint="widescreen"
+        wrapperProps={{
+          borderBottom: '1px solid',
+          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
+        }}
+        paddingY="major-10"
       >
-        <Stack alignX="center" spacing="major-4">
-          <Heading fontSize="600" textAlign="center">
-            Join our growing <Text color="primary">community</Text>
-          </Heading>
-          <Paragraph color="text100" fontSize="300" textAlign="center">
-            Join our discord server to get the latest updates, chat with other Bumbag enthusiasts, and see what's
-            happening in the community!
-          </Paragraph>
-          <Box altitude="300" marginTop="major-2">
-            <Box
-              use="iframe"
-              src={`https://discordapp.com/widget?id=735469626619854869&theme=${
-                colorMode === 'dark' ? 'dark' : 'light'
-              }`}
-              width="350px"
-              height="500px"
-              allowTransparency="true"
-              frameBorder="0"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            />
-          </Box>
-        </Stack>
+        <Columns spacing="major-6">
+          <Columns.Column spread={8}>
+            <Stack>
+              <Heading fontSize="800" fontWeight="800">
+                Join our growing community
+              </Heading>
+              <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
+                Join our discord server to get the latest updates, chat with other Bumbag enthusiasts, and see what's
+                happening in the community!
+              </Text.Block>
+              <Button use="a" href="https://discord.gg/BPnwqvJ" color="white" palette="discord" variant="cta">
+                Join our discord
+                <Icon marginLeft="major-1" color="white" icon="solid-long-arrow-right" />
+              </Button>
+            </Stack>
+          </Columns.Column>
+          <Columns.Column spread={4}>
+            <Box altitude="300" marginTop="major-2">
+              <Box
+                use="iframe"
+                src={`https://discordapp.com/widget?id=735469626619854869&theme=${
+                  colorMode === 'dark' ? 'dark' : 'light'
+                }`}
+                width="100%"
+                height="400px"
+                allowTransparency="true"
+                frameBorder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+              />
+            </Box>
+          </Columns.Column>
+        </Columns>
       </PageContent>
     </LandingLayout>
   );
