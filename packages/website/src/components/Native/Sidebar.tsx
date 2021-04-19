@@ -38,7 +38,7 @@ const orders = [
       'color-modes',
     ],
   },
-  { 'the-box-primitive': ['box', 'flex', 'css-props'] },
+  { 'the-box-primitive': ['box', 'flex', 'style-props'] },
   { hooks: [] },
   { layout: [] },
   { typography: [] },

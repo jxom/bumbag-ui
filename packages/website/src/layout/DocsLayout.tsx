@@ -172,7 +172,7 @@ export default function Docs(props: Props) {
             use="main"
             id="main-content"
           >
-            <bumbag.Box>
+            <bumbag.Box width="100%">
               {pageContext.mdxBody ? (
                 <MDXProvider components={components}>
                   <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
@@ -181,9 +181,11 @@ export default function Docs(props: Props) {
                 children
               )}
             </bumbag.Box>
-            {pageContext.tableOfContents && (
-              <TableOfContents breakpoint={breakpoint} isFluid={isFluid} toc={pageContext.tableOfContents} />
-            )}
+            <bumbag.Hide below="fullHD">
+              {pageContext.tableOfContents && (
+                <TableOfContents breakpoint={breakpoint} isFluid={isFluid} toc={pageContext.tableOfContents} />
+              )}
+            </bumbag.Hide>
           </bumbag.PageContent>
           <bumbag.PageContent>
             <Footer />

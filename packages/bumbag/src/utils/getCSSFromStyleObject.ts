@@ -19,7 +19,7 @@ import { cssProps as cssPropsMap } from './cssProps';
 
 const altitudeAttributes = ['altitude'];
 const alignAttributes = ['alignX', 'alignY'];
-const borderAttributes = ['border'];
+const borderAttributes = ['border', 'borderLeft', 'borderRight', 'borderTop', 'borderBottom'];
 const borderRadiusAttributes = [
   'borderRadius',
   'borderLeftRadius',

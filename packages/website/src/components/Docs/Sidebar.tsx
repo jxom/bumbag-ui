@@ -40,7 +40,7 @@ const orders = [
       'migrating-from-fannypack',
     ],
   },
-  { 'the-box-primitive': ['box', 'flex', 'css-props', 'alignment', 'altitudes', 'borders', 'border-radius'] },
+  { 'the-box-primitive': ['box', 'flex', 'style-props', 'alignment', 'altitudes', 'borders', 'border-radius'] },
   { hooks: [] },
   { 'page-shells': ['intro', 'page-with-header', 'page-with-sidebar', 'page-content'] },
   { layout: [] },
