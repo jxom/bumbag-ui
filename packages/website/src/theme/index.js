@@ -66,6 +66,9 @@ export default {
       `,
     },
   },
+  breakpoints: {
+    tablet: 800,
+  },
   palette: {
     ...generateColorVariants({
       paletteKey: 'discord',

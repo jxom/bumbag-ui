@@ -35,13 +35,9 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
   visibility: ${(props) => (!props.isFluid ? 'visible' : 'hidden')};
   overflow: auto;
   max-height: calc(100vh - 200px);
-  width: 250px;
+  width: 300px;
   border-left: 1px solid ${bumbag.palette('white800')};
   padding-left: 1rem;
-
-  @media screen and (max-width: ${(props) => bumbag.theme(`breakpoints.${props.breakpoint}`)(props) + 832}px) {
-    visibility: hidden;
-  }
 `;
 
 export default function Docs(props: Props) {
@@ -166,16 +162,27 @@ export default function Docs(props: Props) {
       <SEO title={title} />
       <bumbag.PageWithHeader sticky header={<Header />}>
         <bumbag.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left" sidebarWidth="270px">
-          {pageContext.tableOfContents && (
-            <TableOfContents breakpoint={breakpoint} isFluid={isFluid} toc={pageContext.tableOfContents} />
-          )}
-          <bumbag.PageContent isLayout={isFluid} isFluid={isFluid} breakpoint={breakpoint} use="main" id="main-content">
-            {pageContext.mdxBody ? (
-              <MDXProvider components={components}>
-                <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
-              </MDXProvider>
-            ) : (
-              children
+          <bumbag.PageContent
+            align="left"
+            paddingLeft="major-10"
+            display="flex"
+            isLayout={isFluid}
+            isFluid={isFluid}
+            breakpoint={breakpoint}
+            use="main"
+            id="main-content"
+          >
+            <bumbag.Box>
+              {pageContext.mdxBody ? (
+                <MDXProvider components={components}>
+                  <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
+                </MDXProvider>
+              ) : (
+                children
+              )}
+            </bumbag.Box>
+            {pageContext.tableOfContents && (
+              <TableOfContents breakpoint={breakpoint} isFluid={isFluid} toc={pageContext.tableOfContents} />
             )}
           </bumbag.PageContent>
           <bumbag.PageContent>
