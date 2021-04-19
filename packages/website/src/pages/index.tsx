@@ -72,7 +72,7 @@ export default function Index() {
             <Button use={GatsbyLink} to="/getting-started/" variant="cta" palette="primary">
               Get started
             </Button>
-            <Button use={GatsbyLink} to="/components/button/" variant="cta">
+            <Button use={GatsbyLink} to="/the-box-primitive/box/" variant="cta">
               Components
             </Button>
           </Set>

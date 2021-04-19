@@ -19,14 +19,15 @@ const Actions = styled(bumbag.Box)`
 `;
 const CodeTabs = styled(bumbag.Box)`
   background-color: ${palette('background')};
+  border-top: 1px solid ${palette('white700')};
   padding: ${space(2)}rem ${space(4)}rem;
 `;
 const LiveEditor = styled(_LiveEditor)`
   font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace !important;
-  padding: 1rem !important;
+  padding: 1.5rem 1rem !important;
 
   & textarea {
-    padding: 1rem !important;
+    padding: 1.5rem 1rem !important;
   }
   & pre {
     padding: 0 !important;
@@ -181,7 +182,22 @@ export default function LiveCode(props: Props) {
             ))}
           </CodeTabs>
         )}
-        <LiveEditor onChange={setCode} code={code} />
+        <bumbag.Box position="relative">
+          <bumbag.Box
+            color="primary200"
+            zIndex="1"
+            fontSize="100"
+            fontWeight="500"
+            textTransform="uppercase"
+            position="absolute"
+            top="minor-1"
+            textAlign="center"
+            width="100%"
+          >
+            Editable example
+          </bumbag.Box>
+          <LiveEditor onChange={setCode} code={code} />
+        </bumbag.Box>
         <Actions colorMode={colorMode}>
           <bumbag.Level verticalBelow={null}>
             <bumbag.Box>

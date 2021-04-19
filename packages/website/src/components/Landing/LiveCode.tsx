@@ -21,12 +21,14 @@ const Actions = styled(bumbag.Box)`
 const LiveEditor = styled(_LiveEditor)`
   font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace !important;
   padding: 1rem !important;
+  padding-top: 2rem !important;
   height: 100%;
   flex: 3;
   ${altitude('300')};
 
   & textarea {
     padding: 1rem !important;
+    padding-top: 2rem !important;
   }
   & pre {
     padding: 0 !important;
@@ -56,7 +58,26 @@ LiveCode.defaultProps = {
   mountStylesheet: false,
 };
 
-LiveCode.Editor = LiveEditor;
+LiveCode.Editor = (props) => {
+  return (
+    <bumbag.Box position="relative" height="100%">
+      <bumbag.Box
+        color="primary200"
+        zIndex="1"
+        fontSize="100"
+        fontWeight="500"
+        textTransform="uppercase"
+        position="absolute"
+        top="minor-1"
+        textAlign="center"
+        width="100%"
+      >
+        Editable example
+      </bumbag.Box>
+      <LiveEditor {...props} />;
+    </bumbag.Box>
+  );
+};
 LiveCode.Preview = LivePreview;
 LiveCode.Error = LiveError;
 
