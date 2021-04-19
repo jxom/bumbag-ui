@@ -1,11 +1,11 @@
 ---
 breakpoint: tablet
-title: CSS Props
+title: Style props
 ---
 
-# CSS props
+# Style props
 
-You're able to apply any CSS attribute as a prop to `<Box>`. These attributes can be passed through as camel-cased props. CSS props can be very useful when you just want to apply an adhoc style without pulling it out into it's own [themeable component](/styling-components).
+You're able to apply any CSS attribute as a prop to `<Box>`. These attributes can be passed through as camel-cased props. style props can be very useful when you just want to apply an adhoc style without pulling it out into it's own [themeable component](/styling-components).
 
 ```jsx-live
 <Box
@@ -72,7 +72,7 @@ You can specify a [font family from the theme](/fonts) for font families.
 
 ## Responsive attributes
 
-You can pass [breakpoints from the theme](/breakpoints) as responsive attributes inside your CSS props to apply the style for a particular viewport.
+You can pass [breakpoints from the theme](/breakpoints) as responsive attributes inside your style props to apply the style for a particular viewport.
 
 In this example, the background of the box will bed red until the max desktop width is reached. It will then fallback to the default.
 
@@ -90,7 +90,7 @@ In this example, the background of the box will bed red until the max desktop wi
 
 ## Pseudo selectors
 
-CSS props allow you to specify certain pseudo selectors. This allows you to add adhoc styling for particular interactions.
+style props allow you to specify certain pseudo selectors. This allows you to add adhoc styling for particular interactions.
 
 The available pseudo selectors you can use are:
 

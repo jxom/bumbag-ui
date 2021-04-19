@@ -3,6 +3,7 @@ import { Link as GatsbyLink } from 'gatsby';
 import {
   Box,
   Button,
+  Card,
   Columns,
   Code,
   Group,
@@ -41,7 +42,7 @@ const UsedByImage = styled(Image)`
 `;
 
 export default function Index() {
-  const { colorMode } = useColorMode();
+  const { colorMode, setColorMode } = useColorMode();
   return (
     <LandingLayout>
       <PageContent
@@ -121,7 +122,7 @@ export default function Index() {
         <Stack>
           <Box>
             <Heading fontSize="800" fontWeight="800" marginBottom="major-2">
-              First class utilities
+              Style your components using props
             </Heading>
             <Heading use="h2" color="primary" fontWeight="600" fontSize="500">
               to help you build with speed
@@ -129,8 +130,13 @@ export default function Index() {
           </Box>
           <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
             All components in Bumbag are built on top of the primitive <Code color="primary">Box</Code> component that
-            allows you to use CSS as props in your components allowing you to rapidly build web & native applications.
+            allows you to use {'"'}style props{'"'} in your components allowing you to rapidly build web & native
+            applications.
           </Text.Block>
+          <Link.Block use={GatsbyLink} to="/the-box-primitive/style-props/" fontWeight="500" fontSize="400">
+            Learn more
+            <Icon marginLeft="major-1" verticalAlign="0" icon="solid-arrow-right" fontSize="200" />
+          </Link.Block>
           <Box marginTop="major-6">
             <LiveCode
               code={`<Card borderRadius="5" paddingY="major-4" width="300px">
@@ -175,6 +181,100 @@ export default function Index() {
                 </Box>
               </Group>
             </LiveCode>
+          </Box>
+        </Stack>
+      </PageContent>
+      <PageContent
+        breakpoint="widescreen"
+        wrapperProps={{
+          borderBottom: '1px solid',
+          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
+        }}
+        paddingY="major-10"
+      >
+        <Stack>
+          <Box>
+            <Heading fontSize="800" fontWeight="800" marginBottom="major-2">
+              Dark mode
+            </Heading>
+            <Heading use="h2" color="primary" fontWeight="600" fontSize="500">
+              provided out-of-the-box
+            </Heading>
+          </Box>
+          <Text.Block fontSize="400" color="text200" lineHeight="default" maxWidth="768px">
+            Bumbag provides you with dark mode out-of-the-box — all you have to do is trigger the{' '}
+            <Code palette="primary">setColorMode</Code> function! You can also create other custom modes as well (such
+            as:{' '}
+            <Text backgroundColor="success" color="danger200">
+              Christmas mode
+            </Text>{' '}
+            or{' '}
+            <Text backgroundColor="hotpink" fontFamily="Comic Sans MS">
+              Dank mode
+            </Text>
+            ).
+          </Text.Block>
+          <Link.Block use={GatsbyLink} to="/color-modes/" fontWeight="500" fontSize="400">
+            Learn more
+            <Icon marginLeft="major-1" verticalAlign="0" icon="solid-arrow-right" fontSize="200" />
+          </Link.Block>
+          <Box marginTop="major-6">
+            <Group backgroundColor="primary" borderRadius="16px" width="100%">
+              <Hide below="tablet">
+                <Box width="60%" overflow="hidden">
+                  <HighlightedCode
+                    overflow="hidden"
+                    colorMode="dark"
+                    isBlock
+                    language="jsx"
+                    width="100%"
+                    code={`function Example() {
+  const { colorMode, setColorMode } = useColorMode();
+
+  return (
+    <Stack alignX="center">
+      <Text
+        color="text100"
+        fontSize="100"
+        fontWeight="500"
+        textTransform="uppercase"
+      >
+        Current mode
+      </Text>
+      <Text fontWeight="500">{colorMode}</Text>
+      <Set>
+        <Button onClick={() => setColorMode('default')}>
+          Light
+        </Button>
+        <Button onClick={() => setColorMode('dark')}>
+          Dark
+        </Button>
+      </Set>
+    </Stack>
+  )
+}`}
+                  />
+                </Box>
+              </Hide>
+              <Box display="flex" alignX="center" alignY="center" flex="1" paddingY="major-3">
+                <Card minWidth="240px">
+                  <Stack alignX="center">
+                    <Stack alignX="center" spacing="major-1">
+                      <Text.Block color="text100" fontSize="100" fontWeight="500" textTransform="uppercase">
+                        Current mode
+                      </Text.Block>
+                      <Text.Block fontWeight="500">{colorMode}</Text.Block>
+                    </Stack>
+                    <Set>
+                      <Button marginRight="major-1" onClick={() => setColorMode('default')}>
+                        Light
+                      </Button>
+                      <Button onClick={() => setColorMode('dark')}>Dark</Button>
+                    </Set>
+                  </Stack>
+                </Card>
+              </Box>
+            </Group>
           </Box>
         </Stack>
       </PageContent>
@@ -269,6 +369,10 @@ export default function Index() {
             <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any component
             by altering the theme at a global or component level.
           </Text.Block>
+          <Link.Block use={GatsbyLink} to="/theming/" fontWeight="500" fontSize="400">
+            Learn more
+            <Icon marginLeft="major-1" verticalAlign="0" icon="solid-arrow-right" fontSize="200" />
+          </Link.Block>
           <Box marginTop="major-6">
             <Group altitude="400" backgroundColor="primary" borderRadius="16px">
               <Box padding={{ default: 'major-6', 'max-tablet': 'major-2' }}>
