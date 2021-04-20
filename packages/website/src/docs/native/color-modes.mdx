@@ -6,4 +6,171 @@ path: /native/color-modes/
 
 # Color modes
 
-TODO
+Color modes are used to create sets of configurable color modes (such as a dark mode).
+
+By default, Bumbag comes with it's own dark mode variant of it's default theme.
+
+You can also [define your own modes](#defining-modes).
+
+## Setting modes
+
+Bumbag provides you with a `useColorMode` hook that you can use to retrieve the current color mode, and set a color mode.
+
+When setting a color mode, this value will be stored in local storage, so when the user navigates back to your application the color mode will be used when the page loads.
+
+```function-live
+function Example() {
+  const { colorMode, setColorMode } = useColorMode();
+
+  return (
+    <Stack>
+      <Text>Current mode: {colorMode}</Text>
+      <Set>
+        <Button onClick={() => setColorMode('default')}>Light</Button>
+        <Button onClick={() => setColorMode('dark')}>Dark</Button>
+      </Set>
+    </Stack>
+  )
+}
+```
+
+## Defining modes
+
+You can define your own color modes in two ways:
+
+- via the [global theme](#global-theme)
+- via the [component theme](#component-theme)
+
+### Global theme
+
+Defining your own mode is very similar to the [variant concept](/variants), each theme attribute has the ability to plug in a `modes` configuration.
+
+```function-live noInline
+const theme = {
+  palette: {
+    modes: {
+      dark: {
+        background: '#1a212d',
+        text: 'white'
+      },
+      dope: {
+        background: 'hotpink'
+      }
+    }
+  },
+  fonts: {
+    modes: {
+      dope: {
+        default: '"Comic Sans MS"'
+      }
+    }
+  },
+  Button: {
+    modes: {
+      dark: {
+        defaultProps: {
+          backgroundColor: 'gray800',
+          color: 'white'
+        }
+      },
+      dope: {
+        defaultProps: {
+          backgroundColor: 'hotpink',
+          color: 'black'
+        }
+      }
+    }
+  }
+};
+
+function Example() {
+  const { colorMode, setColorMode } = useColorMode();
+
+  return (
+    <Stack>
+      <Text>Current mode: {colorMode}</Text>
+      <Set>
+        <Button onClick={() => setColorMode('default')}>Light</Button>
+        <Button onClick={() => setColorMode('dark')}>Dark</Button>
+        <Button onClick={() => setColorMode('dope')}>Dope</Button>
+      </Set>
+    </Stack>
+  )
+}
+
+function App() {
+  return (
+    <Provider theme={theme}>
+      <Example />
+    </Provider>
+  )
+}
+
+render(App)
+```
+
+### Component theme
+
+<!-- function-live -->
+```jsx
+const ModeButton = applyTheme(Button, {
+  modes: {
+    dark: {
+      defaultProps: {
+        backgroundColor: 'gray800',
+        color: 'white'
+      }
+    },
+    dope: {
+      defaultProps: {
+        backgroundColor: 'hotpink',
+        color: 'black'
+      }
+    }
+  }
+});
+
+function Example() {
+  const { colorMode, setColorMode } = useColorMode();
+
+  return (
+    <Stack>
+      <Text>Current mode: {colorMode}</Text>
+      <Set>
+        <ModeButton
+          onClick={() => setColorMode('default')}
+        >
+          Light
+        </ModeButton>
+        <ModeButton
+          onClick={() => setColorMode('dark')}
+        >
+          Dark
+        </ModeButton>
+        <ModeButton
+          onClick={() => setColorMode('dope')}
+        >
+          Dope
+        </ModeButton>
+      </Set>
+    </Stack>
+  )
+}
+```
+
+## Setting a default mode
+
+You can set a default color mode on the `<Provider>`.
+
+
+```jsx
+import { Provider as BumbagProvider } from 'bumbag-native';
+
+const App = () => (
+  <BumbagProvider colorMode="dark">
+    ...
+  </BumbagProvider>
+);
+```
+
+

@@ -1,11 +1,11 @@
 const breakpoints = {
   height: {
-    xs: 480,
-    sm: 568,
-    md: 667,
-    lg: 736,
-    xl: 844,
-    '2xl': 1024,
+    xs: 568,
+    sm: 667,
+    md: 736,
+    lg: 896,
+    xl: 1024,
+    '2xl': 1366,
   },
   width: [
     {

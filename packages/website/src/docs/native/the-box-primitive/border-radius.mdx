@@ -40,8 +40,30 @@ Along with setting pixel-based border radii, you can set pre-defined border radi
 
 ### Schema
 
-TODO
+```jsx
+const theme = {
+  borderRadii: {
+    default: string,
+    '0': string,
+    '1': string,
+    '2': string,
+    '3': string,
+    '4': string,
+    '5': string,
+    '6': string,
+    '7': string,
+    [key: string]: string
+  }
+}
+```
 
 ### Example
 
-TODO
+```jsx
+const theme = {
+  borders: {
+    default: '6px',
+    '8': '60px'
+  }
+}
+```

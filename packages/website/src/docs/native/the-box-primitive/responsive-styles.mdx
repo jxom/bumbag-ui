@@ -5,4 +5,39 @@ title: Responsive styles
 
 # Responsive styles
 
-TODO
+You can pass [breakpoints from the theme](/native/breakpoints) as responsive attributes using the `breakpoint` function inside your style props to apply the style for a particular viewport.
+
+> Note: Unfortunately, breakpoints in Bumbag Native **on the web** are currently not dynamically responsive. This means that changing your browser width will not trigger the breakpoint value to change. You will need to first **refresh your browser**.
+
+## Widths
+
+In this example, the background of the box will be red until the max desktop width is reached. It will then fallback to the default.
+
+```jsx-live
+<Box
+  backgroundColor={breakpoint('width', {
+    default: 'blue',
+    'max-desktop': 'red'
+  })}
+  color="white"
+>
+  This is a box
+</Box>
+```
+
+## Heights
+
+In this example, the background of the box will be red until the max medium height is reached (under 736px). It will then fallback to the default.
+
+```jsx-live
+<Box
+  backgroundColor={breakpoint('height', {
+    default: 'blue',
+    'max-md': 'red'
+  })}
+  color="white"
+>
+  This is a box
+</Box>
+```
+

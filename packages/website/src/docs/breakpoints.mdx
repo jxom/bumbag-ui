@@ -42,7 +42,15 @@ const theme = {
 <Provider theme={theme}>Hello world!</Provider>
 ```
 
-## Using breakpoints with themeable components
+## Using breakpoints
+
+### With style props
+
+```jsx-live
+<Box fontSize={{ default: '16px', 'max-tablet': '14px' }}>
+  Hello world
+</Box>
+```
 
 ### With `applyTheme`
 

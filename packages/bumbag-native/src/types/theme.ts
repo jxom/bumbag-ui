@@ -574,7 +574,11 @@ export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
   borders?: CoreThemeConfig['borders'];
   borderRadii?: CoreThemeConfig['borderRadii'];
-  breakpoints?: BreakpointsThemeConfig;
+  breakpoints?: {
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig;
+  };
   fonts?: CoreThemeConfig['fonts'];
   fontSizes?: CoreThemeConfig['fontSizes'];
   fontWeights?: CoreThemeConfig['fontWeights'];

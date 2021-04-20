@@ -18,8 +18,31 @@ Along with setting CSS borders, you can set pre-defined borders in the **global 
 
 ### Schema
 
-TODO
+```jsx
+const theme = {
+  borders: {
+    default: {
+      color: string,
+      width: string
+    }
+
+    [key: string]: {
+      color: string,
+      width: string
+    }
+  }
+}
+```
 
 ### Example
 
-TODO
+```jsx
+const theme = {
+  borders: {
+    solidBlack: {
+      color: 'black',
+      width: '2px'
+    }
+  }
+}
+```
