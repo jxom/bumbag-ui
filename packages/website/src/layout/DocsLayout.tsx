@@ -31,8 +31,7 @@ type Props = {
 const TableOfContents = bumbag.styled(_TableOfContents)`
   position: fixed;
   top: 100px;
-  right: 1rem;
-  visibility: ${(props) => (!props.isFluid ? 'visible' : 'hidden')};
+  right: 2rem;
   overflow: auto;
   max-height: calc(100vh - 200px);
   width: 300px;
@@ -161,10 +160,34 @@ export default function Docs(props: Props) {
     <React.Fragment>
       <SEO title={title} />
       <bumbag.PageWithHeader sticky header={<Header />}>
-        <bumbag.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left" sidebarWidth="270px">
+        <bumbag.PageWithSidebar
+          sidebar={<Sidebar path={path} />}
+          sidebarPlacement="left"
+          sidebarWidth="270px"
+          overrides={{
+            PageWithSidebar: {
+              Content: {
+                styles: {
+                  base: (props) => bumbag.css`
+                    ${bumbag.breakpoint(
+                      'max-fullHD',
+                      bumbag.css`
+                      padding-right: 0px;
+                    `,
+                      {
+                        else: bumbag.css`
+                          padding-right: calc(300px + 2rem);
+                        `,
+                      }
+                    )(props)}
+                  `,
+                },
+              },
+            },
+          }}
+        >
           <bumbag.PageContent
-            align="left"
-            paddingLeft="major-10"
+            align="center"
             display="flex"
             isLayout={isFluid}
             isFluid={isFluid}
@@ -183,7 +206,7 @@ export default function Docs(props: Props) {
             </bumbag.Box>
             <bumbag.Hide below="fullHD">
               {pageContext.tableOfContents && (
-                <TableOfContents breakpoint={breakpoint} isFluid={isFluid} toc={pageContext.tableOfContents} />
+                <TableOfContents breakpoint={breakpoint} toc={pageContext.tableOfContents} />
               )}
             </bumbag.Hide>
           </bumbag.PageContent>
