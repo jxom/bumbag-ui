@@ -8,11 +8,18 @@ const defaultPalette: { [key: string]: string } = {
   black: '#0b0e13',
   text: '#161e2e',
   primary: '#574feb',
-  secondary: '#9e46d8',
+  secondary: '#7c3aed',
   info: '#1e67d5',
   success: '#0a7d33',
   danger: '#da1717',
-  warning: '#ed9c22',
+  warning: '#f59e0b',
+  blue: '#3b82f6',
+  green: '#10b981',
+  red: '#ef4444',
+  orange: '#f59e0b',
+  pink: '#ec4899',
+  purple: '#7c3aed',
+  indigo: '#574feb',
   gray: '#626f84',
 };
 
@@ -27,11 +34,18 @@ const defaultDarkPalette: { [key: string]: string } = {
   text300: '#d0d7e1',
   text400: '#e0e4eb',
   primary: '#574feb',
-  secondary: '#9e46d8',
+  secondary: '#7c3aed',
   info: '#1e67d5',
   success: '#0a7d33',
   danger: '#da1717',
-  warning: '#ed9c22',
+  warning: '#f59e0b',
+  blue: '#3b82f6',
+  green: '#10b981',
+  red: '#ef4444',
+  orange: '#f59e0b',
+  pink: '#ec4899',
+  purple: '#7c3aed',
+  indigo: '#574feb',
 };
 
 export default (overrides: PaletteThemeConfig) => ({
@@ -100,6 +114,41 @@ export default (overrides: PaletteThemeConfig) => ({
     paletteOverrides: ({ color }) => ({
       warningTintInverted: shade(0.7, color)(),
     }),
+  }),
+  ...generateColorVariants({
+    paletteKey: 'blue',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.blue || defaultPalette.blue) as string,
+  }),
+  ...generateColorVariants({
+    paletteKey: 'red',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.red || defaultPalette.red) as string,
+  }),
+  ...generateColorVariants({
+    paletteKey: 'orange',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.orange || defaultPalette.orange) as string,
+  }),
+  ...generateColorVariants({
+    paletteKey: 'pink',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.pink || defaultPalette.pink) as string,
+  }),
+  ...generateColorVariants({
+    paletteKey: 'purple',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.purple || defaultPalette.purple) as string,
+  }),
+  ...generateColorVariants({
+    paletteKey: 'green',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.green || defaultPalette.green) as string,
+  }),
+  ...generateColorVariants({
+    paletteKey: 'indigo',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.indigo || defaultPalette.indigo) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'gray',
