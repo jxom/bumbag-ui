@@ -322,9 +322,20 @@ Disables the checkbox group
 **<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`(Pick<any, string
-  | number
-  | symbol> & ViewProps & LocalBoxProps & { active?: boolean; focus?: boolean; hover?: boolean; hoveractive?: boolean; } & LocalCheckboxProps & { ...; })[]`}
+{`(Pick<CSSProperties, "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "color"
+  | "_hover"
+  | "_hoveractive"
+  | "_focus"
+  | "_active"
+  | "_visited"
+  | "_disabled"
+  | "_groupHover"
+  | ... 511 more ...
+  | "zIndex"> & ... 4 more ... & { ...; })[]`}
 </Code>
 
 Checkbox group options
@@ -369,15 +380,19 @@ Function to invoke when checkbox group has changed
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  [x: string]: any;
-  [x: number]: any;
-  hitSlop?: Insets;
-  onLayout?: (event: LayoutChangeEvent) => void;
-  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
-  removeClippedSubviews?: boolean;
-  ... 66 more ...;
-  verticalBelow?: string;
-}`}
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
+    ...
+  }>;
+  ... 588 more ...;
+  verticalBelow?...`}
 </Code>
 
 Overrides for the CheckboxGroup `Set` component.
@@ -877,13 +892,11 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: any;
-  borderRadii?: any;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: any;
-  fontSizes?: any;
-  fontWeights?: any;
-  ... 31 more ...;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: {
+    ...
+  }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>
@@ -909,15 +922,19 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  [x: string]: any;
-  [x: number]: any;
-  hitSlop?: Insets;
-  onLayout?: (event: LayoutChangeEvent) => void;
-  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
-  removeClippedSubviews?: boolean;
-  ... 72 more ...;
-  setProps?: Partial<...>;
-}`}
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
+    ...
+  }>;
+  ... 594 more ...;
+  setProps?: Par...`}
 </Code>
 
 Additional props for the Checkbox component
@@ -947,9 +964,20 @@ Disables the checkbox group
 **<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`(Pick<any, string
-  | number
-  | symbol> & ViewProps & LocalBoxProps & { active?: boolean; focus?: boolean; hover?: boolean; hoveractive?: boolean; } & LocalCheckboxProps & { ...; })[]`}
+{`(Pick<CSSProperties, "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "color"
+  | "_hover"
+  | "_hoveractive"
+  | "_focus"
+  | "_active"
+  | "_visited"
+  | "_disabled"
+  | "_groupHover"
+  | ... 511 more ...
+  | "zIndex"> & ... 4 more ... & { ...; })[]`}
 </Code>
 
 Checkbox group options
@@ -994,15 +1022,19 @@ Function to invoke when checkbox group has changed
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  [x: string]: any;
-  [x: number]: any;
-  hitSlop?: Insets;
-  onLayout?: (event: LayoutChangeEvent) => void;
-  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
-  removeClippedSubviews?: boolean;
-  ... 66 more ...;
-  verticalBelow?: string;
-}`}
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
+    ...
+  }>;
+  ... 588 more ...;
+  verticalBelow?...`}
 </Code>
 
 Overrides for the CheckboxGroup `Set` component.
@@ -1505,13 +1537,11 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: any;
-  borderRadii?: any;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: any;
-  fontSizes?: any;
-  fontWeights?: any;
-  ... 31 more ...;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: {
+    ...
+  }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>

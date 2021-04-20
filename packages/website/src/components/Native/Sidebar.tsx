@@ -15,6 +15,7 @@ const query = graphql`
             frontmatter {
               title
               path
+              wip
             }
           }
         }
@@ -38,7 +39,18 @@ const orders = [
       'color-modes',
     ],
   },
-  { 'the-box-primitive': ['box', 'flex', 'style-props'] },
+  {
+    'the-box-primitive': [
+      'box',
+      'flex',
+      'style-props',
+      'box-scroll',
+      'box-safe',
+      'box-touchable',
+      'box-touchablewithoutfeedback',
+      'box-keyboardavoiding',
+    ],
+  },
   { hooks: [] },
   { layout: [] },
   { typography: [] },

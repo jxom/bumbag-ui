@@ -39,7 +39,15 @@ import { Spinner } from 'bumbag-native'
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">size</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | (string & {})
+  | "small"
+  | "medium"
+  | "large"`}
+</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -101,13 +109,11 @@ import { Spinner } from 'bumbag-native'
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: any;
-  borderRadii?: any;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: any;
-  fontSizes?: any;
-  fontWeights?: any;
-  ... 31 more ...;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: {
+    ...
+  }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>

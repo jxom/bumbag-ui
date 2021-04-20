@@ -130,11 +130,12 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
                 navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}
               >
                 <Link
+                  style={frontmatter.wip ? { color: '#92a0bb' } : {}}
                   to={`${frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}${
                     typeof window !== 'undefined' ? window.location.search : ''
                   }`}
                 >
-                  {title}
+                  {title} {frontmatter.wip ? '🚧' : ''}
                 </Link>
               </SideNav.Item>
             );
