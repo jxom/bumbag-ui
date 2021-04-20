@@ -68,14 +68,19 @@ export default function Index() {
             Bumbag is a themeable, accessible & composable component library for React & React Native allowing you to
             create cross-platform applications with ease.
           </Paragraph>
-          <Set verticalBelow="mobile" isFilled spacing="major-2" width={{ mobile: '100%' }}>
-            <Button use={GatsbyLink} to="/getting-started/" variant="cta" palette="primary">
-              Get started
-            </Button>
-            <Button use={GatsbyLink} to="/the-box-primitive/box/" variant="cta">
-              Components
-            </Button>
-          </Set>
+          <Stack textAlign="center" spacing="major-3">
+            <Text.Block fontSize={{ default: '400', mobile: '300' }} fontWeight="500" color="text100">
+              Get started:
+            </Text.Block>
+            <Set verticalBelow="mobile" isFilled spacing="major-2" width={{ mobile: '100%' }}>
+              <Button use={GatsbyLink} to="/getting-started/" variant="cta" palette="primary" width="140px">
+                Web
+              </Button>
+              <Button use={GatsbyLink} to="/native/getting-started/" variant="cta" palette="primary" width="140px">
+                Native
+              </Button>
+            </Set>
+          </Stack>
         </Stack>
       </PageContent>
       <PageContent
