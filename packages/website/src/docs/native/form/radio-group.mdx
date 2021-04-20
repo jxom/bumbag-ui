@@ -1,153 +1,256 @@
 import Theme from '../../../components/Theme';
-import { Stack } from 'bumbag-native';
+import { RadioGroup as BNRadioGroup, RadioGroupField as BNRadioGroupField } from 'bumbag-native';
 
-# Stack
+# RadioGroup
 
 ## Import
 
 ```jsx
-import { Stack } from 'bumbag-native';
+import { RadioGroup, RadioGroupField } from 'bumbag-native'
 ```
 
 ## Usage
 
-The `<Stack>` component that assists in creating layouts where it's children are evenly spaced.
-
 ```jsx-live
-<Stack>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Stack>
-      <Box backgroundColor="white" padding="major-2">
-        <Text>Second</Text>
-      </Box>
-      <Box backgroundColor="white" padding="major-2">
-        <Text>Third</Text>
-      </Box>
-    </Stack>
-  </Box>
-  <Stack orientation="horizontal">
-    <Box backgroundColor="primaryTint" padding="major-2">
-      <Text>Fourth</Text>
-    </Box>
-    <Box backgroundColor="primaryTint" padding="major-2">
-      <Text>Fifth</Text>
-    </Box>
-  </Stack>
-</Stack>
+<RadioGroup
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
 ```
 
-### Gap
-
-You can specify a gap spacing on your `<Stack>` with the `spacing` prop.
+### Fields
 
 ```jsx-live
-<Stack spacing="major-2">
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Second</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Third</Text>
-  </Box>
-</Stack>
+<RadioGroupField
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
 ```
 
-### Alignments
-
-#### Horizontal alignment
+### Alignment
 
 ```jsx-live
-<Stack alignX="left">
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Second</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Third</Text>
-  </Box>
-</Stack>
-<Stack alignX="center">
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Second</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Third</Text>
-  </Box>
-</Stack>
-<Stack alignX="right">
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Second</Text>
-  </Box>
-  <Box backgroundColor="primaryTint" padding="major-2">
-    <Text>Third</Text>
-  </Box>
-</Stack>
+<RadioGroup
+  align="left"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<RadioGroup
+  align="right"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
 ```
 
-#### Vertical alignment
+### Horizontal group
 
 ```jsx-live
-<Stack alignY="top" height="300px" backgroundColor="white700">
-  <Box backgroundColor="white" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="white" padding="major-2">
-    <Text>Second</Text>
-  </Box>
-  <Box backgroundColor="white" padding="major-2">
-    <Text>Third</Text>
-  </Box>
-</Stack>
-<Stack alignY="center" height="300px" backgroundColor="primaryTint">
-  <Box backgroundColor="white" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="white" padding="major-2">
-    <Text>Second</Text>
-  </Box>
-  <Box backgroundColor="white" padding="major-2">
-    <Text>Third</Text>
-  </Box>
-</Stack>
-<Stack alignY="bottom" height="300px" backgroundColor="white700">
-  <Box backgroundColor="white" padding="major-2">
-    <Text>First</Text>
-  </Box>
-  <Box backgroundColor="white" padding="major-2">
-    <Text>Second</Text>
-  </Box>
-  <Box backgroundColor="white" padding="major-2">
-    <Text>Third</Text>
-  </Box>
-</Stack>
+<RadioGroup
+  orientation="horizontal"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
 ```
 
-## Stack Props
+### Spacing
+
+```jsx-live
+<RadioGroup
+  spacing="major-2"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Disabled
+
+```jsx-live
+<RadioGroup
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy', disabled: true },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+```jsx-live
+<RadioGroup
+  disabled
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### States
+
+```jsx-live
+<RadioGroup
+  state="danger"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Colors
+
+```jsx-live
+<RadioGroup
+  palette="secondary"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Default value
+
+Specify a default checked value with the `defaultValue` prop.
+
+```jsx-live
+<RadioGroup
+  defaultValue="windy"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Controlled
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState('windy');
+
+  return (
+    <RadioGroup
+      onChange={setValue}
+      value={value}
+      options={[
+        { label: 'Sunny', value: 'sunny' },
+        { label: 'Windy', value: 'windy' },
+        { label: 'Overcast', value: 'overcast' }
+      ]}
+    />
+  );
+}
+```
+
+## Props
+
+### RadioGroup Props
 
 <!-- Automatically generated -->
 
+**<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34;</Code> 
+
+Alignment of the radio group
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">defaultValue</Code>** <Code fontSize="100" palette="primary">string[]</Code> 
+
+Default value(s) of the radio group
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Disables the radio group
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`(Pick<any, string
+  | number
+  | symbol> & ViewProps & LocalBoxProps & { active?: boolean; focus?: boolean; hover?: boolean; hoveractive?: boolean; } & LocalRadioProps & { ...; })[]`}
+</Code>
+
+Radio group options
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
-Sets the orientation of the stack component.
+Are the radio inputs layed out horizontally or vertically?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Color of the radio group. Can be any color in the palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">spacing</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-Sets the spacing between the stack items.
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+State of the radio group. Can be any color in the palette.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Controlled value of the radio group
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(value: string) =&#62; void</Code> 
+
+Function to invoke when radio group has changed
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: (event: LayoutChangeEvent) => void;
+  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
+  removeClippedSubviews?: boolean;
+  ... 66 more ...;
+  verticalBelow?: string;
+}`}
+</Code>
+
+Overrides for the RadioGroup `Set` component.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -639,10 +742,6 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
 **<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -674,22 +773,30 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 ## Theming
 
+### RadioGroup
+
 <Theme
-  component={Stack}
-  padding="major-3"
-  overrides={['Stack.styles.base']}>
-  <Box backgroundColor="white700" padding="major-3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
-    at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
-    posuere leo. Cras placerat sapien in consectetur aliquet.
-  </Box>
-  <Box backgroundColor="white700" padding="major-3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
-    at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
-    posuere leo. Cras placerat sapien in consectetur aliquet.
-  </Box>
-</Theme>
+  component={BNRadioGroup}
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  overrides={[
+    'RadioGroup.styles.base',
+    'RadioGroup.Item.styles.base'
+  ]} />
+
+### RadioGroupField
+
+<Theme
+  component={BNRadioGroupField}
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  overrides={[
+    'RadioGroupField.styles.base'
+  ]} />

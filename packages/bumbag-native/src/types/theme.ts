@@ -15,7 +15,7 @@ import { InputProps, InputFieldProps } from '../Input';
 import { ImageProps } from '../Image';
 import { LevelProps } from '../Level';
 import { PressableProps } from '../Pressable';
-import { RadioProps } from '../Radio';
+import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { SpinnerProps } from '../Spinner';
 import { SetProps } from '../Set';
 import { StackProps } from '../Stack';
@@ -442,6 +442,34 @@ export type RadioThemeConfig = {
   modes?: Variant<RadioThemeConfig>;
 };
 
+export type RadioGroupThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Set?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Item?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<RadioGroupProps>;
+  variants?: Variant<RadioGroupThemeConfig>;
+  modes?: Variant<RadioGroupThemeConfig>;
+};
+
+export type RadioGroupFieldThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<RadioGroupFieldProps>;
+  variants?: Variant<RadioGroupFieldThemeConfig>;
+  modes?: Variant<RadioGroupFieldThemeConfig>;
+};
+
 export type SetThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -573,6 +601,8 @@ export type ThemeConfig = {
   Level?: LevelThemeConfig;
   Pressable?: PressableThemeConfig;
   Radio?: RadioThemeConfig;
+  RadioGroup?: RadioGroupThemeConfig;
+  RadioGroupField?: RadioGroupFieldThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Stack?: StackThemeConfig;

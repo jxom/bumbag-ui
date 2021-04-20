@@ -40,6 +40,7 @@ const SideNav = applyTheme(_SideNav, {
           fontSize: '150',
           fontWeight: '700',
           color: 'text',
+          textTransform: 'unset',
         },
       },
     },
