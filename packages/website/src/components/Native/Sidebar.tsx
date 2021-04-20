@@ -28,6 +28,7 @@ const orders = [
   {
     '': [
       'getting-started',
+      'platform-compatibility',
       'theming',
       'styling-components',
       'palette',
