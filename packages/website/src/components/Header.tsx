@@ -60,7 +60,7 @@ export default function Header(props) {
               </FeedbackFish>
             )}
           </div>
-          <TopNav.Item href="https://opencollective.com/bumbag" fontWeight="semibold">
+          <TopNav.Item href="https://github.com/sponsors/bumbag" fontWeight="semibold">
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor
           </TopNav.Item>
