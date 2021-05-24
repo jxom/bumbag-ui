@@ -3,6 +3,7 @@ import { Platform, TouchableOpacityProps as RNTouchableOpacityProps } from 'reac
 import ConditionalWrap from 'conditional-wrap';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { ButtonType, Omit, Size, Palette } from 'bumbag/types';
+import _throttle from 'lodash/throttle';
 
 import { Box, BoxProps } from '../Box';
 import { IconProps } from '../Icon';
@@ -27,6 +28,8 @@ export type LocalButtonProps = {
   size?: Size;
   /** Custom props for the isLoading spinner. */
   spinnerProps?: SpinnerProps;
+  /** Sets a throttle for the press event (`onPress`) to be only invoked at most once every `x` milliseconds.  */
+  throttle?: boolean | number;
   type?: ButtonType;
 };
 export type ButtonProps = BoxProps & RNTouchableOpacityProps & LocalButtonProps;
@@ -44,9 +47,11 @@ const useProps = createHook<ButtonProps>(
       iconBeforeProps,
       isLoading,
       isStatic,
+      onPress,
       palette,
       size,
       spinnerProps,
+      throttle,
       variant,
     } = props;
 
@@ -78,6 +83,9 @@ const useProps = createHook<ButtonProps>(
 
     return {
       ...boxProps,
+      onPress: throttle
+        ? _throttle(onPress, throttle === true ? 2000 : throttle, { leading: true, trailing: false })
+        : onPress,
       children: (
         <ButtonContext.Provider value={contextValue}>
           <React.Fragment>

@@ -148,6 +148,20 @@ export default function App() {
           </Box>
         </Preview>
       </PreviewSection>
+      <PreviewSection title="Throttled">
+        <Preview>
+          <Box>
+            <Button
+              throttle={2000}
+              onPress={() => {
+                console.log('test');
+              }}
+            >
+              Default
+            </Button>
+          </Box>
+        </Preview>
+      </PreviewSection>
     </Box>
   );
 }
