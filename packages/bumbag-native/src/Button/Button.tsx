@@ -3,11 +3,11 @@ import { Platform, TouchableOpacityProps as RNTouchableOpacityProps } from 'reac
 import ConditionalWrap from 'conditional-wrap';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { ButtonType, Omit, Size, Palette } from 'bumbag/types';
-import _throttle from 'lodash/throttle';
 
 import { Box, BoxProps } from '../Box';
 import { IconProps } from '../Icon';
 import { SpinnerProps } from '../Spinner/Spinner';
+import { throttle as _throttle } from '../utils/throttle';
 
 import * as styles from './Button.styles';
 import { ButtonIcon } from './ButtonIcon';
@@ -83,9 +83,7 @@ const useProps = createHook<ButtonProps>(
 
     return {
       ...boxProps,
-      onPress: throttle
-        ? _throttle(onPress, throttle === true ? 2000 : throttle, { leading: true, trailing: false })
-        : onPress,
+      onPress: _throttle(onPress, throttle),
       children: (
         <ButtonContext.Provider value={contextValue}>
           <React.Fragment>

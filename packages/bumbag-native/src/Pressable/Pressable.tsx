@@ -2,15 +2,19 @@ import { PressableProps as RNPressableProps } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { Box, BoxProps } from '../Box';
+import { throttle } from '../utils';
+
 import * as styles from './Pressable.styles';
 
-export type LocalPressableProps = {};
+export type LocalPressableProps = {
+  throttle?: boolean | number;
+};
 export type PressableProps = BoxProps & RNPressableProps & LocalPressableProps;
 
 const useProps = createHook<PressableProps>(
   (props) => {
     const boxProps = Box.useProps(props);
-    return { ...boxProps };
+    return { ...boxProps, onPress: throttle(props.onPress, props.throttle) };
   },
   { themeKey: 'native.Pressable' }
 );

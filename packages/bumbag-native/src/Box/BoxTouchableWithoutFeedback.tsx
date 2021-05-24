@@ -3,8 +3,11 @@ import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { Box, BoxProps } from './Box';
 import * as styles from './Box.styles';
+import { throttle } from '../utils';
 
-export type LocalBoxTouchableWithoutFeedbackProps = {};
+export type LocalBoxTouchableWithoutFeedbackProps = {
+  throttle?: boolean | number;
+};
 export type BoxTouchableWithoutFeedbackProps = BoxProps &
   RNTouchableWithoutFeedbackProps &
   LocalBoxTouchableWithoutFeedbackProps;
@@ -12,7 +15,7 @@ export type BoxTouchableWithoutFeedbackProps = BoxProps &
 const useProps = createHook<BoxTouchableWithoutFeedbackProps>(
   (props) => {
     const boxProps = Box.useProps(props);
-    return { ...boxProps };
+    return { ...boxProps, onPress: throttle(props.onPress, props.throttle) };
   },
   { themeKey: 'native.Box.TouchableWithoutFeedback' }
 );
