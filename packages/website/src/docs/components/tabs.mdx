@@ -16,7 +16,7 @@ import { Tabs } from 'bumbag';
 Each `<Tabs.Tab>` component should have a `tabId` prop with a corresponding `<Tabs.Panel>` component with the same `tabId` value.
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List>
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -39,7 +39,7 @@ Each `<Tabs.Tab>` component should have a `tabId` prop with a corresponding `<Ta
 You can make your tabs span the whole width with the `isFitted` prop.
 
 ```jsx-live
-<Tabs isFitted selectedId="tab1">
+<Tabs isFitted defaultSelectedId="tab1">
   <Tabs.List>
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -62,7 +62,7 @@ You can make your tabs span the whole width with the `isFitted` prop.
 Align your tabs with the `align` prop.
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List align="center">
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -81,7 +81,7 @@ Align your tabs with the `align` prop.
 ```
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List align="right">
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -108,7 +108,7 @@ You can also [create your own Tabs variant](/variants).
 #### Boxed
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List variant="boxed">
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -129,7 +129,7 @@ You can also [create your own Tabs variant](/variants).
 #### Buttons
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List variant="button">
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -150,7 +150,7 @@ You can also [create your own Tabs variant](/variants).
 #### Unstyled
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List variant="unstyled">
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -171,7 +171,7 @@ You can also [create your own Tabs variant](/variants).
 ### Colors
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List variant="button" palette="primaryTint">
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -192,7 +192,7 @@ You can also [create your own Tabs variant](/variants).
 ### Disabled
 
 ```jsx-live
-<Tabs selectedId="tab1">
+<Tabs defaultSelectedId="tab1">
   <Tabs.List>
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab disabled tabId="tab2">Cats</Tabs.Tab>
@@ -213,7 +213,7 @@ You can also [create your own Tabs variant](/variants).
 ### Orientation
 
 ```jsx-live
-<Tabs orientation="vertical" selectedId="tab1">
+<Tabs orientation="vertical" defaultSelectedId="tab1">
   <Tabs.List>
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -236,7 +236,7 @@ You can also [create your own Tabs variant](/variants).
 By setting a `mountWhenInactive` prop, the tab panels will not mount until they are active.
 
 ```jsx-live
-<Tabs mountWhenInactive={false} selectedId="tab1">
+<Tabs mountWhenInactive={false} defaultSelectedId="tab1">
   <Tabs.List>
     <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
     <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -252,6 +252,36 @@ By setting a `mountWhenInactive` prop, the tab panels will not mount until they 
     Parrots are cool
   </Tabs.Panel>
 </Tabs>
+```
+
+### Controlled
+
+```function-live
+function Example() {
+  const [selectedId, setSelectedId] = React.useState('tab1');
+
+  return (
+    <Box>
+      <Button onClick={() => setSelectedId('tab2')}>Go to Cats</Button>
+      <Tabs selectedId={selectedId}>
+        <Tabs.List>
+          <Tabs.Tab tabId="tab1" onClick={() => setSelectedId('tab1')}>Dogs</Tabs.Tab>
+          <Tabs.Tab tabId="tab2" onClick={() => setSelectedId('tab2')}>Cats</Tabs.Tab>
+          <Tabs.Tab tabId="tab3" onClick={() => setSelectedId('tab3')}>Parrots</Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel tabId="tab1" padding="major-2">
+          Dogs are awesome
+        </Tabs.Panel>
+        <Tabs.Panel tabId="tab2" padding="major-2">
+          Cats are alright
+        </Tabs.Panel>
+        <Tabs.Panel tabId="tab3" padding="major-2">
+          Parrots are cool
+        </Tabs.Panel>
+      </Tabs>
+    </Box>
+  );
+}
 ```
 
 ## Props
@@ -650,7 +680,7 @@ By setting a `mountWhenInactive` prop, the tab panels will not mount until they 
 
 <Theme component="div" overrides={['Tabs.styles.base', 'Tabs.List.styles.base', 'Tabs.Tab.styles.base', 'Tabs.Tab.styles.selected', 'Tabs.Tab.styles.focus', 'Tabs.Tab.styles.hover', 'Tabs.Panel.styles.base']}>
   {props => (
-    <Tabs selectedId="tab1" {...props}>
+    <Tabs defaultSelectedId="tab1" {...props}>
       <Tabs.List>
         <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
         <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>

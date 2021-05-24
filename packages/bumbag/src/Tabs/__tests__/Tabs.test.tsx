@@ -5,7 +5,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1">
+      <Tabs baseId="test" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -27,7 +27,7 @@ describe('props', () => {
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1" backgroundColor="primary">
+      <Tabs baseId="test" defaultSelectedId="tab1" backgroundColor="primary">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -47,9 +47,9 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with selectedId', () => {
+  it('should render correctly with defaultSelectedId', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab2">
+      <Tabs baseId="test" defaultSelectedId="tab2">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -71,7 +71,7 @@ describe('props', () => {
 
   it('should render correctly for fitted tabs', () => {
     const { container } = render(
-      <Tabs isFitted baseId="test" selectedId="tab1">
+      <Tabs isFitted baseId="test" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -93,7 +93,7 @@ describe('props', () => {
 
   it('should render correctly for center align', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1">
+      <Tabs baseId="test" defaultSelectedId="tab1">
         <Tabs.List align="center">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -115,7 +115,7 @@ describe('props', () => {
 
   it('should render correctly for right align', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1">
+      <Tabs baseId="test" defaultSelectedId="tab1">
         <Tabs.List align="right">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -137,7 +137,7 @@ describe('props', () => {
 
   it('should render correctly for boxed tabs', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1">
+      <Tabs baseId="test" defaultSelectedId="tab1">
         <Tabs.List variant="boxed">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -159,7 +159,7 @@ describe('props', () => {
 
   it('should render correctly for button tabs', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1">
+      <Tabs baseId="test" defaultSelectedId="tab1">
         <Tabs.List variant="button">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -181,7 +181,7 @@ describe('props', () => {
 
   it('should render correctly for unstyled tabs', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1">
+      <Tabs baseId="test" defaultSelectedId="tab1">
         <Tabs.List variant="unstyled">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -203,7 +203,7 @@ describe('props', () => {
 
   it('should render correctly for vertical tabs', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -227,7 +227,7 @@ describe('props', () => {
 describe('theming', () => {
   it('Tabs.styles.base should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -250,7 +250,7 @@ describe('theming', () => {
 
   it('Tabs.List.styles.base should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -273,7 +273,7 @@ describe('theming', () => {
 
   it('Tabs.Tab.styles.base should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -296,7 +296,7 @@ describe('theming', () => {
 
   it('Tabs.Tab.styles.selected should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -319,7 +319,7 @@ describe('theming', () => {
 
   it('Tabs.Tab.styles.focus should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -342,7 +342,7 @@ describe('theming', () => {
 
   it('Tabs.Tab.styles.hover should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -365,7 +365,7 @@ describe('theming', () => {
 
   it('Tabs.Panel.styles.base should render correctly', () => {
     const { container } = render(
-      <Tabs baseId="test" orientation="vertical" selectedId="tab1">
+      <Tabs baseId="test" orientation="vertical" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
@@ -393,7 +393,7 @@ describe('overrides', () => {
       <Tabs
         baseId="test"
         orientation="vertical"
-        selectedId="tab1"
+        defaultSelectedId="tab1"
         overrides={{ Tabs: { styles: { base: { backgroundColor: 'red' } } } }}
       >
         <Tabs.List>
@@ -420,7 +420,7 @@ describe('overrides', () => {
       <Tabs
         baseId="test"
         orientation="vertical"
-        selectedId="tab1"
+        defaultSelectedId="tab1"
         overrides={{ Tabs: { List: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
@@ -447,7 +447,7 @@ describe('overrides', () => {
       <Tabs
         baseId="test"
         orientation="vertical"
-        selectedId="tab1"
+        defaultSelectedId="tab1"
         overrides={{ Tabs: { Tab: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
@@ -474,7 +474,7 @@ describe('overrides', () => {
       <Tabs
         baseId="test"
         orientation="vertical"
-        selectedId="tab1"
+        defaultSelectedId="tab1"
         overrides={{ Tabs: { Tab: { styles: { selected: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
@@ -501,7 +501,7 @@ describe('overrides', () => {
       <Tabs
         baseId="test"
         orientation="vertical"
-        selectedId="tab1"
+        defaultSelectedId="tab1"
         overrides={{ Tabs: { Tab: { styles: { focus: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
@@ -528,7 +528,7 @@ describe('overrides', () => {
       <Tabs
         baseId="test"
         orientation="vertical"
-        selectedId="tab1"
+        defaultSelectedId="tab1"
         overrides={{ Tabs: { Tab: { styles: { hover: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
@@ -555,7 +555,7 @@ describe('overrides', () => {
       <Tabs
         baseId="test"
         orientation="vertical"
-        selectedId="tab1"
+        defaultSelectedId="tab1"
         overrides={{ Tabs: { Panel: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
@@ -581,7 +581,7 @@ describe('overrides', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
-      <Tabs baseId="test" selectedId="tab1">
+      <Tabs baseId="test" defaultSelectedId="tab1">
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>

@@ -9,6 +9,7 @@ import * as styles from './Tabs.styles';
 
 export type LocalTabsProps = {
   baseId?: TabInitialState['baseId'];
+  defaultSelectedId?: TabInitialState['selectedId'];
   isFitted?: boolean;
   loop?: TabInitialState['loop'];
   manual?: TabInitialState['manual'];
@@ -33,6 +34,7 @@ const useProps = createHook<TabsProps>(
     const {
       baseId,
       children,
+      defaultSelectedId,
       loop,
       manual,
       mountWhenInactive,
@@ -43,7 +45,16 @@ const useProps = createHook<TabsProps>(
     } = props;
     const boxProps = Box.useProps(restProps);
 
-    const tabs = useTabState({ baseId, loop, manual, orientation, selectedId });
+    let tabs = useTabState({ baseId, loop, manual, orientation, selectedId: defaultSelectedId });
+    tabs = {
+      ...tabs,
+      ...(selectedId
+        ? {
+            currentId: selectedId,
+            selectedId,
+          }
+        : {}),
+    };
 
     const className = useClassName({
       style: styles.Tabs,
