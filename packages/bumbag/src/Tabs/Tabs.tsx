@@ -12,19 +12,35 @@ export type LocalTabsProps = {
   isFitted?: boolean;
   loop?: TabInitialState['loop'];
   manual?: TabInitialState['manual'];
+  mountWhenInactive?: boolean;
   orientation?: TabInitialState['orientation'];
   selectedId?: TabInitialState['selectedId'];
 };
 export type TabsProps = BoxProps & LocalTabsProps;
 
-export const TabsContext = React.createContext<{ tabs: Partial<TabStateReturn>; overrides: any }>({
+export const TabsContext = React.createContext<{
+  tabs: Partial<TabStateReturn>;
+  mountWhenInactive: boolean;
+  overrides: any;
+}>({
+  mountWhenInactive: true,
   tabs: {},
   overrides: {},
 });
 
 const useProps = createHook<TabsProps>(
   (props, { themeKey }) => {
-    const { baseId, children, loop, manual, orientation, overrides, selectedId, ...restProps } = props;
+    const {
+      baseId,
+      children,
+      loop,
+      manual,
+      mountWhenInactive,
+      orientation,
+      overrides,
+      selectedId,
+      ...restProps
+    } = props;
     const boxProps = Box.useProps(restProps);
 
     const tabs = useTabState({ baseId, loop, manual, orientation, selectedId });
@@ -36,7 +52,11 @@ const useProps = createHook<TabsProps>(
       prevClassName: boxProps.className,
     });
 
-    const contextValue = React.useMemo(() => ({ tabs, overrides }), [overrides, tabs]);
+    const contextValue = React.useMemo(() => ({ tabs, mountWhenInactive, overrides }), [
+      mountWhenInactive,
+      overrides,
+      tabs,
+    ]);
 
     return {
       ...boxProps,
@@ -44,7 +64,7 @@ const useProps = createHook<TabsProps>(
       children: <TabsContext.Provider value={contextValue}>{children}</TabsContext.Provider>,
     };
   },
-  { themeKey: 'Tabs' }
+  { defaultProps: { mountWhenInactive: true }, themeKey: 'Tabs' }
 );
 
 export const Tabs = createComponent<TabsProps>(

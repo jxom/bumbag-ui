@@ -24,7 +24,6 @@ const useProps = createHook<TabsPanelProps>(
       tabId,
       registerPanel,
       unregisterPanel,
-      visible,
       animating,
       animated,
       stopAnimation,
@@ -48,7 +47,7 @@ const useProps = createHook<TabsPanelProps>(
         stopAnimation,
         unstable_idCountRef,
         ...tabs,
-        visible: tabs ? tabId === tabs.selectedId : tabId === selectedId,
+        visible: props.visible || tabs ? tabId === tabs.selectedId : tabId === selectedId,
       },
       htmlProps
     );
@@ -69,6 +68,11 @@ const useProps = createHook<TabsPanelProps>(
 export const TabsPanel = createComponent<TabsPanelProps>(
   (props) => {
     const tabsPanelProps = useProps(props);
+    const { mountWhenInactive } = React.useContext(TabsContext);
+
+    if (tabsPanelProps.hidden && !mountWhenInactive) {
+      return null;
+    }
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tabsPanelProps });
   },
   {
