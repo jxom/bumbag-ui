@@ -28,6 +28,12 @@ import { Box } from 'bumbag-native';
 
 <!-- Automatically generated -->
 
+**<Code fontSize="150" marginRight="major-1">throttle</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+Sets a throttle for the press event (`onPress`) to be only invoked at most once every `x` milliseconds.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 <details><Box use="summary" marginBottom="major-2">Inherits <strong><a href="https://reactnative.dev/docs/touchableopacity">React Native's <code>TouchableOpacity</code></a></strong> props</Box>
 
 **<Code fontSize="150" marginRight="major-1">activeOpacity</Code>** <Code fontSize="100" palette="primary">number</Code> 
@@ -373,10 +379,12 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: {
-    ...
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig
   }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}

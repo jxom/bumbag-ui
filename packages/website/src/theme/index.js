@@ -38,6 +38,10 @@ import { faPencilRuler } from '@fortawesome/free-solid-svg-icons/faPencilRuler';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons/faDiscord';
+import { faCogs } from '@fortawesome/free-solid-svg-icons/faCogs';
+import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers';
+import { faLock } from '@fortawesome/free-solid-svg-icons/faLock';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import { faLongArrowRight } from './faLongArrowRight';
 
 export default {
@@ -146,6 +150,10 @@ export default {
           faComment,
           faPencilRuler,
           faLongArrowRight,
+          faCogs,
+          faUsers,
+          faExclamationTriangle,
+          faLock,
         ],
         prefix: 'solid-',
         type: 'font-awesome',

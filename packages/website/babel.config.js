@@ -16,6 +16,8 @@ module.exports = !isPlayroom
       plugins: [
         'emotion',
         'babel-plugin-extract-react-types',
+        '@babel/plugin-transform-flow-strip-types',
+        'react-native-web',
         !prod && [
           'babel-plugin-module-resolver',
           {
@@ -25,6 +27,7 @@ module.exports = !isPlayroom
               'bumbag-addon-markdown': '../bumbag-addon-markdown/src',
               'bumbag-theme-medipass': '../bumbag-theme-medipass/src',
               'bumbag-native': '../bumbag-native/src',
+              '@bumbag-native/picker': '../bumbag-native-picker/src',
               '^react-native$': 'react-native-web',
             },
           },

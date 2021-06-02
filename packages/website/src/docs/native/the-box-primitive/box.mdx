@@ -87,10 +87,12 @@ import { Box } from 'bumbag-native';
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: {
-    ...
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig
   }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}

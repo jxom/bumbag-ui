@@ -192,20 +192,9 @@ Disables the radio group
 **<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`(Pick<CSSProperties, "top"
-  | "right"
-  | "bottom"
-  | "left"
-  | "color"
-  | "_hover"
-  | "_hoveractive"
-  | "_focus"
-  | "_active"
-  | "_visited"
-  | "_disabled"
-  | "_groupHover"
-  | ... 511 more ...
-  | "zIndex"> & ... 4 more ... & { ...; })[]`}
+{`(Pick<any, string
+  | number
+  | symbol> & ViewProps & LocalBoxProps & { active?: boolean; focus?: boolean; hover?: boolean; hoveractive?: boolean; } & LocalRadioProps & { ...; })[]`}
 </Code>
 
 Radio group options
@@ -250,19 +239,15 @@ Function to invoke when radio group has changed
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
-  }>;
-  ... 588 more ...;
-  verticalBelow?...`}
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: (event: LayoutChangeEvent) => void;
+  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
+  removeClippedSubviews?: boolean;
+  ... 66 more ...;
+  verticalBelow?: string;
+}`}
 </Code>
 
 Overrides for the RadioGroup `Set` component.
@@ -762,10 +747,12 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: {
-    ...
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig
   }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}

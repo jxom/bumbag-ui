@@ -1,9 +1,91 @@
 ---
 title: Menu
 path: /native/components/menu
-wip: true
 ---
 
 # Menu
 
-## [Coming soon](https://github.com/bumbag/bumbag-ui/pull/110) 👀
+## Import
+
+```jsx
+import { Menu } from 'bumbag-native';
+```
+
+## Usage
+
+Supply a set of `<Menu.Item>` components as children to `<Menu>` to create a menu.
+
+```jsx-live
+<Box backgroundColor="white700" padding="major-2">
+  <Menu>
+    <Menu.Item>
+      General
+    </Menu.Item>
+    <Menu.Item>
+      Accounts
+    </Menu.Item>
+    <Menu.Item>
+      Alerts
+    </Menu.Item>
+    <Menu.Item>
+      Security
+    </Menu.Item>
+  </Menu>
+</Box>
+```
+
+### Dividers
+
+To create dividers in your menu, use the `hasDividers` prop.
+
+```jsx-live
+<Box backgroundColor="white700" padding="major-2">
+  <Menu hasDividers>
+    <Menu.Item>
+      General
+    </Menu.Item>
+    <Menu.Item>
+      Accounts
+    </Menu.Item>
+    <Menu.Item>
+      Alerts
+    </Menu.Item>
+    <Menu.Item>
+      Security
+    </Menu.Item>
+  </Menu>
+</Box>
+```
+
+### Icons
+
+```jsx-live
+<Box backgroundColor="white700" padding="major-2">
+  <Menu hasDividers>
+    <Menu.Item
+      iconBefore="solid-cogs"
+      iconBeforeProps={{ color: 'primary' }}
+    >
+      Settings
+    </Menu.Item>
+    <Menu.Item
+      iconBefore="solid-users"
+      iconBeforeProps={{ color: 'primary' }}
+    >
+      Accounts
+    </Menu.Item>
+    <Menu.Item
+      iconBefore="solid-exclamation-triangle"
+      iconBeforeProps={{ color: 'primary' }}
+    >
+      Alerts
+    </Menu.Item>
+    <Menu.Item
+      iconBefore="solid-lock"
+      iconBeforeProps={{ color: 'primary' }}
+    >
+      Security
+    </Menu.Item>
+  </Menu>
+</Box>
+```

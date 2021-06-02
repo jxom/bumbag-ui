@@ -8,6 +8,7 @@ import {
 import * as bumbag from 'bumbag';
 import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
 import { Markdown } from 'bumbag-addon-markdown';
+import { Picker } from '@bumbag-native/picker';
 import { altitude, Box, Group, palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 
@@ -90,6 +91,7 @@ export default function LiveCode(props: Props) {
       ...bumbag,
       HighlightedCode,
       Markdown,
+      Picker,
     }),
     []
   );

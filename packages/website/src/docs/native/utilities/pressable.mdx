@@ -28,6 +28,10 @@ import { Pressable } from 'bumbag-native';
 
 <!-- Automatically generated -->
 
+**<Code fontSize="150" marginRight="major-1">throttle</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 <details><Box use="summary" marginBottom="major-2">Inherits <strong><a href="https://reactnative.dev/docs/pressable">React Native's <code>Pressable</code></a></strong> props</Box>
 
 **<Code fontSize="150" marginRight="major-1">onPress</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
@@ -580,10 +584,12 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: {
-    ...
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig
   }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}
