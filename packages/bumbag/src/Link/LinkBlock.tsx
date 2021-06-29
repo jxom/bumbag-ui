@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './Link.styles';
 
 export type LocalLinkBlockProps = {};
-export type LinkBlockProps = BoxProps & React.LinkHTMLAttributes<any> & LocalLinkBlockProps;
+export type LinkBlockProps = BoxProps & React.AnchorHTMLAttributes<any> & LocalLinkBlockProps;
 
 const useProps = createHook<LinkBlockProps>(
   (props, { themeKey }) => {
