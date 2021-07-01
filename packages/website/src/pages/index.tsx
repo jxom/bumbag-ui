@@ -85,39 +85,6 @@ export default function Index() {
       </PageContent>
       <PageContent
         breakpoint="widescreen"
-        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
-        paddingY="major-6"
-      >
-        <Stack spacing="major-6" display="flex" flexDirection="column" alignItems="center">
-          <Heading color="gray400" fontSize="200" textTransform="uppercase" fontWeight="semibold" textAlign="center">
-            Worn in production by
-          </Heading>
-          <Set spacing="major-6" verticalBelow="tablet" alignItems="center" justifyContent="center">
-            <Link href="https://coinjar.com">
-              <UsedByImage colorMode={colorMode} src="/coinjar.png" height="60px" />
-            </Link>
-            <Link href="https://medipass.com.au">
-              <UsedByImage
-                colorMode={colorMode}
-                src={colorMode === 'dark' ? '/medipass-white.png' : '/medipass-black.png'}
-                height="50px"
-              />
-            </Link>
-            <Link href="https://localz.com">
-              <UsedByImage colorMode={colorMode} src="/localz.png" height="40px" />
-            </Link>
-            <Link href="https://pory.io">
-              <UsedByImage
-                colorMode={colorMode}
-                src={colorMode === 'dark' ? '/pory-white.png' : '/pory-black.png'}
-                height="50px"
-              />
-            </Link>
-          </Set>
-        </Stack>
-      </PageContent>
-      <PageContent
-        breakpoint="widescreen"
         wrapperProps={{
           borderBottom: '1px solid',
           borderColor: colorMode === 'dark' ? 'black100' : 'white700',
