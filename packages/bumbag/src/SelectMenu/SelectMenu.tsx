@@ -947,11 +947,3 @@ function Error(props: { errorText: string; overrides: any }) {
     </SelectMenuStaticItem>
   );
 }
-
-//////////////////////////////////////////////////////////////////
-
-function ActionsComponent(props: { renderActions: any }) {
-  const { renderActions, ...restProps } = props;
-
-  return <SelectMenuStaticItem {...restProps}>{renderActions()}</SelectMenuStaticItem>;
-}
