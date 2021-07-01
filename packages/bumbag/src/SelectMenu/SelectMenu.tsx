@@ -171,6 +171,7 @@ const useProps = createHook<SelectMenuProps>(
       tagProps,
       value,
       variant,
+      onChange: _onChange,
       ...restProps
     } = props;
 
@@ -205,6 +206,7 @@ const useProps = createHook<SelectMenuProps>(
       useValue: true,
       onBlur: null,
       onFocus: null,
+      onChange: _onChange,
       ...props,
     });
 
@@ -828,16 +830,24 @@ function MatchedLabel(props: { label: string; searchText: string; overrides: any
 
   return highlightedText ? (
     <Text className={className} overrides={overrides} {...restProps}>
-      {preText && <Text overrides={overrides}>{preText}</Text>}
+      {preText && (
+        <Text fontWeight="normal" overrides={overrides}>
+          {preText}
+        </Text>
+      )}
       {highlightedText && (
         <Text fontWeight="semibold" overrides={overrides}>
           {highlightedText}
         </Text>
       )}
-      {postText && <Text overrides={overrides}>{postText}</Text>}
+      {postText && (
+        <Text fontWeight="normal" overrides={overrides}>
+          {postText}
+        </Text>
+      )}
     </Text>
   ) : (
-    <Text className={className} overrides={overrides} {...restProps}>
+    <Text fontWeight="normal" className={className} overrides={overrides} {...restProps}>
       {label}
     </Text>
   );
