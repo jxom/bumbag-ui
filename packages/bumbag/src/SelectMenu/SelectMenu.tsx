@@ -77,12 +77,14 @@ export type LocalSelectMenuProps = {
   loadingText?: string;
   loadingMoreText?: string;
 
+  renderBottomActions?: any;
   renderDisclosure?: any;
   renderError?: any;
   renderEmpty?: any;
   renderLoading?: any;
   renderLoadingMore?: any;
   renderOption?: any;
+  renderTopActions?: any;
 
   buttonProps?: Partial<ButtonProps>;
   itemProps?: Partial<DropdownMenuItemProps>;
@@ -159,11 +161,13 @@ const useProps = createHook<SelectMenuProps>(
       overrides,
       pagination,
       renderDisclosure,
+      renderBottomActions,
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
       renderLoadingMore: LoadingMore,
       renderOption: Option,
+      renderTopActions,
       searchInputProps,
       placeholder,
       state: fieldState,
@@ -486,6 +490,22 @@ const useProps = createHook<SelectMenuProps>(
 
     //////////////////////////////////////////////////
 
+    const ActionsStaticItem = React.useCallback(
+      (props) => (
+        <SelectMenuStaticItem
+          {...dropdownMenu}
+          {...props}
+          onClick={(e) => {
+            props.onClick && props.onClick(e);
+            props.hideDropdownOnClick && dropdownMenu.hide();
+          }}
+        />
+      ),
+      [] // eslint-disable-line
+    );
+
+    //////////////////////////////////////////////////
+
     const MenuWrapper = isDropdown ? DropdownMenuPopover : Menu;
 
     //////////////////////////////////////////////////
@@ -547,6 +567,7 @@ const useProps = createHook<SelectMenuProps>(
                 {hasTags && selectedOptions.length > 0 && (
                   <SelectMenuTags onClearTag={handleClearTag} selectedOptions={selectedOptions} tagProps={tagProps} />
                 )}
+                {renderTopActions && renderTopActions({ StaticItem: ActionsStaticItem })}
                 <Box
                   use="ul"
                   className={selectMenuItemsWrapperClassName}
@@ -598,6 +619,7 @@ const useProps = createHook<SelectMenuProps>(
                   )}
                   {state === 'error' && <Error errorText={errorText} overrides={overrides} />}
                 </Box>
+                {renderBottomActions && renderBottomActions({ StaticItem: ActionsStaticItem })}
               </React.Fragment>
             ) : null}
           </MenuWrapper>
@@ -616,11 +638,13 @@ const useProps = createHook<SelectMenuProps>(
       loadingMoreText: 'Loading...',
       options: [],
       popoverHeight: '300px',
+      renderBottomActions: () => {},
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
       renderLoadingMore: Loading,
       renderOption: MatchedLabel,
+      renderTopActions: () => {},
       variant: 'bordered',
     },
     themeKey: 'SelectMenu',

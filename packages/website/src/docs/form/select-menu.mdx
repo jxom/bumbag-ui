@@ -1033,6 +1033,71 @@ function Example() {
 }
 ```
 
+### Custom top actions component
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      renderTopActions={({ StaticItem }) =>
+        <StaticItem hideDropdownOnClick>
+          <Link>
+            Create a fruit
+          </Link>
+        </StaticItem>
+      }
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' },
+        { key: 5, label: 'Peaches', value: 'peaches' },
+        { key: 6, label: 'Strawberries', value: 'Strawberries' },
+        { key: 7, label: 'Pineapples', value: 'pineapples' },
+        { key: 8, label: 'Figs', value: 'figs' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+### Custom bottom actions component
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      renderBottomActions={({ StaticItem }) =>
+        <StaticItem>
+          <Link>
+            Create a fruit
+          </Link>
+        </StaticItem>
+      }
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' },
+        { key: 5, label: 'Peaches', value: 'peaches' },
+        { key: 6, label: 'Strawberries', value: 'Strawberries' },
+        { key: 7, label: 'Pineapples', value: 'pineapples' },
+        { key: 8, label: 'Figs', value: 'figs' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
 ## Accessibility
 
 #### Patterns
