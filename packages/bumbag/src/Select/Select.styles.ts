@@ -35,6 +35,15 @@ export const Select = (styleProps) => cssClass`
   }
 
   ${
+    styleProps.containLabel &&
+    css`
+      height: 3.25em;
+      padding-top: 0.8em;
+      padding-bottom: 0px;
+    `
+  }
+
+  ${
     !styleProps.isPlaceholderSelected &&
     css`
       position: unset;
@@ -76,6 +85,37 @@ function getVariantStyles(styleProps) {
 
       & {
         ${theme(styleProps.themeKey, `variants.bordered.styles.base`)(styleProps)};
+      }
+    `;
+  }
+  if (styleProps.variant === 'filled') {
+    return css`
+      border: 1px solid transparent;
+      border-radius: ${borderRadius('default')(styleProps)};
+      padding: 0.4em ${styleProps.hasIcon ? '2em' : '0.8em'} 0.4em 0.8em;
+
+      &&:focus,
+      &[aria-expanded='true'] {
+        border-color: ${palette(styleProps.palette || 'primary')(styleProps)};
+        box-shadow: ${palette(`${styleProps.palette || 'primary'}Tint`, {
+            dark: `${styleProps.palette || 'primary'}Shade`,
+          })(styleProps)}
+          0px 0px 0px 3px !important;
+      }
+
+      ${styleProps.state &&
+      css`
+        & {
+          border-color: ${palette(`${styleProps.state}`)(styleProps)};
+          box-shadow: ${palette(`${styleProps.state}Tint`, {
+              dark: `${styleProps.state}Shade`,
+            })(styleProps)}
+            0px 0px 0px 3px !important;
+        }
+      `}
+
+      & {
+        ${theme(styleProps.themeKey, `variants.filled.styles.base`)(styleProps)};
       }
     `;
   }
@@ -177,6 +217,7 @@ export const SelectWrapper = (styleProps) => cssClass`
   align-items: center;
   position: relative;
   width: fit-content;
+  transition: background-color 0.2s ease;
 
   ${getSelectWrapperVariantStyles(styleProps)};
   ${styleProps.size && getWrapperSizeStyles(styleProps)};
@@ -194,6 +235,26 @@ function getSelectWrapperVariantStyles(styleProps) {
 
       & {
         ${theme(styleProps.themeKey, `variants.bordered.styles.base`)(styleProps)};
+      }
+    `;
+  }
+  if (styleProps.variant === 'filled') {
+    return css`
+      background-color: ${palette('white700', { dark: 'black300' })(styleProps)};
+      border-radius: ${borderRadius('default')(styleProps)};
+
+      &&:focus,
+      &[aria-expanded='true'] {
+        background-color: ${palette('white', { dark: 'black100' })(styleProps)};
+      }
+
+      ${styleProps.isFocused &&
+      css`
+        background-color: ${palette('white', { dark: 'black100' })(styleProps)};
+      `}
+
+      & {
+        ${theme(styleProps.themeKey, `variants.filled.styles.base`)(styleProps)};
       }
     `;
   }
@@ -258,6 +319,13 @@ export const SelectIcon = (styleProps) => cssClass`
     color: ${palette('text')(styleProps)};
     fill: ${palette('text')(styleProps)};
     pointer-events: none;
+
+    ${
+      styleProps.containLabel &&
+      css`
+        height: 3.25em;
+      `
+    }
   }
 
   & {

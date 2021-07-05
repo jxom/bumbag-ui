@@ -233,19 +233,15 @@ Function to invoke when switch group has changed
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
-  }>;
-  ... 588 more ...;
-  verticalBelow?...`}
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: (event: LayoutChangeEvent) => void;
+  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
+  removeClippedSubviews?: boolean;
+  ... 66 more ...;
+  verticalBelow?: string;
+}`}
 </Code>
 
 Overrides for the SwitchGroup `Set` component.
@@ -745,10 +741,12 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: {
-    ...
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig
   }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}
@@ -775,19 +773,15 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
-  }>;
-  ... 594 more ...;
-  setProps?: Par...`}
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: (event: LayoutChangeEvent) => void;
+  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
+  removeClippedSubviews?: boolean;
+  ... 72 more ...;
+  setProps?: Partial<...>;
+}`}
 </Code>
 
 Additional props for the Switch component
@@ -858,19 +852,15 @@ Function to invoke when switch group has changed
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
-  }>;
-  ... 588 more ...;
-  verticalBelow?...`}
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: (event: LayoutChangeEvent) => void;
+  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
+  removeClippedSubviews?: boolean;
+  ... 66 more ...;
+  verticalBelow?: string;
+}`}
 </Code>
 
 Overrides for the SwitchGroup `Set` component.
@@ -1373,10 +1363,12 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: {
-    ...
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig
   }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}

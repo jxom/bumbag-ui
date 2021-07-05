@@ -32,6 +32,8 @@ type Options = Array<Option>;
 export type LocalSelectMenuProps = {
   /** The key to cache the loadOptions results against. */
   cacheKey?: string;
+  /** If the `label` prop is supplied, is it contained inside the select? */
+  containLabel?: boolean;
   /** Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened. */
   defer?: boolean;
   /** Indicates if the  Autosuggest is disabled. */
@@ -139,6 +141,7 @@ const useProps = createHook<SelectMenuProps>(
     const {
       buttonProps,
       cacheKey,
+      containLabel,
       disabled,
       disableClear,
       dropdownMenuInitialState,
@@ -224,7 +227,7 @@ const useProps = createHook<SelectMenuProps>(
     });
     const wrapperClassName = useClassName({
       style: styles.SelectMenuButtonWrapper,
-      styleProps: props,
+      styleProps: { ...props, isFocused: dropdownMenu.visible },
       themeKey,
       themeKeySuffix: 'ButtonWrapper',
     });
@@ -519,9 +522,11 @@ const useProps = createHook<SelectMenuProps>(
             <Box className={wrapperClassName}>
               {label && (
                 <>
-                  <Box className={labelWrapperBackgroundClassName}>
-                    <Text opacity="0">{label}</Text>
-                  </Box>
+                  {!containLabel && (
+                    <Box className={labelWrapperBackgroundClassName}>
+                      <Text opacity="0">{label}</Text>
+                    </Box>
+                  )}
                   {/*
                     // @ts-ignore */}
                   <Box className={labelWrapperClassName} onClick={() => buttonRef.current?.focus()}>
@@ -531,6 +536,7 @@ const useProps = createHook<SelectMenuProps>(
               )}
               <SelectMenuButton
                 elementRef={buttonRef}
+                containLabel={containLabel}
                 disabled={disabled}
                 disableClear={disableClear}
                 isLoading={isLoading}

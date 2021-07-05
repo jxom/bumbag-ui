@@ -30,6 +30,8 @@ export type LocalAutosuggestProps = {
   automaticSelection?: boolean;
   /** The key to cache the loadOptions results against. */
   cacheKey?: string;
+  /** If the `label` prop is supplied, is it contained inside the autosuggest? */
+  containLabel?: boolean;
   /** Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened. */
   defer?: boolean;
   /** Indicates if the  Autosuggest is disabled. */
@@ -214,6 +216,7 @@ const useProps = createHook<AutosuggestProps>(
     const {
       automaticSelection,
       cacheKey,
+      containLabel,
       clearButtonProps,
       disabled,
       dropdownMenuInitialState,
@@ -621,6 +624,7 @@ const useProps = createHook<AutosuggestProps>(
             aria-autocomplete="list"
             aria-activedescendant={dropdownMenu?.items?.[highlightedIndex]?.id}
             className={inputClassName}
+            containLabel={containLabel}
             disabled={disabled}
             inputProps={inputProps}
             isLoading={isInputLoading}

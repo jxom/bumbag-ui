@@ -52,6 +52,15 @@ export const Input = (styleProps) => cssClass`
   }
 
   ${
+    styleProps.containLabel &&
+    css`
+      height: 3.25em;
+      padding-top: 0.8em;
+      padding-bottom: 0px;
+    `
+  }
+
+  ${
     (styleProps.after || styleProps.isLoading) &&
     css`
       & {
@@ -105,6 +114,48 @@ function getVariantStyles(styleProps) {
 
       & {
         ${theme(styleProps.themeKey, `variants.bordered.styles.base`)(styleProps)};
+      }
+    `;
+  }
+  if (styleProps.variant === 'filled') {
+    return css`
+      background-color: ${palette('white700', { dark: 'black300' })(styleProps)};
+      border: 1px solid transparent;
+      border-radius: ${borderRadius('default')(styleProps)};
+      padding: 0.4em 0.8em;
+
+      &:focus {
+        background-color: ${palette('white', { dark: 'black100' })(styleProps)};
+        border-color: ${palette(styleProps.palette || 'primary')(styleProps)};
+        box-shadow: ${palette(`${styleProps.palette || 'primary'}Tint`, {
+            dark: `${styleProps.palette || 'primary'}Shade`,
+          })(styleProps)}
+          0px 0px 0px 3px !important;
+
+        & {
+          ${theme(styleProps.themeKey, `variants.bordered.styles.focus`)(styleProps)};
+        }
+      }
+
+      &&[disabled] {
+        color: ${palette('gray300')(styleProps)};
+
+        & {
+          ${theme(styleProps.themeKey, `variants.bordered.disabled`)(styleProps)};
+        }
+      }
+
+      ${styleProps.state &&
+      css`
+        & {
+          border-color: ${palette(`${styleProps.state}`)(styleProps)};
+          box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 0px
+            0px 3px !important;
+        }
+      `}
+
+      & {
+        ${theme(styleProps.themeKey, `variants.filled.styles.base`)(styleProps)};
       }
     `;
   }
@@ -262,6 +313,12 @@ export const LabelWrapper = (styleProps) => cssClass`
     styleProps.isFocused &&
     css`
       transform: translateY(-1.1em) scale(0.75);
+
+      ${styleProps.containLabel &&
+      css`
+        margin-left: 0.875em;
+        transform: translateY(-0.3em) scale(0.75);
+      `}
     `
   }
 
@@ -295,6 +352,15 @@ function getLabelWrapperVariantStyles(styleProps) {
 
       & {
         ${theme(styleProps.themeKey, `variants.bordered.styles.base`)(styleProps)};
+      }
+    `;
+  }
+  if (styleProps.variant === 'filled') {
+    return css`
+      margin-left: 0.8em;
+
+      & {
+        ${theme(styleProps.themeKey, `variants.filled.styles.base`)(styleProps)};
       }
     `;
   }

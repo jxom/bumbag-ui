@@ -11,8 +11,44 @@ import { Textarea, TextareaField } from 'bumbag'
 
 ## Usage
 
-```jsx-live
-<Textarea placeholder="Enter your name here..." />
+```live
+###tab=Default,type=jsx-live
+<Textarea placeholder="Enter your name here..." />###
+
+###tab=Filled,type=jsx-live
+<Textarea placeholder="Enter your name here..." variant="filled" />###
+
+###tab=Borderless,type=jsx-live
+<Textarea placeholder="Enter your name here..." variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Textarea placeholder="Enter your name here..." variant="underline" />###
+```
+
+## Label
+
+```live
+###tab=Default,type=jsx-live
+<Textarea label="Username" />###
+
+###tab=Filled,type=jsx-live
+<Textarea label="Username" variant="filled" />###
+
+###tab=Borderless,type=jsx-live
+<Textarea label="Username" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Textarea label="Username" variant="underline" />###
+```
+
+If you want to have the label contained within the bounds of the textarea field, supply the `containLabel` prop:
+
+```live
+###tab=Default,type=jsx-live
+<Textarea containLabel label="Username" />###
+
+###tab=Filled,type=jsx-live
+<Textarea containLabel label="Username" variant="filled" />###
 ```
 
 ### Fields
@@ -21,46 +57,136 @@ You can also use the `<TextareaField>` component, which internally has a [FieldW
 
 It accepts a combination of [Textarea props](/form/textarea/#props) and [FieldWrapper props](/form/field-wrapper/#props).
 
-```jsx-live
-<TextareaField label="Username" />
+```live
+###tab=Default,type=jsx-live
+<TextareaField label="Username" />###
+
+###tab=Filled,type=jsx-live
+<TextareaField label="Username" variant="filled" />###
+
+###tab=Borderless,type=jsx-live
+<TextareaField label="Username" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<TextareaField label="Username" variant="underline" />###
 ```
 
 ### Default values
 
 For uncontrolled inputs, set a default value using the `defaultValue` prop.
 
-```jsx-live
-<Textarea defaultValue="Bumbags rock!" />
+```live
+###tab=Default,type=jsx-live
+<Textarea defaultValue="Bumbags rock!" />###
+
+###tab=Filled,type=jsx-live
+<Textarea defaultValue="Bumbags rock!" variant="filled" />###
+
+###tab=Borderless,type=jsx-live
+<Textarea defaultValue="Bumbags rock!" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Textarea defaultValue="Bumbags rock!" variant="underline" />###
 ```
 
 ### Disabled
 
 Make the input disabled with the `disabled` prop.
 
-```jsx-live
-<Textarea disabled defaultValue="Disabled field" />
+```live
+###tab=Default,type=jsx-live
+<Textarea disabled defaultValue="Bumbags rock!" />###
+
+###tab=Filled,type=jsx-live
+<Textarea disabled defaultValue="Bumbags rock!" variant="filled" />###
+
+###tab=Borderless,type=jsx-live
+<Textarea disabled defaultValue="Bumbags rock!" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Textarea disabled defaultValue="Bumbags rock!" variant="underline" />###
 ```
 
 ### Sizes
 
 An input can come in different sizes - `small`, `medium`, `large`, or the default.
 
-```jsx-live
-<Textarea size="small" />
-<Textarea />
-<Textarea size="medium" />
-<Textarea size="large" />
+```live
+###tab=Default,type=jsx-live
+<>
+  <Textarea size="small" />
+  <Textarea />
+  <Textarea size="medium" />
+  <Textarea size="large" />
+</>###
+
+###tab=Filled,type=jsx-live
+<>
+  <Textarea size="small" variant="filled" />
+  <Textarea variant="filled" />
+  <Textarea size="medium" variant="filled" />
+  <Textarea size="large" variant="filled" />
+</>
+###
+
+###tab=Borderless,type=jsx-live
+<>
+  <Textarea size="small" variant="borderless" />
+  <Textarea variant="borderless" />
+  <Textarea size="medium" variant="borderless" />
+  <Textarea size="large" variant="borderless" />
+</>
+###
+
+###tab=Underline,type=jsx-live
+<>
+  <Textarea size="small" variant="underline" />
+  <Textarea variant="underline" />
+  <Textarea size="medium" variant="underline" />
+  <Textarea size="large" variant="underline" />
+</>
+###
 ```
 
 ### States
 
 An input can use different states (as per palette) such as `danger`, `success` and `warning`.
 
-```jsx-live
-<Textarea state="danger" />
-<Textarea state="success" />
-<Textarea state="warning" />
-<Textarea state="primary" />
+```live
+###tab=Default,type=jsx-live
+<>
+  <Textarea state="danger" />
+  <Textarea state="success" />
+  <Textarea state="warning" />
+  <Textarea state="primary" />
+</>###
+
+###tab=Filled,type=jsx-live
+<>
+  <Textarea state="danger" variant="filled" />
+  <Textarea state="success" variant="filled" />
+  <Textarea state="warning" variant="filled" />
+  <Textarea state="primary" variant="filled" />
+</>
+###
+
+###tab=Borderless,type=jsx-live
+<>
+  <Textarea state="danger" variant="borderless" />
+  <Textarea state="success" variant="borderless" />
+  <Textarea state="warning" variant="borderless" />
+  <Textarea state="primary" variant="borderless" />
+</>
+###
+
+###tab=Underline,type=jsx-live
+<>
+  <Textarea state="danger" variant="underline" />
+  <Textarea state="success" variant="underline" />
+  <Textarea state="warning" variant="underline" />
+  <Textarea state="primary" variant="underline" />
+</>
+###
 ```
 
 ### Controlled Usage
@@ -97,6 +223,10 @@ function Example() {
 **<Code fontSize="150" marginRight="major-1">autoFocus</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Automatically focus on the textarea
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -209,7 +339,7 @@ State of the textarea. Can be any color in the palette.
     [key: string]: string
   }; left?: string | number | {
     [key: string]: string
-  }; ... 801 more ...;
+  }; ... 802 more ...;
   onFocus?: (event: FocusEvent<...>) => void;
 }`}
 </Code>
@@ -280,6 +410,10 @@ Additional props for the Textarea component
 **<Code fontSize="150" marginRight="major-1">autoFocus</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Automatically focus on the textarea
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

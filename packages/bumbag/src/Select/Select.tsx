@@ -26,6 +26,8 @@ import * as styles from './Select.styles';
 export type LocalSelectProps = {
   /** Automatically focus on the input */
   autoFocus?: boolean;
+  /** If the `label` prop is supplied, is it contained inside the select? */
+  containLabel?: boolean;
   /** Default value of the input */
   defaultValue?: string;
   /** Disables the input */
@@ -60,6 +62,7 @@ export type SelectProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & Lo
 const useProps = createHook<SelectProps>(
   (props, { themeKey }) => {
     const {
+      containLabel,
       disabled,
       isLoading,
       isRequired,
@@ -141,9 +144,11 @@ const useProps = createHook<SelectProps>(
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {label && (
             <>
-              <Box className={labelWrapperBackgroundClassName}>
-                <Text opacity="0">{label}</Text>
-              </Box>
+              {!containLabel && (
+                <Box className={labelWrapperBackgroundClassName}>
+                  <Text opacity="0">{label}</Text>
+                </Box>
+              )}
               {/*
                 // @ts-ignore */}
               <Box className={labelWrapperClassName}>

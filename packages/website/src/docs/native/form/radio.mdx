@@ -154,19 +154,15 @@ Disables the radio
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: "default" | ... 6 more ... | ({
-    ...
-  } & string);
-  ... 589 more ...;
-  useOriginalFill?: boolean...`}
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: (event: LayoutChangeEvent) => void;
+  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
+  removeClippedSubviews?: boolean;
+  ... 68 more ...;
+  useOriginalFill?: boolean;
+}`}
 </Code>
 
 * Sets the props of the icon
@@ -177,19 +173,15 @@ Disables the radio
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
-  }>;
-  ... 584 more ...;
-  hoveractive?: ...`}
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: (event: LayoutChangeEvent) => void;
+  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
+  removeClippedSubviews?: boolean;
+  ... 62 more ...;
+  hoveractive?: boolean;
+}`}
 </Code>
 
 * Sets the props of the icon wrapper
@@ -206,19 +198,14 @@ Radio label
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
-  }>;
-  ... 599 more ...;
-  dataDetectorTy...`}
+  [x: string]: any;
+  [x: number]: any;
+  hitSlop?: Insets;
+  onLayout?: ((event: LayoutChangeEvent) => void) & ((event: LayoutChangeEvent) => void);
+  pointerEvents?: "auto" | ... 2 more ... | "box-only";
+  ... 78 more ...;
+  dataDetectorType?: "none" | ... 3 more ... | "phoneNumber";
+}`}
 </Code>
 
 * Sets the props of the label
@@ -305,10 +292,12 @@ State of the radio. Can be any color in the palette.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
+  borders?: any;
+  borderRadii?: any;
   breakpoints?: {
-    ...
+    ios?: BreakpointsThemeConfig;
+    android?: BreakpointsThemeConfig;
+    web?: BreakpointsThemeConfig
   }; ... 34 more ...;
   Text?: TextThemeConfig;
 }`}

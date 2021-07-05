@@ -87,6 +87,13 @@ export const SelectMenuButtonIconsWrapper = (styleProps) => cssClass`
   justify-content: flex-end;
   min-width: 4rem;
 
+  ${
+    styleProps.containLabel &&
+    css`
+      margin-top: -0.75em;
+    `
+  }
+
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
