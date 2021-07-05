@@ -237,6 +237,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       autoComplete,
       autoFocus,
       before,
+      containLabel,
       defaultValue,
       description,
       disabled,
@@ -324,6 +325,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
                   autoComplete={autoComplete}
                   autoFocus={autoFocus}
                   before={before}
+                  containLabel={containLabel}
                   defaultValue={defaultValue}
                   disabled={disabled}
                   inputProps={inputProps}

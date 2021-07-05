@@ -30,6 +30,7 @@ const useProps = createHook<SelectMenuFieldProps>(
       buttonProps,
       selectMenuProps,
       cacheKey,
+      containLabel,
       children,
       defaultValue,
       defer,
@@ -117,6 +118,7 @@ const useProps = createHook<SelectMenuFieldProps>(
                 <SelectMenu
                   flex={addonBefore || addonAfter ? '1' : undefined}
                   cacheKey={cacheKey}
+                  containLabel={containLabel}
                   defer={defer}
                   disabled={disabled}
                   disableClear={disableClear}

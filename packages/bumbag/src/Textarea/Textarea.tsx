@@ -27,6 +27,7 @@ export type LocalTextareaProps = {
   defaultValue?: string | string[];
   /** Disables the textarea */
   disabled?: boolean;
+  label?: string;
   /** Makes the textarea required and sets aria-invalid to true */
   isRequired?: boolean;
   /** Name of the textarea field */
@@ -173,6 +174,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
       children,
       autoComplete,
       autoFocus,
+      containLabel,
       defaultValue,
       description,
       disabled,
@@ -236,6 +238,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
             <Textarea
               autoComplete={autoComplete}
               autoFocus={autoFocus}
+              containLabel={containLabel}
               defaultValue={defaultValue}
               disabled={disabled}
               isRequired={isRequired}

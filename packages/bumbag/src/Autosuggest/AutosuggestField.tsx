@@ -30,6 +30,7 @@ const useProps = createHook<AutosuggestFieldProps>(
       automaticSelection,
       autosuggestProps,
       cacheKey,
+      containLabel,
       children,
       defaultValue,
       defer,
@@ -115,6 +116,7 @@ const useProps = createHook<AutosuggestFieldProps>(
                   flex={addonBefore || addonAfter ? '1' : undefined}
                   automaticSelection={automaticSelection}
                   cacheKey={cacheKey}
+                  containLabel={containLabel}
                   defer={defer}
                   disabled={disabled}
                   isLoading={isLoading}

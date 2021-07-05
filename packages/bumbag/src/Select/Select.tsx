@@ -260,6 +260,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       addonAfter,
       addonBefore,
       children,
+      containLabel,
       autoFocus,
       defaultValue,
       description,
@@ -328,6 +329,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
                 {addonBefore}
                 <Select
                   autoFocus={autoFocus}
+                  containLabel={containLabel}
                   defaultValue={defaultValue}
                   disabled={disabled}
                   isLoading={isLoading}
