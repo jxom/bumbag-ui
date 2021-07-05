@@ -21,6 +21,7 @@ const defaultPalette: { [key: string]: string } = {
   purple: '#7c3aed',
   indigo: '#574feb',
   gray: '#626f84',
+  grayTint: '#edf2f7',
 };
 
 const defaultDarkPalette: { [key: string]: string } = {
@@ -46,6 +47,7 @@ const defaultDarkPalette: { [key: string]: string } = {
   pink: '#ec4899',
   purple: '#7c3aed',
   indigo: '#574feb',
+  grayTint: '#23262b',
 };
 
 export default (overrides: PaletteThemeConfig) => ({
@@ -160,6 +162,17 @@ export default (overrides: PaletteThemeConfig) => ({
       gray900: shade(0.4, color)(),
     }),
   }),
+  ...generateColorVariants({
+    paletteKey: 'grayTint',
+    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    color: (overrides.grayTint || defaultPalette.grayTint) as string,
+    paletteOverrides: ({ color }) => ({
+      grayTint600: shade(0.05, color)(),
+      grayTint700: shade(0.1, color)(),
+      grayTint800: shade(0.2, color)(),
+      grayTint900: shade(0.3, color)(),
+    }),
+  }),
 
   modes: {
     dark: {
@@ -208,6 +221,12 @@ export default (overrides: PaletteThemeConfig) => ({
         colorMode: 'dark',
         backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.gray || defaultPalette.gray) as string,
+      }),
+      ...generateColorVariants({
+        paletteKey: 'grayTint',
+        colorMode: 'dark',
+        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        color: (overrides.grayTint || defaultPalette.grayTint) as string,
       }),
       black: defaultPalette.black,
       black500: defaultPalette.black,
