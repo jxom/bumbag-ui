@@ -8,7 +8,6 @@ export const Button = (styleProps) => cssClass`
   align-items: center;
   background-color: ${palette(styleProps.palette)(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
-  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
   color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   cursor: pointer;

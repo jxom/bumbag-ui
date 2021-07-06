@@ -35,6 +35,26 @@ function Example() {
   )
 }###
 
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      variant="filled"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}###
+
 ###tab=Borderless,type=function-live
 function Example() {
   const [value, setValue] = React.useState({ label: '' });
@@ -98,6 +118,26 @@ function Example() {
   )
 }###
 
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      label="Fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="filled"
+    />
+  )
+}###
+
 ###tab=Borderless,type=function-live
 function Example() {
   const [value, setValue] = React.useState({ label: '' });
@@ -139,6 +179,49 @@ function Example() {
 }###
 ```
 
+```live
+###tab=Default,type=function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      containLabel
+      label="Fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+    />
+  )
+}###
+
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      containLabel
+      label="Fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="filled"
+    />
+  )
+}###
+```
+
 ### Fields
 
 You can also use the `<AutosuggestField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.
@@ -148,6 +231,20 @@ It accepts a combination of [Autosuggest props](/form/autosuggest/#props) and [F
 ```live
 ###tab=Default,type=function-live
 <AutosuggestField
+  label="Choose your fruit"
+  options={[
+    { key: 1, label: 'Apples', value: 'apples' },
+    { key: 2, label: 'Bananas', value: 'bananas' },
+    { key: 3, label: 'Oranges', value: 'oranges' },
+    { key: 4, label: 'Mangos', value: 'mangos' }
+  ]}
+  placeholder="Search for a fruit..."
+  value={{ label: '' }}
+/>###
+
+###tab=Filled,type=function-live
+<AutosuggestField
+  variant="filled"
   label="Choose your fruit"
   options={[
     { key: 1, label: 'Apples', value: 'apples' },
@@ -594,6 +691,12 @@ The key to cache the loadOptions results against.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the autosuggest?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">defer</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened.
@@ -768,7 +871,7 @@ Sets the loading text when more options are loading (via pagination).
     [key: string]: string
   }; left?: string | number | {
     [key: string]: string
-  }; ... 808 more ...;
+  }; ... 809 more ...;
   onFocus?: (event: FocusEvent<...>) => void;
 }`}
 </Code>
@@ -942,7 +1045,7 @@ Addon component to the input (after). Similar to the addon components in Input.
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 813 more ...;
+  ... 814 more ...;
   dropdownMenuInitialState?: Partial<...>;
 }`}
 </Code>
@@ -968,6 +1071,12 @@ Whether or not an Autosuggest option should be automatically selected.
 **<Code fontSize="150" marginRight="major-1">cacheKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 The key to cache the loadOptions results against.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the autosuggest?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1145,7 +1254,7 @@ Sets the loading text when more options are loading (via pagination).
     [key: string]: string
   }; left?: string | number | {
     [key: string]: string
-  }; ... 808 more ...;
+  }; ... 809 more ...;
   onFocus?: (event: FocusEvent<...>) => void;
 }`}
 </Code>

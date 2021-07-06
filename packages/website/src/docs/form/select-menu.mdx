@@ -55,6 +55,27 @@ function Example() {
 }
 ###
 
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="filled"
+    />
+  )
+}
+###
+
 ###tab=Borderless,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
@@ -121,6 +142,27 @@ function Example() {
 }
 ###
 
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      label="Select a fruit..."
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="filled"
+    />
+  )
+}
+###
+
 ###tab=Borderless,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
@@ -158,6 +200,53 @@ function Example() {
       ]}
       value={value}
       variant="underline"
+    />
+  )
+}
+###
+```
+
+If you want to have the label contained within the bounds of the select menu field, supply the `containLabel` prop:
+
+```live
+###tab=Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      containLabel
+      label="Select a fruit..."
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+    />
+  )
+}
+###
+
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      containLabel
+      label="Select a fruit..."
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      value={value}
+      variant="filled"
     />
   )
 }
@@ -209,6 +298,28 @@ function Example() {
       ]}
       placeholder="Select a fruit..."
       value={value}
+    />
+  )
+}
+###
+
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenuField
+      label="Select a fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="filled"
     />
   )
 }
@@ -314,6 +425,68 @@ function Example() {
         ]}
         placeholder="Select a fruit..."
         value={value}
+      />
+    </Stack>
+  );
+}
+###
+
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <Stack spacing="major-1">
+      <SelectMenu
+        size="small"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="filled"
+      />
+      <SelectMenu
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="filled"
+      />
+      <SelectMenu
+        size="medium"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="filled"
+      />
+      <SelectMenu
+        size="large"
+        onChange={setValue}
+        options={[
+          { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+          { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+          { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+          { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
+        ]}
+        placeholder="Select a fruit..."
+        value={value}
+        variant="filled"
       />
     </Stack>
   );
@@ -464,6 +637,28 @@ function Example() {
       ]}
       placeholder="Select a fruit..."
       value={value}
+    />
+  )
+}
+###
+
+###tab=Filled,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      disabled
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+      variant="filled"
     />
   )
 }
@@ -1033,6 +1228,72 @@ function Example() {
 }
 ```
 
+### Custom top actions component
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      renderTopActions={({ StaticItem }) =>
+        <StaticItem hideDropdownOnClick>
+          <Link>
+            Create a fruit
+          </Link>
+        </StaticItem>
+      }
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' },
+        { key: 5, label: 'Peaches', value: 'peaches' },
+        { key: 6, label: 'Strawberries', value: 'Strawberries' },
+        { key: 7, label: 'Pineapples', value: 'pineapples' },
+        { key: 8, label: 'Figs', value: 'figs' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Custom bottom actions component
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      renderBottomActions={({ StaticItem }) =>
+        <StaticItem>
+          <Link>
+            Create a fruit
+          </Link>
+        </StaticItem>
+      }
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' },
+        { key: 5, label: 'Peaches', value: 'peaches' },
+        { key: 6, label: 'Strawberries', value: 'Strawberries' },
+        { key: 7, label: 'Pineapples', value: 'pineapples' },
+        { key: 8, label: 'Figs', value: 'figs' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
 ## Accessibility
 
 #### Patterns
@@ -1057,6 +1318,12 @@ function Example() {
 **<Code fontSize="150" marginRight="major-1">cacheKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 The key to cache the loadOptions results against.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the select?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1213,6 +1480,10 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">renderBottomActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">renderDisclosure</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -1234,6 +1505,10 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">renderOption</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderTopActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1301,7 +1576,7 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
     [key: string]: string
   }; left?: string | number | {
     [key: string]: string
-  }; ... 808 more ...;
+  }; ... 809 more ...;
   onFocus?: (event: FocusEvent<...>) => void;
 }`}
 </Code>
@@ -1462,7 +1737,7 @@ Addon component to the input (after). Similar to the addon components in Input.
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 818 more ...;
+  ... 821 more ...;
   dropdownMenuInitialState?: Partial<...>;
 }`}
 </Code>
@@ -1482,6 +1757,12 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 **<Code fontSize="150" marginRight="major-1">cacheKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 The key to cache the loadOptions results against.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the select?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1638,6 +1919,10 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">renderBottomActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">renderDisclosure</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -1659,6 +1944,10 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">renderOption</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderTopActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1726,7 +2015,7 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
     [key: string]: string
   }; left?: string | number | {
     [key: string]: string
-  }; ... 808 more ...;
+  }; ... 809 more ...;
   onFocus?: (event: FocusEvent<...>) => void;
 }`}
 </Code>

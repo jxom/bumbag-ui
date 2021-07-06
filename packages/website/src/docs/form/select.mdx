@@ -23,6 +23,16 @@ import { Select, SelectField } from 'bumbag'
   ]}
 />###
 
+###tab=Filled,type=jsx-live
+<Select
+  variant="filled"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
 ###tab=Borderless,type=jsx-live
 <Select
   variant="borderless"
@@ -59,6 +69,17 @@ It accepts a combination of [Select props](/form/select/#props) and [FieldWrappe
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<SelectField
+  label="Condition"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
 />###
 
 ###tab=Borderless,type=jsx-live
@@ -99,6 +120,17 @@ For uncontrolled select field, set a default value using the `defaultValue` prop
   ]}
 />###
 
+###tab=Filled,type=jsx-live
+<Select
+  value="overcast"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
+/>###
+
 ###tab=Borderless,type=jsx-live
 <Select
   defaultValue="overcast"
@@ -135,6 +167,17 @@ For uncontrolled select field, set a default value using the `defaultValue` prop
   ]}
 />###
 
+###tab=Filled,type=jsx-live
+<Select
+  variant="filled"
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
 ###tab=Borderless,type=jsx-live
 <Select
   variant="borderless"
@@ -158,6 +201,33 @@ For uncontrolled select field, set a default value using the `defaultValue` prop
 />###
 ```
 
+If you want to have the label contained within the bounds of the select field, supply the `containLabel` prop:
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  containLabel
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  containLabel
+  variant="filled"
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+```
+
 ### Placeholders
 
 Add a placeholder to a select field with the `placeholder` prop.
@@ -171,6 +241,17 @@ Add a placeholder to a select field with the `placeholder` prop.
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
 />###
 
 ###tab=Borderless,type=jsx-live
@@ -212,6 +293,18 @@ Make the select field disabled with the `disabled` prop.
   ]}
 />###
 
+###tab=Filled,type=jsx-live
+<Select
+  disabled
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
+/>###
+
 ###tab=Borderless,type=jsx-live
 <Select
   disabled
@@ -245,6 +338,14 @@ Make the select field disabled with the `disabled` prop.
   isLoading
   options={[]}
 />###
+
+###tab=Filled,type=jsx-live
+<Select
+  isLoading
+  options={[]}
+  variant="filled"
+/>###
+
 
 ###tab=Borderless,type=jsx-live
 <Select
@@ -298,6 +399,45 @@ An input can come in different sizes - `small`, `medium`, `large`, or the defaul
       { label: 'Windy', value: 'windy' },
       { label: 'Overcast', value: 'overcast' }
     ]}
+  />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    size="small"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    size="medium"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    size="large"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
   />
 </Stack>###
 
@@ -418,6 +558,46 @@ An input can use different states (as per palette) such as `danger`, `success` a
       { label: 'Windy', value: 'windy' },
       { label: 'Overcast', value: 'overcast' }
     ]}
+  />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    state="danger"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    state="warning"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    state="success"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    state="primary"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
   />
 </Stack>###
 
@@ -551,6 +731,60 @@ An input can use different states (as per palette) such as `danger`, `success` a
       { label: 'Windy', value: 'windy' },
       { label: 'Overcast', value: 'overcast' }
     ]}
+  />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    palette="primary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="secondary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="danger"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="success"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="warning"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
   />
 </Stack>###
 
@@ -747,6 +981,12 @@ Automatically focus on the input
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the select?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">defaultValue</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Default value of the input
@@ -826,7 +1066,7 @@ Hint text to display
     [key: string]: string
   }; left?: string | number | {
     [key: string]: string
-  }; ... 796 more ...;
+  }; ... 797 more ...;
   onFocus?: (event: FocusEvent<...>) => void;
 }`}
 </Code>

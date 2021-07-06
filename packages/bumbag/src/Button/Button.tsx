@@ -28,6 +28,7 @@ export type LocalButtonProps = {
   /** Custom props for the isLoading spinner. */
   spinnerProps?: SpinnerProps;
   type?: ButtonType;
+  ignoreGrayOverride?: boolean;
 };
 export type ButtonProps = BoxProps & ReakitButtonProps & LocalButtonProps;
 
@@ -40,11 +41,16 @@ const useProps = createHook<ButtonProps>(
       iconAfterProps,
       iconBefore,
       iconBeforeProps,
+      ignoreGrayOverride,
       spinnerProps,
       unstable_clickOnEnter,
       unstable_clickOnSpace,
       ...htmlProps
     } = props;
+    if (props.palette === 'gray' && props.variant === 'default') {
+      props.palette = 'grayTint';
+    }
+
     const buttonProps = useReakitButton(
       { disabled, focusable, unstable_clickOnEnter, unstable_clickOnSpace },
       htmlProps

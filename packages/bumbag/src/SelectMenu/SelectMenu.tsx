@@ -32,6 +32,8 @@ type Options = Array<Option>;
 export type LocalSelectMenuProps = {
   /** The key to cache the loadOptions results against. */
   cacheKey?: string;
+  /** If the `label` prop is supplied, is it contained inside the select? */
+  containLabel?: boolean;
   /** Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened. */
   defer?: boolean;
   /** Indicates if the  Autosuggest is disabled. */
@@ -77,12 +79,14 @@ export type LocalSelectMenuProps = {
   loadingText?: string;
   loadingMoreText?: string;
 
+  renderBottomActions?: any;
   renderDisclosure?: any;
   renderError?: any;
   renderEmpty?: any;
   renderLoading?: any;
   renderLoadingMore?: any;
   renderOption?: any;
+  renderTopActions?: any;
 
   buttonProps?: Partial<ButtonProps>;
   itemProps?: Partial<DropdownMenuItemProps>;
@@ -137,6 +141,7 @@ const useProps = createHook<SelectMenuProps>(
     const {
       buttonProps,
       cacheKey,
+      containLabel,
       disabled,
       disableClear,
       dropdownMenuInitialState,
@@ -159,11 +164,13 @@ const useProps = createHook<SelectMenuProps>(
       overrides,
       pagination,
       renderDisclosure,
+      renderBottomActions,
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
       renderLoadingMore: LoadingMore,
       renderOption: Option,
+      renderTopActions,
       searchInputProps,
       placeholder,
       state: fieldState,
@@ -171,6 +178,7 @@ const useProps = createHook<SelectMenuProps>(
       tagProps,
       value,
       variant,
+      onChange: _onChange,
       ...restProps
     } = props;
 
@@ -205,6 +213,7 @@ const useProps = createHook<SelectMenuProps>(
       useValue: true,
       onBlur: null,
       onFocus: null,
+      onChange: _onChange,
       ...props,
     });
 
@@ -218,7 +227,7 @@ const useProps = createHook<SelectMenuProps>(
     });
     const wrapperClassName = useClassName({
       style: styles.SelectMenuButtonWrapper,
-      styleProps: props,
+      styleProps: { ...props, isFocused: dropdownMenu.visible },
       themeKey,
       themeKeySuffix: 'ButtonWrapper',
     });
@@ -484,6 +493,22 @@ const useProps = createHook<SelectMenuProps>(
 
     //////////////////////////////////////////////////
 
+    const ActionsStaticItem = React.useCallback(
+      (props) => (
+        <SelectMenuStaticItem
+          {...dropdownMenu}
+          {...props}
+          onClick={(e) => {
+            props.onClick && props.onClick(e);
+            props.hideDropdownOnClick && dropdownMenu.hide();
+          }}
+        />
+      ),
+      [] // eslint-disable-line
+    );
+
+    //////////////////////////////////////////////////
+
     const MenuWrapper = isDropdown ? DropdownMenuPopover : Menu;
 
     //////////////////////////////////////////////////
@@ -497,9 +522,11 @@ const useProps = createHook<SelectMenuProps>(
             <Box className={wrapperClassName}>
               {label && (
                 <>
-                  <Box className={labelWrapperBackgroundClassName}>
-                    <Text opacity="0">{label}</Text>
-                  </Box>
+                  {!containLabel && (
+                    <Box className={labelWrapperBackgroundClassName}>
+                      <Text opacity="0">{label}</Text>
+                    </Box>
+                  )}
                   {/*
                     // @ts-ignore */}
                   <Box className={labelWrapperClassName} onClick={() => buttonRef.current?.focus()}>
@@ -509,6 +536,7 @@ const useProps = createHook<SelectMenuProps>(
               )}
               <SelectMenuButton
                 elementRef={buttonRef}
+                containLabel={containLabel}
                 disabled={disabled}
                 disableClear={disableClear}
                 isLoading={isLoading}
@@ -545,6 +573,7 @@ const useProps = createHook<SelectMenuProps>(
                 {hasTags && selectedOptions.length > 0 && (
                   <SelectMenuTags onClearTag={handleClearTag} selectedOptions={selectedOptions} tagProps={tagProps} />
                 )}
+                {renderTopActions && renderTopActions({ StaticItem: ActionsStaticItem })}
                 <Box
                   use="ul"
                   className={selectMenuItemsWrapperClassName}
@@ -596,6 +625,7 @@ const useProps = createHook<SelectMenuProps>(
                   )}
                   {state === 'error' && <Error errorText={errorText} overrides={overrides} />}
                 </Box>
+                {renderBottomActions && renderBottomActions({ StaticItem: ActionsStaticItem })}
               </React.Fragment>
             ) : null}
           </MenuWrapper>
@@ -614,11 +644,13 @@ const useProps = createHook<SelectMenuProps>(
       loadingMoreText: 'Loading...',
       options: [],
       popoverHeight: '300px',
+      renderBottomActions: () => {},
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
       renderLoadingMore: Loading,
       renderOption: MatchedLabel,
+      renderTopActions: () => {},
       variant: 'bordered',
     },
     themeKey: 'SelectMenu',
@@ -828,16 +860,24 @@ function MatchedLabel(props: { label: string; searchText: string; overrides: any
 
   return highlightedText ? (
     <Text className={className} overrides={overrides} {...restProps}>
-      {preText && <Text overrides={overrides}>{preText}</Text>}
+      {preText && (
+        <Text fontWeight="normal" overrides={overrides}>
+          {preText}
+        </Text>
+      )}
       {highlightedText && (
         <Text fontWeight="semibold" overrides={overrides}>
           {highlightedText}
         </Text>
       )}
-      {postText && <Text overrides={overrides}>{postText}</Text>}
+      {postText && (
+        <Text fontWeight="normal" overrides={overrides}>
+          {postText}
+        </Text>
+      )}
     </Text>
   ) : (
-    <Text className={className} overrides={overrides} {...restProps}>
+    <Text fontWeight="normal" className={className} overrides={overrides} {...restProps}>
       {label}
     </Text>
   );

@@ -17,6 +17,9 @@ import { Input, InputField } from 'bumbag'
 ###tab=Default,type=jsx-live
 <Input placeholder="Enter your name here..." />###
 
+###tab=Filled,type=jsx-live
+<Input placeholder="Enter your name here..." variant="filled" />###
+
 ###tab=Borderless,type=jsx-live
 <Input placeholder="Enter your name here..." variant="borderless" />###
 
@@ -30,11 +33,24 @@ import { Input, InputField } from 'bumbag'
 ###tab=Default,type=jsx-live
 <Input label="Username" />###
 
+###tab=Filled,type=jsx-live
+<Input label="Username" variant="filled" />###
+
 ###tab=Borderless,type=jsx-live
 <Input label="Username" variant="borderless" />###
 
 ###tab=Underline,type=jsx-live
 <Input label="Username" variant="underline" />###
+```
+
+If you want to have the label contained within the bounds of the input field, supply the `containLabel` prop:
+
+```live
+###tab=Default,type=jsx-live
+<Input containLabel label="Username" />###
+
+###tab=Filled,type=jsx-live
+<Input containLabel label="Username" variant="filled" />###
 ```
 
 ### Fields
@@ -46,6 +62,9 @@ It accepts a combination of [Input props](/form/input/#props) and [FieldWrapper 
 ```live
 ###tab=Default,type=jsx-live
 <InputField label="Username" placeholder="Enter your name here..." />###
+
+###tab=Filled,type=jsx-live
+<InputField label="Username" placeholder="Enter your name here..." variant="filled" />###
 
 ###tab=Borderless,type=jsx-live
 <InputField label="Username" placeholder="Enter your name here..." variant="borderless" />###
@@ -62,6 +81,9 @@ For uncontrolled inputs, set a default value using the `defaultValue` prop.
 ###tab=Default,type=jsx-live
 <Input defaultValue="Bumbags rock!" />###
 
+###tab=Filled,type=jsx-live
+<Input defaultValue="Bumbags rock!" variant="filled" />###
+
 ###tab=Borderless,type=jsx-live
 <Input defaultValue="Bumbags rock!" variant="borderless" />###
 
@@ -77,6 +99,9 @@ Make the input disabled with the `disabled` prop.
 ###tab=Default,type=jsx-live
 <Input disabled defaultValue="Disabled field" />###
 
+###tab=Filled,type=jsx-live
+<Input disabled defaultValue="Disabled field" variant="filled" />###
+
 ###tab=Borderless,type=jsx-live
 <Input disabled defaultValue="Disabled field" variant="borderless" />###
 
@@ -91,6 +116,9 @@ Show a loading indicator with the `isLoading` prop.
 ```live
 ###tab=Default,type=jsx-live
 <Input isLoading />###
+
+###tab=Filled,type=jsx-live
+<Input isLoading variant="filled" />###
 
 ###tab=Borderless,type=jsx-live
 <Input isLoading variant="borderless" />###
@@ -114,6 +142,18 @@ Just like normal `<input>` elements, you can specify a `type`.
   <Input type="search" />
   <Input type="time" />
   <Input type="url" />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Input type="number" variant="filled" />
+  <Input type="tel" variant="filled" />
+  <Input type="date" variant="filled" />
+  <Input type="email" variant="filled" />
+  <Input type="password" variant="filled" />
+  <Input type="search" variant="filled" />
+  <Input type="time" variant="filled" />
+  <Input type="url" variant="filled" />
 </Stack>###
 
 ###tab=Borderless,type=jsx-live
@@ -154,6 +194,14 @@ An input can come in different sizes - `small`, `medium`, `large`, or the defaul
   <Input size="large" />
 </Stack>###
 
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Input size="small" variant="filled" />
+  <Input variant="filled" />
+  <Input size="medium" variant="filled" />
+  <Input size="large" variant="filled" />
+</Stack>###
+
 ###tab=Borderless,type=jsx-live
 <Stack spacing="major-1">
   <Input size="small" variant="borderless" />
@@ -184,6 +232,14 @@ An input can use different states (as per palette) such as `danger`, `success` a
   <Input state="primary" />
 </Stack>###
 
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Input state="danger" variant="filled" />
+  <Input state="success" variant="filled" />
+  <Input state="warning" variant="filled" />
+  <Input state="primary" variant="filled" />
+</Stack>###
+
 ###tab=Borderless,type=jsx-live
 <Stack spacing="major-1">
   <Input state="danger" variant="borderless" />
@@ -211,6 +267,15 @@ An input can use different states (as per palette) such as `danger`, `success` a
   <Input palette="danger" placeholder="Enter your name..." />
   <Input palette="success" placeholder="Enter your name..." />
   <Input palette="warning" placeholder="Enter your name..." />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Input palette="primary" placeholder="Enter your name..." variant="filled" />
+  <Input palette="secondary" placeholder="Enter your name..." variant="filled" />
+  <Input palette="danger" placeholder="Enter your name..." variant="filled" />
+  <Input palette="success" placeholder="Enter your name..." variant="filled" />
+  <Input palette="warning" placeholder="Enter your name..." variant="filled" />
 </Stack>###
 
 ###tab=Borderless,type=jsx-live
@@ -257,6 +322,20 @@ You can use the [Group component](/components/group) to add on stuff to your `<I
   <Input
     after={<Input.Icon icon="solid-search" />}
     placeholder="Jake Moxey"
+  />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Input
+    before={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+    variant="filled"
+  />
+  <Input
+    after={<Input.Icon icon="solid-search" />}
+    placeholder="Jake Moxey"
+    variant="filled"
   />
 </Stack>###
 
@@ -391,6 +470,12 @@ Automatically focus on the input
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the input?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">defaultValue</Code>** <Code fontSize="100" palette="primary">string | string[]</Code> 
 
 Default value of the input
@@ -416,7 +501,7 @@ Disables the input
     [key: string]: string
   }; left?: string | number | {
     [key: string]: string
-  }; ... 808 more ...;
+  }; ... 809 more ...;
   onFocus?: (event: FocusEvent<...>) => void;
 }`}
 </Code>
@@ -659,6 +744,12 @@ Automatically focus on the input
   | (new (props: any) => Component<any, any, any>)>)
   | (new (props: any) => Component<any, any, any>)>`}
 </Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the input?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

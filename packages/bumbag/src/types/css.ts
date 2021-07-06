@@ -1,4 +1,14 @@
-import { Altitude, BorderRadii, FontFamily, FontSize, FontWeight, GradientDirection, LetterSpacing, LineHeight, Palette } from './props';
+import {
+  Altitude,
+  BorderRadii,
+  FontFamily,
+  FontSize,
+  FontWeight,
+  GradientDirection,
+  LetterSpacing,
+  LineHeight,
+  Palette,
+} from './props';
 import { Flexible } from './utils';
 
 export type CSSProperties = {

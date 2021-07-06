@@ -30,6 +30,8 @@ export type LocalInputProps = {
   /** Automatically focus on the input */
   autoFocus?: boolean;
   before?: React.ReactElement<any>;
+  /** If the `label` prop is supplied, is it contained inside the input? */
+  containLabel?: boolean;
   /** Default value of the input */
   defaultValue?: string | string[];
   /** Disables the input */
@@ -86,7 +88,7 @@ const useProps = createHook<InputProps>(
   (props, { themeKey }) => {
     const ref = React.useRef();
 
-    const { before, after, inputProps, inputRef, isLoading, isRequired, state, ...restProps } = props;
+    const { before, after, containLabel, inputProps, inputRef, isLoading, isRequired, state, ...restProps } = props;
     const label = props?.label || inputProps?.label;
 
     const { isFocused, inputProps: labelPlaceholderInputProps } = useLabelPlaceholder({
@@ -130,9 +132,11 @@ const useProps = createHook<InputProps>(
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {label && (
             <>
-              <Box className={labelWrapperBackgroundClassName}>
-                <Text opacity="0">{label}</Text>
-              </Box>
+              {!containLabel && (
+                <Box className={labelWrapperBackgroundClassName}>
+                  <Text opacity="0">{label}</Text>
+                </Box>
+              )}
               {/*
                 // @ts-ignore */}
               <Box className={labelWrapperClassName} onClick={() => ref?.current?.focus()}>
@@ -233,6 +237,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       autoComplete,
       autoFocus,
       before,
+      containLabel,
       defaultValue,
       description,
       disabled,
@@ -320,6 +325,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
                   autoComplete={autoComplete}
                   autoFocus={autoFocus}
                   before={before}
+                  containLabel={containLabel}
                   defaultValue={defaultValue}
                   disabled={disabled}
                   inputProps={inputProps}

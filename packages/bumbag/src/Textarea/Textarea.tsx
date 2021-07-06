@@ -2,9 +2,19 @@ import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
 import { Size } from '../types';
-import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
+import {
+  useClassName,
+  createComponent,
+  createElement,
+  createHook,
+  mergeRefs,
+  pickCSSProps,
+  omitCSSProps,
+  useLabelPlaceholder,
+} from '../utils';
 import { Box, BoxProps } from '../Box';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
+import { Text, TextProps } from '../Text';
 
 import * as styles from './Textarea.styles';
 
@@ -12,10 +22,12 @@ export type LocalTextareaProps = {
   autoComplete?: string;
   /** Automatically focus on the textarea */
   autoFocus?: boolean;
+  containLabel?: boolean;
   /** Default value of the textarea */
   defaultValue?: string | string[];
   /** Disables the textarea */
   disabled?: boolean;
+  label?: string;
   /** Makes the textarea required and sets aria-invalid to true */
   isRequired?: boolean;
   /** Name of the textarea field */
@@ -57,7 +69,15 @@ export type TextareaProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & 
 
 const useProps = createHook<TextareaProps>(
   (props, { themeKey }) => {
-    const { isRequired, state, textareaProps, textareaRef, ...restProps } = props;
+    const ref = React.useRef();
+
+    const { containLabel, isRequired, state, textareaProps, textareaRef, ...restProps } = props;
+    const label = props?.label || textareaProps?.label;
+
+    const { isFocused, inputProps: labelPlaceholderInputProps } = useLabelPlaceholder({
+      enabled: Boolean(label),
+      ...props,
+    });
 
     const wrapperClassName = useClassName({
       style: styles.TextareaWrapper,
@@ -66,13 +86,41 @@ const useProps = createHook<TextareaProps>(
       themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className,
     });
+    const labelWrapperClassName = useClassName({
+      style: styles.LabelWrapper,
+      styleProps: { ...props, isFocused },
+      themeKey,
+      themeKeySuffix: 'LabelWrapper',
+    });
+    const labelWrapperBackgroundClassName = useClassName({
+      style: styles.LabelWrapperBackground,
+      styleProps: { ...props, isFocused },
+      themeKey,
+      themeKeySuffix: 'LabelWrapperBackground',
+    });
+
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       ...textareaProps,
+      ...labelPlaceholderInputProps,
       className: undefined,
-      elementRef: textareaRef || props.elementRef,
+      elementRef: mergeRefs(ref, textareaRef, props.elementRef),
       wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
+          {label && (
+            <>
+              {!containLabel && (
+                <Box className={labelWrapperBackgroundClassName}>
+                  <Text opacity="0">{label}</Text>
+                </Box>
+              )}
+              {/*
+                // @ts-ignore */}
+              <Box className={labelWrapperClassName} onClick={() => ref?.current?.focus()}>
+                <Text>{label}</Text>
+              </Box>
+            </>
+          )}
           {children}
         </Box>
       ),
@@ -87,7 +135,7 @@ const useProps = createHook<TextareaProps>(
 
     return { ...boxProps, className, 'aria-invalid': state === 'danger', 'aria-required': isRequired };
   },
-  { defaultProps: { type: 'text' }, themeKey: 'Textarea' }
+  { defaultProps: { variant: 'bordered', type: 'text' }, themeKey: 'Textarea' }
 );
 
 export const Textarea = createComponent<TextareaProps>(
@@ -126,6 +174,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
       children,
       autoComplete,
       autoFocus,
+      containLabel,
       defaultValue,
       description,
       disabled,
@@ -155,6 +204,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
       onFocus,
       overrides,
       textareaRef,
+      variant,
       validationText,
       ...restProps
     } = props;
@@ -188,6 +238,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
             <Textarea
               autoComplete={autoComplete}
               autoFocus={autoFocus}
+              containLabel={containLabel}
               defaultValue={defaultValue}
               disabled={disabled}
               isRequired={isRequired}
@@ -209,6 +260,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
               onChange={onChange}
               onFocus={onFocus}
               overrides={overrides}
+              variant={variant}
               textareaRef={textareaRef}
               {...elementProps}
               {...textareaProps}
