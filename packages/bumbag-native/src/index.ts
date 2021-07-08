@@ -14,6 +14,7 @@ export * from './Input';
 export * from './Image';
 export * from './Level';
 export * from './List';
+export * from './Menu';
 export * from './Provider';
 export * from './Pressable';
 export * from './Radio';

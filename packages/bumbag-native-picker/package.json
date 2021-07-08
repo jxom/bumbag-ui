@@ -1,0 +1,51 @@
+{
+  "name": "@bumbag-native/picker",
+  "version": "2.0.4",
+  "description": "An accessible, composable, and friendly React UI Kit",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "ts/index.d.ts",
+  "scripts": {
+    "build": "node ../../scripts/build/build.js",
+    "clean": "node ../../scripts/build/clean.js",
+    "develop": "node ../../scripts/build/build.js --watch",
+    "prepublishOnly": "yarn build",
+    "postpublish": "yarn clean",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/ --ext js,ts,tsx",
+    "lint:fix": "eslint src/ --fix",
+    "test": "yarn type-check && yarn lint && yarn jest",
+    "jest": "jest"
+  },
+  "dependencies": {
+    "@react-native-picker/picker": "1.16.1",
+    "lodash": "4.17.19",
+    "prism-react-renderer": "0.1.7"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.8.0 || ^17.0.0",
+    "bumbag": "^2.0.0",
+    "bumbag-native": "^2.0.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-native": "^0.60.0"
+  },
+  "devDependencies": {
+    "@react-native-picker/picker": "^1.16.1",
+    "@testing-library/react": "8.0.7",
+    "@testing-library/react-hooks": "1.1.0",
+    "bumbag": "^2.0.4",
+    "bumbag-native": "^2.0.4",
+    "react-test-renderer": "16.8.6"
+  },
+  "author": "Jake Moxey",
+  "homepage": "https://bumbag.style",
+  "license": "MIT",
+  "repository": "https://github.com/bumbag/bumbag-ui",
+  "keywords": [
+    "bumbag",
+    "ui",
+    "accessible",
+    "composable"
+  ],
+  "gitHead": "d20fa799d4851325f1c397529115713b8b42030d"
+}

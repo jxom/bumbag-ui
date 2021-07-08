@@ -66,5 +66,11 @@ module.exports = {
         defer: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-compile-es6-packages`,
+      options: {
+        modules: [`@react-native-picker/picker`],
+      },
+    },
   ],
 };

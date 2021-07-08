@@ -39,6 +39,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/list">
         <Text>List</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/picker">
+        <Text>Picker</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/radio">
         <Text>Radio</Text>
       </Link>

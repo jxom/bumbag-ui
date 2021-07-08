@@ -1,0 +1,99 @@
+---
+title: Picker
+path: /native/form/picker
+---
+
+# Picker
+
+## Install
+
+```
+yarn add @bumbag-native/picker
+// or npm
+npm install @bumbag-native/picker
+```
+
+## Import
+
+```js
+import { Picker } from '@bumbag-native/picker'
+```
+
+## Usage
+
+```jsx-live
+<Picker
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Dividers
+
+```jsx-live
+<Picker
+  hasDividers
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Disabled
+
+```jsx-live
+<Picker
+  disabled
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+```jsx-live
+<Picker
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy', disabled: true },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Check icon alignment
+
+```jsx-live
+<Picker
+  alignCheckIcon="right"
+  options={[
+    { label: 'Sunny', value: 'sunny', icon: {} },
+    { label: 'Windy', value: 'windy', icon: {} },
+    { label: 'Overcast', value: 'overcast', icon: {} }
+  ]}
+/>
+```
+
+### Icons
+
+```jsx-live
+<Picker
+  options={[
+    { label: 'Sunny', value: 'sunny', icon: {} },
+    { label: 'Windy', value: 'windy', icon: {} },
+    { label: 'Overcast', value: 'overcast', icon: {} }
+  ]}
+/>
+```
+
+## Props
+
+### Picker Props
+
+<!-- Automatically generated -->

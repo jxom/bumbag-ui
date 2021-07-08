@@ -91,7 +91,7 @@ exports.onCreateWebpackConfig = ({ actions, loaders, getConfig }) => {
     ...config.resolve.alias,
     'react-native$': 'react-native-web',
   };
-  config.resolve.extensions = ['.web.js', ...config.resolve.extensions];
+  config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
   // This will completely replace the webpack config with the modified object.
   actions.replaceWebpackConfig(config);
 };

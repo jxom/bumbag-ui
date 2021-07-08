@@ -15,6 +15,7 @@ import IconPage from './routes/components/Icon';
 import ImagePage from './routes/components/Image';
 import InputPage from './routes/components/Input';
 import ListPage from './routes/components/List';
+import PickerPage from './routes/components/Picker';
 import RadioPage from './routes/components/Radio';
 import SetPage from './routes/components/Set';
 import ShowPage from './routes/components/Show';
@@ -44,6 +45,7 @@ export default function App() {
               <Route exact path="/components/image" component={ImagePage} />
               <Route exact path="/components/input" component={InputPage} />
               <Route exact path="/components/list" component={ListPage} />
+              <Route exact path="/components/picker" component={PickerPage} />
               <Route exact path="/components/radio" component={RadioPage} />
               <Route exact path="/components/set" component={SetPage} />
               <Route exact path="/components/show" component={ShowPage} />

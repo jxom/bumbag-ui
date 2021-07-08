@@ -309,15 +309,19 @@ Icon to place before the input.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  [x: string]: any;
-  [x: number]: any;
-  hitSlop?: Insets;
-  onLayout?: (event: LayoutChangeEvent) => void;
-  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
-  removeClippedSubviews?: boolean;
-  ... 68 more ...;
-  useOriginalFill?: boolean;
-}`}
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: "default" | ... 6 more ... | ({
+    ...
+  } & string);
+  ... 589 more ...;
+  useOriginalFill?: boolean...`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -332,15 +336,19 @@ Icon to place after the input.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  [x: string]: any;
-  [x: number]: any;
-  hitSlop?: Insets;
-  onLayout?: (event: LayoutChangeEvent) => void;
-  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
-  removeClippedSubviews?: boolean;
-  ... 68 more ...;
-  useOriginalFill?: boolean;
-}`}
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: "default" | ... 6 more ... | ({
+    ...
+  } & string);
+  ... 589 more ...;
+  useOriginalFill?: boolean...`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -349,15 +357,19 @@ Icon to place after the input.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  [x: string]: any;
-  [x: number]: any;
-  hitSlop?: Insets;
-  onLayout?: (event: LayoutChangeEvent) => void;
-  pointerEvents?: "auto" | "none" | "box-none" | "box-only";
-  removeClippedSubviews?: boolean;
-  ... 131 more ...;
-  size?: any;
-}`}
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
+    ...
+  }>;
+  ... 652 more ...;
+  size?: Flexibl...`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -372,7 +384,17 @@ Label of the input.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">labelTextColor</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">labelTextColor</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
 
 Label color of the input. Can be any color in your palette.
 
@@ -382,23 +404,61 @@ Label color of the input. Can be any color in your palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">placeholderTextColor</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">placeholderTextColor</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
 
 Placeholder color of the input. Can be any color in your palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">state</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
 
 State of the input. Can be any color in your palette.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">size</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | (string & {})
+  | "small"
+  | "medium"
+  | "large"`}
+</Code>
 
 Alters the size of the input. Can be "small", "medium" or "large"
 
@@ -1508,13 +1568,11 @@ When false, it will prevent the soft keyboard from showing when the field is foc
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: any;
-  borderRadii?: any;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: {
-    ios?: BreakpointsThemeConfig;
-    android?: BreakpointsThemeConfig;
-    web?: BreakpointsThemeConfig
-  }; ... 34 more ...;
+    ...
+  }; ... 35 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>

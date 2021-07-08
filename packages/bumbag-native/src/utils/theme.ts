@@ -153,7 +153,7 @@ export function useFontSize(selector?: string, defaultValue?: any) {
 
 export function fontWeight(selector?: string, defaultValue?: any) {
   return (props: { fontWeight?: string; theme?: ThemeConfig }) => {
-    const color = theme('fontWeights', selector || props.fontWeight, defaultValue)(props);
+    const color = theme('fontWeights', selector || props.fontWeight, defaultValue || selector)(props);
     return color;
   };
 }
