@@ -4,6 +4,7 @@ import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import alias from '@rollup/plugin-alias';
+import json from '@rollup/plugin-json';
 const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
 const { camelCase, upperFirst } = require('lodash');
@@ -49,6 +50,7 @@ function getPlugins(isUMD) {
     alias({
       entries: [{ find: '@emotion/cache', replacement: '@bumbag/emotion-cache' }],
     }),
+    json(),
   ];
 
   if (isUMD) {

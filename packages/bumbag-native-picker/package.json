@@ -2,9 +2,8 @@
   "name": "@bumbag-native/picker",
   "version": "2.0.4",
   "description": "An accessible, composable, and friendly React UI Kit",
-  "main": "src/index.tsx",
+  "main": "lib/index.js",
   "module": "es/index.js",
-  "unpkg": "dist/bumbag.min.js",
   "types": "ts/index.d.ts",
   "scripts": {
     "build": "node ../../scripts/build/build.js",
@@ -19,11 +18,11 @@
     "jest": "jest"
   },
   "dependencies": {
+    "@react-native-picker/picker": "1.16.1",
     "lodash": "4.17.19",
     "prism-react-renderer": "0.1.7"
   },
   "peerDependencies": {
-    "@react-native-picker/picker": "^1.16.1",
     "@types/react": "^16.8.0 || ^17.0.0",
     "bumbag": "^2.0.0",
     "bumbag-native": "^2.0.0",

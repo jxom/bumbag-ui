@@ -14,10 +14,17 @@ export const Menu = styled(Box)`
 
 export const MenuItem = styled(Pressable)`
   flex-direction: row;
-  padding-left: ${(props) => `${space(4)(props)}px`};
   width: 100%;
+  ${(props) => (!props.disableLeftPadding ? `padding-left: ${space(4)(props)}px` : '')};
 
   ${getInteractiveProperties}
+
+  ${(props) =>
+    props.isStatic
+      ? `
+    cursor: unset;
+  `
+      : ''}
 
   ${theme('native.Menu.Item', 'styles.base')};
 ` as any;
@@ -30,9 +37,21 @@ export const MenuItemBeforeWrapper = styled(Box)`
   ${theme('native.Menu.Item', 'BeforeWrapper.styles.base')};
 ` as any;
 
-export const MenuItemContent = styled(Pressable)`
+export const MenuItemAfterWrapper = styled(Box)`
+  align-items: center;
+  justify-content: center;
+  margin-left: ${(props) => `${space(4)(props)}px`};
+
+  ${theme('native.Menu.Item', 'AfterWrapper.styles.base')};
+` as any;
+
+export const MenuItemContent = styled(Box)`
+  flex-direction: row;
+  justify-content: space-between;
   padding: ${(props) => `${space(4)(props)}px 0px`};
+  padding-right: ${(props) => `${space(4)(props)}px`};
   width: 100%;
+  ${(props) => (props.disableLeftPadding ? `padding-left: ${space(4)(props)}px` : '')};
 
   ${(props) =>
     props.hasDivider
@@ -44,6 +63,13 @@ export const MenuItemContent = styled(Pressable)`
 
   ${getInteractiveProperties}
 
+  ${(props) =>
+    props.disabled
+      ? `
+    opacity: 0.5;
+  `
+      : ''}
+
   ${theme('native.Menu.Item', 'Content.styles.base')};
 ` as any;
 
@@ -54,7 +80,7 @@ export const MenuItemContentText = styled(Text)`
 ` as any;
 
 export function isInteractive(props) {
-  return !props.isLoading && !props.disabled;
+  return !props.isLoading && !props.disabled && !props.isStatic;
 }
 
 export function getInteractiveProperties(props) {

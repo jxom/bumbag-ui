@@ -634,13 +634,11 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   altitudes?: AltitudesThemeConfig;
-  borders?: any;
-  borderRadii?: any;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: {
-    ios?: BreakpointsThemeConfig;
-    android?: BreakpointsThemeConfig;
-    web?: BreakpointsThemeConfig
-  }; ... 34 more ...;
+    ...
+  }; ... 35 more ...;
   Text?: TextThemeConfig;
 }`}
 </Code>

@@ -6,12 +6,13 @@ import * as styles from './Menu.styles';
 
 export type LocalMenuProps = {
   hasDividers?: boolean;
+  disableLeftPadding?: boolean;
 };
 export type MenuProps = BoxProps & LocalMenuProps;
 
 const useProps = createHook<MenuProps>(
   (props) => {
-    const { hasDividers } = props;
+    const { hasDividers, disableLeftPadding } = props;
 
     const boxProps = Box.useProps(props);
 
@@ -23,12 +24,14 @@ const useProps = createHook<MenuProps>(
         child
           ? React.cloneElement(child as any, {
               hasDivider: hasDividers && i < children.length - 1,
+              overrides: props.overrides,
+              disableLeftPadding,
             })
           : null
       ),
     };
   },
-  { themeKey: 'native.Menu' }
+  { defaultProps: { disableLeftPadding: false }, themeKey: 'native.Menu' }
 );
 
 export const Menu = createComponent<MenuProps>(

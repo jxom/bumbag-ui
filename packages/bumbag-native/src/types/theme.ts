@@ -14,6 +14,7 @@ import { IconProps } from '../Icon';
 import { InputProps, InputFieldProps } from '../Input';
 import { ImageProps } from '../Image';
 import { LevelProps } from '../Level';
+import { MenuProps, MenuItemProps } from '../Menu';
 import { PressableProps } from '../Pressable';
 import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { SpinnerProps } from '../Spinner';
@@ -409,6 +410,45 @@ export type LevelThemeConfig = {
   modes?: Variant<LevelThemeConfig>;
 };
 
+export type MenuThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Item?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+      hover?: ThemeAttribute<Stylesheet>;
+      hoveractive?: ThemeAttribute<Stylesheet>;
+    };
+    BeforeWrapper?: {
+      styles?: {
+        base?: ThemeAttribute<Stylesheet>;
+      };
+    };
+    AfterWrapper?: {
+      styles?: {
+        base?: ThemeAttribute<Stylesheet>;
+      };
+    };
+    Content?: {
+      styles?: {
+        base?: ThemeAttribute<Stylesheet>;
+      };
+    };
+    ContentText?: {
+      styles?: {
+        base?: ThemeAttribute<Stylesheet>;
+      };
+    };
+    defaultProps?: Partial<MenuItemProps>;
+    variants?: Variant<MenuThemeConfig['Item']>;
+    modes?: Variant<MenuThemeConfig['Item']>;
+  };
+  defaultProps?: Partial<MenuProps>;
+  variants?: Variant<MenuThemeConfig>;
+  modes?: Variant<MenuThemeConfig>;
+};
+
 export type PressableThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -603,6 +643,7 @@ export type ThemeConfig = {
   InputField?: InputFieldThemeConfig;
   Image?: ImageThemeConfig;
   Level?: LevelThemeConfig;
+  Menu?: MenuThemeConfig;
   Pressable?: PressableThemeConfig;
   Radio?: RadioThemeConfig;
   RadioGroup?: RadioGroupThemeConfig;

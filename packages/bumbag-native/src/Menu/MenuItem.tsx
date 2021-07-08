@@ -1,17 +1,25 @@
 import * as React from 'react';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
-import { Box, BoxProps } from '../Box';
+import { BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
 import { Pressable, PressableProps } from '../Pressable';
-import { Text, TextProps } from '../Text';
+import { TextProps } from '../Text';
 import * as styles from './Menu.styles';
 
 export type LocalMenuItemProps = {
+  disabled?: boolean;
   hasDivider?: boolean;
-  beforeWrapperProps?: Partial<BoxProps>;
+  isStatic?: boolean;
+  after?: React.ReactElement;
+  before?: React.ReactElement;
+  disableLeftPadding?: boolean;
+  iconAfter?: IconProps['icon'];
+  iconAfterProps?: Partial<IconProps>;
   iconBefore?: IconProps['icon'];
   iconBeforeProps?: Partial<IconProps>;
+  afterWrapperProps?: Partial<BoxProps>;
+  beforeWrapperProps?: Partial<BoxProps>;
   contentProps?: Partial<BoxProps>;
   contentTextProps?: Partial<TextProps>;
 };
@@ -19,19 +27,53 @@ export type MenuItemProps = PressableProps & LocalMenuItemProps;
 
 const useProps = createHook<MenuItemProps>(
   (props) => {
-    const { beforeWrapperProps, contentProps, contentTextProps, hasDivider, iconBefore, iconBeforeProps } = props;
+    const {
+      after,
+      before,
+      afterWrapperProps,
+      beforeWrapperProps,
+      contentProps,
+      contentTextProps,
+      disabled,
+      hasDivider,
+      iconAfter,
+      iconAfterProps,
+      iconBefore,
+      iconBeforeProps,
+      isStatic,
+      disableLeftPadding,
+      overrides,
+    } = props;
     const pressableProps = Pressable.useProps(props);
     return {
       ...pressableProps,
+      focusable: !disabled && !isStatic,
       children: (
         <React.Fragment>
-          {iconBefore && (
-            <styles.MenuItemBeforeWrapper {...beforeWrapperProps}>
-              <Icon icon={iconBefore} {...iconBeforeProps} />
+          {(before || iconBefore) && (
+            <styles.MenuItemBeforeWrapper overrides={overrides} {...beforeWrapperProps}>
+              {iconBefore && <Icon icon={iconBefore} overrides={overrides} {...iconBeforeProps} />}
+              {before}
             </styles.MenuItemBeforeWrapper>
           )}
-          <styles.MenuItemContent hasDivider={hasDivider} {...contentProps}>
-            <styles.MenuItemContentText {...contentTextProps}>{props.children}</styles.MenuItemContentText>
+          <styles.MenuItemContent
+            hasDivider={hasDivider}
+            disabled={disabled}
+            isStatic={isStatic}
+            disableLeftPadding={disableLeftPadding}
+            _hoveractive
+            overrides={overrides}
+            {...contentProps}
+          >
+            <styles.MenuItemContentText overrides={overrides} {...contentTextProps}>
+              {props.children}
+            </styles.MenuItemContentText>
+            {(after || iconAfter) && (
+              <styles.MenuItemAfterWrapper overrides={overrides} {...afterWrapperProps}>
+                {iconAfter && <Icon overrides={overrides} icon={iconAfter} {...iconAfterProps} />}
+                {after}
+              </styles.MenuItemAfterWrapper>
+            )}
           </styles.MenuItemContent>
         </React.Fragment>
       ),
