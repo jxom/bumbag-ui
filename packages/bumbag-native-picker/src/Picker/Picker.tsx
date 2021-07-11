@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { Platform } from 'react-native';
 import { PickerProps as RNPickerProps } from '@react-native-picker/picker';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { Box, BoxProps, BoxTouchableProps } from 'bumbag-native/Box';
 import { Palette } from 'bumbag/types';
-import { PickerIOS } from './PickerIOS';
 
 import * as styles from './Picker.styles';
 
@@ -19,7 +17,6 @@ export type LocalPickerProps = {
   palette?: Palette;
   value?: string;
   pickerProps?: Partial<RNPickerProps>;
-  useIOSNativePicker?: boolean;
 };
 export type PickerProps = BoxProps & LocalPickerProps;
 
@@ -77,10 +74,9 @@ const useProps = createHook<PickerProps>(
 
 export const Picker = createComponent<PickerProps>(
   (props) => {
-    const useIOSNativePicker = props.useIOSNativePicker && Platform.OS === 'ios';
-    const htmlProps = useIOSNativePicker ? PickerIOS.useProps(props) : useProps(props);
+    const htmlProps = useProps(props);
     return createElement({
-      component: useIOSNativePicker ? styles.StyledPickerIOS : styles.StyledPicker,
+      component: styles.StyledPicker,
       htmlProps,
     });
   },

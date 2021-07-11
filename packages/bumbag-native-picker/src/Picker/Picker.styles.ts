@@ -4,10 +4,6 @@ import { Text } from 'bumbag-native/Text';
 import { styled } from 'bumbag-native/styled';
 import { palette, space, theme } from 'bumbag-native/utils/theme';
 
-export const StyledPickerIOS = styled(Box)`
-  ${theme('native.Picker.IOS', 'styles.base')};
-`;
-
 export const StyledPicker = styled(Box)`
   ${theme('native.Picker', 'styles.base')};
 `;

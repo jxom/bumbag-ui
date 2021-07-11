@@ -5,7 +5,7 @@ import { useSpace } from 'bumbag-native/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
 import { Picker as RNPicker, PickerProps as RNPickerProps } from '@react-native-picker/picker';
 
-import * as styles from './Picker.styles';
+import * as styles from './PickerIOS.styles';
 
 export type LocalPickerIOSProps = {
   defaultValue?: string;
