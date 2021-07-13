@@ -3,6 +3,7 @@ import { Box, BoxTouchable } from '../Box';
 import { Text } from '../Text';
 import { styled } from '../styled';
 import { borderRadius, fontWeight, palette, space, theme } from '../utils/theme';
+import { MenuItem as _MenuItem } from './MenuItem';
 
 export const Menu = styled(Box)`
   background-color: ${palette('white')};
@@ -10,6 +11,14 @@ export const Menu = styled(Box)`
   overflow: hidden;
 
   ${theme('native.Menu', 'styles.base')};
+` as any;
+
+export const MenuOptionGroup = styled(Box)`
+  ${theme('native.Menu.OptionGroup', 'styles.base')};
+` as any;
+
+export const MenuOptionItem = styled(_MenuItem)`
+  ${theme('native.Menu.OptionItem', 'styles.base')};
 ` as any;
 
 export const MenuItem = styled(BoxTouchable)`

@@ -23,6 +23,7 @@ const useProps = createHook<MenuProps>(
       children: children.map((child, i) =>
         child
           ? React.cloneElement(child as any, {
+              hasDividers,
               hasDivider: hasDividers && i < children.length - 1,
               overrides: props.overrides,
               disableLeftPadding,

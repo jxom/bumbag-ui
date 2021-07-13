@@ -129,6 +129,47 @@ export default function App() {
           </Menu>
         </Preview>
       </PreviewSection>
+      <PreviewSection title="Option groups (radio)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.OptionGroup defaultValue="asc" type="radio">
+              <Menu.OptionItem value="asc">Ascending</Menu.OptionItem>
+              <Menu.OptionItem value="desc">Descending</Menu.OptionItem>
+            </Menu.OptionGroup>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Option groups (checked)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.OptionGroup defaultValue={['australia', 'india']} type="checkbox">
+              <Menu.OptionItem value="australia">Australia</Menu.OptionItem>
+              <Menu.OptionItem value="us">United States</Menu.OptionItem>
+              <Menu.OptionItem value="india">India</Menu.OptionItem>
+            </Menu.OptionGroup>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Option groups (check alignment)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.OptionGroup alignCheck="right" defaultValue="asc" type="radio">
+              <Menu.OptionItem value="asc">Ascending</Menu.OptionItem>
+              <Menu.OptionItem value="desc">Descending</Menu.OptionItem>
+            </Menu.OptionGroup>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Option groups (colors)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.OptionGroup palette="red" defaultValue="asc" type="radio">
+              <Menu.OptionItem value="asc">Ascending</Menu.OptionItem>
+              <Menu.OptionItem value="desc">Descending</Menu.OptionItem>
+            </Menu.OptionGroup>
+          </Menu>
+        </Preview>
+      </PreviewSection>
     </Box>
   );
 }

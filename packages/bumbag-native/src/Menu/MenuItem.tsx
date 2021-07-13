@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { BoxProps, BoxTouchable, BoxTouchableProps } from '../Box';
+import { Flex } from '../Flex';
 import { Icon, IconProps } from '../Icon';
 import { TextProps } from '../Text';
 import * as styles from './Menu.styles';
@@ -50,7 +51,7 @@ const useProps = createHook<MenuItemProps>(
       focusable: !disabled && !isStatic,
       children: (
         <React.Fragment>
-          {(before || iconBefore) && (
+          {!disableLeftPadding && (before || iconBefore) && (
             <styles.MenuItemBeforeWrapper overrides={overrides} {...beforeWrapperProps}>
               {iconBefore && <Icon icon={iconBefore} overrides={overrides} {...iconBeforeProps} />}
               {before}
@@ -65,9 +66,17 @@ const useProps = createHook<MenuItemProps>(
             overrides={overrides}
             {...contentProps}
           >
-            <styles.MenuItemContentText overrides={overrides} {...contentTextProps}>
-              {props.children}
-            </styles.MenuItemContentText>
+            <Flex>
+              {disableLeftPadding && (before || iconBefore) && (
+                <styles.MenuItemBeforeWrapper overrides={overrides} {...beforeWrapperProps}>
+                  {iconBefore && <Icon icon={iconBefore} overrides={overrides} {...iconBeforeProps} />}
+                  {before}
+                </styles.MenuItemBeforeWrapper>
+              )}
+              <styles.MenuItemContentText overrides={overrides} {...contentTextProps}>
+                {props.children}
+              </styles.MenuItemContentText>
+            </Flex>
             {(after || iconAfter) && (
               <styles.MenuItemAfterWrapper overrides={overrides} {...afterWrapperProps}>
                 {iconAfter && <Icon overrides={overrides} icon={iconAfter} {...iconAfterProps} />}
