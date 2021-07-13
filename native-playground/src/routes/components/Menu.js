@@ -10,7 +10,119 @@ export default function App() {
       <PreviewSection title="Basic">
         <Preview>
           <Menu>
-            <Menu.Item onPress={()=>console.log('test')}>General</Menu.Item>
+            <Menu.Item onPress={() => console.log('test')}>General</Menu.Item>
+            <Menu.Item>Accounts</Menu.Item>
+            <Menu.Item>Alerts</Menu.Item>
+            <Menu.Item>Security</Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Dividers">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.Item>General</Menu.Item>
+            <Menu.Item>Accounts</Menu.Item>
+            <Menu.Item>Alerts</Menu.Item>
+            <Menu.Item>Security</Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Dividers (no left padding)">
+        <Preview>
+          <Menu hasDividers disableLeftPadding>
+            <Menu.Item>General</Menu.Item>
+            <Menu.Item>Accounts</Menu.Item>
+            <Menu.Item>Alerts</Menu.Item>
+            <Menu.Item>Security</Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Disabled">
+        <Preview>
+          <Menu>
+            <Menu.Item>General</Menu.Item>
+            <Menu.Item disabled>Accounts</Menu.Item>
+            <Menu.Item>Alerts</Menu.Item>
+            <Menu.Item>Security</Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Icons (left)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.Item iconBefore="chevron-down" iconBeforeProps={{ color: 'primary' }}>
+              Settings
+            </Menu.Item>
+            <Menu.Item iconBefore="chevron-down" iconBeforeProps={{ color: 'primary' }}>
+              Accounts
+            </Menu.Item>
+            <Menu.Item iconBefore="chevron-down" iconBeforeProps={{ color: 'primary' }}>
+              Alerts
+            </Menu.Item>
+            <Menu.Item iconBefore="chevron-down" iconBeforeProps={{ color: 'primary' }}>
+              Security
+            </Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Icons (right)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.Item iconAfter="chevron-down" iconAfterProps={{ color: 'primary' }}>
+              Settings
+            </Menu.Item>
+            <Menu.Item iconAfter="chevron-down" iconAfterProps={{ color: 'primary' }}>
+              Accounts
+            </Menu.Item>
+            <Menu.Item iconAfter="chevron-down" iconAfterProps={{ color: 'primary' }}>
+              Alerts
+            </Menu.Item>
+            <Menu.Item iconAfter="chevron-down" iconAfterProps={{ color: 'primary' }}>
+              Security
+            </Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Addon components (before)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.Item before={<Box backgroundColor="blue" width="major-2" height="major-2" borderRadius="16px" />}>
+              Settings
+            </Menu.Item>
+            <Menu.Item before={<Box backgroundColor="red" width="major-2" height="major-2" borderRadius="16px" />}>
+              Accounts
+            </Menu.Item>
+            <Menu.Item before={<Box backgroundColor="orange" width="major-2" height="major-2" borderRadius="16px" />}>
+              Alerts
+            </Menu.Item>
+            <Menu.Item before={<Box backgroundColor="purple" width="major-2" height="major-2" borderRadius="16px" />}>
+              Security
+            </Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Addon components (after)">
+        <Preview>
+          <Menu hasDividers>
+            <Menu.Item after={<Box backgroundColor="blue" width="major-2" height="major-2" borderRadius="16px" />}>
+              Settings
+            </Menu.Item>
+            <Menu.Item after={<Box backgroundColor="red" width="major-2" height="major-2" borderRadius="16px" />}>
+              Accounts
+            </Menu.Item>
+            <Menu.Item after={<Box backgroundColor="orange" width="major-2" height="major-2" borderRadius="16px" />}>
+              Alerts
+            </Menu.Item>
+            <Menu.Item after={<Box backgroundColor="purple" width="major-2" height="major-2" borderRadius="16px" />}>
+              Security
+            </Menu.Item>
+          </Menu>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Static items">
+        <Preview>
+          <Menu>
+            <Menu.Item isStatic>General</Menu.Item>
             <Menu.Item>Accounts</Menu.Item>
             <Menu.Item>Alerts</Menu.Item>
             <Menu.Item>Security</Menu.Item>

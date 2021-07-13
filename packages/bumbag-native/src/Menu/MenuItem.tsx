@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
-import { BoxProps } from '../Box';
+import { BoxProps, BoxTouchable, BoxTouchableProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
-import { Pressable, PressableProps } from '../Pressable';
 import { TextProps } from '../Text';
 import * as styles from './Menu.styles';
 
@@ -23,7 +22,7 @@ export type LocalMenuItemProps = {
   contentProps?: Partial<BoxProps>;
   contentTextProps?: Partial<TextProps>;
 };
-export type MenuItemProps = PressableProps & LocalMenuItemProps;
+export type MenuItemProps = BoxTouchableProps & LocalMenuItemProps;
 
 const useProps = createHook<MenuItemProps>(
   (props) => {
@@ -44,9 +43,10 @@ const useProps = createHook<MenuItemProps>(
       disableLeftPadding,
       overrides,
     } = props;
-    const pressableProps = Pressable.useProps(props);
+    const boxTouchableProps = BoxTouchable.useProps(props);
     return {
-      ...pressableProps,
+      ...boxTouchableProps,
+      activeOpacity: isStatic ? 1 : 0.2,
       focusable: !disabled && !isStatic,
       children: (
         <React.Fragment>

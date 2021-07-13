@@ -1,5 +1,5 @@
-import { Box } from '../Box';
-import { Pressable } from '../Pressable';
+import { Platform } from 'react-native';
+import { Box, BoxTouchable } from '../Box';
 import { Text } from '../Text';
 import { styled } from '../styled';
 import { borderRadius, fontWeight, palette, space, theme } from '../utils/theme';
@@ -12,7 +12,7 @@ export const Menu = styled(Box)`
   ${theme('native.Menu', 'styles.base')};
 ` as any;
 
-export const MenuItem = styled(Pressable)`
+export const MenuItem = styled(BoxTouchable)`
   flex-direction: row;
   width: 100%;
   ${(props) => (!props.disableLeftPadding ? `padding-left: ${space(4)(props)}px` : '')};
@@ -20,7 +20,7 @@ export const MenuItem = styled(Pressable)`
   ${getInteractiveProperties}
 
   ${(props) =>
-    props.isStatic
+    props.isStatic && Platform.OS === 'web'
       ? `
     cursor: unset;
   `
