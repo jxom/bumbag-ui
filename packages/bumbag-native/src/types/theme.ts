@@ -14,7 +14,7 @@ import { IconProps } from '../Icon';
 import { InputProps, InputFieldProps } from '../Input';
 import { ImageProps } from '../Image';
 import { LevelProps } from '../Level';
-import { MenuProps, MenuItemProps } from '../Menu';
+import { MenuProps, MenuItemProps, MenuOptionItemProps, MenuOptionGroupProps } from '../Menu';
 import { PressableProps } from '../Pressable';
 import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { SpinnerProps } from '../Spinner';
@@ -443,6 +443,22 @@ export type MenuThemeConfig = {
     defaultProps?: Partial<MenuItemProps>;
     variants?: Variant<MenuThemeConfig['Item']>;
     modes?: Variant<MenuThemeConfig['Item']>;
+  };
+  OptionItem?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<MenuOptionItemProps>;
+    variants?: Variant<MenuThemeConfig['OptionItem']>;
+    modes?: Variant<MenuThemeConfig['OptionItem']>;
+  };
+  OptionGroup?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<MenuOptionGroupProps>;
+    variants?: Variant<MenuThemeConfig['OptionGroup']>;
+    modes?: Variant<MenuThemeConfig['OptionGroup']>;
   };
   defaultProps?: Partial<MenuProps>;
   variants?: Variant<MenuThemeConfig>;

@@ -59,7 +59,7 @@ export const MenuItemContent = styled(Box)`
   justify-content: space-between;
   padding: ${(props) => `${space(4)(props)}px 0px`};
   padding-right: ${(props) => `${space(4)(props)}px`};
-  width: 100%;
+  flex: 1;
   ${(props) => (props.disableLeftPadding ? `padding-left: ${space(4)(props)}px` : '')};
 
   ${(props) =>

@@ -26,14 +26,18 @@ const useProps = createHook<MenuOptionItemProps>(
         color: checked ? palette : undefined,
         ...restProps.contentTextProps,
       },
-      iconBefore: props.iconBefore || alignCheck === 'left' ? (checked ? checkIcon : {}) : undefined,
-      iconBeforeProps: props.iconBeforeProps || {
-        color: checked && alignCheck === 'left' ? palette : undefined,
-      },
-      iconAfter: props.iconAfter || alignCheck === 'right' ? (checked ? checkIcon : {}) : undefined,
-      iconAfterProps: props.iconAfterProps || {
-        color: checked && alignCheck === 'right' ? palette : undefined,
-      },
+      iconBefore: props.iconBefore ? props.iconBefore : alignCheck === 'left' ? (checked ? checkIcon : {}) : undefined,
+      iconBeforeProps: props.iconBeforeProps
+        ? props.iconBeforeProps
+        : {
+            color: checked ? palette : undefined,
+          },
+      iconAfter: props.iconAfter ? props.iconAfter : alignCheck === 'right' ? (checked ? checkIcon : {}) : undefined,
+      iconAfterProps: props.iconAfterProps
+        ? props.iconAfterProps
+        : {
+            color: checked ? palette : undefined,
+          },
       onPress: () => onChange && onChange({ checked: !checked, value }),
     };
   },
