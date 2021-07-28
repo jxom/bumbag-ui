@@ -35,6 +35,61 @@ function Form() {
 export default Form;
 ```
 
+An example of a more complete integration leveraging fieldwrappers, formik errors, zod, etc.:
+```jsx
+import React from 'react';
+import { Formik, Form, Field as FormikField } from 'formik';
+import { Button, FieldWrapper, Input } from 'bumbag';
+import { validateZodSchema } from "blitz"
+import { z } from "zod"
+
+export const FormSchema = z.object({
+  username: z.string().nonempty("Provide a valid username."),
+})
+
+function Form() {
+  return (
+    <Formik
+      initialValues={{ username: '' }}
+      onSubmit={data => console.log(data)}
+      validate={validateZodSchema(FormSchema)}
+    >
+      {(formik) => (
+        <Form>
+          <FieldWrapper
+            state={formik.errors.username ? "danger" : undefined}
+            validationText={formik.errors.username && `${formik.errors.username}`}
+          >
+            <FormikField
+              component={Input.Formik}
+              value={formik.values.username}
+              name="Username"
+              label="User name"
+              autoComplete="email"
+              hasFieldWrapper={true}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </FieldWrapper>
+          <Button
+            type="submit"
+            palette="primary"
+            disabled={formik.isSubmitting}
+            isLoading={formik.isSubmitting}
+            marginTop="major-1"
+            style={{ whiteSpace: "nowrap" }}
+          >
+            Submit
+          </Button>
+        </Form>
+      })
+    </Formik>
+  );
+}
+
+export default Form;
+```
+
 ### Redux Form
 
 To use Redux Form fields with Formik, import the `.ReduxForm` component from the Bumbag form field.
