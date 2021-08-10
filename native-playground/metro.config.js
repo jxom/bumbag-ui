@@ -2,6 +2,7 @@ const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
 
 const watchFolders = [
+  path.resolve(__dirname + '/../packages/bumbag-native-bottom-sheet'),
   path.resolve(__dirname + '/../packages/bumbag-native-picker'),
   path.resolve(__dirname + '/../packages/bumbag-native'),
   path.resolve(__dirname + '/../packages/bumbag'),

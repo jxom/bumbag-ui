@@ -1,5 +1,4 @@
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
-import { InterpolationWithTheme } from '@emotion/core';
 import { ThemeConfig as CoreThemeConfig } from 'bumbag/types';
 import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
@@ -23,7 +22,7 @@ import { StackProps } from '../Stack';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TextProps } from '../Text';
 
-export type Stylesheet = InterpolationWithTheme<any>;
+export type Stylesheet = string | Object;
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
 export type Variant<ThemeConfig> = { [key: string]: ThemeConfig };
 

@@ -28,6 +28,7 @@ module.exports = !isPlayroom
               'bumbag-theme-medipass': '../bumbag-theme-medipass/src',
               'bumbag-native': '../bumbag-native/src',
               '@bumbag-native/picker': '../bumbag-native-picker/src',
+              '@bumbag-native/bottom-sheet': '../bumbag-native-bottom-sheet/src',
               '^react-native$': 'react-native-web',
             },
           },

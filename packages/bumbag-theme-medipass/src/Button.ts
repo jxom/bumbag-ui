@@ -1,5 +1,4 @@
 import { css, palette, space } from 'bumbag';
-import { isInteractive } from 'bumbag/Button/styles';
 
 export default {
   styles: {

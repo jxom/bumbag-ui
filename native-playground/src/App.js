@@ -5,6 +5,7 @@ import { Box, Heading, Provider } from 'bumbag-native';
 
 import Home from './routes/Home';
 import BoxPage from './routes/components/Box';
+import BottomSheetPage from './routes/components/BottomSheet';
 import ButtonPage from './routes/components/Button';
 import CheckboxPage from './routes/components/Checkbox';
 import CheckboxGroupPage from './routes/components/CheckboxGroup';
@@ -36,6 +37,7 @@ export default function App() {
               </Link>
               <Route exact path="/" component={Home} />
               <Route exact path="/components/box" component={BoxPage} />
+              <Route exact path="/components/bottom-sheet" component={BottomSheetPage} />
               <Route exact path="/components/button" component={ButtonPage} />
               <Route exact path="/components/checkbox" component={CheckboxPage} />
               <Route exact path="/components/checkbox-group" component={CheckboxGroupPage} />
