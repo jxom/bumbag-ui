@@ -139,7 +139,12 @@ export function useFont(selector?: string, defaultValue?: any) {
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
     const globalFontSize = props.theme?.global?.fontSize;
-    const fontSize = globalFontSize * theme('fontSizes', selector || props.fontSize, defaultValue || 1)(props);
+    const themeFontSize = theme('fontSizes', selector || props.fontSize)(props);
+
+    let fontSize = themeFontSize || selector;
+    if (themeFontSize) {
+      fontSize = globalFontSize * theme('fontSizes', selector || props.fontSize, defaultValue || 1)(props);
+    }
     return fontSize;
   };
 }
