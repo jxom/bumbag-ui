@@ -117,6 +117,7 @@ export default function App() {
             <Icon icon="chevron-down" size="500" />
             <Icon icon="chevron-down" size="600" />
             <Icon icon="chevron-down" size="700" />
+            <Icon icon="chevron-down" size="72px" />
           </Box>
         </Preview>
       </PreviewSection>

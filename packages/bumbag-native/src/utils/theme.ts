@@ -141,9 +141,11 @@ export function fontSize(selector?: string, defaultValue?: any) {
     const globalFontSize = props.theme?.global?.fontSize;
     const themeFontSize = theme('fontSizes', selector || props.fontSize)(props);
 
-    let fontSize = themeFontSize || selector;
+    let fontSize = defaultValue || globalFontSize;
     if (themeFontSize) {
       fontSize = globalFontSize * theme('fontSizes', selector || props.fontSize, defaultValue || 1)(props);
+    } else if (typeof selector === 'string' && selector.includes('px')) {
+      fontSize = parseInt(selector?.replace('px', ''), 10);
     }
     return fontSize;
   };
