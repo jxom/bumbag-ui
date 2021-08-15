@@ -26,7 +26,7 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
       borders: merge(theme.borders || {}, newTheme.borders || {}),
       borderRadii: merge(theme.borderRadii || {}, newTheme.borderRadii || {}),
       fontSizes: merge(theme.fontSizes || {}, newTheme.fontSizes || {}),
-      fontWeights: merge(theme.fontWeights || {}, newTheme.fontWeights || {}),
+      fontWeights: newTheme.fontWeights || theme.fontWeights || {},
       icons: merge(theme.icons || {}, newTheme.icons || {}),
       lineHeights: merge(theme.lineHeights || {}, newTheme.lineHeights || {}),
       letterSpacings: merge(theme.letterSpacings || {}, newTheme.letterSpacings || {}),

@@ -1,5 +1,6 @@
 import altitudes from './altitudes';
 import breakpoints from './breakpoints';
+import fontWeights from './fontWeights';
 
 import Heading from './Heading';
 import Spinner from './Spinner';
@@ -11,7 +12,7 @@ export default {
   borderRadii: {},
   fonts: {},
   fontSizes: {},
-  fontWeights: {},
+  fontWeights,
   icons: {},
   global: {},
   lineHeights: {},

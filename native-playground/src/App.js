@@ -24,6 +24,65 @@ import SwitchPage from './routes/components/Switch';
 import SwitchGroupPage from './routes/components/SwitchGroup';
 import TextPage from './routes/components/Text';
 
+const theme = {
+  fonts: {
+    default: 'Georama',
+    heading: 'Georama',
+  },
+  fontWeights: {
+    default: {
+      normal: {
+        fontFamilySuffix: 'Regular',
+        fontWeight: 'normal',
+      },
+      semibold: {
+        fontFamilySuffix: 'SemiBold',
+        fontWeight: 'normal',
+      },
+      bold: {
+        fontFamilySuffix: 'Bold',
+        fontWeight: 'normal',
+      },
+      100: {
+        fontFamilySuffix: 'Thin',
+        fontWeight: 'normal',
+      },
+      200: {
+        fontFamilySuffix: 'ExtraLight',
+        fontWeight: 'normal',
+      },
+      300: {
+        fontFamilySuffix: 'Light',
+        fontWeight: 'normal',
+      },
+      400: {
+        fontFamilySuffix: 'Regular',
+        fontWeight: 'normal',
+      },
+      500: {
+        fontFamilySuffix: 'Medium',
+        fontWeight: 'normal',
+      },
+      600: {
+        fontFamilySuffix: 'SemiBold',
+        fontWeight: 'normal',
+      },
+      700: {
+        fontFamilySuffix: 'Bold',
+        fontWeight: 'normal',
+      },
+      800: {
+        fontFamilySuffix: 'ExtraBold',
+        fontWeight: 'normal',
+      },
+      900: {
+        fontFamilySuffix: 'Black',
+        fontWeight: 'normal',
+      },
+    },
+  },
+};
+
 export default function App() {
   return (
     <Provider>

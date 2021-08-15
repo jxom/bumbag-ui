@@ -255,6 +255,59 @@ export type FlexThemeConfig = {
   modes?: Variant<FlexThemeConfig>;
 };
 
+export type FontWeightsThemeConfig = {
+  [fontFamily: string]: {
+    default?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    semibold?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    bold?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    100?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    200?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    300?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    400?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    500?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    600?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    700?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    800?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+    900?: {
+      fontFamilySuffix: string;
+      fontWeight?: 'normal' | 'bold';
+    };
+  };
+};
+
 export type GroupThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -637,7 +690,11 @@ export type ThemeConfig = {
   };
   fonts?: CoreThemeConfig['fonts'];
   fontSizes?: CoreThemeConfig['fontSizes'];
-  fontWeights?: CoreThemeConfig['fontWeights'];
+  fontWeights?: FontWeightsThemeConfig & {
+    ios?: FontWeightsThemeConfig;
+    android?: FontWeightsThemeConfig;
+    web?: FontWeightsThemeConfig;
+  };
   icons?: CoreThemeConfig['icons'];
   lineHeights?: CoreThemeConfig['lineHeights'];
   letterSpacings?: CoreThemeConfig['letterSpacings'];

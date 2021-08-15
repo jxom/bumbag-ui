@@ -71,7 +71,7 @@ describe('props', () => {
   });
 
   it('should render correctly with a font weight CSS prop', () => {
-    const { container } = render(<Box fontWeight="semibold" />);
+    const { container } = render(<Box fontWeight="600" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 

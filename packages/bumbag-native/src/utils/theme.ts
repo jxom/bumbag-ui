@@ -124,8 +124,11 @@ export function useBorderRadius(selector?: string, defaultValue?: any) {
 
 export function font(selector?: string, defaultValue?: any) {
   return (props: { font?: string; theme?: ThemeConfig }) => {
-    const color = theme('native.fonts', selector || props.font, defaultValue)(props);
-    return color;
+    const fontFamily = theme('native.fonts', selector || props.font, defaultValue)(props);
+    if (!fontFamily && Platform.OS === 'android') {
+      return 'sans-serif';
+    }
+    return fontFamily;
   };
 }
 
@@ -158,16 +161,27 @@ export function useFontSize(selector?: string, defaultValue?: any) {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-export function fontWeight(selector?: string, defaultValue?: any) {
+export function fontWeight({ fontFamily = 'default', fontWeight: selector }, defaultValue?: any) {
   return (props: { fontWeight?: string; theme?: ThemeConfig }) => {
-    const color = theme('fontWeights', selector || props.fontWeight, defaultValue || selector)(props);
-    return color;
+    const fontWeight = theme('fontWeights', selector || props.fontWeight, defaultValue)(props);
+    const fontFamilyWeight = theme(
+      'fontWeights',
+      `${fontFamily ? `${fontFamily}.` : ''}${selector || props.fontWeight}`,
+      defaultValue
+    )(props);
+
+    let fallback = 'normal';
+    if (RegExp(/(\d\d\d)/).test(selector)) {
+      fallback = selector;
+    }
+
+    return fontFamilyWeight || fontWeight || fallback;
   };
 }
 
-export function useFontWeight(selector?: string, defaultValue?: any) {
+export function useFontWeight({ fontFamily, fontWeight: selector }, defaultValue?: any) {
   const { theme } = useTheme();
-  return fontWeight(selector, defaultValue)({ theme });
+  return fontWeight({ fontFamily, fontWeight: selector }, defaultValue)({ theme });
 }
 
 /////////////////////////////////////////////////////////////////////////////////
