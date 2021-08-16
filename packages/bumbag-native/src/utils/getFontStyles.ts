@@ -16,6 +16,7 @@ export function getFontStyles({ fontWeight: _fontWeight, fontFamily: _fontFamily
     }
 
     return `
+      ${fontFamily ? `font-family: ${fontFamily};` : ''}
       font-weight: ${fontWeight};
     `;
   };

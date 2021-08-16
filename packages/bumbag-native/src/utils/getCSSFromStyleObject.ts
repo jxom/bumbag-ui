@@ -316,12 +316,16 @@ export function getCSSFromStyleObject(
         }
         if (fontWeightAttributes.includes(attribute)) {
           newValue = getFontWeightValue({ theme, value, fontFamily: props.font });
+          const fontFamily = font(props.font || 'default')({ theme });
           if (typeof newValue === 'object') {
-            const fontFamily = font(props.font || 'default')({ theme });
             newStyle = `
               font-family: ${fontFamily}${newValue.fontFamilySuffix ? `-${newValue.fontFamilySuffix}` : ''};
             `;
             newValue = newValue.fontWeight;
+          } else if (fontFamily) {
+            newStyle = `
+              font-family: ${fontFamily};
+            `;
           }
         }
         if (lineHeightAttributes.includes(attribute)) {
