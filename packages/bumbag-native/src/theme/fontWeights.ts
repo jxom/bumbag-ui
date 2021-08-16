@@ -56,9 +56,9 @@ export default (overrides: ThemeConfig) =>
     ...overrides?.fontWeights,
     android: {
       // @ts-ignore
-      default: !overrides?.fontWeights?.default ? defaultAndroidFontWeights : undefined,
+      default: !overrides?.fonts?.default && !overrides?.fontWeights?.default ? defaultAndroidFontWeights : undefined,
       // @ts-ignore
-      heading: !overrides?.fontWeights?.heading ? defaultAndroidFontWeights : undefined,
+      heading: !overrides?.fonts?.heading && !overrides?.fontWeights?.heading ? defaultAndroidFontWeights : undefined,
       ...overrides?.fontWeights?.android,
     },
   } as any);

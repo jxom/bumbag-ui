@@ -76,7 +76,7 @@ const theme = {
 
 export default function App() {
   return (
-    <Provider>
+    <Provider theme={theme}>
       <NativeRouter>
         <Box.Safe>
           <Box.Scroll>
