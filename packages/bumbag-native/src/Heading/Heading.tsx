@@ -12,7 +12,7 @@ const useProps = createHook<HeadingProps>(
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'native.Heading' }
+  { defaultProps: { font: 'heading' }, themeKey: 'native.Heading' }
 );
 
 export const Heading = createComponent<HeadingProps>(
@@ -21,7 +21,7 @@ export const Heading = createComponent<HeadingProps>(
     return createElement({
       children: props.children,
       component: styles.StyledHeading,
-      htmlProps,
+      htmlProps: { ...htmlProps, font: props.font },
     });
   },
   {

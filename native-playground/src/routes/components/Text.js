@@ -13,7 +13,7 @@ export default function App() {
         <Preview>
           <Box>
             <Text>
-              Hello world, this is a bit of <Text fontWeight="500">text</Text>.
+              Hello world, this is a bit of <Text fontWeight="bold">text</Text>.
             </Text>
           </Box>
         </Preview>

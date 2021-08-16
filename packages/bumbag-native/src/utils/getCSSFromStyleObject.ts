@@ -306,7 +306,7 @@ export function getCSSFromStyleObject(
           newValue = getSpaceValue({ theme, value });
         }
         if (fontAttributes.includes(attribute)) {
-          newValue = getFontValue({ theme, value });
+          newValue = '';
         }
         if (fontSizeAttributes.includes(attribute)) {
           if (disableCSSProps.includes('fontSize')) {

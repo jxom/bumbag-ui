@@ -10,7 +10,7 @@ export default function App() {
       <PreviewSection title="Basic">
         <Preview>
           <Box>
-            <Heading>Hello world</Heading>
+            <Heading font="heading">Hello world</Heading>
           </Box>
         </Preview>
       </PreviewSection>

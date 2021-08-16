@@ -1,7 +1,7 @@
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
-import { InterpolationWithTheme } from '@emotion/core';
 import { ThemeConfig as CoreThemeConfig } from 'bumbag/types';
 import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
+import { Flexible } from 'bumbag/types';
 
 import { BoxKeyboardAvoidingProps, BoxProps, BoxSafeProps, BoxScrollProps, BoxTouchableProps } from '../Box';
 import { ButtonProps } from '../Button';
@@ -23,7 +23,7 @@ import { StackProps } from '../Stack';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TextProps } from '../Text';
 
-export type Stylesheet = InterpolationWithTheme<any>;
+export type Stylesheet = object | string;
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
 export type Variant<ThemeConfig> = { [key: string]: ThemeConfig };
 
@@ -258,52 +258,52 @@ export type FlexThemeConfig = {
 export type FontWeightsThemeConfig = {
   [fontFamily: string]: {
     default?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     semibold?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     bold?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     100?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     200?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     300?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     400?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     500?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     600?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     700?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     800?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
     900?: {
-      fontFamilySuffix: string;
-      fontWeight?: 'normal' | 'bold';
+      fontFamilySuffix?: string;
+      fontWeight?: string;
     };
   };
 };
@@ -690,11 +690,14 @@ export type ThemeConfig = {
   };
   fonts?: CoreThemeConfig['fonts'];
   fontSizes?: CoreThemeConfig['fontSizes'];
-  fontWeights?: FontWeightsThemeConfig & {
-    ios?: FontWeightsThemeConfig;
-    android?: FontWeightsThemeConfig;
-    web?: FontWeightsThemeConfig;
-  };
+  fontWeights?: Flexible<
+    {
+      ios?: FontWeightsThemeConfig;
+      android?: FontWeightsThemeConfig;
+      web?: FontWeightsThemeConfig;
+    },
+    FontWeightsThemeConfig
+  >;
   icons?: CoreThemeConfig['icons'];
   lineHeights?: CoreThemeConfig['lineHeights'];
   letterSpacings?: CoreThemeConfig['letterSpacings'];

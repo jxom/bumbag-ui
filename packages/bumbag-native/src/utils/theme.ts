@@ -17,7 +17,7 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
     const platform = Platform.OS;
 
     let selector = `${themeKey}${path ? `.${path}` : ''}`;
-    if (get(props, `theme.${themeKey}.${platform}`)) {
+    if (get(props, `theme.${themeKey}.${platform}${path ? `.${path}` : ''}`)) {
       selector = `${themeKey}.${platform}${path ? `.${path}` : ''}`;
     }
 

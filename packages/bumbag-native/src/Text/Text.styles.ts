@@ -1,5 +1,6 @@
 import { Animated, Platform, Text } from 'react-native';
 import { styled } from '../styled';
+import { getFontStyles } from '../utils/getFontStyles';
 import { palette, theme } from '../utils/theme';
 
 function getTextStyles(props) {
@@ -13,6 +14,8 @@ function getTextStyles(props) {
           `
         : ''
     }
+
+    ${!props.fontWeight ? getFontStyles({ fontWeight: '400' })(props) : ''}
 
     ${theme('native.Text', 'styles.base')(props)};
   `;
