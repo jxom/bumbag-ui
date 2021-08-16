@@ -41,6 +41,7 @@ export const H1 = createComponent<HeadingProps>(
       component: styles.StyledHeading,
       htmlProps: {
         ...htmlProps,
+        font: props.font || props.fontFamily,
         type: 'H1',
       },
     });
@@ -62,6 +63,7 @@ export const H2 = createComponent<HeadingProps>(
       component: styles.StyledHeading,
       htmlProps: {
         ...htmlProps,
+        font: props.font || props.fontFamily,
         type: 'H2',
       },
     });
@@ -83,6 +85,7 @@ export const H3 = createComponent<HeadingProps>(
       component: styles.StyledHeading,
       htmlProps: {
         ...htmlProps,
+        font: props.font || props.fontFamily,
         type: 'H3',
       },
     });
@@ -104,6 +107,7 @@ export const H4 = createComponent<HeadingProps>(
       component: styles.StyledHeading,
       htmlProps: {
         ...htmlProps,
+        font: props.font || props.fontFamily,
         type: 'H4',
       },
     });
@@ -125,6 +129,7 @@ export const H5 = createComponent<HeadingProps>(
       component: styles.StyledHeading,
       htmlProps: {
         ...htmlProps,
+        font: props.font || props.fontFamily,
         type: 'H5',
       },
     });

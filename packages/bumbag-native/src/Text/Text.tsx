@@ -21,7 +21,7 @@ export const Text = createComponent<TextProps>(
     return createElement({
       children: props.children,
       component: styles.StyledText,
-      htmlProps: textProps,
+      htmlProps: { ...textProps, font: props.font || props.fontFamily },
     });
   },
   {
