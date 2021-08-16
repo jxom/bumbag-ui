@@ -21,7 +21,9 @@ export default function App() {
             <Heading.H2>Heading 2</Heading.H2>
             <Heading.H3>Heading 3</Heading.H3>
             <Heading.H4>Heading 4</Heading.H4>
-            <Heading.H5>Heading 5</Heading.H5>
+            <Heading.H5 color="blueLighten5" alignX="center" alignY="center" textTransform="uppercase">
+              Heading 5
+            </Heading.H5>
             <Heading.H6>Heading 6</Heading.H6>
           </Box>
         </Preview>

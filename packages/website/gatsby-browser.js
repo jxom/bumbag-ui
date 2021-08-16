@@ -13,6 +13,6 @@ export const wrapRootElement = (props) => {
   return <ElementWrapper {...props} />;
 };
 
-export const replaceComponentRenderer = ({ props }) => {
+export const wrapPageElement = ({ props }) => {
   return React.createElement(props.pageResources.component, props);
 };

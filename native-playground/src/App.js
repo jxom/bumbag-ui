@@ -65,12 +65,8 @@ const weights = {
 
 const theme = {
   fonts: {
-    default: 'Georama',
-    heading: 'Georama',
-  },
-  fontWeights: {
-    default: weights,
-    heading: weights,
+    // default: 'Georama',
+    heading: 'Georama-Bold',
   },
 };
 
