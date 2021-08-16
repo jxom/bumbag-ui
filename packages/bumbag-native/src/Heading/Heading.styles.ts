@@ -8,7 +8,10 @@ export const StyledHeading = styled(Text)`
   font-size: ${(props: any) =>
     `${fontSize(theme(`native.Heading${props.type ? `.${props.type}` : ''}`, 'fontSize')(props))(props)}px`};
 
-  ${(props) => (!props.fontWeight ? getFontStyles({ fontWeight: '700', fontFamily: props.font || 'heading' }) : '')}
+  ${(props) =>
+    !props.fontWeight
+      ? getFontStyles({ fontWeight: '700', fontFamily: props.font || props.fontFamily || 'heading' })
+      : ''}
 
   ${theme('native.Heading', 'styles.base')};
   ${(props: any) => (props.type ? theme(`native.Heading.${props.type}`, 'styles.base')(props) : '')};

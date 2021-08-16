@@ -123,8 +123,8 @@ export function useBorderRadius(selector?: string, defaultValue?: any) {
 /////////////////////////////////////////////////////////////////////////////////
 
 export function font(selector?: string, defaultValue?: any) {
-  return (props: { font?: string; theme?: ThemeConfig }) => {
-    const fontFamily = theme('native.fonts', selector || props.font, defaultValue)(props);
+  return (props: { font?: string; fontFamily?: string; theme?: ThemeConfig }) => {
+    const fontFamily = theme('native.fonts', selector || props.font || props.fontFamily, defaultValue)(props);
     if (!fontFamily && Platform.OS === 'android') {
       return 'sans-serif';
     }

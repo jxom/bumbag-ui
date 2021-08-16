@@ -315,8 +315,9 @@ export function getCSSFromStyleObject(
           newValue = getFontSizeValue({ theme, value });
         }
         if (fontWeightAttributes.includes(attribute)) {
-          newValue = getFontWeightValue({ theme, value, fontFamily: props.font });
-          const fontFamily = font(props.font || 'default')({ theme });
+          const fontFamilyKey = props.font || props.fontFamily || 'default';
+          newValue = getFontWeightValue({ theme, value, fontFamily: fontFamilyKey });
+          const fontFamily = font(fontFamilyKey)({ theme });
           if (typeof newValue === 'object') {
             newStyle = `
               font-family: ${fontFamily}${newValue.fontFamilySuffix ? `-${newValue.fontFamilySuffix}` : ''};

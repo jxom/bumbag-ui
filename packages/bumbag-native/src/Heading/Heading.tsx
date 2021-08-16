@@ -21,7 +21,7 @@ export const Heading = createComponent<HeadingProps>(
     return createElement({
       children: props.children,
       component: styles.StyledHeading,
-      htmlProps: { ...htmlProps, font: props.font },
+      htmlProps: { ...htmlProps, font: props.font || props.fontFamily },
     });
   },
   {

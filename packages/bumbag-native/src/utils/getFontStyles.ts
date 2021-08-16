@@ -2,7 +2,7 @@ import { font, fontWeight as getFontWeight } from './theme';
 
 export function getFontStyles({ fontWeight: _fontWeight, fontFamily: _fontFamilyThemeKey = 'default' }) {
   return (props) => {
-    const fontFamilyThemeKey = props.font || _fontFamilyThemeKey;
+    const fontFamilyThemeKey = props.font || props.fontFamily || _fontFamilyThemeKey;
     const fontWeight = getFontWeight({ fontFamily: fontFamilyThemeKey, fontWeight: _fontWeight })(props);
     const fontFamily = font(fontFamilyThemeKey)(props);
 
