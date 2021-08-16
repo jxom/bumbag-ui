@@ -23,7 +23,7 @@ import { StackProps } from '../Stack';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TextProps } from '../Text';
 
-export type Stylesheet = object | string;
+export type Stylesheet = any;
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
 export type Variant<ThemeConfig> = { [key: string]: ThemeConfig };
 
