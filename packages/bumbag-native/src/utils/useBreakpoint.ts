@@ -14,7 +14,7 @@ export function useBreakpoint(direction: Direction, breakpoint: string) {
   if (!breakpoint) return false;
 
   function isWithin(directionBreakpoints) {
-    const directionBreakpointsArray = Object.entries(directionBreakpoints);
+    const directionBreakpointsArray = Object.entries(directionBreakpoints || {});
 
     if (breakpoint.includes('max-')) {
       const strippedBreakpoint = breakpoint.replace('max-', '');
