@@ -21,6 +21,9 @@ export default function App() {
       <PreviewSection title="Font weights">
         <Preview>
           <Box>
+            <Text fontWeight="normal">Hello world, this is a bit of text.</Text>
+            <Text fontWeight="semibold">Hello world, this is a bit of text.</Text>
+            <Text fontWeight="bold">Hello world, this is a bit of text.</Text>
             <Text fontWeight="100">Hello world, this is a bit of text.</Text>
             <Text fontWeight="200">Hello world, this is a bit of text.</Text>
             <Text fontWeight="300">Hello world, this is a bit of text.</Text>
