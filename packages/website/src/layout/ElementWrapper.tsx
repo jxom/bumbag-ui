@@ -16,10 +16,10 @@ export default function ElementWrapper(props: { element: React.ReactNode }) {
 
   return (
     <Provider theme={theme}>
-      {/* <NativeProvider theme={theme}> */}
-      {element}
-      <ToastManager isStacked={false} />
-      {/* </NativeProvider> */}
+      <NativeProvider theme={theme}>
+        {element}
+        <ToastManager isStacked={false} />
+      </NativeProvider>
     </Provider>
   );
 }
