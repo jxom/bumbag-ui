@@ -105,12 +105,76 @@ render(Example)
 
 ## Font weights
 
-Bumbag currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
+Bumbag currently has three preset font weights: `normal`, `semibold` and `bold`. 
+
+You can also specify a font weight in the range of `100`-`900`.
+
+You can also add your own custom font weights in the theme config if you wish.
 
 ```jsx-live
 <Text fontWeight="normal">Normal text</Text>
 <Text fontWeight="semibold">Semibold text</Text>
 <Text fontWeight="bold">Bold text</Text>
+<Text fontWeight="100">100</Text>
+<Text fontWeight="200">200</Text>
+<Text fontWeight="300">300</Text>
+<Text fontWeight="400">400</Text>
+<Text fontWeight="500">500</Text>
+<Text fontWeight="600">600</Text>
+<Text fontWeight="700">700</Text>
+<Text fontWeight="800">800</Text>
+<Text fontWeight="900">900</Text>
+```
+
+### Custom font weights
+
+If you have set up a custom font with your app, and want to have the ability to specify a range of weights for that font, you will need to configure the font weights to do so.
+
+This can be configured via the `theme.fontWeights` property in the theme.
+
+The `fontWeights` theme attributes evaluates to a `font` (key) / `fontWeights` (value) pair.
+
+An example is seen below:
+
+```jsx
+import { Provider } from 'bumbag-native';
+
+const theme = {
+  fonts: {
+    default: 'DopeSans',
+    heading: 'DopeSansSerif'
+  },
+  fontWeights: {
+    default: {
+      normal: {
+        fontFamilySuffix: 'Regular'     // `<Text fontWeight="normal">` styles evaluates to `fontFamily: DopeSans-Regular`
+      },
+      semibold: {
+        fontFamilySuffix: 'SemiBold'    // `<Text fontWeight="semibold">` styles evaluates to `fontFamily: DopeSans-SemiBold`
+      },
+      bold: {
+        fontFamilySuffix: 'Bold'        // `<Text fontWeight="bold">` styles evaluates to `fontFamily: DopeSans-Bold`
+      }
+    },
+    heading: {
+      normal: {
+        fontFamilySuffix: 'Regular'     // `<Text font="heading" fontWeight="normal">` styles evaluates to `fontFamily: DopeSansSerif-Regular`
+      },
+      semibold: {
+        fontFamilySuffix: 'Regular'     // `<Text font="heading" fontWeight="semibold">` styles evaluates to `fontFamily: DopeSansSerif-SemiBold`
+      },
+      bold: {
+        fontFamilySuffix: 'Regular'     // `<Text font="heading" fontWeight="bold">` styles evaluates to `fontFamily: DopeSansSerif-Bold`
+      },
+    }
+  }
+}
+
+export default () => (
+  <Provider theme={theme}>
+    {/* your app... */}
+  </Provider>
+)
 ```
 
 ### Accessing font weights
@@ -198,10 +262,24 @@ const theme = {
     mono: string
   },
   fontWeights: {
-    normal: number,
-    semibold: number,
-    bold: number,
-    [key: string]: number
+    [font: string]: {
+      normal: {
+        fontFamilySuffix: string,
+        fontWeight: string
+      },
+      semibold: {
+        fontFamilySuffix: string,
+        fontWeight: string
+      },
+      bold: {
+        fontFamilySuffix: string,
+        fontWeight: string
+      },
+      [key: string]: {
+        fontFamilySuffix: string,
+        fontWeight: string
+      }
+    }
   },
   fontSizes: {
     100: number,

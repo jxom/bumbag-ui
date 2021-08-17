@@ -1,18 +1,11 @@
 import { Animated, Platform, Text } from 'react-native';
 import { styled } from '../styled';
-import { font, palette, theme } from '../utils/theme';
+import { getFontStyles } from '../utils/getFontStyles';
+import { palette, theme } from '../utils/theme';
 
 function getTextStyles(props) {
   return `
     color: ${palette('text')(props)};
-
-    ${
-      font('default')(props)
-        ? `
-            font-family: ${font('default')(props)};
-          `
-        : ''
-    }
 
     ${
       Platform.OS === 'web'
@@ -21,6 +14,8 @@ function getTextStyles(props) {
           `
         : ''
     }
+
+    ${!props.fontWeight ? getFontStyles({ fontWeight: '400' })(props) : ''}
 
     ${theme('native.Text', 'styles.base')(props)};
   `;

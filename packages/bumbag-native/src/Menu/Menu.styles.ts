@@ -2,6 +2,7 @@ import { Platform } from 'react-native';
 import { Box, BoxTouchable } from '../Box';
 import { Text } from '../Text';
 import { styled } from '../styled';
+import { getFontStyles } from '../utils/getFontStyles';
 import { borderRadius, fontWeight, palette, space, theme } from '../utils/theme';
 import { MenuItem as _MenuItem } from './MenuItem';
 
@@ -83,7 +84,7 @@ export const MenuItemContent = styled(Box)`
 ` as any;
 
 export const MenuItemContentText = styled(Text)`
-  font-weight: ${fontWeight('500')};
+  ${getFontStyles({ fontWeight: '500' })}
 
   ${theme('native.Menu.Item', 'ContentText.styles.base')};
 ` as any;

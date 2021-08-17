@@ -8,7 +8,7 @@ import { merge } from 'bumbag/utils/merge';
 
 import { ThemeConfig } from '../types/theme';
 import { ThemeProvider as NativeThemeProvider } from '../styled';
-import theme from '../theme';
+import buildTheme from '../theme';
 
 export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeConfig }) {
   const { children, theme: themeOverrides, isStandalone, ...restProps } = props;
@@ -17,21 +17,11 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
 
   let newTheme = themeOverrides || {};
   if (!isStandalone) {
+    const nativeTheme = buildTheme(themeOverrides);
     newTheme = merge(coreTheme, {
       // @ts-ignore
-      native: merge(theme, newTheme),
-      breakpoints: merge(theme.breakpoints || {}, newTheme.breakpoints || {}, {
-        arrayMerge: (_, sourceArray) => sourceArray,
-      }),
-      borders: merge(theme.borders || {}, newTheme.borders || {}),
-      borderRadii: merge(theme.borderRadii || {}, newTheme.borderRadii || {}),
-      fontSizes: merge(theme.fontSizes || {}, newTheme.fontSizes || {}),
-      fontWeights: merge(theme.fontWeights || {}, newTheme.fontWeights || {}),
-      icons: merge(theme.icons || {}, newTheme.icons || {}),
-      lineHeights: merge(theme.lineHeights || {}, newTheme.lineHeights || {}),
-      letterSpacings: merge(theme.letterSpacings || {}, newTheme.letterSpacings || {}),
-      spacing: merge(theme.spacing || {}, newTheme.spacing || {}),
-      palette: merge(theme.palette || {}, newTheme.palette || {}),
+      native: nativeTheme,
+      ...nativeTheme,
     });
   }
 

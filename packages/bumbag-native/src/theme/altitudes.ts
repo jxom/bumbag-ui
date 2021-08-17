@@ -1,4 +1,6 @@
-const altitudes = {
+import { ThemeConfig } from '../types';
+
+const altitudes = (overrides) => ({
   100: `
     shadow-opacity: 0.15;
     shadow-radius: 4px;
@@ -27,10 +29,11 @@ const altitudes = {
     shadow-offset: 0px 6px;
     elevation: 48;
   `,
-};
+  ...overrides,
+});
 
-export default {
-  web: altitudes,
-  ios: altitudes,
-  android: altitudes,
-};
+export default (overrides: ThemeConfig) => ({
+  web: altitudes(overrides?.altitudes?.web),
+  ios: altitudes(overrides?.altitudes?.ios),
+  android: altitudes(overrides?.altitudes?.android),
+});

@@ -202,8 +202,8 @@ function getFontSizeValue({ theme, value }) {
   return value;
 }
 
-function getFontWeightValue({ theme, value }) {
-  const weight = fontWeight(value)({ theme });
+function getFontWeightValue({ theme, value, fontFamily }) {
+  const weight = fontWeight({ fontFamily, fontWeight: value })({ theme });
   if (weight) {
     return weight;
   }
@@ -306,7 +306,7 @@ export function getCSSFromStyleObject(
           newValue = getSpaceValue({ theme, value });
         }
         if (fontAttributes.includes(attribute)) {
-          newValue = getFontValue({ theme, value });
+          newValue = '';
         }
         if (fontSizeAttributes.includes(attribute)) {
           if (disableCSSProps.includes('fontSize')) {
@@ -315,7 +315,19 @@ export function getCSSFromStyleObject(
           newValue = getFontSizeValue({ theme, value });
         }
         if (fontWeightAttributes.includes(attribute)) {
-          newValue = getFontWeightValue({ theme, value });
+          const fontFamilyKey = props.font || props.fontFamily || 'default';
+          newValue = getFontWeightValue({ theme, value, fontFamily: fontFamilyKey });
+          const fontFamily = font(fontFamilyKey)({ theme });
+          if (typeof newValue === 'object') {
+            newStyle = `
+              font-family: ${fontFamily}${newValue.fontFamilySuffix ? `-${newValue.fontFamilySuffix}` : ''};
+            `;
+            newValue = newValue.fontWeight;
+          } else if (fontFamily) {
+            newStyle = `
+              font-family: ${fontFamily};
+            `;
+          }
         }
         if (lineHeightAttributes.includes(attribute)) {
           newValue = getLineHeightValue({ theme, value });

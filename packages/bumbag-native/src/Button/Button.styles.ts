@@ -2,6 +2,7 @@ import { Platform, TouchableOpacity } from 'react-native';
 
 import { styled } from '../styled';
 import { borderRadius, fontSize, fontWeight, palette, space, theme } from '../utils/theme';
+import { getFontStyles } from '../utils/getFontStyles';
 import { Icon } from '../Icon/Icon';
 import { Spinner } from '../Spinner/Spinner';
 import { Text } from '../Text';
@@ -240,7 +241,8 @@ export const getLinkButtonProperties = (props: any) => `
 
 export const StyledButtonText = styled(Text)`
   color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
-  font-weight: ${fontWeight('semibold')};
+
+  ${getFontStyles({ fontWeight: '500' })};
 
   ${theme('native.Button', 'Text.styles.base')};
 

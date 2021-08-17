@@ -2,7 +2,8 @@ import { View } from 'react-native';
 import { Box } from '../Box';
 import { Text } from '../Text';
 import { styled } from '../styled';
-import { fontSize, fontWeight, palette, space, theme } from '../utils/theme';
+import { getFontStyles } from '../utils/getFontStyles';
+import { fontSize, palette, space, theme } from '../utils/theme';
 
 export const FieldWrapper = styled(View)`
   ${theme('native.FieldWrapper', 'styles.base')};
@@ -65,8 +66,9 @@ export const OptionalText = styled(Text)`
 export const RequiredText = styled(Text)`
   color: ${palette('danger')};
   margin-left: ${(props) => `${space(1)(props)}px`};
-  font-weight: ${fontWeight('semibold')};
   font-size: ${(props) => `${fontSize('150')(props)}px`};
+
+  ${getFontStyles({ fontWeight: '500' })};
 
   ${theme('native.FieldWrapper', 'RequiredText.styles.base')};
 `;

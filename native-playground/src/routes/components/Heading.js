@@ -10,7 +10,7 @@ export default function App() {
       <PreviewSection title="Basic">
         <Preview>
           <Box>
-            <Heading>Hello world</Heading>
+            <Heading font="heading">Hello world</Heading>
           </Box>
         </Preview>
       </PreviewSection>
@@ -23,6 +23,21 @@ export default function App() {
             <Heading.H4>Heading 4</Heading.H4>
             <Heading.H5>Heading 5</Heading.H5>
             <Heading.H6>Heading 6</Heading.H6>
+          </Box>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Font weights">
+        <Preview>
+          <Box>
+            <Heading fontWeight="100">Hello world</Heading>
+            <Heading fontWeight="200">Hello world</Heading>
+            <Heading fontWeight="300">Hello world</Heading>
+            <Heading fontWeight="400">Hello world</Heading>
+            <Heading fontWeight="500">Hello world</Heading>
+            <Heading fontWeight="600">Hello world</Heading>
+            <Heading fontWeight="700">Hello world</Heading>
+            <Heading fontWeight="800">Hello world</Heading>
+            <Heading fontWeight="900">Hello world</Heading>
           </Box>
         </Preview>
       </PreviewSection>
