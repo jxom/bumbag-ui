@@ -1,19 +1,25 @@
 import { font, fontWeight as getFontWeight } from './theme';
 
-export function getFontStyles({ fontWeight: _fontWeight, fontFamily: _fontFamilyThemeKey = 'default' }) {
-  return (props) => {
-    const fontFamilyThemeKey = props.font || props.fontFamily || _fontFamilyThemeKey;
-    const fontWeight = getFontWeight({ fontFamily: fontFamilyThemeKey, fontWeight: _fontWeight })(props);
-    const fontFamily = font(fontFamilyThemeKey)(props);
+export function getFontAttributes({ fontFamilyThemeKey, fontWeight: _fontWeight, theme }) {
+  let fontWeight = getFontWeight({ fontFamily: fontFamilyThemeKey, fontWeight: _fontWeight })({ theme });
+  let fontFamily = font(fontFamilyThemeKey)({ theme });
 
-    if (typeof fontWeight === 'object') {
-      const newFontFamily = `${fontFamily}${fontWeight.fontFamilySuffix ? `-${fontWeight.fontFamilySuffix}` : ''}`;
-      const newFontWeight = fontWeight.fontWeight || 'normal';
-      return `
-        font-family: ${newFontFamily};
-        font-weight: ${newFontWeight};
-      `;
-    }
+  if (typeof fontWeight === 'object') {
+    fontFamily = `${fontFamily}${fontWeight.fontFamilySuffix ? `-${fontWeight.fontFamilySuffix}` : ''}`;
+    fontWeight = fontWeight.fontWeight || 'normal';
+  }
+
+  return {
+    fontFamily,
+    fontWeight,
+  };
+}
+
+export function getFontStyles({ fontWeight: _fontWeight, fontFamily: _fontFamilyThemeKey = 'default' }) {
+  return ({ theme, ...props }) => {
+    const fontFamilyThemeKey = props.font || props.fontFamily || _fontFamilyThemeKey;
+
+    const { fontFamily, fontWeight } = getFontAttributes({ fontFamilyThemeKey, fontWeight: _fontWeight, theme });
 
     return `
       ${fontFamily ? `font-family: ${fontFamily};` : ''}

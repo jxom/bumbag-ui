@@ -14,12 +14,8 @@ public class BasePackageList {
         new expo.modules.font.FontLoaderPackage(),
         new expo.modules.imageloader.ImageLoaderPackage(),
         new expo.modules.keepawake.KeepAwakePackage(),
-        new expo.modules.lineargradient.LinearGradientPackage(),
-        new expo.modules.location.LocationPackage(),
         new expo.modules.permissions.PermissionsPackage(),
-        new expo.modules.securestore.SecureStorePackage(),
         new expo.modules.splashscreen.SplashScreenPackage(),
-        new expo.modules.sqlite.SQLitePackage(),
         new expo.modules.updates.UpdatesPackage()
     );
   }

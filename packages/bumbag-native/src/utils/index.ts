@@ -4,5 +4,6 @@ export * from './getFontStyles';
 export * from './theme';
 export * from './throttle';
 export * from './useBreakpoint';
+export * from './useFontStyles';
 export * from './useStyle';
 export * from './useTheme';
