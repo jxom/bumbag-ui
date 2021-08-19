@@ -1,7 +1,3 @@
-import PropTypes from '../../components/PropTypes';
-import Theme from '../../components/Theme';
-import { List } from 'bumbag';
-
 # List
 
 `<List>` renders a `<ul>` element by default with reset styles and `list-style` unset.
@@ -259,25 +255,25 @@ Indicates the orientation of the list.
 
 ## Theming
 
-<Theme
-  component={List}
+ <Theme
+  component={'List'}
   overrides={[
     'List.styles.base',
     { key: 'List.styles.ordered', props: { isOrdered: true, listStylePosition: 'inside' } },
     { key: 'List.styles.horizontal', props: { orientation: 'horizontal' } }
   ]}>
-  <List.Item>Item 1</List.Item>
-  <List.Item>Item 2</List.Item>
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
 </Theme>
 
-<Theme
-  component={List}
+ <Theme
+  component={'List'}
   injectOverrides={false}
   overrides={['List.Item.styles.base']}>
   {({ overrides }) => (
     <React.Fragment>
-      <List.Item overrides={overrides}>Item 1</List.Item>
-      <List.Item>Item 2</List.Item>
+      <ListItem overrides={overrides}>Item 1</ListItem>
+      <ListItem>Item 2</ListItem>
     </React.Fragment>
   )}
 </Theme>

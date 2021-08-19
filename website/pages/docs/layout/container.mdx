@@ -2,10 +2,6 @@
 isFluid: true
 ---
 
-import PropTypes from '../../components/PropTypes';
-import Theme from '../../components/Theme';
-import { Container } from 'bumbag';
-
 # Container
 
 ## Import
@@ -196,8 +192,8 @@ Indicates if the container is of a layout type.
 
 ## Theming
 
-<Theme
-  component={Container}
+ <Theme
+  component={'Container'}
   overrides={['Container.styles.base', { key: 'Container.styles.fluid', props: { isFluid: true } }, { key: 'Container.styles.layout', props: { isLayout: true } }]}>
   Hello world
 </Theme>

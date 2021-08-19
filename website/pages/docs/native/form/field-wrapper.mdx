@@ -1,6 +1,3 @@
-import Theme from '../../../components/Theme';
-import { Input as BBInput, FieldWrapper as BBFieldWrapper } from 'bumbag-native';
-
 # FieldWrapper
 
 The `<FieldWrapper>` component is a utility belt that wraps around form elements.
@@ -742,8 +739,9 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 ## Theming
 
-<Theme
-  component={BBFieldWrapper}
+ <Theme
+  component="FieldWrapper"
+  platform="native"
   label="This is a label"
   overrides={[
     'FieldWrapper.styles.base',
@@ -754,5 +752,5 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
     { key: 'FieldWrapper.RequiredText.styles.base', props: { isRequired: true } },
     { key: 'FieldWrapper.ValidationText.styles.base', props: { validationText: 'This is validation text' } }
 ]}>
-  <BBInput />
+  <Input />
 </Theme>

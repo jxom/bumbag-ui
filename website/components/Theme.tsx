@@ -19,7 +19,8 @@ export default function Theme(props) {
   return overrides.map((override) => {
     let key = typeof override === 'object' ? override.key : override;
 
-    let Component = bumbag[override.component || DefaultComponent];
+    const componentKey = override.component || DefaultComponent;
+    let Component = bumbag[override.component || DefaultComponent] || componentKey;
 
     let components = Array.isArray(override.props) ? override.props : [override.props];
 

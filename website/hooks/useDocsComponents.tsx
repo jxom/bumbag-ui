@@ -3,13 +3,15 @@ import * as bumbag from 'bumbag';
 
 import LiveCode from '../components/Live/LiveCode';
 import Theme from '../components/Theme';
+import PaletteColor from '../components/PaletteColor';
 
-export default function useDocsComponents({ type }): any {
+export default function useDocsComponents({ platform }): any {
   const { colorMode } = bumbag.useColorMode();
 
   const components = React.useMemo(
     () => ({
       ...bumbag,
+      PaletteColor,
       Theme: (props) => <Theme {...props} />,
       a: (props: any) => <bumbag.Link {...props} />,
       blockquote: (props: any) => (
@@ -96,7 +98,7 @@ export default function useDocsComponents({ type }): any {
       ),
       li: (props: any) => <bumbag.ListItem marginBottom="major-1" {...props} />,
       strong: (props: any) => <bumbag.Text fontWeight="semibold" {...props} />,
-      pre: (props: any) => <LiveCode platform={type} {...props.children.props} />,
+      pre: (props: any) => <LiveCode platform={platform} {...props.children.props} />,
       table: (props: any) => <bumbag.Table marginBottom="major-4" marginTop="major-4" {...props} />,
       th: (props: any) => <bumbag.Table.HeadCell {...props} />,
       tr: (props: any) => <bumbag.Table.Row {...props} />,
@@ -104,7 +106,7 @@ export default function useDocsComponents({ type }): any {
       tbody: (props: any) => <bumbag.Table.Body {...props} />,
       thead: (props: any) => <bumbag.Table.Head {...props} />,
     }),
-    [colorMode, type]
+    [colorMode, platform]
   );
 
   return { components };

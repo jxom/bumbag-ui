@@ -1,6 +1,3 @@
-import Theme from '../../../components/Theme';
-import { Stack } from 'bumbag-native';
-
 # Stack
 
 ## Import
@@ -672,8 +669,9 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 ## Theming
 
-<Theme
-  component={Stack}
+ <Theme
+  component={'Stack'}
+  platform="native"
   padding="major-3"
   overrides={['Stack.styles.base']}>
   <Box backgroundColor="white700" padding="major-3">

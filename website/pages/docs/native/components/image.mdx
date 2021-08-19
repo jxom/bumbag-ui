@@ -1,6 +1,3 @@
-import Theme from '../../../components/Theme';
-import { Image } from 'bumbag-native';
-
 # Image
 
 ## Import
@@ -804,8 +801,9 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
 
 ## Theming
 
-<Theme
-  component={Image}
+ <Theme
+  component={'Image'}
+  platform="native"
   source={{ uri: '/bean.jpg' }}
   width="500px"
   height="300px"

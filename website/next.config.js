@@ -30,6 +30,7 @@ module.exports = withPlugins([withTM], {
           ...config.resolve.fallback,
           fs: false,
           child_process: false,
+          worker_threads: false,
         },
       };
     }

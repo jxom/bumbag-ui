@@ -1,8 +1,3 @@
-import Theme from '../../components/Theme';
-import { Breadcrumb } from 'bumbag';
-import { List } from 'bumbag';
-import { Link } from 'bumbag';
-
 # Breadcrumb
 
 A breadcrumb consists of a list of links from the parent page to the current page.
@@ -525,14 +520,14 @@ Custom separator for the breadcrumb. Can either be a string, or a React componen
 
 ## Theming
 
-<Theme component={Breadcrumb} overrides={['Breadcrumb.styles.base', 'Breadcrumb.Item.styles.base', 'Breadcrumb.Link.styles.base', 'Breadcrumb.Separator.styles.base']}>
-  <Breadcrumb.Item>
-    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
-  </Breadcrumb.Item>
-  <Breadcrumb.Item>
-    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
-  </Breadcrumb.Item>
-  <Breadcrumb.Item isCurrent>
-    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
-  </Breadcrumb.Item>
+<Theme component={'Breadcrumb'} overrides={['Breadcrumb.styles.base', 'Breadcrumb.Item.styles.base', 'Breadcrumb.Link.styles.base', 'Breadcrumb.Separator.styles.base']}>
+  <BreadcrumbItem>
+    <BreadcrumbLink href="#">Home</BreadcrumbLink>
+  </BreadcrumbItem>
+  <BreadcrumbItem>
+    <BreadcrumbLink href="#">Business</BreadcrumbLink>
+  </BreadcrumbItem>
+  <BreadcrumbItem isCurrent>
+    <BreadcrumbLink href="#">Staff Members</BreadcrumbLink>
+  </BreadcrumbItem>
 </Theme>

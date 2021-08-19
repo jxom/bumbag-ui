@@ -1,7 +1,3 @@
-import PropTypes from '../../components/PropTypes';
-import Theme from '../../components/Theme';
-import { Columns } from 'bumbag';
-
 # Columns
 
 Bumbag uses a **12 column** flexbox based responsive column system.
@@ -702,14 +698,14 @@ Sets the spacing between each column.
 
 ## Theming
 
-<Theme component={Columns} overrides={['Columns.styles.base']}>
+<Theme component={'Columns'} overrides={['Columns.styles.base']}>
   <Column>Column 1</Column>
   <Column>Column 2</Column>
   <Column>Column 3</Column>
   <Column>Column 4</Column>
 </Theme>
 
-<Theme component={Columns} injectOverrides={false} overrides={['Columns.Column.styles.base']}>
+<Theme component={'Columns'} injectOverrides={false} overrides={['Columns.Column.styles.base']}>
   {({ overrides }) => (
     <React.Fragment>
       <Column overrides={overrides}>Column 1</Column>

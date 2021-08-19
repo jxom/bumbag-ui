@@ -1,6 +1,3 @@
-import { Overlay } from 'bumbag';
-import Theme from '../../components/Theme';
-
 # Overlay
 
 The Overlay component inheritely uses the [`Modal` component](/utilities/modal), however its focus is not trapped, it is not rendered in a portal and the background is scrollable.
@@ -834,10 +831,10 @@ Sets `modal`.
 
 ## Theming
 
-<Theme component={Overlay} overrides={['Overlay.styles.base', 'Overlay.styles.placements.center', 'Overlay.styles.placements.left', 'Overlay.styles.placements.right', 'Overlay.styles.placements.top', 'Overlay.styles.placements.bottom', 'Overlay.styles.placements.topStart', 'Overlay.styles.placements.topEnd', 'Overlay.styles.placements.bottomStart', 'Overlay.styles.placements.bottomEnd']}>
+<Theme component={'Overlay'} overrides={['Overlay.styles.base', 'Overlay.styles.placements.center', 'Overlay.styles.placements.left', 'Overlay.styles.placements.right', 'Overlay.styles.placements.top', 'Overlay.styles.placements.bottom', 'Overlay.styles.placements.topStart', 'Overlay.styles.placements.topEnd', 'Overlay.styles.placements.bottomStart', 'Overlay.styles.placements.bottomEnd']}>
   Hello world
 </Theme>
 
-<Theme component={Overlay.Disclosure} overrides={['Overlay.Disclosure.styles.base']}>
+<Theme component={'OverlayDisclosure'} overrides={['Overlay.Disclosure.styles.base']}>
   Hello world
 </Theme>

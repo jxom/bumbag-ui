@@ -1,6 +1,3 @@
-import { Modal, Key } from 'bumbag';
-import Theme from '../../components/Theme';
-
 # Modal
 
 The Modal component inheritely uses [Reakit's Modal component](https://reakit.io/docs/dialog/) and follows the [WAI-ARIA Modal Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal). It is rendered within a [Portal](/utilities/portal) & focus is trapped by default.
@@ -1045,14 +1042,14 @@ Sets `modal`.
 
 ## Theming
 
-<Theme component={Modal} overrides={['Modal.styles.base', 'Modal.styles.placements.center', 'Modal.styles.placements.left', 'Modal.styles.placements.right', 'Modal.styles.placements.top', 'Modal.styles.placements.bottom', 'Modal.styles.placements.topStart', 'Modal.styles.placements.topEnd', 'Modal.styles.placements.bottomStart', 'Modal.styles.placements.bottomEnd']}>
+<Theme component={'Modal'} overrides={['Modal.styles.base', 'Modal.styles.placements.center', 'Modal.styles.placements.left', 'Modal.styles.placements.right', 'Modal.styles.placements.top', 'Modal.styles.placements.bottom', 'Modal.styles.placements.topStart', 'Modal.styles.placements.topEnd', 'Modal.styles.placements.bottomStart', 'Modal.styles.placements.bottomEnd']}>
   Hello world
 </Theme>
 
-<Theme component={Modal.Disclosure} overrides={['Modal.Disclosure.styles.base']}>
+<Theme component={'ModalDisclosure'} overrides={['Modal.Disclosure.styles.base']}>
   Hello world
 </Theme>
 
-<Theme component={Modal.Backdrop} overrides={['Modal.Backdrop.styles.base']}>
+<Theme component={'ModalBackdrop'} overrides={['Modal.Backdrop.styles.base']}>
   Hello world
 </Theme>

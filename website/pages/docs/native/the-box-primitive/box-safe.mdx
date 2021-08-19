@@ -3,9 +3,6 @@ title: Box.Safe
 group: Primitives
 ---
 
-import Theme from '../../../components/Theme';
-import { Box } from 'bumbag-native';
-
 # Box.Safe
 
 Wrapper around [React Native's `SafeAreaView`](https://reactnative.dev/docs/next/safeareaview).
@@ -549,4 +546,4 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 ## Theming
 
-<Theme component={Box.Safe} overrides={['Box.Safe.styles.base']}>This is a box</Theme>
+<Theme component={'BoxSafe'} platform="native" overrides={['Box.Safe.styles.base']}>This is a box</Theme>

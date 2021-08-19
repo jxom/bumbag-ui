@@ -1,6 +1,3 @@
-import Theme from '../../components/Theme';
-import { Icon } from 'bumbag';
-
 # Icon
 
 Bumbag aims to have a **low bundle size** & be **icon agnostic**, hence it does not come with a default icon set (apart from status icons).
@@ -298,7 +295,7 @@ Size of the icon.
 
 ## Theming
 
-<Theme component={Icon} overrides={[{ key: 'Icon.styles.base', props: { icon: 'solid-igloo' } }]} />
+<Theme component={'Icon'} overrides={[{ key: 'Icon.styles.base', props: { icon: 'solid-igloo' } }]} />
 
 <Box marginBottom="major-2"><Code fontWeight="semibold">Icon.iconSets</Code></Box>
 

@@ -1,6 +1,3 @@
-import { Disclosure } from 'bumbag';
-import Theme from '../../components/Theme';
-
 # Disclosure
 
 The `<Disclosure>` utility component can be used to control visibility of it's content. It is an export of [Reakit's Disclosure](https://reakit.io/docs/disclosure/)
@@ -527,10 +524,10 @@ Stops animation. It's called automatically if there's a CSS transition.
 
 ## Theming
 
-<Theme component={Disclosure} overrides={[{ key: 'Disclosure.styles.base' }]}>
+<Theme component={'Disclosure'} overrides={[{ key: 'Disclosure.styles.base' }]}>
   Hello world
 </Theme>
 
-<Theme component={Disclosure.Content} overrides={[{ key: 'Disclosure.Content.styles.base', props: { visible: true } }]}>
+<Theme component={'DisclosureContent'} overrides={[{ key: 'Disclosure.Content.styles.base', props: { visible: true } }]}>
   Hello world
 </Theme>

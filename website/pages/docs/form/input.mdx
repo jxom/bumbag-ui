@@ -1,6 +1,3 @@
-import Theme from '../../components/Theme';
-import { Input, InputField } from 'bumbag';
-
 # Input
 
 The `<Input>` component is used in a form in order to retrieve input from the user.
@@ -1070,7 +1067,7 @@ Sets the bottom validation text of the field wrapper.
 ### Input
 
 <Theme
-  component={Input}
+  component={'Input'}
   overrides={[
     'Input.styles.base',
     {key: 'Input.styles.placeholder', props: { placeholder: 'I am a placeholder' }},
@@ -1081,7 +1078,7 @@ Sets the bottom validation text of the field wrapper.
 ### InputField
 
 <Theme
-  component={InputField}
+  component={'InputField'}
   label="This is a label"
   overrides={[
     'InputField.styles.base'

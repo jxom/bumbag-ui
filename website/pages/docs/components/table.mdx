@@ -1,6 +1,3 @@
-import Theme from '../../components/Theme';
-import { Table } from 'bumbag';
-
 # Table
 
 ## Import
@@ -958,37 +955,37 @@ Sets the variant of the table.
 <Theme component="div" overrides={['Table.styles.base', 'Table.Head.styles.base', 'Table.HeadCell.styles.base', 'Table.Body.styles.base', 'Table.Row.styles.base', 'Table.Cell.styles.base', 'Table.Foot.styles.base', 'Table.styles.responsive.base', 'Table.styles.responsive.headCellText']}>
   {props => (
     <Table overrides={props.overrides} isResponsive>
-      <Table.Head>
-        <Table.Row>
-          <Table.HeadCell>Name</Table.HeadCell>
-          <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
-          <Table.HeadCell textAlign="right">Price</Table.HeadCell>
-        </Table.Row>
-      </Table.Head>
-      <Table.Body>
-        <Table.Row>
-          <Table.Cell>Nike</Table.Cell>
-          <Table.Cell textAlign="right">3</Table.Cell>
-          <Table.Cell textAlign="right">$9.00</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Adidas</Table.Cell>
-          <Table.Cell textAlign="right">4</Table.Cell>
-          <Table.Cell textAlign="right">$12.00</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>North Face</Table.Cell>
-          <Table.Cell textAlign="right">5</Table.Cell>
-          <Table.Cell textAlign="right">$15.00</Table.Cell>
-        </Table.Row>
-      </Table.Body>
-      <Table.Foot fontWeight="semibold">
-        <Table.Row>
-          <Table.Cell>Total</Table.Cell>
-          <Table.Cell />
-          <Table.Cell textAlign="right">$36.00</Table.Cell>
-        </Table.Row>
-      </Table.Foot>
+      <TableHead>
+        <TableRow>
+          <TableHeadCell>Name</TableHeadCell>
+          <TableHeadCell textAlign="right">Quantity</TableHeadCell>
+          <TableHeadCell textAlign="right">Price</TableHeadCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Nike</TableCell>
+          <TableCell textAlign="right">3</TableCell>
+          <TableCell textAlign="right">$9.00</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Adidas</TableCell>
+          <TableCell textAlign="right">4</TableCell>
+          <TableCell textAlign="right">$12.00</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>North Face</TableCell>
+          <TableCell textAlign="right">5</TableCell>
+          <TableCell textAlign="right">$15.00</TableCell>
+        </TableRow>
+      </TableBody>
+      <TableFoot fontWeight="semibold">
+        <TableRow>
+          <TableCell>Total</TableCell>
+          <TableCell />
+          <TableCell textAlign="right">$36.00</TableCell>
+        </TableRow>
+      </TableFoot>
     </Table>
   )}
 </Theme>

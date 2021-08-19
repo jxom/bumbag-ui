@@ -1,6 +1,3 @@
-import Theme from '../../../components/Theme';
-import { Input as RNInput, InputField } from 'bumbag-native';
-
 # Input
 
 The `<Input>` component is used in a form in order to retrieve input from the user.
@@ -1599,8 +1596,9 @@ When false, it will prevent the soft keyboard from showing when the field is foc
 
 ### Input
 
-<Theme
-  component={RNInput}
+ <Theme
+  component={'Input'}
+  platform="native"
   overrides={[
     'Input.styles.base',
     { key: 'Input.styles.disabled', props: { disabled: true } },

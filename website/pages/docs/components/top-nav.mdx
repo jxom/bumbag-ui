@@ -1,8 +1,3 @@
-import Theme from '../../components/Theme';
-import { TopNav } from 'bumbag';
-import { List } from 'bumbag';
-import { Link } from 'bumbag';
-
 # TopNav
 
 The `<TopNav>` component renders a list of links or items used for navigation.
@@ -221,21 +216,21 @@ function Example() {
 <Theme component="div" overrides={['TopNav.styles.base', 'TopNav.Section.styles.base', 'TopNav.Item.styles.base', 'TopNav.Item.styles.active', 'TopNav.Item.styles.hover', 'TopNav.Item.styles.focus']}>
   {props => (
     <TopNav defaultSelectedId="get-started" overrides={props.overrides}>
-      <TopNav.Section>
-        <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+      <TopNavSection>
+        <TopNavItem href="https://bumbag.style" fontWeight="semibold">
           <Image src="/logo.png" height="44px" />
-        </TopNav.Item>
-        <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
-        <TopNav.Item navId="components" href="#">Components</TopNav.Item>
-      </TopNav.Section>
-      <TopNav.Section>
-        <TopNav.Item>
+        </TopNavItem>
+        <TopNavItem navId="get-started" href="#">Get started</TopNavItem>
+        <TopNavItem navId="components" href="#">Components</TopNavItem>
+      </TopNavSection>
+      <TopNavSection>
+        <TopNavItem>
           <Button variant="ghost" palette="primary">Sign up</Button>
-        </TopNav.Item>
-        <TopNav.Item>
+        </TopNavItem>
+        <TopNavItem>
           <Button palette="primary">Login</Button>
-        </TopNav.Item>
-      </TopNav.Section>
+        </TopNavItem>
+      </TopNavSection>
     </TopNav>
   )}
 </Theme>

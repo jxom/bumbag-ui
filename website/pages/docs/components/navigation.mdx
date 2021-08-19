@@ -1,8 +1,3 @@
-import Theme from '../../components/Theme';
-import { Navigation } from 'bumbag';
-import { List } from 'bumbag';
-import { Link } from 'bumbag';
-
 # Navigation
 
 The `<Navigation>` component renders `<nav>` under the hood.
@@ -129,7 +124,7 @@ The `<Navigation>` component follows the [WAI ARIA Navigation Pattern](https://w
 ## Theming
 
 <Theme
-  component={Navigation}
+  component={'Navigation'}
   overrides={['Navigation.styles.base']}>
-  <List><List.Item><Link href="https://google.com">Google</Link></List.Item><List.Item><Link href="https://github.com">GitHub</Link></List.Item></List>
+  <List><ListItem><Link href="https://google.com">Google</Link></ListItem><ListItem><Link href="https://github.com">GitHub</Link></ListItem></List>
 </Theme>

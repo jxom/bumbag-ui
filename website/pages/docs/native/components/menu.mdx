@@ -3,9 +3,6 @@ title: Menu
 path: /native/components/menu
 ---
 
-import Theme from '../../../components/Theme';
-import { Box as BNBox, Menu as BNMenu, Key } from 'bumbag-native';
-
 # Menu
 
 ## Import
@@ -3148,21 +3145,21 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
 
 ## Theming
 
-<Theme component={BNBox} overrides={['Menu.styles.base', 'Menu.Item.styles.base', 'Menu.Item.Content.styles.base', 'Menu.Item.ContentText.styles.base']}>
+<Theme component={'Box'} platform="native" overrides={['Menu.styles.base', 'Menu.Item.styles.base', 'Menu.Item.Content.styles.base', 'Menu.Item.ContentText.styles.base']}>
   {props => (
-    <BNMenu overrides={props.overrides}>
-      <BNMenu.Item>
+    <Menu overrides={props.overrides}>
+      <MenuItem>
         General
-      </BNMenu.Item>
-      <BNMenu.Item>
+      </MenuItem>
+      <MenuItem>
         Accounts
-      </BNMenu.Item>
-      <BNMenu.Item>
+      </MenuItem>
+      <MenuItem>
         Alerts
-      </BNMenu.Item>
-      <BNMenu.Item>
+      </MenuItem>
+      <MenuItem>
         Security
-      </BNMenu.Item>
-    </BNMenu>
+      </MenuItem>
+    </Menu>
   )}
 </Theme>

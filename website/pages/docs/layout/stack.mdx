@@ -1,7 +1,3 @@
-import PropTypes from '../../components/PropTypes';
-import Theme from '../../components/Theme';
-import { Stack } from 'bumbag';
-
 # Stack
 
 ## Import
@@ -200,8 +196,8 @@ Indicates the breakpoint at which the stack should become vertical.
 
 ## Theming
 
-<Theme
-  component={Stack}
+ <Theme
+  component={'Stack'}
   padding="major-3"
   overrides={['Stack.styles.base', 'Stack.styles.child.base', 'Stack.styles.vertical', 'Stack.styles.child.vertical', { key: 'Stack.styles.horizontal', props: { orientation: 'horizontal' } }, { key: 'Stack.styles.child.horizontal', props: { orientation: 'horizontal' } }]}>
   <Box backgroundColor="white700" padding="major-3">

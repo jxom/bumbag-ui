@@ -1,7 +1,3 @@
-import Theme from '../../components/Theme';
-import { DropdownMenu } from 'bumbag';
-import { Key, Link } from 'bumbag';
-
 # DropdownMenu
 
 The `<DropdownMenu>` component renders a dropdown menu that is attached to a disclosure (a button).
@@ -968,30 +964,30 @@ Separator's orientation.
       overrides={props.overrides}
       menu={
         <React.Fragment>
-          <DropdownMenu.Group title="Actions">
-            <DropdownMenu.Item iconBefore="solid-pen">
+          <DropdownMenuGroup title="Actions">
+            <DropdownMenuItem iconBefore="solid-pen">
               Edit
-            </DropdownMenu.Item>
-            <DropdownMenu.Item iconBefore="solid-share">
+            </DropdownMenuItem>
+            <DropdownMenuItem iconBefore="solid-share">
               Share
-            </DropdownMenu.Item>
-            <DropdownMenu.Item iconBefore="solid-file-signature">
+            </DropdownMenuItem>
+            <DropdownMenuItem iconBefore="solid-file-signature">
               Rename
-            </DropdownMenu.Item>
-            <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger">
+            </DropdownMenuItem>
+            <DropdownMenuItem iconBefore="solid-trash-alt" color="danger">
               Delete
-            </DropdownMenu.Item>
-          </DropdownMenu.Group>
-          <DropdownMenu.Divider />
-          <DropdownMenu.Group title="Links">
-            <DropdownMenu.Item
-              use={Link}
+            </DropdownMenuItem>
+          </DropdownMenuGroup>
+          <DropdownMenuDivider />
+          <DropdownMenuGroup title="Links">
+            <DropdownMenuItem
+              use="a"
               iconAfter="solid-external-link-alt"
               href="https://google.com"
             >
               Go to Google
-            </DropdownMenu.Item>
-          </DropdownMenu.Group>
+            </DropdownMenuItem>
+          </DropdownMenuGroup>
         </React.Fragment>
       }
     >

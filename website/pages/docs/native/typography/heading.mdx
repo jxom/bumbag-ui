@@ -3,9 +3,6 @@ title: Heading
 path: /native/typography/heading
 ---
 
-import Theme from '../../../components/Theme';
-import { Heading as BBHeading } from 'bumbag-native';
-
 # Heading
 
 The `<Heading>` component renders a React Native `<Text>` component by default, with extra styling and configurations.
@@ -747,40 +744,11 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
 
 ## Theming
 
-<Theme
-  component={BBHeading}
+ <Theme
+  component={'Heading'}
+  platform="native"
   overrides={[
-    'Heading.styles.base',
-    {
-      key: 'Heading.H1.styles.base',
-      component: BBHeading.H1,
-      description: 'Applies when the heading is H1. `<Heading.H1>`'
-    },
-    {
-      key: 'Heading.H2.styles.base',
-      component: BBHeading.H2,
-      description: 'Applies when the heading is H2. `<Heading.H2>`'
-    },
-    {
-      key: 'Heading.H3.styles.base',
-      component: BBHeading.H3,
-      description: 'Applies when the heading is H3. `<Heading.H3>`'
-    },
-    {
-      key: 'Heading.H4.styles.base',
-      component: BBHeading.H4,
-      description: 'Applies when the heading is H4. `<Heading.H4>`'
-    },
-    {
-      key: 'Heading.H5.styles.base',
-      component: BBHeading.H5,
-      description: 'Applies when the heading is H5. `<Heading.H5>`'
-    },
-    {
-      key: 'Heading.H6.styles.base',
-      component: BBHeading.H6,
-      description: 'Applies when the heading is H6. `<Heading.H6>`'
-    }
+    'Heading.styles.base'
   ]}>
   Hello world
 </Theme>

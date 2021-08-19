@@ -1,6 +1,3 @@
-import { Drawer } from 'bumbag';
-import Theme from '../../components/Theme';
-
 # Drawer
 
 The `<Drawer>` component inherits the [Modal component](/utilities/modal) and renders a modal overlay to a particular side of the screen.
@@ -781,16 +778,16 @@ Sets `modal`.
 
 <Theme component="div" overrides={['Drawer.styles.base', 'Drawer.styles.placements.left', 'Drawer.styles.placements.right', 'Drawer.Backdrop.styles.base', 'Drawer.Disclosure.styles.base']}>
   {props => (
-    <Drawer.State>
+    <DrawerState>
       {drawer => (
         <React.Fragment>
-          <Drawer.Disclosure overrides={props.overrides} {...drawer}>Toggle</Drawer.Disclosure>
+          <DrawerDisclosure overrides={props.overrides} {...drawer}>Toggle</DrawerDisclosure>
           <Drawer overrides={props.overrides} {...drawer}>
             This is a side overlay
             <Button onClick={drawer.hide}>Close</Button>
           </Drawer>
         </React.Fragment>
       )}
-    </Drawer.State>
+    </DrawerState>
   )}
 </Theme>

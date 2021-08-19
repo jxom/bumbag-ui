@@ -1,6 +1,3 @@
-import Theme from '../../components/Theme';
-import { Spinner } from 'bumbag';
-
 # Spinner
 
 The `<Spinner>` component can be used to render a visual cue that something is loading.
@@ -205,4 +202,4 @@ Progress value of the spinner.
 
 ## Theming
 
-<Theme component={Spinner} overrides={['Spinner.styles.base', 'Spinner.vector.styles.base', { key: 'Spinner.loaderCircle.styles.base', highlightAttribute: 'stroke' }, { key: 'Spinner.trackCircle.styles.base', highlightAttribute: 'stroke', props: { hasTrack: true } }]}>Hello world</Theme>
+<Theme component={'Spinner'} overrides={['Spinner.styles.base', 'Spinner.vector.styles.base', { key: 'Spinner.loaderCircle.styles.base', highlightAttribute: 'stroke' }, { key: 'Spinner.trackCircle.styles.base', highlightAttribute: 'stroke', props: { hasTrack: true } }]}>Hello world</Theme>

@@ -1,7 +1,3 @@
-import Theme from '../../components/Theme';
-import { Menu } from 'bumbag';
-import { Link } from 'bumbag';
-
 # Menu
 
 ## Import
@@ -591,30 +587,30 @@ Separator's orientation.
 <Theme component="div" overrides={['Menu.styles.base', 'Menu.Item.styles.base', 'Menu.Item.Icon.styles.base', 'Menu.Divider.styles.base', 'Menu.Group.styles.base', 'Menu.Group.Title.styles.base']}>
   {props => (
     <Menu overrides={props.overrides}>
-      <Menu.Group title="Actions">
-        <Menu.Item iconBefore="solid-pen">
+      <MenuGroup title="Actions">
+        <MenuItem iconBefore="solid-pen">
           Edit
-        </Menu.Item>
-        <Menu.Item iconBefore="solid-share">
+        </MenuItem>
+        <MenuItem iconBefore="solid-share">
           Share
-        </Menu.Item>
-        <Menu.Item iconBefore="solid-file-signature">
+        </MenuItem>
+        <MenuItem iconBefore="solid-file-signature">
           Rename
-        </Menu.Item>
-        <Menu.Item iconBefore="solid-trash-alt" color="danger">
+        </MenuItem>
+        <MenuItem iconBefore="solid-trash-alt" color="danger">
           Delete
-        </Menu.Item>
-      </Menu.Group>
-      <Menu.Divider />
-      <Menu.Group title="Links">
-        <Menu.Item
-          use={Link}
+        </MenuItem>
+      </MenuGroup>
+      <MenuDivider />
+      <MenuGroup title="Links">
+        <MenuItem
+          use={'a'}
           iconAfter="solid-external-link-alt"
           href="https://google.com"
         >
           Go to Google
-        </Menu.Item>
-      </Menu.Group>
+        </MenuItem>
+      </MenuGroup>
     </Menu>
   )}
 </Theme>

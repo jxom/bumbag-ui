@@ -5,11 +5,15 @@ import DocsLayout from '../../layouts/DocsLayout';
 import getMDXFiles, { getMDXFileFromSlug } from '../../utils/getMDXFiles';
 import useDocsComponents from '../../hooks/useDocsComponents';
 
-DocsPage.getLayout = (page) => <DocsLayout>{page}</DocsLayout>;
+// DocsPage.getLayout = (page) => <DocsLayout>{page}</DocsLayout>;
 
-export default function DocsPage({ path, mdx }) {
-  const { components } = useDocsComponents({ type: path.includes('native') ? 'native' : 'docs' });
-  return <MDXRemote {...mdx.source} components={components} />;
+export default function DocsPage({ platform, mdx, mdxFiles }) {
+  const { components } = useDocsComponents({ platform });
+  return (
+    <DocsLayout mdxFiles={mdxFiles}>
+      <MDXRemote {...mdx.source} components={components} />
+    </DocsLayout>
+  );
 }
 
 export async function getStaticPaths() {
@@ -26,6 +30,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
+  const mdxFiles = await getMDXFiles('/pages/docs');
   const mdxFile = await getMDXFileFromSlug('/pages/docs', slug);
-  return { props: { ...mdxFile } };
+  return { props: { ...mdxFile, mdxFiles } };
 }

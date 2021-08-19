@@ -1,7 +1,3 @@
-import PropTypes from '../../components/PropTypes';
-import Theme from '../../components/Theme';
-import { Set } from 'bumbag';
-
 # Set
 
 ## Import
@@ -241,8 +237,8 @@ Indicates the breakpoint at which the set should become vertical.
 
 ## Theming
 
-<Theme
-  component={Set}
+ <Theme
+  component={'Set'}
   overrides={['Set.styles.base', 'Set.styles.child.base', 'Set.styles.child.first', 'Set.styles.child.middle', 'Set.styles.child.last', 'Set.styles.horizontal', 'Set.styles.child.horizontal', { key: 'Set.styles.vertical', props: { orientation: 'vertical' } }, { key: 'Set.styles.child.vertical', props: { orientation: 'vertical' } }]}>
   <Button>Hello</Button>
   <Button>My</Button>

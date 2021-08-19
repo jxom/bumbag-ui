@@ -30,6 +30,11 @@ const orders = [
   { addons: [] },
 ];
 
-export default function DocsSidebar() {
-  return <Sidebar orders={orders} items={[]} path={''} />;
+export default function DocsSidebar({ mdxFiles }) {
+  const items = mdxFiles.reduce((currentItems, file) => {
+    const item = file;
+    let relativeDirectory = (item.relativeDirectory || '').slice(1);
+    return { ...currentItems, [relativeDirectory]: [...(currentItems[relativeDirectory] || []), item] };
+  }, {});
+  return <Sidebar orders={orders} items={items} path={''} />;
 }

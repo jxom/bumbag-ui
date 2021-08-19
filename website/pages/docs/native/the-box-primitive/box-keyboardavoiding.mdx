@@ -3,9 +3,6 @@ title: Box.KeyboardAvoiding
 group: Primitives
 ---
 
-import Theme from '../../../components/Theme';
-import { Box } from 'bumbag-native';
-
 # Box.KeyboardAvoiding
 
 Wrapper around [React Native's `KeyboardAvoidingView`](https://reactnative.dev/docs/next/keyboardavoidingview).
@@ -588,4 +585,4 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 ## Theming
 
-<Theme component={Box.KeyboardAvoiding} overrides={['Box.KeyboardAvoiding.styles.base']}>This is a box</Theme>
+<Theme component={'BoxKeyboardAvoiding'} platform="native" overrides={['Box.KeyboardAvoiding.styles.base']}>This is a box</Theme>

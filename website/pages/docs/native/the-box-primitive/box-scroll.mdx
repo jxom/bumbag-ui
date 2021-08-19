@@ -3,9 +3,6 @@ title: Box.Scroll
 group: Primitives
 ---
 
-import Theme from '../../../components/Theme';
-import { Box } from 'bumbag-native';
-
 # Box.Scroll
 
 Wrapper around [React Native's `ScrollView`](https://reactnative.dev/docs/next/scrollview).
@@ -1072,4 +1069,4 @@ Causes the scrollbars not to turn transparent when they are not in use. The defa
 
 ## Theming
 
-<Theme component={Box.Scroll} overrides={['Box.Scroll.styles.base']}>This is a box</Theme>
+<Theme component={'BoxScroll'} platform="native" overrides={['Box.Scroll.styles.base']}>This is a box</Theme>

@@ -3,9 +3,6 @@ title: Fonts & typography
 path: /fonts-typography/
 ---
 
-import { Image } from 'bumbag';
-import CapsizeExample from '../components/CapsizeExample';
-
 # Fonts & typography
 
 ## Font stack
@@ -85,9 +82,7 @@ export default () => (
 
 ## Font trimming & metrics
 
-Thanks to [Capsize](https://github.com/seek-oss/capsize), Bumbag trims the unpredictable space above capital letters and below the font baseline. Check out the example below:
-
-<CapsizeExample />
+Thanks to [Capsize](https://github.com/seek-oss/capsize), Bumbag trims the unpredictable space above capital letters and below the font baseline. 
 
 Bumbag provides font metrics out of the box for the default theme fonts. However, if you modify the fonts in the theme, you will need to provide font metrics for your custom font. If you don't provide font metrics, your custom fonts will still work but you may see inconsistencies in the white space trimming of the text.
 

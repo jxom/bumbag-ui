@@ -3,9 +3,6 @@ title: Pressable
 path: /native/utilities/pressable
 ---
 
-import Theme from '../../../components/Theme';
-import { Box, Pressable, Text } from 'bumbag-native';
-
 # Pressable
 
 Wrapper around [React Native's `Pressable`](https://reactnative.dev/docs/next/pressable).
@@ -613,6 +610,6 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
 
 ## Theming
 
-<Theme component={Pressable} overrides={['Pressable.styles.base']}>
+<Theme component={'Pressable'} overrides={['Pressable.styles.base']}>
   <Text>This is a box</Text>
 </Theme>

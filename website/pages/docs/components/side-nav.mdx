@@ -1,8 +1,3 @@
-import Theme from '../../components/Theme';
-import { SideNav } from 'bumbag';
-import { List } from 'bumbag';
-import { Link } from 'bumbag';
-
 # SideNav
 
 The `<SideNav>` component renders a list of links (that can be structured into levels) used for navigation.
@@ -447,25 +442,25 @@ Indicates the orientation of the list.
 <Theme component="div" overrides={['SideNav.styles.base', 'SideNav.Level.styles.base', 'SideNav.Level.Title.styles.base', 'SideNav.Item.styles.base', 'SideNav.Item.styles.active']}>
   {props => (
     <SideNav defaultSelectedId="list" overrides={props.overrides}>
-      <SideNav.Level title="Components">
-        <SideNav.Item href="#" navId="button">Button</SideNav.Item>
-        <SideNav.Item href="#" navId="list">List</SideNav.Item>
-        <SideNav.Item href="#" navId="menu">Menu</SideNav.Item>
-        <SideNav.Level>
-          <SideNav.Item href="#" navId="menuItem">Menu.Item</SideNav.Item>
-          <SideNav.Item href="#" navId="menuGroup">Menu.Group</SideNav.Item>
-          <SideNav.Level>
-            <SideNav.Item navId="menuGroupProps" onClick={() => console.log('props')}>Props</SideNav.Item>
-          </SideNav.Level>
-        </SideNav.Level>
-      </SideNav.Level>
-      <SideNav.Level title="Utilities">
-        <SideNav.Item href="#" navId="hidden">Hidden</SideNav.Item>
-        <SideNav.Item href="#" navId="rover">Rover</SideNav.Item>
-        <SideNav.Level>
-          <SideNav.Item navId="roverProps" onClick={() => console.log('props')}>Props</SideNav.Item>
-        </SideNav.Level>
-      </SideNav.Level>
+      <SideNavLevel title="Components">
+        <SideNavItem href="#" navId="button">Button</SideNavItem>
+        <SideNavItem href="#" navId="list">List</SideNavItem>
+        <SideNavItem href="#" navId="menu">Menu</SideNavItem>
+        <SideNavLevel>
+          <SideNavItem href="#" navId="menuItem">Menu.Item</SideNavItem>
+          <SideNavItem href="#" navId="menuGroup">Menu.Group</SideNavItem>
+          <SideNavLevel>
+            <SideNavItem navId="menuGroupProps" onClick={() => console.log('props')}>Props</SideNavItem>
+          </SideNavLevel>
+        </SideNavLevel>
+      </SideNavLevel>
+      <SideNavLevel title="Utilities">
+        <SideNavItem href="#" navId="hidden">Hidden</SideNavItem>
+        <SideNavItem href="#" navId="rover">Rover</SideNavItem>
+        <SideNavLevel>
+          <SideNavItem navId="roverProps" onClick={() => console.log('props')}>Props</SideNavItem>
+        </SideNavLevel>
+      </SideNavLevel>
     </SideNav>
   )}
 </Theme>

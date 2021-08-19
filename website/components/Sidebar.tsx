@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Input, Stack, SideNav as _SideNav, usePage, applyTheme } from 'bumbag';
+import { Box, Link, Input, Stack, SideNav as _SideNav, usePage, applyTheme } from 'bumbag';
 import NextLink from 'next/link';
 import _startCase from 'lodash/startCase';
 import _uniqBy from 'lodash/uniqBy';
@@ -121,25 +121,24 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
     <Box ref={sideNavItemRef}>
       <SideNav.Level title={_startCase(key)} display={!show ? 'none' : undefined}>
         {(items || []).filter(Boolean).map((item) => {
-          const frontmatter = item.childMdx?.frontmatter || {};
+          const frontmatter = item.mdx?.frontmatter || {};
           const title = frontmatter.title || _startCase(item.name).replace(/\s/g, '');
           if (!searchText || title.toLowerCase().includes(searchText.toLowerCase())) {
             return (
-              <SideNav.Item
-                key={item.name}
-                onClick={() => setTimeout(sidebar.drawer.hide, 100)}
-                navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}
+              <NextLink
+                href={`${`/docs${item.path}/`}${typeof window !== 'undefined' ? window.location.search : ''}`}
+                passHref
               >
-                <NextLink
-                  href={`${frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}${
-                    typeof window !== 'undefined' ? window.location.search : ''
-                  }`}
-                >
-                  <Box style={frontmatter.wip ? { color: '#92a0bb' } : {}}>
+                <Link textDecoration="none">
+                  <SideNav.Item
+                    key={item.name}
+                    onClick={() => setTimeout(sidebar.drawer.hide, 100)}
+                    navId={`/docs${item.path}/`}
+                  >
                     {title} {frontmatter.wip ? '🚧' : ''}
-                  </Box>
-                </NextLink>
-              </SideNav.Item>
+                  </SideNav.Item>
+                </Link>
+              </NextLink>
             );
           }
           return null;

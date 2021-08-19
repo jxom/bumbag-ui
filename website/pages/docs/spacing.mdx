@@ -4,8 +4,6 @@ title: Spacing
 path: /spacing/
 ---
 
-import { Code, Table } from 'bumbag';
-
 # Spacing
 
 Bumbag uses two types of scales for its spacing system: the **8px major scale** and the **4px minor scale**.
@@ -23,52 +21,52 @@ Bumbag also exports a utility function called `space` to help you with calculati
 > Note: It is recommended to try stick to the 8px scale unless you need more precision. In that case, use the **4px minor scale**.
 
 <Table>
-  <Table.Head>
-    <Table.Row>
-      <Table.HeadCell>Token</Table.HeadCell>
-      <Table.HeadCell>px</Table.HeadCell>
-      <Table.HeadCell>rem</Table.HeadCell>
-      <Table.HeadCell>Utility function</Table.HeadCell>
-    </Table.Row>
-  </Table.Head>
-  <Table.Body>
-    <Table.Row>
-      <Table.Cell><Code>major-1</Code></Table.Cell>
-      <Table.Cell>8px</Table.Cell>
-      <Table.Cell>0.5rem</Table.Cell>
-      <Table.Cell><Code>space(1, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>major-2</Code></Table.Cell>
-      <Table.Cell>16px</Table.Cell>
-      <Table.Cell>1rem</Table.Cell>
-      <Table.Cell><Code>space(2, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>major-3</Code></Table.Cell>
-      <Table.Cell>24px</Table.Cell>
-      <Table.Cell>1.5rem</Table.Cell>
-      <Table.Cell><Code>space(3, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>major-4</Code></Table.Cell>
-      <Table.Cell>32px</Table.Cell>
-      <Table.Cell>2rem</Table.Cell>
-      <Table.Cell><Code>space(4, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>major-5</Code></Table.Cell>
-      <Table.Cell>40px</Table.Cell>
-      <Table.Cell>2.5rem</Table.Cell>
-      <Table.Cell><Code>space(5, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>major-n</Code></Table.Cell>
-      <Table.Cell>...</Table.Cell>
-      <Table.Cell>...</Table.Cell>
-      <Table.Cell><Code>space(n, 'major')</Code></Table.Cell>
-    </Table.Row>
-  </Table.Body>
+  <TableHead>
+    <TableRow>
+      <TableHeadCell>Token</TableHeadCell>
+      <TableHeadCell>px</TableHeadCell>
+      <TableHeadCell>rem</TableHeadCell>
+      <TableHeadCell>Utility function</TableHeadCell>
+    </TableRow>
+  </TableHead>
+  <TableBody>
+    <TableRow>
+      <TableCell><Code>major-1</Code></TableCell>
+      <TableCell>8px</TableCell>
+      <TableCell>0.5rem</TableCell>
+      <TableCell><Code>space(1, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>major-2</Code></TableCell>
+      <TableCell>16px</TableCell>
+      <TableCell>1rem</TableCell>
+      <TableCell><Code>space(2, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>major-3</Code></TableCell>
+      <TableCell>24px</TableCell>
+      <TableCell>1.5rem</TableCell>
+      <TableCell><Code>space(3, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>major-4</Code></TableCell>
+      <TableCell>32px</TableCell>
+      <TableCell>2rem</TableCell>
+      <TableCell><Code>space(4, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>major-5</Code></TableCell>
+      <TableCell>40px</TableCell>
+      <TableCell>2.5rem</TableCell>
+      <TableCell><Code>space(5, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>major-n</Code></TableCell>
+      <TableCell>...</TableCell>
+      <TableCell>...</TableCell>
+      <TableCell><Code>space(n, 'major')</Code></TableCell>
+    </TableRow>
+  </TableBody>
 </Table>
 
 #### Usage via style props
@@ -118,52 +116,52 @@ const SaveButton = styled(Button)`
 The **4px minor scale** is most commonly used for precise spacing (**margins & paddings**) of atomic components (e.g. the inner padding of a checkbox).
 
 <Table>
-  <Table.Head>
-    <Table.Row>
-      <Table.HeadCell>Token</Table.HeadCell>
-      <Table.HeadCell>px</Table.HeadCell>
-      <Table.HeadCell>rem</Table.HeadCell>
-      <Table.HeadCell>Utility</Table.HeadCell>
-    </Table.Row>
-  </Table.Head>
-  <Table.Body>
-    <Table.Row>
-      <Table.Cell><Code>minor-1</Code></Table.Cell>
-      <Table.Cell>4px</Table.Cell>
-      <Table.Cell>0.25rem</Table.Cell>
-      <Table.Cell><Code>space(1, 'minor')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>minor-2</Code></Table.Cell>
-      <Table.Cell>8px</Table.Cell>
-      <Table.Cell>0.5rem</Table.Cell>
-      <Table.Cell><Code>space(2, 'minor')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>minor-3</Code></Table.Cell>
-      <Table.Cell>12px</Table.Cell>
-      <Table.Cell>0.75rem</Table.Cell>
-      <Table.Cell><Code>space(3, 'minor')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>minor-4</Code></Table.Cell>
-      <Table.Cell>16px</Table.Cell>
-      <Table.Cell>1rem</Table.Cell>
-      <Table.Cell><Code>space(4, 'minor')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>minor-5</Code></Table.Cell>
-      <Table.Cell>20px</Table.Cell>
-      <Table.Cell>1.25rem</Table.Cell>
-      <Table.Cell><Code>space(5, 'minor')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>minor-n</Code></Table.Cell>
-      <Table.Cell>...</Table.Cell>
-      <Table.Cell>...</Table.Cell>
-      <Table.Cell><Code>space(n, 'minor')</Code></Table.Cell>
-    </Table.Row>
-  </Table.Body>
+  <TableHead>
+    <TableRow>
+      <TableHeadCell>Token</TableHeadCell>
+      <TableHeadCell>px</TableHeadCell>
+      <TableHeadCell>rem</TableHeadCell>
+      <TableHeadCell>Utility</TableHeadCell>
+    </TableRow>
+  </TableHead>
+  <TableBody>
+    <TableRow>
+      <TableCell><Code>minor-1</Code></TableCell>
+      <TableCell>4px</TableCell>
+      <TableCell>0.25rem</TableCell>
+      <TableCell><Code>space(1, 'minor')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>minor-2</Code></TableCell>
+      <TableCell>8px</TableCell>
+      <TableCell>0.5rem</TableCell>
+      <TableCell><Code>space(2, 'minor')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>minor-3</Code></TableCell>
+      <TableCell>12px</TableCell>
+      <TableCell>0.75rem</TableCell>
+      <TableCell><Code>space(3, 'minor')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>minor-4</Code></TableCell>
+      <TableCell>16px</TableCell>
+      <TableCell>1rem</TableCell>
+      <TableCell><Code>space(4, 'minor')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>minor-5</Code></TableCell>
+      <TableCell>20px</TableCell>
+      <TableCell>1.25rem</TableCell>
+      <TableCell><Code>space(5, 'minor')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>minor-n</Code></TableCell>
+      <TableCell>...</TableCell>
+      <TableCell>...</TableCell>
+      <TableCell><Code>space(n, 'minor')</Code></TableCell>
+    </TableRow>
+  </TableBody>
 </Table>
 
 #### Usage via style props
@@ -209,95 +207,95 @@ Bumbag has the ability for you to specify your own pre-defined set of spacings. 
 Bumbag has the following pre-defined attributes set by default:
 
 <Table>
-  <Table.Head>
-    <Table.Row>
-      <Table.HeadCell>Token</Table.HeadCell>
-      <Table.HeadCell>Size</Table.HeadCell>
-      <Table.HeadCell>Value</Table.HeadCell>
-    </Table.Row>
-  </Table.Head>
-  <Table.Body>
-    <Table.Row>
-      <Table.Cell><Code>xs</Code></Table.Cell>
-      <Table.Cell>
+  <TableHead>
+    <TableRow>
+      <TableHeadCell>Token</TableHeadCell>
+      <TableHeadCell>Size</TableHeadCell>
+      <TableHeadCell>Value</TableHeadCell>
+    </TableRow>
+  </TableHead>
+  <TableBody>
+    <TableRow>
+      <TableCell><Code>xs</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="xs" />
         <Box fontSize="100" marginTop="minor-1">8px - 0.5rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(1, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>sm</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(1, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>sm</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="sm" />
         <Box fontSize="100" marginTop="minor-1">16px - 1rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(2, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>md</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(2, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>md</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="md" />
         <Box fontSize="100" marginTop="minor-1">32px - 2rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(4, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>lg</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(4, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>lg</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="lg" />
         <Box fontSize="100" marginTop="minor-1">48px - 3rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(6, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>xl</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(6, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>xl</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="xl" />
         <Box fontSize="100" marginTop="minor-1">64px - 4rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(8, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>2xl</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(8, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>2xl</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="2xl" />
         <Box fontSize="100" marginTop="minor-1">96px - 6rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(12, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>3xl</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(12, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>3xl</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="3xl" />
         <Box fontSize="100" marginTop="minor-1">128px - 8rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(16, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>4xl</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(16, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>4xl</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="4xl" />
         <Box fontSize="100" marginTop="minor-1">160px - 10rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(20, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>5xl</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(20, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>5xl</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="5xl" />
         <Box fontSize="100" marginTop="minor-1">192px - 12rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(24, 'major')</Code></Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell><Code>6xl</Code></Table.Cell>
-      <Table.Cell>
+      </TableCell>
+      <TableCell><Code>space(24, 'major')</Code></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell><Code>6xl</Code></TableCell>
+      <TableCell>
         <Box backgroundColor="primary" height="10px" width="0px" paddingRight="6xl" />
         <Box fontSize="100" marginTop="minor-1">224px - 14rem</Box>
-      </Table.Cell>
-      <Table.Cell><Code>space(28, 'major')</Code></Table.Cell>
-    </Table.Row>
-  </Table.Body>
+      </TableCell>
+      <TableCell><Code>space(28, 'major')</Code></TableCell>
+    </TableRow>
+  </TableBody>
 </Table>
 
 #### Usage via style props

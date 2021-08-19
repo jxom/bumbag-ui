@@ -1,6 +1,3 @@
-import { Tabs } from 'bumbag';
-import Theme from '../../components/Theme';
-
 # Tabs
 
 The `<Tabs>` component is used alongside the `<Tabs.List>`, `<Tabs.Tab>` and `<Tabs.Panel>` components to create layered sections of content.
@@ -689,20 +686,20 @@ function Example() {
 <Theme component="div" overrides={['Tabs.styles.base', 'Tabs.List.styles.base', 'Tabs.Tab.styles.base', 'Tabs.Tab.styles.selected', 'Tabs.Tab.styles.focus', 'Tabs.Tab.styles.hover', 'Tabs.Panel.styles.base']}>
   {props => (
     <Tabs defaultSelectedId="tab1" {...props}>
-      <Tabs.List>
-        <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
-        <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
-        <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
-      </Tabs.List>
-      <Tabs.Panel tabId="tab1" padding="major-2">
+      <TabsList>
+        <TabsTab tabId="tab1">Dogs</TabsTab>
+        <TabsTab tabId="tab2">Cats</TabsTab>
+        <TabsTab tabId="tab3">Parrots</TabsTab>
+      </TabsList>
+      <TabsPanel tabId="tab1" padding="major-2">
         Dogs are awesome
-      </Tabs.Panel>
-      <Tabs.Panel tabId="tab2" padding="major-2">
+      </TabsPanel>
+      <TabsPanel tabId="tab2" padding="major-2">
         Cats are alright
-      </Tabs.Panel>
-      <Tabs.Panel tabId="tab3" padding="major-2">
+      </TabsPanel>
+      <TabsPanel tabId="tab3" padding="major-2">
         Parrots are cool
-      </Tabs.Panel>
+      </TabsPanel>
     </Tabs>
   )}
 </Theme>

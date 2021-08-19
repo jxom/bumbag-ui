@@ -1,4 +1,3 @@
-import path from 'path';
 import fs from 'fs';
 import shell from 'shelljs';
 import matter from 'gray-matter';
@@ -13,22 +12,33 @@ export async function getMDXFile(mdxDir, filePath) {
   const relativeDirectoryArray = pagesPathArray.slice(0, pagesPathArray.length - 1);
   const relativeDirectory = relativeDirectoryArray.join('/');
   const fileName = pagesPathArray[pagesPathArray.length - 1];
-  const path = `${relativeDirectory}/${fileName.replace('.mdx', '')}`;
+  const name = fileName.replace('.mdx', '');
+  const path = `${relativeDirectory}/${name}`;
 
-  const mdxSource = await serialize(content, {
-    // Optionally pass remark/rehype plugins
-    mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [],
-    },
-    scope: data,
-  });
+  let mdxSource;
+  try {
+    mdxSource = await serialize(content, {
+      // Optionally pass remark/rehype plugins
+      mdxOptions: {
+        remarkPlugins: [],
+        rehypePlugins: [],
+      },
+      scope: data,
+    });
+  } catch (err) {}
+
+  let platform = 'web';
+  if (path.includes('/native')) {
+    platform = 'native';
+  }
 
   return {
     filePath,
     fileName,
+    name,
     path,
     relativeDirectory,
+    platform,
     mdx: {
       content,
       source: mdxSource,

@@ -1,6 +1,3 @@
-import Theme from '../../../components/Theme';
-import { CheckboxGroup as BNCheckboxGroup, CheckboxGroupField as BNCheckboxGroupField } from 'bumbag-native';
-
 # CheckboxGroup
 
 ## Import
@@ -1666,8 +1663,9 @@ Sets the bottom validation text of the field wrapper.
 
 ### CheckboxGroup
 
-<Theme
-  component={BNCheckboxGroup}
+ <Theme
+  component={'CheckboxGroup'}
+  platform="native"
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
@@ -1680,8 +1678,9 @@ Sets the bottom validation text of the field wrapper.
 
 ### CheckboxGroupField
 
-<Theme
-  component={BNCheckboxGroupField}
+ <Theme
+  component={'CheckboxGroupField'}
+  platform="native"
   label="Weather"
   options={[
     { label: 'Sunny', value: 'sunny' },

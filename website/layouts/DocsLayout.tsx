@@ -17,6 +17,7 @@ const Sidebars = {
 
 type Props = {
   children: React.ReactNode;
+  mdxFiles?: any;
   pageContext?: any;
   path?: string;
   title?: string;
@@ -37,7 +38,7 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
 `;
 
 export default function Docs(props: Props) {
-  const { children, pageContext = {}, path = '' } = props;
+  const { children, mdxFiles = [], pageContext = {}, path = '' } = props;
 
   //////////////////////////////////////////////////////////////////////
 
@@ -55,7 +56,7 @@ export default function Docs(props: Props) {
       {/* <SEO title={title} /> */}
       <bumbag.PageWithHeader sticky header={<Header />}>
         <bumbag.PageWithSidebar
-          sidebar={<Sidebar path={path} />}
+          sidebar={<Sidebar mdxFiles={mdxFiles} path={path} />}
           sidebarPlacement="left"
           sidebarWidth="270px"
           overrides={{
