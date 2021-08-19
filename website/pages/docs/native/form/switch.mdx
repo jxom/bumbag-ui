@@ -1,0 +1,770 @@
+import Theme from '../../../components/Theme';
+import { Switch as BNSwitch } from 'bumbag-native';
+
+# Switch
+
+Switches are used when a user needs to select one or more values from a series of options, or they can be used as a binary toggle.
+
+## Import
+
+```jsx
+import { Switch, SwitchField } from 'bumbag-native'
+```
+
+## Usage
+
+```jsx-live
+<Switch />
+```
+
+### Labels
+
+```jsx-live
+<Switch label="Remember me" />
+```
+
+### Fields
+
+You can also use the `<SwitchField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.
+
+It accepts a combination of [Switch props](/native/form/switch/#props) and [FieldWrapper props](/native/form/field-wrapper/#props).
+
+```jsx-live
+<SwitchField label="Check below to subscribe" switchLabel="Subscribe" />
+```
+
+### Align
+
+```jsx-live
+<Switch align="right" label="Remember me" />
+<Switch align="left" label="Remember me" />
+```
+
+### Default checked
+
+```jsx-live
+<Switch defaultChecked />
+```
+
+### Disabled
+
+```jsx-live
+<Switch disabled defaultChecked />
+<Switch disabled />
+```
+
+### States
+
+```jsx-live
+<Switch state="danger" />
+<Switch state="success" />
+<Switch state="warning" />
+<Switch state="primary" />
+```
+
+### Colors
+
+```jsx-live
+<Switch palette="primary" />
+<Switch palette="secondary" />
+<Switch palette="danger" />
+<Switch palette="success" />
+<Switch palette="warning" />
+```
+
+### Controlled
+
+```function-live
+function Example() {
+  const [checked, setChecked] = React.useState(false);
+
+  return (
+    <Switch
+      checked={checked}
+      onChange={setChecked}
+    />
+  )
+}
+```
+
+## Props
+
+### Switch Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">activeThumbColor</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Color of the active thumb (web only).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">activeTrackColor</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Color of the active track (web only).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34;</Code> 
+
+Aligns the switch to the left or right side.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">checked</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the switch is checked.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">defaultChecked</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Sets the default checked state.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Disables the switch
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">label</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Switch label
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">labelProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
+    ...
+  }>;
+  ... 599 more ...;
+  dataDetectorTy...`}
+</Code>
+
+* Sets the props of the label
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+* Sets the color of the switch
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onChange</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`({ checked, value }: { checked: boolean; value?: any; }) => void`}
+</Code>
+
+Function to invoke when switch has changed
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+State of the switch. Can be any color in the palette.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">switchProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  thumbColor?: ColorValue;
+  trackColor?: {
+    false: ColorValue;
+    true: ColorValue
+  }; disabled?: boolean;
+  onValueChange?: (value: boolean) => void;
+  testID?: string;
+  ... 55 more ...;
+  accessibilityIgnoresInvertColors?: boolean;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><a href="https://reactnative.dev/docs/switch">React Native's <code>Switch</code></a></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">thumbColor</Code>** <Code fontSize="100" palette="primary">string | typeof OpaqueColorValue</Code> 
+
+Color of the foreground switch grip.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">trackColor</Code>** <Code fontSize="100" palette="primary">{ false: ColorValue; true: ColorValue; }</Code> 
+
+Custom colors for the switch track
+
+Color when false and color when true
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onValueChange</Code>** <Code fontSize="100" palette="primary">(value: boolean) =&#62; void</Code> 
+
+Invoked with the new value when the value changes.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">testID</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Used to locate this view in end-to-end tests.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">ios_backgroundColor</Code>** <Code fontSize="100" palette="primary">string | typeof OpaqueColorValue</Code> 
+
+On iOS, custom color for the background.
+Can be seen when the switch value is false or when the switch is disabled.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">style</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`false
+  | ViewStyle
+  | RegisteredStyle<ViewStyle>
+  | RecursiveArray<false
+  | ViewStyle
+  | RegisteredStyle<ViewStyle>>`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onTintColor</Code>** <Code fontSize="100" palette="primary">string | typeof OpaqueColorValue</Code> 
+
+Background color when the switch is turned on.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">thumbTintColor</Code>** <Code fontSize="100" palette="primary">string | typeof OpaqueColorValue</Code> 
+
+Color of the foreground switch grip.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tintColor</Code>** <Code fontSize="100" palette="primary">string | typeof OpaqueColorValue</Code> 
+
+Background color when the switch is turned off.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hitSlop</Code>** <Code fontSize="100" palette="primary">Insets</Code> 
+
+This defines how far a touch event can start away from the view.
+Typical interface guidelines recommend touch targets that are at least
+30 - 40 points/density-independent pixels. If a Touchable view has
+a height of 20 the touchable height can be extended to 40 with
+hitSlop={{top: 10, bottom: 10, left: 0, right: 0}}
+NOTE The touch area never extends past the parent view bounds and
+the Z-index of sibling views always takes precedence if a touch
+hits two overlapping views.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onLayout</Code>** <Code fontSize="100" palette="primary">(event: LayoutChangeEvent) =&#62; void</Code> 
+
+Invoked on mount and layout changes with
+
+{nativeEvent: { layout: {x, y, width, height}}}.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">pointerEvents</Code>** <Code fontSize="100" palette="primary">&#34;auto&#34; | &#34;none&#34; | &#34;box-none&#34; | &#34;box-only&#34;</Code> 
+
+In the absence of auto property, none is much like CSS's none value. box-none is as if you had applied the CSS class:
+
+.box-none {
+   pointer-events: none;
+}
+.box-none * {
+   pointer-events: all;
+}
+
+box-only is the equivalent of
+
+.box-only {
+   pointer-events: all;
+}
+.box-only * {
+   pointer-events: none;
+}
+
+But since pointerEvents does not affect layout/appearance, and we are already deviating from the spec by adding additional modes,
+we opt to not include pointerEvents on style. On some platforms, we would need to implement it as a className anyways. Using style or not is an implementation detail of the platform.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">removeClippedSubviews</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+This is a special performance property exposed by RCTView and is useful for scrolling content when there are many subviews,
+most of which are offscreen. For this property to be effective, it must be applied to a view that contains many subviews that extend outside its bound.
+The subviews must also have overflow: hidden, as should the containing view (or one of its superviews).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">nativeID</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Used to reference react managed views from native code.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">collapsable</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Views that are only used to layout their children or otherwise don't draw anything
+may be automatically removed from the native hierarchy as an optimization.
+Set this property to false to disable this optimization and ensure that this View exists in the native view hierarchy.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">needsOffscreenAlphaCompositing</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether this view needs to rendered offscreen and composited with an alpha in order to preserve 100% correct colors and blending behavior.
+The default (false) falls back to drawing the component and its children
+with an alpha applied to the paint used to draw each element instead of rendering the full component offscreen and compositing it back with an alpha value.
+This default may be noticeable and undesired in the case where the View you are setting an opacity on
+has multiple overlapping elements (e.g. multiple overlapping Views, or text and a background).
+
+Rendering offscreen to preserve correct alpha behavior is extremely expensive
+and hard to debug for non-native developers, which is why it is not turned on by default.
+If you do need to enable this property for an animation,
+consider combining it with renderToHardwareTextureAndroid if the view contents are static (i.e. it doesn't need to be redrawn each frame).
+If that property is enabled, this View will be rendered off-screen once,
+saved in a hardware texture, and then composited onto the screen with an alpha each frame without having to switch rendering targets on the GPU.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderToHardwareTextureAndroid</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether this view should render itself (and all of its children) into a single hardware texture on the GPU.
+
+On Android, this is useful for animations and interactions that only modify opacity, rotation, translation, and/or scale:
+in those cases, the view doesn't have to be redrawn and display lists don't need to be re-executed. The texture can just be
+re-used and re-composited with different parameters. The downside is that this can use up limited video memory, so this prop should be set back to false at the end of the interaction/animation.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">focusable</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether this `View` should be focusable with a non-touch input device, eg. receive focus with a hardware keyboard.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">shouldRasterizeIOS</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether this view should be rendered as a bitmap before compositing.
+
+On iOS, this is useful for animations and interactions that do not modify this component's dimensions nor its children;
+for example, when translating the position of a static view, rasterization allows the renderer to reuse a cached bitmap of a static view
+and quickly composite it during each frame.
+
+Rasterization incurs an off-screen drawing pass and the bitmap consumes memory.
+Test and measure when using this property.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isTVSelectable</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+*(Apple TV only)* When set to true, this view will be focusable
+and navigable using the Apple TV remote.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hasTVPreferredFocus</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+*(Apple TV only)* May be set to true to force the Apple TV focus engine to move focus to this view.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tvParallaxProperties</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  enabled?: boolean;
+  shiftDistanceX?: number;
+  shiftDistanceY?: number;
+  tiltAngle?: number;
+  magnification?: number;
+  pressMagnification?: number;
+  pressDuration?: number;
+  pressDelay?: number;
+}`}
+</Code>
+
+*(Apple TV only)* Object with properties to control Apple TV parallax effects.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tvParallaxShiftDistanceX</Code>** <Code fontSize="100" palette="primary">number</Code> 
+
+*(Apple TV only)* May be used to change the appearance of the Apple TV parallax effect when this view goes in or out of focus.  Defaults to 2.0.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tvParallaxShiftDistanceY</Code>** <Code fontSize="100" palette="primary">number</Code> 
+
+*(Apple TV only)* May be used to change the appearance of the Apple TV parallax effect when this view goes in or out of focus.  Defaults to 2.0.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tvParallaxTiltAngle</Code>** <Code fontSize="100" palette="primary">number</Code> 
+
+*(Apple TV only)* May be used to change the appearance of the Apple TV parallax effect when this view goes in or out of focus.  Defaults to 0.05.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tvParallaxMagnification</Code>** <Code fontSize="100" palette="primary">number</Code> 
+
+*(Apple TV only)* May be used to change the appearance of the Apple TV parallax effect when this view goes in or out of focus.  Defaults to 1.0.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onStartShouldSetResponder</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; boolean</Code> 
+
+Does this view want to become responder on the start of a touch?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onMoveShouldSetResponder</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; boolean</Code> 
+
+Called for every touch move on the View when it is not the responder: does this view want to "claim" touch responsiveness?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderEnd</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+If the View returns true and attempts to become the responder, one of the following will happen:
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderGrant</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+The View is now responding for touch events.
+This is the time to highlight and show the user what is happening
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderReject</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+Something else is the responder right now and will not release it
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderMove</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+The user is moving their finger
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderRelease</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+Fired at the end of the touch, ie "touchUp"
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderStart</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderTerminationRequest</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; boolean</Code> 
+
+Something else wants to become responder.
+Should this view release the responder? Returning true allows release
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onResponderTerminate</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+The responder has been taken from the View.
+Might be taken by other views after a call to onResponderTerminationRequest,
+or might be taken by the OS without asking (happens with control center/ notification center on iOS)
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onStartShouldSetResponderCapture</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; boolean</Code> 
+
+onStartShouldSetResponder and onMoveShouldSetResponder are called with a bubbling pattern,
+where the deepest node is called first.
+That means that the deepest component will become responder when multiple Views return true for *ShouldSetResponder handlers.
+This is desirable in most cases, because it makes sure all controls and buttons are usable.
+
+However, sometimes a parent will want to make sure that it becomes responder.
+This can be handled by using the capture phase.
+Before the responder system bubbles up from the deepest component,
+it will do a capture phase, firing on*ShouldSetResponderCapture.
+So if a parent View wants to prevent the child from becoming responder on a touch start,
+it should have a onStartShouldSetResponderCapture handler which returns true.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onMoveShouldSetResponderCapture</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; boolean</Code> 
+
+onStartShouldSetResponder and onMoveShouldSetResponder are called with a bubbling pattern,
+where the deepest node is called first.
+That means that the deepest component will become responder when multiple Views return true for *ShouldSetResponder handlers.
+This is desirable in most cases, because it makes sure all controls and buttons are usable.
+
+However, sometimes a parent will want to make sure that it becomes responder.
+This can be handled by using the capture phase.
+Before the responder system bubbles up from the deepest component,
+it will do a capture phase, firing on*ShouldSetResponderCapture.
+So if a parent View wants to prevent the child from becoming responder on a touch start,
+it should have a onStartShouldSetResponderCapture handler which returns true.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onTouchStart</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onTouchMove</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onTouchEnd</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onTouchCancel</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onTouchEndCapture</Code>** <Code fontSize="100" palette="primary">(event: GestureResponderEvent) =&#62; void</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When true, indicates that the view is an accessibility element.
+By default, all the touchable elements are accessible.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityActions</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`readonly Readonly<{ name: string; label?: string; }>[]`}
+</Code>
+
+Provides an array of custom actions available for accessibility.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityLabel</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Overrides the text that's read by the screen reader when the user interacts with the element. By default, the
+label is constructed by traversing all the children and accumulating all the Text nodes separated by space.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityRole</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"none"
+  | "text"
+  | "search"
+  | "button"
+  | "link"
+  | "menu"
+  | "alert"
+  | "checkbox"
+  | "radio"
+  | "image"
+  | "keyboardkey"
+  | "adjustable"
+  | "imagebutton"
+  | "header"
+  | "summary"
+  | "combobox"
+  | ... 10 more ...
+  | "toolbar"`}
+</Code>
+
+Accessibility Role tells a person using either VoiceOver on iOS or TalkBack on Android the type of element that is focused on.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityState</Code>** <Code fontSize="100" palette="primary">AccessibilityState</Code> 
+
+Accessibility State tells a person using either VoiceOver on iOS or TalkBack on Android the state of the element currently focused on.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityHint</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not obvious from the accessibility label.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityValue</Code>** <Code fontSize="100" palette="primary">AccessibilityValue</Code> 
+
+Represents the current value of a component. It can be a textual description of a component's value, or for range-based components, such as sliders and progress bars,
+it contains range information (minimum, current, and maximum).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onAccessibilityAction</Code>** <Code fontSize="100" palette="primary">(event: AccessibilityActionEvent) =&#62; void</Code> 
+
+When `accessible` is true, the system will try to invoke this function when the user performs an accessibility custom action.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityLiveRegion</Code>** <Code fontSize="100" palette="primary">&#34;none&#34; | &#34;assertive&#34; | &#34;polite&#34;</Code> 
+
+Indicates to accessibility services whether the user should be notified when this view changes.
+Works for Android API >= 19 only.
+See http://developer.android.com/reference/android/view/View.html#attr_android:accessibilityLiveRegion for references.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">importantForAccessibility</Code>** <Code fontSize="100" palette="primary">&#34;auto&#34; | &#34;yes&#34; | &#34;no&#34; | &#34;no-hide-descendants&#34;</Code> 
+
+Controls how view is important for accessibility which is if it fires accessibility events
+and if it is reported to accessibility services that query the screen.
+Works for Android only. See http://developer.android.com/reference/android/R.attr.html#importantForAccessibility for references.
+
+Possible values:
+      'auto' - The system determines whether the view is important for accessibility - default (recommended).
+      'yes' - The view is important for accessibility.
+      'no' - The view is not important for accessibility.
+      'no-hide-descendants' - The view is not important for accessibility, nor are any of its descendant views.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityElementsHidden</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+A Boolean value indicating whether the accessibility elements contained within this accessibility element
+are hidden to the screen reader.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityViewIsModal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+A Boolean value indicating whether VoiceOver should ignore the elements within views that are siblings of the receiver.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onAccessibilityEscape</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+When accessibile is true, the system will invoke this function when the user performs the escape gesture (scrub with two fingers).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onAccessibilityTap</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+When `accessible` is true, the system will try to invoke this function when the user performs accessibility tap gesture.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onMagicTap</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+When accessible is true, the system will invoke this function when the user performs the magic tap gesture.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accessibilityIgnoresInvertColors</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: {
+    ...
+  }; ... 35 more ...;
+  Text?: TextThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><a href="https://reactnative.dev/docs/view">React Native's <code>View</code></a></strong> props</Box>
+
+</details>
+            
+
+## Theming

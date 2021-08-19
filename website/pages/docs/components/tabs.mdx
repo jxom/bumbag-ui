@@ -1,0 +1,708 @@
+import { Tabs } from 'bumbag';
+import Theme from '../../components/Theme';
+
+# Tabs
+
+The `<Tabs>` component is used alongside the `<Tabs.List>`, `<Tabs.Tab>` and `<Tabs.Panel>` components to create layered sections of content.
+
+## Import
+
+```jsx
+import { Tabs } from 'bumbag';
+```
+
+## Usage
+
+Each `<Tabs.Tab>` component should have a `tabId` prop with a corresponding `<Tabs.Panel>` component with the same `tabId` value.
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List>
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Fitted tabs
+
+You can make your tabs span the whole width with the `isFitted` prop.
+
+```jsx-live
+<Tabs isFitted defaultSelectedId="tab1">
+  <Tabs.List>
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Alignment
+
+Align your tabs with the `align` prop.
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List align="center">
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List align="right">
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Variants
+
+The `<Tabs>` component comes with three default variants: `boxed`, `button` and `unstyled`.
+
+You can also [create your own Tabs variant](/variants).
+
+#### Boxed
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List variant="boxed">
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+#### Buttons
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List variant="button">
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+#### Unstyled
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List variant="unstyled">
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Colors
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List variant="button" palette="primaryTint">
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Disabled
+
+```jsx-live
+<Tabs defaultSelectedId="tab1">
+  <Tabs.List>
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab disabled tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Orientation
+
+```jsx-live
+<Tabs orientation="vertical" defaultSelectedId="tab1">
+  <Tabs.List>
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Lazy mounting
+
+By setting a `mountWhenInactive` prop, the tab panels will not mount until they are active.
+
+```jsx-live
+<Tabs mountWhenInactive={false} defaultSelectedId="tab1">
+  <Tabs.List>
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+  <Tabs.Panel tabId="tab1" padding="major-2">
+    Dogs are awesome
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab2" padding="major-2">
+    Cats are alright
+  </Tabs.Panel>
+  <Tabs.Panel tabId="tab3" padding="major-2">
+    Parrots are cool
+  </Tabs.Panel>
+</Tabs>
+```
+
+### Controlled
+
+```function-live
+function Example() {
+  const [selectedId, setSelectedId] = React.useState('tab1');
+
+  return (
+    <Box>
+      <Button onClick={() => setSelectedId('tab2')}>Go to Cats</Button>
+      <Tabs selectedId={selectedId}>
+        <Tabs.List>
+          <Tabs.Tab tabId="tab1" onClick={() => setSelectedId('tab1')}>Dogs</Tabs.Tab>
+          <Tabs.Tab tabId="tab2" onClick={() => setSelectedId('tab2')}>Cats</Tabs.Tab>
+          <Tabs.Tab tabId="tab3" onClick={() => setSelectedId('tab3')}>Parrots</Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel tabId="tab1" padding="major-2">
+          Dogs are awesome
+        </Tabs.Panel>
+        <Tabs.Panel tabId="tab2" padding="major-2">
+          Cats are alright
+        </Tabs.Panel>
+        <Tabs.Panel tabId="tab3" padding="major-2">
+          Parrots are cool
+        </Tabs.Panel>
+      </Tabs>
+    </Box>
+  );
+}
+```
+
+## Props
+
+### Tabs Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">defaultSelectedId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isFitted</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">loop</Code>** <Code fontSize="100" palette="primary">boolean | &#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">manual</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">mountWhenInactive</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">selectedId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Tabs.List Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Tabs.Tab Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">tabId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Tabs.Panel Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">tabId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Theming
+
+<Theme component="div" overrides={['Tabs.styles.base', 'Tabs.List.styles.base', 'Tabs.Tab.styles.base', 'Tabs.Tab.styles.selected', 'Tabs.Tab.styles.focus', 'Tabs.Tab.styles.hover', 'Tabs.Panel.styles.base']}>
+  {props => (
+    <Tabs defaultSelectedId="tab1" {...props}>
+      <Tabs.List>
+        <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+        <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+        <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+      </Tabs.List>
+      <Tabs.Panel tabId="tab1" padding="major-2">
+        Dogs are awesome
+      </Tabs.Panel>
+      <Tabs.Panel tabId="tab2" padding="major-2">
+        Cats are alright
+      </Tabs.Panel>
+      <Tabs.Panel tabId="tab3" padding="major-2">
+        Parrots are cool
+      </Tabs.Panel>
+    </Tabs>
+  )}
+</Theme>

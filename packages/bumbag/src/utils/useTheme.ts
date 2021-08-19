@@ -3,7 +3,7 @@ import { BumbagThemeContext } from '../Provider/ThemeContext';
 import { ThemeContext as EmotionContext } from '../styled';
 
 export function useTheme() {
-  const { setTheme } = React.useContext(BumbagThemeContext);
+  const { isSSR, setTheme } = React.useContext(BumbagThemeContext);
   const theme = React.useContext(EmotionContext);
-  return { theme, setTheme } as any;
+  return { isSSR, theme, setTheme } as any;
 }

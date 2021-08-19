@@ -1,0 +1,203 @@
+---
+isFluid: true
+---
+
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Container } from 'bumbag';
+
+# Container
+
+## Import
+
+```jsx
+import { Container } from 'bumbag';
+```
+
+## Usage
+
+A container's max width is fixed, and varies per viewport breakpoint.
+
+A container's max width is defined for viewport widths of **tablet (768px)** and above. For widths below **tablet (768px)**, a left and right margin is applied.
+
+```jsx-live
+<Container>
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+```
+
+### Fixed width
+
+A container's max width can be fixed after a certain breakpoint, meaning until that breakpoint has been reached, the width will be 100%.
+
+```jsx-live
+<Container breakpoint="desktop">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+
+<Container breakpoint="mobile" marginTop="major-2">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+```
+
+### Alignment
+
+By default, a container is aligned to the **center**, however its alignment can be **left** or **right** aligned with the `align` prop.
+
+```jsx-live
+<Container align="left" breakpoint="mobile">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+
+<Container align="right" breakpoint="mobile" marginTop="major-2">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+```
+
+### Fluid containers
+
+A fluid container's width is always **100%**, but has a fixed left and right margin of `2rem` (2 \* root font size 16px). For devices under the **tablet (768px)** viewport, the margin is `1rem`.
+
+```jsx-live
+<Container isFluid>
+  <Box backgroundColor="whitesmoke" padding="major-2">
+    Hello world!
+  </Box>
+</Container>
+```
+
+## Container Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+Sets the alignment of the container.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">breakpoint</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`(string & {})
+  | "tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"`}
+</Code>
+
+Sets the breakpoint width of the container.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isFluid</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the container is fluid.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isLayout</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the container is of a layout type.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+<Theme
+  component={Container}
+  overrides={['Container.styles.base', { key: 'Container.styles.fluid', props: { isFluid: true } }, { key: 'Container.styles.layout', props: { isLayout: true } }]}>
+  Hello world
+</Theme>

@@ -1,0 +1,174 @@
+---
+title: Breakpoints
+path: /native/breakpoints/
+---
+
+# Breakpoints
+
+In Bumbag Native, breakpoints are defined in two directions: **width breakpoints** & **height breakpoints**.
+
+## Width breakpoints
+
+Bumbag Native comes with 5 defined width breakpoints & their ranges:
+
+| Breakpoint | Width            | Common devices                                   |
+| ---------- | ---------------- | ------------------------------------------------ |
+| `xs`       | 320px            | iPhone 5                                         |
+| `sm`       | 375px            | iPhone 6/6s, Samsung Galaxy S7-9                 |
+| `md`       | 414px            | iPhone 7-8, Pixel 1-4, Nexus 5X & 6P             |
+| `lg`       | 768px            | iPad Mini, iPad Air, iPad 3rd & 4th Gen, Nexus 9 |
+| `xl`       | 1024px           | iPad Pro                                         |
+| `min-xs`   | 0px and above    |
+| `max-xs`   | 319px and below  |
+| `min-sm`   | 320px and above  |
+| `max-sm`   | 374px and below  |
+| `min-md`   | 375px and above  |
+| `max-md`   | 413px and below  |
+| `min-lg`   | 414px and above  |
+| `max-lg`   | 767px and below  |
+| `min-xl`   | 768px and above  |
+| `max-xl`   | 1024px and below |
+
+Bumbag Native also inherits the **[web width breakpoints](/breakpoints)** for you to optionally use:
+
+| Breakpoint       | Width            |
+| ---------------- | ---------------- |
+| `mobile`         | 480px            |
+| `tablet`         | 768px            |
+| `desktop`        | 1024px           |
+| `widescreen`     | 1200px           |
+| `fullHD`         | 1440px           |
+| `min-mobile`     | 0px and above    |
+| `max-mobile`     | 479px and below  |
+| `min-tablet`     | 480px and above  |
+| `max-tablet`     | 767px and below  |
+| `min-desktop`    | 768px and above  |
+| `max-desktop`    | 1023px and below |
+| `min-widescreen` | 1024px and above |
+| `max-widescreen` | 1199px and below |
+| `min-fullHD`     | 1200px and above |
+| `max-fullHD`     | 1440px and below |
+
+## Height breakpoints
+
+Bumbag Native comes with 6 defined height breakpoints & their ranges:
+
+| Breakpoint | Width            | Common devices                                                                      |
+| ---------- | ---------------- | ----------------------------------------------------------------------------------- |
+| `xs`       | 568px            | iPhone 5, iPod Touch                                                                |
+| `sm`       | 667px            | iPhone 6-8, Galaxy S7                                                               |
+| `md`       | 736px            | iPhone 6-8 Plus, Pixel 1-2, Nexus 5X, Nexus 6P, Galaxy S8-9                         |
+| `lg`       | 896px            | iPhone X, iPhone X Max, iPhone 11, iPhone 11 Max, Samsung Galaxy Note 10, Pixel 3-4 |
+| `xl`       | 1024px           | iPad, Nexus 9                                                                       |
+| `2xl`      | 1366px           | iPad Pro, Pixel C, Samsung Galaxy Tab 10                                            |
+| `min-xs`   | 0px and above    |
+| `max-xs`   | 567px and below  |
+| `min-sm`   | 568px and above  |
+| `max-sm`   | 666px and below  |
+| `min-md`   | 667px and above  |
+| `max-md`   | 735px and below  |
+| `min-lg`   | 736px and above  |
+| `max-lg`   | 895px and below  |
+| `min-xl`   | 896px and above  |
+| `max-xl`   | 1023px and below |
+| `min-2xl`  | 1024px and below |
+| `max-2xl`  | 1366px and below |
+
+## Adding breakpoints to the theme
+
+You are able to add your own breakpoints to the [global theme](/native/theming).
+
+You must specify the breakpoints for each platform (`web`, `ios` & `android`):
+
+```jsx
+import { Provider } from 'bumbag-native';
+
+const breakpoints = {
+  width: {
+    customWidth: 1000
+  },
+  height: {
+    customHeight: 2000
+  }
+}
+
+const theme = {
+  breakpoints: {
+    web: breakpoints,
+    ios: breakpoints,
+    android: breakpoints,
+  }
+}
+
+<Provider theme={theme}>Hello world!</Provider>
+```
+
+## Using breakpoints
+
+> Note: Unfortunately, breakpoints in Bumbag Native **on the web** are currently not dynamically responsive. This means that changing your browser width will not trigger the breakpoint value to change. You will need to first **refresh your browser**.
+
+### With style props
+
+You can add responsive style props via the `breakpoint` function:
+
+```jsx-live
+<Box
+  backgroundColor={breakpoint('width', { default: 'red', 'max-tablet': 'blue' })}
+  height="100px"
+  width="100px"
+/>
+```
+
+### With `applyTheme`
+
+You can also use the `breakpoint` function with applyTheme:
+
+```function-live noInline
+const FancyBox = applyTheme(Box, {
+  styles: {
+    base: props => ({
+      backgroundColor: breakpoint('width', { default: 'red', 'max-tablet': 'blue' })(props),
+      width: '100px',
+      height: '100px'
+    })
+  }
+})
+
+function Example() {
+  return (
+    <FancyBox />
+  );
+}
+
+render(Example)
+```
+
+## Theming
+
+### Schema
+
+```js
+const theme = {
+  breakpoints: {
+    ios: {
+      height: {
+        xs: number,
+        sm: number,
+        md: number,
+        lg: number,
+        xl: number,
+        2xl: number,
+      },
+      width: {
+        xs: number,
+        sm: number,
+        md: number,
+        lg: number,
+        xl: number,
+      }
+    },
+    android: ...,
+    web: ...
+  }
+}
+```

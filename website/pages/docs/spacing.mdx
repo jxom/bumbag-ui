@@ -1,0 +1,354 @@
+---
+breakpoint: tablet
+title: Spacing
+path: /spacing/
+---
+
+import { Code, Table } from 'bumbag';
+
+# Spacing
+
+Bumbag uses two types of scales for its spacing system: the **8px major scale** and the **4px minor scale**.
+
+You can either use the scales **directly**, or use a **pre-defined set** of scales (e.g. `sm`, `md`, `lg`).
+
+## Using the scales directly
+
+### The 8px major scale (recommended)
+
+The **8px major scale** is most commonly used for positional spacing. Like **margins & paddings** between components on a layout.
+
+Bumbag also exports a utility function called `space` to help you with calculating the scale values.
+
+> Note: It is recommended to try stick to the 8px scale unless you need more precision. In that case, use the **4px minor scale**.
+
+<Table>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Token</Table.HeadCell>
+      <Table.HeadCell>px</Table.HeadCell>
+      <Table.HeadCell>rem</Table.HeadCell>
+      <Table.HeadCell>Utility function</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell><Code>major-1</Code></Table.Cell>
+      <Table.Cell>8px</Table.Cell>
+      <Table.Cell>0.5rem</Table.Cell>
+      <Table.Cell><Code>space(1, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>major-2</Code></Table.Cell>
+      <Table.Cell>16px</Table.Cell>
+      <Table.Cell>1rem</Table.Cell>
+      <Table.Cell><Code>space(2, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>major-3</Code></Table.Cell>
+      <Table.Cell>24px</Table.Cell>
+      <Table.Cell>1.5rem</Table.Cell>
+      <Table.Cell><Code>space(3, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>major-4</Code></Table.Cell>
+      <Table.Cell>32px</Table.Cell>
+      <Table.Cell>2rem</Table.Cell>
+      <Table.Cell><Code>space(4, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>major-5</Code></Table.Cell>
+      <Table.Cell>40px</Table.Cell>
+      <Table.Cell>2.5rem</Table.Cell>
+      <Table.Cell><Code>space(5, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>major-n</Code></Table.Cell>
+      <Table.Cell>...</Table.Cell>
+      <Table.Cell>...</Table.Cell>
+      <Table.Cell><Code>space(n, 'major')</Code></Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+
+#### Usage via style props
+
+```jsx-live
+<FieldStack spacing="major-1">
+  <FieldStack orientation="horizontal" spacing="major-2">
+    <InputField label="First name" />
+    <InputField label="Last name" />
+  </FieldStack>
+  <Button palette="primary">Save</Button>
+</FieldStack>
+```
+
+#### Usage via themeable components
+
+##### With `applyTheme`
+
+```jsx
+import { Button, applyTheme } from 'bumbag';
+
+const SaveButton = applyTheme(Button, {
+  styles: {
+    base: {
+      marginTop: 'major-2'
+    }
+  }
+});
+
+<SaveButton>Save</SaveButton>
+```
+
+##### With `styled`
+
+```jsx
+import { Button, styled, space } from 'bumbag';
+
+const SaveButton = styled(Button)`
+  margin-top: ${space(2, 'major')}rem;
+`;
+
+<SaveButton>Save</SaveButton>
+```
+
+### The 4px minor scale
+
+The **4px minor scale** is most commonly used for precise spacing (**margins & paddings**) of atomic components (e.g. the inner padding of a checkbox).
+
+<Table>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Token</Table.HeadCell>
+      <Table.HeadCell>px</Table.HeadCell>
+      <Table.HeadCell>rem</Table.HeadCell>
+      <Table.HeadCell>Utility</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell><Code>minor-1</Code></Table.Cell>
+      <Table.Cell>4px</Table.Cell>
+      <Table.Cell>0.25rem</Table.Cell>
+      <Table.Cell><Code>space(1, 'minor')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>minor-2</Code></Table.Cell>
+      <Table.Cell>8px</Table.Cell>
+      <Table.Cell>0.5rem</Table.Cell>
+      <Table.Cell><Code>space(2, 'minor')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>minor-3</Code></Table.Cell>
+      <Table.Cell>12px</Table.Cell>
+      <Table.Cell>0.75rem</Table.Cell>
+      <Table.Cell><Code>space(3, 'minor')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>minor-4</Code></Table.Cell>
+      <Table.Cell>16px</Table.Cell>
+      <Table.Cell>1rem</Table.Cell>
+      <Table.Cell><Code>space(4, 'minor')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>minor-5</Code></Table.Cell>
+      <Table.Cell>20px</Table.Cell>
+      <Table.Cell>1.25rem</Table.Cell>
+      <Table.Cell><Code>space(5, 'minor')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>minor-n</Code></Table.Cell>
+      <Table.Cell>...</Table.Cell>
+      <Table.Cell>...</Table.Cell>
+      <Table.Cell><Code>space(n, 'minor')</Code></Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+
+#### Usage via style props
+
+```jsx-live
+<Button paddingX="minor-2">Save</Button>
+```
+
+#### Usage via themeable components
+
+##### With `applyTheme`
+
+```jsx
+import { Button, applyTheme } from 'bumbag';
+
+const SaveButton = applyTheme(Button, {
+  styles: {
+    base: {
+      padding: 'major-2'
+    }
+  }
+});
+
+<SaveButton>Save</SaveButton>
+```
+
+##### With `styled`
+
+```jsx
+import { Button, styled, space } from 'bumbag';
+
+const SaveButton = styled(Button)`
+  padding: ${space(2, 'major')}rem;
+`;
+
+<SaveButton>Save</SaveButton>
+```
+
+## Using a pre-defined set
+
+Bumbag has the ability for you to specify your own pre-defined set of spacings. Pre-defined spacings can be used when you want to restrict the user to a set of sizes.
+
+Bumbag has the following pre-defined attributes set by default:
+
+<Table>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Token</Table.HeadCell>
+      <Table.HeadCell>Size</Table.HeadCell>
+      <Table.HeadCell>Value</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell><Code>xs</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="xs" />
+        <Box fontSize="100" marginTop="minor-1">8px - 0.5rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(1, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>sm</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="sm" />
+        <Box fontSize="100" marginTop="minor-1">16px - 1rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(2, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>md</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="md" />
+        <Box fontSize="100" marginTop="minor-1">32px - 2rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(4, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>lg</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="lg" />
+        <Box fontSize="100" marginTop="minor-1">48px - 3rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(6, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>xl</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="xl" />
+        <Box fontSize="100" marginTop="minor-1">64px - 4rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(8, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>2xl</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="2xl" />
+        <Box fontSize="100" marginTop="minor-1">96px - 6rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(12, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>3xl</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="3xl" />
+        <Box fontSize="100" marginTop="minor-1">128px - 8rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(16, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>4xl</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="4xl" />
+        <Box fontSize="100" marginTop="minor-1">160px - 10rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(20, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>5xl</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="5xl" />
+        <Box fontSize="100" marginTop="minor-1">192px - 12rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(24, 'major')</Code></Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>6xl</Code></Table.Cell>
+      <Table.Cell>
+        <Box backgroundColor="primary" height="10px" width="0px" paddingRight="6xl" />
+        <Box fontSize="100" marginTop="minor-1">224px - 14rem</Box>
+      </Table.Cell>
+      <Table.Cell><Code>space(28, 'major')</Code></Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+
+#### Usage via style props
+
+```jsx-live
+<Button paddingX="xl">Save</Button>
+```
+
+#### Usage via themeable components
+
+##### With `applyTheme`
+
+```jsx
+import { Button, applyTheme } from 'bumbag';
+
+const SaveButton = applyTheme(Button, {
+  styles: {
+    base: {
+      padding: 'xl'
+    }
+  }
+});
+
+<SaveButton>Save</SaveButton>
+```
+
+##### With `styled`
+
+```jsx
+import { Button, styled, space } from 'bumbag';
+
+const SaveButton = styled(Button)`
+  padding: ${space('xl')}rem;
+`;
+
+<SaveButton>Save</SaveButton>
+```
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  spacing: {
+    minorUnit: number // default = 4,
+    majorUnit: number // default = 8,
+
+    // Plus your own pre-defined set...
+    [key: string]: number
+    // e.g. sm: space(2, 'major')
+  }
+}
+```

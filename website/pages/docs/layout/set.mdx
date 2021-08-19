@@ -1,0 +1,250 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Set } from 'bumbag';
+
+# Set
+
+## Import
+
+```jsx
+import { Set } from 'bumbag';
+```
+
+## Usage
+
+A `<Set>` can be used to list a set of components. It will automatically space out the components, and wrap them when they reach the width of the viewport.
+
+```jsx-live
+<Set>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+  <Button>Button 4</Button>
+  <Button>Button 5</Button>
+  <Button>Button 6</Button>
+  <Button>Button 7</Button>
+</Set>
+```
+
+### Spacing
+
+You can modify the spacing of the set with the `spacing` prop.
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag>Tag 1</Tag>
+  <Tag>Tag 2</Tag>
+  <Tag>Tag 3</Tag>
+  <Tag>Tag 4</Tag>
+  <Tag>Tag 5</Tag>
+  <Tag>Tag 6</Tag>
+  <Tag>Tag 7</Tag>
+</Set>
+```
+
+### Vertical
+
+You can also have a vertical set with the `orientation` prop.
+
+```jsx-live
+<Set orientation="vertical" spacing="minor-1">
+  <Tag>Tag 1</Tag>
+  <Tag>Tag 2</Tag>
+  <Tag>Tag 3</Tag>
+  <Tag>Tag 4</Tag>
+  <Tag>Tag 5</Tag>
+  <Tag>Tag 6</Tag>
+  <Tag>Tag 7</Tag>
+</Set>
+```
+
+By default, `<Set>` will preserve the width of it's children. However, if you'd like your children to fill the width of `<Set>`, use the `isFilled` prop:
+
+```jsx-live
+<Set orientation="vertical" isFilled>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+  <Button>Button 4</Button>
+  <Button>Button 5</Button>
+  <Button>Button 6</Button>
+  <Button>Button 7</Button>
+</Set>
+```
+
+### Responsive breakpoint
+
+A set can snap from horizontal to vertical after a given breakpoint with the `verticalBelow` prop.
+
+**Try drag the viewport with the slider!**
+
+```jsx-live-iframe
+<Set verticalBelow="mobile">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+  <Button>Button 4</Button>
+  <Button>Button 5</Button>
+  <Button>Button 6</Button>
+  <Button>Button 7</Button>
+</Set>
+```
+
+### Alignments
+
+You can align your `Set` horizontally using the `alignX` prop.
+
+```jsx-live
+<Set alignX="center">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+</Set>
+<Set alignX="right">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+</Set>
+<Set alignX="left">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+</Set>
+```
+
+## Set Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">isFilled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the set items should span the width of the set.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+
+Indicates the orientation of the set.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">spacing</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Sets the spacing between items.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">verticalBelow</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"
+  | "min-fullHD"
+  | "max-fullHD"
+  | "min-widescreen"
+  | "max-widescreen"
+  | "min-desktop"
+  | "max-desktop"
+  | "min-tablet"
+  | "max-tablet"
+  | "min-mobile"
+  | "max-mobile"`}
+</Code>
+
+Indicates the breakpoint at which the set should become vertical.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+<Theme
+  component={Set}
+  overrides={['Set.styles.base', 'Set.styles.child.base', 'Set.styles.child.first', 'Set.styles.child.middle', 'Set.styles.child.last', 'Set.styles.horizontal', 'Set.styles.child.horizontal', { key: 'Set.styles.vertical', props: { orientation: 'vertical' } }, { key: 'Set.styles.child.vertical', props: { orientation: 'vertical' } }]}>
+  <Button>Hello</Button>
+  <Button>My</Button>
+  <Button>World</Button>
+</Theme>

@@ -1,4 +1,4 @@
-import { Platform, TouchableOpacity } from 'react-native';
+import { Platform } from 'react-native';
 
 import { styled } from '../styled';
 import { borderRadius, fontSize, fontWeight, palette, space, theme } from '../utils/theme';
@@ -10,7 +10,7 @@ import { Text } from '../Text';
 export const isInteractive = (props) =>
   !props.isStatic && !props.isLoading && !props.disabled && props.variant !== 'link';
 
-export const StyledButton = styled(TouchableOpacity)`
+export const StyledButton = styled.TouchableOpacity`
   align-items: center;
   background-color: ${(props: any) => palette(props.palette)(props)};
   border-radius: ${borderRadius('default')};

@@ -1,4 +1,4 @@
-import { Animated, Platform, TextInput, View } from 'react-native';
+import { Animated, Platform } from 'react-native';
 
 import { AnimatedText } from '../Animated';
 import { Box } from '../Box';
@@ -12,7 +12,7 @@ export const SIZES = {
   large: '400',
 };
 
-export const StyledInput = styled(TextInput)`
+export const StyledInput = styled.TextInput`
   color: ${palette('text')};
   font-size: ${(props: any) => `${fontSize(props.styledFontSize)(props)}px`};
   height: ${(props: any) => `${space(2.75, props.styledFontSize)(props)}px`};
@@ -239,6 +239,6 @@ function getAnimatedLabelVariantStyles(props) {
 
 /////////////////////////////////////////////////////////
 
-export const InputField = styled(View)`
+export const InputField = styled.View`
   ${theme('native.InputField', 'styles.base')};
 `;

@@ -1,8 +1,27 @@
+import 'bumbag-native/utils/resetWindow';
 import * as React from 'react';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import { AppRegistry } from 'react-native';
 import { InitializeColorMode } from 'bumbag';
+import { extractCritical } from 'bumbag-server';
+
+const normalizeNextElements = `
+  #__next {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }`;
 
 class Document extends NextDocument {
+  static async getInitialProps({ renderPage }) {
+    AppRegistry.registerComponent('bumbag-website', () => Main);
+    const { getStyleElement } = (AppRegistry as any).getApplication('bumbag-website');
+    const page = await renderPage();
+    // eslint-disable-next-line
+    const styles = [<style dangerouslySetInnerHTML={{ __html: normalizeNextElements }} />, getStyleElement()];
+    return { ...page, styles: React.Children.toArray(styles) };
+  }
+
   render() {
     return (
       <Html lang="en">

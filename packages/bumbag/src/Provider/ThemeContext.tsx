@@ -1,3 +1,3 @@
 import * as React from 'react';
 
-export const BumbagThemeContext = React.createContext<any>({ setTheme: () => {}, theme: {} });
+export const BumbagThemeContext = React.createContext<any>({ isSSR: false, setTheme: () => {}, theme: {} });

@@ -1,0 +1,60 @@
+---
+title: Usage with form libraries
+---
+
+# Usage with form libraries
+
+Bumbag provides you with field adaptors for the React form libraries [Formik]() and [Redux Form]() to allow for 'built-in' state & validation rendering instead of you doing it yourself with their metadata.
+
+### Formik
+
+To use Bumbag fields with Formik, import the `.Formik` component from the Bumbag form field.
+
+```jsx
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
+import { InputField } from 'bumbag';
+
+function Form() {
+  return (
+    <Formik
+      initialValues={{ username: '' }}
+      onSubmit={data => console.log(data)}
+    >
+      <Form>
+        <Field
+          component={InputField.Formik}
+          name="username"
+          label="Username"
+        />
+      </Form>
+    </Formik>
+  );
+}
+
+export default Form;
+```
+
+### Redux Form
+
+To use Redux Form fields with Formik, import the `.ReduxForm` component from the Bumbag form field.
+
+```jsx
+import React from 'react';
+import { reduxForm, Field } from 'redux-form';
+import { InputField } from 'bumbag';
+
+function Form() {
+  return (
+    <form>
+      <Field
+        component={InputField.ReduxForm}
+        name="username"
+        label="Username"
+      />
+    </form>
+  );
+}
+
+export default reduxForm({ form: 'addUsername' })(Form);
+```

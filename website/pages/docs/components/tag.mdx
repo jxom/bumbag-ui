@@ -1,0 +1,227 @@
+import Theme from '../../components/Theme';
+import { Tag } from 'bumbag';
+
+# Tag
+
+## Import
+
+```jsx
+import { Tag } from 'bumbag'
+```
+
+## Usage
+
+```jsx-live
+<Tag>Hello world</Tag>
+```
+
+### Colors
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag palette="primary">Primary</Tag>
+  <Tag palette="secondary">Secondary</Tag>
+  <Tag palette="info">Info</Tag>
+  <Tag palette="success">Success</Tag>
+  <Tag palette="warning">Warning</Tag>
+  <Tag palette="danger">Danger</Tag>
+</Set>
+```
+
+### Tints
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag palette="text" variant="tint">Default</Tag>
+  <Tag palette="primary" variant="tint">Primary</Tag>
+  <Tag palette="secondary" variant="tint">Secondary</Tag>
+  <Tag palette="info" variant="tint">Info</Tag>
+  <Tag palette="success" variant="tint">Success</Tag>
+  <Tag palette="warning" variant="tint">Warning</Tag>
+  <Tag palette="danger" variant="tint">Danger</Tag>
+</Set>
+```
+
+### Outlined
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag variant="outlined">Default</Tag>
+  <Tag palette="primary" variant="outlined">Primary</Tag>
+  <Tag palette="secondary" variant="outlined">Secondary</Tag>
+  <Tag palette="info" variant="outlined">Info</Tag>
+  <Tag palette="success" variant="outlined">Success</Tag>
+  <Tag palette="warning" variant="outlined">Warning</Tag>
+  <Tag palette="danger" variant="outlined">Danger</Tag>
+</Set>
+```
+
+### Sizes
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag>Default</Tag>
+  <Tag size="medium">Medium</Tag>
+  <Tag size="large">Large</Tag>
+</Set>
+```
+
+### Sets
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag>Hello</Tag>
+  <Tag>World</Tag>
+  <Tag>This</Tag>
+  <Tag>Is</Tag>
+  <Tag>Me</Tag>
+</Set>
+```
+
+### Grouping
+
+```jsx-live
+<Group>
+  <Tag>Default</Tag>
+  <Tag palette="textTint">Hello</Tag>
+</Group>
+```
+
+### Removable Tags
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag onRemove={() => alert('removed')} palette="primary">Primary</Tag>
+  <Tag onRemove={() => alert('removed')} palette="secondary">Secondary</Tag>
+  <Tag onRemove={() => alert('removed')} palette="info">Info</Tag>
+  <Tag onRemove={() => alert('removed')} palette="success">Success</Tag>
+  <Tag onRemove={() => alert('removed')} palette="warning">Warning</Tag>
+  <Tag onRemove={() => alert('removed')} palette="danger">Danger</Tag>
+</Set>
+```
+
+## Props
+
+### Tag Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">onRemove</Code>** <Code fontSize="100" palette="primary">() =&#62; any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">size</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | (string & {})
+  | "small"
+  | "medium"
+  | "large"`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+<Theme
+  component={Tag}
+  onRemove={() => {}}
+  overrides={['Tag.styles.base', 'Tag.Content.styles.base', 'Tag.Close.styles.base', { key: 'Tag.styles.sizes.default' }, { key: 'Tag.styles.sizes.medium', props: { size: 'medium' } }, { key: 'Tag.styles.sizes.large', props: { size: 'large' } }]}>
+  Hello world
+</Theme>

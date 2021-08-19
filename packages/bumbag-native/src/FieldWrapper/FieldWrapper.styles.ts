@@ -1,11 +1,10 @@
-import { View } from 'react-native';
 import { Box } from '../Box';
 import { Text } from '../Text';
 import { styled } from '../styled';
 import { getFontStyles } from '../utils/getFontStyles';
 import { fontSize, palette, space, theme } from '../utils/theme';
 
-export const FieldWrapper = styled(View)`
+export const FieldWrapper = styled.View`
   ${theme('native.FieldWrapper', 'styles.base')};
 `;
 

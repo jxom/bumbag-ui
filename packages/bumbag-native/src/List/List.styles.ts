@@ -1,12 +1,12 @@
-import { FlatList, SectionList, VirtualizedList } from 'react-native';
+import { VirtualizedList } from 'react-native';
 import { styled } from '../styled';
 import { theme } from '../utils/theme';
 
-export const StyledListFlat = styled(FlatList)`
+export const StyledListFlat = styled.FlatList`
   ${theme('native.List.Flat', 'styles.base')};
 `;
 
-export const StyledListSection = styled(SectionList)`
+export const StyledListSection = styled.SectionList`
   ${theme('native.List.Section', 'styles.base')};
 `;
 

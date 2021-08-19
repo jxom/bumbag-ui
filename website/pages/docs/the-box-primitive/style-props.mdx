@@ -1,0 +1,238 @@
+---
+breakpoint: tablet
+title: Style props
+---
+
+# Style props
+
+You're able to apply any CSS attribute as a prop to `<Box>`. These attributes can be passed through as camel-cased props. Style props can be very useful when you just want to apply an adhoc style without pulling it out into it's own [styled component](/styling-components).
+
+```jsx-live
+<Box
+  backgroundColor="blue"
+  height="50px"
+  width="50px"
+/>
+```
+
+## Colors
+
+You can specify a [color from the palette](/palette) with any color-based CSS attribute.
+
+[Read more...](/palette)
+
+```jsx-live
+<Box backgroundColor="primary" color="primaryTint">Hello world</Box>
+```
+
+### Reference
+
+**Theme reference:** [`theme.palette`](/palette)
+
+**Style props:** `color`, `backgroundColor`, `borderBlockEndColor`, `borderBlockStartColor`, `borderBottomColor`, `borderColor`, `borderInlineEndColor`, `borderInlineStartColor`, `borderLeftColor`, `borderRightColor`, `borderTopColor`, `borderBottomColor`, `caretColor`, `columnRuleColor`, `outlineColor`, `textDecorationColor`, `textEmphasisColor`
+
+## Spacing
+
+You can specify a [spacing from the theme](/spacing) for margins & paddings.
+
+[Read more...](/spacing)
+
+```jsx-live
+<Box
+  padding="major-2"
+  backgroundColor="primary"
+  color="white"
+>
+  Hello world
+</Box>
+```
+
+There are also `paddingX`, `paddingY`, `marginX` and `marginY` props to specify padding or margin in a particular direction.
+
+```jsx-live
+<Box
+  paddingY="major-2"
+  paddingX="major-4"
+  backgroundColor="primary"
+  color="white"
+>
+  Hello world
+</Box>
+```
+
+### Reference
+
+**Theme reference:** [`theme.spacing`](/spacing/#theming)
+
+**Style props:** `margin`, `marginLeft`, `marginRight`, `marginTop`, `marginBottom`, `marginX`, `marginY`, `padding`, `paddingLeft`, `paddingRight`, `paddingTop`, `paddingBottom`, `paddingX`, `paddingY`, `top`, `left`, `bottom`, `right`, `height`, `width`, `minWidth`, `minHeight`, `maxWidth`, `maxHeight`
+
+## Fonts & typography
+
+You can specify a [font size from the theme](/fonts) for font sizes.
+
+```jsx-live
+<Text fontSize="400">Hello world</Text>
+```
+
+You can specify a [font weight from the theme](/fonts) for font weights.
+
+```jsx-live
+<Text fontWeight="semibold">Hello world</Text>
+```
+
+You can specify a [font family from the theme](/fonts) for font families.
+
+```jsx-live
+<Text fontFamily="Comic Sans MS">Hello world</Text>
+```
+
+You can specify a [letter spacing from the theme](/fonts) for letter spacings.
+
+```jsx-live
+<Text letterSpacing="100">Hello world</Text>
+```
+
+You can specify a [line height from the theme](/fonts) for line heights.
+
+```jsx-live
+<Text lineHeight="100">Hello<br/>world</Text>
+```
+
+[Read more...](/fonts)
+
+### Reference
+
+#### Font family
+
+**Theme reference:** [`theme.fonts`](/fonts/#theming)
+
+**Style props:** `font`, `fontFamily`
+
+#### Font weight
+
+**Theme reference:** [`theme.fontWeights`](/fonts/#theming)
+
+**Style props:** `fontWeight`
+
+#### Font size
+
+**Theme reference:** [`theme.fontSizes`](/fonts/#theming)
+
+**Style props:** `fontSize`
+
+#### Letter spacing
+
+**Theme reference:** [`theme.letterSpacings`](/fonts/#theming)
+
+**Style props:** `letterSpacing`
+
+#### Line height
+
+**Theme reference:** [`theme.lineHeights`](/fonts/#theming)
+
+**Style props:** `lineHeight`
+
+## Alignment
+
+[Read more...](/the-box-primitive/alignment)
+
+```jsx-live
+<Box alignX="right">Hello world</Box>
+```
+
+### Reference
+
+**Style props:** `alignX`, `alignY`
+
+## Altitude
+
+You can specify an [altitude from the theme](/the-box-primitive/altitudes).
+
+[Read more...](/the-box-primitive/altitudes)
+
+```jsx-live
+<Box altitude="400">Hello world</Box>
+```
+
+### Reference
+
+**Theme reference:** [`theme.altitudes`](/the-box-primitive/altitudes/#theming)
+
+**Style props:** `altitude`
+
+## Borders
+
+You can specify a [border from the theme](/the-box-primitive/borders).
+
+[Read more...](/the-box-primitive/borders)
+
+```jsx-live
+<Box border="default">Hello world</Box>
+```
+
+### Reference
+
+**Theme reference:** [`theme.borders`](/the-box-primitive/borders/#theming)
+
+**Style props:** `border`, `borderLeft`, `borderRight`, `borderTop`, `borderBottom`
+
+## Border radius
+
+You can specify a [border radius from the theme](/the-box-primitive/border-radius).
+
+[Read more...](/the-box-primitive/border-radius)
+
+```jsx-live
+<Box borderRadius="5" border="default">Hello world</Box>
+```
+
+### Reference
+
+**Theme reference:** [`theme.borderRadii`](/the-box-primitive/border-radius/#theming)
+
+**Style props:** `borderRadius`, `borderLeftRadius`, `borderRightRadius`, `borderTopRadius`, `borderBottomRadius`, `borderTopLeftRadius`, `borderBottomLeftRadius`, `borderTopRightRadius`, `borderBottomRightRadius`
+
+## Responsive styles
+
+You can pass [breakpoints from the theme](/breakpoints) as responsive attributes inside your style props to apply the style for a particular viewport.
+
+In this example, the background of the box will bed red until the max desktop width is reached. It will then fallback to the default.
+
+```jsx-live
+<Box
+  backgroundColor={{
+    default: 'primary',
+    'max-desktop': 'red'
+  }}
+  color="white"
+>
+  This is a box
+</Box>
+```
+
+## Pseudo styles
+
+style props allow you to specify certain pseudo selectors. This allows you to add adhoc styling for particular interactions.
+
+The available pseudo selectors you can use are:
+
+- `_hover` for `:hover`
+- `_active` for `:active`
+- `_hoveractive` for `:hover:active`
+- `_focus` for `:focus`
+- `_visited` for `:visited`
+
+```jsx-live
+<Box
+  _hover={{ backgroundColor: 'primary', color: 'white' }}
+  _active={{ backgroundColor: 'primary300', color: 'white' }}
+  _focus={{ outline: '2px solid blue' }}
+  tabIndex="-1"
+  role="button"
+  backgroundColor="primaryTint"
+  color="primary800"
+  padding="major-2"
+>
+  This is a box
+</Box>
+```

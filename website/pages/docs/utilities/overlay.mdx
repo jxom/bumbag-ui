@@ -1,0 +1,843 @@
+import { Overlay } from 'bumbag';
+import Theme from '../../components/Theme';
+
+# Overlay
+
+The Overlay component inheritely uses the [`Modal` component](/utilities/modal), however its focus is not trapped, it is not rendered in a portal and the background is scrollable.
+
+## Import
+
+```jsx
+import { Overlay } from 'bumbag';
+```
+
+## Usage
+
+```jsx-live
+<Overlay.State>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay><Box>Hello world</Box></Overlay>
+</Overlay.State>
+```
+
+### Composition
+
+The Overlay component comes with utilities to compose with other components.
+
+#### `use`
+
+```jsx-live
+<Overlay.State>
+  <Overlay.Disclosure use={Button}>Open overlay</Overlay.Disclosure>
+  <Overlay backgroundColor="white" border="1px solid black" padding="major-2">
+    Hello world
+    <Overlay.Disclosure use={Button}>Close overlay</Overlay.Disclosure>
+  </Overlay>
+</Overlay.State>
+```
+
+#### Hooks
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState()
+  const overlayProps = Overlay.useProps({ ...overlay });
+  const overlayDisclosureProps = Overlay.Disclosure.useProps({ ...overlay });
+
+  return (
+    <div>
+      <Button {...overlayDisclosureProps}>Open overlay</Button>
+      <Box {...overlayProps} backgroundColor="white" border="1px solid black" padding="major-2">
+        Hello world
+        <Button {...overlayDisclosureProps}>Close overlay</Button>
+      </Box>
+    </div>
+  )
+}
+```
+
+#### Render props
+
+```jsx-live
+<Overlay.State>
+  <Overlay>
+    {overlayProps => (
+      <Overlay.Disclosure>
+        {overlayDisclosureProps => (
+          <React.Fragment>
+            <Button {...overlayDisclosureProps}>Open overlay</Button>
+            <Box {...overlayProps} backgroundColor="white" border="1px solid black" padding="major-2">
+              Nesting for dayzzz
+              <Button {...overlayDisclosureProps}>Close</Button>
+            </Box>
+          </React.Fragment>
+        )}
+      </Overlay.Disclosure>
+    )}
+  </Overlay>
+</Overlay.State>
+```
+
+### Placement
+
+Change where your overlay is positioned with the `placement` prop.
+
+```jsx-live
+<Overlay.State>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay placement="top">Hello world</Overlay>
+</Overlay.State>
+```
+
+### Animation
+
+#### Fade
+
+```jsx-live
+<Overlay.State animated>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay fade>Hello world</Overlay>
+</Overlay.State>
+```
+
+#### Slide
+
+```jsx-live
+<Overlay.State animated>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay fade slide>Hello world</Overlay>
+</Overlay.State>
+```
+
+#### Expand
+
+```jsx-live
+<Overlay.State animated>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay fade expand>Hello world</Overlay>
+</Overlay.State>
+```
+
+#### Duration
+
+```jsx-live
+<Overlay.State animated>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay fade duration="100ms" fade>Hello world</Overlay>
+</Overlay.State>
+```
+
+### Placement with animation
+
+```jsx-live
+<Overlay.State animated>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay placement="top" fade slide>Hello world</Overlay>
+</Overlay.State>
+```
+
+### Restricting closure
+
+You can restrict closure with either the `hideOnEsc` or `hideOnClickOutside` prop.
+
+```jsx-live
+<Overlay.State>
+  <Overlay.Disclosure>Open overlay</Overlay.Disclosure>
+  <Overlay hideOnEsc={false} hideOnClickOutside={false}>
+    Hello world
+    <Overlay.Disclosure use={Button}>Close overlay</Overlay.Disclosure>
+  </Overlay>
+</Overlay.State>
+```
+
+### Controlled
+
+```live
+###tab=Hook,type=function-live
+function Example() {
+  const overlay = Overlay.useState();
+
+  return (
+    <React.Fragment>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay}>
+        Hello world
+        <Overlay.Disclosure use={Button} {...overlay}>Close overlay</Overlay.Disclosure>
+      </Overlay>
+    </React.Fragment>
+  )
+}
+###
+
+###tab=Render Props,type=jsx-live
+<Overlay.State>
+  {overlay => (
+    <React.Fragment>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay}>
+        Hello world
+        <Overlay.Disclosure use={Button}>Close overlay</Overlay.Disclosure>
+      </Overlay>
+    </React.Fragment>
+  )}
+</Overlay.State>
+###
+```
+
+## Accessibility
+
+### Rules
+
+- A `Overlay` must have an accompanying `Overlay.Disclosure` component.
+
+#### Patterns
+
+- `Overlay` extends the accessibility features of the [Modal component](/utilities/modal).
+
+## Props
+
+### Overlay Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>9 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+Stops animation. It's called automatically if there's a CSS transition.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+Changes the `visible` state to `false`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Modal</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">hideBackdrop</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Hides the backdrop.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"top-start"
+  | "top"
+  | "top-end"
+  | "right-start"
+  | "right"
+  | "right-end"
+  | "bottom-end"
+  | "bottom"
+  | "bottom-start"
+  | "left-end"
+  | "left"
+  | "left-start"
+  | "center"`}
+</Code>
+
+Sets the placement of the modal.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">delay</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Delay of the animation (in s/ms).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">duration</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Duration of the animation (in s/ms).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">expand</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`boolean
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "center"`}
+</Code>
+
+Will the component have an expand animation when it is toggled on/off?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Will the component have a fade animation when it is toggled on/off?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</Code> 
+
+Will the component have a slide animation when it is toggled on/off?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">timingFunction</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Timing function of the animation
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hideOnEsc</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When enabled, user can hide the dialog by pressing `Escape`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When enabled, user can hide the dialog by clicking outside it.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When enabled, user can't scroll on body when the dialog is visible.
+This option doesn't work if the dialog isn't modal.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Overlay.Disclosure Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>5 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>ModalDisclosure</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Same as the HTML attribute.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">focusable</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When an element is `disabled`, it may still be `focusable`. It works
+similarly to `readOnly` on form elements. In this case, only
+`aria-disabled` will be set.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## State
+
+### Overlay.State API
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+### Overlay.State Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>15 values</strong></Box>
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setBaseId</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;string&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `baseId`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">show</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setVisible</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `visible`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setAnimated</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `animated`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setModal</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `modal`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+    
+
+### Overlay.useState API
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+### Overlay.useState Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>15 values</strong></Box>
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setBaseId</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;string&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `baseId`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">show</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setVisible</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `visible`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setAnimated</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `animated`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setModal</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `modal`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+    
+
+## Theming
+
+<Theme component={Overlay} overrides={['Overlay.styles.base', 'Overlay.styles.placements.center', 'Overlay.styles.placements.left', 'Overlay.styles.placements.right', 'Overlay.styles.placements.top', 'Overlay.styles.placements.bottom', 'Overlay.styles.placements.topStart', 'Overlay.styles.placements.topEnd', 'Overlay.styles.placements.bottomStart', 'Overlay.styles.placements.bottomEnd']}>
+  Hello world
+</Theme>
+
+<Theme component={Overlay.Disclosure} overrides={['Overlay.Disclosure.styles.base']}>
+  Hello world
+</Theme>

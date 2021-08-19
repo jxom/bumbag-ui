@@ -1,0 +1,150 @@
+import Theme from '../../components/Theme';
+import { Radio } from 'bumbag';
+
+# Radio
+
+Checkboxes are used when a user needs to at most one value from a series of options.
+
+## Import
+
+```jsx
+import { Radio } from 'bumbag'
+```
+
+## Usage
+
+```jsx-live
+<Radio label="Check me" />
+```
+
+### Disabled
+
+Make the checkbox disabled with the `disabled` prop.
+
+```jsx-live
+<Radio disabled label="Click me" />
+<Radio checked disabled label="Click me" />
+```
+
+### States
+
+A checkbox can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```jsx-live
+<Radio state="danger" label="Click me" />
+<Radio state="success" label="Click me" />
+<Radio state="warning" label="Click me" />
+<Radio state="primary" label="Click me" />
+```
+
+## Accessibility
+
+The `<Radio>` component follows the [WAI ARIA Radio Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup).
+
+### Rules
+
+- The Radio must have a `label` prop to identify it's label. If a `label` prop is not provided, an `aria-label` or `aria-labelledby` prop can be specified.
+
+#### Patterns
+
+- The radio has a role of `radio`.
+- The radio has an accessible label specified via the `label`, `aria-labelledby` or `aria-label` prop.
+- When the radio has focus, pressing the <Key>Space</Key> key changes the state of the radio.
+
+#### References
+
+- [WAI ARIA Radio Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup)
+
+## Props
+
+### Radio Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">autoFocus</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Automatically focus on the radio
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">checked</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">radioProps</Code>** <Code fontSize="100" palette="primary">InputHTMLAttributes&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">defaultChecked</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Is the radio checked by default?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Disables the radio
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isRequired</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Makes the radio required and sets aria-invalid to true
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">label</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Radio label
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">name</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">radioRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+State of the radio. Can be any color in the palette.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">string | boolean</Code> 
+
+Initial value of the radio
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onBlur</Code>** <Code fontSize="100" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when focus is lost
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(event: FormEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when radio has changed
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onFocus</Code>** <Code fontSize="100" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when radio is focused
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+## Theming
+
+<Theme
+  component={Radio}
+  label="Click me"
+  overrides={[
+    'Radio.styles.base',
+    'Radio.Icon.styles.base',
+    'Radio.Label.styles.base',
+    'Radio.HiddenInput.styles.base'
+  ]} />

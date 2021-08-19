@@ -1,9 +1,8 @@
-import { View } from 'react-native';
 import { styled } from '../styled';
 import { theme } from '../utils/theme';
 import { breakpoint } from '../utils/breakpoint';
 
-export const StyledGroup = styled(View)`
+export const StyledGroup = styled.View`
   ${getOrientationAttributes}
   ${getResponsiveProps}
 

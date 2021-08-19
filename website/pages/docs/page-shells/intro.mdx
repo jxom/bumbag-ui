@@ -1,0 +1,27 @@
+---
+breakpoint: tablet
+title: Introduction
+---
+
+# Introduction to Page Shells
+
+Bumbag comes with a set of "page shells" which are components to help you build page layouts.
+
+There are three page shells:
+
+- [`<PageWithSidebar>`](/page-shells/page-with-sidebar): To build a page layout with a sidebar
+- [`<PageWithHeader>`](/page-shells/page-with-header): To build a page layout with a header
+- [`<PageContent>`](/page-shells/page-content): To build a page layout with margined content
+
+### Collapse breakpoint
+
+You can set a global collapse breakpoint for your pages. When the page viewport width is below the `collapseBelow` breakpoint, then the page will be collapsed and the sidebar (if one is set) will be hidden.
+
+```jsx
+<BumbagProvider
+  collapseBelow="desktop"
+  theme={theme}
+>
+  // ...
+</BumbagProvider>
+```

@@ -1,0 +1,43 @@
+---
+breakpoint: tablet
+title: Variants
+path: /variants/
+---
+
+# Variants
+
+Variants allow you to set your own groups of styling & default props on a component.
+
+You can set variants on any Bumbag component in the [global theme](#theming).
+
+In this example, we are defining a "Call to action" type of button that we could use on some sort of landing page:
+
+```function-live noInline
+const theme = {
+  Button: {
+    variants: {
+      'call-to-action': {
+        styles: {
+          base: {
+            boxShadow: 'none'
+          }
+        },
+        defaultProps: {
+          palette: 'primary',
+          size: 'medium'
+        }
+      }
+    }
+  }
+};
+
+function Example() {
+  return (
+    <Provider theme={theme}>
+      <Button variant="call-to-action">Get started</Button>
+    </Provider>
+  )
+}
+
+render(Example)
+```
