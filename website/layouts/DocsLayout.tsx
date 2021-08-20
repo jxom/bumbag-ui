@@ -11,19 +11,8 @@ import Footer from '../components/Footer';
 import _TableOfContents from '../components/TableOfContents';
 
 const Sidebars = {
-  docs: DocsSidebar,
+  web: DocsSidebar,
   native: NativeSidebar,
-};
-
-type Props = {
-  children: React.ReactNode;
-  mdxFiles?: any;
-  pageContext?: any;
-  path?: string;
-  title?: string;
-  isFluid?: boolean;
-  breakpoint?: string;
-  type?: string;
 };
 
 const TableOfContents = bumbag.styled(_TableOfContents)`
@@ -37,19 +26,18 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
   padding-left: 1rem;
 `;
 
-export default function Docs(props: Props) {
-  const { children, mdxFiles = [], pageContext = {}, path = '' } = props;
+export default function Docs(props) {
+  const { children, mdxFiles = [], frontmatter = {}, platform = 'web', path = '' } = props;
 
   //////////////////////////////////////////////////////////////////////
 
-  const title = props.title || pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title;
-  const breakpoint = props.breakpoint || pageContext.frontmatter?.breakpoint || 'tablet';
-  const isFluid = props.isFluid || pageContext.frontmatter?.isFluid;
-  const type = props.type || pageContext.type || 'docs';
+  const title = props.title || frontmatter?.seoTitle || frontmatter?.title;
+  const breakpoint = props.breakpoint || frontmatter?.breakpoint || 'tablet';
+  const isFluid = props.isFluid || frontmatter?.isFluid;
 
   //////////////////////////////////////////////////////////////////////
 
-  const Sidebar = Sidebars[type];
+  const Sidebar = Sidebars[platform];
 
   return (
     <React.Fragment>
@@ -92,9 +80,9 @@ export default function Docs(props: Props) {
           >
             <bumbag.Box width="100%">{children}</bumbag.Box>
             <bumbag.Hide below="fullHD">
-              {pageContext.tableOfContents && (
+              {/* {pageContext.tableOfContents && (
                 <TableOfContents breakpoint={breakpoint} toc={pageContext.tableOfContents} />
-              )}
+              )} */}
             </bumbag.Hide>
           </bumbag.PageContent>
           <bumbag.PageContent>

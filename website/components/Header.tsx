@@ -9,7 +9,7 @@ import ColorModePicker from './ColorModePicker';
 export default function Header(props) {
   const { type } = props;
 
-  const { pathname } = useRouter();
+  const { asPath: pathname } = useRouter();
   const { theme } = useTheme();
   const { collapseBelow, sidebar } = usePage();
   const { colorMode } = useColorMode();

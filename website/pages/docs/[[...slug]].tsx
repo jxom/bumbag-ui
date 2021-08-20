@@ -10,7 +10,7 @@ import useDocsComponents from '../../hooks/useDocsComponents';
 export default function DocsPage({ platform, mdx, mdxFiles }) {
   const { components } = useDocsComponents({ platform });
   return (
-    <DocsLayout mdxFiles={mdxFiles}>
+    <DocsLayout mdxFiles={mdxFiles} platform={platform} frontmatter={mdx?.frontmatter}>
       <MDXRemote {...mdx.source} components={components} />
     </DocsLayout>
   );
