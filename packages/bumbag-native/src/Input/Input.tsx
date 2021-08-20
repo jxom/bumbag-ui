@@ -200,9 +200,9 @@ export const Input = createComponent<InputProps>(
       <Box colorMode={colorMode} position="relative" {...pickCSSProps(props)}>
         {element}
         {iconBefore && (
-          // @ts-ignore
           <styles.StyledIconWrapper
             colorMode={colorMode}
+            // @ts-ignore
             isBefore
             defaultFontSize={defaultFontSize}
             variant={props.variant}
@@ -211,9 +211,9 @@ export const Input = createComponent<InputProps>(
           </styles.StyledIconWrapper>
         )}
         {iconAfter && (
-          // @ts-ignore
           <styles.StyledIconWrapper
             colorMode={colorMode}
+            // @ts-ignore
             isAfter
             defaultFontSize={defaultFontSize}
             variant={props.variant}

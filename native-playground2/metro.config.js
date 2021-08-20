@@ -6,6 +6,7 @@ const { getDefaultConfig } = require('expo/metro-config');
 const defaultConfig = getDefaultConfig(__dirname);
 
 const watchFolders = [
+  path.resolve(__dirname + '/../packages/bumbag-native-bottom-sheet'),
   path.resolve(__dirname + '/../packages/bumbag-native-picker'),
   path.resolve(__dirname + '/../packages/bumbag-native-toast'),
   path.resolve(__dirname + '/../packages/bumbag-native'),

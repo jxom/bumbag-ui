@@ -11,6 +11,7 @@ module.exports = function (api) {
             'bumbag-native': '../packages/bumbag-native/src',
             '@bumbag-native/picker': '../packages/bumbag-native-picker/src',
             '@bumbag-native/toast': '../packages/bumbag-native-toast/src',
+            '@bumbag-native/bottom-sheet': '../packages/bumbag-native-bottom-sheet/src',
           },
         },
       ],

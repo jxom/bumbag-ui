@@ -5,6 +5,7 @@ import * as bumbagNative from 'bumbag-native';
 import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
 import { Markdown } from 'bumbag-addon-markdown';
 import { Picker } from '@bumbag-native/picker';
+import { BottomSheet } from '@bumbag-native/bottom-sheet';
 import { css, palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -97,6 +98,7 @@ export default function LiveCode(props: Props) {
       HighlightedCode,
       Markdown,
       Picker,
+      BottomSheet,
     }),
     [platform]
   );
