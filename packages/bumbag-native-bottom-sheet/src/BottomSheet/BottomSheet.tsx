@@ -1,40 +1,26 @@
 import * as React from 'react';
-import { ViewProps as RNViewProps } from 'react-native';
-import _BottomSheet from '@gorhom/bottom-sheet';
-import { createComponent, createElement, createHook } from 'bumbag/utils';
+import _BottomSheet, { BottomSheetProps as RNBottomSheetProps } from '@gorhom/bottom-sheet';
+import { createComponent, createHook } from 'bumbag/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
-import { Text, TextProps } from 'bumbag-native/Text';
-
-import * as styles from './BottomSheet.styles';
 
 export type LocalBottomSheetProps = {};
-export type BottomSheetProps = BoxProps & RNViewProps & LocalBottomSheetProps;
+export type BottomSheetProps = BoxProps & RNBottomSheetProps & LocalBottomSheetProps;
 
 const useProps = createHook<BottomSheetProps>(
   (props) => {
     const boxProps = Box.useProps(props);
     return {
       ...boxProps,
-      children: (
-        <_BottomSheet index={1} snapPoints={['25%', '50%']}>
-          <Box>
-            <Text>Awesome 🎉</Text>
-          </Box>
-        </_BottomSheet>
-      ),
     };
   },
-  { themeKey: 'native.BottomSheet' }
+  { defaultProps: { snapPoints: ['25%', '50%'] }, themeKey: 'native.BottomSheet' }
 );
 
 export const BottomSheet = createComponent<BottomSheetProps>(
   (props) => {
     const htmlProps = useProps(props);
-    return createElement({
-      children: props.children,
-      component: styles.BottomSheet,
-      htmlProps,
-    });
+
+    return <_BottomSheet {...htmlProps} />;
   },
   {
     attach: {
