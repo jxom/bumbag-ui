@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TextInputProps as RNTextInputProps, ViewProps as RNViewProps, Text } from 'react-native';
+import { TextInput, TextInputProps as RNTextInputProps, ViewProps as RNViewProps, Text } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { useFontStyles, useTheme } from 'bumbag-native/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
@@ -7,8 +7,8 @@ import Animated, { Easing, useAnimatedStyle, withTiming, useAnimatedProps } from
 
 import * as styles from './Toast.styles';
 
-const AnimatedToast = Animated.createAnimatedComponent(styles.Toast);
-const AnimatedTextInput = Animated.createAnimatedComponent(styles.ToastTextInput);
+const AnimatedToast = Animated.createAnimatedComponent(Box.Safe);
+const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export type LocalToastProps = {
   placement: { value: 'top' | 'bottom' };
@@ -92,7 +92,15 @@ export const Toast = createComponent<ToastProps>(
       component: AnimatedToast,
       htmlProps: {
         ...htmlProps,
-        style: animatedStyle,
+        style: [
+          {
+            justifyContent: 'center',
+            height: 100,
+            width: '100%',
+            position: 'absolute',
+          },
+          animatedStyle,
+        ],
       },
     });
   },
