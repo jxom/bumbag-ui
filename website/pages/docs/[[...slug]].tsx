@@ -17,7 +17,7 @@ export default function DocsPage({ platform, mdx, mdxFiles }) {
 }
 
 export async function getStaticPaths() {
-  const mdxFiles = await getMDXFiles('/pages/docs');
+  const mdxFiles = await getMDXFiles('/pages/docs', { includeMDX: false });
   return {
     paths: mdxFiles.map((file) => ({
       params: {
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const mdxFiles = await getMDXFiles('/pages/docs');
+  const mdxFiles = await getMDXFiles('/pages/docs', { includeMDX: false });
   const mdxFile = await getMDXFileFromSlug('/pages/docs', slug);
   return { props: { ...mdxFile, mdxFiles } };
 }

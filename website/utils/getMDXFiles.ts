@@ -3,7 +3,7 @@ import shell from 'shelljs';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 
-export async function getMDXFile(mdxDir, filePath) {
+export async function getMDXFile(mdxDir, filePath, { includeMDX = true }) {
   const source = fs.readFileSync(filePath);
   const { content, data } = matter(source);
 
@@ -17,14 +17,16 @@ export async function getMDXFile(mdxDir, filePath) {
 
   let mdxSource;
   try {
-    mdxSource = await serialize(content, {
-      // Optionally pass remark/rehype plugins
-      mdxOptions: {
-        remarkPlugins: [],
-        rehypePlugins: [],
-      },
-      scope: data,
-    });
+    if (includeMDX) {
+      mdxSource = await serialize(content, {
+        // Optionally pass remark/rehype plugins
+        mdxOptions: {
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
+        scope: data,
+      });
+    }
   } catch (err) {}
 
   let platform = 'web';
@@ -39,26 +41,30 @@ export async function getMDXFile(mdxDir, filePath) {
     path,
     relativeDirectory,
     platform,
-    mdx: {
-      content,
-      source: mdxSource,
-      frontmatter: data,
-    },
+    ...(includeMDX
+      ? {
+          mdx: {
+            content,
+            source: mdxSource,
+            frontmatter: data,
+          },
+        }
+      : {}),
   };
 }
 
 export async function getMDXFileFromSlug(dir, slug) {
   const mdxDir = `${process.cwd()}${dir}`;
   const filePath = `${mdxDir}/${slug.join('/')}.mdx`;
-  return getMDXFile(mdxDir, filePath);
+  return getMDXFile(mdxDir, filePath, {});
 }
 
-export default async function getMDXFiles(dir) {
+export default async function getMDXFiles(dir, opts) {
   const mdxDir = `${process.cwd()}${dir}`;
   const paths = shell.ls('-R', `${mdxDir}/**/*.mdx`);
   return Promise.all(
     paths.map(async (filePath) => {
-      return getMDXFile(mdxDir, filePath);
+      return getMDXFile(mdxDir, filePath, opts);
     })
   );
 }
