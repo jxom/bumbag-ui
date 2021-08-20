@@ -31,11 +31,9 @@ class Document extends NextDocument {
           <meta name="apple-mobile-web-app-title" content="Bumbag" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="theme-color" content="#bb3b65" />
 
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+          <link rel="shortcut icon" type="image/png" href="/icon.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/icon.png" />
         </Head>
         <body>
           <InitializeColorMode />

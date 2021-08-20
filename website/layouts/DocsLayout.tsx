@@ -1,9 +1,7 @@
 import React from 'react';
 import * as bumbag from 'bumbag';
-// import { MDXProvider } from '@mdx-js/react';
-// import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-// import SEO from '../components/SEO';
+import SEO from '../components/SEO';
 import Header from '../components/Header';
 import DocsSidebar from '../components/Docs/Sidebar';
 import NativeSidebar from '../components/Native/Sidebar';
@@ -41,7 +39,7 @@ export default function Docs(props) {
 
   return (
     <React.Fragment>
-      {/* <SEO title={title} /> */}
+      <SEO title={title} />
       <bumbag.PageWithHeader sticky header={<Header />}>
         <bumbag.PageWithSidebar
           sidebar={<Sidebar mdxFiles={mdxFiles} path={path} />}

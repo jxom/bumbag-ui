@@ -57,16 +57,6 @@ module.exports = withPlugins([withTM], {
         'react-native$': 'react-native-web',
         ...packages,
       };
-      config.resolveLoader.alias = {
-        ...config.resolveLoader.alias,
-        '@emotion/native': path.resolve(__dirname, './node_modules/@emotion/native'),
-        '@emotion/css': path.resolve(__dirname, './node_modules/@emotion/css'),
-        '@emotion/react': path.resolve(__dirname, './node_modules/@emotion/react'),
-        react: path.resolve(__dirname, './node_modules/react'),
-        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-        'react-native$': 'react-native-web',
-        ...packages,
-      };
       config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
 
       config.module.rules.push(config.module.rules[3]);

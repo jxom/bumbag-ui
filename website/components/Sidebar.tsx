@@ -132,6 +132,7 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
                 <Link textDecoration="none">
                   <SideNav.Item
                     key={item.name}
+                    color={frontmatter.wip ? 'gray' : ''}
                     onClick={() => setTimeout(sidebar.drawer.hide, 100)}
                     navId={`/docs${item.path}/`}
                   >
