@@ -41,15 +41,15 @@ export async function getMDXFile(mdxDir, filePath, { includeMDX = true }) {
     path,
     relativeDirectory,
     platform,
-    ...(includeMDX
-      ? {
-          mdx: {
+    mdx: {
+      ...(includeMDX
+        ? {
             content,
             source: mdxSource,
-            frontmatter: data,
-          },
-        }
-      : {}),
+          }
+        : {}),
+      frontmatter: data,
+    },
   };
 }
 
