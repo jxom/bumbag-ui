@@ -78,8 +78,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false,
-    cliPath: "node_modules/@haul-bundler/cli/bin/haul.js"
+    enableHermes: (findProperty('expo.jsEngine') ?: "jsc") == "hermes",
 ]
 
 apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
@@ -133,7 +132,7 @@ android {
     }
 
     defaultConfig {
-        applicationId 'com.jxom.nativeplayground'
+        applicationId 'com.bumbag.nativeplayground'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

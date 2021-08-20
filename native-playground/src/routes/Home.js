@@ -63,6 +63,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/text">
         <Text>Text</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/toast">
+        <Text>Toast</Text>
+      </Link>
     </Box>
   );
 }

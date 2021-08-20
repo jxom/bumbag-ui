@@ -1,0 +1,43 @@
+{
+  "name": "@bumbag-native/toast",
+  "version": "2.4.1",
+  "description": "An accessible, composable, and friendly React UI Kit",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "ts/index.d.ts",
+  "scripts": {
+    "build": "node ../../scripts/build/build.js",
+    "clean": "node ../../scripts/build/clean.js",
+    "develop": "node ../../scripts/build/build.js --watch",
+    "prepublishOnly": "yarn build",
+    "postpublish": "yarn clean",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/ --ext js,ts,tsx",
+    "lint:fix": "eslint src/ --fix",
+    "test": "yarn type-check && yarn lint && yarn jest",
+    "jest": "jest"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@types/react": "^16.8.0 || ^17.0.0",
+    "bumbag": "^2.0.0",
+    "bumbag-native": "^2.0.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-native": "^0.60.0",
+    "react-native-reanimated": "^2.0.0"
+  },
+  "devDependencies": {
+    "bumbag": "^2.2.1",
+    "bumbag-native": "^2.4.1"
+  },
+  "author": "Jake Moxey",
+  "homepage": "https://bumbag.style",
+  "license": "MIT",
+  "repository": "https://github.com/bumbag/bumbag-ui",
+  "keywords": [
+    "bumbag",
+    "ui",
+    "accessible",
+    "composable"
+  ]
+}
