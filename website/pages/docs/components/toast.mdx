@@ -1,0 +1,637 @@
+# Toasts
+
+## Import
+
+```jsx
+import { ToastManager, useToasts } from 'bumbag'
+```
+
+## Setup
+
+To get started with rendering toasts to your app, you will need to put the `<ToastManager />` component at the top level of your app.
+
+The `ToastManager` component is essentially an overlay to render the toasts.
+
+```jsx
+import { Provider, ToastManager } from 'bumbag';
+
+const App = () => (
+  <Provider theme={theme}>
+    // ... your app
+    <ToastManager />
+  </Provider>
+);
+```
+
+## Usage
+
+To render a toast on your screen, invoke the `add` function with a title & message from the `useToasts` hook.
+
+By default, the toast will appear for 5 seconds.
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.add({
+          title: 'Did you know?',
+          message: 'Bumbag is a UI Kit for React'
+        })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+### Types
+
+#### Success
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.success({
+          title: 'Did you know?',
+          message: 'Bumbag is a UI Kit for React'
+        })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+#### Danger
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.danger({
+          title: 'Did you know?',
+          message: 'Bumbag is a UI Kit for React'
+        })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+#### Warning
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.warning({
+          title: 'Did you know?',
+          message: 'Bumbag is a UI Kit for React'
+        })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+#### Info
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.info({
+          title: 'Did you know?',
+          message: 'Bumbag is a UI Kit for React'
+        })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+### Placement
+
+You can customise the placement of the toasts by using the `placement` prop on `<ToastManager>`.
+
+> `placement` is set to `"top-end"` by default.
+
+```jsx
+import { ToastManager } from 'bumbag';
+
+const App = () => (
+  <ToastManager placement="bottom" />
+);
+```
+
+### Stacked toasts
+
+By default, toasts in Bumbag are stacked, meaning that you can display multiple toasts at the one time. However, you have the ability to disable this using the `isStacked` prop on `<ToastManager>`.
+
+```jsx
+import { ToastManager } from 'bumbag';
+
+const App = () => (
+  <ToastManager isStacked={false} />
+);
+```
+
+### Custom Toast props
+
+You can override the `Toast` component props using the `Toast.defaultProps` theme variable. This variable accepts an object of the [`<Toast>` props](#props).
+
+```jsx
+import { Provider } from 'bumbag';
+
+const theme = {
+  Toast: {
+    defaultProps: {
+      accent: 'bottom',
+      hasIcon: false
+    }
+  }
+}
+
+const App = () => (
+  <Provider theme={theme}>
+    // ... your app
+  </Provider>
+);
+```
+
+Or you can change it via the toast instance:
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.info({ accent: 'bottom', hasIcon: false, title: 'Did you know?', message: 'Bumbag is a UI Kit for React' })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+### Dismiss timeout
+
+By default, the toast timeout is 5 seconds (5000ms). You can change this via the `Toast.timeout` theme variable.
+
+> To disable the timeout, set `timeout` to `0`.
+
+```jsx
+import { Provider } from 'bumbag';
+
+const theme = {
+  Toast: {
+    timeout: 2000
+  }
+}
+
+const App = () => (
+  <Provider theme={theme}>
+    // ... your app
+  </Provider>
+);
+```
+
+Or you can change it via the toast instance:
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.info({ timeout: 2000, title: 'Did you know?', message: 'Bumbag is a UI Kit for React' })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+### Disable the countdown bar
+
+```jsx
+import { Provider } from 'bumbag';
+
+const theme = {
+  Toast: {
+    showCountdown: false
+  }
+}
+
+const App = () => (
+  <Provider theme={theme}>
+    // ... your app
+  </Provider>
+);
+```
+
+Or you can change it via the toast instance:
+
+```function-live
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() =>
+        toasts.info({ showCountdown: false, title: 'Did you know?', message: 'Bumbag is a UI Kit for React' })
+      }
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
+## Props
+
+### ToastManager Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isStacked</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">spacing</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overlayProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  ... 808 more ...;
+  timingFunction?: string;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toastProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  ... 795 more ...;
+  iconProps?: Pick<...>;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Toast Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">countdown</Code>** <Code fontSize="100" palette="primary">number</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Alert</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">accent</Code>** <Code fontSize="100" palette="primary">true | &#34;top&#34; | &#34;bottom&#34;</Code> 
+
+Placement of the accent (the side border).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">accentSize</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Size of the accent (in px).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hasIcon</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Should the alert have an icon depending on its `type`?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isInline</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Is the alert inline, and has the title beside its content?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onClickClose</Code>** <Code fontSize="100" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
+
+Function to invoke when the alert close button is pressed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">showCloseButton</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether or not to show the close button.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">title</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+The title of the alert.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">&#34;success&#34; | &#34;danger&#34; | &#34;warning&#34; | &#34;info&#34;</Code> 
+
+The type of the alert.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">closeButtonProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 807 more ...;
+  ignoreGrayOverride?: boolean;
+}`}
+</Code>
+
+The props to spread onto the close button.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">closeButtonIconProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 787 more ...;
+  label?: string;
+}`}
+</Code>
+
+The props to spread onto the close button icon.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">iconProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 787 more ...;
+  label?: string;
+}`}
+</Code>
+
+The props to spread onto the alert icon.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Flex</code></strong> props</Box>
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+<Theme
+  component={'Toast'}
+  title="Did you know?"
+  overrides={['Toast.styles.base', 'Toast.Content.styles.base', 'Toast.Title.styles.base', 'Toast.Description.styles.base', 'Toast.IconWrapper.styles.base', 'Toast.CloseButton.styles.base']}>
+  Bumbag is a React UI Kit.
+</Theme>

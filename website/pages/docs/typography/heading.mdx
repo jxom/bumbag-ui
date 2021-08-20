@@ -1,0 +1,293 @@
+# Heading
+
+By default, `<Heading>` renders a `<h1>` with default margins applied.
+
+## Import
+
+```jsx
+import { Heading } from 'bumbag';
+```
+
+## Usage
+
+```jsx-live
+<Box>
+  <Heading>Heading 1</Heading>
+  <Paragraph>Hello world!</Paragraph>
+</Box>
+```
+
+### Other headers
+
+Use the `use` prop to change from the default `h1` element to `h2`, `h3`, `h4`, `h5`, `h6`, `span`, or others.
+
+```jsx-live
+<Box>
+  <Heading>Heading 1</Heading>
+  <Heading use="h2">Heading 2</Heading>
+  <Heading use="h3">Heading 3</Heading>
+  <Heading use="h4">Heading 4</Heading>
+  <Heading use="h5">Heading 5</Heading>
+  <Heading use="h6">Heading 6</Heading>
+</Box>
+```
+
+### Font sizes
+
+You can adjust the font size of a heading with the `fontSize` prop:
+
+```jsx-live
+<Heading fontSize="400">Hello world</Heading>
+```
+
+Or, you can modify the font size for each heading level in the theme:
+
+```jsx
+const theme = {
+  Heading: {
+    h1: {
+      fontSize: '700'
+    },
+    h2: {
+      fontSize: '600'
+    },
+    h3: {
+      fontSize: '500'
+    }
+    h4: {
+      fontSize: '400'
+    }
+    h5: {
+      fontSize: '300'
+    },
+    h6: {
+      fontSize: '200'
+    }
+  }
+}
+
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
+### Responsive headers
+
+By default, each heading's font size will shrink in a `mobile` viewport.
+
+You can modify the breakpoint in the component itself:
+
+```jsx-live
+<Heading shrinkBelow="desktop">Hello world</Heading>
+```
+
+Or you can modify the breakpoint in the theme:
+
+```jsx
+const theme = {
+  Heading: {
+    defaultProps: {
+      shrinkBelow: 'desktop'
+    }
+  }
+}
+
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
+If you just want to disable shrinking, you can specify `null`:
+
+```jsx
+const theme = {
+  Heading: {
+    defaultProps: {
+      shrinkBelow: null
+    }
+  }
+}
+
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
+## Heading Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">isSubHeading</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">shrinkBelow</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`(string & {})
+  | "tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"`}
+</Code>
+
+Indicates the breakpoint at which the heading font size should shrink.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+ <Theme
+  component={'Heading'}
+  overrides={[
+    'Heading.styles.base',
+    {
+      key: 'Heading.h1.styles.base',
+      description: 'Applies when the heading is h1. `<Heading use="h1">`',
+      props: { use: 'h1' }
+    },
+    {
+      key: 'Heading.h1.styles.shrinked',
+      description: 'Applies when the heading is h1 & the page is in a mobile viewport',
+      props: { use: 'h1' }
+    },
+    {
+      key: 'Heading.h2.styles.base',
+      description: 'Applies when the heading is h2. `<Heading use="h2">`',
+      props: { use: 'h2' }
+    },
+    {
+      key: 'Heading.h2.styles.shrinked',
+      description: 'Applies when the heading is h2 & the page is in a mobile viewport',
+      props: { use: 'h2' }
+    },
+    {
+      key: 'Heading.h3.styles.base',
+      description: 'Applies when the heading is h3. `<Heading use="h3">`',
+      props: { use: 'h3' }
+    },
+    {
+      key: 'Heading.h3.styles.shrinked',
+      description: 'Applies when the heading is h3 & the page is in a mobile viewport',
+      props: { use: 'h3' }
+    },
+    {
+      key: 'Heading.h4.styles.base',
+      description: 'Applies when the heading is h4. `<Heading use="h4">`',
+      props: { use: 'h4' }
+    },
+    {
+      key: 'Heading.h4.styles.shrinked',
+      description: 'Applies when the heading is h4 & the page is in a mobile viewport',
+      props: { use: 'h4' }
+    },
+    {
+      key: 'Heading.h5.styles.base',
+      description: 'Applies when the heading is h5. `<Heading use="h5">`',
+      props: { use: 'h5' }
+    },
+    {
+      key: 'Heading.h5.styles.shrinked',
+      description: 'Applies when the heading is h5 & the page is in a mobile viewport',
+      props: { use: 'h5' }
+    },
+    {
+      key: 'Heading.h6.styles.base',
+      description: 'Applies when the heading is h6. `<Heading use="h6">`',
+      props: { use: 'h6' }
+    },
+    {
+      key: 'Heading.h6.styles.shrinked',
+      description: 'Applies when the heading is h6 & the page is in a mobile viewport',
+      props: { use: 'h6' }
+    },
+    {
+      key: 'Heading.subHeading.styles.base',
+      description: 'Applies for sub-headings. `<Heading isSubHeading>`',
+      props: { isSubHeading: true }
+    }
+  ]}>
+  Hello world
+</Theme>

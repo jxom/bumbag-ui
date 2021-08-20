@@ -1,0 +1,117 @@
+# Avatar
+
+The `<Avatar>` component renders a 60x60 pixel image by default.
+
+## Import
+
+```jsx
+import { Avatar } from 'bumbag';
+```
+
+## Usage
+
+```jsx-live
+<Avatar src="/bean.jpg" alt="Photo of Mr. Bean" />
+```
+
+### Shapes
+
+Avatars are available in two different shapes and can be changed using the `variant` prop.
+
+```jsx-live
+<Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" />
+```
+
+### Sizes
+
+Avatars are available in five different sizes or you can set your own using the `size` prop.
+
+```jsx-live
+<Set>
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="small" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="medium" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="large" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="150px" />
+</Set>
+```
+
+### Initials
+
+Avatars can also be initials using the `initials` prop.
+
+```jsx-live
+<Set>
+  <Avatar initials="JM" variant="circle" palette="primary" size="small" />
+  <Avatar initials="Jake Moxey" variant="circle" palette="secondary" />
+  <Avatar initials="JM" variant="circle" palette="success" size="medium" />
+  <Avatar initials="JM" variant="circle" palette="warning" size="large" />
+</Set>
+```
+
+## Accessibility
+
+### Rules
+
+- If the avatar is an image, it **must have an `alt` prop**.
+
+## Props
+
+### Avatar Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">(string &#38; {}) | &#34;circle&#34;</Code> 
+
+Variant of the avatar.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">src</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+URL of the avatar image.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">string | (string &#38; {})</Code> 
+
+Size of the avatar.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">initials</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Initials to place on the avatar.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
+
+Color of the avatar.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+## Theming
+
+<Theme
+  component={'Avatar'}
+  src="/bean.jpg"
+  padding="major-1"
+  overrides={[
+    'Avatar.styles.base',
+    { key: 'Avatar.styles.sizes.small', props: { size: 'small' } },
+    'Avatar.styles.sizes.default',
+    { key: 'Avatar.styles.sizes.medium', props: { size: 'medium' } },
+    { key: 'Avatar.styles.sizes.large', props: { size: 'large' } }
+  ]}
+/>

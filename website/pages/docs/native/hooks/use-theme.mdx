@@ -1,0 +1,39 @@
+---
+breakpoint: tablet
+title: useTheme
+---
+
+# useTheme
+
+## Import
+
+```js
+import { useTheme } from 'bumbag';
+```
+
+## Usage
+
+The `useTheme` hook retrieves the theme object from Bumbag's context.
+
+```function-live
+function Example() {
+  const { theme } = useTheme();
+  return <Text>Primary color code: {theme.palette.primary}</Text>;
+}
+```
+
+## Schema
+
+```js
+const { theme, setTheme } = useTheme()
+```
+
+### Return values
+
+**<Code marginRight="major-1">theme</Code>** `Object`
+
+Returns the theme object from context.
+
+**<Code marginRight="major-1">setTheme(theme)</Code>** `Object`
+
+Sets the theme.

@@ -1,0 +1,229 @@
+---
+breakpoint: fullHD
+---
+
+# PageContent
+
+## Import
+
+```jsx
+import { PageContent } from 'bumbag';
+```
+
+## Usage
+
+The `<PageContent>` component helps you with creating a page with content. It comes with margins & paddings built in.
+
+```jsx-live
+<Box>
+  <PageContent>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </PageContent>
+  <PageContent wrapperProps={{ backgroundColor: 'white900' }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </PageContent>
+</Box>
+```
+
+### Breakpoints
+
+The default breakpoint for a content block is `tablet`. However, you can change this with the `breakpoint` prop.
+
+```jsx-live
+<Box>
+  <PageContent breakpoint="desktop">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </PageContent>
+  <PageContent breakpoint="desktop" wrapperProps={{ backgroundColor: 'white900' }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </PageContent>
+</Box>
+```
+
+You can also change the default breakpoint via the [global theme](/theming) as well.
+
+```jsx
+const theme = {
+  PageContent: {
+    defaultProps: {
+      breakpoint: 'desktop'
+    }
+  }
+}
+
+<BumbagProvider theme={theme}>
+  {/* ... */}
+</BumbagProvider>
+```
+
+### Fluid
+
+```jsx-live
+<Box>
+  <PageContent isFluid>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Faucibus pulvinar elementum integer enim neque volutpat. Cum sociis natoque penatibus et magnis dis parturient montes. Maecenas accumsan lacus vel facilisis. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Gravida cum sociis natoque penatibus et magnis dis parturient montes. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Nisi est sit amet facilisis magna etiam tempor. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.
+  </PageContent>
+  <PageContent isFluid wrapperProps={{ backgroundColor: 'white900' }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Faucibus pulvinar elementum integer enim neque volutpat. Cum sociis natoque penatibus et magnis dis parturient montes. Maecenas accumsan lacus vel facilisis. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Gravida cum sociis natoque penatibus et magnis dis parturient montes. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Nisi est sit amet facilisis magna etiam tempor. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.
+  </PageContent>
+</Box>
+```
+
+## Props
+
+### PageContent Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">wrapperProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  ... 784 more ...;
+  themeKey?: string;
+}`}
+</Code>
+
+Props to spread onto the wrapper component.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Container</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+Sets the alignment of the container.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">breakpoint</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`(string & {})
+  | "tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"`}
+</Code>
+
+Sets the breakpoint width of the container.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isFluid</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the container is fluid.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isLayout</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the container is of a layout type.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+<Theme component={'PageContent'} overrides={["PageContent.styles.base", 'PageContent.Wrapper.styles.base']}>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel.
+  Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium
+  vulputate sapien nec. Faucibus pulvinar elementum integer enim neque volutpat.
+  Cum sociis natoque penatibus et magnis dis parturient montes. Maecenas
+  accumsan lacus vel facilisis. Mauris pellentesque pulvinar pellentesque
+  habitant morbi tristique senectus. Gravida cum sociis natoque penatibus et
+  magnis dis parturient montes. Massa sapien faucibus et molestie ac feugiat sed
+  lectus vestibulum. Nisi est sit amet facilisis magna etiam tempor. Eget nulla
+  facilisi etiam dignissim diam quis enim lobortis scelerisque
+</Theme>

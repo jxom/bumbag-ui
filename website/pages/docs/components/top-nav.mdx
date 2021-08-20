@@ -1,0 +1,236 @@
+# TopNav
+
+The `<TopNav>` component renders a list of links or items used for navigation.
+
+Bumbag's navigation you see at the top is built with `<TopNav>` & it fits perfectly alongside the [PageWithHeader component](/page-shells/page-with-header).
+
+## Import
+
+```jsx
+import { TopNav } from 'bumbag'
+```
+
+## Usage
+
+```jsx-live
+<TopNav>
+  <TopNav.Section>
+    <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+      <Image src="/logo.png" height="44px" />
+    </TopNav.Item>
+    <TopNav.Item href="#">Get started</TopNav.Item>
+    <TopNav.Item href="#">Components</TopNav.Item>
+  </TopNav.Section>
+  <TopNav.Section>
+    <TopNav.Item>
+      <Button variant="ghost" palette="primary">Sign up</Button>
+    </TopNav.Item>
+    <TopNav.Item>
+      <Button palette="primary">Login</Button>
+    </TopNav.Item>
+  </TopNav.Section>
+</TopNav>
+```
+
+### Variants
+
+#### Pill
+
+```jsx-live
+<TopNav>
+  <TopNav.Section>
+    <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+      <Image src="/logo.png" height="44px" />
+    </TopNav.Item>
+    <TopNav.Item href="#" variant="pill">Get started</TopNav.Item>
+    <TopNav.Item href="#" variant="pill">Components</TopNav.Item>
+  </TopNav.Section>
+  <TopNav.Section>
+    <TopNav.Item>
+      <Button variant="ghost" palette="primary">Sign up</Button>
+    </TopNav.Item>
+    <TopNav.Item>
+      <Button palette="primary">Login</Button>
+    </TopNav.Item>
+  </TopNav.Section>
+</TopNav>
+```
+
+### Selected items
+
+#### Controlled
+
+```function-live
+function Example() {
+  const [selectedId, setSelectedId] = React.useState('get-started');
+  return (
+    <TopNav selectedId={selectedId} onChange={id => setSelectedId(id)}>
+      <TopNav.Section>
+        <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
+        <TopNav.Item navId="components" href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section>
+        <TopNav.Item>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  )
+}
+```
+
+#### Uncontrolled
+
+```jsx-live
+<TopNav defaultSelectedId="get-started">
+  <TopNav.Section>
+    <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+      <Image src="/logo.png" height="44px" />
+    </TopNav.Item>
+    <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
+    <TopNav.Item navId="components" href="#">Components</TopNav.Item>
+  </TopNav.Section>
+  <TopNav.Section>
+    <TopNav.Item>
+      <Button variant="ghost" palette="primary">Sign up</Button>
+    </TopNav.Item>
+    <TopNav.Item>
+      <Button palette="primary">Login</Button>
+    </TopNav.Item>
+  </TopNav.Section>
+</TopNav>
+```
+
+## Props
+
+### TopNav Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">defaultSelectedId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">selectedId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Navigation</code></strong> props</Box>
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+<Theme component="div" overrides={['TopNav.styles.base', 'TopNav.Section.styles.base', 'TopNav.Item.styles.base', 'TopNav.Item.styles.active', 'TopNav.Item.styles.hover', 'TopNav.Item.styles.focus']}>
+  {props => (
+    <TopNav defaultSelectedId="get-started" overrides={props.overrides}>
+      <TopNavSection>
+        <TopNavItem href="https://bumbag.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNavItem>
+        <TopNavItem navId="get-started" href="#">Get started</TopNavItem>
+        <TopNavItem navId="components" href="#">Components</TopNavItem>
+      </TopNavSection>
+      <TopNavSection>
+        <TopNavItem>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNavItem>
+        <TopNavItem>
+          <Button palette="primary">Login</Button>
+        </TopNavItem>
+      </TopNavSection>
+    </TopNav>
+  )}
+</Theme>

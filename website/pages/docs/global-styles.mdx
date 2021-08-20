@@ -1,0 +1,48 @@
+---
+breakpoint: tablet
+title: Global styles
+path: /global-styles/
+---
+
+# Global styles
+
+To add global styles to Bumbag, you will need to inject them in the Bumbag theme:
+
+```jsx
+import { Provider as BumbagProvider, css } from 'bumbag';
+
+const theme = {
+  global: {
+    fontSize: 20,
+    styles: {
+      base: css`
+        html,
+        body {
+          background-color: pink;
+        }
+      `
+    }
+  }
+}
+
+export default () => (
+  <BumbagProvider theme={theme}>
+    {/* your app... */}
+  </BumbagProvider>
+)
+```
+
+## Theming
+
+### Schema
+
+```js
+const theme = {
+  global: {
+    fontSize: number,
+    styles: {
+      base: Object | string
+    }
+  }
+}
+```

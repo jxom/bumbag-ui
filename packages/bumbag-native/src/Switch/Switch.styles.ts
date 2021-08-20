@@ -1,4 +1,3 @@
-import { Switch as RNSwitch } from 'react-native';
 import { styled } from '../styled';
 import { space, theme } from '../utils/theme';
 import { Box } from '../Box';
@@ -24,7 +23,7 @@ export const Switch = styled(Pressable)`
 
 //////////////////////////////////////////////////////////////////
 
-export const SwitchToggle = styled(RNSwitch)`
+export const SwitchToggle = styled.Switch`
   ${(props: any) =>
     props.align === 'left'
       ? `

@@ -1,0 +1,67 @@
+---
+breakpoint: tablet
+title: useBreakpoint
+---
+
+# useBreakpoint
+
+## Import
+
+```js
+import { useBreakpoint } from 'bumbag-native';
+```
+
+## Usage
+
+The `useBreakpoint` hook will return a `boolean` depending if the particular breakpoint query is met.
+
+### Widths
+
+In the example below, `isXLAndUnder` will return truthy if it is under the [max xl width viewport](/breakpoints) (1023px).
+
+```function-live
+function Example() {
+  const isXLAndUnder = useBreakpoint('width', 'max-xl');
+  return <Text>{isXLAndUnder ? 'Yes' : 'No'}</Text>;
+}
+```
+
+In the example below, `isLgAndAbove` will return truthy if it is above the [min lg width viewport](/breakpoints) (480px).
+
+```function-live
+function Example() {
+  const isLgAndAbove = useBreakpoint('width', 'min-lg');
+  return <Text>{isLgAndAbove ? 'Yes' : 'No'}</Text>;
+}
+```
+
+In the example below, `isLg` will return truthy if it is within the [lg width viewport](/breakpoints) (414px to 768px).
+
+```function-live
+function Example() {
+  const isLg = useBreakpoint('width', 'lg');
+  return <Text>{isLg ? 'Yes' : 'No'}</Text>;
+}
+```
+
+## Schema
+
+```js
+const doesMatch = useBreakpoint(direction, breakpoint)
+```
+
+### Parameters
+
+**<Code marginRight="major-1">direction</Code>** `string`
+
+Either `width` or `height`.
+
+**<Code marginRight="major-1">breakpoint</Code>** `string`
+
+A valid [breakpoint](/breakpoints) from the theme.
+
+### Return values
+
+**<Code marginRight="major-1">doesMatch</Code>** `boolean`
+
+Returns truthy if the query is matched.

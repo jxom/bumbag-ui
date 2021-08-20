@@ -1,0 +1,330 @@
+# PageWithHeader
+
+## Import
+
+```jsx
+import { PageWithHeader } from 'bumbag';
+```
+
+## Usage
+
+The `<PageWithHeader>` component enables you to build a page layout with a header.
+
+Provide your header component to the `header` prop, and the rest of your page as children.
+
+```jsx-live
+<PageWithHeader
+  header={
+    <TopNav>
+      <TopNav.Section>
+        <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item href="#">Get started</TopNav.Item>
+        <TopNav.Item href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section marginRight="major-2">
+        <TopNav.Item>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  }
+  border="default"
+>
+  <Box padding="major-2">Hello world</Box>
+</PageWithHeader>
+```
+
+### Sticky headers
+
+To make your header sticky, add the `sticky` prop.
+
+```jsx
+<PageWithHeader
+  sticky
+  header={
+    <TopNav>
+      <TopNav.Section>
+        <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item href="#">Get started</TopNav.Item>
+        <TopNav.Item href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section marginRight="major-2">
+        <TopNav.Item>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  }
+  border="default"
+  overrides={{ PageWithHeader: { styles: { base: { minHeight: 'unset' } } } }}
+>
+  <Box padding="major-2">Hello world</Box>
+</PageWithHeader>
+```
+
+### Toggling the header
+
+You can toggle the header with your own component using the `<PageWithHeader.Disclosure>` component.
+
+```jsx-live
+<PageWithHeader.Disclosure use={Button}>
+  Toggle header
+</PageWithHeader.Disclosure>
+```
+
+Or you can use the `usePage` hook.
+
+```function-live
+function Example() {
+  const { header } = usePage();
+  return (
+    <Button onClick={header.toggle}>Toggle header</Button>
+  )
+}
+```
+
+### Header height
+
+You can alter the height of the header with the `headerHeight` prop.
+
+```jsx-live
+<PageWithHeader
+  headerHeight="80px"
+  header={
+    <TopNav>
+      <TopNav.Section>
+        <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item href="#">Get started</TopNav.Item>
+        <TopNav.Item href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section marginRight="major-2">
+        <TopNav.Item>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  }
+  border="default"
+>
+  <Box padding="major-2">Hello world</Box>
+</PageWithHeader>
+```
+
+## Props
+
+### PageWithHeader Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">defaultIsVisible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the header is visible initially.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">header</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+Sets the header component.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">headerHeight</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Sets the height of the header component.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">sticky</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Makes the header stick to the top of the page.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### PageWithHeader.Disclosure Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            

@@ -1,10 +1,9 @@
-import { View } from 'react-native';
 import { styled } from '../styled';
 import { theme } from '../utils/theme';
 import { breakpoint } from '../utils/breakpoint';
 import { getAlignmentStyles } from '../utils/getCSSFromStyleObject';
 
-export const StyledLevel = styled(View)`
+export const StyledLevel = styled.View`
   justify-content: space-between;
 
   ${getOrientationAttributes}

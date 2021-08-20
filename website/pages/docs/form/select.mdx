@@ -1,0 +1,1123 @@
+# Select
+
+The `Select` component renders a `<select>` field with options.
+
+## Import
+
+```jsx
+import { Select, SelectField } from 'bumbag'
+```
+
+## Usage
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  variant="filled"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Borderless,type=jsx-live
+<Select
+  variant="borderless"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Underline,type=jsx-live
+<Select
+  variant="underline"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+```
+
+### Fields
+
+You can also use the `<SelectField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.
+
+It accepts a combination of [Select props](/form/select/#props) and [FieldWrapper props](/form/field-wrapper/#props).
+
+```live
+###tab=Default,type=jsx-live
+<SelectField
+  label="Condition"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<SelectField
+  label="Condition"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
+/>###
+
+###tab=Borderless,type=jsx-live
+<SelectField
+  label="Condition"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="borderless"
+/>###
+
+###tab=Underline,type=jsx-live
+<SelectField
+  label="Condition"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="underline"
+/>###
+```
+
+### Default values
+
+For uncontrolled select field, set a default value using the `defaultValue` prop.
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  value="overcast"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  value="overcast"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
+/>###
+
+###tab=Borderless,type=jsx-live
+<Select
+  defaultValue="overcast"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="borderless"
+/>###
+
+###tab=Underline,type=jsx-live
+<Select
+  defaultValue="overcast"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="underline"
+/>###
+```
+
+### Labels
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  variant="filled"
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Borderless,type=jsx-live
+<Select
+  variant="borderless"
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Underline,type=jsx-live
+<Select
+  variant="underline"
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+```
+
+If you want to have the label contained within the bounds of the select field, supply the `containLabel` prop:
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  containLabel
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  containLabel
+  variant="filled"
+  label="Weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+```
+
+### Placeholders
+
+Add a placeholder to a select field with the `placeholder` prop.
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
+/>###
+
+###tab=Borderless,type=jsx-live
+<Select
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="borderless"
+/>###
+
+###tab=Underline,type=jsx-live
+<Select
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="underline"
+/>###
+```
+
+### Disabled
+
+Make the select field disabled with the `disabled` prop.
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  disabled
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  disabled
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="filled"
+/>###
+
+###tab=Borderless,type=jsx-live
+<Select
+  disabled
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="borderless"
+/>###
+
+###tab=Underline,type=jsx-live
+<Select
+  disabled
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  variant="underline"
+/>###
+```
+
+## Loading
+
+```live
+###tab=Default,type=jsx-live
+<Select
+  isLoading
+  options={[]}
+/>###
+
+###tab=Filled,type=jsx-live
+<Select
+  isLoading
+  options={[]}
+  variant="filled"
+/>###
+
+
+###tab=Borderless,type=jsx-live
+<Select
+  isLoading
+  options={[]}
+  variant="borderless"
+/>###
+
+###tab=Underline,type=jsx-live
+<Select
+  isLoading
+  options={[]}
+  variant="underline"
+/>###
+```
+
+### Sizes
+
+An input can come in different sizes - `small`, `medium`, `large`, or the default.
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    size="small"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    size="medium"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    size="large"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    size="small"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    size="medium"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    size="large"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    size="small"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    size="medium"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    size="large"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    size="small"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    size="medium"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    size="large"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+</Stack>###
+```
+
+### States
+
+An input can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    state="danger"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    state="warning"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    state="success"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    state="primary"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    state="danger"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    state="warning"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    state="success"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    state="primary"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    state="danger"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    state="warning"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    state="success"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    state="primary"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    state="danger"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    state="warning"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    state="success"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    state="primary"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+</Stack>###
+```
+
+### Colors
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    palette="primary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    palette="secondary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    palette="danger"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    palette="success"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <Select
+    palette="warning"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+</Stack>###
+
+###tab=Filled,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    palette="primary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="secondary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="danger"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="success"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+  <Select
+    palette="warning"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="filled"
+  />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    palette="primary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    palette="secondary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    palette="danger"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    palette="success"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+  <Select
+    palette="warning"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="borderless"
+  />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-1">
+  <Select
+    palette="primary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    palette="secondary"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    palette="danger"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    palette="success"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+  <Select
+    palette="warning"
+    label="Weather"
+    options={[
+      { label: 'Sunny', value: 'sunny' },
+      { label: 'Windy', value: 'windy' },
+      { label: 'Overcast', value: 'overcast' }
+    ]}
+    variant="underline"
+  />
+</Stack>###
+```
+
+### Addons
+
+You can use the [Group component](/components/group) to add on stuff to your `<Select>`.
+
+```jsx-live
+<Group>
+  <Select
+    options={[
+      { label: 'Yes', value: 'yes' },
+      { label: 'No', value: 'no' }
+    ]}
+  />
+  <Button palette="primary" minWidth="max-content">Submit</Button>
+</Group>
+```
+
+#### Addons
+
+```jsx-live
+<SelectField
+  addonBefore={<Button isStatic>$</Button>}
+  label="Price"
+  options={[
+    { label: '10', value: '10' },
+    { label: '20', value: '20' },
+    { label: '30', value: '30' }
+  ]}
+/>
+```
+
+```jsx-live
+<SelectField
+  addonAfter={<Button isStatic>km</Button>}
+  label="Distance"
+  options={[
+    { label: '10', value: '10' },
+    { label: '20', value: '20' },
+    { label: '30', value: '30' }
+  ]}
+/>
+```
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+Note: Do not use `defaultValue` with controlled inputs!
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState('');
+
+  return (
+    <Select
+      options={[
+        { label: 'Yes', value: 'yes' },
+        { label: 'No', value: 'no' }
+      ]}
+      onChange={e => setValue(e.target.value)}
+      value={value}
+    />
+  )
+}
+```
+
+## Accessibility
+
+#### Patterns
+
+- If an input is required, then `aria-required` is set to `true` for the input.
+- If an input is invalid, then `aria-invalid` is set to `true` for the input.
+
+## Props
+
+### Select Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">autoFocus</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Automatically focus on the input
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">containLabel</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+If the `label` prop is supplied, is it contained inside the select?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">defaultValue</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Default value of the input
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Disables the input
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isLoading</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Adds a cute loading indicator to the input field
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isRequired</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Makes the input required and sets aria-invalid to true
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">label</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">name</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Name of the input field
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  label: string;
+  value: any;
+  disabled?: boolean;
+}[]`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">size</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | (string & {})
+  | "small"
+  | "medium"
+  | "large"`}
+</Code>
+
+Alters the size of the input. Can be "small", "medium" or "large"
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">placeholder</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Hint text to display
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">selectProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 797 more ...;
+  onFocus?: (event: FocusEvent<...>) => void;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">selectRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+State of the input. Can be any color in the palette.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+Value of the input
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onBlur</Code>** <Code fontSize="100" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when focus is lost
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(event: FormEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when input has changed
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onFocus</Code>** <Code fontSize="100" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when input is focused
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+## Theming
+
+ <Theme
+  component={'Select'}
+  placeholder="Please select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  overrides={[
+    'Select.styles.base',
+    {key: 'Select.styles.disabled', props: { disabled: true }},
+    {key: 'Select.Wrapper.styles.base', props: { padding: 'major-2' }},
+    {key: 'Select.Icon.styles.base', props: {}},
+    {key: 'Select.Spinner.styles.base', props: { isLoading: true }}
+  ]} />

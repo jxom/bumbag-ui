@@ -1,9 +1,8 @@
-import { Text } from 'react-native';
 import { styled } from '../styled';
 import { font, palette, fontSize, theme } from '../utils/theme';
 import { getFontStyles } from '../utils/getFontStyles';
 
-export const StyledHeading = styled(Text)`
+export const StyledHeading = styled.Text`
   color: ${palette('text')};
   font-size: ${(props: any) =>
     `${fontSize(theme(`native.Heading${props.type ? `.${props.type}` : ''}`, 'fontSize')(props))(props)}px`};

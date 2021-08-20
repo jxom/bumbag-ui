@@ -1,0 +1,40 @@
+# Hide
+
+## Import
+
+```jsx
+import { Hide } from 'bumbag';
+```
+
+## Usage
+
+The `<Hide>` component can be used to **visually hide elements** from the screen.
+
+Pass a `below` prop to hide the element(s) **under** a particular breakpoint, or pass an `above` hide to show element(s) **above** a particular breakpoint.
+
+**Try drag the viewport with the slider!**
+
+```jsx-live-iframe
+<Hide below="mobile">
+  This should hide on viewports below mobile.
+</Hide>
+<Hide above="mobile">
+  This should hide on viewports above or equal to mobile.
+</Hide>
+```
+
+> Note: The `<Hide>` component does not render an element wrapper, meaning it works well with layout components. It just adds hidden styles to each of it's children.
+
+## Props
+
+### Hide Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">above</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">below</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />

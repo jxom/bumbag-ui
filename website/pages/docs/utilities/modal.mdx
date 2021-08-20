@@ -1,0 +1,1055 @@
+# Modal
+
+The Modal component inheritely uses [Reakit's Modal component](https://reakit.io/docs/dialog/) and follows the [WAI-ARIA Modal Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal). It is rendered within a [Portal](/utilities/portal) & focus is trapped by default.
+
+**Note: You may want to consider the [Dialog component](/components/dialog) before this one.**
+
+## Import
+
+```jsx
+import { Modal } from 'bumbag';
+```
+
+## Usage
+
+```jsx-live
+<Modal.State>
+  <Modal.Disclosure use={Button}>Open modal</Modal.Disclosure>
+  <Modal>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+### Backdrop
+
+You can hide the backdrop with the `hideBackdrop` prop.
+
+```jsx-live
+<Modal.State>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal hideBackdrop>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+### Placement
+
+Change where your modal is positioned with the `placement` prop.
+
+```jsx-live
+<Modal.State>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal placement="top">
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+### Animation
+
+#### Fade
+
+```jsx-live
+<Modal.State animated>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal fade>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+#### Slide
+
+```jsx-live
+<Modal.State animated>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal fade slide>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+#### Expand
+
+```jsx-live
+<Modal.State animated>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal fade expand>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+#### Duration
+
+```jsx-live
+<Modal.State animated>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal duration="100ms" fade>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+### Placement with animation
+
+```jsx-live
+<Modal.State animated>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal placement="top" fade slide>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+### Restricting closure
+
+You can restrict closure with either the `hideOnEsc` or `hideOnClickOutside` prop.
+
+```jsx-live
+<Modal.State>
+  <Modal.Disclosure>Open modal</Modal.Disclosure>
+  <Modal hideOnEsc={false} hideOnClickOutside={false}>
+    <Card>
+      <Box>Hello world</Box>
+      <Modal.Disclosure use={Button}>Close</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+### Controlled
+
+```live
+###tab=Hook,type=function-live
+function Example() {
+  const modal = Modal.useState();
+
+  return (
+    <React.Fragment>
+      <Modal.Disclosure use={Button} {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal}>
+        <Card>
+          <Box>Hello world</Box>
+          <Modal.Disclosure use={Button} {...modal}>Close</Modal.Disclosure>
+        </Card>
+      </Modal>
+    </React.Fragment>
+  )
+}
+###
+
+###tab=Render Props,type=jsx-live
+<Modal.State>
+  {modal => (
+    <React.Fragment>
+      <Modal.Disclosure use={Button} {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal}>
+        <Card>
+          <Box>Hello world</Box>
+          <Modal.Disclosure use={Button} {...modal}>Close</Modal.Disclosure>
+        </Card>
+      </Modal>
+    </React.Fragment>
+  )}
+</Modal.State>
+###
+```
+
+### Composition
+
+The Modal component comes with utilities to compose with other components.
+
+#### `use`
+
+```jsx-live
+<Modal.State>
+  <Modal.Disclosure use={Button}>Open modal</Modal.Disclosure>
+  <Modal>
+    <Card>
+      Hello world
+      <Modal.Disclosure use={Button}>Close modal</Modal.Disclosure>
+    </Card>
+  </Modal>
+</Modal.State>
+```
+
+#### Hooks
+
+```function-live
+function Example() {
+  const modal = Modal.useState()
+  const modalProps = Modal.useProps({ ...modal });
+  const modalDisclosureProps = Modal.Disclosure.useProps({ ...modal });
+
+  return (
+    <div>
+      <Button {...modalDisclosureProps}>Open modal</Button>
+      <Box {...modalProps} backgroundColor="white" border="1px solid black" padding="major-2">
+        Hello world
+        <Button {...modalDisclosureProps}>Close modal</Button>
+      </Box>
+    </div>
+  )
+}
+```
+
+#### Render props
+
+```jsx-live
+<Modal.State>
+  <Modal>
+    {modalProps => (
+      <Modal.Disclosure>
+        {modalDisclosureProps => (
+          <React.Fragment>
+            <Button {...modalDisclosureProps}>Open modal</Button>
+            <Box {...modalProps} backgroundColor="white" border="1px solid black" padding="major-2">
+              Nesting for dayzzz
+              <Button {...modalDisclosureProps}>Close</Button>
+            </Box>
+          </React.Fragment>
+        )}
+      </Modal.Disclosure>
+    )}
+  </Modal>
+</Modal.State>
+```
+
+### Accessing internal state
+
+Any descendant component of `Modal.State` can utilise `Modal.useContext` to access the [internal modal state](#modalstate-return-values):
+
+```jsx
+function Example() {
+  const { modal } = Modal.useContext();
+
+  return (
+    <Button onClick={modal.hide}>Hide modal</Button>
+  )
+}
+```
+
+## Accessibility
+
+The `<Modal>` component follows the [WAI ARIA Dialog (Modal) Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
+
+### Rules
+
+- A `Modal` must be triggered via `<Modal.Disclosure>`, or `Modal.Disclosure.useProps`.
+
+#### Patterns
+
+- `Modal` has a role of `dialog`.
+- `Modal` has the `aria-modal` attribute set to `true`, unless the `modal` prop is set to `false`.
+- When the modal opens, focus is set to the first focusable element in the modal.
+- Focus is trapped inside the modal, unless the `modal` prop is set to false.
+- <Key>Esc</Key> closes the modal unless `hideOnEsc` is `false`.
+- Clicking outside the modal closes it unless `hideOnClickOutside` is `false`.
+- When the modal closes, focus returns to the disclosure that triggered it.
+
+#### References
+
+- [WAI ARIA Dialog (Modal) Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal)
+
+## Props
+
+### Modal Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">hideBackdrop</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Hides the backdrop.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"top-start"
+  | "top"
+  | "top-end"
+  | "right-start"
+  | "right"
+  | "right-end"
+  | "bottom-end"
+  | "bottom"
+  | "bottom-start"
+  | "left-end"
+  | "left"
+  | "left-start"
+  | "center"`}
+</Code>
+
+Sets the placement of the modal.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">delay</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Delay of the animation (in s/ms).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">duration</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Duration of the animation (in s/ms).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">expand</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`boolean
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "center"`}
+</Code>
+
+Will the component have an expand animation when it is toggled on/off?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Will the component have a fade animation when it is toggled on/off?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</Code> 
+
+Will the component have a slide animation when it is toggled on/off?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">timingFunction</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Timing function of the animation
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hideOnEsc</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When enabled, user can hide the dialog by pressing `Escape`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When enabled, user can hide the dialog by clicking outside it.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When enabled, user can't scroll on body when the dialog is visible.
+This option doesn't work if the dialog isn't modal.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2"><strong>9 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+Stops animation. It's called automatically if there's a CSS transition.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+Changes the `visible` state to `false`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Modal.Disclosure Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Same as the HTML attribute.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">focusable</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+When an element is `disabled`, it may still be `focusable`. It works
+similarly to `readOnly` on form elements. In this case, only
+`aria-disabled` will be set.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2"><strong>5 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+### Modal.Backdrop Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>6 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+Stops animation. It's called automatically if there's a CSS transition.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## State
+
+### Modal.State API
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+### Modal.State Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>15 values</strong></Box>
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setBaseId</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;string&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `baseId`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">show</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setVisible</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `visible`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setAnimated</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `animated`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setModal</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `modal`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+    
+
+### Modal.useState API
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+### Modal.useState Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>15 values</strong></Box>
+
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` is updated.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setBaseId</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;string&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `baseId`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">show</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setVisible</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `visible`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setAnimated</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `animated`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">setModal</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `modal`.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+    
+
+## Theming
+
+<Theme component={'Modal'} overrides={['Modal.styles.base', 'Modal.styles.placements.center', 'Modal.styles.placements.left', 'Modal.styles.placements.right', 'Modal.styles.placements.top', 'Modal.styles.placements.bottom', 'Modal.styles.placements.topStart', 'Modal.styles.placements.topEnd', 'Modal.styles.placements.bottomStart', 'Modal.styles.placements.bottomEnd']}>
+  Hello world
+</Theme>
+
+<Theme component={'ModalDisclosure'} overrides={['Modal.Disclosure.styles.base']}>
+  Hello world
+</Theme>
+
+<Theme component={'ModalBackdrop'} overrides={['Modal.Backdrop.styles.base']}>
+  Hello world
+</Theme>

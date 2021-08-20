@@ -1,0 +1,67 @@
+# Hide
+
+## Import
+
+```jsx
+import { Hide } from 'bumbag-native';
+```
+
+## Usage
+
+The `<Hide>` component can be used to hide elements on the screen above or below a particular breakpoint, but **show them otherwise**.
+
+[Breakpoints can be referenced here](/native/breakpoints).
+
+```jsx-live
+<Hide below="lg">
+  <Text>This should hide on viewports below lg width (768px).</Text>
+</Hide>
+<Hide above="lg">
+  <Text>This should hide on viewports above or equal to lg width (768px).</Text>
+</Hide>
+```
+
+```jsx-live
+<Hide below="lg" direction="height">
+  <Text>This should hide on viewports below lg height (736px).</Text>
+</Hide>
+<Hide above="lg" direction="height">
+  <Text>This should hide on viewports above or equal to lg height (736px).</Text>
+</Hide>
+```
+
+## Props
+
+### Hide Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">above</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">below</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">direction</Code>** <Code fontSize="100" palette="primary">&#34;height&#34; | &#34;width&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />

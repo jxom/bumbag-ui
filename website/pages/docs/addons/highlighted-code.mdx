@@ -1,0 +1,211 @@
+# HighlightedCode
+
+The <code>&#60;HighlightedCode&#62;</code> component uses [Prism React Renderer](https://github.com/FormidableLabs/prism-react-renderer) under the hood.
+
+## Install
+
+```
+yarn add bumbag-addon-highlighted-code
+// or npm
+npm install bumbag-addon-highlighted-code
+```
+
+## Import
+
+```javascript
+import HighlightedCode from 'bumbag-addon-highlighted-code'
+```
+
+## Usage
+
+```jsx-live
+<HighlightedCode code="console.log('Hello world')" language="javascript" />
+<HighlightedCode
+  isBlock
+  language="jsx"
+  marginTop="major-3"
+  code={`<Box>
+  <Text color="primary">Hello world</Text>
+</Box>`}
+/>
+```
+
+The following languages are supported:
+
+- <code>markup</code>
+- <code>bash</code>
+- <code>clike</code>
+- <code>c</code>
+- <code>cpp</code>
+- <code>css</code>
+- <code>"css-extras"</code>
+- <code>javascript</code>
+- <code>jsx</code>
+- <code>"js-extras"</code>
+- <code>coffeescript</code>
+- <code>diff</code>
+- <code>git</code>
+- <code>go</code>
+- <code>graphql</code>
+- <code>handlebars</code>
+- <code>json</code>
+- <code>less</code>
+- <code>makefile</code>
+- <code>markdown</code>
+- <code>objectivec</code>
+- <code>ocaml</code>
+- <code>python</code>
+- <code>reason</code>
+- <code>sass</code>
+- <code>scss</code>
+- <code>sql</code>
+- <code>stylus</code>
+- <code>typescript</code>
+- <code>wasm</code>
+- <code>yaml</code>
+
+## HighlightedCode Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">code</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+The code to be placed into the highlighted code area.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">language</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Language of the code.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isBlock</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Should the code appear as a block?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">preProps</Code>** <Code fontSize="100" palette="primary">Object</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">lineProps</Code>** <Code fontSize="100" palette="primary">Object</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tokenProps</Code>** <Code fontSize="100" palette="primary">Object</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">wrapperProps</Code>** <Code fontSize="100" palette="primary">Object</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <strong><code>Box</code></strong> props</Box>
+
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  useCSSVariables?: boolean;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  ... 95 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+</details>
+            
+
+## Theming
+
+<Theme
+  component={'HighlightedCode'}
+  overrides={[
+    {
+      key: 'HighlightedCode.styles.base',
+      props: { code: 'console.log(\'hello world\')', language: 'javascript' }
+    },
+    {
+      key: 'HighlightedCode.styles.block',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript', padding: 'major-2' }
+    },
+    {
+      key: 'HighlightedCode.Pre.styles.base',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
+    },
+    {
+      key: 'HighlightedCode.Line.styles.base',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
+    },
+    {
+      key: 'HighlightedCode.Token.styles.base',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
+    }
+  ]}/>

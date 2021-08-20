@@ -1,4 +1,4 @@
-import { Animated, Platform, Text } from 'react-native';
+import { Animated, Platform } from 'react-native';
 import { styled } from '../styled';
 import { getFontStyles } from '../utils/getFontStyles';
 import { palette, theme } from '../utils/theme';
@@ -21,7 +21,7 @@ function getTextStyles(props) {
   `;
 }
 
-export const StyledText = styled(Text)`
+export const StyledText = styled.Text`
   ${getTextStyles}
 `;
 

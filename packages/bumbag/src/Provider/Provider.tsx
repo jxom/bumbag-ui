@@ -48,7 +48,7 @@ export function Provider(props: ProviderProps) {
 
   ////////////////////////////////////////////////
 
-  const themeContextValue = React.useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
+  const themeContextValue = React.useMemo(() => ({ isSSR, theme, setTheme }), [isSSR, theme, setTheme]);
 
   ////////////////////////////////////////////////
 

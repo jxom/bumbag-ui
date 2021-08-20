@@ -1,0 +1,209 @@
+# SwitchGroup
+
+A `<SwitchGroup>` can be used to render a set of [Switch components](/form/switch).
+
+## Import
+
+```jsx
+import { SwitchGroup } from 'bumbag'
+```
+
+## Usage
+
+```jsx-live
+<SwitchGroup
+  name="weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Fields
+
+You can also use the `<SwitchGroupField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.
+
+It accepts a combination of [SwitchGroup props](/form/switch-group/#props) and [FieldWrapper props](/form/field-wrapper/#props).
+
+```jsx-live
+<SwitchGroupField
+  label="What's the weather?"
+  name="weather5"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Horizontal group
+
+```jsx-live
+<SwitchGroup
+  orientation="horizontal"
+  name="weather2"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Disabled
+
+You can disable a radio group with the `disabled` prop. If you only want to disable one option, add the `disabled: true` attribute to the option.
+
+```jsx-live
+<SwitchGroup
+  name="weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy', disabled: true },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+```jsx-live
+<SwitchGroup
+  disabled
+  name="weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### States
+
+A SwitchGroup can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```jsx-live
+<SwitchGroup
+  state="danger"
+  name="weather4"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Default value
+
+Specify a default checked value with the `defaultValue` prop.
+
+```jsx-live
+<SwitchGroup
+  defaultValue={['overcast', 'sunny']}
+  name="weather5"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+## Accessibility
+
+The `<SwitchGroup>` component follows the [WAI ARIA Checkbox Pattern](https://www.w3.org/TR/wai-aria-practices/#checkbox).
+
+### Rules
+
+- The outer wrapper of the `SwitchGroup` has a role of `group`.
+
+#### Patterns
+
+- The switch has a role of `checkbox`.
+- When the switch has focus, pressing the <Key>Space</Key> key changes the state of the switch.
+
+#### References
+
+- [WAI ARIA Checkbox Pattern](https://www.w3.org/TR/wai-aria-practices/#checkbox)
+
+## Props
+
+### SwitchGroup Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">defaultValue</Code>** <Code fontSize="100" palette="primary">string[]</Code> 
+
+Default value(s) of the switch group
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Disables the switch group
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+
+Are the switch inputs layed out horizontally?
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">name</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">options</Code>** <Code fontSize="100" palette="primary">SwitchProps[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Switch group options
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">spacing</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+State of the switch group. Can be any color in the palette.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">string[]</Code> 
+
+Controlled value of the switch group
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(value: string[], targetValue: string) =&#62; void</Code> 
+
+Function to invoke when checkbox group has changed
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">onBlur</Code>** <Code fontSize="100" palette="primary">(value: string[]) =&#62; void</Code> 
+
+Function to invoke when checkbox group has blurred
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+## Theming
+
+ <Theme
+  component={'SwitchGroup'}
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  overrides={[
+    'SwitchGroup.styles.base',
+    'Switch.styles.base',
+    'Switch.Icon.styles.base',
+    'Switch.Label.styles.base',
+    'Switch.HiddenInput.styles.base'
+  ]} />

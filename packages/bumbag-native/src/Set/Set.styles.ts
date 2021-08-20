@@ -1,9 +1,8 @@
-import { View } from 'react-native';
 import { styled } from '../styled';
 import { space, theme } from '../utils/theme';
 import { breakpoint } from '../utils/breakpoint';
 
-export const StyledSet = styled(View)`
+export const StyledSet = styled.View`
   align-items: flex-start;
 
   ${getOrientationProps}
