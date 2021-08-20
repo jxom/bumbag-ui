@@ -9,7 +9,7 @@ export type LocalToastManagerProps = {
   placement?: 'top' | 'bottom';
   timeout?: number;
 };
-export type ToastManagerProps = Omit<ToastProps, 'placement'> & LocalToastManagerProps;
+export type ToastManagerProps = Partial<Omit<ToastProps, 'placement'>> & LocalToastManagerProps;
 
 const useProps = createHook<ToastManagerProps>(
   (props: any) => {
