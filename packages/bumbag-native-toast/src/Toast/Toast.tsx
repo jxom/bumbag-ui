@@ -11,7 +11,7 @@ const AnimatedToast = Animated.createAnimatedComponent(Box.Safe);
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export type LocalToastProps = {
-  placement: { value: 'top' | 'bottom' };
+  placement: 'top' | 'bottom';
   title: { value: string };
   show: { value: boolean };
   palette: { value: string };
@@ -67,23 +67,27 @@ export const Toast = createComponent<ToastProps>(
 
     //////////////////////////////////////////
 
-    const animatedStyle = useAnimatedStyle(() => {
-      const animation = withTiming(show.value ? 0 : -100, {
-        duration: 200,
-        easing: Easing.inOut(Easing.exp),
-      });
+    const backgroundAnimatedStyle = useAnimatedStyle(() => {
       return {
         backgroundColor: theme.palette[palette.value],
-        ...(placement.value === 'top'
-          ? {
-              top: animation,
-            }
-          : {}),
-        ...(placement.value === 'bottom'
-          ? {
-              bottom: animation,
-            }
-          : {}),
+      };
+    });
+
+    const topAnimatedStyle = useAnimatedStyle(() => {
+      return {
+        top: withTiming(show.value ? 0 : -100, {
+          duration: 200,
+          easing: Easing.inOut(Easing.exp),
+        }),
+      };
+    });
+
+    const bottomAnimatedStyle = useAnimatedStyle(() => {
+      return {
+        bottom: withTiming(show.value ? 0 : -100, {
+          duration: 200,
+          easing: Easing.inOut(Easing.exp),
+        }),
       };
     });
 
@@ -99,7 +103,9 @@ export const Toast = createComponent<ToastProps>(
             width: '100%',
             position: 'absolute',
           },
-          animatedStyle,
+          backgroundAnimatedStyle,
+          placement === 'top' ? topAnimatedStyle : {},
+          placement === 'bottom' ? bottomAnimatedStyle : {},
         ],
       },
     });

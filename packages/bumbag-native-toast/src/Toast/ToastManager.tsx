@@ -13,7 +13,7 @@ export type ToastManagerProps = Partial<Omit<ToastProps, 'placement'>> & LocalTo
 
 const useProps = createHook<ToastManagerProps>(
   (props: any) => {
-    const { placement: _placement, timeout, ...restProps } = props;
+    const { placement, timeout, ...restProps } = props;
     const { mount } = React.useContext(ToastContext);
 
     //////////////////////////////////////////////
@@ -22,7 +22,6 @@ const useProps = createHook<ToastManagerProps>(
     const showToast = useSharedValue(false);
     const title = useSharedValue('');
     const palette = useSharedValue(undefined);
-    const placement = useSharedValue(_placement);
 
     const handleCreateToast = React.useCallback(
       (args) => {
