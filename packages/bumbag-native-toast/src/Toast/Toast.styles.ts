@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { TextInput } from 'react-native';
 import { Box, BoxSafe } from 'bumbag-native/Box';
 import { styled } from 'bumbag-native/styled';

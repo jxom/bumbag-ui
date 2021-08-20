@@ -15,14 +15,14 @@ export type LocalToastProps = {
   title: { value: string };
   show: { value: boolean };
   palette: { value: string };
-  textWrapperProps: Partial<BoxProps>;
-  textProps: Partial<RNTextInputProps>;
+  textWrapperProps?: Partial<BoxProps>;
+  textProps?: Partial<RNTextInputProps>;
 };
 export type ToastProps = BoxProps & RNViewProps & LocalToastProps;
 
 const useProps = createHook<ToastProps>(
   (props) => {
-    const { textWrapperProps, textProps: textInputProps, title } = props;
+    const { textWrapperProps, textProps: textInputProps = {}, title } = props;
     const boxProps = Box.useProps(props);
 
     //////////////////////////////////////////
@@ -47,7 +47,7 @@ const useProps = createHook<ToastProps>(
             multiline
             editable={false}
             {...textInputProps}
-            style={{ color: 'white', ...fontStyles, ...textInputProps?.style }}
+            style={{ color: 'white', ...fontStyles, ...(textInputProps?.style as any) }}
           />
         </styles.ToastTextWrapper>
       ),
