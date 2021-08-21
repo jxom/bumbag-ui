@@ -21,7 +21,7 @@ export const BottomSheetSectionList = createComponent<BottomSheetSectionListProp
   (props) => {
     const htmlProps = useProps(props);
 
-    return <_BottomSheetSectionList {...htmlProps} />;
+    return <_BottomSheetSectionList {...htmlProps} sections={htmlProps.sections || []} />;
   },
   {
     attach: {

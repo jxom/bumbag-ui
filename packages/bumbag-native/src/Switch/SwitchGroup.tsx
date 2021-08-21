@@ -78,7 +78,7 @@ const useProps = createHook<SwitchGroupProps>(
           spacing={spacing}
           {...setProps}
         >
-          {options.map((option, i) => (
+          {options.map((option: any, i) => (
             <styles.SwitchGroupItem
               key={i} // eslint-disable-line
               {...option}

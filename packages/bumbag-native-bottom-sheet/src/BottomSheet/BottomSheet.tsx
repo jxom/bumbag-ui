@@ -3,14 +3,47 @@ import _BottomSheet, { BottomSheetProps as RNBottomSheetProps } from '@gorhom/bo
 import { createComponent, createHook } from 'bumbag/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
 
-export type LocalBottomSheetProps = {};
-export type BottomSheetProps = BoxProps & RNBottomSheetProps & LocalBottomSheetProps;
+import { BottomSheetBackground, BottomSheetBackgroundProps } from './BottomSheetBackground';
+import { BottomSheetHandle, BottomSheetHandleProps } from './BottomSheetHandle';
+
+export type LocalBottomSheetProps = {
+  snapPoints?: RNBottomSheetProps['snapPoints'];
+  hasHandle?: boolean;
+  backgroundWrapperProps?: Partial<BottomSheetBackgroundProps>;
+  handleProps?: Partial<BottomSheetHandleProps>;
+  backgroundComponent?: () => React.ReactElement<any>;
+  handleComponent?: (props: any) => React.ReactElement<any>;
+};
+export type BottomSheetProps = BoxProps & Omit<RNBottomSheetProps, 'snapPoints'> & LocalBottomSheetProps;
 
 const useProps = createHook<BottomSheetProps>(
   (props) => {
-    const boxProps = Box.useProps(props);
+    const {
+      backgroundColor,
+      borderRadius,
+      backgroundComponent,
+      backgroundWrapperProps,
+      handleComponent,
+      handleProps,
+      overrides,
+      hasHandle,
+    } = props;
+    const boxProps = Box.useProps({ ...props, backgroundColor: undefined, borderRadius: undefined });
     return {
       ...boxProps,
+      backgroundComponent:
+        backgroundComponent ||
+        (() => (
+          <BottomSheetBackground
+            backgroundColor={backgroundColor}
+            borderRadius={borderRadius}
+            overrides={overrides}
+            {...backgroundWrapperProps}
+          />
+        )),
+      handleComponent:
+        handleComponent ||
+        ((props) => <BottomSheetHandle {...props} hasHandle={hasHandle} overrides={overrides} {...handleProps} />),
     };
   },
   { defaultProps: { snapPoints: ['25%', '50%'] }, themeKey: 'native.BottomSheet' }
@@ -20,7 +53,11 @@ export const BottomSheet = createComponent<BottomSheetProps>(
   (props) => {
     const htmlProps = useProps(props);
 
-    return <_BottomSheet {...htmlProps} />;
+    return (
+      <_BottomSheet {...htmlProps} snapPoints={htmlProps.snapPoints || []}>
+        {htmlProps.children || <Box />}
+      </_BottomSheet>
+    );
   },
   {
     attach: {

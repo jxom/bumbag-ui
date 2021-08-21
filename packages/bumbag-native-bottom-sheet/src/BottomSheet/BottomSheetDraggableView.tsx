@@ -20,7 +20,7 @@ export const BottomSheetDraggableView = createComponent<BottomSheetDraggableView
   (props) => {
     const htmlProps = useProps(props);
 
-    return <_BottomSheetDraggableView {...htmlProps} />;
+    return <_BottomSheetDraggableView {...htmlProps}>{htmlProps.children}</_BottomSheetDraggableView>;
   },
   {
     attach: {

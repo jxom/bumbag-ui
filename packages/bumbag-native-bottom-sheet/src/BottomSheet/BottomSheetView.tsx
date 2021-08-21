@@ -20,7 +20,7 @@ export const BottomSheetView = createComponent<BottomSheetViewProps>(
   (props) => {
     const htmlProps = useProps(props);
 
-    return <_BottomSheetView {...htmlProps} />;
+    return <_BottomSheetView {...htmlProps}>{htmlProps.children}</_BottomSheetView>;
   },
   {
     attach: {

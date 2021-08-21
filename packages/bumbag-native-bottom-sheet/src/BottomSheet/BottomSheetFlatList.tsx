@@ -21,7 +21,15 @@ export const BottomSheetFlatList = createComponent<BottomSheetFlatListProps>(
   (props) => {
     const htmlProps = useProps(props);
 
-    return <_BottomSheetFlatList {...htmlProps} />;
+    return (
+      <_BottomSheetFlatList
+        {...htmlProps}
+        data={htmlProps.data || []}
+        renderItem={htmlProps.renderItem || (() => null)}
+      >
+        {htmlProps.children}
+      </_BottomSheetFlatList>
+    );
   },
   {
     attach: {

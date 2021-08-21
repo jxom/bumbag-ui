@@ -2,7 +2,11 @@
   "compilerOptions": {
     "baseUrl": "",
     "paths": {
-      "*": [ "typings/*" ]
+      "*": [ "typings/*" ],
+      "bumbag*": ["./packages/bumbag/src*"],
+      "bumbag/*": ["./packages/bumbag/src/*"],
+      "bumbag-native*": ["./packages/bumbag-native/src*"],
+      "bumbag-native/*": ["./packages/bumbag-native/src/*"],
     },
     "skipLibCheck": true,
     "target": "esnext",

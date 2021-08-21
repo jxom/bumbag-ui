@@ -21,7 +21,7 @@ export const BottomSheetScrollView = createComponent<BottomSheetScrollViewProps>
   (props) => {
     const htmlProps = useProps(props);
 
-    return <_BottomSheetScrollView {...htmlProps} />;
+    return <_BottomSheetScrollView {...htmlProps}>{htmlProps.children}</_BottomSheetScrollView>;
   },
   {
     attach: {
