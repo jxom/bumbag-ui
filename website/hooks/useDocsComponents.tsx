@@ -1,6 +1,7 @@
 import React from 'react';
 import * as bumbag from 'bumbag';
 
+import SlugHeading from '../components/SlugHeading';
 import LiveCode from '../components/Live/LiveCode';
 import Theme from '../components/Theme';
 import PaletteColor from '../components/PaletteColor';
@@ -28,10 +29,10 @@ export default function useDocsComponents({ platform }): any {
         <bumbag.Code fontSize="15px" {...props} backgroundColor="transparent" palette="primary" />
       ),
       h1: (props: any) => (
-        <bumbag.Heading marginTop="major-2" marginBottom="major-6" fontWeight="800" letterSpacing="300" {...props} />
+        <SlugHeading marginTop="major-2" marginBottom="major-6" fontWeight="800" letterSpacing="300" {...props} />
       ),
       h2: (props: any) => (
-        <bumbag.Heading
+        <SlugHeading
           use="h2"
           fontSize="500"
           marginTop="major-6"
@@ -42,7 +43,7 @@ export default function useDocsComponents({ platform }): any {
         />
       ),
       h3: (props: any) => (
-        <bumbag.Heading
+        <SlugHeading
           fontSize="400"
           use="h3"
           marginTop="major-6"
@@ -52,9 +53,7 @@ export default function useDocsComponents({ platform }): any {
           {...props}
         />
       ),
-      h4: (props: any) => (
-        <bumbag.Heading fontSize="300" use="h4" marginTop="major-6" marginBottom="major-4" {...props} />
-      ),
+      h4: (props: any) => <SlugHeading fontSize="300" use="h4" marginTop="major-6" marginBottom="major-4" {...props} />,
       h5: (props: any) => <bumbag.Heading use="h5" marginTop="major-6" marginBottom="major-4" {...props} />,
       h6: (props: any) => <bumbag.Heading use="h6" marginTop="major-6" marginBottom="major-4" {...props} />,
       p: (props: any) => (
