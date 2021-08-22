@@ -123,7 +123,11 @@ import { Picker } from "@bumbag-native/picker";
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">options</Code>** <Code fontSize="100" palette="primary">any[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">options</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`({ key?: string; label: string; value: any; disabled?: boolean; } & Partial<MenuOptionItemProps>)[]`}
+</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -131,11 +135,45 @@ import { Picker } from "@bumbag-native/picker";
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">menuProps</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">menuProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
+    ...
+  }>;
+  ... 586 more ...;
+  disableLeftPad...`}
+</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">menuOptionGroupProps</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">menuOptionGroupProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
+    ...
+  }>;
+  ... 592 more ...;
+  value?: string...`}
+</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
