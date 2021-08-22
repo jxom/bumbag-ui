@@ -1,12 +1,12 @@
 // NOTE: This is an absolute mess. I'm sorry. I will refactor it soon. #ASTs!
 
-const path = require('path');
-const ast = require('@textlint/markdown-to-ast');
-const inject = require('md-node-inject');
-const toMarkdown = require('ast-to-markdown');
-const { readdirSync, writeFileSync, readFileSync, lstatSync } = require('fs-extra');
-const { Project, ts, TypeGuards } = require('ts-morph');
-const _ = require('lodash');
+import path from 'path';
+import ast from '@textlint/markdown-to-ast';
+import inject from 'md-node-inject';
+import toMarkdown from 'ast-to-markdown';
+import { readdirSync, writeFileSync, readFileSync, lstatSync } from 'fs-extra';
+import { Project, ts, TypeGuards } from 'ts-morph';
+import _ from 'lodash';
 
 function isDirectory(path) {
   return lstatSync(path).isDirectory();
@@ -97,7 +97,7 @@ function createPropTypeObject(prop) {
     isRequired: (prop.getFlags() & ts.SymbolFlags.Optional) === 0,
     description: getComment(prop),
     encodedType: getPropType(prop, true),
-    type: getPropType(prop),
+    type: getPropType(prop, false),
   };
 }
 
@@ -139,7 +139,7 @@ ${type.description}
     .join('');
 }
 
-function getTypeMarkdown(extractedType, typeReferences, { prefix = '', type } = {}) {
+function getTypeMarkdown(extractedType, typeReferences, { prefix = '', type = undefined } = {}) {
   let content = '';
   const typeMetaData = typeReferences[`${prefix}${extractedType}`] || {};
   let types = typeMetaData?.types || [];
@@ -251,6 +251,7 @@ function extractTypes(config) {
           let extraTypes = [];
           let stateTypes = [];
 
+          // @ts-ignore
           const typeNode = node?.getTypeNode?.();
           if (typeNode && TypeGuards.isIntersectionTypeNode(typeNode)) {
             typeNode.getTypeNodes().forEach((node) => {
