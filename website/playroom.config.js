@@ -33,6 +33,7 @@ module.exports = {
         'bumbag-theme-medipass': path.resolve(__dirname, '../packages/bumbag-theme-medipass/src'),
         'react-native$': 'react-native-web',
         codemirror: path.resolve(__dirname, './node_modules/codemirror'),
+        reakit: path.resolve(__dirname, './node_modules/reakit'),
       },
       extensions: ['.web.js', '.mjs', '.js', '.json', '.ts', '.tsx'],
       modules: [path.resolve(__dirname, '../node_modules'), 'node_modules'],
