@@ -29,6 +29,7 @@ export async function getMDXFile(mdxDir, filePath, { includeMDX = true, includeT
       mdxSource = await serialize(content, {
         // Optionally pass remark/rehype plugins
         mdxOptions: {
+          // @ts-ignore
           remarkPlugins: [remarkSlug],
           rehypePlugins: [],
         },
