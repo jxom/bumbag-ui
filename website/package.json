@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "yarn generate-mdx-manifest && next build && next export && yarn playroom:build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "playroom:start": "PLAYROOM=true playroom start",
@@ -32,6 +33,7 @@
     "next-compose-plugins": "2.2.1",
     "next-mdx-remote": "3.0.4",
     "next-seo": "4.26.0",
+    "next-sitemap": "^1.6.162",
     "next-transpile-modules": "8.0.0",
     "playroom": "0.21.2",
     "react": "17.0.2",
