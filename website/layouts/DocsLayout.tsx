@@ -25,7 +25,7 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
 `;
 
 export default function Docs(props) {
-  const { children, mdxFiles = [], frontmatter = {}, platform = 'web', path = '' } = props;
+  const { children, mdxFiles = [], frontmatter = {}, platform = 'web', path = '', toc } = props;
 
   //////////////////////////////////////////////////////////////////////
 
@@ -77,11 +77,7 @@ export default function Docs(props) {
             id="main-content"
           >
             <bumbag.Box width="100%">{children}</bumbag.Box>
-            <bumbag.Hide below="fullHD">
-              {/* {pageContext.tableOfContents && (
-                <TableOfContents breakpoint={breakpoint} toc={pageContext.tableOfContents} />
-              )} */}
-            </bumbag.Hide>
+            <bumbag.Hide below="fullHD">{toc && <TableOfContents breakpoint={breakpoint} toc={toc} />}</bumbag.Hide>
           </bumbag.PageContent>
           <bumbag.PageContent>
             <Footer />

@@ -2,15 +2,15 @@ import * as React from 'react';
 import { MDXRemote } from 'next-mdx-remote';
 
 import DocsLayout from '../../layouts/DocsLayout';
-import getMDXFiles, { getMDXFileFromSlug } from '../../utils/getMDXFiles';
+import { getMDXFiles, getMDXFileFromSlug } from '../../utils/mdx';
 import useDocsComponents from '../../hooks/useDocsComponents';
 
 // DocsPage.getLayout = (page) => <DocsLayout>{page}</DocsLayout>;
 
-export default function DocsPage({ platform, mdx, mdxFiles }) {
+export default function DocsPage({ platform, mdx, mdxFiles, toc }) {
   const { components } = useDocsComponents({ platform });
   return (
-    <DocsLayout mdxFiles={mdxFiles} platform={platform} frontmatter={mdx?.frontmatter}>
+    <DocsLayout mdxFiles={mdxFiles} platform={platform} frontmatter={mdx?.frontmatter} toc={toc}>
       <MDXRemote {...mdx.source} components={components} />
     </DocsLayout>
   );
@@ -31,6 +31,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params;
   const mdxFiles = await getMDXFiles('/pages/docs', { includeMDX: false });
-  const mdxFile = await getMDXFileFromSlug('/pages/docs', slug);
+  const mdxFile = await getMDXFileFromSlug('/pages/docs', slug, { includeToc: true });
   return { props: { ...mdxFile, mdxFiles } };
 }
