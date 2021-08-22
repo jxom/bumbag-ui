@@ -3,8 +3,8 @@ import * as React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { DefaultSeo } from 'next-seo';
-import { Provider as BumbagProvider, Box, ToastManager } from 'bumbag';
-import { Provider as NativeProvider, Box as NativeBox } from 'bumbag-native';
+import { Provider as BumbagProvider, ToastManager } from 'bumbag';
+import { Provider as NativeProvider } from 'bumbag-native';
 import _merge from 'lodash/merge';
 import _omit from 'lodash/omit';
 

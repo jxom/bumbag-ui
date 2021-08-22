@@ -460,8 +460,8 @@ function Example() {
   borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: {
     ...
-  }; ... 35 more ...;
-  Text?: TextThemeConfig;
+  }; ... 39 more ...;
+  ToastManager?: ToastManagerThemeConfig;
 }`}
 </Code>
 
@@ -1452,8 +1452,8 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
   borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: {
     ...
-  }; ... 35 more ...;
-  Text?: TextThemeConfig;
+  }; ... 39 more ...;
+  ToastManager?: ToastManagerThemeConfig;
 }`}
 </Code>
 
@@ -1826,8 +1826,8 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
   borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: {
     ...
-  }; ... 35 more ...;
-  Text?: TextThemeConfig;
+  }; ... 39 more ...;
+  ToastManager?: ToastManagerThemeConfig;
 }`}
 </Code>
 
@@ -2882,8 +2882,8 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
   borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: {
     ...
-  }; ... 35 more ...;
-  Text?: TextThemeConfig;
+  }; ... 39 more ...;
+  ToastManager?: ToastManagerThemeConfig;
 }`}
 </Code>
 
@@ -3147,6 +3147,7 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
 
 <Theme component={'Box'} platform="native" overrides={['Menu.styles.base', 'Menu.Item.styles.base', 'Menu.Item.Content.styles.base', 'Menu.Item.ContentText.styles.base']}>
   {props => (
+
     <Menu overrides={props.overrides}>
       <MenuItem>
         General
@@ -3161,5 +3162,6 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
         Security
       </MenuItem>
     </Menu>
+
   )}
 </Theme>

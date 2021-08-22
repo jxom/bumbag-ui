@@ -9,7 +9,7 @@ export type LocalToastManagerProps = {
   placement?: 'top' | 'bottom';
   timeout?: number;
 };
-export type ToastManagerProps = Partial<Omit<ToastProps, 'placement'>> & LocalToastManagerProps;
+export type ToastManagerProps = ToastProps & LocalToastManagerProps;
 
 const useProps = createHook<ToastManagerProps>(
   (props: any) => {
@@ -23,7 +23,7 @@ const useProps = createHook<ToastManagerProps>(
     const title = useSharedValue('');
     const palette = useSharedValue(undefined);
 
-    const handleCreateToast = React.useCallback(
+    const handleAddToast = React.useCallback(
       (args) => {
         showToast.value = true;
         title.value = args.title;
@@ -43,10 +43,10 @@ const useProps = createHook<ToastManagerProps>(
 
     React.useEffect(() => {
       const unmount = mount({
-        create: handleCreateToast,
+        add: handleAddToast,
       });
       return () => unmount();
-    }, [handleCreateToast, mount]);
+    }, [handleAddToast, mount]);
 
     //////////////////////////////////////////////
 
@@ -58,7 +58,7 @@ const useProps = createHook<ToastManagerProps>(
       ...restProps,
     };
   },
-  { defaultProps: { placement: 'top', timeout: 2000 }, themeKey: 'native.ToastManager' }
+  { defaultProps: { placement: 'top', timeout: 3000 }, themeKey: 'native.ToastManager' }
 );
 
 export const ToastManager = createComponent<ToastManagerProps>(

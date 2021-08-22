@@ -11,10 +11,10 @@ const AnimatedToast = Animated.createAnimatedComponent(Box.Safe);
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export type LocalToastProps = {
-  placement: 'top' | 'bottom';
-  title: { value: string };
-  show: { value: boolean };
-  palette: { value: string };
+  placement?: 'top' | 'bottom';
+  title?: { value: string };
+  show?: { value: boolean };
+  palette?: { value: string };
   textWrapperProps?: Partial<BoxProps>;
   textProps?: Partial<RNTextInputProps>;
 };

@@ -5,14 +5,14 @@ type TToastOptions = {
 };
 
 export const ToastContext = React.createContext<{
-  create: ({ title }: TToastOptions) => void;
+  add: ({ title }: TToastOptions) => void;
   danger: ({ title }: TToastOptions) => void;
   success: ({ title }: TToastOptions) => void;
   info: ({ title }: TToastOptions) => void;
   warning: ({ title }: TToastOptions) => void;
   mount: any;
 }>({
-  create: () => undefined,
+  add: () => undefined,
   danger: () => undefined,
   success: () => undefined,
   info: () => undefined,
@@ -27,9 +27,9 @@ export type ToastProviderProps = {
 export function ToastProvider({ children }: ToastProviderProps) {
   const queueRef = React.useRef([]);
 
-  const mount = React.useCallback(({ create }) => {
+  const mount = React.useCallback(({ add }) => {
     const toastId = queueRef.current.length;
-    queueRef.current = [{ id: toastId, create }, ...queueRef.current];
+    queueRef.current = [{ id: toastId, add }, ...queueRef.current];
     return () => {
       queueRef.current = queueRef.current.filter(({ id }) => id !== toastId);
     };
@@ -37,44 +37,44 @@ export function ToastProvider({ children }: ToastProviderProps) {
 
   //////////////////////////////////////////////////////////////////
 
-  const create = React.useCallback(({ palette, ...opts }) => {
+  const add = React.useCallback(({ palette, ...opts }) => {
     const toast = queueRef.current[0];
-    toast.create({ ...opts, palette });
+    toast.add({ ...opts, palette });
   }, []);
 
   //////////////////////////////////////////////////////////////////
 
   const danger = React.useCallback(
     (opts) => {
-      create({ ...opts, palette: 'danger' });
+      add({ ...opts, palette: 'danger' });
     },
-    [create]
+    [add]
   );
 
   const success = React.useCallback(
     (opts) => {
-      create({ ...opts, palette: 'success' });
+      add({ ...opts, palette: 'success' });
     },
-    [create]
+    [add]
   );
 
   const warning = React.useCallback(
     (opts) => {
-      create({ ...opts, palette: 'warning' });
+      add({ ...opts, palette: 'warning' });
     },
-    [create]
+    [add]
   );
 
   const info = React.useCallback(
     (opts) => {
-      create({ ...opts, palette: 'info' });
+      add({ ...opts, palette: 'info' });
     },
-    [create]
+    [add]
   );
 
   //////////////////////////////////////////////////////////////////
 
   return (
-    <ToastContext.Provider value={{ mount, create, danger, success, warning, info }}>{children}</ToastContext.Provider>
+    <ToastContext.Provider value={{ mount, add, danger, success, warning, info }}>{children}</ToastContext.Provider>
   );
 }

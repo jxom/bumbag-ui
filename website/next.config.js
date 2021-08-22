@@ -6,7 +6,10 @@ const packages = {
   'bumbag-native': path.resolve(__dirname, '../packages/bumbag-native/src'),
   'bumbag-addon-markdown': path.resolve(__dirname, '../packages/bumbag-addon-markdown/src'),
   'bumbag-addon-highlighted-code': path.resolve(__dirname, '../packages/bumbag-addon-highlighted-code/src'),
+  '@bumbag-native/bottom-sheet': path.resolve(__dirname, '../packages/bumbag-native-bottom-sheet/src'),
   '@bumbag-native/picker': path.resolve(__dirname, '../packages/bumbag-native-picker/src'),
+  '@bumbag-native/toast': path.resolve(__dirname, '../packages/bumbag-native-toast/src'),
+  'react-native-reanimated': path.resolve(__dirname, './node_modules/react-native-reanimated'),
 };
 
 const withTM = require('next-transpile-modules')([
@@ -14,6 +17,7 @@ const withTM = require('next-transpile-modules')([
   'react-native-svg',
   '@emotion/native',
   'react-native-web-hooks',
+  'react-native-reanimated',
 ]);
 
 module.exports = withPlugins([withTM], {
@@ -66,6 +70,7 @@ module.exports = withPlugins([withTM], {
         '@emotion/react': path.resolve(__dirname, './node_modules/@emotion/react'),
         react: path.resolve(__dirname, './node_modules/react'),
         'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+        'react-native-reanimated': path.resolve(__dirname, './node_modules/react-native-reanimated'),
         'react-native$': 'react-native-web',
         ...packages,
       };
