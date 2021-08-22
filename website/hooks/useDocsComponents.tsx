@@ -1,6 +1,7 @@
 import React from 'react';
 import * as bumbag from 'bumbag';
 
+import CapsizeExample from '../components/CapsizeExample';
 import SlugHeading from '../components/SlugHeading';
 import LiveCode from '../components/Live/LiveCode';
 import Theme from '../components/Theme';
@@ -12,6 +13,7 @@ export default function useDocsComponents({ platform }): any {
   const components = React.useMemo(
     () => ({
       ...bumbag,
+      CapsizeExample,
       PaletteColor,
       Theme: (props) => <Theme {...props} />,
       a: (props: any) => <bumbag.Link {...props} />,
