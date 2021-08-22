@@ -7,17 +7,17 @@ import useDocsComponents from '../../hooks/useDocsComponents';
 
 // DocsPage.getLayout = (page) => <DocsLayout>{page}</DocsLayout>;
 
-export default function DocsPage({ platform, mdx, mdxFiles, toc }) {
+export default function DocsPage({ platform, mdx, toc }) {
   const { components } = useDocsComponents({ platform });
   return (
-    <DocsLayout mdxFiles={mdxFiles} platform={platform} frontmatter={mdx?.frontmatter} toc={toc}>
+    <DocsLayout platform={platform} frontmatter={mdx?.frontmatter} toc={toc}>
       <MDXRemote {...mdx.source} components={components} />
     </DocsLayout>
   );
 }
 
 export async function getStaticPaths() {
-  const mdxFiles = await getMDXFiles('/pages/docs', { includeMDX: false });
+  const mdxFiles = require('../../mdx-manifest.json');
   return {
     paths: mdxFiles.map((file) => ({
       params: {
@@ -30,7 +30,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const mdxFiles = await getMDXFiles('/pages/docs', { includeMDX: false });
   const mdxFile = await getMDXFileFromSlug('/pages/docs', slug, { includeToc: true });
-  return { props: { ...mdxFile, mdxFiles } };
+  return { props: { ...mdxFile } };
 }

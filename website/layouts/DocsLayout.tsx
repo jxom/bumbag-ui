@@ -25,7 +25,7 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
 `;
 
 export default function Docs(props) {
-  const { children, mdxFiles = [], frontmatter = {}, platform = 'web', path = '', toc } = props;
+  const { children, frontmatter = {}, platform = 'web', path = '', toc } = props;
 
   //////////////////////////////////////////////////////////////////////
 
@@ -42,7 +42,7 @@ export default function Docs(props) {
       <SEO title={title} />
       <bumbag.PageWithHeader sticky header={<Header />}>
         <bumbag.PageWithSidebar
-          sidebar={<Sidebar mdxFiles={mdxFiles} path={path} />}
+          sidebar={<Sidebar path={path} />}
           sidebarPlacement="left"
           sidebarWidth="270px"
           overrides={{

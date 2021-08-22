@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import mdxFiles from '../../mdx-manifest.json';
 import Sidebar from '../Sidebar';
 
 const orders = [
@@ -38,7 +39,7 @@ const orders = [
   { utilities: [] },
 ];
 
-export default function DocsSidebar({ mdxFiles }) {
+export default function DocsSidebar() {
   const items = mdxFiles.reduce((currentItems, file) => {
     const item = file;
     if (item.platform !== 'native') return currentItems;

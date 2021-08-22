@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && yarn playroom:build",
+    "build": "yarn generate-mdx-manifest && next build && next export && yarn playroom:build",
     "start": "next start",
     "lint": "next lint",
     "playroom:start": "PLAYROOM=true playroom start",
     "playroom:build": "PLAYROOM=true playroom build",
+    "generate-mdx-manifest": "yarn ts-node scripts/generate-mdx-manifest.ts",
     "inject-types": "node scripts/inject-types.js",
     "ts-node": "node -r esbuild-register"
   },
