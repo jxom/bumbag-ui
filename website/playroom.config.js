@@ -24,8 +24,6 @@ module.exports = {
     },
     resolve: {
       alias: {
-        '@bumbag-native/bottom-sheet': path.resolve(__dirname, '../packages/bumbag-native-bottom-sheet/src'),
-        '@bumbag-native/picker': path.resolve(__dirname, '../packages/bumbag-native-picker/src'),
         bumbag: path.resolve(__dirname, '../packages/bumbag/src'),
         'bumbag-native': path.resolve(__dirname, '../packages/bumbag-native/src'),
         'bumbag-addon-markdown': path.resolve(__dirname, '../packages/bumbag-addon-markdown/src'),
