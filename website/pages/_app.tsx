@@ -14,7 +14,6 @@ function App({ Component, pageProps }: any) {
     Component.title ? '' : 'Bumbag – Themeable components for React & React Native'
   }`;
   const description = Component.description || 'Rapidly build accessible & themeable React applications with ease';
-  const ogTitle = Component.ogTitle || title;
 
   return (
     <>
@@ -34,7 +33,7 @@ function App({ Component, pageProps }: any) {
         openGraph={{
           url: 'https://bumbag.style',
           site_name: 'Bumbag',
-          title: ogTitle.replace('Bumbag – ', ''),
+          title: title.replace('Bumbag – ', ''),
           type: 'website',
           description,
           images: [

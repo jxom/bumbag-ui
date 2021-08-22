@@ -56,10 +56,10 @@ export async function getMDXFile(mdxDir, filePath, { includeMDX = true, includeT
         }
       : {}),
     mdx: {
-      content,
       frontmatter: data,
       ...(includeMDX
         ? {
+            content,
             source: mdxSource,
           }
         : {}),
