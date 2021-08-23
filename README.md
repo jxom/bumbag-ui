@@ -1,6 +1,14 @@
-<p align="center"><img src="./bumbag-logo.png" width="500px"></img></p>
+<p align="center"><img src="./.github/bumbag.svg" width="500px"></img></p>
 
-<p align="center">Est. 2018 – Formally known as Fannypack</p>
+<p align="center"><img src="./.github/sponsored-by.svg" width="100px"></img></p>
+
+<p align="center">
+    <img src="./.github/coinjar.svg" width="300px"></img>
+</p>
+
+<p align="center">
+    <a href="https://opencollective.com/bumbag">Become a sponsor!</a>
+</p>
 
 ## Getting started
 
