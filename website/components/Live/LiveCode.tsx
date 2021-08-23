@@ -58,6 +58,7 @@ const _LivePreview = styled(LivePreview)`
         `};
 `;
 
+const JSX_GIF_REG = /language\-\jsx-gif/; // eslint-disable-line
 const JSX_REG = /language\-\jsx-live/; // eslint-disable-line
 const JSX_IFRAME_REG = /language\-\jsx-live-iframe/; // eslint-disable-line
 const FC_REG = /language\-function-live/; // eslint-disable-line
@@ -83,7 +84,7 @@ export default function LiveCode(props: Props) {
   const scope = React.useMemo(
     () => ({
       ...bumbag,
-      ...(platform === 'native' ? bumbagNative : {}),
+      ...(platform === 'native' ? { ...bumbagNative } : {}),
       // require,
       HighlightedCode,
       Markdown,
@@ -119,24 +120,28 @@ export default function LiveCode(props: Props) {
   if (!isLive) {
     const lang = (props.className || '').split('-')[1];
 
+    let imageSrc;
+    const isGif = JSX_GIF_REG.test(props.className);
+    if (isGif) {
+      const matcher = props.className?.match(JSX_GIF_REG)?.[0];
+      imageSrc = props.className?.replace(matcher, '');
+    }
+
     if (typeof children !== 'string') {
       return null;
     }
     return (
-      // @ts-ignore
-      <HighlightedCode
+      <bumbag.Box
         {...restProps}
+        overflow="hidden"
         boxShadow="0px 6px 24px 0px rgb(0 0 0 / 30%), 0px 0px 12px 6px rgb(0 0 0 / 2%)"
         borderRadius="16px"
-        overflow="hidden"
-        overrides={{ HighlightedCode: { Pre: { styles: { base: { borderRadius: '10px' } } } } }}
         marginBottom="major-4"
         marginTop="major-4"
-        isBlock
-        code={children.replace(/\n$/, '')}
-        language={lang}
-        colorMode="dark"
-      />
+      >
+        {imageSrc && <bumbag.Image src={imageSrc} maxHeight="major-60" />}
+        <HighlightedCode isBlock code={children.replace(/\n$/, '')} language={lang} colorMode="dark" />
+      </bumbag.Box>
     );
   }
 

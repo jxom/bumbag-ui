@@ -39,6 +39,97 @@ type BreakpointsThemeConfig = {
   };
 };
 
+export type BottomSheetThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<any>;
+  variants?: Variant<BottomSheetThemeConfig>;
+  modes?: Variant<BottomSheetThemeConfig>;
+  Backdrop?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['Backdrop']>;
+    modes?: Variant<BottomSheetThemeConfig['Backdrop']>;
+  };
+  Background?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    Wrapper?: {
+      styles?: {
+        base?: ThemeAttribute<Stylesheet>;
+      };
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['Background']>;
+    modes?: Variant<BottomSheetThemeConfig['Background']>;
+  };
+  DraggableView?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['DraggableView']>;
+    modes?: Variant<BottomSheetThemeConfig['DraggableView']>;
+  };
+  FlatList?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['FlatList']>;
+    modes?: Variant<BottomSheetThemeConfig['FlatList']>;
+  };
+  Handle?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['Handle']>;
+    modes?: Variant<BottomSheetThemeConfig['Handle']>;
+  };
+  Modal?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    Wrapper?: {
+      styles?: {
+        base?: ThemeAttribute<Stylesheet>;
+      };
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['Modal']>;
+    modes?: Variant<BottomSheetThemeConfig['Modal']>;
+  };
+  ScrollView?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['ScrollView']>;
+    modes?: Variant<BottomSheetThemeConfig['ScrollView']>;
+  };
+  SectionList?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['SectionList']>;
+    modes?: Variant<BottomSheetThemeConfig['SectionList']>;
+  };
+  View?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<any>;
+    variants?: Variant<BottomSheetThemeConfig['View']>;
+    modes?: Variant<BottomSheetThemeConfig['View']>;
+  };
+};
+
 export type BoxThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -518,6 +609,15 @@ export type MenuThemeConfig = {
   modes?: Variant<MenuThemeConfig>;
 };
 
+export type PickerThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<any>;
+  variants?: Variant<PickerThemeConfig>;
+  modes?: Variant<PickerThemeConfig>;
+};
+
 export type PressableThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -679,6 +779,24 @@ export type TextThemeConfig = {
   modes?: Variant<TextThemeConfig>;
 };
 
+export type ToastThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<any>;
+  variants?: Variant<ToastThemeConfig>;
+  modes?: Variant<ToastThemeConfig>;
+};
+
+export type ToastManagerThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<any>;
+  variants?: Variant<ToastManagerThemeConfig>;
+  modes?: Variant<ToastManagerThemeConfig>;
+};
+
 export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
   borders?: CoreThemeConfig['borders'];
@@ -705,6 +823,7 @@ export type ThemeConfig = {
   palette?: CoreThemeConfig['palette'];
 
   Box?: BoxThemeConfig;
+  BottomSheet?: BottomSheetThemeConfig;
   Button?: ButtonThemeConfig;
   Checkbox?: CheckboxThemeConfig;
   CheckboxField?: CheckboxThemeConfig;
@@ -720,6 +839,7 @@ export type ThemeConfig = {
   Image?: ImageThemeConfig;
   Level?: LevelThemeConfig;
   Menu?: MenuThemeConfig;
+  Picker?: PickerThemeConfig;
   Pressable?: PressableThemeConfig;
   Radio?: RadioThemeConfig;
   RadioGroup?: RadioGroupThemeConfig;
@@ -732,4 +852,6 @@ export type ThemeConfig = {
   SwitchField?: SwitchFieldThemeConfig;
   SwitchGroupField?: SwitchGroupFieldThemeConfig;
   Text?: TextThemeConfig;
+  Toast?: ToastThemeConfig;
+  ToastManager?: ToastManagerThemeConfig;
 };

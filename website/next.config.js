@@ -17,6 +17,18 @@ const withTM = require('next-transpile-modules')([
 ]);
 
 module.exports = withPlugins([withTM], {
+  async rewrites() {
+    return [
+      {
+        source: '/docs',
+        destination: '/docs/getting-started',
+      },
+      {
+        source: '/docs/native',
+        destination: '/docs/native/getting-started',
+      },
+    ];
+  },
   ignoreBuildErrors: true,
   reactStrictMode: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {

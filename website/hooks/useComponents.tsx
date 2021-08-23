@@ -9,7 +9,7 @@ export default function useComponents({ platform }): any {
   const components = React.useMemo(
     () => ({
       ...bumbag,
-      ...(platform === 'native' ? bumbagNative : {}),
+      ...(platform === 'native' ? { ...bumbagNative } : {}),
       // require,
       HighlightedCode,
       Markdown,

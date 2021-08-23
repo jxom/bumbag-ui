@@ -11,36 +11,13 @@ export default function TableOfContents(props: any) {
       <Stack spacing="major-1">
         <Navigation>
           <List fontSize="150">
-            {toc.items &&
-              toc.items.map((item) => (
-                <List.Item key={item.url}>
-                  <Link href={item.url} color="text100" fontWeight="500">
-                    {item.title}
-                  </Link>
-                  {item.items?.length > 0 && (
-                    <List marginTop="minor-1">
-                      {item.items.map((item) => (
-                        <List.Item key={item.url}>
-                          <Link href={item.url} color="text100" fontWeight="500">
-                            {item.title}
-                          </Link>
-                          {item.items?.length > 0 && (
-                            <List marginTop="minor-1">
-                              {item.items.map((item) => (
-                                <List.Item key={item.url}>
-                                  <Link href={item.url} color="text100" fontWeight="500">
-                                    {item.title}
-                                  </Link>
-                                </List.Item>
-                              ))}
-                            </List>
-                          )}
-                        </List.Item>
-                      ))}
-                    </List>
-                  )}
-                </List.Item>
-              ))}
+            {toc.map(({ id, text, level }, i) => (
+              <List.Item key={i} marginLeft={`major-${(level - 2) * 2}`}>
+                <Link href={`#${id}`} color="text100" fontWeight="500">
+                  {text}
+                </Link>
+              </List.Item>
+            ))}
           </List>
         </Navigation>
       </Stack>

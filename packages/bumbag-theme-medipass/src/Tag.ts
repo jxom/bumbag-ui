@@ -16,7 +16,7 @@ export default {
   },
   Close: {
     styles: {
-      base: (props) => css`
+      base: css`
         border-radius: 30px;
 
         &:focus {

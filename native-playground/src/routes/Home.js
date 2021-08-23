@@ -9,6 +9,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/box">
         <Text>Box</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/bottom-sheet">
+        <Text>BottomSheet</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/button">
         <Text>Button</Text>
       </Link>
@@ -62,6 +65,9 @@ export default function App() {
       </Link>
       <Link component={TouchableOpacity} to="/components/text">
         <Text>Text</Text>
+      </Link>
+      <Link component={TouchableOpacity} to="/components/toast">
+        <Text>Toast</Text>
       </Link>
     </Box>
   );

@@ -1,17 +1,22 @@
+// Learn more https://docs.expo.io/guides/customizing-metro
 const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
+const { getDefaultConfig } = require('expo/metro-config');
+
+const defaultConfig = getDefaultConfig(__dirname);
 
 const watchFolders = [
+  path.resolve(__dirname + '/../packages/bumbag-native-bottom-sheet'),
   path.resolve(__dirname + '/../packages/bumbag-native-picker'),
+  path.resolve(__dirname + '/../packages/bumbag-native-toast'),
   path.resolve(__dirname + '/../packages/bumbag-native'),
   path.resolve(__dirname + '/../packages/bumbag'),
 ];
 
 module.exports = {
-  transformer: {
-    assetPlugins: ['expo-asset/tools/hashAssetFiles'],
-  },
+  ...defaultConfig,
   resolver: {
+    ...defaultConfig.resolver,
     extraNodeModules: new Proxy(
       {},
       {
@@ -23,5 +28,5 @@ module.exports = {
       /node_modules\/.*\/node_modules\/react-native-svg\/.*/,
     ]),
   },
-  watchFolders,
+  watchFolders: [...defaultConfig.watchFolders, ...watchFolders],
 };

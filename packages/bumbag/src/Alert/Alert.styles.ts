@@ -181,13 +181,16 @@ export const AlertAccent = (styleProps) => cssClass`
     !styleProps.isBackground &&
     styleProps.countdown &&
     css`
-      ${styleProps.accent === true &&
-      css`
-        animation: ${heightCountdown} ${styleProps.countdown}ms linear forwards;
-      `} ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
-      css`
-        animation: ${widthCountdown} ${styleProps.countdown}ms linear forwards;
-      `};
+      ${styleProps.accent === true
+        ? css`
+            animation: ${heightCountdown} ${styleProps.countdown}ms linear forwards;
+          `
+        : css``}
+      ${styleProps.accent === 'top' || styleProps.accent === 'bottom'
+        ? css`
+            animation: ${widthCountdown} ${styleProps.countdown}ms linear forwards;
+          `
+        : css``};
     `
   }
 

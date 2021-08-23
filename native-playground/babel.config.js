@@ -1,5 +1,5 @@
 module.exports = function (api) {
-  api.cache(false);
+  api.cache(true);
   return {
     presets: ['babel-preset-expo'],
     plugins: [
@@ -10,9 +10,12 @@ module.exports = function (api) {
             bumbag: '../packages/bumbag/src',
             'bumbag-native': '../packages/bumbag-native/src',
             '@bumbag-native/picker': '../packages/bumbag-native-picker/src',
+            '@bumbag-native/toast': '../packages/bumbag-native-toast/src',
+            '@bumbag-native/bottom-sheet': '../packages/bumbag-native-bottom-sheet/src',
           },
         },
       ],
+      'react-native-reanimated/plugin',
     ],
   };
 };
