@@ -9,6 +9,8 @@ The `BottomSheet.Modal` and it's respective components are exports of [`@gorhom/
 
 You can read more on the [internal `BottomSheet.Modal` functionalities here](https://gorhom.github.io/react-native-bottom-sheet). As Bumbag inherits `@gorhom/react-native-bottom-sheet`, it shares the same props, methods and API.
 
+<center><img src="/bottom-sheet-modal.gif" width="600px" /></center>
+
 ## Compatibility
 
 | iOS | Android | Web |
@@ -74,20 +76,50 @@ function Example() {
 
 ### present
 
+Mount and present the modal.
+
+```jsx
+function Example() {
+  const bottomSheetRef = React.useRef();
+
+  return (
+    <>
+      <Button onPress={() => bottomSheetRef.current.present()}>Present</Button>
+      <BottomSheet.Modal ref={bottomSheetRef}>
+        Hello world
+      </BottomSheet.Modal>
+    </>
+  )
+}
+```
+
 ### dismiss
 
-## Hooks
+Close and unmount the modal.
 
-### useBottomSheetModal
+```jsx
+function Example() {
+  const bottomSheetRef = React.useRef();
+
+  return (
+    <>
+      <Button onPress={() => bottomSheetRef.current.dismiss()}>Dismiss</Button>
+      <BottomSheet.Modal ref={bottomSheetRef}>
+        Hello world
+      </BottomSheet.Modal>
+    </>
+  )
+}
+```
 
 ## Custom handles
 
-## Custom backdrops
-
-## Custom backgrounds
-
-## Props
-
-### BottomSheet.Modal Props
-
-<!-- Automatically generated -->
+```jsx
+<BottomSheet.Modal
+  renderHandle={() => 
+    <Box backgroundColor="gray" borderRadius="2px" height="major-1" width="major-5" />
+  }
+>
+  Hello world
+</BottomSheet.Modal>
+```

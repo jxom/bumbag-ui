@@ -11,13 +11,11 @@ export default function App() {
       <Heading.H5 marginBottom="16px">Toast</Heading.H5>
       <PreviewSection title="Basic">
         <Preview>
-          <Button onPress={() => toasts.create({ title: 'A toast has been created', palette: 'blue' })}>
-            Open toast
-          </Button>
-          <Button onPress={() => toasts.success({ title: 'A toast has been created' })}>Open success</Button>
-          <Button onPress={() => toasts.danger({ title: 'A toast has been created' })}>Open error</Button>
-          <Button onPress={() => toasts.info({ title: 'A toast has been created' })}>Open info</Button>
-          <Button onPress={() => toasts.warning({ title: 'A toast has been created' })}>Open warning</Button>
+          <Button onPress={() => toasts.add({ title: 'This is a toast', palette: 'blue' })}>Open toast</Button>
+          <Button onPress={() => toasts.success({ title: 'This is a toast' })}>Open success</Button>
+          <Button onPress={() => toasts.danger({ title: 'This is a toast' })}>Open error</Button>
+          <Button onPress={() => toasts.info({ title: 'This is a toast' })}>Open info</Button>
+          <Button onPress={() => toasts.warning({ title: 'This is a toast' })}>Open warning</Button>
         </Preview>
       </PreviewSection>
     </Box>

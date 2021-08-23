@@ -17,9 +17,9 @@ export type LocalBottomSheetModalProps = {
   backgroundWrapperProps?: Partial<BottomSheetBackgroundProps>;
   backdropProps?: Partial<BottomSheetBackdropProps>;
   handleProps?: Partial<BottomSheetHandleProps>;
-  backdropComponent?: (props: any) => React.ReactElement<any>;
-  backgroundComponent?: () => React.ReactElement<any>;
-  handleComponent?: (props: any) => React.ReactElement<any>;
+  renderBackdrop?: (props: any) => React.ReactElement<any>;
+  renderBackground?: () => React.ReactElement<any>;
+  renderHandle?: (props: any) => React.ReactElement<any>;
 };
 export type BottomSheetModalProps = BoxProps & RNBottomSheetModalProps & LocalBottomSheetModalProps;
 
@@ -28,10 +28,10 @@ const useProps = createHook<BottomSheetModalProps>(
     const {
       borderRadius,
       backgroundColor,
-      backdropComponent,
-      backgroundComponent,
+      renderBackdrop,
+      renderBackground,
       backgroundWrapperProps,
-      handleComponent,
+      renderHandle,
       handleProps,
       elementRef,
       onPressOutside,
@@ -43,7 +43,7 @@ const useProps = createHook<BottomSheetModalProps>(
     return {
       ...boxProps,
       backdropComponent:
-        backdropComponent ||
+        renderBackdrop ||
         (hasBackdrop
           ? (props) => (
               <BottomSheetBackdrop
@@ -60,7 +60,7 @@ const useProps = createHook<BottomSheetModalProps>(
             )
           : undefined),
       backgroundComponent:
-        backgroundComponent ||
+        renderBackground ||
         (() => (
           <BottomSheetBackground
             backgroundColor={backgroundColor}
@@ -70,7 +70,7 @@ const useProps = createHook<BottomSheetModalProps>(
           />
         )),
       handleComponent:
-        handleComponent ||
+        renderHandle ||
         ((props) => <BottomSheetHandle {...props} hasHandle={hasHandle} overrides={overrides} {...handleProps} />),
     };
   },

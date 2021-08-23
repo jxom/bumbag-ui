@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, Text, SafeAreaView } from 'react-native';
 import { NativeRouter, Link, Route } from 'react-router-native';
 import { Box, Button, Heading, Provider } from 'bumbag-native';
 import { ToastProvider, ToastManager } from '@bumbag-native/toast';
@@ -126,7 +126,7 @@ export default function App() {
                   <Route exact path="/components/text" component={TextPage} />
                   <Route exact path="/components/toast" component={ToastPage} />
                 </Box>
-                <Button onPress={() => modalRef.current.present()}>Show modal</Button>
+                {/* <Button onPress={() => modalRef.current.present()}>Show modal</Button> */}
               </Box.Scroll>
             </Box.Safe>
             <BottomSheetModal ref={modalRef}>

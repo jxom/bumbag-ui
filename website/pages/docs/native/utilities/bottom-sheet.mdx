@@ -9,6 +9,8 @@ The `BottomSheet` and it's respective components are exports of [`@gorhom/react-
 
 You can read more on the [internal `BottomSheet` functionalities here](https://gorhom.github.io/react-native-bottom-sheet). As Bumbag inherits `@gorhom/react-native-bottom-sheet`, it shares the same props, methods and API.
 
+<center><img src="/bottom-sheet-preview.gif" width="600px" /></center>
+
 ## Compatibility
 
 | iOS | Android | Web |
@@ -43,32 +45,180 @@ A `BottomSheet` in it's simplest form will render a sheet from the bottom with i
 
 ### Snap points
 
+Points for the bottom sheet to snap to, points should be sorted from bottom to top. It accepts array of number, string or mix.
+
+```jsx
+<BottomSheet snapPoints={['25%', '50%']}>
+  Hello world
+</BottomSheet>
+```
+
 ### Methods
 
 #### snapTo
 
+Animate the sheet to one of the provided point from `snapPoints`.
+
+```jsx
+function Example() {
+  const bottomSheetRef = React.useRef();
+
+  return (
+    <>
+      {/* This will snap to 50% */}
+      <Button onPress={() => bottomSheetRef.current.snapTo(1)}>Snap</Button>
+      <BottomSheet ref={bottomSheetRef} snapPoints={['25%', '50%']}>
+        Hello world
+      </BottomSheet>
+    </>
+  )
+}
+```
+
 #### expand
+
+Animate the sheet to the maximum provided point from `snapPoints`.
+
+```jsx
+function Example() {
+  const bottomSheetRef = React.useRef();
+
+  return (
+    <>
+      {/* This will expand to 50% */}
+      <Button onPress={() => bottomSheetRef.current.expand()}>Expand</Button>
+      <BottomSheet ref={bottomSheetRef} snapPoints={['25%', '50%']}>
+        Hello world
+      </BottomSheet>
+    </>
+  )
+}
+```
 
 #### collapse
 
+Animate the sheet to the minimum provided point from `snapPoints`.
+
+```jsx
+function Example() {
+  const bottomSheetRef = React.useRef();
+
+  return (
+    <>
+      {/* This will collapse to 25% */}
+      <Button onPress={() => bottomSheetRef.current.expand()}>Expand</Button>
+      <BottomSheet ref={bottomSheetRef} snapPoints={['25%', '50%']}>
+        Hello world
+      </BottomSheet>
+    </>
+  )
+}
+```
+
+
 #### close
+
+Close the sheet.
+
+```jsx
+function Example() {
+  const bottomSheetRef = React.useRef();
+
+  return (
+    <>
+      <Button onPress={() => bottomSheetRef.current.close()}>Close</Button>
+      <BottomSheet ref={bottomSheetRef} snapPoints={['25%', '50%']}>
+        Hello world
+      </BottomSheet>
+    </>
+  )
+}
+```
 
 ## Hooks
 
 ### useBottomSheet
 
+This hook provides all the bottom sheet public methods, to the internal sheet content or handle.
+
+> This hook works at any component inside the `BottomSheet`.
+
+```jsx
+import { useBottomSheet } from '@bumbag-native/bottom-sheet';
+
+function Example() {
+  const { expand } = useBottomSheet();
+
+  return (
+    <Box>
+      <Button onPress={expand}>
+        Expand bottom sheet
+      </Button>
+    </Box>
+  )
+}
+```
+
 ### useBottomSheetSpringConfigs
+
+Generate animation spring configs.
+
+```jsx
+import { BottomSheet, useBottomSheetSpringConfigs } from '@bumbag-native/bottom-sheet';
+
+function Example() {
+  const animationConfigs = useBottomSheetSpringConfigs({
+    damping: 80,
+    overshootClamping: true,
+    restDisplacementThreshold: 0.1,
+    restSpeedThreshold: 0.1,
+    stiffness: 500,
+  });
+
+  return (
+    <BottomSheet
+      animationConfigs={animationConfigs}
+    >
+      Hello world
+    </BottomSheet>
+  )
+}
+```
 
 ### useBottomSheetTimingConfigs
 
-## Custom handles
+Generate animation timing configs.
 
-## Custom backdrops
+```jsx
+import BottomSheet, { useBottomSheetTimingConfigs } from '@bumbag-native/bottom-sheet';
+import { Easing } from 'react-native-reanimated';
 
-## Custom backgrounds
+function Example() {
+  const animationConfigs = useBottomSheetTimingConfigs({
+    duration: 250,
+    easing: Easing.exp,
+  });
 
-## Props
+  return (
+    <BottomSheet
+      animationConfigs={animationConfigs}
+    >
+      Hello world
+    </BottomSheet>
+  )
+}
+```
 
-### BottomSheet Props
+## Custom handle
 
-<!-- Automatically generated -->
+You can customise the handle via the `renderHandle` prop.
+
+```jsx
+<BottomSheet 
+  renderHandle={() => 
+    <Box backgroundColor="gray" borderRadius="2px" height="major-1" width="major-5" />
+  }
+>
+  Hello world
+</BottomSheet>
+```

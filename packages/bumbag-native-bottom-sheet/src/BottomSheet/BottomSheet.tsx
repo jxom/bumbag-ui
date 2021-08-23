@@ -11,8 +11,8 @@ export type LocalBottomSheetProps = {
   hasHandle?: boolean;
   backgroundWrapperProps?: Partial<BottomSheetBackgroundProps>;
   handleProps?: Partial<BottomSheetHandleProps>;
-  backgroundComponent?: () => React.ReactElement<any>;
-  handleComponent?: (props: any) => React.ReactElement<any>;
+  renderBackground?: () => React.ReactElement<any>;
+  renderHandle?: (props: any) => React.ReactElement<any>;
 };
 export type BottomSheetProps = BoxProps & Omit<RNBottomSheetProps, 'snapPoints'> & LocalBottomSheetProps;
 
@@ -21,9 +21,9 @@ const useProps = createHook<BottomSheetProps>(
     const {
       backgroundColor,
       borderRadius,
-      backgroundComponent,
+      renderBackground,
       backgroundWrapperProps,
-      handleComponent,
+      renderHandle,
       handleProps,
       overrides,
       hasHandle,
@@ -32,7 +32,7 @@ const useProps = createHook<BottomSheetProps>(
     return {
       ...boxProps,
       backgroundComponent:
-        backgroundComponent ||
+        renderBackground ||
         (() => (
           <BottomSheetBackground
             backgroundColor={backgroundColor}
@@ -42,7 +42,7 @@ const useProps = createHook<BottomSheetProps>(
           />
         )),
       handleComponent:
-        handleComponent ||
+        renderHandle ||
         ((props) => <BottomSheetHandle {...props} hasHandle={hasHandle} overrides={overrides} {...handleProps} />),
     };
   },

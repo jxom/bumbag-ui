@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TextInput, TextInputProps as RNTextInputProps, ViewProps as RNViewProps, Text } from 'react-native';
+import { Platform, TextInput, TextInputProps as RNTextInputProps, ViewProps as RNViewProps, Text } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { useFontStyles, useTheme } from 'bumbag-native/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
@@ -99,13 +99,15 @@ export const Toast = createComponent<ToastProps>(
         style: [
           {
             justifyContent: 'center',
-            height: 100,
+            paddingTop: Platform.OS === 'android' ? 20 : 0,
+            height: Platform.OS === 'ios' ? 100 : 80,
             width: '100%',
             position: 'absolute',
           },
           backgroundAnimatedStyle,
           placement === 'top' ? topAnimatedStyle : {},
           placement === 'bottom' ? bottomAnimatedStyle : {},
+          ...htmlProps.style,
         ],
       },
     });
