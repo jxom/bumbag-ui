@@ -4,6 +4,7 @@ module.exports = {
   ...(process.env.NODE_ENV === 'production'
     ? {
         components: './node_modules/bumbag/es/index.js',
+        baseUrl: '/playroom/',
       }
     : {}),
   ...(process.env.NODE_ENV === 'development'
