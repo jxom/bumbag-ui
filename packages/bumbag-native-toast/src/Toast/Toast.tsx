@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Platform, TextInput, TextInputProps as RNTextInputProps, ViewProps as RNViewProps, Text } from 'react-native';
+import { TextInput, TextInputProps as RNTextInputProps, ViewProps as RNViewProps, Text } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { useFontStyles, useTheme } from 'bumbag-native/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
@@ -7,10 +8,11 @@ import Animated, { Easing, useAnimatedStyle, withTiming, useAnimatedProps } from
 
 import * as styles from './Toast.styles';
 
-const AnimatedToast = Animated.createAnimatedComponent(Box.Safe);
+const AnimatedToast = Animated.createAnimatedComponent(Box);
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export type LocalToastProps = {
+  height?: number;
   placement?: 'top' | 'bottom';
   title?: { value: string };
   show?: { value: boolean };
@@ -40,14 +42,14 @@ const useProps = createHook<ToastProps>(
     return {
       ...boxProps,
       children: (
-        <styles.ToastTextWrapper paddingX="major-2" marginTop={{ ios: '-8px' }} {...textWrapperProps}>
+        <styles.ToastTextWrapper paddingX="major-2" {...textWrapperProps}>
           <AnimatedTextInput
             // @ts-ignore
             animatedProps={textProps}
             multiline
             editable={false}
             {...textInputProps}
-            style={{ color: 'white', ...fontStyles, ...(textInputProps?.style as any) }}
+            style={{ color: 'white', fontSize: 16, ...fontStyles, ...(textInputProps?.style as any) }}
           />
         </styles.ToastTextWrapper>
       ),
@@ -58,7 +60,7 @@ const useProps = createHook<ToastProps>(
 
 export const Toast = createComponent<ToastProps>(
   (props) => {
-    const { placement, palette, show } = props;
+    const { height, placement, palette, show } = props;
     const htmlProps = useProps(props);
 
     //////////////////////////////////////////
@@ -99,8 +101,8 @@ export const Toast = createComponent<ToastProps>(
         style: [
           {
             justifyContent: 'center',
-            paddingTop: Platform.OS === 'android' ? 20 : 0,
-            height: Platform.OS === 'ios' ? 100 : 80,
+            paddingTop: getStatusBarHeight(),
+            height: getStatusBarHeight() + height,
             width: '100%',
             position: 'absolute',
           },
@@ -116,6 +118,9 @@ export const Toast = createComponent<ToastProps>(
     attach: {
       useProps,
       displayName: 'native.Toast',
+    },
+    defaultProps: {
+      height: 56,
     },
     themeKey: 'native.Toast',
   }
