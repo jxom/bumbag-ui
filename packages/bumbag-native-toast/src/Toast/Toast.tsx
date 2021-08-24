@@ -8,7 +8,6 @@ import Animated, { Easing, useAnimatedStyle, withTiming, useAnimatedProps } from
 
 import * as styles from './Toast.styles';
 
-const AnimatedToast = Animated.createAnimatedComponent(Box);
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export type LocalToastProps = {
@@ -95,7 +94,7 @@ export const Toast = createComponent<ToastProps>(
 
     return createElement({
       children: props.children,
-      component: AnimatedToast,
+      component: Animated.View,
       htmlProps: {
         ...htmlProps,
         style: [
