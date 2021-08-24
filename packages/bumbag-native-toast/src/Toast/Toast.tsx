@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { TextInput, TextInputProps as RNTextInputProps, ViewProps as RNViewProps, Text } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { useFontStyles, useTheme } from 'bumbag-native/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
@@ -100,15 +101,24 @@ export const Toast = createComponent<ToastProps>(
         style: [
           {
             justifyContent: 'center',
-            paddingTop: getStatusBarHeight(),
-            height: getStatusBarHeight() + height,
             width: '100%',
             position: 'absolute',
+            ...(placement === 'top'
+              ? {
+                  paddingTop: getStatusBarHeight(),
+                  height: getStatusBarHeight() + height,
+                }
+              : {}),
+            ...(placement === 'bottom'
+              ? {
+                  paddingBottom: getBottomSpace(),
+                  height: getBottomSpace() + height,
+                }
+              : {}),
           },
           backgroundAnimatedStyle,
           placement === 'top' ? topAnimatedStyle : {},
           placement === 'bottom' ? bottomAnimatedStyle : {},
-          ...htmlProps.style,
         ],
       },
     });
