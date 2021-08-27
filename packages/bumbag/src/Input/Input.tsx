@@ -145,12 +145,12 @@ const useProps = createHook<InputProps>(
             </>
           )}
           {before && (
-            <Box display="inline-flex" position="absolute" zIndex="3" height="100%">
+            <Box display="inline-flex" position="absolute" zIndex={3} height="100%">
               {before}
             </Box>
           )}
           {after && (
-            <Box display="inline-flex" position="absolute" right="0" zIndex="3" height="100%">
+            <Box display="inline-flex" position="absolute" right="0px" zIndex={3} height="100%">
               {after}
             </Box>
           )}

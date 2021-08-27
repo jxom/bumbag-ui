@@ -11,7 +11,7 @@ describe('props', () => {
   });
 
   it('should render correctly with CSS props', () => {
-    const { container } = render(<ActionButtons position="absolute" top="0" />);
+    const { container } = render(<ActionButtons position="absolute" top="0px" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 

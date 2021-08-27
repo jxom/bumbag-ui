@@ -11,7 +11,7 @@ describe('props', () => {
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <InlineFlex position="absolute" top="0">
+      <InlineFlex position="absolute" top="0px">
         Hello world
       </InlineFlex>
     );

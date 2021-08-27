@@ -5,7 +5,7 @@ export default { title: 'Group' };
 
 export const _default = () => (
   <Group>
-    <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+    <Box backgroundColor="primary" color="white" padding="major-2">
       Hello
     </Box>
     <Button>Send</Button>
@@ -15,7 +15,7 @@ export const _default = () => (
 
 export const verticalGroups = () => (
   <Group orientation="vertical">
-    <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+    <Box backgroundColor="primary" color="white" padding="major-2">
       Hello
     </Box>
     <Button>Send</Button>
@@ -25,7 +25,7 @@ export const verticalGroups = () => (
 
 export const responsiveBreakpoint = () => (
   <Group verticalBelow="widescreen">
-    <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+    <Box backgroundColor="primary" color="white" padding="major-2">
       Hello
     </Box>
     <Button>Send</Button>

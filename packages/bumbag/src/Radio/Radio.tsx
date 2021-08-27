@@ -11,7 +11,7 @@ export type LocalRadioProps = {
   /** Automatically focus on the radio */
   autoFocus?: boolean;
   checked?: boolean;
-  radioProps?: React.InputHTMLAttributes<any>;
+  radioProps?: Partial<BoxProps> & React.InputHTMLAttributes<any>;
   /** Is the radio checked by default? */
   defaultChecked?: boolean;
   /** Disables the radio */

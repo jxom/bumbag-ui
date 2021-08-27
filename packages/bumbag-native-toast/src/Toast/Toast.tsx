@@ -20,12 +20,12 @@ export type LocalToastProps = {
   textWrapperProps?: Partial<BoxProps>;
   textProps?: Partial<RNTextInputProps>;
 };
-export type ToastProps = BoxProps & RNViewProps & LocalToastProps;
+export type ToastProps = Omit<BoxProps, 'height'> & RNViewProps & LocalToastProps;
 
 const useProps = createHook<ToastProps>(
   (props) => {
     const { textWrapperProps, textProps: textInputProps = {}, title } = props;
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps({ ...props, height: undefined });
 
     //////////////////////////////////////////
 

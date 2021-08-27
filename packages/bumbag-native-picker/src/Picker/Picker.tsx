@@ -49,6 +49,7 @@ const useProps = createHook<PickerProps>(
             onChange={onChange}
             value={value}
             overrides={overrides}
+            type="radio"
             {...menuOptionGroupProps}
           >
             {options.map((option, index) => (

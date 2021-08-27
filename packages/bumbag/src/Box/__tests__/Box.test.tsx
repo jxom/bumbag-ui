@@ -149,16 +149,6 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with a spacing CSS prop', () => {
-    const { container } = render(<Box margin="xl" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly with negative spacing CSS props', () => {
-    const { container } = render(<Box margin="-xl" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
   it('should render correctly with a font CSS prop', () => {
     const { container } = render(<Box font="default" />);
     expect(container.firstChild).toMatchSnapshot();

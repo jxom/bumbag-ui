@@ -18,7 +18,7 @@ describe('props', () => {
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <Group position="absolute" top="0">
+      <Group position="absolute" top="0px">
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
