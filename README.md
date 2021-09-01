@@ -2,8 +2,9 @@
 
 <p align="center"><img src="./.github/sponsored-by.svg" width="100px"></img></p>
 
-<p align="center">
-    <img src="./.github/coinjar.svg" width="300px"></img>
+<p align="center" style="display: flex; align-items: center; justify-content: center;">
+    <img src="./.github/coinjar.svg" height="100px"></img>
+    <img src="./.github/tyro-logo.png" height="80px"></img>
 </p>
 
 <p align="center">
