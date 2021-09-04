@@ -6,7 +6,7 @@ export const defaultAndroidFontWeights = {
     fontWeight: 'normal',
   },
   semibold: {
-    fontFamilySuffix: 'light',
+    fontFamilySuffix: '-light',
     fontWeight: 'bold',
   },
   bold: {
@@ -14,15 +14,15 @@ export const defaultAndroidFontWeights = {
     fontWeight: 'bold',
   },
   100: {
-    fontFamilySuffix: 'thin',
+    fontFamilySuffix: '-thin',
     fontWeight: 'normal',
   },
   200: {
-    fontFamilySuffix: 'light',
+    fontFamilySuffix: '-light',
     fontWeight: 'normal',
   },
   300: {
-    fontFamilySuffix: 'light',
+    fontFamilySuffix: '-light',
     fontWeight: 'normal',
   },
   400: {
@@ -30,11 +30,11 @@ export const defaultAndroidFontWeights = {
     fontWeight: 'normal',
   },
   500: {
-    fontFamilySuffix: 'light',
+    fontFamilySuffix: '-light',
     fontWeight: 'bold',
   },
   600: {
-    fontFamilySuffix: 'medium',
+    fontFamilySuffix: '-medium',
     fontWeight: 'normal',
   },
   700: {
@@ -42,11 +42,11 @@ export const defaultAndroidFontWeights = {
     fontWeight: 'bold',
   },
   800: {
-    fontFamilySuffix: 'medium',
+    fontFamilySuffix: '-medium',
     fontWeight: 'bold',
   },
   900: {
-    fontFamilySuffix: 'black',
+    fontFamilySuffix: '-black',
     fontWeight: 'normal',
   },
 };

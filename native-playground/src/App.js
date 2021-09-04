@@ -30,51 +30,51 @@ import ToastPage from './routes/components/Toast';
 
 const weights = {
   normal: {
-    fontFamilySuffix: 'Regular',
+    fontFamilySuffix: '-Regular',
     fontWeight: 'normal',
   },
   semibold: {
-    fontFamilySuffix: 'SemiBold',
+    fontFamilySuffix: '-SemiBold',
     fontWeight: 'normal',
   },
   bold: {
-    fontFamilySuffix: 'Bold',
+    fontFamilySuffix: '-Bold',
     fontWeight: 'normal',
   },
   100: {
-    fontFamilySuffix: 'Thin',
+    fontFamilySuffix: '-Thin',
     fontWeight: 'normal',
   },
   200: {
-    fontFamilySuffix: 'ExtraLight',
+    fontFamilySuffix: '-ExtraLight',
     fontWeight: 'normal',
   },
   300: {
-    fontFamilySuffix: 'Light',
+    fontFamilySuffix: '-Light',
     fontWeight: 'normal',
   },
   400: {
-    fontFamilySuffix: 'Regular',
+    fontFamilySuffix: '-Regular',
     fontWeight: 'normal',
   },
   500: {
-    fontFamilySuffix: 'Medium',
+    fontFamilySuffix: '-Medium',
     fontWeight: 'normal',
   },
   600: {
-    fontFamilySuffix: 'SemiBold',
+    fontFamilySuffix: '-SemiBold',
     fontWeight: 'normal',
   },
   700: {
-    fontFamilySuffix: 'Bold',
+    fontFamilySuffix: '-Bold',
     fontWeight: 'normal',
   },
   800: {
-    fontFamilySuffix: 'ExtraBold',
+    fontFamilySuffix: '-ExtraBold',
     fontWeight: 'normal',
   },
   900: {
-    fontFamilySuffix: 'Black',
+    fontFamilySuffix: '-Black',
     fontWeight: 'normal',
   },
 };

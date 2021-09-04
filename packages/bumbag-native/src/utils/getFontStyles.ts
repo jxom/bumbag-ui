@@ -5,7 +5,7 @@ export function getFontAttributes({ fontFamilyThemeKey, fontWeight: _fontWeight,
   let fontFamily = font(fontFamilyThemeKey)({ theme });
 
   if (typeof fontWeight === 'object') {
-    fontFamily = `${fontFamily}${fontWeight.fontFamilySuffix ? `-${fontWeight.fontFamilySuffix}` : ''}`;
+    fontFamily = `${fontFamily}${fontWeight.fontFamilySuffix ? `${fontWeight.fontFamilySuffix}` : ''}`;
     fontWeight = fontWeight.fontWeight || 'normal';
   }
 

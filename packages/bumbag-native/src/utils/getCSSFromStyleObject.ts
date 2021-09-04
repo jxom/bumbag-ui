@@ -320,7 +320,7 @@ export function getCSSFromStyleObject(
           const fontFamily = font(fontFamilyKey)({ theme });
           if (typeof newValue === 'object') {
             newStyle = `
-              font-family: ${fontFamily}${newValue.fontFamilySuffix ? `-${newValue.fontFamilySuffix}` : ''};
+              font-family: ${fontFamily}${newValue.fontFamilySuffix ? `${newValue.fontFamilySuffix}` : ''};
             `;
             newValue = newValue.fontWeight;
           } else if (fontFamily) {
