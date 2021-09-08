@@ -4,7 +4,7 @@ import { getFontStyles } from '../utils/getFontStyles';
 
 export const StyledHeading = styled.Text`
   color: ${palette('text')};
-  font-size: ${(props: any) => console.log('theme', props) ||
+  font-size: ${(props: any) =>
     `${fontSize(theme(`native.Heading${props.type ? `.${props.type}` : ''}`, 'fontSize')(props))(props)}px`};
 
   ${(props: any) =>
