@@ -32,8 +32,6 @@ module.exports = withPlugins([withTM], {
   ignoreBuildErrors: true,
   reactStrictMode: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    const prod = !dev;
-
     // Fixes npm packages that depend on `fs` module
     if (!isServer) {
       config.resolve = {
@@ -49,38 +47,24 @@ module.exports = withPlugins([withTM], {
 
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@emotion/native': path.resolve(__dirname, './node_modules/@emotion/native'),
-      '@emotion/css': path.resolve(__dirname, './node_modules/@emotion/css'),
-      '@emotion/react': path.resolve(__dirname, './node_modules/@emotion/react'),
       react: path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
       'react-native$': path.resolve(__dirname, './node_modules/react-native-web'),
-      'react-native-web': path.resolve(__dirname, './node_modules/react-native-web/'),
+      ...packages,
     };
     config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
 
-    if (prod) {
-      config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
+    if (isServer) {
+      config.externals = ['react', ...config.externals];
     }
-    if (dev) {
-      if (isServer) {
-        config.externals = ['react', ...config.externals];
-      }
 
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        ...packages,
-      };
-      config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
+    config.module.rules.push(config.module.rules[3]);
+    config.module.rules[4].include = [];
 
-      config.module.rules.push(config.module.rules[3]);
-      config.module.rules[4].include = [];
-
-      Object.values(packages).forEach((pkg) => {
-        config.module.rules[1].include.push(pkg);
-        config.module.rules[4].include.push(pkg);
-      });
-    }
+    Object.values(packages).forEach((pkg) => {
+      config.module.rules[1].include.push(pkg);
+      config.module.rules[4].include.push(pkg);
+    });
 
     return config;
   },
