@@ -44,7 +44,7 @@ export type LocalInputProps = {
 };
 export type InputProps = BoxProps & RNTextInputProps & LocalInputProps;
 
-const defaultProps = { placeholderTextColor: 'gray300', size: 'default', variant: 'bordered' };
+const defaultProps = { placeholderTextColor: 'gray300', size: 'default', variant: 'bordered', _focus: true };
 
 const useProps = createHook<InputProps>(
   (props) => {
@@ -65,7 +65,17 @@ const useProps = createHook<InputProps>(
 export const Input = createComponent<InputProps>(
   (_props) => {
     const props = { ..._props, ..._props.inputProps };
-    const { colorMode, iconAfter, iconAfterProps, iconBefore, iconBeforeProps, label, labelProps, size } = props;
+    const {
+      colorMode,
+      disabled,
+      iconAfter,
+      iconAfterProps,
+      iconBefore,
+      iconBeforeProps,
+      label,
+      labelProps,
+      size,
+    } = props;
     const defaultFontSize = props.fontSize || styles.SIZES[size];
 
     /////////////////////////////////////////////////////////////////////
