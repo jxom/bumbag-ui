@@ -50,7 +50,7 @@ module.exports = withPlugins([withTM], {
     if (prod) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        'react-native$': 'react-native-web',
+        'react-native$': path.resolve(__dirname, './node_modules/react-native-web'),
       };
       config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
     }
