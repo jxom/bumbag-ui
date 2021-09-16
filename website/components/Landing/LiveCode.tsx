@@ -64,7 +64,7 @@ LiveCode.Editor = (props) => {
     <bumbag.Box position="relative" height="100%">
       <bumbag.Box
         color="primary200"
-        zIndex="1"
+        zIndex={1}
         fontSize="100"
         fontWeight="500"
         textTransform="uppercase"
