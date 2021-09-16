@@ -47,11 +47,19 @@ module.exports = withPlugins([withTM], {
       };
     }
 
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@emotion/native': path.resolve(__dirname, './node_modules/@emotion/native'),
+      '@emotion/css': path.resolve(__dirname, './node_modules/@emotion/css'),
+      '@emotion/react': path.resolve(__dirname, './node_modules/@emotion/react'),
+      react: path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+      'react-native$': path.resolve(__dirname, './node_modules/react-native-web'),
+      'react-native-web': path.resolve(__dirname, './node_modules/react-native-web/'),
+    };
+    config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
+
     if (prod) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'react-native$': path.resolve(__dirname, './node_modules/react-native-web'),
-      };
       config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
     }
     if (dev) {
@@ -61,13 +69,6 @@ module.exports = withPlugins([withTM], {
 
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@emotion/native': path.resolve(__dirname, './node_modules/@emotion/native'),
-        '@emotion/css': path.resolve(__dirname, './node_modules/@emotion/css'),
-        '@emotion/react': path.resolve(__dirname, './node_modules/@emotion/react'),
-        react: path.resolve(__dirname, './node_modules/react'),
-        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-        'react-native$': path.resolve(__dirname, './node_modules/react-native-web'),
-        'react-native-web': path.resolve(__dirname, './node_modules/react-native-web/'),
         ...packages,
       };
       config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
