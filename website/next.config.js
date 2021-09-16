@@ -50,6 +50,7 @@ module.exports = withPlugins([withTM], {
       react: path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
       'react-native$': path.resolve(__dirname, './node_modules/react-native-web'),
+      'react-native-web': path.resolve(__dirname, './node_modules/react-native-web'),
       ...packages,
     };
     config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];
