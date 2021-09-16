@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   ...(process.env.NODE_ENV === 'production'
     ? {
-        components: './node_modules/bumbag/es/index.js',
+        components: '../packages/bumbag/es/index.js',
         baseUrl: '/playroom/',
       }
     : {}),

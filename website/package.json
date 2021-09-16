@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "setup": "yarn --cwd ../ && yarn --cwd ../ build",
     "dev": "next dev",
     "build": "yarn generate-mdx-manifest && next build && next export && yarn playroom:build",
     "postbuild": "next-sitemap",
