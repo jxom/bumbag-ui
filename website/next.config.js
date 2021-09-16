@@ -66,7 +66,8 @@ module.exports = withPlugins([withTM], {
         '@emotion/react': path.resolve(__dirname, './node_modules/@emotion/react'),
         react: path.resolve(__dirname, './node_modules/react'),
         'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-        'react-native$': 'react-native-web',
+        'react-native$': path.resolve(__dirname, './node_modules/react-native-web'),
+        'react-native-web': path.resolve(__dirname, './node_modules/react-native-web/'),
         ...packages,
       };
       config.resolve.extensions = ['.web.js', '.web.ts', '.web.tsx', ...config.resolve.extensions];

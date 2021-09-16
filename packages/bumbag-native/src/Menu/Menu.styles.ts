@@ -1,9 +1,9 @@
-import { Platform } from 'react-native';
+import { Platform, FlatList } from 'react-native';
 import { Box, BoxTouchable } from '../Box';
 import { Text } from '../Text';
 import { styled } from '../styled';
 import { getFontStyles } from '../utils/getFontStyles';
-import { borderRadius, fontWeight, palette, space, theme } from '../utils/theme';
+import { borderRadius, palette, space, theme } from '../utils/theme';
 import { MenuItem as _MenuItem } from './MenuItem';
 
 export const Menu = styled(Box)`
@@ -12,6 +12,14 @@ export const Menu = styled(Box)`
   overflow: hidden;
 
   ${theme('native.Menu', 'styles.base')};
+` as any;
+
+export const MenuOptionList = styled(FlatList)`
+  background-color: ${palette('white')};
+  border-radius: ${borderRadius('default')};
+  overflow: hidden;
+
+  ${theme('native.Menu.OptionList', 'styles.base')};
 ` as any;
 
 export const MenuOptionGroup = styled(Box)`

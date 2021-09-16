@@ -170,6 +170,46 @@ export default function App() {
           </Menu>
         </Preview>
       </PreviewSection>
+      <PreviewSection title="Option list (radio)">
+        <Preview>
+          <Menu.OptionList
+            defaultValue="asc"
+            type="radio"
+            options={[
+              {
+                label: 'Ascending',
+                value: 'asc',
+              },
+              {
+                label: 'Descending',
+                value: 'desc',
+              },
+            ]}
+          />
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Option list (checkbox)">
+        <Preview>
+          <Menu.OptionList
+            defaultValue={['australia', 'india']}
+            type="checkbox"
+            options={[
+              {
+                label: 'Australia',
+                value: 'australia',
+              },
+              {
+                label: 'United Kingdom',
+                value: 'uk',
+              },
+              {
+                label: 'India',
+                value: 'india',
+              },
+            ]}
+          />
+        </Preview>
+      </PreviewSection>
     </Box>
   );
 }

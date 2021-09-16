@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ViewProps as RNViewProps } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { Box, BoxProps } from 'bumbag-native/Box';
-import { MenuProps, MenuOptionGroupProps, MenuOptionItemProps } from 'bumbag-native/Menu';
+import { MenuOptionListProps, MenuOptionItemProps } from 'bumbag-native/Menu';
 
 import * as styles from './Picker.styles';
 
@@ -15,8 +15,7 @@ export type LocalPickerProps = {
   onChange?: (value: string) => void;
   options: Array<{ key?: string; label: string; value: any; disabled?: boolean } & Partial<MenuOptionItemProps>>;
   value?: string;
-  menuProps?: Partial<MenuProps>;
-  menuOptionGroupProps?: Partial<MenuOptionGroupProps>;
+  listProps?: Partial<MenuOptionListProps>;
 };
 export type PickerProps = BoxProps & RNViewProps & LocalPickerProps;
 
@@ -31,39 +30,25 @@ const useProps = createHook<PickerProps>(
       options,
       overrides,
       value,
-      menuProps,
-      menuOptionGroupProps,
+      listProps,
     } = props;
     const boxProps = Box.useProps(props);
     return {
       ...boxProps,
       children: (
-        <styles.PickerMenu
+        <styles.PickerOptionList
+          alignCheck={alignCheck}
           disableLeftPadding={disableLeftPadding}
+          disabled={disabled}
           hasDividers={hasDividers}
+          onChange={onChange}
+          options={options}
+          optionComponent={styles.PickerMenuOptionItem}
           overrides={overrides}
-          {...menuProps}
-        >
-          <styles.PickerMenuOptionGroup
-            alignCheck={alignCheck}
-            onChange={onChange}
-            value={value}
-            overrides={overrides}
-            type="radio"
-            {...menuOptionGroupProps}
-          >
-            {options.map((option, index) => (
-              <styles.PickerMenuOptionItem
-                key={option.key || index}
-                disabled={option.disabled || disabled}
-                overrides={overrides}
-                {...option}
-              >
-                {option.label}
-              </styles.PickerMenuOptionItem>
-            ))}
-          </styles.PickerMenuOptionGroup>
-        </styles.PickerMenu>
+          type="radio"
+          value={value}
+          {...listProps}
+        />
       ),
     };
   },
