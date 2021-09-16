@@ -183,7 +183,7 @@ export default function LiveCode(props: Props) {
         <bumbag.Box position="relative">
           <bumbag.Box
             color="primary200"
-            zIndex="1"
+            zIndex={1}
             fontSize="100"
             fontWeight="500"
             textTransform="uppercase"

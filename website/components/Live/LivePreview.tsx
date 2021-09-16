@@ -134,7 +134,7 @@ function Iframe(props: any) {
         opacity={loaded ? '1' : '0'}
         transition="opacity 100ms"
         onLoad={handleIframeLoad}
-        width={iframeWidth}
+        width={iframeWidth as any}
       />
       <Box
         backgroundColor="white600"
@@ -146,7 +146,8 @@ function Iframe(props: any) {
         display="flex"
         alignX="center"
         width="16px"
-        padding="24px 4px"
+        paddingY="24px"
+        paddingX="4px"
         onMouseDown={() => setIsDragging(true)}
       >
         <Box backgroundColor="white900" height="100%" width="1px" />
