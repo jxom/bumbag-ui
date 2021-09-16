@@ -2007,6 +2007,7 @@ export type ThemeConfig = {
   Container?: ContainerThemeConfig;
   Dialog?: DialogThemeConfig;
   Disclosure?: DisclosureThemeConfig;
+  Divider?: DividerThemeConfig;
   Drawer?: DrawerThemeConfig;
   DropdownMenu?: DropdownMenuThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
