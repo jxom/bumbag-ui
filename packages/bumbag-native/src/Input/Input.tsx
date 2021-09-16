@@ -44,12 +44,19 @@ export type LocalInputProps = {
 };
 export type InputProps = BoxProps & RNTextInputProps & LocalInputProps;
 
-const defaultProps = { placeholderTextColor: 'gray300', size: 'default', variant: 'bordered', _focus: true };
+const defaultProps = { placeholderTextColor: 'gray300', size: 'default', variant: 'bordered' };
 
 const useProps = createHook<InputProps>(
   (props) => {
     const ref = React.useRef();
-    const boxProps = Box.useProps({ ...props, elementRef: mergeRefs(ref, props.elementRef) });
+    const boxProps = Box.useProps({
+      ...props,
+      elementRef: mergeRefs(ref, props.elementRef),
+      _focus: true,
+      _hover: true,
+      _active: true,
+      _hoveractive: true,
+    });
 
     const { theme } = useTheme();
 
