@@ -5,7 +5,7 @@
   "scripts": {
     "setup": "yarn --cwd ../ && yarn --cwd ../ build",
     "dev": "next dev",
-    "build": "yarn generate-mdx-manifest && next build && next export && yarn playroom:build",
+    "build": "yarn setup && yarn generate-mdx-manifest && next build && next export && yarn playroom:build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
