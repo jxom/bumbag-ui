@@ -38,7 +38,7 @@ export function getColorFromCSSVariable(selector, fallback) {
 }
 
 export function addColorModeRootElementClassName(nextMode: string, prevMode?: string) {
-  const rootElement = window?.document?.getElementsByTagName('html')?.[0] ?? window?.document?.body;
+  const rootElement = window?.document?.getElementsByTagName?.('html')?.[0] ?? window?.document?.body;
   if (rootElement) {
     if (prevMode) {
       rootElement.classList.remove(`${rootElementClassPrefix}-${prevMode}`);
