@@ -4,7 +4,7 @@ import * as React from 'react';
 const noflash = `(function() { try {
   var mode = localStorage.getItem('bb.mode');
   if (!mode) return
-  document.body.classList.add('bb-mode-' + mode);
+  document.getElementsByTagName('html')[0].classList.add('bb-mode-' + mode);
 } catch (e) {} })();`;
 
 export function InitializeColorMode() {

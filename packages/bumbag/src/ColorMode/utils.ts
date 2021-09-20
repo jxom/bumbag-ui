@@ -1,6 +1,6 @@
 import { omit } from '../utils/omit';
 
-const bodyClassPrefix = 'bb-mode';
+const rootElementClassPrefix = 'bb-mode';
 const cssVariablePrefix = '--bb';
 const palettePrefix = `${cssVariablePrefix}-palette`;
 
@@ -23,7 +23,7 @@ export function getColorModesCSSVariables(theme) {
   cssVariables = Object.entries(theme.palette.modes || {}).reduce((cssVariables, [modeKey, value]) => {
     return {
       ...cssVariables,
-      [`&.${bodyClassPrefix}-${modeKey}`]: mapCSSVariables(value),
+      [`&.${rootElementClassPrefix}-${modeKey}`]: mapCSSVariables(value),
     };
   }, cssVariables);
   return {
@@ -37,12 +37,13 @@ export function getColorFromCSSVariable(selector, fallback) {
   return `var(${palettePrefix}-${selector}, ${fallback})`;
 }
 
-export function addColorModeBodyClassName(nextMode: string, prevMode?: string) {
-  if (typeof window !== 'undefined' && window.document && window.document.body) {
+export function addColorModeRootElementClassName(nextMode: string, prevMode?: string) {
+  const rootElement = window?.document?.getElementsByTagName('html')?.[0] ?? window?.document?.body;
+  if (rootElement) {
     if (prevMode) {
-      document.body.classList.remove(`${bodyClassPrefix}-${prevMode}`);
+      rootElement.classList.remove(`${rootElementClassPrefix}-${prevMode}`);
     }
-    document.body.classList.add(`${bodyClassPrefix}-${nextMode}`);
+    rootElement.classList.add(`${rootElementClassPrefix}-${nextMode}`);
   }
 }
 
