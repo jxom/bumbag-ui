@@ -3,9 +3,9 @@ import ConditionalWrap from 'conditional-wrap';
 
 import { useLocalStorage } from '../utils/useLocalStorage';
 import { useTheme } from '../utils/useTheme';
-import { addColorModeBodyClassName, getDefaultColorMode } from './utils';
+import { addColorModeRootElementClassName, getDefaultColorMode } from './utils';
 
-export const ColorModeContext = React.createContext<any>({ setColorMode: () => {}, colorMode: 'default' });
+export const ColorModeContext = React.createContext<any>({ setColorMode: () => { }, colorMode: 'default' });
 
 type Props = {
   children: React.ReactNode;
@@ -34,7 +34,7 @@ export function ColorModeProvider(props: Props) {
   ////////////////////////////////////
 
   React.useEffect(() => {
-    addColorModeBodyClassName(defaultMode);
+    addColorModeRootElementClassName(defaultMode);
     localStorage.set('mode', defaultMode);
   }, [defaultMode]); // eslint-disable-line
 
@@ -42,7 +42,7 @@ export function ColorModeProvider(props: Props) {
 
   const setColorMode = React.useCallback(
     (colorMode) => {
-      addColorModeBodyClassName(colorMode, mode);
+      addColorModeRootElementClassName(colorMode, mode);
       localStorage.set('mode', colorMode);
       setMode(colorMode);
     },
