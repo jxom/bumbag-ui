@@ -179,6 +179,11 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it.only('should render correctly with a zIndex CSS prop', () => {
+    const { container } = render(<Box zIndex={1} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly for an altitude', () => {
     const { container } = render(<Box altitude="400" />);
     expect(container.firstChild).toMatchSnapshot();

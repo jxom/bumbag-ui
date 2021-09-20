@@ -203,7 +203,7 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
           }
         `;
       }
-      if (typeof newValue === 'string') {
+      if (typeof newValue === 'string' || typeof newValue === 'number') {
         newValue = { default: value };
       }
       if (attribute.includes('_')) {
