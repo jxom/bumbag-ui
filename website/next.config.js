@@ -9,6 +9,7 @@ function getPackages({ dev = true } = {}) {
     'bumbag-addon-markdown': path.resolve(__dirname, `../packages/bumbag-addon-markdown${suffixPath}`),
     'bumbag-addon-highlighted-code': path.resolve(__dirname, `../packages/bumbag-addon-highlighted-code${suffixPath}`),
     '@bumbag-native/picker': path.resolve(__dirname, `../packages/bumbag-native-picker${suffixPath}`),
+    '@bumbag-native/haptic': path.resolve(__dirname, `../packages/bumbag-native-haptic${suffixPath}`),
   };
 }
 
