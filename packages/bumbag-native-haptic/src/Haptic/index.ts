@@ -1,7 +1,12 @@
-import { Haptic as _Haptic } from './Haptic';
-import { trigger } from './utils';
+import { Haptic as _Haptic, HapticNotification, HapticSelection, HapticRoot } from './Haptic';
+import { trigger, triggerImpact, triggerSelection, triggerNotification } from './utils';
 
 export * from './Haptic';
 export * from './utils';
 
-export const Haptic = Object.assign(_Haptic, { trigger });
+export const Haptic = Object.assign(_Haptic, {
+  Root: Object.assign(HapticRoot, { trigger }),
+  Notification: Object.assign(HapticNotification, { trigger: triggerNotification }),
+  Selection: Object.assign(HapticSelection, { trigger: triggerSelection }),
+  trigger: triggerImpact,
+});

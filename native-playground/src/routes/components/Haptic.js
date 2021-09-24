@@ -24,33 +24,33 @@ export default function App() {
       </PreviewSection>
       <PreviewSection title="Different behaviours">
         <Preview>
-          <Haptic type="selection">
-            <Button onPress={() => console.log('test')}>selection</Button>
+          <Haptic type="light">
+            <Button>Light feedback</Button>
           </Haptic>
-          <Haptic type="impactLight">
-            <Button onPress={() => console.log('test')}>impactLight</Button>
+          <Haptic type="medium">
+            <Button>Medium feedback</Button>
           </Haptic>
-          <Haptic type="impactMedium">
-            <Button>impactMedium</Button>
-          </Haptic>
-          <Haptic type="impactHeavy">
-            <Button>impactHeavy</Button>
-          </Haptic>
-          <Haptic type="rigid">
-            <Button>rigid</Button>
+          <Haptic type="heavy">
+            <Button>Heavy feedback</Button>
           </Haptic>
           <Haptic type="soft">
-            <Button>soft</Button>
+            <Button>Soft feedback</Button>
           </Haptic>
-          <Haptic type="notificationSuccess">
-            <Button>notificationSuccess</Button>
+          <Haptic type="rigid">
+            <Button>Rigid feedback</Button>
           </Haptic>
-          <Haptic type="notificationWarning">
-            <Button>notificationWarning</Button>
-          </Haptic>
-          <Haptic type="notificationError">
-            <Button>notificationError</Button>
-          </Haptic>
+          <Haptic.Notification type="success">
+            <Button>Success feedback</Button>
+          </Haptic.Notification>
+          <Haptic.Notification type="warning">
+            <Button>Warning feedback</Button>
+          </Haptic.Notification>
+          <Haptic.Notification type="error">
+            <Button>Error feedback</Button>
+          </Haptic.Notification>
+          <Haptic.Selection>
+            <Button>Select</Button>
+          </Haptic.Selection>
         </Preview>
       </PreviewSection>
       <PreviewSection title="Multiple children">
