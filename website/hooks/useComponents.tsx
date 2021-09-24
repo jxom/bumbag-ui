@@ -4,6 +4,7 @@ import * as bumbagNative from 'bumbag-native';
 import { HighlightedCode } from 'bumbag-addon-highlighted-code';
 import { Markdown } from 'bumbag-addon-markdown';
 import { Picker } from '@bumbag-native/picker';
+import { Haptic } from '@bumbag-native/haptic';
 
 export default function useComponents({ platform }): any {
   const components = React.useMemo(
@@ -14,6 +15,7 @@ export default function useComponents({ platform }): any {
       HighlightedCode,
       Markdown,
       Picker,
+      Haptic,
     }),
     [platform]
   );

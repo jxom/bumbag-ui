@@ -1,0 +1,202 @@
+---
+title: Haptic
+path: /native/utilities/haptic
+---
+
+# Haptic
+
+## Install
+
+> This component requires you to install `@bumbag-native/haptic` as a separate dependency.
+
+## Import
+
+```js
+import { Haptic } from "@bumbag-native/haptic";
+```
+
+## Usage
+
+The `Haptic` component is a headless component that can be used to trigger haptic feedback. Underneath the hood, it clones the child element & attaches an `onPress` method to invoke the haptic feedback.
+
+By default, `Haptic` triggers a 'light' haptic feedback, however, you can control this with the [`type` prop](#types).
+
+```jsx-live
+<Haptic>
+  <Button onPress={() => console.log('pressed button with haptic feedback!')}>
+    Continue
+  </Button>
+</Haptic>
+```
+
+If you provide more than one child element, the haptic behavior will be applied to all the child elements.
+
+```jsx-live
+<Haptic>
+  <Button onPress={() => console.log('pressed button with haptic feedback!')}>
+    Continue
+  </Button>
+  <Button onPress={() => console.log('pressed button with haptic feedback!')}>
+    Continue again
+  </Button>
+  <Button onPress={() => console.log('pressed button with haptic feedback!')}>
+    Continue again again
+  </Button>
+</Haptic>
+```
+
+You can also imperatively trigger haptic feedback by calling the `trigger` method.
+
+```jsx
+Haptic.trigger();
+
+// You can optionally pass a type & options
+Haptic.trigger('light', { enableVibrateFallback: true });
+```
+
+- [See more on the `type` argument](#types).
+- [See more on the `options` argument](#enableVibrateFallback).
+
+## Types
+
+By default, the `Haptic` component will trigger a 'light' haptic feedback. You can control this with the `type` prop.
+
+```jsx-live
+<Haptic type="light">
+  <Button>Light feedback</Button>
+</Haptic>
+<Haptic type="medium">
+  <Button>Medium feedback</Button>
+</Haptic>
+<Haptic type="heavy">
+  <Button>Heavy feedback</Button>
+</Haptic>
+<Haptic type="soft">
+  <Button>Soft feedback</Button>
+</Haptic>
+<Haptic type="rigid">
+  <Button>Rigid feedback</Button>
+</Haptic>
+```
+
+## Notification feedback
+
+The `Haptic.Notification` component proveides a way to trigger haptic feedback for notifications.
+
+```jsx-live
+<Haptic.Notification type="success">
+  <Button>Success feedback</Button>
+</Haptic.Notification>
+<Haptic.Notification type="warning">
+  <Button>Warning feedback</Button>
+</Haptic.Notification>
+<Haptic.Notification type="error">
+  <Button>Error feedback</Button>
+</Haptic.Notification>
+```
+
+## Selection feedback
+
+The `Haptic.Selection` component proveides a way to trigger haptic feedback for selections.
+
+```jsx-live
+<Haptic.Selection>
+  <Button>Select</Button>
+</Haptic.Selection>
+```
+
+## Vibrate fallback (iOS only)
+
+When the `enableVibrateFallback` prop is enabled, the `Haptic` component will fallback to using vibration to trigger haptic feedback if haptic feedback is not available.
+
+```jsx-live
+<Haptic enableVibrateFallback>
+  <Button>Continue</Button>
+</Haptic>
+```
+
+## ignoreAndroidSystemSettings (Android only)
+
+When the `ignoreAndroidSystemSettings` prop is enabled, the `Haptic` component will ignore the Android system settings to trigger haptic feedback.
+
+```jsx-live
+<Haptic ignoreAndroidSystemSettings>
+  <Button>Continue</Button>
+</Haptic>
+```
+
+## Props
+
+### Haptic Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">&#34;medium&#34; | &#34;light&#34; | &#34;heavy&#34; | &#34;rigid&#34; | &#34;soft&#34;</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+### Haptic.Notification Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">&#34;success&#34; | &#34;warning&#34; | &#34;error&#34;</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+### Haptic.Selection Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">children</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<...>)>
+  | ReactNodeArray
+  | ReactPortal`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />

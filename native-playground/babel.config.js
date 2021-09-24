@@ -9,6 +9,7 @@ module.exports = function (api) {
           alias: {
             bumbag: '../packages/bumbag/src',
             'bumbag-native': '../packages/bumbag-native/src',
+            '@bumbag-native/haptic': '../packages/bumbag-native-haptic/src',
             '@bumbag-native/picker': '../packages/bumbag-native-picker/src',
             '@bumbag-native/toast': '../packages/bumbag-native-toast/src',
             '@bumbag-native/bottom-sheet': '../packages/bumbag-native-bottom-sheet/src',

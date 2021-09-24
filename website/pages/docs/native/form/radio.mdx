@@ -152,19 +152,17 @@ Disables the radio
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: "default" | ... 6 more ... | ({
-    ...
-  } & string);
-  ... 589 more ...;
-  useOriginalFill?: boolean...`}
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  color?: "default" | "primary" | "secondary" | "success" | "danger" | "warning" | (string & {
+    ) | ({
+      [key: string]: Flexible<"default" | "primary" | "secondary" | "success" | "danger" | "warning", strin
+    } & string);
+    ... 459 more ...;
+    useOriginalFill?: boolean
+  }`}
 </Code>
 
 * Sets the props of the icon
@@ -175,19 +173,16 @@ Disables the radio
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  color?: Flexible<Flexible<"default" | "primary" | "secondary" | "success" | "danger" | "warning", string>, string | number | {
+    [key: string]: Flexible<"default" | ... 4 more ... | "warning", string>
   }>;
-  ... 584 more ...;
-  hoveractive?: ...`}
+  ... 454 more ...;
+  hoveractive?: boolean;
+}`}
 </Code>
 
 * Sets the props of the icon wrapper
@@ -204,19 +199,15 @@ Radio label
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  color?: Flexible<Flexible<"default" | "primary" | "secondary" | "success" | "danger" | "warning", string>, string | number | {
+    [key: string]: Flexible<"default" | ... 4 more ... | "warning", string>
   }>;
-  ... 599 more ...;
-  dataDetectorTy...`}
+  ... 469 more ...;
+  dataDetectorType?: "none" | ... 3 more ... ...`}
 </Code>
 
 * Sets the props of the label

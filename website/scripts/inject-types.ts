@@ -372,6 +372,7 @@ extractTypes({
     path.join(__dirname, '../../packages/bumbag-addon-markdown'),
     path.join(__dirname, '../../packages/bumbag-native-picker'),
     path.join(__dirname, '../../packages/bumbag-native-toast'),
+    path.join(__dirname, '../../packages/bumbag-native-haptic'),
     // path.join(__dirname, '../../packages/bumbag-native-bottom-sheet'),
   ],
   docsPath: path.join(__dirname, '../pages/'),

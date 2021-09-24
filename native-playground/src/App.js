@@ -12,6 +12,7 @@ import ButtonPage from './routes/components/Button';
 import CheckboxPage from './routes/components/Checkbox';
 import CheckboxGroupPage from './routes/components/CheckboxGroup';
 import FieldWrapperPage from './routes/components/FieldWrapper';
+import HapticPage from './routes/components/Haptic';
 import HeadingPage from './routes/components/Heading';
 import HidePage from './routes/components/Hide';
 import IconPage from './routes/components/Icon';
@@ -110,6 +111,7 @@ export default function App() {
                   <Route exact path="/components/checkbox" component={CheckboxPage} />
                   <Route exact path="/components/checkbox-group" component={CheckboxGroupPage} />
                   <Route exact path="/components/field-wrapper" component={FieldWrapperPage} />
+                  <Route exact path="/components/haptic" component={HapticPage} />
                   <Route exact path="/components/heading" component={HeadingPage} />
                   <Route exact path="/components/hide" component={HidePage} />
                   <Route exact path="/components/icon" component={IconPage} />

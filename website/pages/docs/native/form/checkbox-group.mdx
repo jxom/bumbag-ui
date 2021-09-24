@@ -331,7 +331,7 @@ Disables the checkbox group
   | "_visited"
   | "_disabled"
   | "_groupHover"
-  | ... 511 more ...
+  | ... 381 more ...
   | "zIndex"> & ... 4 more ... & { ...; })[]`}
 </Code>
 
@@ -377,19 +377,16 @@ Function to invoke when checkbox group has changed
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  color?: Flexible<Flexible<"default" | "primary" | "secondary" | "success" | "danger" | "warning", string>, string | number | {
+    [key: string]: Flexible<"default" | ... 4 more ... | "warning", string>
   }>;
-  ... 588 more ...;
-  verticalBelow?...`}
+  ... 458 more ...;
+  verticalBelow?: string;
+}`}
 </Code>
 
 Overrides for the CheckboxGroup `Set` component.
@@ -919,19 +916,16 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  color?: Flexible<Flexible<"default" | "primary" | "secondary" | "success" | "danger" | "warning", string>, string | number | {
+    [key: string]: Flexible<"default" | ... 4 more ... | "warning", string>
   }>;
-  ... 594 more ...;
-  setProps?: Par...`}
+  ... 464 more ...;
+  setProps?: Partial<...>;
+}`}
 </Code>
 
 Additional props for the Checkbox component
@@ -973,7 +967,7 @@ Disables the checkbox group
   | "_visited"
   | "_disabled"
   | "_groupHover"
-  | ... 511 more ...
+  | ... 381 more ...
   | "zIndex"> & ... 4 more ... & { ...; })[]`}
 </Code>
 
@@ -1019,19 +1013,16 @@ Function to invoke when checkbox group has changed
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; color?: Flexible<Flexible<...>, string | ... 1 more ... | {
-    ...
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  color?: Flexible<Flexible<"default" | "primary" | "secondary" | "success" | "danger" | "warning", string>, string | number | {
+    [key: string]: Flexible<"default" | ... 4 more ... | "warning", string>
   }>;
-  ... 588 more ...;
-  verticalBelow?...`}
+  ... 458 more ...;
+  verticalBelow?: string;
+}`}
 </Code>
 
 Overrides for the CheckboxGroup `Set` component.

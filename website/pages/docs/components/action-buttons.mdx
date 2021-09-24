@@ -120,15 +120,15 @@ You can pass custom button props to action buttons using `submitProps` or `cance
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 807 more ...;
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  ... 673 more ...;
   ignoreGrayOverride?: boolean;
 }`}
 </Code>
@@ -192,15 +192,15 @@ Size of the buttons
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 807 more ...;
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  ... 673 more ...;
   ignoreGrayOverride?: boolean;
 }`}
 </Code>
@@ -331,7 +331,7 @@ Indicates the breakpoint at which the set should become vertical.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>

@@ -221,17 +221,12 @@ Icon that appears on the right side of the button.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   animated?: boolean;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 588 more ...;
-  useOriginalFill?: boolean;
-}`}
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  children?: string | number | boolean | {
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ReactNodeArray | ReactPortal | ((...`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -253,17 +248,12 @@ Icon that appears on the left side of the button.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   animated?: boolean;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 588 more ...;
-  useOriginalFill?: boolean;
-}`}
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  children?: string | number | boolean | {
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ReactNodeArray | ReactPortal | ((...`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -321,7 +311,7 @@ Makes the button not interactable.
   | "_visited"
   | "_disabled"
   | "_groupHover"
-  | ... 511 more ...
+  | ... 381 more ...
   | "zIndex"> & ... 4 more ... & LocalSpinnerProps`}
 </Code>
 
