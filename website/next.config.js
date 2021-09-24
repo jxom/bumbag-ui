@@ -18,6 +18,7 @@ const withTM = require('next-transpile-modules')([
   'react-native-svg',
   '@emotion/native',
   'react-native-web-hooks',
+  'react-native-haptic-feedback',
 ]);
 
 module.exports = withPlugins([withTM], {
