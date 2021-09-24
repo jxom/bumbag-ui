@@ -326,15 +326,15 @@ Props to spread onto the action buttons.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 807 more ...;
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  ... 673 more ...;
   ignoreGrayOverride?: boolean;
 }`}
 </Code>
@@ -420,7 +420,7 @@ Props to spread on the icon.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -505,7 +505,7 @@ Props to spread on the icon.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -595,7 +595,7 @@ Props to spread on the icon.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -685,7 +685,7 @@ Props to spread on the icon.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -775,7 +775,7 @@ Props to spread on the icon.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -802,17 +802,12 @@ Props to spread on the icon.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 787 more ...;
-  label?: string;
-}`}
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  children?: string | number | boolean | {
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal...`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -885,7 +880,7 @@ Props to spread on the icon.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -1136,7 +1131,7 @@ This option doesn't work if the dialog isn't modal.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -1241,15 +1236,15 @@ Props to spread onto the action buttons.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 807 more ...;
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  ... 673 more ...;
   ignoreGrayOverride?: boolean;
 }`}
 </Code>

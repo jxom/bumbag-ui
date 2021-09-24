@@ -1,45 +1,48 @@
 import * as React from 'react';
-import { createComponent, createElement, createHook } from 'bumbag/utils';
-import { BoxTouchable, BoxTouchableProps } from 'bumbag-native/Box';
+import { bindFns, createComponent, createHook } from 'bumbag/utils';
 
 import { trigger, HapticFeedbackTypes, HapticOptions } from './utils';
-import * as styles from './Haptic.styles';
 
 export type LocalHapticProps = {
-  options?: HapticOptions;
+  children: React.ReactNode;
+  enableVibrateFallback?: HapticOptions['enableVibrateFallback'];
+  ignoreAndroidSystemSettings?: HapticOptions['ignoreAndroidSystemSettings'];
+  onPress?: () => void;
   type?: HapticFeedbackTypes;
 };
-export type HapticProps = BoxTouchableProps & LocalHapticProps;
+export type HapticProps = LocalHapticProps;
 
 const useProps = createHook<HapticProps>(
   (props) => {
-    const { options, onPress, type } = props;
-    const boxProps = BoxTouchable.useProps(props);
+    const { enableVibrateFallback, ignoreAndroidSystemSettings, onPress, type } = props;
 
-    const handlePress = React.useCallback(
-      (e) => {
-        trigger(type, options);
+    const handlePress = React.useCallback(() => {
+      trigger(type, { enableVibrateFallback, ignoreAndroidSystemSettings });
 
-        if (onPress) {
-          onPress(e);
-        }
-      },
-      [onPress, options, type]
-    );
+      if (onPress) {
+        onPress();
+      }
+    }, [enableVibrateFallback, ignoreAndroidSystemSettings, onPress, type]);
 
-    return { ...boxProps, onPress: handlePress };
+    return { onPress: handlePress };
   },
-  { defaultProps: { options: {}, type: 'impactLight' }, themeKey: 'native.Haptic' }
+  { defaultProps: { type: 'impactLight' }, themeKey: 'native.Haptic' }
 );
 
 export const Haptic = createComponent<HapticProps>(
   (props) => {
-    const htmlProps = useProps(props);
-    return createElement({
-      children: props.children,
-      component: styles.Haptic,
-      htmlProps,
-    });
+    const hapticProps = useProps(props);
+
+    let children = props.children;
+    if (!Array.isArray(children)) {
+      children = [children];
+    }
+
+    return (children as any).map((child) =>
+      React.cloneElement(child, {
+        onPress: bindFns(child?.props?.onPress, hapticProps.onPress),
+      })
+    );
   },
   {
     attach: {

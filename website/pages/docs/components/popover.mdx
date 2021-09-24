@@ -358,15 +358,15 @@ Indicates if the popover should be rendered in a portal.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  top?: string | number | {
-    [key: string]: string
-  }; right?: string | number | {
-    [key: string]: string
-  }; bottom?: string | number | {
-    [key: string]: string
-  }; left?: string | number | {
-    [key: string]: string
-  }; ... 807 more ...;
+  top?: any;
+  right?: any;
+  bottom?: any;
+  left?: any;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  ... 673 more ...;
   ignoreGrayOverride?: boolean;
 }`}
 </Code>
@@ -565,7 +565,7 @@ ID that will serve as a base for all the items IDs.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -655,7 +655,7 @@ ID that will serve as a base for all the items IDs.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -745,7 +745,7 @@ ID that will serve as a base for all the items IDs.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -830,7 +830,7 @@ ID that will serve as a base for all the items IDs.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -920,7 +920,7 @@ ID that will serve as a base for all the items IDs.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -1040,7 +1040,7 @@ Actual `placement`.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -1178,7 +1178,7 @@ by default.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -1302,7 +1302,7 @@ Toggles the `visible` state
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 95 more ...;
+  ... 96 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>

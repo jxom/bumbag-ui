@@ -17,15 +17,20 @@ import { Haptic } from "@bumbag-native/haptic";
 
 ## Usage
 
+The `Haptic` component is a headless component that can be used to trigger haptic feedback. Underneath the hood, it clones the child element & attaches an `onPress` method to invoke the haptic feedback.
+
 ```jsx-live
 <Haptic>
-  <Button>
+  <Button onPress={() => console.log('pressed button with haptic feedback!')}>
     Continue
   </Button>
 </Haptic>
 ```
 
+##
+
 ## Props
 
 ### Haptic Props
-  
+
+<!-- Automatically generated -->
