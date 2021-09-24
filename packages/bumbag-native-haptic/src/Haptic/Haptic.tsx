@@ -29,7 +29,7 @@ const useProps = createHook<HapticRootProps>(
 
     return { onPress: handlePress };
   },
-  { defaultProps: { type: 'impactLight' }, themeKey: 'native.Haptic.Root' }
+  { defaultProps: { type: 'selection' }, themeKey: 'native.Haptic.Root' }
 );
 
 export const HapticRoot = createComponent<HapticRootProps>(
@@ -60,17 +60,15 @@ export const HapticRoot = createComponent<HapticRootProps>(
 
 export type LocalHapticProps = {
   children: HapticRootProps['children'];
-  type?: 'light' | 'medium' | 'heavy' | 'rigid' | 'soft';
 };
 export type HapticProps = LocalHapticProps;
 
 const useHapticProps = createHook<HapticProps, HapticRootProps>(
   (props) => {
-    const { type } = props;
-    const hapticProps = useProps({ ...props, type: getImpactType(type) });
+    const hapticProps = useProps({ ...props, type: 'selection' });
     return hapticProps;
   },
-  { defaultProps: { type: 'light' }, themeKey: 'native.Haptic' }
+  { themeKey: 'native.Haptic' }
 );
 
 export const Haptic = createComponent<HapticProps>(
@@ -84,6 +82,37 @@ export const Haptic = createComponent<HapticProps>(
       displayName: 'native.Haptic',
     },
     themeKey: 'native.Haptic',
+  }
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+export type LocalHapticImpactProps = {
+  children: HapticRootProps['children'];
+  type?: 'light' | 'medium' | 'heavy' | 'rigid' | 'soft';
+};
+export type HapticImpactProps = LocalHapticImpactProps;
+
+const useHapticImpactProps = createHook<HapticImpactProps, HapticRootProps>(
+  (props) => {
+    const { type } = props;
+    const hapticProps = useProps({ ...props, type: getImpactType(type) });
+    return hapticProps;
+  },
+  { defaultProps: { type: 'light' }, themeKey: 'native.Haptic.Impact' }
+);
+
+export const HapticImpact = createComponent<HapticImpactProps>(
+  (props) => {
+    const hapticImpactProps = useHapticImpactProps(props);
+    return <HapticRoot {...hapticImpactProps}>{props.children}</HapticRoot>;
+  },
+  {
+    attach: {
+      useProps: useHapticImpactProps,
+      displayName: 'native.Haptic.Impact',
+    },
+    themeKey: 'native.Haptic.Impact',
   }
 );
 
@@ -115,34 +144,5 @@ export const HapticNotification = createComponent<HapticNotificationProps>(
       displayName: 'native.Haptic.Notification',
     },
     themeKey: 'native.Haptic.Notification',
-  }
-);
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export type LocalHapticSelectionProps = {
-  children: HapticRootProps['children'];
-};
-export type HapticSelectionProps = LocalHapticSelectionProps;
-
-const useHapticSelectionProps = createHook<HapticSelectionProps, HapticRootProps>(
-  (props) => {
-    const hapticProps = useProps({ ...props, type: 'selection' });
-    return hapticProps;
-  },
-  { themeKey: 'native.Haptic.Selection' }
-);
-
-export const HapticSelection = createComponent<HapticSelectionProps>(
-  (props) => {
-    const hapticProps = useHapticSelectionProps(props);
-    return <HapticRoot {...hapticProps}>{props.children}</HapticRoot>;
-  },
-  {
-    attach: {
-      useProps: useHapticSelectionProps,
-      displayName: 'native.Haptic.Selection',
-    },
-    themeKey: 'native.Haptic.Selection',
   }
 );

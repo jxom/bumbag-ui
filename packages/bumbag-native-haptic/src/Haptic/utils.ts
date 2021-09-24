@@ -1,5 +1,5 @@
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
-import { HapticProps, HapticNotificationProps } from './Haptic';
+import { HapticProps, HapticImpactProps, HapticNotificationProps } from './Haptic';
 import { HapticFeedbackTypes, HapticOptions } from './types';
 
 export type { HapticFeedbackTypes, HapticOptions };
@@ -10,7 +10,7 @@ export function trigger(type: HapticFeedbackTypes, options: HapticOptions) {
   ReactNativeHapticFeedback.trigger(type, options);
 }
 
-export function triggerImpact(type: HapticProps['type'], options: HapticOptions) {
+export function triggerImpact(type: HapticImpactProps['type'], options: HapticOptions) {
   trigger(getImpactType(type), options);
 }
 
@@ -24,7 +24,7 @@ export function triggerSelection(options: HapticOptions) {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-export function getImpactType(type: HapticProps['type']) {
+export function getImpactType(type: HapticImpactProps['type']) {
   if (type === 'light') {
     return 'impactLight';
   } else if (type === 'medium') {

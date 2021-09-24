@@ -51,33 +51,13 @@ You can also imperatively trigger haptic feedback by calling the `trigger` metho
 Haptic.trigger();
 
 // You can optionally pass a type & options
-Haptic.trigger('light', { enableVibrateFallback: true });
+Haptic.trigger({ enableVibrateFallback: true });
+Haptic.Impact.trigger('light', { enableVibrateFallback: true });
+Haptic.Notification.trigger('success', { enableVibrateFallback: true });
 ```
 
 - [See more on the `type` argument](#types).
 - [See more on the `options` argument](#enableVibrateFallback).
-
-## Types
-
-By default, the `Haptic` component will trigger a 'light' haptic feedback. You can control this with the `type` prop.
-
-```jsx-live
-<Haptic type="light">
-  <Button>Light feedback</Button>
-</Haptic>
-<Haptic type="medium">
-  <Button>Medium feedback</Button>
-</Haptic>
-<Haptic type="heavy">
-  <Button>Heavy feedback</Button>
-</Haptic>
-<Haptic type="soft">
-  <Button>Soft feedback</Button>
-</Haptic>
-<Haptic type="rigid">
-  <Button>Rigid feedback</Button>
-</Haptic>
-```
 
 ## Notification feedback
 
@@ -95,14 +75,26 @@ The `Haptic.Notification` component proveides a way to trigger haptic feedback f
 </Haptic.Notification>
 ```
 
-## Selection feedback
+## Impact feedback
 
 The `Haptic.Selection` component proveides a way to trigger haptic feedback for selections.
 
 ```jsx-live
-<Haptic.Selection>
-  <Button>Select</Button>
-</Haptic.Selection>
+<Haptic.Impact type="light">
+  <Button>Light feedback</Button>
+</Haptic.Impact>
+<Haptic.Impact type="medium">
+  <Button>Medium feedback</Button>
+</Haptic.Impact>
+<Haptic.Impact type="heavy">
+  <Button>Heavy feedback</Button>
+</Haptic.Impact>
+<Haptic.Impact type="soft">
+  <Button>Soft feedback</Button>
+</Haptic.Impact>
+<Haptic.Impact type="rigid">
+  <Button>Rigid feedback</Button>
+</Haptic.Impact>
 ```
 
 ## Vibrate fallback (iOS only)
