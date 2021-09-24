@@ -1,5 +1,6 @@
-import ReactNativeHapticFeedback, { HapticFeedbackTypes, HapticOptions } from 'react-native-haptic-feedback';
+import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 import { HapticProps, HapticNotificationProps } from './Haptic';
+import { HapticFeedbackTypes, HapticOptions } from './types';
 
 export type { HapticFeedbackTypes, HapticOptions };
 

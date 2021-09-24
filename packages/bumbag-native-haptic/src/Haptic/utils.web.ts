@@ -1,7 +1,7 @@
-import { HapticFeedbackTypes, HapticOptions } from 'react-native-haptic-feedback';
 import { HapticProps, HapticNotificationProps } from './Haptic';
+import { HapticFeedbackTypes, HapticOptions } from './types';
 
-export type { HapticFeedbackTypes };
+export type { HapticFeedbackTypes, HapticOptions };
 
 export function trigger(_type: HapticFeedbackTypes, _options: HapticOptions) {}
 export function triggerImpact(_type: HapticProps['type'], _options: HapticOptions) {}
