@@ -24,21 +24,21 @@ export default function App() {
       </PreviewSection>
       <PreviewSection title="Different behaviours">
         <Preview>
-          <Haptic type="light">
+          <Haptic.Impact type="light">
             <Button>Light feedback</Button>
-          </Haptic>
-          <Haptic type="medium">
+          </Haptic.Impact>
+          <Haptic.Impact type="medium">
             <Button>Medium feedback</Button>
-          </Haptic>
-          <Haptic type="heavy">
+          </Haptic.Impact>
+          <Haptic.Impact type="heavy">
             <Button>Heavy feedback</Button>
-          </Haptic>
-          <Haptic type="soft">
+          </Haptic.Impact>
+          <Haptic.Impact type="soft">
             <Button>Soft feedback</Button>
-          </Haptic>
-          <Haptic type="rigid">
+          </Haptic.Impact>
+          <Haptic.Impact type="rigid">
             <Button>Rigid feedback</Button>
-          </Haptic>
+          </Haptic.Impact>
           <Haptic.Notification type="success">
             <Button>Success feedback</Button>
           </Haptic.Notification>
@@ -48,9 +48,6 @@ export default function App() {
           <Haptic.Notification type="error">
             <Button>Error feedback</Button>
           </Haptic.Notification>
-          <Haptic.Selection>
-            <Button>Select</Button>
-          </Haptic.Selection>
         </Preview>
       </PreviewSection>
       <PreviewSection title="Multiple children">
@@ -59,6 +56,17 @@ export default function App() {
             <Button onPress={() => console.log('test')}>Click me</Button>
             <Button onPress={() => console.log('test')}>Click me</Button>
           </Haptic>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Built-ins">
+        <Preview>
+          <Haptic.Button palette="primary">Press me</Haptic.Button>
+          <Haptic.Touchable>
+            <Text>Press me</Text>
+          </Haptic.Touchable>
+          <Haptic.Pressable>
+            <Text>Press me</Text>
+          </Haptic.Pressable>
         </Preview>
       </PreviewSection>
     </Box>

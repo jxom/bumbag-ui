@@ -36,7 +36,6 @@ export function getImpactType(type: HapticImpactProps['type']) {
 }
 
 export function getNotificationType(type: HapticNotificationProps['type']) {
-  let typeOverride = 'impactLight';
   if (type === 'success') {
     return 'notificationSuccess';
   } else if (type === 'warning') {
