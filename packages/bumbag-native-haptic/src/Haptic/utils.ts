@@ -6,19 +6,20 @@ export type { HapticFeedbackTypes, HapticOptions };
 
 /////////////////////////////////////////////////////////////////////////////////
 
-export function trigger(type: HapticFeedbackTypes, options: HapticOptions) {
-  ReactNativeHapticFeedback.trigger(type, options);
+export function trigger(type: HapticFeedbackTypes, options?: HapticOptions) {
+  const { enableVibrateFallback = false, ignoreAndroidSystemSettings = false } = options || {};
+  ReactNativeHapticFeedback.trigger(type, { enableVibrateFallback, ignoreAndroidSystemSettings });
 }
 
-export function triggerImpact(type: HapticImpactProps['type'], options: HapticOptions) {
+export function triggerImpact(type: HapticImpactProps['type'], options?: HapticOptions) {
   trigger(getImpactType(type), options);
 }
 
-export function triggerNotification(type: HapticNotificationProps['type'], options: HapticOptions) {
+export function triggerNotification(type: HapticNotificationProps['type'], options?: HapticOptions) {
   trigger(getNotificationType(type), options);
 }
 
-export function triggerSelection(options: HapticOptions) {
+export function triggerSelection(options?: HapticOptions) {
   trigger('selection', options);
 }
 
