@@ -3,9 +3,9 @@
 <p align="center"><img src="./.github/sponsored-by.svg" width="100px"></img></p>
 
 <p align="center" style="display: flex; align-items: center; justify-content: center;">
-    <img src="./.github/coinjar.svg" height="100px"></img>
-    <img src="./.github/tyro-logo.png" height="80px"></img>
-    <span>Jerry Smith</span>
+    <a href="https://coinjar.com"><img src="./.github/coinjar.svg" height="100px"></img></a>
+    <a href="https://tyro.com"><img src="./.github/tyro-logo.png" height="80px"></img></a>
+    <a href="https://github.com/jerryix"><span>Jerry Smith</span></a>
 </p>
 
 <p align="center">
