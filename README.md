@@ -5,6 +5,7 @@
 <p align="center" style="display: flex; align-items: center; justify-content: center;">
     <img src="./.github/coinjar.svg" height="100px"></img>
     <img src="./.github/tyro-logo.png" height="80px"></img>
+    <span>Jerry Smith</span>
 </p>
 
 <p align="center">
