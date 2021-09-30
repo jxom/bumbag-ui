@@ -19,10 +19,8 @@ export function HapticProvider({
   const [enabled, setEnabled] = React.useState(enabledOverride || defaultEnabled || globalEnabled);
 
   React.useEffect(() => {
-    if (enabledOverride) {
-      globalEnabled = enabledOverride;
-      setEnabled(enabledOverride);
-    }
+    globalEnabled = enabledOverride;
+    setEnabled(enabledOverride);
   }, [enabledOverride]);
 
   return (
