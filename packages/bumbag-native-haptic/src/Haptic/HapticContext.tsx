@@ -14,7 +14,7 @@ export function HapticProvider({
   defaultEnabled?: boolean;
   children: React.ReactNode;
 }) {
-  const [enabled, setEnabled] = React.useState(defaultEnabled);
+  const [enabled, setEnabled] = React.useState(defaultEnabled || globalEnabled);
 
   return (
     <HapticContext.Provider
