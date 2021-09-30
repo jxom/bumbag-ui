@@ -117,6 +117,35 @@ When the `ignoreAndroidSystemSettings` prop is enabled, the `Haptic` component w
 </Haptic>
 ```
 
+## Toggling haptic feedback
+
+Your users may prefer to disable haptic feedback for a specific experience. You can toggle the haptic feedback using the `Haptic.useContext` hook.
+
+Note: You will need to wrap your application in a `<HapticProvider>` component.
+
+```jsx
+import { Haptic, HapticProvider } from '@bumbag-native/haptic';
+
+function Example() {
+  const { enabled, setEnabled } = Haptic.useContext();
+
+  return (
+    <Button onPress={() => setEnabled(!enabled)}>
+      Toggle
+    </Button>
+  )
+}
+
+function App() {
+  return (
+    // Note: The `defaultEnabled` prop is optional.
+    <HapticProvider defaultEnabled={false}>
+      <Example />
+    </HapticProvider>
+  )
+}
+```
+
 ## Props
 
 ### Haptic Props

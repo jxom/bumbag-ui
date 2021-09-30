@@ -1,4 +1,5 @@
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
+import { globalEnabled } from './HapticContext';
 import { HapticProps, HapticImpactProps, HapticNotificationProps } from './Haptic';
 import { HapticFeedbackTypes, HapticOptions } from './types';
 
@@ -8,7 +9,9 @@ export type { HapticFeedbackTypes, HapticOptions };
 
 export function trigger(type: HapticFeedbackTypes, options?: HapticOptions) {
   const { enableVibrateFallback = false, ignoreAndroidSystemSettings = false } = options || {};
-  ReactNativeHapticFeedback.trigger(type, { enableVibrateFallback, ignoreAndroidSystemSettings });
+  if (globalEnabled) {
+    ReactNativeHapticFeedback.trigger(type, { enableVibrateFallback, ignoreAndroidSystemSettings });
+  }
 }
 
 export function triggerImpact(type: HapticImpactProps['type'], options?: HapticOptions) {

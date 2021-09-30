@@ -1,11 +1,13 @@
 import { Haptic as _Haptic, HapticNotification, HapticImpact, HapticRoot } from './Haptic';
 import { HapticButton } from './HapticButton';
+import { HapticProvider, useHapticContext } from './HapticContext';
 import { HapticPressable } from './HapticPressable';
 import { HapticTouchable } from './HapticTouchable';
 import { trigger, triggerImpact, triggerSelection, triggerNotification } from './utils';
 
 export * from './Haptic';
 export * from './HapticButton';
+export * from './HapticContext';
 export * from './HapticPressable';
 export * from './HapticTouchable';
 export * from './utils';
@@ -19,4 +21,6 @@ export const Haptic = Object.assign(_Haptic, {
   Touchable: HapticTouchable,
   Pressable: HapticPressable,
   trigger: triggerSelection,
+  Provider: HapticProvider,
+  useContext: useHapticContext,
 });

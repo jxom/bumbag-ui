@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { bindFns, createComponent, createHook } from 'bumbag/utils';
 
+import { useHapticContext } from './HapticContext';
 import { trigger, getNotificationType, getImpactType, HapticFeedbackTypes, HapticOptions } from './utils';
 
 export type LocalHapticRootProps = {
@@ -19,13 +20,13 @@ const useProps = createHook<HapticRootProps>(
   (props) => {
     const { enableVibrateFallback, ignoreAndroidSystemSettings, onPress, type } = props;
 
-    const handlePress = React.useCallback(() => {
-      trigger(type, { enableVibrateFallback, ignoreAndroidSystemSettings });
+    const { enabled } = useHapticContext();
 
-      if (onPress) {
-        onPress();
+    const handlePress = React.useCallback(() => {
+      if (enabled) {
+        trigger(type, { enableVibrateFallback, ignoreAndroidSystemSettings });
       }
-    }, [enableVibrateFallback, ignoreAndroidSystemSettings, onPress, type]);
+    }, [enableVibrateFallback, enabled, ignoreAndroidSystemSettings, type]);
 
     return { onPress: handlePress };
   },

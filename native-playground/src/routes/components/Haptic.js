@@ -5,6 +5,8 @@ import { Preview } from '../../components/Preview';
 import { PreviewSection } from '../../components/PreviewSection';
 
 export default function App() {
+  const { enabled, setEnabled } = Haptic.useContext();
+  console.log('test', enabled);
   return (
     <Box>
       <Heading.H5 marginBottom="16px">Haptic</Heading.H5>
@@ -67,6 +69,12 @@ export default function App() {
           <Haptic.Pressable>
             <Text>Press me</Text>
           </Haptic.Pressable>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Toggle haptic">
+        <Preview>
+          <Text>Enabled: {`${enabled}`}</Text>
+          <Button onPress={() => setEnabled((enabled) => !enabled)}>Toggle</Button>
         </Preview>
       </PreviewSection>
     </Box>

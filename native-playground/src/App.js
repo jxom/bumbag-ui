@@ -4,6 +4,7 @@ import { NativeRouter, Link, Route } from 'react-router-native';
 import { Box, Button, Heading, Provider } from 'bumbag-native';
 import { ToastProvider, ToastManager } from '@bumbag-native/toast';
 import { BottomSheetModalProvider, BottomSheetModal } from '@bumbag-native/bottom-sheet';
+import { HapticProvider } from '@bumbag-native/haptic';
 
 import Home from './routes/Home';
 import BoxPage from './routes/components/Box';
@@ -98,43 +99,45 @@ export default function App() {
       <NativeRouter>
         <ToastProvider>
           <BottomSheetModalProvider>
-            <Box.Safe flex="1">
-              <Box.Scroll flex="1">
-                <Box padding="16px">
-                  <Link to="/" component={TouchableOpacity}>
-                    <Heading marginBottom="16px">Bumbag Native Playground</Heading>
-                  </Link>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/components/box" component={BoxPage} />
-                  <Route exact path="/components/button" component={ButtonPage} />
-                  <Route exact path="/components/bottom-sheet" component={BottomSheetPage} />
-                  <Route exact path="/components/checkbox" component={CheckboxPage} />
-                  <Route exact path="/components/checkbox-group" component={CheckboxGroupPage} />
-                  <Route exact path="/components/field-wrapper" component={FieldWrapperPage} />
-                  <Route exact path="/components/haptic" component={HapticPage} />
-                  <Route exact path="/components/heading" component={HeadingPage} />
-                  <Route exact path="/components/hide" component={HidePage} />
-                  <Route exact path="/components/icon" component={IconPage} />
-                  <Route exact path="/components/image" component={ImagePage} />
-                  <Route exact path="/components/input" component={InputPage} />
-                  <Route exact path="/components/list" component={ListPage} />
-                  <Route exact path="/components/menu" component={MenuPage} />
-                  <Route exact path="/components/picker" component={PickerPage} />
-                  <Route exact path="/components/radio" component={RadioPage} />
-                  <Route exact path="/components/set" component={SetPage} />
-                  <Route exact path="/components/show" component={ShowPage} />
-                  <Route exact path="/components/switch" component={SwitchPage} />
-                  <Route exact path="/components/switch-group" component={SwitchGroupPage} />
-                  <Route exact path="/components/text" component={TextPage} />
-                  <Route exact path="/components/toast" component={ToastPage} />
-                </Box>
-                {/* <Button onPress={() => modalRef.current.present()}>Show modal</Button> */}
-              </Box.Scroll>
-            </Box.Safe>
-            <BottomSheetModal ref={modalRef}>
-              <Text>test</Text>
-            </BottomSheetModal>
-            <ToastManager />
+            <HapticProvider>
+              <Box.Safe flex="1">
+                <Box.Scroll flex="1">
+                  <Box padding="16px">
+                    <Link to="/" component={TouchableOpacity}>
+                      <Heading marginBottom="16px">Bumbag Native Playground</Heading>
+                    </Link>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/components/box" component={BoxPage} />
+                    <Route exact path="/components/button" component={ButtonPage} />
+                    <Route exact path="/components/bottom-sheet" component={BottomSheetPage} />
+                    <Route exact path="/components/checkbox" component={CheckboxPage} />
+                    <Route exact path="/components/checkbox-group" component={CheckboxGroupPage} />
+                    <Route exact path="/components/field-wrapper" component={FieldWrapperPage} />
+                    <Route exact path="/components/haptic" component={HapticPage} />
+                    <Route exact path="/components/heading" component={HeadingPage} />
+                    <Route exact path="/components/hide" component={HidePage} />
+                    <Route exact path="/components/icon" component={IconPage} />
+                    <Route exact path="/components/image" component={ImagePage} />
+                    <Route exact path="/components/input" component={InputPage} />
+                    <Route exact path="/components/list" component={ListPage} />
+                    <Route exact path="/components/menu" component={MenuPage} />
+                    <Route exact path="/components/picker" component={PickerPage} />
+                    <Route exact path="/components/radio" component={RadioPage} />
+                    <Route exact path="/components/set" component={SetPage} />
+                    <Route exact path="/components/show" component={ShowPage} />
+                    <Route exact path="/components/switch" component={SwitchPage} />
+                    <Route exact path="/components/switch-group" component={SwitchGroupPage} />
+                    <Route exact path="/components/text" component={TextPage} />
+                    <Route exact path="/components/toast" component={ToastPage} />
+                  </Box>
+                  {/* <Button onPress={() => modalRef.current.present()}>Show modal</Button> */}
+                </Box.Scroll>
+              </Box.Safe>
+              <BottomSheetModal ref={modalRef}>
+                <Text>test</Text>
+              </BottomSheetModal>
+              <ToastManager />
+            </HapticProvider>
           </BottomSheetModalProvider>
         </ToastProvider>
       </NativeRouter>
