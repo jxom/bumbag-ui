@@ -9,12 +9,21 @@ export let globalEnabled = true;
 
 export function HapticProvider({
   defaultEnabled = true,
+  enabled: enabledOverride,
   children,
 }: {
   defaultEnabled?: boolean;
+  enabled?: boolean;
   children: React.ReactNode;
 }) {
-  const [enabled, setEnabled] = React.useState(defaultEnabled || globalEnabled);
+  const [enabled, setEnabled] = React.useState(enabledOverride || defaultEnabled || globalEnabled);
+
+  React.useEffect(() => {
+    if (enabledOverride) {
+      globalEnabled = enabledOverride;
+      setEnabled(enabledOverride);
+    }
+  }, [enabledOverride]);
 
   return (
     <HapticContext.Provider
