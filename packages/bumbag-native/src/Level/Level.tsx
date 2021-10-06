@@ -40,6 +40,7 @@ const useProps = createHook<LevelProps>(
       children: children.map((child, i) =>
         child
           ? React.cloneElement(child, {
+              key: i, // eslint-disable-line
               marginBottom:
                 child?.props?.marginBottom ||
                 (isCollapsed ? (i < children.length - 1 ? spacing : undefined) : undefined),
