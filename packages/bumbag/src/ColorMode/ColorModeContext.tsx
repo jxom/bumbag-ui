@@ -5,7 +5,7 @@ import { useLocalStorage } from '../utils/useLocalStorage';
 import { useTheme } from '../utils/useTheme';
 import { addColorModeRootElementClassName, getDefaultColorMode } from './utils';
 
-export const ColorModeContext = React.createContext<any>({ setColorMode: () => { }, colorMode: 'default' });
+export const ColorModeContext = React.createContext<any>({ setColorMode: () => {}, colorMode: 'default' });
 
 type Props = {
   children: React.ReactNode;
@@ -30,6 +30,10 @@ export function ColorModeProvider(props: Props) {
   ////////////////////////////////////
 
   const [mode, setMode] = React.useState(defaultMode);
+
+  React.useEffect(() => {
+    setMode(defaultMode);
+  }, [defaultMode]);
 
   ////////////////////////////////////
 
