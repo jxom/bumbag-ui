@@ -246,7 +246,7 @@ export function getCSSFromStyleObject(
     style = styleEntries.reduce((prevStyle, [attribute, value]) => {
       let newValue = value;
       if (typeof value === 'function') {
-        newValue = value({ theme });
+        newValue = value({ colorMode, theme });
       }
       if (attribute.includes(':')) {
         return `
