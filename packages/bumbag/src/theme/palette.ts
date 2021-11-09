@@ -60,19 +60,19 @@ export default (overrides: PaletteThemeConfig) => ({
   black400: tint(
     0.05,
     defaultPalette.black
-  )({ backgroundColor: (overrides.background || defaultPalette.background) as string, colorMode: 'default' }),
+  )({ referenceColor: (overrides.background || defaultPalette.background) as string }),
   black300: tint(
     0.1,
     defaultPalette.black
-  )({ backgroundColor: (overrides.background || defaultPalette.background) as string, colorMode: 'default' }),
+  )({ referenceColor: (overrides.background || defaultPalette.background) as string }),
   black200: tint(
     0.15,
     defaultPalette.black
-  )({ backgroundColor: (overrides.background || defaultPalette.background) as string, colorMode: 'default' }),
+  )({ referenceColor: (overrides.background || defaultPalette.background) as string }),
   black100: tint(
     0.2,
     defaultPalette.black
-  )({ backgroundColor: (overrides.background || defaultPalette.background) as string, colorMode: 'default' }),
+  )({ referenceColor: (overrides.background || defaultPalette.background) as string }),
 
   white: 'white',
   white500: 'white',
@@ -86,32 +86,32 @@ export default (overrides: PaletteThemeConfig) => ({
 
   ...generateColorVariants({
     paletteKey: 'primary',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.primary || defaultPalette.primary) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'secondary',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.secondary || defaultPalette.secondary) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'info',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.info || defaultPalette.info) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'success',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.success || defaultPalette.success) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'danger',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.danger || defaultPalette.danger) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'warning',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.warning || defaultPalette.warning) as string,
     paletteOverrides: ({ color }) => ({
       warningTintInverted: shade(0.7, color)(),
@@ -119,42 +119,42 @@ export default (overrides: PaletteThemeConfig) => ({
   }),
   ...generateColorVariants({
     paletteKey: 'blue',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.blue || defaultPalette.blue) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'red',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.red || defaultPalette.red) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'orange',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.orange || defaultPalette.orange) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'pink',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.pink || defaultPalette.pink) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'purple',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.purple || defaultPalette.purple) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'green',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.green || defaultPalette.green) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'indigo',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.indigo || defaultPalette.indigo) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'gray',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.gray || defaultPalette.gray) as string,
     paletteOverrides: ({ color }) => ({
       gray700: shade(0.2, color)(),
@@ -164,7 +164,7 @@ export default (overrides: PaletteThemeConfig) => ({
   }),
   ...generateColorVariants({
     paletteKey: 'grayTint',
-    backgroundColor: (overrides.background || defaultPalette.background) as string,
+    tintColorReference: (overrides.background || defaultPalette.background) as string,
     color: (overrides.grayTint || defaultPalette.grayTint) as string,
     paletteOverrides: ({ color }) => ({
       grayTint600: shade(0.05, color)(),
@@ -180,37 +180,37 @@ export default (overrides: PaletteThemeConfig) => ({
       ...generateColorVariants({
         paletteKey: 'primary',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.primary || defaultDarkPalette.primary) as string,
       }),
       ...generateColorVariants({
         paletteKey: 'secondary',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.secondary || defaultDarkPalette.secondary) as string,
       }),
       ...generateColorVariants({
         paletteKey: 'info',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.info || defaultDarkPalette.info) as string,
       }),
       ...generateColorVariants({
         paletteKey: 'success',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.success || defaultDarkPalette.success) as string,
       }),
       ...generateColorVariants({
         paletteKey: 'danger',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.danger || defaultDarkPalette.danger) as string,
       }),
       ...generateColorVariants({
         paletteKey: 'warning',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.warning || defaultDarkPalette.warning) as string,
         paletteOverrides: ({ color }) => ({
           warningTintInverted: shade(0.7, color)(),
@@ -219,13 +219,13 @@ export default (overrides: PaletteThemeConfig) => ({
       ...generateColorVariants({
         paletteKey: 'gray',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.gray || defaultPalette.gray) as string,
       }),
       ...generateColorVariants({
         paletteKey: 'grayTint',
         colorMode: 'dark',
-        backgroundColor: (overrides.background || defaultDarkPalette.background) as string,
+        shadeColorReference: (overrides.background || defaultDarkPalette.background) as string,
         color: (overrides.grayTint || defaultPalette.grayTint) as string,
       }),
       black: defaultPalette.black,
@@ -233,19 +233,19 @@ export default (overrides: PaletteThemeConfig) => ({
       black400: tint(
         0.25,
         defaultPalette.black
-      )({ backgroundColor: (overrides.background || defaultDarkPalette.background) as string, colorMode: 'default' }),
+      )({ referenceColor: (overrides.background || defaultDarkPalette.background) as string }),
       black300: tint(
         0.5,
         defaultPalette.black
-      )({ backgroundColor: (overrides.background || defaultDarkPalette.background) as string, colorMode: 'default' }),
+      )({ referenceColor: (overrides.background || defaultDarkPalette.background) as string }),
       black200: tint(
         0.75,
         defaultPalette.black
-      )({ backgroundColor: (overrides.background || defaultDarkPalette.background) as string, colorMode: 'default' }),
+      )({ referenceColor: (overrides.background || defaultDarkPalette.background) as string }),
       black100: tint(
         1,
         defaultPalette.black
-      )({ backgroundColor: (overrides.background || defaultDarkPalette.background) as string, colorMode: 'default' }),
+      )({ referenceColor: (overrides.background || defaultDarkPalette.background) as string }),
     },
   },
 

@@ -23,36 +23,20 @@ export function lighten(scale, color) {
 }
 
 export function shade(scale, color) {
-  return ({
-    backgroundColor,
-    colorMode,
-    theme,
-  }: { backgroundColor?: string; colorMode?: string; theme?: any } = {}) => {
+  return ({ referenceColor = BLACK, theme }: { referenceColor?: string; theme?: any } = {}) => {
     const themeColor = palette(color, null, { useCSSVariables: false })({ theme });
     if (themeColor === 'transparent') return themeColor;
 
-    let targetColor = BLACK;
-    if (colorMode === 'dark') {
-      targetColor = backgroundColor;
-    }
-    return tinycolor.mix(themeColor, targetColor, scale * 100).toHexString();
+    return tinycolor.mix(themeColor, referenceColor, scale * 100).toHexString();
   };
 }
 
 export function tint(scale, color) {
-  return ({
-    backgroundColor,
-    colorMode,
-    theme,
-  }: { backgroundColor?: string; colorMode?: string; theme?: any } = {}) => {
+  return ({ referenceColor = WHITE, theme }: { referenceColor?: string; theme?: any } = {}) => {
     const themeColor = palette(color, null, { useCSSVariables: false })({ theme });
     if (themeColor === 'transparent') return themeColor;
 
-    let targetColor = WHITE;
-    if (colorMode === 'default') {
-      targetColor = backgroundColor;
-    }
-    return tinycolor.mix(themeColor, targetColor, scale * 100).toHexString();
+    return tinycolor.mix(themeColor, referenceColor, scale * 100).toHexString();
   };
 }
 
