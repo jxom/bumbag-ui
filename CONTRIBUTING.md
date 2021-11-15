@@ -29,7 +29,7 @@ yarn docs
 - `yarn type-check` - Check that all the types are valid
 - `yarn lint` - Runs the linter
 - `yarn lint:fix` - Fixes lint issues
-- `yarn test` - Runs type-check, linter & tests
+- `yarn test-packages` - Runs type-check, linter & tests
 - `yarn docs` - Runs component documentation on a local development server.
 - `yarn develop` - Compile components & listen for changes (only use this for testing Bumbag consumer apps)
 
