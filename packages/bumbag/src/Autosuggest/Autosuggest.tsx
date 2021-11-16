@@ -32,6 +32,8 @@ export type LocalAutosuggestProps = {
   cacheKey?: string;
   /** If the `label` prop is supplied, is it contained inside the autosuggest? */
   containLabel?: boolean;
+  /** The time in milliseconds for the debounce interval used to handle text input. **/
+  debounceInterval?: number;
   /** Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened. */
   defer?: boolean;
   /** Indicates if the  Autosuggest is disabled. */
@@ -218,6 +220,7 @@ const useProps = createHook<AutosuggestProps>(
       cacheKey,
       containLabel,
       clearButtonProps,
+      debounceInterval,
       disabled,
       dropdownMenuInitialState,
       emptyText,
@@ -332,7 +335,7 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
-    const debouncedInputValue = useDebounce(inputValue, 500);
+    const debouncedInputValue = useDebounce(inputValue, debounceInterval || 500);
 
     const getOptions = React.useCallback(
       async ({ loadVariables, page, searchText = '' }) => {

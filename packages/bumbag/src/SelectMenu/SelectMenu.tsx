@@ -34,6 +34,8 @@ export type LocalSelectMenuProps = {
   cacheKey?: string;
   /** If the `label` prop is supplied, is it contained inside the select? */
   containLabel?: boolean;
+  /** The time in milliseconds for the debounce interval used to handle text input. **/
+  debounceInterval?: number;
   /** Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened. */
   defer?: boolean;
   /** Indicates if the  Autosuggest is disabled. */
@@ -142,6 +144,7 @@ const useProps = createHook<SelectMenuProps>(
       buttonProps,
       cacheKey,
       containLabel,
+      debounceInterval,
       disabled,
       disableClear,
       dropdownMenuInitialState,
@@ -276,7 +279,7 @@ const useProps = createHook<SelectMenuProps>(
 
     //////////////////////////////////////////////////
 
-    const debouncedInputValue = useDebounce(searchText, 500);
+    const debouncedInputValue = useDebounce(searchText, debounceInterval || 500);
 
     const getOptions = React.useCallback(
       async ({ loadVariables, page, searchText = '' }) => {
