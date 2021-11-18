@@ -45,7 +45,14 @@ const useProps = createHook<DropdownMenuOptionItemProps>(
       ...menuItemProps,
       'aria-checked': checked,
       className,
-      onClick: () => onChange && onChange({ checked: !checked, value }),
+      onClick: (e) => {
+        if (onChange) {
+          onChange({ checked: !checked, value });
+        }
+        if (menuItemProps.onClick) {
+          menuItemProps.onClick(e);
+        }
+      },
       children: (
         <>
           <Box className={iconWrapperClassName} overrides={props.overrides}>
@@ -67,7 +74,7 @@ const useProps = createHook<DropdownMenuOptionItemProps>(
       ),
     };
   },
-  { themeKey: 'DropdownMenu.OptionItem' }
+  { defaultProps: { hideOnClick: false }, themeKey: 'DropdownMenu.OptionItem' }
 );
 
 export const DropdownMenuOptionItem = createComponent<DropdownMenuOptionItemProps>(
