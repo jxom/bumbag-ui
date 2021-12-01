@@ -26,7 +26,7 @@ export function getMediaQueryList(_breakpoint, theme) {
   const mediaQueryList =
     typeof window !== 'undefined'
       ? window.matchMedia(query)
-      : { matches: false, addListener: () => null, removeListener: () => null };
+      : { matches: true, addListener: () => null, removeListener: () => null };
 
   return mediaQueryList;
 }

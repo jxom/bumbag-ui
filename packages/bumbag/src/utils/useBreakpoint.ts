@@ -6,11 +6,13 @@ import { useTheme } from './useTheme';
 export function useBreakpoint(breakpoint) {
   const { theme } = useTheme();
 
-  const mediaQueryList = getMediaQueryList(breakpoint, theme);
+  const mediaQueryList = React.useMemo(() => getMediaQueryList(breakpoint, theme), [breakpoint, theme]);
   const [doesMatch, setDoesMatch] = React.useState(mediaQueryList.matches);
 
   React.useEffect(() => {
     let mounted = true;
+
+    setDoesMatch(mediaQueryList.matches);
 
     const onMediaChange = (e) => {
       if (!mounted) return;
