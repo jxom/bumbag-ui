@@ -6,12 +6,12 @@ import { useTheme } from './useTheme';
 export function useBreakpoint(breakpoint) {
   const { theme } = useTheme();
 
-  const mediaQueryList = React.useMemo(() => getMediaQueryList(breakpoint, theme), [breakpoint, theme]);
-  const [doesMatch, setDoesMatch] = React.useState(mediaQueryList.matches);
+  const [doesMatch, setDoesMatch] = React.useState(undefined);
 
   React.useEffect(() => {
     let mounted = true;
 
+    const mediaQueryList = getMediaQueryList(breakpoint, theme);
     setDoesMatch(mediaQueryList.matches);
 
     const onMediaChange = (e) => {
@@ -24,7 +24,7 @@ export function useBreakpoint(breakpoint) {
       mounted = false;
       mediaQueryList.removeListener(onMediaChange);
     };
-  }, [mediaQueryList]);
+  }, [breakpoint, theme]);
 
   return doesMatch;
 }
