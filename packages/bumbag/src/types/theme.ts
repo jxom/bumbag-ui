@@ -141,6 +141,7 @@ export type BreakpointsThemeConfig = {
   desktop?: ThemeAttribute<number>;
   widescreen?: ThemeAttribute<number>;
   fullHD?: ThemeAttribute<number>;
+  [key: string]: ThemeAttribute<number>;
 };
 export type AltitudesThemeConfig = {
   [key: string]: ThemeAttribute<Stylesheet>;
