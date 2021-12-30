@@ -15,7 +15,7 @@ import React from 'react';
 type Unit = 'px' | 'em' | 'rem' | '%' | 'ch' | 'vw' | 'vh';
 type UnitWithValue = `${number}${Unit}`;
 
-type SpacingUnit = UnitWithValue | `major-${number}` | `minor-${number}` | `-major-${number}` | `-minor-${number}` | 'inherit' | 'initial' | 'revert' | 'unset';
+export type SpacingUnit = UnitWithValue | `major-${number}` | `minor-${number}` | `-major-${number}` | `-minor-${number}` | 'inherit' | 'initial' | 'revert' | 'unset';
 
 export type CSSProperties = {
   _hover?: CSSProperties | boolean;
