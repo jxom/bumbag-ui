@@ -38,12 +38,16 @@ export type LocalSelectProps = {
   isRequired?: boolean;
   label?: string;
   /** Name of the input field */
+  labelInOptions?: boolean
+  /** Should include the label as a disabled option (default: true) **/
   name?: string;
   options: Array<{ label: string; value: any; disabled?: boolean }>;
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
   /** Hint text to display */
   placeholder?: string;
+  placeholderInOptions?: boolean
+  /** Should include the label as a disabled option (default: true) **/
   selectProps?: Partial<SelectProps>;
   selectRef?: React.Ref<any>;
   /** State of the input. Can be any color in the palette. */
@@ -67,9 +71,11 @@ const useProps = createHook<SelectProps>(
       isLoading,
       isRequired,
       label,
+      labelInOptions = true,
       onChange,
       options,
       placeholder: _placeholder,
+      placeholderInOptions = true,
       selectProps,
       selectRef,
       state,
@@ -194,7 +200,7 @@ const useProps = createHook<SelectProps>(
       onChange: handleChange,
       children: (
         <React.Fragment>
-          {(label || placeholder) && (
+          {((label && labelInOptions) || (placeholder && placeholderInOptions)) && (
             <option disabled={typeof restProps.value !== 'undefined' || !isPlaceholderSelected} value="">
               {label || placeholder}
             </option>
@@ -272,10 +278,12 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       isRequired,
       orientation,
       label,
+      labelInOptions,
       name,
       options,
       size,
       placeholder,
+      placeholderInOptions,
       state,
       tooltip,
       tooltipTriggerComponent,
@@ -334,10 +342,12 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
                   disabled={disabled}
                   isLoading={isLoading}
                   isRequired={isRequired}
+                  labelInOptions={labelInOptions}
                   name={name}
                   size={size}
                   options={options}
                   placeholder={placeholder}
+                  placeholderInOptions={placeholderInOptions}
                   selectProps={selectProps}
                   selectRef={selectRef}
                   state={state}
