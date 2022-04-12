@@ -570,7 +570,6 @@ const useProps = createHook<SelectMenuProps>(
                     onChange={handleChangeInput}
                     value={searchText}
                     searchInputProps={searchInputProps}
-                    autoFocus={isDropdown}
                   />
                 )}
                 {hasTags && selectedOptions.length > 0 && (
@@ -776,7 +775,7 @@ function SelectMenuButton(props: any) {
 //////////////////////////////////////////////////////////////////
 
 function SelectMenuSearchInput(props: any) {
-  const { autoFocus, onChange, searchInputProps, value, ...restProps } = props;
+  const { onChange, searchInputProps, value, ...restProps } = props;
 
   const { overrides, themeKey } = React.useContext(SelectMenuContext);
 
@@ -801,7 +800,6 @@ function SelectMenuSearchInput(props: any) {
         overrides={overrides}
         placeholder="Type to search..."
         value={value}
-        autoFocus={autoFocus}
         {...searchInputProps}
       />
     </Box>
