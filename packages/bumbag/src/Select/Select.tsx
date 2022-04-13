@@ -49,9 +49,9 @@ export type LocalSelectProps = {
   /** State of the input. Can be any color in the palette. */
   state?: string;
   /** Should include the placeholder as a disabled option (default: true) **/
-  showPlaceholderOption?: boolean
+  showPlaceholderOption?: boolean;
   /** Should include the label as a disabled option (default: true) **/
-  showLabelOption?: boolean
+  showLabelOption?: boolean;
   /** Value of the input */
   value?: any;
   /** Function to invoke when focus is lost */
@@ -278,12 +278,12 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       isRequired,
       orientation,
       label,
-      labelInOptions,
       name,
       options,
       size,
       placeholder,
-      placeholderInOptions,
+      showLabelOption,
+      showPlaceholderOption,
       state,
       tooltip,
       tooltipTriggerComponent,
@@ -342,14 +342,14 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
                   disabled={disabled}
                   isLoading={isLoading}
                   isRequired={isRequired}
-                  labelInOptions={labelInOptions}
                   name={name}
                   size={size}
                   options={options}
                   placeholder={placeholder}
-                  placeholderInOptions={placeholderInOptions}
                   selectProps={selectProps}
                   selectRef={selectRef}
+                  showLabelOption={showLabelOption}
+                  showPlaceholderOption={showPlaceholderOption}
                   state={state}
                   value={value}
                   onBlur={onBlur}
