@@ -196,6 +196,7 @@ const useProps = createHook<SelectMenuProps>(
     //////////////////////////////////////////////////
 
     const dropdownMenu = DropdownMenu.useState({
+      animated: true,
       loop: true,
       gutter: 4,
       ...dropdownMenuInitialState,
@@ -569,8 +570,8 @@ const useProps = createHook<SelectMenuProps>(
                   <SelectMenuSearchInput
                     onChange={handleChangeInput}
                     value={searchText}
-                    searchInputProps={searchInputProps}
                     autoFocus={isDropdown}
+                    searchInputProps={searchInputProps}
                   />
                 )}
                 {hasTags && selectedOptions.length > 0 && (
