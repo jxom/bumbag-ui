@@ -196,6 +196,7 @@ const useProps = createHook<SelectMenuProps>(
     //////////////////////////////////////////////////
 
     const dropdownMenu = DropdownMenu.useState({
+      animated: true,
       loop: true,
       gutter: 4,
       ...dropdownMenuInitialState,
@@ -569,6 +570,7 @@ const useProps = createHook<SelectMenuProps>(
                   <SelectMenuSearchInput
                     onChange={handleChangeInput}
                     value={searchText}
+                    autoFocus={!isDropdown}
                     searchInputProps={searchInputProps}
                   />
                 )}
@@ -800,6 +802,7 @@ function SelectMenuSearchInput(props: any) {
         overrides={overrides}
         placeholder="Type to search..."
         value={value}
+        autoFocus
         {...searchInputProps}
       />
     </Box>
