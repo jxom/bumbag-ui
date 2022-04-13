@@ -38,20 +38,20 @@ export type LocalSelectProps = {
   isRequired?: boolean;
   label?: string;
   /** Name of the input field */
-  labelInOptions?: boolean
-  /** Should include the label as a disabled option (default: true) **/
   name?: string;
   options: Array<{ label: string; value: any; disabled?: boolean }>;
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
   /** Hint text to display */
   placeholder?: string;
-  placeholderInOptions?: boolean
-  /** Should include the label as a disabled option (default: true) **/
   selectProps?: Partial<SelectProps>;
   selectRef?: React.Ref<any>;
   /** State of the input. Can be any color in the palette. */
   state?: string;
+  /** Should include the placeholder as a disabled option (default: true) **/
+  showPlaceholderOption?: boolean
+  /** Should include the label as a disabled option (default: true) **/
+  showLabelOption?: boolean
   /** Value of the input */
   value?: any;
   /** Function to invoke when focus is lost */
@@ -71,13 +71,13 @@ const useProps = createHook<SelectProps>(
       isLoading,
       isRequired,
       label,
-      labelInOptions = true,
       onChange,
       options,
       placeholder: _placeholder,
-      placeholderInOptions = true,
       selectProps,
       selectRef,
+      showLabelOption = true,
+      showPlaceholderOption = true,
       state,
       ...restProps
     } = props;
@@ -200,7 +200,7 @@ const useProps = createHook<SelectProps>(
       onChange: handleChange,
       children: (
         <React.Fragment>
-          {((label && labelInOptions) || (placeholder && placeholderInOptions)) && (
+          {((label && showLabelOption) || (placeholder && showPlaceholderOption)) && (
             <option disabled={typeof restProps.value !== 'undefined' || !isPlaceholderSelected} value="">
               {label || placeholder}
             </option>
