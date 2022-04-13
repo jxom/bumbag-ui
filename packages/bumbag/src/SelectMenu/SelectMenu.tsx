@@ -570,7 +570,7 @@ const useProps = createHook<SelectMenuProps>(
                   <SelectMenuSearchInput
                     onChange={handleChangeInput}
                     value={searchText}
-                    autoFocus
+                    autoFocus={isDropdown}
                     searchInputProps={searchInputProps}
                   />
                 )}
