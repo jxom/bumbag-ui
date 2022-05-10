@@ -751,9 +751,20 @@ function SelectMenuButton(props: any) {
 
   if (renderDisclosure) {
     return renderDisclosure({
+      buttonProps: {
+        ...props,
+        className: buttonClassName,
+        disabled,
+        isSelected: selectedOptions.length > 0,
+        overrides,
+        variant,
+      },
+      buttonTextProps: { ...props, className: buttonTextClassName, color, overrides },
       disclosureProps: dropdownMenuButtonProps,
       disabled,
       disableClear,
+      iconProps: { ...props, className: iconClassName, overrides },
+      iconsWrapperProps: { ...props, className: iconsWrapperClassName, overrides },
       isLoading,
       label,
       selectedOptions,
