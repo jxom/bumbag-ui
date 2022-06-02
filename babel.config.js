@@ -8,6 +8,7 @@ module.exports = {
         targets: {
           browsers: 'defaults',
         },
+        "exclude": ["transform-regenerator"],
       },
     ],
     '@babel/preset-react',
