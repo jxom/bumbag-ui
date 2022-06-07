@@ -476,6 +476,78 @@ function Example() {
 }
 ```
 
+### Custom top actions component
+
+You can render a custom top actions component with the `renderTopActions` prop.
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      renderTopActions={({ StaticItem }) =>
+        <StaticItem hideDropdownOnClick>
+          <Link>
+            Create a fruit
+          </Link>
+        </StaticItem>
+      }
+      restrictToOptions
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' },
+        { key: 5, label: 'Peaches', value: 'peaches' },
+        { key: 6, label: 'Strawberries', value: 'Strawberries' },
+        { key: 7, label: 'Pineapples', value: 'pineapples' },
+        { key: 8, label: 'Figs', value: 'figs' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Custom bottom actions component
+
+You can render a custom bottom actions component with the `renderBottomActions` prop.
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      renderBottomActions={({ StaticItem }) =>
+        <StaticItem hideDropdownOnClick>
+          <Link>
+            Create a fruit
+          </Link>
+        </StaticItem>
+      }
+      restrictToOptions
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' },
+        { key: 5, label: 'Peaches', value: 'peaches' },
+        { key: 6, label: 'Strawberries', value: 'Strawberries' },
+        { key: 7, label: 'Pineapples', value: 'pineapples' },
+        { key: 8, label: 'Figs', value: 'figs' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
 ### Option icons
 
 ```function-live
@@ -814,6 +886,10 @@ Sets the loading text when more options are loading (via pagination).
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">renderBottomActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">renderClearButton</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -835,6 +911,10 @@ Sets the loading text when more options are loading (via pagination).
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">renderOption</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderTopActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1198,6 +1278,10 @@ Sets the loading text when more options are loading (via pagination).
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">renderBottomActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">renderClearButton</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -1219,6 +1303,10 @@ Sets the loading text when more options are loading (via pagination).
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">renderOption</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderTopActions</Code>** <Code fontSize="100" palette="primary">any</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

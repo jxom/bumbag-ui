@@ -14,6 +14,8 @@ export const AutosuggestPopover = (styleProps) => cssClass`
     max-width: 100%;
     width: 100%;
     max-height: ${styleProps.popoverHeight};
+    display: flex;
+    flex-direction: column;
   }
 
   & {
