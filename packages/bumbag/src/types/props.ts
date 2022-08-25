@@ -4,7 +4,7 @@ export type Altitude = Flexible<'100' | '200' | '300' | '400' | '500' | '600' | 
 export type BorderRadii = Flexible<'default' | '1' | '2' | '3' | '4' | '5' | '6' | '7', string>;
 export type ButtonType = 'button' | 'submit' | 'reset';
 export type Breakpoint = Flexible<'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile', string>;
-export type ColumnSpread = number;
+export type ColumnSpread = Flexible<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12, number>;
 export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right';
 export type GradientDirection =
   | 'top'
