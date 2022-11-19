@@ -1,3 +1,6 @@
+> **Warning**
+> This library is currently unmaintained. You may want to look at a similar alternative like [Chakra UI](https://chakra-ui.com/), [Material UI](https://mui.com/) or [Mantine](https://mantine.dev/). 😊
+
 # Bumbag
 
 Build themeable React & React Native applications with your Bumbag.
