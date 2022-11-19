@@ -1,16 +1,6 @@
-<p align="center"><img src="./.github/bumbag.svg" width="500px"></img></p>
+# Bumbag
 
-<p align="center"><img src="./.github/sponsored-by.svg" width="100px"></img></p>
-
-<p align="center" style="display: flex; align-items: center; justify-content: center;">
-    <a href="https://coinjar.com"><img src="./.github/coinjar.svg" height="100px"></img></a>
-    <a href="https://tyro.com"><img src="./.github/tyro-logo.png" height="80px"></img></a>
-    <a href="https://github.com/jerryix"><span>Jerry Smith</span></a>
-</p>
-
-<p align="center">
-    <a href="https://opencollective.com/bumbag">Become a sponsor!</a>
-</p>
+Build themeable React & React Native applications with your Bumbag.
 
 ## Getting started
 
