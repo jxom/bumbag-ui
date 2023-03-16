@@ -84,8 +84,6 @@ const useProps = createHook<SelectProps>(
 
     const ref = React.useRef();
 
-    const uid = useUniqueId();
-
     const { isFocused, inputProps: labelPlaceholderInputProps } = useLabelPlaceholder({
       enabled: Boolean(label),
       ...props,
@@ -141,7 +139,6 @@ const useProps = createHook<SelectProps>(
 
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
-      id: uid,
       ...selectProps,
       ...labelPlaceholderInputProps,
       className: undefined,
@@ -160,9 +157,7 @@ const useProps = createHook<SelectProps>(
               <Box className={labelWrapperClassName}>
                 {/*
                   // @ts-ignore */}
-                <Text use="label" htmlFor={selectProps?.id || uid}>
-                  {label}
-                </Text>
+                <Text use="label">{label}</Text>
               </Box>
             </>
           )}
